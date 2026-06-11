@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Офисный рынок Москвы</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; }
@@ -105,6 +108,24 @@
     .stats-table tr:not(:last-child) td { border-bottom: 1px solid #f3f3f3; }
     .stats-table td.hl { font-weight: 700; color: #bd0026; }
 
+    /* Легенда зданий (цвет = класс, размер = объём) */
+    .buildings-legend {
+      position: absolute;
+      bottom: 30px; right: 10px;
+      z-index: 1000;
+      background: white; border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      padding: 12px 14px; font-size: 12px; min-width: 150px;
+    }
+    .buildings-legend h4 { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; margin-bottom: 8px; }
+    .buildings-legend .sub { font-size: 10px; font-weight: 700; color: #999; text-transform: uppercase; margin: 8px 0 4px; }
+    .bl-item { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+    .bl-dot { border-radius: 50%; border: 1px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); flex-shrink: 0; }
+    .bl-size-row { display: flex; align-items: flex-end; gap: 12px; padding: 4px 2px 0; }
+    .bl-size-col { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+    .bl-size-circle { border-radius: 50%; background: #9ca3af; border: 1px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); }
+    .bl-size-label { font-size: 9px; color: #777; }
+
     /* Popup */
     .leaflet-popup-content { font-size: 13px; min-width: 200px; }
     .leaflet-popup-content b { font-size: 14px; }
@@ -119,7 +140,11 @@
 
 <!-- Правая панель -->
 <div class="panel">
-  <h3>Данные (Свод, март 2026)</h3>
+  <h3>Квартал</h3>
+  <select id="quarterSelect"></select>
+
+  <hr>
+  <h3>Данные</h3>
   <div id="fileStatus">Загрузка…</div>
   <div id="fileStats" style="display:none; margin-top:6px; padding-top:6px; border-top:1px solid #eee;">
     <div class="stat-row"><span>Объектов:</span><span id="statCount">—</span></div>
@@ -151,6 +176,13 @@
   <hr>
   <h3>Объекты (здания)</h3>
   <label class="check-row"><input type="checkbox" id="ovBuildings" checked> Показать здания</label>
+  <label class="check-row"><input type="checkbox" id="ovCluster" checked> Группировать при отдалении</label>
+
+  <hr>
+  <h3>Рисование районов</h3>
+  <label class="check-row"><input type="checkbox" id="ovDraw"> Режим рисования</label>
+  <button class="upload-btn" id="exportDraw" style="margin-top:6px;">⬇ Экспорт нарисованного (GeoJSON)</button>
+  <div id="drawStatus" style="font-size:11px;color:#777;margin-top:5px;"></div>
 
   <hr>
   <h3>Доп. границы</h3>
@@ -169,6 +201,9 @@
 <!-- Сводная таблица деловых районов (геометрия временно скрыта) -->
 <div class="stats-table" id="statsTable"></div>
 
+<!-- Легенда зданий -->
+<div class="buildings-legend" id="buildingsLegend"></div>
+
 <!-- Легенда -->
 <div class="legend" id="legend">
   <h4 id="legendTitle">Ср. взв. цена, руб/кв.м</h4>
@@ -181,7 +216,19 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
 <script>
+// ============================================================
+//  КВАРТАЛЫ
+//  Чтобы добавить новый квартал: положи файл data/buildings_YYYYQN.json
+//  и допиши строку в начало этого списка (новые сверху).
+// ============================================================
+const QUARTERS = [
+  { id: '2026Q1', label: 'Q1 2026', file: 'data/buildings_2026Q1.json' },
+];
+let currentQuarter = QUARTERS[0];
+
 // ============================================================
 //  КОНФИГ СЛОЁВ
 // ============================================================
@@ -725,7 +772,15 @@ function buildingRadius(vol) {
 
 function renderBuildings() {
   if (buildingsLayer) map.removeLayer(buildingsLayer);
-  buildingsLayer = L.layerGroup();
+  const clustered = document.getElementById('ovCluster').checked;
+  buildingsLayer = clustered
+    ? L.markerClusterGroup({
+        maxClusterRadius: 50,
+        spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false,
+        disableClusteringAtZoom: 15
+      })
+    : L.layerGroup();
   for (const b of buildingsData) {
     if (!isFinite(b.lat) || !isFinite(b.lng)) continue;
     const marker = L.circleMarker([b.lat, b.lng], {
@@ -755,6 +810,42 @@ function renderBuildings() {
     buildingsLayer.addLayer(marker);
   }
   if (document.getElementById('ovBuildings').checked) buildingsLayer.addTo(map);
+  renderBuildingsLegend();
+}
+
+// Легенда зданий: классы (цвет) + объём (размер)
+function renderBuildingsLegend() {
+  const el = document.getElementById('buildingsLegend');
+  if (!document.getElementById('ovBuildings').checked || !buildingsData.length) {
+    el.style.display = 'none';
+    return;
+  }
+  // классы, реально присутствующие в данных, в желаемом порядке
+  const order = ['Prime', 'A+', 'A', 'B+', 'B', 'C'];
+  const present = order.filter(c => buildingsData.some(b => b.cls === c));
+  const others = [...new Set(buildingsData.map(b => b.cls).filter(c => c && !order.includes(c)))];
+  const classes = [...present, ...others];
+
+  const colorRows = classes.map(c => {
+    const d = 14;
+    return `<div class="bl-item">
+      <span class="bl-dot" style="width:${d}px;height:${d}px;background:${buildingColor(c)}"></span>
+      <span>Класс ${c}</span></div>`;
+  }).join('');
+
+  // размер = объём предложения. Показываем 3 опорных значения
+  const samples = [2000, 20000, 70000];
+  const sizeCols = samples.map(v => {
+    const r = buildingRadius(v);
+    return `<div class="bl-size-col">
+      <span class="bl-size-circle" style="width:${2*r}px;height:${2*r}px"></span>
+      <span class="bl-size-label">${fmtShort(v)}</span></div>`;
+  }).join('');
+
+  el.innerHTML = `<h4>Здания</h4>${colorRows}
+    <div class="sub">Объём, кв.м</div>
+    <div class="bl-size-row">${sizeCols}</div>`;
+  el.style.display = 'block';
 }
 
 // ============================================================
@@ -763,7 +854,7 @@ function renderBuildings() {
 async function loadBuildings() {
   const status = document.getElementById('fileStatus');
   try {
-    const resp = await fetch('data/buildings.json');
+    const resp = await fetch(currentQuarter.file);
     const data = await resp.json();
     buildingsData = data;
     buildingPoints = data.map(b => ({
@@ -773,7 +864,7 @@ async function loadBuildings() {
     delete geojsonCache['bizFormed'];   // пересобрать оболочки деловых районов
     delete geojsonCache['bizForming'];
     dataLoaded = true;
-    status.textContent = `✓ ${data.length} зданий`;
+    status.textContent = `✓ ${currentQuarter.label}: ${data.length} зданий`;
     status.style.color = '#16a34a';
     updateGlobalStats(buildingPoints);
     await recomputeAll();
@@ -783,7 +874,15 @@ async function loadBuildings() {
   }
 }
 
+// Заполнить выпадающий список кварталов
+function populateQuarters() {
+  const sel = document.getElementById('quarterSelect');
+  sel.innerHTML = QUARTERS.map(q => `<option value="${q.id}">${q.label}</option>`).join('');
+  sel.value = currentQuarter.id;
+}
+
 async function init() {
+  populateQuarters();
   await preloadAll();
   await loadBuildings();
   await renderChoropleth();
@@ -791,6 +890,17 @@ async function init() {
   await renderOverlays();
 }
 init();
+
+// Смена квартала
+document.getElementById('quarterSelect').addEventListener('change', async function() {
+  const q = QUARTERS.find(x => x.id === this.value);
+  if (!q) return;
+  currentQuarter = q;
+  document.getElementById('fileStatus').textContent = 'Загрузка…';
+  await loadBuildings();
+  await renderChoropleth();
+  await renderBuildings();
+});
 
 // ============================================================
 //  ОБРАБОТЧИКИ СОБЫТИЙ
@@ -861,6 +971,71 @@ OVERLAY_CFG.forEach(oc => {
 document.getElementById('ovBuildings').addEventListener('change', function() {
   if (!buildingsLayer) return;
   this.checked ? buildingsLayer.addTo(map) : map.removeLayer(buildingsLayer);
+  renderBuildingsLegend();
+});
+
+// Кластеризация (группировка при отдалении)
+document.getElementById('ovCluster').addEventListener('change', function() {
+  renderBuildings();
+});
+
+// ============================================================
+//  РИСОВАНИЕ РАЙОНОВ (обводилка) + экспорт GeoJSON
+// ============================================================
+const drawnItems = new L.FeatureGroup();
+let drawControl = null;
+
+function updateDrawStatus() {
+  const n = drawnItems.getLayers().length;
+  document.getElementById('drawStatus').textContent =
+    n ? `Нарисовано районов: ${n}` : 'Обведи район на карте, впиши название и тип.';
+}
+
+document.getElementById('ovDraw').addEventListener('change', function() {
+  if (this.checked) {
+    map.addLayer(drawnItems);
+    drawControl = new L.Control.Draw({
+      edit: { featureGroup: drawnItems, remove: true },
+      draw: {
+        polygon: { allowIntersection: false, shapeOptions: { color: '#e11d48', weight: 2 } },
+        polyline: false, rectangle: false, circle: false, marker: false, circlemarker: false
+      }
+    });
+    map.addControl(drawControl);
+    updateDrawStatus();
+  } else {
+    if (drawControl) { map.removeControl(drawControl); drawControl = null; }
+  }
+});
+
+map.on(L.Draw.Event.CREATED, function(e) {
+  const layer = e.layer;
+  const name = prompt('Название делового района (например, Белорусский):', '');
+  if (name === null) return;
+  let type = prompt('Тип — впиши "с" (сформированный) или "ф" (формирующийся):', 'ф');
+  type = (type || '').trim().toLowerCase().startsWith('с') ? 'сформированный' : 'формирующийся';
+  layer.feature = { type: 'Feature', properties: { name: name || '', type } };
+  layer.bindTooltip(`${name || '—'} (${type})`, { sticky: true });
+  drawnItems.addLayer(layer);
+  updateDrawStatus();
+});
+
+document.getElementById('exportDraw').addEventListener('click', function() {
+  const features = [];
+  drawnItems.eachLayer(l => {
+    const gj = l.toGeoJSON();
+    gj.properties = l.feature ? l.feature.properties : {};
+    features.push(gj);
+  });
+  if (!features.length) { alert('Сначала обведи хотя бы один район.'); return; }
+  const fc = { type: 'FeatureCollection', features };
+  const blob = new Blob([JSON.stringify(fc, null, 1)], { type: 'application/geo+json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'delovye_rayony.geojson';
+  a.click();
+  URL.revokeObjectURL(url);
 });
 
 // Подложка
