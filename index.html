@@ -21,60 +21,72 @@
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-      padding: 12px 16px;
-      width: 220px;
-      font-size: 13px;
+      padding: 8px 12px;
+      width: 210px;
+      font-size: 12px;
+      max-height: calc(100vh - 20px);
+      overflow-y: auto;
     }
     .panel h3 {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       color: #666;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin: 10px 0 6px;
+      letter-spacing: 0.4px;
+      margin: 5px 0 3px;
     }
     .panel h3:first-child { margin-top: 0; }
-    .panel hr { border: none; border-top: 1px solid #eee; margin: 8px 0; }
+    .panel hr { border: none; border-top: 1px solid #eee; margin: 5px 0; }
 
     .radio-row, .check-row {
-      display: flex; align-items: center; gap: 7px;
-      margin: 3px 0; cursor: pointer; color: #333;
+      display: flex; align-items: center; gap: 6px;
+      margin: 1.5px 0; cursor: pointer; color: #333;
+      line-height: 1.25;
     }
-    .radio-row input, .check-row input { cursor: pointer; }
+    .radio-row input, .check-row input { cursor: pointer; flex-shrink: 0; }
 
     select {
-      width: 100%; padding: 4px 6px;
+      width: 100%; padding: 3px 5px;
       border: 1px solid #ddd; border-radius: 4px;
-      font-size: 12px; margin-top: 2px; cursor: pointer;
+      font-size: 12px; margin-top: 1px; cursor: pointer;
     }
 
     /* Кнопка загрузки */
     .upload-btn {
-      display: block; width: 100%; margin-top: 6px;
-      padding: 7px; background: #3b82f6; color: white;
-      border: none; border-radius: 5px; font-size: 12px;
+      display: block; width: 100%; margin-top: 4px;
+      padding: 5px; background: #3b82f6; color: white;
+      border: none; border-radius: 5px; font-size: 11px;
       cursor: pointer; text-align: center;
     }
     .upload-btn:hover { background: #2563eb; }
     #fileStatus {
-      margin-top: 5px; font-size: 11px; color: #555;
-      min-height: 16px;
+      margin-top: 3px; font-size: 11px; color: #555;
+      min-height: 14px;
     }
     .stat-row {
       display: flex; justify-content: space-between;
-      font-size: 11px; margin: 2px 0;
+      font-size: 11px; margin: 1px 0;
       color: #444;
     }
     .stat-row span:last-child { font-weight: 600; color: #111; }
 
+    /* Контейнер легенд (левый нижний угол, стопкой вверх) */
+    .left-stack {
+      position: absolute;
+      bottom: 24px; left: 10px;
+      z-index: 1000;
+      display: flex; flex-direction: column-reverse;
+      align-items: flex-start; gap: 8px;
+      max-height: calc(100vh - 48px);
+      pointer-events: none;
+    }
+    .left-stack > * { pointer-events: auto; }
+
     /* Легенда */
     .legend {
-      position: absolute;
-      bottom: 30px; left: 10px;
-      z-index: 1000;
       background: white; border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-      padding: 12px 16px; font-size: 12px; min-width: 190px;
+      padding: 10px 14px; font-size: 12px; min-width: 190px;
     }
     .legend h4 {
       font-size: 11px; font-weight: 700; color: #666;
@@ -91,13 +103,11 @@
 
     /* Таблица деловых районов (когда геометрия скрыта) */
     .stats-table {
-      position: absolute;
-      bottom: 30px; left: 10px;
-      z-index: 1000;
       background: white; border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
       padding: 12px 14px; font-size: 12px;
       max-width: 360px; display: none;
+      max-height: 50vh; overflow-y: auto;
     }
     .stats-table h4 { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 8px; }
     .stats-table .note { font-size: 10px; color: #999; margin-bottom: 8px; }
@@ -110,12 +120,9 @@
 
     /* Легенда зданий (цвет = класс, размер = объём) */
     .buildings-legend {
-      position: absolute;
-      bottom: 30px; right: 10px;
-      z-index: 1000;
       background: white; border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-      padding: 12px 14px; font-size: 12px; min-width: 150px;
+      padding: 10px 14px; font-size: 12px; min-width: 150px;
     }
     .buildings-legend h4 { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; margin-bottom: 8px; }
     .buildings-legend .sub { font-size: 10px; font-weight: 700; color: #999; text-transform: uppercase; margin: 8px 0 4px; }
@@ -126,8 +133,48 @@
     .bl-size-circle { border-radius: 50%; background: #9ca3af; border: 1px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); }
     .bl-size-label { font-size: 9px; color: #777; }
 
+    /* Модальное окно лотов */
+    .modal-bg {
+      position: absolute; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.4);
+      display: none; align-items: center; justify-content: center;
+    }
+    .modal-bg.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 10px;
+      width: min(760px, 92vw); max-height: 85vh;
+      display: flex; flex-direction: column;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    .modal-head {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 18px; border-bottom: 1px solid #eee;
+    }
+    .modal-head h3 { font-size: 15px; flex: 1; color: #222; }
+    .modal-head .sub { font-size: 12px; color: #888; }
+    .modal-dl {
+      padding: 6px 12px; background: #16a34a; color: #fff;
+      border: none; border-radius: 6px; font-size: 12px; cursor: pointer;
+    }
+    .modal-dl:hover { background: #15803d; }
+    .modal-x {
+      background: none; border: none; font-size: 22px; line-height: 1;
+      color: #999; cursor: pointer; padding: 0 4px;
+    }
+    .modal-body { overflow: auto; padding: 0 18px 16px; }
+    .lots-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .lots-table th, .lots-table td { padding: 6px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; }
+    .lots-table th { position: sticky; top: 0; background: #fafafa; color: #666; font-weight: 600; text-transform: uppercase; font-size: 10px; }
+    .lots-table td:first-child, .lots-table th:first-child { text-align: left; }
+
     /* Popup */
     .leaflet-popup-content { font-size: 13px; min-width: 200px; }
+    .popup-lots-btn {
+      display: inline-block; margin-top: 8px; padding: 5px 10px;
+      background: #3b82f6; color: #fff; border-radius: 5px;
+      font-size: 12px; cursor: pointer; border: none;
+    }
+    .popup-lots-btn:hover { background: #2563eb; }
     .leaflet-popup-content b { font-size: 14px; }
     .prow { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid #f0f0f0; gap: 8px; }
     .prow:last-child { border-bottom: none; }
@@ -146,14 +193,12 @@
   <hr>
   <h3>Данные</h3>
   <div id="fileStatus">Загрузка…</div>
-  <div id="fileStats" style="display:none; margin-top:6px; padding-top:6px; border-top:1px solid #eee;">
-    <div class="stat-row"><span>Объектов:</span><span id="statCount">—</span></div>
-    <div class="stat-row"><span>Ср. цена, руб/кв.м:</span><span id="statAvgPrice">—</span></div>
-    <div class="stat-row"><span>Ср. взв. цена:</span><span id="statWAvgPrice">—</span></div>
-    <div class="stat-row"><span>Объём, кв.м:</span><span id="statVolume">—</span></div>
+  <div id="fileStats" style="display:none; margin-top:5px; padding-top:5px; border-top:1px solid #eee; grid-template-columns:1fr 1fr; gap:0 12px;">
+    <div class="stat-row"><span>Объектов</span><span id="statCount">—</span></div>
+    <div class="stat-row"><span>Объём</span><span id="statVolume">—</span></div>
+    <div class="stat-row"><span>Ср. цена</span><span id="statAvgPrice">—</span></div>
+    <div class="stat-row"><span>Ср. взв.</span><span id="statWAvgPrice">—</span></div>
   </div>
-  <label class="upload-btn" for="fileInput" style="margin-top:8px;">&#8593; Загрузить свой CSV / GeoJSON</label>
-  <input type="file" id="fileInput" accept=".csv,.geojson,.json" style="display:none">
 
   <hr>
   <h3>Деление для расчёта</h3>
@@ -161,8 +206,8 @@
   <label class="radio-row"><input type="radio" name="activeLayer" value="ao"> Автономные округа</label>
   <label class="radio-row"><input type="radio" name="activeLayer" value="zones"> Зоны (кольца)</label>
   <label class="radio-row"><input type="radio" name="activeLayer" value="submarkets"> Субрынки</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="bizFormed"> Деловые районы — сформированные</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="bizForming"> Деловые районы — формирующиеся</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="bizFormed"> Дел. районы (сформир.)</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="bizForming"> Дел. районы (формир.)</label>
 
   <hr>
   <h3>Показатель</h3>
@@ -176,12 +221,13 @@
   <hr>
   <h3>Объекты (здания)</h3>
   <label class="check-row"><input type="checkbox" id="ovBuildings" checked> Показать здания</label>
-  <label class="check-row"><input type="checkbox" id="ovCluster" checked> Группировать при отдалении</label>
+  <label class="check-row"><input type="checkbox" id="ovCluster" checked> Группировать (кластеры)</label>
 
   <hr>
-  <h3>Рисование районов</h3>
+  <h3>Рисование и выгрузка</h3>
   <label class="check-row"><input type="checkbox" id="ovDraw"> Режим рисования</label>
-  <button class="upload-btn" id="exportDraw" style="margin-top:6px;">⬇ Экспорт нарисованного (GeoJSON)</button>
+  <button class="upload-btn" id="exportGeo" style="margin-top:5px;">⬇ Выгрузить GeoJSON</button>
+  <button class="upload-btn" id="exportXlsx" style="margin-top:4px; background:#16a34a;">⬇ Выгрузить Excel</button>
   <div id="drawStatus" style="font-size:11px;color:#777;margin-top:5px;"></div>
 
   <hr>
@@ -190,6 +236,8 @@
   <label class="check-row"><input type="checkbox" id="ovAo"> Округа (АО)</label>
   <label class="check-row"><input type="checkbox" id="ovZones"> Зоны (кольца)</label>
   <label class="check-row"><input type="checkbox" id="ovSub"> Субрынки</label>
+  <label class="check-row"><input type="checkbox" id="ovBizFormed"> Дел. районы (сформир.)</label>
+  <label class="check-row"><input type="checkbox" id="ovBizForming"> Дел. районы (формир.)</label>
 
   <hr>
   <h3>Подложка</h3>
@@ -198,26 +246,45 @@
   <label class="radio-row"><input type="radio" name="basemap" value="satellite"> Спутник</label>
 </div>
 
-<!-- Сводная таблица деловых районов (геометрия временно скрыта) -->
-<div class="stats-table" id="statsTable"></div>
-
-<!-- Легенда зданий -->
-<div class="buildings-legend" id="buildingsLegend"></div>
-
-<!-- Легенда -->
-<div class="legend" id="legend">
-  <h4 id="legendTitle">Ср. взв. цена, руб/кв.м</h4>
-  <div class="legend-gradient" id="legendGradient"></div>
-  <div class="legend-labels"><span id="legendMin">мин</span><span id="legendMax">макс</span></div>
-  <div class="no-data-row">
-    <div class="lswatch" style="background:#e0e0e0; border:1px solid #bbb;"></div>
-    <span>Нет данных</span>
+<!-- Модальное окно лотов -->
+<div class="modal-bg" id="lotsModalBg">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h3 id="lotsModalTitle">Лоты</h3>
+        <div class="sub" id="lotsModalSub"></div>
+      </div>
+      <button class="modal-dl" id="lotsModalDownload">⬇ Скачать Excel</button>
+      <button class="modal-x" id="lotsModalClose">&times;</button>
+    </div>
+    <div class="modal-body" id="lotsModalBody"></div>
   </div>
+</div>
+
+<!-- Левая стопка легенд (снизу вверх: шкала/таблица → легенда зданий) -->
+<div class="left-stack">
+  <!-- Легенда -->
+  <div class="legend" id="legend">
+    <h4 id="legendTitle">Ср. взв. цена, руб/кв.м</h4>
+    <div class="legend-gradient" id="legendGradient"></div>
+    <div class="legend-labels"><span id="legendMin">мин</span><span id="legendMax">макс</span></div>
+    <div class="no-data-row">
+      <div class="lswatch" style="background:#e0e0e0; border:1px solid #bbb;"></div>
+      <span>Нет данных</span>
+    </div>
+  </div>
+
+  <!-- Сводная таблица деловых районов (геометрия временно скрыта) -->
+  <div class="stats-table" id="statsTable"></div>
+
+  <!-- Легенда зданий -->
+  <div class="buildings-legend" id="buildingsLegend"></div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 // ============================================================
 //  КВАРТАЛЫ
@@ -225,9 +292,10 @@
 //  и допиши строку в начало этого списка (новые сверху).
 // ============================================================
 const QUARTERS = [
-  { id: '2026Q1', label: 'Q1 2026', file: 'data/buildings_2026Q1.json' },
+  { id: '2026Q1', label: 'Q1 2026', file: 'data/buildings_2026Q1.json', lots: 'data/lots_2026Q1.json' },
 ];
 let currentQuarter = QUARTERS[0];
+let lotsData = {};   // { "Название здания": [ {block,floor,area,price,scheme,size}, ... ] }
 
 // ============================================================
 //  КОНФИГ СЛОЁВ
@@ -237,12 +305,24 @@ const LAYER_CFG = {
   ao:         { file: 'data/ao.geojson',          nameField: 'NAME_AO', label: 'Автономные округа' },
   zones:      { file: 'data/zones.geojson',       nameField: 'name',    label: 'Зоны (кольца)' },
   submarkets: { file: 'data/submarkets.geojson',  nameField: 'name',    label: 'Субрынки' },
-  // Деловые районы: полигонов в исходных данных нет — строим выпуклые
-  // оболочки из координат зданий, отдельно по сформированным и формирующимся.
-  // Статистику считаем по атрибуту "Деловой район" (совпадает с таблицей).
-  bizFormed:  { synth: 'bizFormed',  groupBy: 'biz', nameField: 'name', label: 'Деловые районы — сформированные' },
-  bizForming: { synth: 'bizForming', groupBy: 'biz', nameField: 'name', label: 'Деловые районы — формирующиеся' },
+  // Деловые районы — настоящие полигоны (main_business_districts /
+  // future business districts). Статистика — point-in-polygon.
+  bizFormed:  { file: 'data/biz_formed.geojson',  nameField: 'name',     label: 'Деловые районы — сформированные' },
+  bizForming: { file: 'data/biz_forming.geojson', nameField: 'district', label: 'Деловые районы — формирующиеся' },
 };
+
+// Кириллические подписи зон (в данных коды латиницей)
+const ZONE_NAMES = {
+  'BR': 'Центральное ядро (БК)',
+  'BR-GR': 'БК–СК',
+  'GR-TTR': 'СК–ТТК',
+  'TTR-MKAD': 'ТТК–МКАД',
+};
+// Человекочитаемое название объекта слоя для попапа/подписи
+function displayName(key, rawName) {
+  if (key === 'zones') return ZONE_NAMES[rawName] || rawName;
+  return rawName;
+}
 
 // Классификация деловых районов по таблице "субрынки названия.xlsx".
 // Сформированные — устоявшиеся деловые районы; формирующиеся — развивающиеся.
@@ -526,8 +606,9 @@ async function recomputeAll() {
 // ============================================================
 //  РЕНДЕР ХОРОПЛЕТА
 // ============================================================
-// Слои, у которых геометрия временно скрыта — показываем таблицей
-const NO_GEOMETRY = new Set(['bizFormed', 'bizForming']);
+// Слои, у которых геометрия временно скрыта — показываем таблицей.
+// (Сейчас пусто: для деловых районов появились настоящие полигоны.)
+const NO_GEOMETRY = new Set();
 
 function hideStatsTable() {
   document.getElementById('statsTable').style.display = 'none';
@@ -615,12 +696,12 @@ async function renderChoropleth() {
       else stats = getBuiltinStats(key, cfg.nameField, f);
 
       const rows = [
-        ['Объектов, шт.',      stats?.count  != null ? fmt(Math.round(stats.count)) : '—'],
-        ['Объём, кв.м',        stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
-        ['Ср. цена, руб/кв.м', stats?.avg    != null ? fmt(Math.round(stats.avg)) : '—'],
-        ['Ср. взв. цена',      stats?.wavg   != null ? fmt(Math.round(stats.wavg)) : '—'],
+        ['Объектов, шт.',          stats?.count  != null ? fmt(Math.round(stats.count)) : '—'],
+        ['Объём, кв.м',            stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
+        ['Ср. цена, руб/кв.м',     stats?.avg    != null ? fmt(Math.round(stats.avg)) : '—'],
+        ['Ср. взв. цена, руб/кв.м',stats?.wavg   != null ? fmt(Math.round(stats.wavg)) : '—'],
       ];
-      const html = `<b>${name}</b><br>${rows.map(([l,v]) =>
+      const html = `<b>${displayName(key, name)}</b><br>${rows.map(([l,v]) =>
         `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`
       ).join('')}`;
       layer.bindPopup(html);
@@ -644,6 +725,8 @@ const OVERLAY_CFG = [
   { id: 'ovAo',    key: 'ao',         style: { color:'#222',    weight:2,   dashArray:null,  fillOpacity:0 } },
   { id: 'ovZones', key: 'zones',      style: { color:'#8b0000', weight:2,   dashArray:'6 4', fillOpacity:0 } },
   { id: 'ovSub',   key: 'submarkets', style: { color:'#003296', weight:1.5, dashArray:'3 3', fillOpacity:0 } },
+  { id: 'ovBizFormed',  key: 'bizFormed',  style: { color:'#b400b4', weight:2, dashArray:null,  fillOpacity:0 } },
+  { id: 'ovBizForming', key: 'bizForming', style: { color:'#e07b00', weight:2, dashArray:'5 4', fillOpacity:0 } },
 ];
 
 async function renderOverlays() {
@@ -653,8 +736,8 @@ async function renderOverlays() {
     overlayLayers[oc.id] = L.geoJSON(gj, {
       style: oc.style,
       onEachFeature: (f, layer) => {
-        const name = f.properties[LAYER_CFG[oc.key].nameField] || '—';
-        layer.bindTooltip(name, { sticky: true, className: 'leaflet-tooltip' });
+        const raw = f.properties[LAYER_CFG[oc.key].nameField] || '—';
+        layer.bindTooltip(displayName(oc.key, raw), { sticky: true, className: 'leaflet-tooltip' });
       }
     });
     if (document.getElementById(oc.id).checked) overlayLayers[oc.id].addTo(map);
@@ -740,7 +823,7 @@ function updateGlobalStats(pts) {
   document.getElementById('statAvgPrice').textContent = fmt(Math.round(avgPrice));
   document.getElementById('statWAvgPrice').textContent = fmt(Math.round(wavgPrice));
   document.getElementById('statVolume').textContent = fmt(Math.round(totalArea));
-  document.getElementById('fileStats').style.display = 'block';
+  document.getElementById('fileStats').style.display = 'grid';
 }
 
 // ============================================================
@@ -781,13 +864,14 @@ function renderBuildings() {
         disableClusteringAtZoom: 15
       })
     : L.layerGroup();
-  for (const b of buildingsData) {
-    if (!isFinite(b.lat) || !isFinite(b.lng)) continue;
+  buildingsData.forEach((b, idx) => {
+    if (!isFinite(b.lat) || !isFinite(b.lng)) return;
     const marker = L.circleMarker([b.lat, b.lng], {
       radius: buildingRadius(b.volume),
       fillColor: buildingColor(b.cls),
       color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.85
     });
+    const nLots = (lotsData[b.name] || []).length || (b.lots ?? 0);
     const rows = [
       ['Адрес',        b.address || '—'],
       ['Девелопер',    b.developer || '—'],
@@ -799,16 +883,21 @@ function renderBuildings() {
       ['GLA, кв.м',    b.gla != null ? fmt(Math.round(b.gla)) : '—'],
       ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
       ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
+      ['Лотов, шт.',   fmt(nLots)],
       ['Зона',         b.zone || '—'],
       ['Субрынок',     b.submarket || '—'],
       ['Деловой район',b.biz || '—'],
     ];
+    const btn = nLots > 0
+      ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Показать лоты (${nLots})</button>`
+      : '';
     const html = `<b>${b.name || 'Без названия'}</b>` +
-      rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('');
-    marker.bindPopup(html, { maxHeight: 320 });
+      rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
+      btn;
+    marker.bindPopup(html, { maxHeight: 340 });
     marker.bindTooltip(b.name || '', { direction: 'top' });
     buildingsLayer.addLayer(marker);
-  }
+  });
   if (document.getElementById('ovBuildings').checked) buildingsLayer.addTo(map);
   renderBuildingsLegend();
 }
@@ -833,18 +922,7 @@ function renderBuildingsLegend() {
       <span>Класс ${c}</span></div>`;
   }).join('');
 
-  // размер = объём предложения. Показываем 3 опорных значения
-  const samples = [2000, 20000, 70000];
-  const sizeCols = samples.map(v => {
-    const r = buildingRadius(v);
-    return `<div class="bl-size-col">
-      <span class="bl-size-circle" style="width:${2*r}px;height:${2*r}px"></span>
-      <span class="bl-size-label">${fmtShort(v)}</span></div>`;
-  }).join('');
-
-  el.innerHTML = `<h4>Здания</h4>${colorRows}
-    <div class="sub">Объём, кв.м</div>
-    <div class="bl-size-row">${sizeCols}</div>`;
+  el.innerHTML = `<h4>Здания — класс</h4>${colorRows}`;
   el.style.display = 'block';
 }
 
@@ -857,12 +935,15 @@ async function loadBuildings() {
     const resp = await fetch(currentQuarter.file);
     const data = await resp.json();
     buildingsData = data;
+    // лоты (для таблицы в попапе здания)
+    lotsData = {};
+    if (currentQuarter.lots) {
+      try { lotsData = await (await fetch(currentQuarter.lots)).json(); } catch(e) { lotsData = {}; }
+    }
     buildingPoints = data.map(b => ({
       lat: b.lat, lng: b.lng,
       area: b.volume, price: b.price
     }));
-    delete geojsonCache['bizFormed'];   // пересобрать оболочки деловых районов
-    delete geojsonCache['bizForming'];
     dataLoaded = true;
     status.textContent = `✓ ${currentQuarter.label}: ${data.length} зданий`;
     status.style.color = '#16a34a';
@@ -906,45 +987,6 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
 //  ОБРАБОТЧИКИ СОБЫТИЙ
 // ============================================================
 
-// Загрузка файла
-document.getElementById('fileInput').addEventListener('change', async function() {
-  const file = this.files[0];
-  if (!file) return;
-  const status = document.getElementById('fileStatus');
-  status.textContent = 'Загружаю...';
-  try {
-    const text = await file.text();
-    let pts;
-    if (file.name.endsWith('.csv')) {
-      pts = parseCSV(text);
-    } else {
-      pts = parseGeoJSON(text);
-    }
-    if (!pts.length) throw new Error('Не найдено ни одного корректного объекта');
-    buildingPoints = pts;
-    buildingsData = pts.map(p => ({
-      name: p.name || '', address: p.address || '', developer: p.developer || '',
-      cls: p.cls || '', year: p.year || '', status: p.status || '', on_sale: p.on_sale || '',
-      gba: p.gba ?? null, gla: p.gla ?? null,
-      volume: p.area, price: p.price,
-      zone: p.zone || '', submarket: p.submarket || '', biz: p.biz || '',
-      lat: p.lat, lng: p.lng
-    }));
-    delete geojsonCache['bizFormed'];   // пересобрать оболочки деловых районов
-    delete geojsonCache['bizForming'];
-    dataLoaded = true;
-    status.textContent = `✓ ${file.name} (${pts.length} объектов)`;
-    updateGlobalStats(pts);
-    status.style.color = '#16a34a';
-    await recomputeAll();
-    await renderChoropleth();
-    await renderBuildings();
-  } catch(e) {
-    status.textContent = '✗ Ошибка: ' + e.message;
-    status.style.color = '#dc2626';
-  }
-});
-
 // Смена базового слоя
 document.querySelectorAll('input[name="activeLayer"]').forEach(r => {
   r.addEventListener('change', function() {
@@ -980,7 +1022,67 @@ document.getElementById('ovCluster').addEventListener('change', function() {
 });
 
 // ============================================================
-//  РИСОВАНИЕ РАЙОНОВ (обводилка) + экспорт GeoJSON
+//  ТРАНСЛИТЕРАЦИЯ И СКАЧИВАНИЕ
+// ============================================================
+const TRANSLIT = {
+  'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y',
+  'к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f',
+  'х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya'
+};
+function translit(s) {
+  return (s || '').toLowerCase().split('').map(c => TRANSLIT[c] ?? c).join('')
+    .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '') || 'export';
+}
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ============================================================
+//  МОДАЛКА ЛОТОВ
+// ============================================================
+let currentLotsBuilding = null;
+window.openLotsModal = function(idx) {
+  const b = buildingsData[idx];
+  if (!b) return;
+  currentLotsBuilding = b;
+  const lots = lotsData[b.name] || [];
+  document.getElementById('lotsModalTitle').textContent = b.name || 'Лоты';
+  document.getElementById('lotsModalSub').textContent =
+    `${currentQuarter.label} · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
+  const head = `<tr><th>Блок</th><th>Этаж</th><th>Площадь, кв.м</th><th>Цена, руб/кв.м</th><th>Схема</th><th>Размер</th></tr>`;
+  const body = lots.map(l => `<tr>
+    <td>${l.block || '—'}</td><td>${l.floor || '—'}</td>
+    <td>${l.area != null ? fmt(l.area) : '—'}</td>
+    <td>${l.price != null ? fmt(Math.round(l.price)) : '—'}</td>
+    <td>${l.scheme || '—'}</td><td>${l.size || '—'}</td></tr>`).join('');
+  document.getElementById('lotsModalBody').innerHTML =
+    `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  document.getElementById('lotsModalBg').classList.add('open');
+};
+function closeLotsModal() { document.getElementById('lotsModalBg').classList.remove('open'); }
+document.getElementById('lotsModalClose').addEventListener('click', closeLotsModal);
+document.getElementById('lotsModalBg').addEventListener('click', e => {
+  if (e.target.id === 'lotsModalBg') closeLotsModal();
+});
+document.getElementById('lotsModalDownload').addEventListener('click', function() {
+  const b = currentLotsBuilding; if (!b) return;
+  const lots = lotsData[b.name] || [];
+  const rows = lots.map(l => ({
+    'Блок': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
+    'Цена, руб/кв.м с НДС': l.price, 'Схема продажи': l.scheme, 'Размер блока': l.size
+  }));
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Лоты');
+  // имя файла: здание + квартал + год выгрузки
+  const fname = `${translit(b.name)}_${currentQuarter.id}_${new Date().getFullYear()}.xlsx`;
+  XLSX.writeFile(wb, fname);
+});
+
+// ============================================================
+//  РИСОВАНИЕ РАЙОНОВ (обводилка) + выгрузка GeoJSON / Excel
 // ============================================================
 const drawnItems = new L.FeatureGroup();
 let drawControl = null;
@@ -988,7 +1090,7 @@ let drawControl = null;
 function updateDrawStatus() {
   const n = drawnItems.getLayers().length;
   document.getElementById('drawStatus').textContent =
-    n ? `Нарисовано районов: ${n}` : 'Обведи район на карте, впиши название и тип.';
+    n ? `Нарисовано полигонов: ${n}` : 'Включи режим, обведи область — потом выгрузи.';
 }
 
 document.getElementById('ovDraw').addEventListener('change', function() {
@@ -1010,32 +1112,79 @@ document.getElementById('ovDraw').addEventListener('change', function() {
 
 map.on(L.Draw.Event.CREATED, function(e) {
   const layer = e.layer;
-  const name = prompt('Название делового района (например, Белорусский):', '');
+  const name = prompt('Название области (например, Белорусский):', '');
   if (name === null) return;
-  let type = prompt('Тип — впиши "с" (сформированный) или "ф" (формирующийся):', 'ф');
-  type = (type || '').trim().toLowerCase().startsWith('с') ? 'сформированный' : 'формирующийся';
-  layer.feature = { type: 'Feature', properties: { name: name || '', type } };
-  layer.bindTooltip(`${name || '—'} (${type})`, { sticky: true });
+  layer.feature = { type: 'Feature', properties: { name: name || '' } };
+  layer.bindTooltip(name || '—', { sticky: true });
   drawnItems.addLayer(layer);
   updateDrawStatus();
 });
 
-document.getElementById('exportDraw').addEventListener('click', function() {
+// здания внутри нарисованных полигонов
+function buildingsInDrawn() {
+  const polys = [];
+  drawnItems.eachLayer(l => polys.push(l.toGeoJSON()));
+  if (!polys.length) return null;
+  const inside = buildingsData.filter(b =>
+    isFinite(b.lat) && isFinite(b.lng) &&
+    polys.some(p => pointInFeature(b.lng, b.lat, p)));
+  return inside;
+}
+// имя файла из названия первого полигона (транслит) + квартал
+function drawnFileBase() {
+  let nm = '';
+  drawnItems.eachLayer(l => { if (!nm) nm = l.feature?.properties?.name || ''; });
+  return `${translit(nm || 'polygon')}_${currentQuarter.id}`;
+}
+
+document.getElementById('exportGeo').addEventListener('click', function() {
   const features = [];
   drawnItems.eachLayer(l => {
     const gj = l.toGeoJSON();
     gj.properties = l.feature ? l.feature.properties : {};
     features.push(gj);
   });
-  if (!features.length) { alert('Сначала обведи хотя бы один район.'); return; }
+  if (!features.length) { alert('Сначала обведи хотя бы один полигон (режим рисования).'); return; }
   const fc = { type: 'FeatureCollection', features };
-  const blob = new Blob([JSON.stringify(fc, null, 1)], { type: 'application/geo+json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'delovye_rayony.geojson';
-  a.click();
-  URL.revokeObjectURL(url);
+  downloadBlob(new Blob([JSON.stringify(fc, null, 1)], { type: 'application/geo+json' }),
+    `${drawnFileBase()}.geojson`);
+});
+
+document.getElementById('exportXlsx').addEventListener('click', function() {
+  const inside = buildingsInDrawn();
+  if (!inside) { alert('Сначала обведи область (режим рисования).'); return; }
+  if (!inside.length) { alert('Внутри полигона нет зданий.'); return; }
+
+  // показатели
+  const valid = inside.filter(b => isFinite(b.volume) && isFinite(b.price) && b.volume > 0);
+  const totalArea = valid.reduce((s,b) => s + b.volume, 0);
+  const avg = valid.length ? valid.reduce((s,b) => s + b.price, 0) / valid.length : null;
+  const wavg = totalArea ? valid.reduce((s,b) => s + b.price * b.volume, 0) / totalArea : null;
+  const totalLots = inside.reduce((s,b) => s + ((lotsData[b.name]||[]).length || b.lots || 0), 0);
+
+  const summary = [
+    ['Показатель', 'Значение'],
+    ['Квартал', currentQuarter.label],
+    ['Зданий, шт.', inside.length],
+    ['Лотов, шт.', totalLots],
+    ['Площадь на продажу, кв.м', Math.round(totalArea)],
+    ['Средняя цена, руб/кв.м', avg != null ? Math.round(avg) : '—'],
+    ['Средневзвешенная цена, руб/кв.м', wavg != null ? Math.round(wavg) : '—'],
+  ];
+  const bldRows = inside.map(b => ({
+    'Здание': b.name, 'Адрес': b.address, 'Девелопер': b.developer, 'Класс': b.cls,
+    'Год ввода': b.year, 'Статус': b.status, 'В продаже': b.on_sale,
+    'GBA, кв.м': b.gba, 'GLA, кв.м': b.gla,
+    'Объём на продажу, кв.м': b.volume, 'Цена с НДС, руб/кв.м': b.price,
+    'Лотов, шт.': (lotsData[b.name]||[]).length || b.lots || 0,
+    'Зона': b.zone, 'Субрынок': b.submarket, 'Деловой район': b.biz,
+    'Широта': b.lat, 'Долгота': b.lng
+  }));
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(bldRows), 'Здания');
+  XLSX.writeFile(wb, `${drawnFileBase()}_${new Date().getFullYear()}.xlsx`);
 });
 
 // Подложка
