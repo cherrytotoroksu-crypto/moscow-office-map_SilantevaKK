@@ -161,7 +161,14 @@
       background: none; border: none; font-size: 22px; line-height: 1;
       color: #999; cursor: pointer; padding: 0 4px;
     }
-    .modal-body { overflow: auto; padding: 0 18px 16px; }
+    .modal-body { overflow: auto; padding: 12px 18px 16px; }
+    .modal label { font-size: 12px; color: #555; }
+    .modal label select { font-size: 12px; margin-left: 4px; padding: 3px 5px; border: 1px solid #ddd; border-radius: 4px; }
+    .cmp-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .cmp-table th, .cmp-table td { padding: 5px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; }
+    .cmp-table th { position: sticky; top: 0; background: #fafafa; color: #666; font-size: 10px; text-transform: uppercase; }
+    .cmp-table td:first-child, .cmp-table th:first-child { text-align: left; }
+    .cmp-up { color: #16a34a; } .cmp-down { color: #dc2626; }
     .lots-table { width: 100%; border-collapse: collapse; font-size: 12px; }
     .lots-table th, .lots-table td { padding: 6px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; }
     .lots-table th { position: sticky; top: 0; background: #fafafa; color: #666; font-weight: 600; text-transform: uppercase; font-size: 10px; }
@@ -199,6 +206,11 @@
     <div class="stat-row"><span>Ср. цена</span><span id="statAvgPrice">—</span></div>
     <div class="stat-row"><span>Ср. взв.</span><span id="statWAvgPrice">—</span></div>
   </div>
+
+  <hr>
+  <h3>Аналитика</h3>
+  <button class="upload-btn" id="openDynamics" style="background:#7c3aed;">📈 Динамика по кварталам</button>
+  <button class="upload-btn" id="openCompare" style="margin-top:4px; background:#0891b2;">⇄ Сравнить кварталы</button>
 
   <hr>
   <h3>Деление для расчёта</h3>
@@ -261,6 +273,84 @@
   </div>
 </div>
 
+<!-- Модалка ДИНАМИКА -->
+<div class="modal-bg" id="dynModalBg">
+  <div class="modal" style="width:min(860px,94vw);">
+    <div class="modal-head">
+      <h3>📈 Динамика по кварталам</h3>
+      <button class="modal-dl" id="dynDownload">⬇ Excel</button>
+      <button class="modal-x" id="dynClose">&times;</button>
+    </div>
+    <div style="padding:10px 18px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-bottom:1px solid #eee;">
+      <label>Уровень:
+        <select id="dynLevel">
+          <option value="division">По делениям</option>
+          <option value="building">По зданиям</option>
+        </select>
+      </label>
+      <label id="dynDivWrap">Деление:
+        <select id="dynDivision">
+          <option value="zones">Зоны (кольца)</option>
+          <option value="ao">Автономные округа</option>
+          <option value="submarkets">Субрынки</option>
+          <option value="bizFormed">Дел. районы (сформир.)</option>
+          <option value="bizForming">Дел. районы (формир.)</option>
+        </select>
+      </label>
+      <label id="dynBldWrap" style="display:none;">Здание:
+        <input id="dynBuildingSearch" type="text" placeholder="поиск…" autocomplete="off"
+          style="font-size:12px;padding:3px 6px;border:1px solid #ddd;border-radius:4px;width:150px;">
+        <select id="dynBuilding" style="max-width:260px;"></select>
+      </label>
+      <label>Показатель:
+        <select id="dynMetric">
+          <option value="wavg">Ср. взв. цена, руб/кв.м</option>
+          <option value="avg">Ср. цена, руб/кв.м</option>
+          <option value="volume">Объём, кв.м</option>
+          <option value="count">Кол-во объектов</option>
+          <option value="price">Цена здания, руб/кв.м</option>
+          <option value="lots">Лотов, шт.</option>
+        </select>
+      </label>
+    </div>
+    <div class="modal-body"><canvas id="dynChart" height="150"></canvas></div>
+  </div>
+</div>
+
+<!-- Модалка СРАВНЕНИЕ -->
+<div class="modal-bg" id="cmpModalBg">
+  <div class="modal" style="width:min(900px,94vw);">
+    <div class="modal-head">
+      <h3>⇄ Сравнение кварталов</h3>
+      <button class="modal-dl" id="cmpDownload">⬇ Excel</button>
+      <button class="modal-x" id="cmpClose">&times;</button>
+    </div>
+    <div style="padding:10px 18px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-bottom:1px solid #eee;">
+      <label>Было: <select id="cmpFrom"></select></label>
+      <label>Стало: <select id="cmpTo"></select></label>
+      <label>Уровень:
+        <select id="cmpLevel">
+          <option value="zones">Зоны (кольца)</option>
+          <option value="ao">Автономные округа</option>
+          <option value="submarkets">Субрынки</option>
+          <option value="bizFormed">Дел. районы (сформир.)</option>
+          <option value="bizForming">Дел. районы (формир.)</option>
+          <option value="building">Здания</option>
+        </select>
+      </label>
+      <label>Показатель:
+        <select id="cmpMetric">
+          <option value="wavg">Ср. взв. цена</option>
+          <option value="avg">Ср. цена</option>
+          <option value="volume">Объём</option>
+          <option value="count">Кол-во объектов</option>
+        </select>
+      </label>
+    </div>
+    <div class="modal-body" id="cmpBody"></div>
+  </div>
+</div>
+
 <!-- Левая стопка легенд (снизу вверх: шкала/таблица → легенда зданий) -->
 <div class="left-stack">
   <!-- Легенда -->
@@ -285,6 +375,7 @@
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
 <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
 // ============================================================
 //  КВАРТАЛЫ
@@ -293,6 +384,8 @@
 // ============================================================
 const QUARTERS = [
   { id: '2026Q1', label: 'Q1 2026', file: 'data/buildings_2026Q1.json', lots: 'data/lots_2026Q1.json' },
+  { id: '2025Q4', label: 'Q4 2025', file: 'data/buildings_2025Q4.json', lots: 'data/lots_2025Q4.json' },
+  { id: '2025Q3', label: 'Q3 2025', file: 'data/buildings_2025Q3.json', lots: 'data/lots_2025Q3.json' },
 ];
 let currentQuarter = QUARTERS[0];
 let lotsData = {};   // { "Название здания": [ {block,floor,area,price,scheme,size}, ... ] }
@@ -317,6 +410,7 @@ const ZONE_NAMES = {
   'BR-GR': 'БК–СК',
   'GR-TTR': 'СК–ТТК',
   'TTR-MKAD': 'ТТК–МКАД',
+  'ZA-MKAD': 'за МКАД',
 };
 // Человекочитаемое название объекта слоя для попапа/подписи
 function displayName(key, rawName) {
@@ -548,14 +642,15 @@ function pointInFeature(lng, lat, feature) {
   return false;
 }
 
-function computeStats(layerKey, geojson) {
+function computeStats(layerKey, geojson, blds) {
   const cfg = LAYER_CFG[layerKey];
+  const data = blds || buildingsData;
   const result = {};
   for (const f of geojson.features) {
     const name = f.properties[cfg.nameField];
-    result[name] = { sumPriceArea: 0, sumArea: 0, sumPrice: 0, count: 0, validCount: 0 };
+    result[name] = { sumPriceArea: 0, sumArea: 0, sumPrice: 0, count: 0, validCount: 0, lots: 0 };
   }
-  const add = (name, area, price) => {
+  const add = (name, area, price, lots) => {
     if (!(name in result)) return;
     if (isFinite(area) && isFinite(price) && area > 0) {
       result[name].sumPriceArea += price * area;
@@ -564,19 +659,20 @@ function computeStats(layerKey, geojson) {
       result[name].validCount += 1;
     }
     result[name].count += 1;
+    result[name].lots += (lots || 0);
   };
-  for (const b of buildingsData) {
-    const area = b.volume, price = b.price;
+  for (const b of data) {
+    const area = b.volume, price = b.price, lots = b.lots || 0;
     if (cfg.groupBy) {
       // группировка по атрибуту здания (для деловых районов)
       const name = b[cfg.groupBy];
-      if (name) add(name, area, price);
+      if (name) add(name, area, price, lots);
     } else {
       // point-in-polygon по реальным полигонам
       if (!isFinite(b.lat) || !isFinite(b.lng)) continue;
       for (const f of geojson.features) {
         if (pointInFeature(b.lng, b.lat, f)) {
-          add(f.properties[cfg.nameField], area, price);
+          add(f.properties[cfg.nameField], area, price, lots);
           break;
         }
       }
@@ -590,6 +686,7 @@ function computeStats(layerKey, geojson) {
       avg:    s.validCount > 0 ? s.sumPrice / s.validCount : null,
       volume: s.sumArea,
       count:  s.count,
+      lots:   s.lots,
     };
   }
   return out;
@@ -602,6 +699,37 @@ async function recomputeAll() {
     computed[key] = computeStats(key, gj);
   }
 }
+
+// ============================================================
+//  ПРЕДРАСЧЁТ ПО ВСЕМ КВАРТАЛАМ (для динамики и сравнения)
+// ============================================================
+let allBuildings = {};   // qid -> [building]
+let allStats = {};       // qid -> { layerKey -> {name -> stats} }
+let buildById = {};      // id -> { qid -> building }
+let precomputed = false;
+
+async function precomputeAll() {
+  if (precomputed) return;
+  // порядок кварталов от старых к новым
+  const qs = [...QUARTERS].slice().reverse();
+  for (const q of qs) {
+    let blds;
+    try { blds = await (await fetch(q.file)).json(); } catch(e) { blds = []; }
+    allBuildings[q.id] = blds;
+    allStats[q.id] = {};
+    for (const key of Object.keys(LAYER_CFG)) {
+      const gj = await fetchGeoJSON(key);
+      allStats[q.id][key] = computeStats(key, gj, blds);
+    }
+    for (const b of blds) {
+      if (b.id == null) continue;
+      (buildById[b.id] ||= {})[q.id] = b;
+    }
+  }
+  precomputed = true;
+}
+// хронологический порядок qid (старые → новые)
+function quartersChrono() { return [...QUARTERS].slice().reverse(); }
 
 // ============================================================
 //  РЕНДЕР ХОРОПЛЕТА
@@ -884,16 +1012,18 @@ function renderBuildings() {
       ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
       ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
       ['Лотов, шт.',   fmt(nLots)],
-      ['Зона',         b.zone || '—'],
-      ['Субрынок',     b.submarket || '—'],
-      ['Деловой район',b.biz || '—'],
+      ['Зона',         b.geoZone ? displayName('zones', b.geoZone) : '—'],
+      ['Субрынок',     b.geoSubmarket || '—'],
+      ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
+      ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
     ];
-    const btn = nLots > 0
+    const lotsBtn = nLots > 0
       ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Показать лоты (${nLots})</button>`
       : '';
+    const anaBtn = `<button class="popup-lots-btn" style="background:#7c3aed;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика</button>`;
     const html = `<b>${b.name || 'Без названия'}</b>` +
       rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
-      btn;
+      `<div style="margin-top:8px;">${lotsBtn}${anaBtn}</div>`;
     marker.bindPopup(html, { maxHeight: 340 });
     marker.bindTooltip(b.name || '', { direction: 'top' });
     buildingsLayer.addLayer(marker);
@@ -949,9 +1079,31 @@ async function loadBuildings() {
     status.style.color = '#16a34a';
     updateGlobalStats(buildingPoints);
     await recomputeAll();
+    assignGeo();
   } catch(e) {
     status.textContent = '✗ Не удалось загрузить данные';
     status.style.color = '#dc2626';
+  }
+}
+
+// Назначение зоны/субрынка/делового района по геолокации (point-in-polygon).
+// Приоритет — попадание в полигон, а не атрибут из таблицы.
+function assignGeo() {
+  const cfgs = [
+    ['geoZone',       'zones',      'name'],
+    ['geoSubmarket',  'submarkets', 'name'],
+    ['geoBizFormed',  'bizFormed',  'name'],
+    ['geoBizForming', 'bizForming', 'district'],
+  ];
+  for (const b of buildingsData) {
+    for (const [prop, key, field] of cfgs) {
+      b[prop] = '';
+      const fc = geojsonCache[key];
+      if (!fc || !isFinite(b.lat) || !isFinite(b.lng)) continue;
+      for (const f of fc.features) {
+        if (pointInFeature(b.lng, b.lat, f)) { b[prop] = f.properties[field] || ''; break; }
+      }
+    }
   }
 }
 
@@ -1181,10 +1333,244 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
     'Широта': b.lat, 'Долгота': b.lng
   }));
 
+  // лист «Лоты» — все лоты зданий внутри полигона
+  const lotRows = [];
+  inside.forEach(b => {
+    (lotsData[b.name] || []).forEach(l => lotRows.push({
+      'Здание': b.name, 'Блок': l.block, 'Этаж': l.floor,
+      'Площадь, кв.м': l.area, 'Цена, руб/кв.м с НДС': l.price,
+      'Схема продажи': l.scheme, 'Размер блока': l.size
+    }));
+  });
+
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(bldRows), 'Здания');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(lotRows.length ? lotRows : [{'Лоты':'нет данных'}]), 'Лоты');
   XLSX.writeFile(wb, `${drawnFileBase()}_${new Date().getFullYear()}.xlsx`);
+});
+
+// ============================================================
+//  ДИНАМИКА И СРАВНЕНИЕ
+// ============================================================
+const DIV_LABELS = { zones:'Зоны', ao:'Округа', submarkets:'Субрынки',
+  bizFormed:'Дел. районы (сформир.)', bizForming:'Дел. районы (формир.)' };
+const METRIC_NAMES = { wavg:'Ср. взв. цена, руб/кв.м', avg:'Ср. цена, руб/кв.м',
+  volume:'Объём, кв.м', count:'Кол-во объектов', price:'Цена здания, руб/кв.м', lots:'Лотов, шт.' };
+const CHART_COLORS = ['#7c3aed','#2563eb','#0891b2','#16a34a','#ca8a04','#dc2626','#db2777',
+  '#0d9488','#65a30d','#9333ea','#ea580c','#0284c7','#4d7c0f','#be123c','#7c2d12','#1e3a8a','#831843'];
+
+function divDisp(layer, name) {
+  if (layer === 'zones') return ZONE_NAMES[name] || name;
+  return name;
+}
+function divVal(qid, layer, name, metric) {
+  const s = allStats[qid]?.[layer]?.[name];
+  return s ? s[metric] : null;
+}
+function bldVal(b, metric) {
+  if (!b) return null;
+  if (metric === 'volume') return b.volume;
+  if (metric === 'lots') return b.lots ?? null;
+  if (metric === 'count') return 1;
+  return b.price; // wavg/avg/price → цена здания
+}
+function fmtNum(n) { return (n==null||!isFinite(n)) ? '' : Math.round(n); }
+
+// Грубая латиница→кириллица для поиска (Upside → апсайд и т.п.)
+const LAT2CYR = [
+  ['shch','щ'],['sch','щ'],['kh','х'],['ph','ф'],['ts','ц'],['ch','ч'],['sh','ш'],
+  ['yo','ё'],['yu','ю'],['ya','я'],['zh','ж'],['ay','ай'],['ai','ай'],['ey','эй'],['ee','и'],
+  ['ou','у'],['oo','у'],['a','а'],['b','б'],['c','к'],['d','д'],['e','е'],['f','ф'],['g','г'],
+  ['h','х'],['i','и'],['j','дж'],['k','к'],['l','л'],['m','м'],['n','н'],['o','о'],['p','п'],
+  ['q','к'],['r','р'],['s','с'],['t','т'],['u','у'],['v','в'],['w','в'],['x','кс'],['y','й'],['z','з']
+];
+function latToCyr(s) {
+  s = (s || '').toLowerCase(); let out = '';
+  for (let i = 0; i < s.length;) {
+    let m = null;
+    for (const [lat, cyr] of LAT2CYR) { if (s.startsWith(lat, i)) { m = [lat, cyr]; break; } }
+    if (m) { out += m[1]; i += m[0].length; } else { out += s[i]; i++; }
+  }
+  return out;
+}
+// Фонетические синонимы (английское произношение латинских названий).
+// Можно дополнять по мере необходимости.
+const NAME_SYNONYMS = {
+  'upside':'апсайд', 'icity':'айсити', 'air':'эйр эйр', 'ahead':'эхэд эхед',
+  'mount':'маунт', 'bell':'белл', 'plain':'плейн', ' space':'спейс',
+  'tower':'тауэр', 'park':'парк', 'plaza':'плаза', 'hub':'хаб', 'city':'сити'
+};
+function buildingSearchKey(name) {
+  const n = (name || '').toLowerCase();
+  let syn = '';
+  for (const [lat, cyr] of Object.entries(NAME_SYNONYMS)) if (n.includes(lat)) syn += ' ' + cyr;
+  return [n, translit(n), latToCyr(n), syn].join(' ');
+}
+
+// единый список зданий по всем кварталам (по id, каноническое имя)
+let dynBuildingList = [];
+function buildDynBuildingList() {
+  const seen = new Map();
+  for (const q of QUARTERS) {
+    for (const b of (allBuildings[q.id] || [])) {
+      if (b.id == null) continue;
+      if (!seen.has(b.id)) seen.set(b.id, { id: b.id, name: b.name, key: buildingSearchKey(b.name) });
+    }
+  }
+  dynBuildingList = [...seen.values()].sort((a,b)=>(a.name||'').localeCompare(b.name||'','ru'));
+}
+function fillDynBuildingSelect(query, keepId) {
+  const sel = document.getElementById('dynBuilding');
+  let q = (query || '').trim().toLowerCase();
+  const variants = q ? [q, translit(q), latToCyr(q)] : [];
+  const list = !q ? dynBuildingList
+    : dynBuildingList.filter(b => variants.some(v => b.key.includes(v)));
+  sel.innerHTML = list.map(b=>`<option value="${b.id}">${b.name}</option>`).join('');
+  if (keepId != null && list.some(b=>String(b.id)===String(keepId))) sel.value = keepId;
+}
+
+let dynChart = null;
+async function openDynamics() {
+  await precomputeAll();
+  buildDynBuildingList();
+  fillDynBuildingSelect('');
+  document.getElementById('dynBuildingSearch').value = '';
+  document.getElementById('dynModalBg').classList.add('open');
+  renderDynamics();
+}
+// открыть аналитику для конкретного здания (из попапа)
+window.openBuildingAnalytics = async function(idx) {
+  const b = buildingsData[idx]; if (!b) return;
+  await precomputeAll();
+  buildDynBuildingList();
+  document.getElementById('dynLevel').value = 'building';
+  fillDynBuildingSelect('', b.id);
+  document.getElementById('dynBuildingSearch').value = '';
+  document.getElementById('dynModalBg').classList.add('open');
+  renderDynamics();
+};
+document.getElementById('dynBuildingSearch').addEventListener('input', function() {
+  fillDynBuildingSelect(this.value);
+  renderDynamics();
+});
+function renderDynamics() {
+  const level = document.getElementById('dynLevel').value;
+  const metric = document.getElementById('dynMetric').value;
+  document.getElementById('dynDivWrap').style.display = level==='division' ? '' : 'none';
+  document.getElementById('dynBldWrap').style.display = level==='building' ? '' : 'none';
+  const qs = quartersChrono();
+  const labels = qs.map(q=>q.label);
+  let datasets = [];
+  if (level === 'division') {
+    const layer = document.getElementById('dynDivision').value;
+    // имена с данными хотя бы в одном квартале
+    const names = new Set();
+    qs.forEach(q => Object.entries(allStats[q.id]?.[layer]||{}).forEach(([n,v])=>{ if(v&&v.count>0) names.add(n); }));
+    [...names].forEach((n,i)=>{
+      datasets.push({ label: divDisp(layer,n),
+        data: qs.map(q=>{ const v=divVal(q.id,layer,n,metric); return v==null?null:Math.round(v); }),
+        borderColor: CHART_COLORS[i%CHART_COLORS.length], backgroundColor:'transparent', tension:0.2, spanGaps:true });
+    });
+  } else {
+    const id = document.getElementById('dynBuilding').value;
+    const name = (buildById[id] && Object.values(buildById[id])[0]?.name) || 'Здание';
+    datasets.push({ label: name,
+      data: qs.map(q=>{ const v=bldVal(buildById[id]?.[q.id], metric); return v==null?null:Math.round(v); }),
+      borderColor: CHART_COLORS[0], backgroundColor:'rgba(124,58,237,0.1)', tension:0.2, spanGaps:true, fill:true });
+  }
+  if (dynChart) dynChart.destroy();
+  dynChart = new Chart(document.getElementById('dynChart'), {
+    type:'line', data:{ labels, datasets },
+    options:{ responsive:true, plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
+      title:{ display:true, text:METRIC_NAMES[metric] } }, scales:{ y:{ beginAtZero:false } } }
+  });
+}
+document.getElementById('openDynamics').addEventListener('click', openDynamics);
+document.getElementById('dynClose').addEventListener('click', ()=>document.getElementById('dynModalBg').classList.remove('open'));
+document.getElementById('dynModalBg').addEventListener('click', e=>{ if(e.target.id==='dynModalBg') e.currentTarget.classList.remove('open'); });
+['dynLevel','dynDivision','dynBuilding','dynMetric'].forEach(id=>
+  document.getElementById(id).addEventListener('change', renderDynamics));
+document.getElementById('dynDownload').addEventListener('click', ()=>{
+  if (!dynChart) return;
+  const qs = quartersChrono();
+  const rows = dynChart.data.datasets.map(ds=>{
+    const row = { 'Серия': ds.label };
+    qs.forEach((q,i)=> row[q.label] = ds.data[i]);
+    return row;
+  });
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Динамика');
+  XLSX.writeFile(wb, `dynamika_${document.getElementById('dynMetric').value}.xlsx`);
+});
+
+// --- Сравнение ---
+function fillQuarterSelect(sel, def) {
+  sel.innerHTML = QUARTERS.map(q=>`<option value="${q.id}">${q.label}</option>`).join('');
+  sel.value = def;
+}
+async function openCompare() {
+  await precomputeAll();
+  const qs = quartersChrono();
+  fillQuarterSelect(document.getElementById('cmpFrom'), qs[0].id);
+  fillQuarterSelect(document.getElementById('cmpTo'), qs[qs.length-1].id);
+  document.getElementById('cmpModalBg').classList.add('open');
+  renderCompare();
+}
+let cmpRows = [];
+function renderCompare() {
+  const from = document.getElementById('cmpFrom').value;
+  const to = document.getElementById('cmpTo').value;
+  const level = document.getElementById('cmpLevel').value;
+  const metric = document.getElementById('cmpMetric').value;
+  const rows = [];
+  if (level === 'building') {
+    const ids = new Set([...Object.keys(buildById)]);
+    ids.forEach(id=>{
+      const bF = buildById[id]?.[from], bT = buildById[id]?.[to];
+      if (!bF && !bT) return;
+      const name = (bT||bF).name;
+      const was = bldVal(bF, metric==='count'?'count':(metric==='volume'?'volume':'price'));
+      const now = bldVal(bT, metric==='count'?'count':(metric==='volume'?'volume':'price'));
+      rows.push({ name, was, now });
+    });
+  } else {
+    const names = new Set();
+    [from,to].forEach(q=>Object.entries(allStats[q]?.[level]||{}).forEach(([n,v])=>{ if(v) names.add(n); }));
+    names.forEach(n=>{
+      rows.push({ name: divDisp(level,n), was: divVal(from,level,n,metric), now: divVal(to,level,n,metric) });
+    });
+  }
+  rows.forEach(r=>{
+    r.delta = (r.was!=null && r.now!=null) ? r.now-r.was : null;
+    r.pct = (r.was) ? (r.now-r.was)/r.was*100 : null;
+  });
+  rows.sort((a,b)=>(Math.abs(b.pct||0)-Math.abs(a.pct||0)));
+  cmpRows = rows;
+  const fLbl = QUARTERS.find(q=>q.id===from)?.label, tLbl = QUARTERS.find(q=>q.id===to)?.label;
+  const head = `<tr><th>Объект</th><th>${fLbl}</th><th>${tLbl}</th><th>Δ абс.</th><th>Δ %</th></tr>`;
+  const body = rows.map(r=>{
+    const cls = r.delta>0?'cmp-up':(r.delta<0?'cmp-down':'');
+    return `<tr><td>${r.name}</td><td>${fmt(fmtNum(r.was))}</td><td>${fmt(fmtNum(r.now))}</td>
+      <td class="${cls}">${r.delta!=null?(r.delta>0?'+':'')+fmt(Math.round(r.delta)):'—'}</td>
+      <td class="${cls}">${r.pct!=null?(r.pct>0?'+':'')+r.pct.toFixed(1)+'%':'—'}</td></tr>`;
+  }).join('');
+  document.getElementById('cmpBody').innerHTML =
+    `<table class="cmp-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+}
+document.getElementById('openCompare').addEventListener('click', openCompare);
+document.getElementById('cmpClose').addEventListener('click', ()=>document.getElementById('cmpModalBg').classList.remove('open'));
+document.getElementById('cmpModalBg').addEventListener('click', e=>{ if(e.target.id==='cmpModalBg') e.currentTarget.classList.remove('open'); });
+['cmpFrom','cmpTo','cmpLevel','cmpMetric'].forEach(id=>
+  document.getElementById(id).addEventListener('change', renderCompare));
+document.getElementById('cmpDownload').addEventListener('click', ()=>{
+  const from = document.getElementById('cmpFrom').value, to = document.getElementById('cmpTo').value;
+  const fLbl = QUARTERS.find(q=>q.id===from)?.label, tLbl = QUARTERS.find(q=>q.id===to)?.label;
+  const rows = cmpRows.map(r=>({ 'Объект':r.name, [fLbl]:fmtNum(r.was), [tLbl]:fmtNum(r.now),
+    'Δ абс.': r.delta!=null?Math.round(r.delta):'', 'Δ %': r.pct!=null?+r.pct.toFixed(1):'' }));
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Сравнение');
+  XLSX.writeFile(wb, `sravnenie_${from}_${to}_${document.getElementById('cmpMetric').value}.xlsx`);
 });
 
 // Подложка
