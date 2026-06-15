@@ -1660,7 +1660,7 @@ msInput.addEventListener('input', function() {
     const key = buildingSearchKey(b.name);
     if (variants.some(v => key.includes(v))) matches.push({ idx, b });
   });
-  msBox.innerHTML = matches.slice(0, 12).map(m =>
+  msBox.innerHTML = matches.map(m =>
     `<div class="msr-item" data-idx="${m.idx}">${m.b.name}<div class="msr-sub">${m.b.address||''}</div></div>`
   ).join('') || '<div class="msr-item" style="color:#999">Ничего не найдено</div>';
   msBox.classList.add('open');
