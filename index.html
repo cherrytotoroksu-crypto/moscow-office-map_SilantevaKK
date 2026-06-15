@@ -891,10 +891,7 @@ async function renderOverlays() {
     const gj = await fetchGeoJSON(oc.key);
     overlayLayers[oc.id] = L.geoJSON(gj, {
       style: oc.style,
-      onEachFeature: (f, layer) => {
-        const raw = f.properties[LAYER_CFG[oc.key].nameField] || '—';
-        layer.bindTooltip(displayName(oc.key, raw), { sticky: true, className: 'leaflet-tooltip' });
-      }
+      interactive: false,
     });
     if (document.getElementById(oc.id).checked) overlayLayers[oc.id].addTo(map);
   }
