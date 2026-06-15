@@ -174,6 +174,23 @@
     .lots-table th { position: sticky; top: 0; background: #fafafa; color: #666; font-weight: 600; text-transform: uppercase; font-size: 10px; }
     .lots-table td:first-child, .lots-table th:first-child { text-align: left; }
 
+    /* Поиск по зданиям (верхний левый угол) */
+    .map-search { position: absolute; top: 10px; left: 52px; z-index: 1100; width: 280px; }
+    .map-search input {
+      width: 100%; padding: 8px 11px; border: 1px solid #ccc; border-radius: 7px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.2); font-size: 13px; outline: none;
+    }
+    .map-search input:focus { border-color: #2563eb; }
+    .map-search-results {
+      background: #fff; border-radius: 7px; box-shadow: 0 3px 14px rgba(0,0,0,0.22);
+      margin-top: 4px; max-height: 300px; overflow: auto; display: none;
+    }
+    .map-search-results.open { display: block; }
+    .msr-item { padding: 7px 11px; font-size: 12px; cursor: pointer; border-bottom: 1px solid #f2f2f2; }
+    .msr-item:last-child { border-bottom: none; }
+    .msr-item:hover, .msr-item.active { background: #eff6ff; }
+    .msr-sub { color: #999; font-size: 10px; }
+
     /* Popup */
     .leaflet-popup-content { font-size: 13px; min-width: 200px; }
     .popup-lots-btn {
@@ -191,6 +208,12 @@
 </head>
 <body>
 <div id="map"></div>
+
+<!-- Поиск по зданиям (верхний левый угол) -->
+<div class="map-search">
+  <input id="mapSearch" type="text" placeholder="🔍 Поиск здания — карта приблизится…" autocomplete="off">
+  <div class="map-search-results" id="mapSearchResults"></div>
+</div>
 
 <!-- Правая панель -->
 <div class="panel">
@@ -383,9 +406,13 @@
 //  и допиши строку в начало этого списка (новые сверху).
 // ============================================================
 const QUARTERS = [
-  { id: '2026Q1', label: 'Q1 2026', file: 'data/buildings_2026Q1.json', lots: 'data/lots_2026Q1.json' },
-  { id: '2025Q4', label: 'Q4 2025', file: 'data/buildings_2025Q4.json', lots: 'data/lots_2025Q4.json' },
-  { id: '2025Q3', label: 'Q3 2025', file: 'data/buildings_2025Q3.json', lots: 'data/lots_2025Q3.json' },
+  { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', lots: 'data/lots_202603.json' },
+  { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json' },
+  { id: '202509', label: 'Q3 2025', file: 'data/buildings_202509.json', lots: 'data/lots_202509.json' },
+  { id: '202506', label: 'Q2 2025', file: 'data/buildings_202506.json', lots: 'data/lots_202506.json' },
+  { id: '202503', label: 'Q1 2025', file: 'data/buildings_202503.json', lots: 'data/lots_202503.json' },
+  { id: '202412', label: 'Q4 2024', file: 'data/buildings_202412.json', lots: 'data/lots_202412.json' },
+  { id: '202410', label: 'Q3 2024', file: 'data/buildings_202410.json', lots: 'data/lots_202410.json' },
 ];
 let currentQuarter = QUARTERS[0];
 let lotsData = {};   // { "Название здания": [ {block,floor,area,price,scheme,size}, ... ] }
@@ -462,6 +489,7 @@ let dataLoaded = false;
 // Слои Leaflet
 let choroplethLayer = null;
 let buildingsLayer = null;
+let buildingMarkers = {};   // idx -> circleMarker (для поиска/перелёта)
 const overlayLayers = {};   // key -> L.geoJSON
 
 // ============================================================
@@ -992,6 +1020,7 @@ function renderBuildings() {
         disableClusteringAtZoom: 15
       })
     : L.layerGroup();
+  buildingMarkers = {};
   buildingsData.forEach((b, idx) => {
     if (!isFinite(b.lat) || !isFinite(b.lng)) return;
     const marker = L.circleMarker([b.lat, b.lng], {
@@ -999,12 +1028,14 @@ function renderBuildings() {
       fillColor: buildingColor(b.cls),
       color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.85
     });
+    buildingMarkers[idx] = marker;
     const nLots = (lotsData[b.name] || []).length || (b.lots ?? 0);
     const rows = [
       ['Адрес',        b.address || '—'],
       ['Девелопер',    b.developer || '—'],
       ['Класс',        b.cls || '—'],
       ['Год ввода',    b.year || '—'],
+      ['Старт продаж', b.start || '—'],
       ['Статус',       b.status || '—'],
       ['В продаже',    b.on_sale || '—'],
       ['GBA, кв.м',    b.gba != null ? fmt(Math.round(b.gba)) : '—'],
@@ -1204,11 +1235,13 @@ window.openLotsModal = function(idx) {
   document.getElementById('lotsModalTitle').textContent = b.name || 'Лоты';
   document.getElementById('lotsModalSub').textContent =
     `${currentQuarter.label} · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
-  const head = `<tr><th>Блок</th><th>Этаж</th><th>Площадь, кв.м</th><th>Цена, руб/кв.м</th><th>Схема</th><th>Размер</th></tr>`;
+  const lotTotal = l => (l.total != null ? l.total : (l.area!=null && l.price!=null ? l.area*l.price : null));
+  const head = `<tr><th>Блок</th><th>Этаж</th><th>Площадь, кв.м</th><th>Цена, руб/кв.м</th><th>Стоимость, руб</th><th>Схема</th><th>Размер</th></tr>`;
   const body = lots.map(l => `<tr>
     <td>${l.block || '—'}</td><td>${l.floor || '—'}</td>
     <td>${l.area != null ? fmt(l.area) : '—'}</td>
     <td>${l.price != null ? fmt(Math.round(l.price)) : '—'}</td>
+    <td>${lotTotal(l) != null ? fmt(Math.round(lotTotal(l))) : '—'}</td>
     <td>${l.scheme || '—'}</td><td>${l.size || '—'}</td></tr>`).join('');
   document.getElementById('lotsModalBody').innerHTML =
     `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
@@ -1224,7 +1257,9 @@ document.getElementById('lotsModalDownload').addEventListener('click', function(
   const lots = lotsData[b.name] || [];
   const rows = lots.map(l => ({
     'Блок': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
-    'Цена, руб/кв.м с НДС': l.price, 'Схема продажи': l.scheme, 'Размер блока': l.size
+    'Цена, руб/кв.м с НДС': l.price,
+    'Стоимость, руб': l.total != null ? l.total : (l.area!=null && l.price!=null ? Math.round(l.area*l.price) : null),
+    'Схема продажи': l.scheme, 'Размер блока': l.size
   }));
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Лоты');
@@ -1339,6 +1374,7 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
     (lotsData[b.name] || []).forEach(l => lotRows.push({
       'Здание': b.name, 'Блок': l.block, 'Этаж': l.floor,
       'Площадь, кв.м': l.area, 'Цена, руб/кв.м с НДС': l.price,
+      'Стоимость, руб': l.total != null ? l.total : (l.area!=null && l.price!=null ? Math.round(l.area*l.price) : null),
       'Схема продажи': l.scheme, 'Размер блока': l.size
     }));
   });
@@ -1482,8 +1518,18 @@ function renderDynamics() {
   if (dynChart) dynChart.destroy();
   dynChart = new Chart(document.getElementById('dynChart'), {
     type:'line', data:{ labels, datasets },
-    options:{ responsive:true, plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
-      title:{ display:true, text:METRIC_NAMES[metric] } }, scales:{ y:{ beginAtZero:false } } }
+    options:{
+      responsive:true,
+      layout:{ padding:{ top:8, right:14 } },
+      elements:{ point:{ radius:4, hoverRadius:7, hitRadius:10 } },
+      plugins:{
+        legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
+        title:{ display:true, text:METRIC_NAMES[metric] },
+        tooltip:{ callbacks:{ label:c=>`${c.dataset.label}: ${c.parsed.y!=null?c.parsed.y.toLocaleString('ru-RU'):'—'}` } }
+      },
+      // grace добавляет отступы сверху/снизу, чтобы крайние точки не упирались в край и были видны
+      scales:{ y:{ beginAtZero:false, grace:'12%' } }
+    }
   });
 }
 document.getElementById('openDynamics').addEventListener('click', openDynamics);
@@ -1579,6 +1625,60 @@ document.querySelectorAll('input[name="basemap"]').forEach(r => {
     Object.values(basemaps).forEach(l => map.removeLayer(l));
     basemaps[this.value].addTo(map);
   });
+});
+
+// ============================================================
+//  ПОИСК ПО ЗДАНИЯМ НА КАРТЕ (с автоприближением)
+// ============================================================
+function flyToBuilding(idx) {
+  const b = buildingsData[idx];
+  if (!b || !isFinite(b.lat) || !isFinite(b.lng)) return;
+  document.getElementById('mapSearchResults').classList.remove('open');
+  document.getElementById('mapSearch').value = b.name;
+  // включить слой зданий, если выключен
+  if (!document.getElementById('ovBuildings').checked) {
+    document.getElementById('ovBuildings').checked = true;
+    if (buildingsLayer) buildingsLayer.addTo(map);
+    renderBuildingsLegend();
+  }
+  map.flyTo([b.lat, b.lng], 16, { duration: 0.8 });
+  map.once('moveend', () => {
+    const m = buildingMarkers[idx];
+    if (!m) return;
+    if (buildingsLayer && buildingsLayer.zoomToShowLayer)
+      buildingsLayer.zoomToShowLayer(m, () => m.openPopup());
+    else m.openPopup();
+  });
+}
+const msInput = document.getElementById('mapSearch');
+const msBox = document.getElementById('mapSearchResults');
+msInput.addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  if (!q) { msBox.classList.remove('open'); msBox.innerHTML = ''; return; }
+  const variants = [q, translit(q), latToCyr(q)];
+  const matches = [];
+  buildingsData.forEach((b, idx) => {
+    if (!isFinite(b.lat)) return;
+    const key = buildingSearchKey(b.name);
+    if (variants.some(v => key.includes(v))) matches.push({ idx, b });
+  });
+  msBox.innerHTML = matches.slice(0, 12).map(m =>
+    `<div class="msr-item" data-idx="${m.idx}">${m.b.name}<div class="msr-sub">${m.b.address||''}</div></div>`
+  ).join('') || '<div class="msr-item" style="color:#999">Ничего не найдено</div>';
+  msBox.classList.add('open');
+});
+msBox.addEventListener('click', e => {
+  const it = e.target.closest('.msr-item');
+  if (it && it.dataset.idx != null) flyToBuilding(+it.dataset.idx);
+});
+msInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const first = msBox.querySelector('.msr-item[data-idx]');
+    if (first) flyToBuilding(+first.dataset.idx);
+  }
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.map-search')) msBox.classList.remove('open');
 });
 </script>
 </body>
