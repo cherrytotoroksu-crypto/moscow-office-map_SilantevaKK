@@ -1074,7 +1074,7 @@ function renderBuildings() {
       color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.85
     });
     buildingMarkers[idx] = marker;
-    const nLots = (lotsData[b.name] || []).length || (b.lots ?? 0);
+    const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
     const rows = [
       ['Адрес',        b.address || '—'],
       ['Девелопер',    b.developer || '—'],
@@ -1291,7 +1291,7 @@ window.openLotsModal = function(idx) {
   const b = buildingsData[idx];
   if (!b) return;
   currentLotsBuilding = b;
-  const lots = lotsData[b.name] || [];
+  const lots = lotsData[b.name] || lotsData[b.name_orig] || [];
   document.getElementById('lotsModalTitle').textContent = b.name || 'Лоты';
   document.getElementById('lotsModalSub').textContent =
     `${currentQuarter.label} · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
@@ -1314,7 +1314,7 @@ document.getElementById('lotsModalBg').addEventListener('click', e => {
 });
 document.getElementById('lotsModalDownload').addEventListener('click', function() {
   const b = currentLotsBuilding; if (!b) return;
-  const lots = lotsData[b.name] || [];
+  const lots = lotsData[b.name] || lotsData[b.name_orig] || [];
   const rows = lots.map(l => ({
     'Блок': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
     'Цена, руб/кв.м с НДС': l.price,
@@ -1407,7 +1407,7 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
   const totalArea = valid.reduce((s,b) => s + b.volume, 0);
   const avg = valid.length ? valid.reduce((s,b) => s + b.price, 0) / valid.length : null;
   const wavg = totalArea ? valid.reduce((s,b) => s + b.price * b.volume, 0) / totalArea : null;
-  const totalLots = inside.reduce((s,b) => s + ((lotsData[b.name]||[]).length || b.lots || 0), 0);
+  const totalLots = inside.reduce((s,b) => s + ((lotsData[b.name]||lotsData[b.name_orig]||[]).length || b.lots || 0), 0);
 
   const summary = [
     ['Показатель', 'Значение'],
@@ -1423,7 +1423,7 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
     'Год ввода': b.year, 'Статус': b.status, 'В продаже': b.on_sale,
     'GBA, кв.м': b.gba, 'GLA, кв.м': b.gla,
     'Объём на продажу, кв.м': b.volume, 'Цена с НДС, руб/кв.м': b.price,
-    'Лотов, шт.': (lotsData[b.name]||[]).length || b.lots || 0,
+    'Лотов, шт.': (lotsData[b.name]||lotsData[b.name_orig]||[]).length || b.lots || 0,
     'Зона': b.zone, 'Субрынок': b.submarket, 'Деловой район': b.biz,
     'Широта': b.lat, 'Долгота': b.lng
   }));
@@ -1431,7 +1431,7 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
   // лист «Лоты» — все лоты зданий внутри полигона
   const lotRows = [];
   inside.forEach(b => {
-    (lotsData[b.name] || []).forEach(l => lotRows.push({
+    (lotsData[b.name] || lotsData[b.name_orig] || []).forEach(l => lotRows.push({
       'Здание': b.name, 'Блок': l.block, 'Этаж': l.floor,
       'Площадь, кв.м': l.area, 'Цена, руб/кв.м с НДС': l.price,
       'Стоимость, руб': l.total != null ? l.total : (l.area!=null && l.price!=null ? Math.round(l.area*l.price) : null),
