@@ -208,7 +208,7 @@
     #panelToggle:hover { background: #f3f4f6; }
 
     @media (max-width: 640px) {
-      #panelToggle { display: flex; }
+      #panelToggle { display: flex; top: 56px; }
       .panel {
         top: 0; right: 0;
         border-radius: 0 0 0 12px;
@@ -221,9 +221,10 @@
         transform: translateX(0);
       }
       .map-search {
-        top: 56px; left: 10px;
+        top: 10px; left: 10px;
         width: calc(100vw - 20px);
       }
+      .leaflet-top.leaflet-left { margin-top: 56px; }
     }
     @media (min-width: 641px) {
       .panel { display: block !important; transform: none !important; }
