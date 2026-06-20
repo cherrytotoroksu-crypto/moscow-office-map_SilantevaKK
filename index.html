@@ -207,23 +207,33 @@
     }
     #panelToggle:hover { background: #f3f4f6; }
 
+    /* Затемнение фона при открытой панели (мобильные) */
+    #panelBackdrop {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 999;
+    }
+    #panelBackdrop.open { display: block; }
+
     @media (max-width: 640px) {
-      #panelToggle { display: flex; top: 56px; }
+      #panelToggle { display: flex; top: 10px; right: 10px; }
+      .map-search {
+        top: 10px; left: 10px;
+        width: calc(100vw - 56px);
+      }
       .panel {
-        top: 0; right: 0;
-        border-radius: 0 0 0 12px;
-        width: min(280px, 90vw);
+        position: fixed;
+        top: 0; right: 0; bottom: 0;
+        border-radius: 0;
+        width: min(300px, 88vw);
         max-height: 100vh;
         transform: translateX(100%);
         transition: transform 0.25s ease;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
       }
-      .panel.open {
-        transform: translateX(0);
-      }
-      .map-search {
-        top: 10px; left: 10px;
-        width: calc(100vw - 20px);
-      }
+      .panel.open { transform: translateX(0); }
       .leaflet-top.leaflet-left { margin-top: 56px; }
     }
     @media (min-width: 641px) {
@@ -254,6 +264,8 @@
   <div class="map-search-results" id="mapSearchResults"></div>
 </div>
 
+<!-- Затемнение фона при открытой панели -->
+<div id="panelBackdrop"></div>
 <!-- Кнопка открытия/закрытия панели (только на мобильных) -->
 <button id="panelToggle" title="Меню">☰</button>
 
@@ -1788,18 +1800,23 @@ document.addEventListener('click', e => {
 (function() {
   const toggle = document.getElementById('panelToggle');
   const panel = document.getElementById('mainPanel');
+  const backdrop = document.getElementById('panelBackdrop');
+
+  function openPanel() {
+    panel.classList.add('open');
+    backdrop.classList.add('open');
+    toggle.textContent = '✕';
+  }
+  function closePanel() {
+    panel.classList.remove('open');
+    backdrop.classList.remove('open');
+    toggle.textContent = '☰';
+  }
+
   toggle.addEventListener('click', () => {
-    const isOpen = panel.classList.toggle('open');
-    toggle.textContent = isOpen ? '✕' : '☰';
+    panel.classList.contains('open') ? closePanel() : openPanel();
   });
-  // Закрывать при клике вне панели и кнопки
-  document.addEventListener('click', e => {
-    if (window.innerWidth > 640) return;
-    if (!e.target.closest('#mainPanel') && !e.target.closest('#panelToggle')) {
-      panel.classList.remove('open');
-      toggle.textContent = '☰';
-    }
-  });
+  backdrop.addEventListener('click', closePanel);
 })();
 </script>
 </body>
