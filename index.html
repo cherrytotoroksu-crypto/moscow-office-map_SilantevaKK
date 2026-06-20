@@ -259,6 +259,16 @@
   <label class="check-row"><input type="checkbox" id="ovCluster" checked> Группировать (кластеры)</label>
 
   <hr>
+  <h3>Фильтр по статусу</h3>
+  <label class="check-row"><input type="checkbox" class="flt-status" value="Строится" checked> Строится</label>
+  <label class="check-row"><input type="checkbox" class="flt-status" value="Построен" checked> Введён в эксплуатацию</label>
+  <h3 style="margin-top:5px;">Фильтр по продаже</h3>
+  <label class="check-row"><input type="checkbox" class="flt-sale" value="да" checked> В продаже</label>
+  <label class="check-row"><input type="checkbox" class="flt-sale" value="нет" checked> Не в продаже</label>
+  <label class="check-row"><input type="checkbox" class="flt-sale" value="" checked> Не указано</label>
+  <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+
+  <hr>
   <h3>Рисование и выгрузка</h3>
   <label class="check-row"><input type="checkbox" id="ovDraw"> Режим рисования</label>
   <button class="upload-btn" id="exportGeo" style="margin-top:5px;">⬇ Выгрузить GeoJSON</button>
@@ -485,6 +495,41 @@ let computed = {};          // activeLayerKey -> { featureName -> {wavg,avg,volu
 let activeLayerKey = 'mo';
 let currentMetric = 'wavg';
 let dataLoaded = false;
+
+// ============================================================
+//  ФИЛЬТРЫ
+// ============================================================
+let filterStatus = new Set(['Строится', 'Построен']);
+let filterOnSale  = new Set(['да', 'нет', '']);
+
+function getFilteredBuildings() {
+  return buildingsData.filter(b => {
+    const st = b.status || '';
+    let statusOk = false;
+    if (filterStatus.has('Строится') && (st === 'Строится' || st === 'Строится/Построен')) statusOk = true;
+    if (filterStatus.has('Построен') && (st === 'Построен' || st === 'Строится/Построен')) statusOk = true;
+    if (!statusOk && filterStatus.has(st)) statusOk = true; // прочие/неизвестные
+    const sale = (b.on_sale || '').trim().toLowerCase() === 'да' ? 'да'
+               : (b.on_sale || '').trim().toLowerCase() === 'нет' ? 'нет' : '';
+    return statusOk && filterOnSale.has(sale);
+  });
+}
+
+function updateFilterStats() {
+  const n = getFilteredBuildings().length;
+  const total = buildingsData.length;
+  document.getElementById('filterStats').textContent =
+    n === total ? '' : `Показано: ${n} из ${total}`;
+}
+
+async function applyFilters() {
+  if (!dataLoaded) return;
+  updateFilterStats();
+  await recomputeAll();
+  await renderChoropleth();
+  renderBuildings();
+  updateGlobalStats(getFilteredBuildings().map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
+}
 
 // Слои Leaflet
 let choroplethLayer = null;
@@ -721,10 +766,11 @@ function computeStats(layerKey, geojson, blds) {
 }
 
 async function recomputeAll() {
+  const filtered = getFilteredBuildings();
   computed = {};
   for (const key of Object.keys(LAYER_CFG)) {
     const gj = await fetchGeoJSON(key);
-    computed[key] = computeStats(key, gj);
+    computed[key] = computeStats(key, gj, filtered);
   }
 }
 
@@ -1018,7 +1064,9 @@ function renderBuildings() {
       })
     : L.layerGroup();
   buildingMarkers = {};
+  const filteredSet = new Set(getFilteredBuildings());
   buildingsData.forEach((b, idx) => {
+    if (!filteredSet.has(b)) return;
     if (!isFinite(b.lat) || !isFinite(b.lng)) return;
     const marker = L.circleMarker([b.lat, b.lng], {
       radius: buildingRadius(b.volume),
@@ -1105,7 +1153,8 @@ async function loadBuildings() {
     dataLoaded = true;
     status.textContent = `✓ ${currentQuarter.label}: ${data.length} зданий`;
     status.style.color = '#16a34a';
-    updateGlobalStats(buildingPoints);
+    updateGlobalStats(getFilteredBuildings().map(b => ({ lat:b.lat, lng:b.lng, area:b.volume, price:b.price })));
+    updateFilterStats();
     await recomputeAll();
     assignGeo();
   } catch(e) {
@@ -1199,6 +1248,20 @@ document.getElementById('ovBuildings').addEventListener('change', function() {
 // Кластеризация (группировка при отдалении)
 document.getElementById('ovCluster').addEventListener('change', function() {
   renderBuildings();
+});
+
+// Фильтры статус / продажа
+document.querySelectorAll('.flt-status').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) filterStatus.add(this.value); else filterStatus.delete(this.value);
+    applyFilters();
+  });
+});
+document.querySelectorAll('.flt-sale').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) filterOnSale.add(this.value); else filterOnSale.delete(this.value);
+    applyFilters();
+  });
 });
 
 // ============================================================
