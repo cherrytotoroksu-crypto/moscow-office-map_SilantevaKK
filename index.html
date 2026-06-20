@@ -10,8 +10,18 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color-scheme: light; }
     #map { width: 100vw; height: 100vh; }
+
+    /* Не инвертировать карту в тёмной теме браузера */
+    .leaflet-tile,
+    .leaflet-container,
+    .leaflet-pane,
+    .leaflet-overlay-pane svg,
+    canvas {
+      color-scheme: light;
+      forced-color-adjust: none;
+    }
 
     .panel {
       position: absolute;
