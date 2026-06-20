@@ -17,37 +17,6 @@
     /* Не инвертировать в тёмной теме браузера */
     :root { color-scheme: light; }
 
-    /* Samsung Internet и другие агрессивные dark mode — явно форсируем светлые цвета */
-    @media (prefers-color-scheme: dark) {
-      html, body {
-        background: #fff !important;
-        color: #000 !important;
-        filter: none !important;
-      }
-      .panel, .legend, .buildings-legend, .modal,
-      .modal-bg, .map-search input, .map-search-results,
-      .stats-table, .left-stack, select, button {
-        background-color: #fff !important;
-        color: #333 !important;
-        border-color: #ddd !important;
-      }
-      /* Тайлы карты — двойная инверсия чтобы вернуть оригинал */
-      .leaflet-tile-pane {
-        filter: invert(1) hue-rotate(180deg) !important;
-      }
-      /* Контейнер карты — инвертируем снаружи, чтобы только тайлы изменились */
-      .leaflet-container {
-        background: #fff !important;
-        filter: none !important;
-      }
-      /* SVG-слои (хороплет, границы) — не трогаем */
-      .leaflet-overlay-pane,
-      .leaflet-overlay-pane svg,
-      .leaflet-overlay-pane path {
-        filter: none !important;
-      }
-      canvas { filter: none !important; }
-    }
 
     .panel {
       position: absolute;
