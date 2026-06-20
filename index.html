@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <title>Офисный рынок Москвы</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
@@ -14,13 +15,16 @@
     #map { width: 100vw; height: 100vh; }
 
     /* Не инвертировать карту в тёмной теме браузера */
+    :root { color-scheme: light; }
     .leaflet-tile,
     .leaflet-container,
     .leaflet-pane,
     .leaflet-overlay-pane svg,
-    canvas {
+    canvas,
+    img {
       color-scheme: light;
       forced-color-adjust: none;
+      filter: none !important;
     }
 
     .panel {
