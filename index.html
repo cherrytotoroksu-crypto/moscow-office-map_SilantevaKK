@@ -191,6 +191,44 @@
     .msr-item:hover, .msr-item.active { background: #eff6ff; }
     .msr-sub { color: #999; font-size: 10px; }
 
+    /* Кнопка сворачивания панели */
+    #panelToggle {
+      position: absolute;
+      top: 10px; right: 10px;
+      z-index: 1001;
+      width: 36px; height: 36px;
+      background: white; border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      font-size: 18px; cursor: pointer;
+      display: none;
+      align-items: center; justify-content: center;
+      color: #444;
+    }
+    #panelToggle:hover { background: #f3f4f6; }
+
+    @media (max-width: 640px) {
+      #panelToggle { display: flex; }
+      .panel {
+        top: 0; right: 0;
+        border-radius: 0 0 0 12px;
+        width: min(280px, 90vw);
+        max-height: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.25s ease;
+      }
+      .panel.open {
+        transform: translateX(0);
+      }
+      .map-search {
+        top: 56px; left: 10px;
+        width: calc(100vw - 20px);
+      }
+    }
+    @media (min-width: 641px) {
+      .panel { display: block !important; transform: none !important; }
+    }
+
     /* Popup */
     .leaflet-popup-content { font-size: 13px; min-width: 200px; }
     .popup-lots-btn {
@@ -215,8 +253,11 @@
   <div class="map-search-results" id="mapSearchResults"></div>
 </div>
 
+<!-- Кнопка открытия/закрытия панели (только на мобильных) -->
+<button id="panelToggle" title="Меню">☰</button>
+
 <!-- Правая панель -->
-<div class="panel">
+<div class="panel" id="mainPanel">
   <h3>Квартал</h3>
   <select id="quarterSelect"></select>
 
@@ -1741,6 +1782,24 @@ msInput.addEventListener('keydown', e => {
 document.addEventListener('click', e => {
   if (!e.target.closest('.map-search')) msBox.classList.remove('open');
 });
+
+// Сворачивание панели на мобильных
+(function() {
+  const toggle = document.getElementById('panelToggle');
+  const panel = document.getElementById('mainPanel');
+  toggle.addEventListener('click', () => {
+    const isOpen = panel.classList.toggle('open');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  });
+  // Закрывать при клике вне панели и кнопки
+  document.addEventListener('click', e => {
+    if (window.innerWidth > 640) return;
+    if (!e.target.closest('#mainPanel') && !e.target.closest('#panelToggle')) {
+      panel.classList.remove('open');
+      toggle.textContent = '☰';
+    }
+  });
+})();
 </script>
 </body>
 </html>
