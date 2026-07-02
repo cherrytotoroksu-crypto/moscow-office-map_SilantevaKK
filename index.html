@@ -1346,10 +1346,13 @@ async function loadBuildings() {
       try { rentLotsData = await (await fetch(currentQuarter.rent)).json(); } catch(e) { rentLotsData = {}; }
     }
     const rentCount = Object.keys(rentLotsData).length;
-    document.getElementById('rentBldgCount').textContent = rentCount;
-    // аренда доступна только если данные загружены
-    document.getElementById('modeRent').disabled = rentCount === 0;
-    document.getElementById('modeRent').title = rentCount === 0 ? 'Нет данных аренды для этого квартала' : '';
+    const elRentCount = document.getElementById('rentBldgCount');
+    const elModeRent  = document.getElementById('modeRent');
+    if (elRentCount) elRentCount.textContent = rentCount;
+    if (elModeRent) {
+      elModeRent.disabled = rentCount === 0;
+      elModeRent.title = rentCount === 0 ? 'Нет данных аренды для этого квартала' : '';
+    }
     buildingPoints = data.map(b => ({
       lat: b.lat, lng: b.lng,
       area: b.volume, price: b.price
