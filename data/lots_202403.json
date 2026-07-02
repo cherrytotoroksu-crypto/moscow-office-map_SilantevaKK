@@ -1,0 +1,8757 @@
+{
+  "А101 Прокшино": [
+    {
+      "block": "101Л-2.1-537",
+      "floor": 5,
+      "area": 69.9,
+      "price": 273322,
+      "total": 19105208,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-242",
+      "floor": 2,
+      "area": 114.8,
+      "price": 185607,
+      "total": 21307684,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-533",
+      "floor": 5,
+      "area": 99.9,
+      "price": 214418,
+      "total": 21420358,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-536",
+      "floor": 5,
+      "area": 106.9,
+      "price": 208131,
+      "total": 22249204,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-423",
+      "floor": 4,
+      "area": 112.9,
+      "price": 205459,
+      "total": 23196321,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-527",
+      "floor": 5,
+      "area": 122.2,
+      "price": 205365,
+      "total": 25095603,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-529",
+      "floor": 5,
+      "area": 122.7,
+      "price": 205281,
+      "total": 25187979,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-329",
+      "floor": 3,
+      "area": 127.1,
+      "price": 200924,
+      "total": 25537440,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-528",
+      "floor": 5,
+      "area": 125.4,
+      "price": 204835,
+      "total": 25686309,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-141",
+      "floor": 1,
+      "area": 30.6,
+      "price": 839740,
+      "total": 25696044,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-530",
+      "floor": 5,
+      "area": 126.6,
+      "price": 204640,
+      "total": 25907424,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-432",
+      "floor": 4,
+      "area": 121.5,
+      "price": 214153,
+      "total": 26019590,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-324",
+      "floor": 3,
+      "area": 132.2,
+      "price": 200134,
+      "total": 26457715,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-526",
+      "floor": 5,
+      "area": 134.0,
+      "price": 203480,
+      "total": 27266320,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-531",
+      "floor": 5,
+      "area": 130.7,
+      "price": 214187,
+      "total": 27994241,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-231",
+      "floor": 2,
+      "area": 156.2,
+      "price": 194413,
+      "total": 30367311,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-142",
+      "floor": 1,
+      "area": 38.4,
+      "price": 807950,
+      "total": 31025280,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-325",
+      "floor": 3,
+      "area": 169.6,
+      "price": 195644,
+      "total": 33181222,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-538",
+      "floor": 5,
+      "area": 166.6,
+      "price": 199329,
+      "total": 33208211,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-232",
+      "floor": 2,
+      "area": 175.2,
+      "price": 192194,
+      "total": 33672389,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-227",
+      "floor": 2,
+      "area": 193.5,
+      "price": 176702,
+      "total": 34191837,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "101Л-2.1-145",
+      "floor": 1,
+      "area": 47.5,
+      "price": 728420,
+      "total": 34599950,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "318",
+      "floor": 3,
+      "area": 266.7,
+      "price": 152941,
+      "total": 40789365,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "639163003.8",
+      "floor": 2891,
+      "area": 221079.5,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Берников": [
+    {
+      "block": "",
+      "floor": 0,
+      "area": 15927.0,
+      "price": 345326,
+      "total": 5500000000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "5500000000",
+      "floor": 15927,
+      "area": 345325.5,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "БЦ Twist": [
+    {
+      "block": "308",
+      "floor": 3,
+      "area": 159.7,
+      "price": 478000,
+      "total": 76336600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "405",
+      "floor": 4,
+      "area": 116.3,
+      "price": 517000,
+      "total": 60127100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "408",
+      "floor": 4,
+      "area": 201.1,
+      "price": 471000,
+      "total": 94718100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "504",
+      "floor": 5,
+      "area": 184.4,
+      "price": 493000,
+      "total": 90909200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "505",
+      "floor": 5,
+      "area": 136.6,
+      "price": 481000,
+      "total": 65704600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "507",
+      "floor": 5,
+      "area": 203.6,
+      "price": 489000,
+      "total": 99560400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "604",
+      "floor": 6,
+      "area": 175.0,
+      "price": 521000,
+      "total": 91175000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "701",
+      "floor": 7,
+      "area": 1362.9,
+      "price": 484000,
+      "total": 659643600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "801",
+      "floor": 8,
+      "area": 1470.9,
+      "price": 500000,
+      "total": 735450000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "901",
+      "floor": 9,
+      "area": 281.9,
+      "price": 648000,
+      "total": 182671200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "902",
+      "floor": 9,
+      "area": 230.8,
+      "price": 584000,
+      "total": 134787200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "903",
+      "floor": 9,
+      "area": 260.7,
+      "price": 600000,
+      "total": 156420000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "904",
+      "floor": 9,
+      "area": 195.4,
+      "price": 620000,
+      "total": 121148000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "905",
+      "floor": 9,
+      "area": 228.4,
+      "price": 596000,
+      "total": 136126400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "501",
+      "floor": 5,
+      "area": 134.0,
+      "price": 525000,
+      "total": 70350000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "607",
+      "floor": 6,
+      "area": 232.0,
+      "price": 494000,
+      "total": 114608000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "906",
+      "floor": 9,
+      "area": 233.0,
+      "price": 656000,
+      "total": 152848000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "3042583400",
+      "floor": 5806,
+      "area": 523978.1,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Останкино": [
+    {
+      "block": "1-2.11",
+      "floor": 2,
+      "area": 265.3,
+      "price": 252079,
+      "total": 66876559,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.13",
+      "floor": 2,
+      "area": 71.0,
+      "price": 275000,
+      "total": 19525000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.14",
+      "floor": 2,
+      "area": 71.0,
+      "price": 275000,
+      "total": 19525000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.15",
+      "floor": 2,
+      "area": 161.1,
+      "price": 263340,
+      "total": 42424074,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.16",
+      "floor": 2,
+      "area": 104.3,
+      "price": 280088,
+      "total": 29213178,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.17",
+      "floor": 2,
+      "area": 104.3,
+      "price": 280088,
+      "total": 29213178,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.18",
+      "floor": 2,
+      "area": 161.1,
+      "price": 274313,
+      "total": 44191824,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.19",
+      "floor": 2,
+      "area": 72.0,
+      "price": 288750,
+      "total": 20790000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-2.20",
+      "floor": 2,
+      "area": 266.0,
+      "price": 259875,
+      "total": 69126750,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.12",
+      "floor": 3,
+      "area": 70.4,
+      "price": 278000,
+      "total": 19571200,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.15",
+      "floor": 3,
+      "area": 161.1,
+      "price": 265340,
+      "total": 42746274,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.16",
+      "floor": 3,
+      "area": 104.3,
+      "price": 282588,
+      "total": 29473928,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.17",
+      "floor": 3,
+      "area": 104.3,
+      "price": 282588,
+      "total": 29473928,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.18",
+      "floor": 3,
+      "area": 161.1,
+      "price": 276313,
+      "total": 44514024,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.19",
+      "floor": 3,
+      "area": 71.0,
+      "price": 291750,
+      "total": 20714250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.20",
+      "floor": 3,
+      "area": 71.0,
+      "price": 291750,
+      "total": 20714250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-3.21",
+      "floor": 3,
+      "area": 70.3,
+      "price": 291750,
+      "total": 20510025,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.11",
+      "floor": 4,
+      "area": 265.3,
+      "price": 256079,
+      "total": 67937759,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.12",
+      "floor": 4,
+      "area": 70.4,
+      "price": 281000,
+      "total": 19782400,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.13",
+      "floor": 4,
+      "area": 71.0,
+      "price": 281000,
+      "total": 19951000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.14",
+      "floor": 4,
+      "area": 71.0,
+      "price": 281000,
+      "total": 19951000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.15",
+      "floor": 4,
+      "area": 161.1,
+      "price": 267340,
+      "total": 43068474,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.16",
+      "floor": 4,
+      "area": 104.3,
+      "price": 285088,
+      "total": 29734678,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.17",
+      "floor": 4,
+      "area": 104.3,
+      "price": 285088,
+      "total": 29734678,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.18",
+      "floor": 4,
+      "area": 161.1,
+      "price": 278313,
+      "total": 44836224,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.19",
+      "floor": 4,
+      "area": 71.0,
+      "price": 294750,
+      "total": 20927250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.20",
+      "floor": 4,
+      "area": 71.0,
+      "price": 294750,
+      "total": 20927250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.21",
+      "floor": 4,
+      "area": 70.3,
+      "price": 294750,
+      "total": 20720925,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-4.22",
+      "floor": 4,
+      "area": 265.3,
+      "price": 263875,
+      "total": 70006038,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.11",
+      "floor": 6,
+      "area": 266.1,
+      "price": 267875,
+      "total": 71281538,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.12",
+      "floor": 6,
+      "area": 70.6,
+      "price": 287000,
+      "total": 20262200,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.13",
+      "floor": 6,
+      "area": 71.3,
+      "price": 287000,
+      "total": 20463100,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.14",
+      "floor": 6,
+      "area": 71.3,
+      "price": 287000,
+      "total": 20463100,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.15",
+      "floor": 6,
+      "area": 161.7,
+      "price": 271340,
+      "total": 43875678,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.16",
+      "floor": 6,
+      "area": 104.4,
+      "price": 290088,
+      "total": 30285187,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.17",
+      "floor": 6,
+      "area": 104.4,
+      "price": 290088,
+      "total": 30285187,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.18",
+      "floor": 6,
+      "area": 161.7,
+      "price": 282313,
+      "total": 45650012,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.19",
+      "floor": 6,
+      "area": 71.3,
+      "price": 300750,
+      "total": 21443475,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.20",
+      "floor": 6,
+      "area": 71.3,
+      "price": 300750,
+      "total": 21443475,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.21",
+      "floor": 6,
+      "area": 70.4,
+      "price": 300750,
+      "total": 21172800,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-6.22",
+      "floor": 6,
+      "area": 266.1,
+      "price": 268375,
+      "total": 71414588,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.11",
+      "floor": 7,
+      "area": 266.1,
+      "price": 269875,
+      "total": 71813738,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.12",
+      "floor": 7,
+      "area": 70.6,
+      "price": 290000,
+      "total": 20474000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.13",
+      "floor": 7,
+      "area": 71.3,
+      "price": 290000,
+      "total": 20677000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.14",
+      "floor": 7,
+      "area": 71.3,
+      "price": 290000,
+      "total": 20677000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.16",
+      "floor": 7,
+      "area": 104.4,
+      "price": 292588,
+      "total": 30546187,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.17",
+      "floor": 7,
+      "area": 104.4,
+      "price": 292588,
+      "total": 30546187,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.18",
+      "floor": 7,
+      "area": 161.7,
+      "price": 284313,
+      "total": 45973412,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.19",
+      "floor": 7,
+      "area": 71.3,
+      "price": 303750,
+      "total": 21657375,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-7.20",
+      "floor": 7,
+      "area": 71.3,
+      "price": 303750,
+      "total": 21657375,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-10.12",
+      "floor": 10,
+      "area": 71.5,
+      "price": 346950,
+      "total": 24806925,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-10.22",
+      "floor": 10,
+      "area": 268.3,
+      "price": 283792,
+      "total": 76141394,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.11",
+      "floor": 12,
+      "area": 268.3,
+      "price": 314854,
+      "total": 84475328,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.16",
+      "floor": 12,
+      "area": 104.7,
+      "price": 315015,
+      "total": 32982070,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.19",
+      "floor": 12,
+      "area": 72.0,
+      "price": 385797,
+      "total": 27777384,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.20",
+      "floor": 12,
+      "area": 72.0,
+      "price": 385797,
+      "total": 27777384,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.21",
+      "floor": 12,
+      "area": 71.4,
+      "price": 385797,
+      "total": 27545906,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.22",
+      "floor": 12,
+      "area": 268.3,
+      "price": 314625,
+      "total": 84413888,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-10.11",
+      "floor": 10,
+      "area": 268.3,
+      "price": 278847,
+      "total": 74814650,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-12.12",
+      "floor": 12,
+      "area": 71.5,
+      "price": 383227,
+      "total": 27400730,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2166379392.8999996",
+      "floor": 7595,
+      "area": 285237.6,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Рублево Бизнес-Парк": [
+    {
+      "block": "А215",
+      "floor": 2,
+      "area": 96.1,
+      "price": 187000,
+      "total": 17972570,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А217",
+      "floor": 2,
+      "area": 137.8,
+      "price": 187000,
+      "total": 25762990,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А218",
+      "floor": 2,
+      "area": 116.7,
+      "price": 183700,
+      "total": 21432279,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А308",
+      "floor": 3,
+      "area": 90.1,
+      "price": 201947,
+      "total": 18195425,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А309",
+      "floor": 3,
+      "area": 92.4,
+      "price": 198009,
+      "total": 18288111,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А315",
+      "floor": 3,
+      "area": 94.4,
+      "price": 198001,
+      "total": 18687334,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А318",
+      "floor": 3,
+      "area": 137.8,
+      "price": 200201,
+      "total": 27581692,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А319",
+      "floor": 3,
+      "area": 116.8,
+      "price": 208751,
+      "total": 24390467,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А407",
+      "floor": 4,
+      "area": 95.9,
+      "price": 205986,
+      "total": 19756117,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А408",
+      "floor": 4,
+      "area": 90.1,
+      "price": 205986,
+      "total": 18559339,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А418",
+      "floor": 4,
+      "area": 137.8,
+      "price": 204205,
+      "total": 28133323,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А410",
+      "floor": 4,
+      "area": 95.2,
+      "price": 205986,
+      "total": 19607807,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А413",
+      "floor": 4,
+      "area": 224.2,
+      "price": 209151,
+      "total": 46881196,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А501",
+      "floor": 5,
+      "area": 185.0,
+      "price": 197506,
+      "total": 36530709,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А419",
+      "floor": 4,
+      "area": 116.8,
+      "price": 212926,
+      "total": 24878274,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А420",
+      "floor": 4,
+      "area": 97.3,
+      "price": 216926,
+      "total": 21109069,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А212",
+      "floor": 2,
+      "area": 224.2,
+      "price": 202351,
+      "total": 45356976,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А502",
+      "floor": 5,
+      "area": 59.9,
+      "price": 211912,
+      "total": 12699886,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А503",
+      "floor": 5,
+      "area": 50.5,
+      "price": 215312,
+      "total": 10873256,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А507",
+      "floor": 5,
+      "area": 95.9,
+      "price": 208046,
+      "total": 19953692,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А508",
+      "floor": 5,
+      "area": 90.1,
+      "price": 208046,
+      "total": 18744945,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А509",
+      "floor": 5,
+      "area": 92.4,
+      "price": 203989,
+      "total": 18840424,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А510",
+      "floor": 5,
+      "area": 95.2,
+      "price": 208046,
+      "total": 19803899,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А511",
+      "floor": 5,
+      "area": 69.7,
+      "price": 225613,
+      "total": 15718457,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А515",
+      "floor": 5,
+      "area": 94.4,
+      "price": 203981,
+      "total": 19251727,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А516",
+      "floor": 5,
+      "area": 97.0,
+      "price": 207981,
+      "total": 20172077,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А517",
+      "floor": 5,
+      "area": 96.9,
+      "price": 209123,
+      "total": 20259836,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А518",
+      "floor": 5,
+      "area": 137.8,
+      "price": 206247,
+      "total": 28414649,
+      "scheme": "УПТ",
+      "size": ""
+    },
+    {
+      "block": "А601",
+      "floor": 6,
+      "area": 185.0,
+      "price": 200906,
+      "total": 37159573,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А607",
+      "floor": 6,
+      "area": 95.9,
+      "price": 211446,
+      "total": 20279785,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А608",
+      "floor": 6,
+      "area": 90.1,
+      "price": 211446,
+      "total": 19051284,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А609",
+      "floor": 6,
+      "area": 92.4,
+      "price": 208209,
+      "total": 19230183,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А701",
+      "floor": 7,
+      "area": 514.1,
+      "price": 205800,
+      "total": 105795606,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А702",
+      "floor": 7,
+      "area": 624.3,
+      "price": 207556,
+      "total": 129579286,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А703",
+      "floor": 7,
+      "area": 760.5,
+      "price": 201583,
+      "total": 153303872,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А704",
+      "floor": 7,
+      "area": 465.4,
+      "price": 201583,
+      "total": 93814712,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А801",
+      "floor": 8,
+      "area": 511.0,
+      "price": 205800,
+      "total": 105159684,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А802",
+      "floor": 8,
+      "area": 628.0,
+      "price": 207556,
+      "total": 130355546,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А803",
+      "floor": 8,
+      "area": 774.7,
+      "price": 201583,
+      "total": 156174413,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А804",
+      "floor": 8,
+      "area": 465.4,
+      "price": 200095,
+      "total": 93122212,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1700882682",
+      "floor": 8334,
+      "area": 204069.5,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Эйлер": [
+    {
+      "block": "7-201",
+      "floor": 7,
+      "area": 79.9,
+      "price": 450000,
+      "total": 35955000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "4-202",
+      "floor": 4,
+      "area": 395.4,
+      "price": 306310,
+      "total": 121114974,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-201",
+      "floor": 2,
+      "area": 74.9,
+      "price": 495000,
+      "total": 37065600,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-202",
+      "floor": 2,
+      "area": 120.8,
+      "price": 490000,
+      "total": 59201800,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-201",
+      "floor": 2,
+      "area": 74.9,
+      "price": 495000,
+      "total": 37065600,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-202",
+      "floor": 2,
+      "area": 120.8,
+      "price": 490000,
+      "total": 59201800,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-205",
+      "floor": 2,
+      "area": 162.9,
+      "price": 462000,
+      "total": 75273660,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-207",
+      "floor": 2,
+      "area": 91.4,
+      "price": 473000,
+      "total": 43222740,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-209",
+      "floor": 2,
+      "area": 232.3,
+      "price": 495000,
+      "total": 115003350,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-201",
+      "floor": 1,
+      "area": 138.6,
+      "price": 669500,
+      "total": 92779310,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-219",
+      "floor": 1,
+      "area": 58.2,
+      "price": 750000,
+      "total": 43687500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1-220",
+      "floor": 1,
+      "area": 79.1,
+      "price": 750000,
+      "total": 59310000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "4-202",
+      "floor": 4,
+      "area": 395.4,
+      "price": 306310,
+      "total": 121114974,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-204",
+      "floor": 5,
+      "area": 61.4,
+      "price": 475000,
+      "total": 29165000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6-209",
+      "floor": 6,
+      "area": 131.4,
+      "price": 530000,
+      "total": 69626100,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "7-201",
+      "floor": 7,
+      "area": 79.9,
+      "price": 450000,
+      "total": 35955000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "8-207",
+      "floor": 8,
+      "area": 39.1,
+      "price": 550000,
+      "total": 21494000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1056236408",
+      "floor": 2336,
+      "area": 452078.6,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Ahead": [
+    {
+      "block": "Вся площадь",
+      "floor": 0,
+      "area": 10677.0,
+      "price": 365000,
+      "total": 3897105000,
+      "scheme": "ДДУ/ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "3897105000",
+      "floor": 10677,
+      "area": 365000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Fili Centre": [
+    {
+      "block": "Все здание",
+      "floor": 0,
+      "area": 25749.0,
+      "price": 420000,
+      "total": 10814580000,
+      "scheme": "продажа юр. лица",
+      "size": ""
+    },
+    {
+      "block": "10814580000",
+      "floor": 25749,
+      "area": 420000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Geolog 2": [
+    {
+      "block": "3.2",
+      "floor": 3,
+      "area": 78.7,
+      "price": 330000,
+      "total": 25971000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "3.7",
+      "floor": 3,
+      "area": 114.0,
+      "price": 280000,
+      "total": 31920000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "3.1",
+      "floor": 3,
+      "area": 126.6,
+      "price": 290000,
+      "total": 36714000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "3.5",
+      "floor": 3,
+      "area": 150.3,
+      "price": 295000,
+      "total": 44338500,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "3.6",
+      "floor": 3,
+      "area": 200.7,
+      "price": 285000,
+      "total": 57199500,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "4.4",
+      "floor": 4,
+      "area": 80.3,
+      "price": 311000,
+      "total": 24973300,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "4.2",
+      "floor": 4,
+      "area": 86.9,
+      "price": 315000,
+      "total": 27373500,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "4.7",
+      "floor": 4,
+      "area": 114.0,
+      "price": 285000,
+      "total": 32490000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "4.1",
+      "floor": 4,
+      "area": 139.2,
+      "price": 295000,
+      "total": 41064000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "4.3",
+      "floor": 4,
+      "area": 193.7,
+      "price": 287000,
+      "total": 55591900,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "5.4",
+      "floor": 0,
+      "area": 80.3,
+      "price": 314000,
+      "total": 25214200,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "7.4",
+      "floor": 7,
+      "area": 269.2,
+      "price": 295000,
+      "total": 79414000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "8.4",
+      "floor": 8,
+      "area": 80.3,
+      "price": 318000,
+      "total": 25535400,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "8.5",
+      "floor": 8,
+      "area": 197.4,
+      "price": 300000,
+      "total": 59220000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "8.6",
+      "floor": 8,
+      "area": 250.1,
+      "price": 300000,
+      "total": 75030000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "9.2",
+      "floor": 9,
+      "area": 86.9,
+      "price": 330000,
+      "total": 28677000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "9.7",
+      "floor": 9,
+      "area": 114.0,
+      "price": 310000,
+      "total": 35340000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "9.1",
+      "floor": 9,
+      "area": 139.2,
+      "price": 315000,
+      "total": 43848000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "9.6",
+      "floor": 9,
+      "area": 250.1,
+      "price": 303000,
+      "total": 75780300,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "11.1",
+      "floor": 11,
+      "area": 139.2,
+      "price": 325000,
+      "total": 45240000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "11.6",
+      "floor": 11,
+      "area": 250.1,
+      "price": 309000,
+      "total": 77280900,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "11.7",
+      "floor": 11,
+      "area": 114.0,
+      "price": 320000,
+      "total": 36480000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "12.1",
+      "floor": 12,
+      "area": 297.4,
+      "price": 285000,
+      "total": 84759000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "12.2",
+      "floor": 12,
+      "area": 294.2,
+      "price": 285000,
+      "total": 83847000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "12.3",
+      "floor": 12,
+      "area": 282.0,
+      "price": 290000,
+      "total": 81780000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "12.4",
+      "floor": 12,
+      "area": 273.4,
+      "price": 305000,
+      "total": 83387000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "13.1",
+      "floor": 13,
+      "area": 1246.2,
+      "price": 307000,
+      "total": 382583400,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "14.1",
+      "floor": 14,
+      "area": 553.7,
+      "price": 312000,
+      "total": 172754400,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "14.2",
+      "floor": 14,
+      "area": 639.5,
+      "price": 312000,
+      "total": 199524000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "15.1",
+      "floor": 0,
+      "area": 154.8,
+      "price": 325000,
+      "total": 50310000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "15.3",
+      "floor": 0,
+      "area": 153.4,
+      "price": 309000,
+      "total": 47400600,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "15.4",
+      "floor": 15,
+      "area": 51.5,
+      "price": 375000,
+      "total": 19312500,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "15.2",
+      "floor": 15,
+      "area": 86.9,
+      "price": 360000,
+      "total": 31284000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "15.7",
+      "floor": 15,
+      "area": 147.0,
+      "price": 320000,
+      "total": 47040000,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "15.6",
+      "floor": 15,
+      "area": 272.9,
+      "price": 315000,
+      "total": 85963500,
+      "scheme": "ДДУ?",
+      "size": ""
+    },
+    {
+      "block": "2354640900",
+      "floor": 7708,
+      "area": 305476.2,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "iCITY": [
+    {
+      "block": "17 этаж, номер 1711",
+      "floor": 17,
+      "area": 449.7,
+      "price": 622500,
+      "total": 279963150,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "23 этаж, номер 2315",
+      "floor": 23,
+      "area": 259.3,
+      "price": 634470,
+      "total": 164524416,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "24 этаж, номер 2415",
+      "floor": 24,
+      "area": 255.1,
+      "price": 635100,
+      "total": 162014010,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "14 этаж, номер 1401",
+      "floor": 14,
+      "area": 318.5,
+      "price": 627510,
+      "total": 199836835,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "20 этаж, номер 2012",
+      "floor": 20,
+      "area": 259.0,
+      "price": 632150,
+      "total": 163739493,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "23 этаж, номер 2317",
+      "floor": 23,
+      "area": 233.9,
+      "price": 637800,
+      "total": 149206932,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "27 этаж, номер 2713",
+      "floor": 27,
+      "area": 305.2,
+      "price": 636780,
+      "total": 194345256,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "19 этаж, номер 1914",
+      "floor": 19,
+      "area": 447.8,
+      "price": 626470,
+      "total": 280527001,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "16 этаж, номер 1612",
+      "floor": 16,
+      "area": 450.5,
+      "price": 620840,
+      "total": 279700837,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "14 этаж, номер 1413",
+      "floor": 14,
+      "area": 452.2,
+      "price": 618850,
+      "total": 279868724,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 5001",
+      "floor": 50,
+      "area": 1980.3,
+      "price": 680000,
+      "total": 1346638000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 4901",
+      "floor": 49,
+      "area": 1978.2,
+      "price": 678000,
+      "total": 1341219600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 4801",
+      "floor": 48,
+      "area": 1971.0,
+      "price": 646000,
+      "total": 1273266000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 4701",
+      "floor": 47,
+      "area": 1956.7,
+      "price": 644000,
+      "total": 1260114800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 4601",
+      "floor": 46,
+      "area": 1893.0,
+      "price": 642000,
+      "total": 1215306000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 4401",
+      "floor": 44,
+      "area": 1892.2,
+      "price": 640000,
+      "total": 1211008000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 3501",
+      "floor": 35,
+      "area": 1859.4,
+      "price": 630000,
+      "total": 1171422000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2916",
+      "floor": 29,
+      "area": 790.6,
+      "price": 633760,
+      "total": 501050656,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2918",
+      "floor": 29,
+      "area": 324.1,
+      "price": 636480,
+      "total": 206283168,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2901",
+      "floor": 29,
+      "area": 186.8,
+      "price": 650000,
+      "total": 121420000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2914",
+      "floor": 29,
+      "area": 258.5,
+      "price": 646000,
+      "total": 166991000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2817",
+      "floor": 28,
+      "area": 741.2,
+      "price": 633760,
+      "total": 469749250,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2801",
+      "floor": 28,
+      "area": 270.6,
+      "price": 639200,
+      "total": 172967520,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2815",
+      "floor": 28,
+      "area": 264.6,
+      "price": 639200,
+      "total": 169132320,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1915",
+      "floor": 19,
+      "area": 259.1,
+      "price": 630490,
+      "total": 163359959,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1901",
+      "floor": 19,
+      "area": 284.5,
+      "price": 632000,
+      "total": 179785040,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1813",
+      "floor": 18,
+      "area": 448.8,
+      "price": 624160,
+      "total": 280110525,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1715",
+      "floor": 17,
+      "area": 226.9,
+      "price": 632840,
+      "total": 143591396,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2314",
+      "floor": 23,
+      "area": 438.7,
+      "price": 628130,
+      "total": 275560631,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1314",
+      "floor": 13,
+      "area": 285.8,
+      "price": 627510,
+      "total": 179336083,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1330",
+      "floor": 13,
+      "area": 289.2,
+      "price": 627510,
+      "total": 181457067,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1201",
+      "floor": 12,
+      "area": 260.0,
+      "price": 625850,
+      "total": 162721000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1217",
+      "floor": 12,
+      "area": 523.6,
+      "price": 615200,
+      "total": 322143328,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1218",
+      "floor": 12,
+      "area": 282.3,
+      "price": 625850,
+      "total": 176658680,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1215",
+      "floor": 12,
+      "area": 264.1,
+      "price": 625850,
+      "total": 165286985,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1101",
+      "floor": 11,
+      "area": 1786.6,
+      "price": 615000,
+      "total": 1098777450,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 0901",
+      "floor": 9,
+      "area": 1788.8,
+      "price": 610000,
+      "total": 1091168000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 0801",
+      "floor": 8,
+      "area": 2258.3,
+      "price": 605000,
+      "total": 1366301750,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2819",
+      "floor": 28,
+      "area": 174.3,
+      "price": 650080,
+      "total": 113308944,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 2712",
+      "floor": 27,
+      "area": 396.2,
+      "price": 631040,
+      "total": 250018048,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "25 этаж, номер 2514",
+      "floor": 25,
+      "area": 437.6,
+      "price": 630000,
+      "total": 275688000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1917",
+      "floor": 19,
+      "area": 239.5,
+      "price": 634140,
+      "total": 151876530,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Office 1814",
+      "floor": 18,
+      "area": 258.4,
+      "price": 628830,
+      "total": 162464519,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "19519908900.7",
+      "floor": 30701,
+      "area": 635802.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Lunar": [
+    {
+      "block": "2.1",
+      "floor": 2,
+      "area": 91.8,
+      "price": 445000,
+      "total": 40846550,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6.1",
+      "floor": 6,
+      "area": 666.0,
+      "price": 545000,
+      "total": 362975450,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "6.2",
+      "floor": 6,
+      "area": 666.6,
+      "price": 545000,
+      "total": 363297000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.3",
+      "floor": 3,
+      "area": 91.8,
+      "price": 515000,
+      "total": 47277000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.4",
+      "floor": 3,
+      "area": 91.8,
+      "price": 515000,
+      "total": 47277000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.5",
+      "floor": 3,
+      "area": 88.7,
+      "price": 515000,
+      "total": 45680500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.7",
+      "floor": 3,
+      "area": 135.4,
+      "price": 500000,
+      "total": 67700000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.9",
+      "floor": 3,
+      "area": 91.8,
+      "price": 490000,
+      "total": 44982000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.1",
+      "floor": 3,
+      "area": 91.8,
+      "price": 510000,
+      "total": 46818000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.11",
+      "floor": 3,
+      "area": 91.8,
+      "price": 510000,
+      "total": 46818000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.16",
+      "floor": 3,
+      "area": 135.4,
+      "price": 530000,
+      "total": 71762000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.12",
+      "floor": 3,
+      "area": 91.8,
+      "price": 500000,
+      "total": 45900000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5.9",
+      "floor": 5,
+      "area": 91.8,
+      "price": 515000,
+      "total": 47271850,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3.13",
+      "floor": 3,
+      "area": 91.8,
+      "price": 500000,
+      "total": 45900000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1324505350",
+      "floor": 2518,
+      "area": 525954.3,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Opus": [
+    {
+      "block": "А3.5",
+      "floor": 3,
+      "area": 73.6,
+      "price": 404780,
+      "total": 29791808,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.6",
+      "floor": 3,
+      "area": 72.4,
+      "price": 404780,
+      "total": 29306072,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.8",
+      "floor": 3,
+      "area": 72.2,
+      "price": 404780,
+      "total": 29225116,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.9",
+      "floor": 3,
+      "area": 72.4,
+      "price": 404780,
+      "total": 29306072,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.10",
+      "floor": 3,
+      "area": 73.9,
+      "price": 404780,
+      "total": 29913242,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.13",
+      "floor": 3,
+      "area": 73.6,
+      "price": 401041,
+      "total": 29516618,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.14",
+      "floor": 3,
+      "area": 72.8,
+      "price": 401041,
+      "total": 29195785,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.15",
+      "floor": 3,
+      "area": 72.8,
+      "price": 405051,
+      "total": 29487713,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.16",
+      "floor": 3,
+      "area": 72.8,
+      "price": 405051,
+      "total": 29487713,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.17",
+      "floor": 3,
+      "area": 72.8,
+      "price": 404780,
+      "total": 29467984,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А3.18",
+      "floor": 3,
+      "area": 74.2,
+      "price": 404780,
+      "total": 30034676,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.5",
+      "floor": 5,
+      "area": 73.6,
+      "price": 408780,
+      "total": 30086208,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.6",
+      "floor": 5,
+      "area": 72.4,
+      "price": 408780,
+      "total": 29595672,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.7",
+      "floor": 5,
+      "area": 72.2,
+      "price": 408780,
+      "total": 29513916,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.8",
+      "floor": 5,
+      "area": 72.2,
+      "price": 408780,
+      "total": 29513916,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.9",
+      "floor": 5,
+      "area": 72.4,
+      "price": 408780,
+      "total": 29595672,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.10",
+      "floor": 5,
+      "area": 73.9,
+      "price": 408780,
+      "total": 30208842,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.13",
+      "floor": 5,
+      "area": 73.6,
+      "price": 405041,
+      "total": 29811018,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А5.18",
+      "floor": 5,
+      "area": 74.2,
+      "price": 408780,
+      "total": 30331476,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.5",
+      "floor": 7,
+      "area": 73.6,
+      "price": 418780,
+      "total": 30822208,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.6",
+      "floor": 7,
+      "area": 72.4,
+      "price": 418780,
+      "total": 30319672,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.7",
+      "floor": 7,
+      "area": 72.2,
+      "price": 418780,
+      "total": 30235916,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.8",
+      "floor": 7,
+      "area": 72.2,
+      "price": 418780,
+      "total": 30235916,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.9",
+      "floor": 7,
+      "area": 72.4,
+      "price": 418780,
+      "total": 30319672,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.10",
+      "floor": 7,
+      "area": 73.9,
+      "price": 418780,
+      "total": 30947842,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.13",
+      "floor": 7,
+      "area": 73.6,
+      "price": 415041,
+      "total": 30547018,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.14",
+      "floor": 7,
+      "area": 72.8,
+      "price": 415041,
+      "total": 30214985,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.17",
+      "floor": 7,
+      "area": 72.8,
+      "price": 418780,
+      "total": 30487184,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А7.18",
+      "floor": 7,
+      "area": 74.2,
+      "price": 418780,
+      "total": 31073476,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.5",
+      "floor": 2,
+      "area": 53.4,
+      "price": 411308,
+      "total": 21963847,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.6",
+      "floor": 2,
+      "area": 52.3,
+      "price": 411308,
+      "total": 21511408,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.7",
+      "floor": 2,
+      "area": 52.0,
+      "price": 411308,
+      "total": 21388016,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.8",
+      "floor": 2,
+      "area": 52.0,
+      "price": 411308,
+      "total": 21388016,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.9",
+      "floor": 2,
+      "area": 52.1,
+      "price": 411308,
+      "total": 21429147,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.10",
+      "floor": 2,
+      "area": 53.5,
+      "price": 411308,
+      "total": 22004978,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "А2.13",
+      "floor": 2,
+      "area": 53.6,
+      "price": 411308,
+      "total": 22046109,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1020324927.1999999",
+      "floor": 2487,
+      "area": 410263.3,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Plaza Botanica": [
+    {
+      "block": "1515",
+      "floor": 15,
+      "area": 35.8,
+      "price": 392364,
+      "total": 14034860,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1604",
+      "floor": 16,
+      "area": 84.7,
+      "price": 375182,
+      "total": 31777915,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1607",
+      "floor": 16,
+      "area": 117.7,
+      "price": 364680,
+      "total": 42904602,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1609",
+      "floor": 16,
+      "area": 72.3,
+      "price": 380183,
+      "total": 27483429,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1612",
+      "floor": 16,
+      "area": 64.7,
+      "price": 371526,
+      "total": 24030302,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1613",
+      "floor": 16,
+      "area": 72.6,
+      "price": 367165,
+      "total": 26659851,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1614",
+      "floor": 16,
+      "area": 35.3,
+      "price": 392441,
+      "total": 13868865,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1615",
+      "floor": 16,
+      "area": 35.8,
+      "price": 393654,
+      "total": 14081004,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1616",
+      "floor": 16,
+      "area": 33.5,
+      "price": 392441,
+      "total": 13138925,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1617",
+      "floor": 16,
+      "area": 37.6,
+      "price": 393654,
+      "total": 14813200,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1621",
+      "floor": 16,
+      "area": 68.6,
+      "price": 369105,
+      "total": 25316912,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1701",
+      "floor": 17,
+      "area": 179.5,
+      "price": 352388,
+      "total": 63246598,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1702",
+      "floor": 17,
+      "area": 147.0,
+      "price": 352388,
+      "total": 51790464,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1707",
+      "floor": 17,
+      "area": 117.7,
+      "price": 368230,
+      "total": 43333306,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1708",
+      "floor": 17,
+      "area": 96.3,
+      "price": 373523,
+      "total": 35981471,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1714",
+      "floor": 17,
+      "area": 35.4,
+      "price": 394491,
+      "total": 13968926,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1715",
+      "floor": 17,
+      "area": 35.8,
+      "price": 394491,
+      "total": 14138557,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1716",
+      "floor": 17,
+      "area": 33.5,
+      "price": 393725,
+      "total": 13209474,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1717",
+      "floor": 17,
+      "area": 37.7,
+      "price": 394491,
+      "total": 14872311,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1718",
+      "floor": 17,
+      "area": 33.4,
+      "price": 394491,
+      "total": 13156275,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1720",
+      "floor": 17,
+      "area": 68.7,
+      "price": 394491,
+      "total": 27113366,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1507",
+      "floor": 15,
+      "area": 117.7,
+      "price": 363017,
+      "total": 42708950,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1509",
+      "floor": 15,
+      "area": 72.3,
+      "price": 377694,
+      "total": 27303499,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1514",
+      "floor": 15,
+      "area": 35.3,
+      "price": 391155,
+      "total": 13823418,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1517",
+      "floor": 15,
+      "area": 37.6,
+      "price": 392364,
+      "total": 14764657,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1520",
+      "floor": 15,
+      "area": 34.2,
+      "price": 392364,
+      "total": 13426696,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1521",
+      "floor": 15,
+      "area": 68.6,
+      "price": 367738,
+      "total": 25223149,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1611",
+      "floor": 16,
+      "area": 72.0,
+      "price": 368609,
+      "total": 26550906,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1721",
+      "floor": 17,
+      "area": 68.6,
+      "price": 370472,
+      "total": 25410674,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1801",
+      "floor": 18,
+      "area": 179.5,
+      "price": 360872,
+      "total": 64769307,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1802",
+      "floor": 18,
+      "area": 147.0,
+      "price": 360872,
+      "total": 53037358,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1803",
+      "floor": 18,
+      "area": 297.6,
+      "price": 357069,
+      "total": 106245881,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1804",
+      "floor": 18,
+      "area": 84.9,
+      "price": 386358,
+      "total": 32786340,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1805",
+      "floor": 18,
+      "area": 63.3,
+      "price": 392484,
+      "total": 24859937,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1806",
+      "floor": 18,
+      "area": 88.2,
+      "price": 386358,
+      "total": 34057458,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1807",
+      "floor": 18,
+      "area": 117.7,
+      "price": 377491,
+      "total": 44423141,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1811",
+      "floor": 18,
+      "area": 72.2,
+      "price": 378350,
+      "total": 27305520,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1812",
+      "floor": 18,
+      "area": 64.8,
+      "price": 382073,
+      "total": 24765972,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1813",
+      "floor": 18,
+      "area": 72.8,
+      "price": 376509,
+      "total": 27391030,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1814",
+      "floor": 18,
+      "area": 35.4,
+      "price": 404482,
+      "total": 14322708,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1815",
+      "floor": 18,
+      "area": 35.8,
+      "price": 404482,
+      "total": 14496635,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1816",
+      "floor": 18,
+      "area": 33.5,
+      "price": 404482,
+      "total": 13570371,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1817",
+      "floor": 18,
+      "area": 37.7,
+      "price": 404482,
+      "total": 15248971,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1818",
+      "floor": 18,
+      "area": 33.4,
+      "price": 404482,
+      "total": 13489475,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1820",
+      "floor": 18,
+      "area": 34.3,
+      "price": 404482,
+      "total": 13869688,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1821",
+      "floor": 18,
+      "area": 68.7,
+      "price": 379246,
+      "total": 26065578,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1278837930.44",
+      "floor": 3416,
+      "area": 374309.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Porta Forma": [
+    {
+      "block": "С 10 по 16 этаж",
+      "floor": 0,
+      "area": 13901.5,
+      "price": 447300,
+      "total": 6218140950,
+      "scheme": "дкпбв",
+      "size": ""
+    },
+    {
+      "block": "6218140950",
+      "floor": 13901,
+      "area": 447300.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "QOOB": [
+    {
+      "block": "Все здание",
+      "floor": 0,
+      "area": 10835.0,
+      "price": 355000,
+      "total": 3846425000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-4",
+      "floor": 2,
+      "area": 76.0,
+      "price": 392500,
+      "total": 29830000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-5",
+      "floor": 2,
+      "area": 86.2,
+      "price": 392500,
+      "total": 33833500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-6",
+      "floor": 2,
+      "area": 75.5,
+      "price": 392500,
+      "total": 29633750,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-7",
+      "floor": 2,
+      "area": 117.4,
+      "price": 390000,
+      "total": 45786000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2-8",
+      "floor": 2,
+      "area": 93.7,
+      "price": 397500,
+      "total": 37245750,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-12",
+      "floor": 3,
+      "area": 64.6,
+      "price": 402500,
+      "total": 26001500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-13",
+      "floor": 3,
+      "area": 64.9,
+      "price": 402500,
+      "total": 26122250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-14",
+      "floor": 3,
+      "area": 53.8,
+      "price": 402500,
+      "total": 21654500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-16",
+      "floor": 3,
+      "area": 136.7,
+      "price": 397500,
+      "total": 54338250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-17",
+      "floor": 3,
+      "area": 147.6,
+      "price": 397500,
+      "total": 58671000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-19",
+      "floor": 3,
+      "area": 86.5,
+      "price": 400000,
+      "total": 34600000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-20",
+      "floor": 3,
+      "area": 75.6,
+      "price": 400000,
+      "total": 30240000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "3-21",
+      "floor": 3,
+      "area": 125.7,
+      "price": 397500,
+      "total": 49965750,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-34",
+      "floor": 5,
+      "area": 64.6,
+      "price": 417500,
+      "total": 26970500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-36",
+      "floor": 5,
+      "area": 53.8,
+      "price": 417500,
+      "total": 22461500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-38",
+      "floor": 5,
+      "area": 136.7,
+      "price": 412500,
+      "total": 56388750,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-39",
+      "floor": 5,
+      "area": 147.8,
+      "price": 412500,
+      "total": 60967500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-43",
+      "floor": 5,
+      "area": 125.7,
+      "price": 412500,
+      "total": 51851250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "7-55",
+      "floor": 5,
+      "area": 114.1,
+      "price": 427500,
+      "total": 48777750,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "5-33",
+      "floor": 5,
+      "area": 114.1,
+      "price": 412500,
+      "total": 47066250,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "4638830750",
+      "floor": 12796,
+      "area": 362521.9,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Stone Дмитровская": [
+    {
+      "block": "SD-301",
+      "floor": 3,
+      "area": 136.0,
+      "price": 305000,
+      "total": 41480000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-303",
+      "floor": 3,
+      "area": 88.0,
+      "price": 317000,
+      "total": 27896000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-304",
+      "floor": 3,
+      "area": 136.0,
+      "price": 305000,
+      "total": 41480000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-305",
+      "floor": 3,
+      "area": 67.0,
+      "price": 331000,
+      "total": 22177000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-307",
+      "floor": 3,
+      "area": 67.0,
+      "price": 331000,
+      "total": 22177000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-308",
+      "floor": 3,
+      "area": 136.0,
+      "price": 303000,
+      "total": 41208000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-310",
+      "floor": 3,
+      "area": 87.0,
+      "price": 312000,
+      "total": 27144000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-311",
+      "floor": 3,
+      "area": 136.0,
+      "price": 303000,
+      "total": 41208000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-312",
+      "floor": 3,
+      "area": 67.0,
+      "price": 331000,
+      "total": 22177000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-313",
+      "floor": 3,
+      "area": 67.0,
+      "price": 331000,
+      "total": 22177000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-314",
+      "floor": 3,
+      "area": 67.0,
+      "price": 331000,
+      "total": 22177000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-501",
+      "floor": 5,
+      "area": 139.0,
+      "price": 508000,
+      "total": 70612000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-502",
+      "floor": 5,
+      "area": 103.0,
+      "price": 316000,
+      "total": 32548000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-504",
+      "floor": 5,
+      "area": 69.0,
+      "price": 334000,
+      "total": 23046000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-507",
+      "floor": 5,
+      "area": 69.0,
+      "price": 334000,
+      "total": 23046000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-508",
+      "floor": 5,
+      "area": 139.0,
+      "price": 308000,
+      "total": 42812000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-509",
+      "floor": 5,
+      "area": 103.0,
+      "price": 316000,
+      "total": 32548000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-510",
+      "floor": 5,
+      "area": 195.0,
+      "price": 290000,
+      "total": 56550000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-512",
+      "floor": 5,
+      "area": 69.0,
+      "price": 334000,
+      "total": 23046000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-701",
+      "floor": 7,
+      "area": 139.0,
+      "price": 311000,
+      "total": 43229000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-703",
+      "floor": 7,
+      "area": 195.0,
+      "price": 293000,
+      "total": 57135000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-801",
+      "floor": 8,
+      "area": 194.0,
+      "price": 296000,
+      "total": 57424000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-803",
+      "floor": 8,
+      "area": 139.0,
+      "price": 314000,
+      "total": 43646000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-804",
+      "floor": 8,
+      "area": 69.0,
+      "price": 340000,
+      "total": 23460000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-806",
+      "floor": 8,
+      "area": 91.0,
+      "price": 326000,
+      "total": 29666000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-809",
+      "floor": 8,
+      "area": 194.0,
+      "price": 296000,
+      "total": 57424000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-810",
+      "floor": 8,
+      "area": 103.0,
+      "price": 322000,
+      "total": 33166000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-811",
+      "floor": 8,
+      "area": 139.0,
+      "price": 314000,
+      "total": 43646000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-813",
+      "floor": 8,
+      "area": 91.0,
+      "price": 326000,
+      "total": 29666000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-901",
+      "floor": 9,
+      "area": 194.0,
+      "price": 5000,
+      "total": 970000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-903",
+      "floor": 9,
+      "area": 139.0,
+      "price": 5000,
+      "total": 695000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-904",
+      "floor": 9,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-906",
+      "floor": 9,
+      "area": 91.0,
+      "price": 5000,
+      "total": 455000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-908",
+      "floor": 9,
+      "area": 194.0,
+      "price": 5000,
+      "total": 970000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-909",
+      "floor": 9,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-910",
+      "floor": 9,
+      "area": 139.0,
+      "price": 5000,
+      "total": 695000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-912",
+      "floor": 9,
+      "area": 91.0,
+      "price": 5000,
+      "total": 455000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1001",
+      "floor": 10,
+      "area": 194.0,
+      "price": 5000,
+      "total": 970000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1002",
+      "floor": 10,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1003",
+      "floor": 10,
+      "area": 139.0,
+      "price": 5000,
+      "total": 695000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1004",
+      "floor": 10,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1006",
+      "floor": 10,
+      "area": 91.0,
+      "price": 5000,
+      "total": 455000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1009",
+      "floor": 10,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1010",
+      "floor": 10,
+      "area": 139.0,
+      "price": 5000,
+      "total": 695000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1014",
+      "floor": 10,
+      "area": 73.0,
+      "price": 5000,
+      "total": 365000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1102",
+      "floor": 11,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1103",
+      "floor": 11,
+      "area": 195.0,
+      "price": 5000,
+      "total": 975000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1107",
+      "floor": 11,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1108",
+      "floor": 11,
+      "area": 140.0,
+      "price": 5000,
+      "total": 700000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1109",
+      "floor": 11,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1110",
+      "floor": 11,
+      "area": 195.0,
+      "price": 5000,
+      "total": 975000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1201",
+      "floor": 12,
+      "area": 140.0,
+      "price": 5000,
+      "total": 700000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1202",
+      "floor": 12,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1203",
+      "floor": 12,
+      "area": 195.0,
+      "price": 5000,
+      "total": 975000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1205",
+      "floor": 12,
+      "area": 91.0,
+      "price": 5000,
+      "total": 455000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1207",
+      "floor": 12,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1208",
+      "floor": 12,
+      "area": 140.0,
+      "price": 5000,
+      "total": 700000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1209",
+      "floor": 12,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1210",
+      "floor": 12,
+      "area": 195.0,
+      "price": 5000,
+      "total": 975000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1214",
+      "floor": 12,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1301",
+      "floor": 13,
+      "area": 140.0,
+      "price": 5000,
+      "total": 700000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1302",
+      "floor": 13,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1303",
+      "floor": 13,
+      "area": 195.0,
+      "price": 5000,
+      "total": 975000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1305",
+      "floor": 13,
+      "area": 91.0,
+      "price": 5000,
+      "total": 455000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1307",
+      "floor": 13,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1308",
+      "floor": 13,
+      "area": 140.0,
+      "price": 5000,
+      "total": 700000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1309",
+      "floor": 13,
+      "area": 103.0,
+      "price": 5000,
+      "total": 515000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1311",
+      "floor": 13,
+      "area": 70.0,
+      "price": 5000,
+      "total": 350000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1313",
+      "floor": 13,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1314",
+      "floor": 13,
+      "area": 69.0,
+      "price": 5000,
+      "total": 345000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1401",
+      "floor": 14,
+      "area": 137.8,
+      "price": 334000,
+      "total": 46025200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1402",
+      "floor": 14,
+      "area": 101.2,
+      "price": 342000,
+      "total": 34610400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1403",
+      "floor": 14,
+      "area": 101.2,
+      "price": 342000,
+      "total": 34610400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1404",
+      "floor": 14,
+      "area": 137.8,
+      "price": 334000,
+      "total": 46025200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1407",
+      "floor": 14,
+      "area": 67.3,
+      "price": 360000,
+      "total": 24228000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1409",
+      "floor": 14,
+      "area": 137.5,
+      "price": 334000,
+      "total": 45925000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1410",
+      "floor": 14,
+      "area": 101.2,
+      "price": 342000,
+      "total": 34610400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1411",
+      "floor": 14,
+      "area": 101.2,
+      "price": 342000,
+      "total": 34610400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1414",
+      "floor": 14,
+      "area": 67.7,
+      "price": 360000,
+      "total": 24372000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-902",
+      "floor": 9,
+      "area": 103.0,
+      "price": 325000,
+      "total": 33475000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1902",
+      "floor": 19,
+      "area": 341.0,
+      "price": 363000,
+      "total": 123783000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1903",
+      "floor": 19,
+      "area": 361.0,
+      "price": 363000,
+      "total": 131043000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-2001",
+      "floor": 20,
+      "area": 392.0,
+      "price": 368000,
+      "total": 144256000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-2002",
+      "floor": 20,
+      "area": 341.0,
+      "price": 368000,
+      "total": 125488000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-2003",
+      "floor": 20,
+      "area": 361.0,
+      "price": 368000,
+      "total": 132848000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-2004",
+      "floor": 20,
+      "area": 405.0,
+      "price": 368000,
+      "total": 149040000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-2101",
+      "floor": 21,
+      "area": 803.0,
+      "price": 358000,
+      "total": 287474000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-2102",
+      "floor": 21,
+      "area": 782.0,
+      "price": 358000,
+      "total": 279956000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "SD-1500-1800",
+      "floor": 13,
+      "area": 6448.0,
+      "price": 340000,
+      "total": 2192320000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "5003121000",
+      "floor": 19473,
+      "area": 256914.2,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "STONE Курская": [
+    {
+      "block": "Все здание",
+      "floor": 0,
+      "area": 15600.0,
+      "price": 340000,
+      "total": 5304000000,
+      "scheme": "Продажа юр. Лица",
+      "size": ""
+    },
+    {
+      "block": "5304000000",
+      "floor": 15600,
+      "area": 340000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Stone Ленинский": [
+    {
+      "block": "L-501",
+      "floor": 5,
+      "area": 118.2,
+      "price": 414000,
+      "total": 48934800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-701",
+      "floor": 7,
+      "area": 144.4,
+      "price": 412000,
+      "total": 59492800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-702",
+      "floor": 7,
+      "area": 71.8,
+      "price": 428000,
+      "total": 30730400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-801",
+      "floor": 8,
+      "area": 146.6,
+      "price": 414000,
+      "total": 60692400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-901",
+      "floor": 9,
+      "area": 146.6,
+      "price": 417000,
+      "total": 61132200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-904",
+      "floor": 9,
+      "area": 102.7,
+      "price": 431000,
+      "total": 44263700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1204",
+      "floor": 12,
+      "area": 75.2,
+      "price": 448000,
+      "total": 33689600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1302",
+      "floor": 13,
+      "area": 116.5,
+      "price": 436000,
+      "total": 50794000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1303",
+      "floor": 13,
+      "area": 71.9,
+      "price": 453000,
+      "total": 32570700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1305",
+      "floor": 13,
+      "area": 178.8,
+      "price": 423000,
+      "total": 75632400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1402",
+      "floor": 14,
+      "area": 116.5,
+      "price": 441000,
+      "total": 51376500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1403",
+      "floor": 14,
+      "area": 71.9,
+      "price": 458000,
+      "total": 32930200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1404",
+      "floor": 14,
+      "area": 121.6,
+      "price": 441000,
+      "total": 53625600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1503",
+      "floor": 15,
+      "area": 73.1,
+      "price": 463000,
+      "total": 33845300,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1504",
+      "floor": 15,
+      "area": 75.7,
+      "price": 463000,
+      "total": 35049100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1505",
+      "floor": 15,
+      "area": 73.5,
+      "price": 463000,
+      "total": 34030500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1506",
+      "floor": 15,
+      "area": 178.8,
+      "price": 463000,
+      "total": 82784400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1601",
+      "floor": 16,
+      "area": 178.5,
+      "price": 441000,
+      "total": 78718500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1602",
+      "floor": 16,
+      "area": 116.5,
+      "price": 451000,
+      "total": 52541500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1603",
+      "floor": 16,
+      "area": 72.0,
+      "price": 468000,
+      "total": 33696000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1604",
+      "floor": 16,
+      "area": 121.7,
+      "price": 451000,
+      "total": 54886700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1605",
+      "floor": 16,
+      "area": 179.0,
+      "price": 441000,
+      "total": 78939000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1701",
+      "floor": 17,
+      "area": 389.1,
+      "price": 421000,
+      "total": 163811100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1702",
+      "floor": 17,
+      "area": 345.8,
+      "price": 426000,
+      "total": 147310800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1901",
+      "floor": 19,
+      "area": 389.1,
+      "price": 431000,
+      "total": 167702100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1902",
+      "floor": 19,
+      "area": 345.8,
+      "price": 436000,
+      "total": 150768800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1801",
+      "floor": 18,
+      "area": 389.1,
+      "price": 426000,
+      "total": 165756600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "L-1802",
+      "floor": 18,
+      "area": 345.7,
+      "price": 431000,
+      "total": 148996700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "S-200",
+      "floor": 2,
+      "area": 931.7,
+      "price": 445000,
+      "total": 414606500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D903",
+      "floor": 9,
+      "area": 106.0,
+      "price": 445000,
+      "total": 47170000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "2526478900",
+      "floor": 5793,
+      "area": 436065.9,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Stone Ходынка": [
+    {
+      "block": "H1-404",
+      "floor": 4,
+      "area": 420.0,
+      "price": 390000,
+      "total": 163800000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-601",
+      "floor": 6,
+      "area": 385.0,
+      "price": 410000,
+      "total": 157850000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1301",
+      "floor": 13,
+      "area": 840.0,
+      "price": 405000,
+      "total": 340200000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1401",
+      "floor": 14,
+      "area": 840.0,
+      "price": 410000,
+      "total": 344400000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1402",
+      "floor": 14,
+      "area": 825.0,
+      "price": 415000,
+      "total": 342375000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1501",
+      "floor": 15,
+      "area": 840.0,
+      "price": 415000,
+      "total": 348600000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1801",
+      "floor": 18,
+      "area": 385.0,
+      "price": 455000,
+      "total": 175175000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1802",
+      "floor": 18,
+      "area": 370.0,
+      "price": 460000,
+      "total": 170200000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1804",
+      "floor": 18,
+      "area": 420.0,
+      "price": 450000,
+      "total": 189000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1900",
+      "floor": 19,
+      "area": 1740.0,
+      "price": 420000,
+      "total": 730800000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-301",
+      "floor": 3,
+      "area": 840.0,
+      "price": 350000,
+      "total": 294000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H1-1400",
+      "floor": 14,
+      "area": 1740.0,
+      "price": 395000,
+      "total": 687300000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-506",
+      "floor": 5,
+      "area": 148.0,
+      "price": 470000,
+      "total": 69560000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-507",
+      "floor": 5,
+      "area": 148.0,
+      "price": 480000,
+      "total": 71040000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-508",
+      "floor": 5,
+      "area": 85.0,
+      "price": 500000,
+      "total": 42500000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-512",
+      "floor": 5,
+      "area": 148.0,
+      "price": 480000,
+      "total": 71040000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-601",
+      "floor": 6,
+      "area": 148.0,
+      "price": 470000,
+      "total": 69560000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-604",
+      "floor": 6,
+      "area": 85.0,
+      "price": 490000,
+      "total": 41650000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-605",
+      "floor": 6,
+      "area": 85.0,
+      "price": 490000,
+      "total": 41650000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-606",
+      "floor": 6,
+      "area": 148.0,
+      "price": 475000,
+      "total": 70300000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-607",
+      "floor": 6,
+      "area": 148.0,
+      "price": 485000,
+      "total": 71780000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-608",
+      "floor": 6,
+      "area": 85.0,
+      "price": 505000,
+      "total": 42925000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-609",
+      "floor": 6,
+      "area": 85.0,
+      "price": 505000,
+      "total": 42925000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-612",
+      "floor": 6,
+      "area": 148.0,
+      "price": 485000,
+      "total": 71780000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-701",
+      "floor": 7,
+      "area": 148.0,
+      "price": 475000,
+      "total": 70300000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-704",
+      "floor": 7,
+      "area": 85.0,
+      "price": 495000,
+      "total": 42075000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-705",
+      "floor": 7,
+      "area": 85.0,
+      "price": 495000,
+      "total": 42075000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-706",
+      "floor": 7,
+      "area": 148.0,
+      "price": 480000,
+      "total": 71040000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-707",
+      "floor": 7,
+      "area": 148.0,
+      "price": 490000,
+      "total": 72520000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-708",
+      "floor": 7,
+      "area": 85.0,
+      "price": 510000,
+      "total": 43350000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-709",
+      "floor": 7,
+      "area": 85.0,
+      "price": 510000,
+      "total": 43350000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-711",
+      "floor": 7,
+      "area": 42.0,
+      "price": 625000,
+      "total": 26250000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-712",
+      "floor": 7,
+      "area": 148.0,
+      "price": 490000,
+      "total": 72520000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-801",
+      "floor": 8,
+      "area": 148.0,
+      "price": 480000,
+      "total": 71040000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-802",
+      "floor": 8,
+      "area": 42.0,
+      "price": 595000,
+      "total": 24990000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-802",
+      "floor": 8,
+      "area": 42.0,
+      "price": 595000,
+      "total": 24990000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-803",
+      "floor": 8,
+      "area": 85.0,
+      "price": 500000,
+      "total": 42500000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-805",
+      "floor": 8,
+      "area": 85.0,
+      "price": 500000,
+      "total": 42500000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-806",
+      "floor": 8,
+      "area": 148.0,
+      "price": 485000,
+      "total": 71780000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-809",
+      "floor": 8,
+      "area": 85.0,
+      "price": 515000,
+      "total": 43775000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-901",
+      "floor": 9,
+      "area": 148.0,
+      "price": 485000,
+      "total": 71780000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-902",
+      "floor": 9,
+      "area": 85.0,
+      "price": 505000,
+      "total": 42925000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-301",
+      "floor": 3,
+      "area": 148.0,
+      "price": 455000,
+      "total": 67340000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-903",
+      "floor": 9,
+      "area": 85.0,
+      "price": 505000,
+      "total": 42925000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-904",
+      "floor": 9,
+      "area": 85.0,
+      "price": 505000,
+      "total": 42925000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-905",
+      "floor": 9,
+      "area": 148.0,
+      "price": 490000,
+      "total": 72520000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-909",
+      "floor": 9,
+      "area": 85.0,
+      "price": 520000,
+      "total": 44200000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-306",
+      "floor": 3,
+      "area": 148.0,
+      "price": 455000,
+      "total": 67340000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-401",
+      "floor": 4,
+      "area": 148.0,
+      "price": 460000,
+      "total": 68080000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-501",
+      "floor": 5,
+      "area": 148.0,
+      "price": 465000,
+      "total": 68820000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-504",
+      "floor": 5,
+      "area": 85.0,
+      "price": 485000,
+      "total": 41225000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "H3-505",
+      "floor": 5,
+      "area": 85.0,
+      "price": 485000,
+      "total": 41225000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "6126770000",
+      "floor": 14113,
+      "area": 434122.4,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Stone Cавеловская": [
+    {
+      "block": "D1-301",
+      "floor": 3,
+      "area": 1111.1,
+      "price": 355000,
+      "total": 394440500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-413",
+      "floor": 4,
+      "area": 136.4,
+      "price": 356000,
+      "total": 48558400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-907",
+      "floor": 9,
+      "area": 170.8,
+      "price": 357000,
+      "total": 60975600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2110",
+      "floor": 21,
+      "area": 101.6,
+      "price": 390000,
+      "total": 39624000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1207",
+      "floor": 12,
+      "area": 171.8,
+      "price": 364000,
+      "total": 62535200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1306",
+      "floor": 13,
+      "area": 173.0,
+      "price": 364000,
+      "total": 62972000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1406",
+      "floor": 14,
+      "area": 173.0,
+      "price": 366000,
+      "total": 63318000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1508",
+      "floor": 15,
+      "area": 173.0,
+      "price": 370000,
+      "total": 64010000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1807",
+      "floor": 18,
+      "area": 173.4,
+      "price": 374000,
+      "total": 64851600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1808",
+      "floor": 18,
+      "area": 173.4,
+      "price": 376000,
+      "total": 65198400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-1907",
+      "floor": 19,
+      "area": 173.4,
+      "price": 376000,
+      "total": 65198400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2007",
+      "floor": 20,
+      "area": 173.4,
+      "price": 378000,
+      "total": 65545200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2008",
+      "floor": 20,
+      "area": 173.4,
+      "price": 380000,
+      "total": 65892000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2010",
+      "floor": 20,
+      "area": 101.6,
+      "price": 388000,
+      "total": 39420800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2301",
+      "floor": 23,
+      "area": 399.1,
+      "price": 402000,
+      "total": 160438200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1301 var 1",
+      "floor": 13,
+      "area": 848.8,
+      "price": 340000,
+      "total": 288592000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1302 var 1",
+      "floor": 13,
+      "area": 903.9,
+      "price": 340000,
+      "total": 307326000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2401",
+      "floor": 24,
+      "area": 399.1,
+      "price": 380000,
+      "total": 151658000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1400",
+      "floor": 14,
+      "area": 1812.6,
+      "price": 335000,
+      "total": 607221000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1505",
+      "floor": 15,
+      "area": 131.1,
+      "price": 372000,
+      "total": 48769200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1511",
+      "floor": 15,
+      "area": 241.4,
+      "price": 365000,
+      "total": 88111000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1604",
+      "floor": 16,
+      "area": 172.2,
+      "price": 373000,
+      "total": 64230600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1611",
+      "floor": 16,
+      "area": 241.4,
+      "price": 367000,
+      "total": 88593800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D3-201",
+      "floor": 2,
+      "area": 555.7,
+      "price": 355000,
+      "total": 197273500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D3-202",
+      "floor": 2,
+      "area": 555.5,
+      "price": 375000,
+      "total": 208312500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D3-301",
+      "floor": 3,
+      "area": 555.4,
+      "price": 370000,
+      "total": 205498000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D3-302",
+      "floor": 3,
+      "area": 555.2,
+      "price": 380000,
+      "total": 210976000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1701",
+      "floor": 17,
+      "area": 242.5,
+      "price": 369000,
+      "total": 89482500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1702",
+      "floor": 17,
+      "area": 135.7,
+      "price": 376000,
+      "total": 51023200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1703",
+      "floor": 17,
+      "area": 135.7,
+      "price": 376000,
+      "total": 51023200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1710",
+      "floor": 17,
+      "area": 242.6,
+      "price": 369000,
+      "total": 89519400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1801",
+      "floor": 18,
+      "area": 242.5,
+      "price": 371000,
+      "total": 89967500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1810",
+      "floor": 18,
+      "area": 242.6,
+      "price": 371000,
+      "total": 90004600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-301",
+      "floor": 3,
+      "area": 1530.6,
+      "price": 355000,
+      "total": 543363000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1901",
+      "floor": 19,
+      "area": 242.5,
+      "price": 373000,
+      "total": 90452500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1902",
+      "floor": 19,
+      "area": 135.7,
+      "price": 380000,
+      "total": 51566000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1903",
+      "floor": 19,
+      "area": 135.7,
+      "price": 380000,
+      "total": 51566000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1904",
+      "floor": 19,
+      "area": 272.2,
+      "price": 371000,
+      "total": 100986200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1905",
+      "floor": 19,
+      "area": 272.2,
+      "price": 371000,
+      "total": 100986200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1906",
+      "floor": 19,
+      "area": 66.8,
+      "price": 407000,
+      "total": 27187600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1907",
+      "floor": 19,
+      "area": 67.4,
+      "price": 407000,
+      "total": 27431800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1908",
+      "floor": 19,
+      "area": 67.4,
+      "price": 407000,
+      "total": 27431800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1909",
+      "floor": 19,
+      "area": 66.8,
+      "price": 407000,
+      "total": 27187600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1910",
+      "floor": 19,
+      "area": 242.6,
+      "price": 373000,
+      "total": 90489800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-2201",
+      "floor": 22,
+      "area": 861.4,
+      "price": 370000,
+      "total": 318718000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-2202",
+      "floor": 22,
+      "area": 919.4,
+      "price": 370000,
+      "total": 340178000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-2301",
+      "floor": 23,
+      "area": 861.4,
+      "price": 375000,
+      "total": 323025000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-2302",
+      "floor": 23,
+      "area": 919.4,
+      "price": 375000,
+      "total": 344775000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-2401",
+      "floor": 24,
+      "area": 861.4,
+      "price": 380000,
+      "total": 327332000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-2402",
+      "floor": 24,
+      "area": 919.4,
+      "price": 380000,
+      "total": 349372000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1-2108",
+      "floor": 21,
+      "area": 173.4,
+      "price": 381000,
+      "total": 66065400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1605",
+      "floor": 16,
+      "area": 131.1,
+      "price": 374000,
+      "total": 49031400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1606",
+      "floor": 16,
+      "area": 271.2,
+      "price": 365000,
+      "total": 98988000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D3-200",
+      "floor": 2,
+      "area": 1111.1,
+      "price": 364999,
+      "total": 405550389,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1704",
+      "floor": 17,
+      "area": 272.2,
+      "price": 367000,
+      "total": 99897400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D2-1705",
+      "floor": 17,
+      "area": 272.2,
+      "price": 367000,
+      "total": 99897400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "8212038788.9",
+      "floor": 22465,
+      "area": 365535.1,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Stone Towers": [
+    {
+      "block": "Этаж 7 С7",
+      "floor": 7,
+      "area": 1102.1,
+      "price": 460000,
+      "total": 506966000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Этаж 9",
+      "floor": 9,
+      "area": 915.7,
+      "price": 490000,
+      "total": 448693000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D311",
+      "floor": 3,
+      "area": 279.3,
+      "price": 369000,
+      "total": 103061700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D506",
+      "floor": 5,
+      "area": 278.9,
+      "price": 375000,
+      "total": 104587500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D601",
+      "floor": 6,
+      "area": 279.4,
+      "price": 383000,
+      "total": 107010200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D606",
+      "floor": 6,
+      "area": 279.1,
+      "price": 378000,
+      "total": 105499800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D611",
+      "floor": 6,
+      "area": 279.3,
+      "price": 378000,
+      "total": 105575400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D700",
+      "floor": 7,
+      "area": 2043.1,
+      "price": 355000,
+      "total": 725300500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D801",
+      "floor": 8,
+      "area": 279.4,
+      "price": 389000,
+      "total": 108686600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D811",
+      "floor": 8,
+      "area": 279.3,
+      "price": 384000,
+      "total": 107251200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D911",
+      "floor": 9,
+      "area": 279.3,
+      "price": 387000,
+      "total": 108089100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1300",
+      "floor": 13,
+      "area": 2070.4,
+      "price": 380000,
+      "total": 786752000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1401",
+      "floor": 14,
+      "area": 281.8,
+      "price": 398000,
+      "total": 112156400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1406",
+      "floor": 14,
+      "area": 281.5,
+      "price": 410000,
+      "total": 115415000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1407",
+      "floor": 14,
+      "area": 107.4,
+      "price": 457000,
+      "total": 49081800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1411",
+      "floor": 14,
+      "area": 281.7,
+      "price": 410000,
+      "total": 115497000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1501",
+      "floor": 15,
+      "area": 281.8,
+      "price": 420000,
+      "total": 118356000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1505",
+      "floor": 15,
+      "area": 281.2,
+      "price": 420000,
+      "total": 118104000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1508",
+      "floor": 15,
+      "area": 70.2,
+      "price": 495000,
+      "total": 34749000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1509",
+      "floor": 15,
+      "area": 71.1,
+      "price": 495000,
+      "total": 35194500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1511",
+      "floor": 15,
+      "area": 281.7,
+      "price": 415000,
+      "total": 116905500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1800",
+      "floor": 18,
+      "area": 2069.1,
+      "price": 405000,
+      "total": 837985500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1900",
+      "floor": 19,
+      "area": 1475.0,
+      "price": 455000,
+      "total": 671125000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "D1409",
+      "floor": 0,
+      "area": 71.1,
+      "price": 490000,
+      "total": 34839000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "5676881700",
+      "floor": 13918,
+      "area": 407854.2,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Taller": [
+    {
+      "block": "Офис 1.319",
+      "floor": 2,
+      "area": 283.6,
+      "price": 395000,
+      "total": 112018050,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5",
+      "floor": 3,
+      "area": 1839.2,
+      "price": 442792,
+      "total": 814374191,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6",
+      "floor": 3,
+      "area": 1837.3,
+      "price": 444129,
+      "total": 816002653,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 1.320",
+      "floor": 2,
+      "area": 64.4,
+      "price": 438783,
+      "total": 28244462,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 1.321",
+      "floor": 2,
+      "area": 76.2,
+      "price": 438783,
+      "total": 33452816,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.301",
+      "floor": 3,
+      "area": 145.7,
+      "price": 453485,
+      "total": 66063695,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.302",
+      "floor": 3,
+      "area": 114.6,
+      "price": 440120,
+      "total": 50442153,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.303",
+      "floor": 3,
+      "area": 81.9,
+      "price": 440120,
+      "total": 36028223,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.305",
+      "floor": 3,
+      "area": 98.3,
+      "price": 440120,
+      "total": 43285802,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.307",
+      "floor": 3,
+      "area": 283.6,
+      "price": 440120,
+      "total": 124804828,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.308",
+      "floor": 3,
+      "area": 64.4,
+      "price": 440120,
+      "total": 28330524,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.311",
+      "floor": 3,
+      "area": 265.0,
+      "price": 440120,
+      "total": 116618596,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.312",
+      "floor": 3,
+      "area": 353.5,
+      "price": 440120,
+      "total": 155578019,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2425244012.3800006",
+      "floor": 5507,
+      "area": 440345.8,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Stone Ходынка 2": [
+    {
+      "block": "G1-700",
+      "floor": 7,
+      "area": 1510.0,
+      "price": 375000,
+      "total": 566250000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-800",
+      "floor": 8,
+      "area": 1510.0,
+      "price": 380000,
+      "total": 573800000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-801-1",
+      "floor": 8,
+      "area": 720.0,
+      "price": 405000,
+      "total": 291600000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-802-1",
+      "floor": 8,
+      "area": 720.0,
+      "price": 420000,
+      "total": 302400000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-900",
+      "floor": 9,
+      "area": 1510.0,
+      "price": 385000,
+      "total": 581350000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-901",
+      "floor": 9,
+      "area": 360.0,
+      "price": 435000,
+      "total": 156600000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-902",
+      "floor": 9,
+      "area": 360.0,
+      "price": 450000,
+      "total": 162000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-903",
+      "floor": 9,
+      "area": 360.0,
+      "price": 450000,
+      "total": 162000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-904",
+      "floor": 9,
+      "area": 360.0,
+      "price": 435000,
+      "total": 156600000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1100",
+      "floor": 11,
+      "area": 1570.0,
+      "price": 395000,
+      "total": 620150000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1101",
+      "floor": 11,
+      "area": 375.0,
+      "price": 445000,
+      "total": 166875000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1102",
+      "floor": 11,
+      "area": 375.0,
+      "price": 460000,
+      "total": 172500000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1103",
+      "floor": 11,
+      "area": 375.0,
+      "price": 460000,
+      "total": 172500000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1104",
+      "floor": 11,
+      "area": 375.0,
+      "price": 445000,
+      "total": 166875000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "1-1200",
+      "floor": 12,
+      "area": 1570.0,
+      "price": 400000,
+      "total": 628000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1201",
+      "floor": 12,
+      "area": 375.0,
+      "price": 450000,
+      "total": 168750000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1202",
+      "floor": 12,
+      "area": 375.0,
+      "price": 465000,
+      "total": 174375000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1203",
+      "floor": 12,
+      "area": 375.0,
+      "price": 465000,
+      "total": 174375000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G1-1204",
+      "floor": 12,
+      "area": 375.0,
+      "price": 450000,
+      "total": 168750000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-602",
+      "floor": 6,
+      "area": 110.0,
+      "price": 416000,
+      "total": 45760000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-607",
+      "floor": 6,
+      "area": 132.0,
+      "price": 412000,
+      "total": 54384000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-609",
+      "floor": 6,
+      "area": 110.0,
+      "price": 416000,
+      "total": 45760000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-701",
+      "floor": 7,
+      "area": 111.0,
+      "price": 405000,
+      "total": 44955000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-702",
+      "floor": 7,
+      "area": 110.0,
+      "price": 421000,
+      "total": 46310000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-707",
+      "floor": 7,
+      "area": 132.0,
+      "price": 417000,
+      "total": 55044000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-709",
+      "floor": 7,
+      "area": 110.0,
+      "price": 421000,
+      "total": 46310000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-710",
+      "floor": 7,
+      "area": 110.0,
+      "price": 405000,
+      "total": 44550000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-801",
+      "floor": 8,
+      "area": 111.0,
+      "price": 410000,
+      "total": 45510000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-802",
+      "floor": 8,
+      "area": 110.0,
+      "price": 426000,
+      "total": 46860000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-806",
+      "floor": 8,
+      "area": 211.0,
+      "price": 455000,
+      "total": 96005000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-807",
+      "floor": 8,
+      "area": 132.0,
+      "price": 422000,
+      "total": 55704000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-809",
+      "floor": 8,
+      "area": 110.0,
+      "price": 426000,
+      "total": 46860000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-810",
+      "floor": 8,
+      "area": 110.0,
+      "price": 410000,
+      "total": 45100000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-901",
+      "floor": 9,
+      "area": 111.0,
+      "price": 415000,
+      "total": 46065000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-902",
+      "floor": 9,
+      "area": 110.0,
+      "price": 431000,
+      "total": 47410000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-903",
+      "floor": 9,
+      "area": 132.0,
+      "price": 427000,
+      "total": 56364000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-904",
+      "floor": 9,
+      "area": 66.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-909",
+      "floor": 9,
+      "area": 110.0,
+      "price": 431000,
+      "total": 47410000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-910",
+      "floor": 9,
+      "area": 110.0,
+      "price": 415000,
+      "total": 45650000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1001",
+      "floor": 10,
+      "area": 111.0,
+      "price": 420000,
+      "total": 46620000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1002",
+      "floor": 10,
+      "area": 110.0,
+      "price": 436000,
+      "total": 47960000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1003",
+      "floor": 10,
+      "area": 66.0,
+      "price": 454000,
+      "total": 29964000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1004",
+      "floor": 10,
+      "area": 66.0,
+      "price": 454000,
+      "total": 29964000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1008",
+      "floor": 10,
+      "area": 132.0,
+      "price": 432000,
+      "total": 57024000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1010",
+      "floor": 10,
+      "area": 110.0,
+      "price": 436000,
+      "total": 47960000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1011",
+      "floor": 10,
+      "area": 110.0,
+      "price": 420000,
+      "total": 46200000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1101",
+      "floor": 11,
+      "area": 111.0,
+      "price": 425000,
+      "total": 47175000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1102",
+      "floor": 11,
+      "area": 110.0,
+      "price": 441000,
+      "total": 48510000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1104",
+      "floor": 11,
+      "area": 66.0,
+      "price": 459000,
+      "total": 30294000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1105",
+      "floor": 11,
+      "area": 66.0,
+      "price": 459000,
+      "total": 30294000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1110",
+      "floor": 11,
+      "area": 110.0,
+      "price": 441000,
+      "total": 48510000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1111",
+      "floor": 11,
+      "area": 110.0,
+      "price": 425000,
+      "total": 46750000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1201",
+      "floor": 12,
+      "area": 111.0,
+      "price": 430000,
+      "total": 47730000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1202",
+      "floor": 12,
+      "area": 110.0,
+      "price": 446000,
+      "total": 49060000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1208",
+      "floor": 12,
+      "area": 132.0,
+      "price": 442000,
+      "total": 58344000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1209",
+      "floor": 12,
+      "area": 66.0,
+      "price": 464000,
+      "total": 30624000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1210",
+      "floor": 12,
+      "area": 110.0,
+      "price": 446000,
+      "total": 49060000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1211",
+      "floor": 12,
+      "area": 110.0,
+      "price": 430000,
+      "total": 47300000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1301",
+      "floor": 13,
+      "area": 111.0,
+      "price": 435000,
+      "total": 48285000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1302",
+      "floor": 13,
+      "area": 110.0,
+      "price": 451000,
+      "total": 49610000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1303",
+      "floor": 13,
+      "area": 66.0,
+      "price": 469000,
+      "total": 30954000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1304",
+      "floor": 13,
+      "area": 66.0,
+      "price": 469000,
+      "total": 30954000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1305",
+      "floor": 13,
+      "area": 66.0,
+      "price": 469000,
+      "total": 30954000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1306",
+      "floor": 13,
+      "area": 210.0,
+      "price": 480000,
+      "total": 100800000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1307",
+      "floor": 13,
+      "area": 211.0,
+      "price": 480000,
+      "total": 101280000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1308",
+      "floor": 13,
+      "area": 132.0,
+      "price": 447000,
+      "total": 59004000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1309",
+      "floor": 13,
+      "area": 66.0,
+      "price": 469000,
+      "total": 30954000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1310",
+      "floor": 13,
+      "area": 110.0,
+      "price": 451000,
+      "total": 49610000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1311",
+      "floor": 13,
+      "area": 110.0,
+      "price": 435000,
+      "total": 47850000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1401",
+      "floor": 14,
+      "area": 111.0,
+      "price": 440000,
+      "total": 48840000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1402",
+      "floor": 14,
+      "area": 110.0,
+      "price": 456000,
+      "total": 50160000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1403",
+      "floor": 14,
+      "area": 66.0,
+      "price": 474000,
+      "total": 31284000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1404",
+      "floor": 14,
+      "area": 66.0,
+      "price": 474000,
+      "total": 31284000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1405",
+      "floor": 14,
+      "area": 66.0,
+      "price": 474000,
+      "total": 31284000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1406",
+      "floor": 14,
+      "area": 210.0,
+      "price": 485000,
+      "total": 101850000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1407",
+      "floor": 14,
+      "area": 211.0,
+      "price": 485000,
+      "total": 102335000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1408",
+      "floor": 14,
+      "area": 132.0,
+      "price": 452000,
+      "total": 59664000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1409",
+      "floor": 14,
+      "area": 66.0,
+      "price": 474000,
+      "total": 31284000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1410",
+      "floor": 14,
+      "area": 110.0,
+      "price": 456000,
+      "total": 50160000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "G3-1411",
+      "floor": 14,
+      "area": 110.0,
+      "price": 440000,
+      "total": 48400000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "8533904000",
+      "floor": 20331,
+      "area": 419748.4,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Nice Tower": [
+    {
+      "block": "Офис 2.2",
+      "floor": 2,
+      "area": 126.0,
+      "price": 285900,
+      "total": 36017682,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.3",
+      "floor": 2,
+      "area": 93.5,
+      "price": 286000,
+      "total": 26752440,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.9",
+      "floor": 2,
+      "area": 31.0,
+      "price": 291500,
+      "total": 9039415,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.10",
+      "floor": 2,
+      "area": 37.3,
+      "price": 291100,
+      "total": 10866763,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.11",
+      "floor": 2,
+      "area": 38.2,
+      "price": 291000,
+      "total": 11107470,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.12",
+      "floor": 2,
+      "area": 40.5,
+      "price": 290800,
+      "total": 11768676,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.15",
+      "floor": 2,
+      "area": 23.2,
+      "price": 286100,
+      "total": 6651825,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.16",
+      "floor": 2,
+      "area": 28.2,
+      "price": 285800,
+      "total": 8065276,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.3",
+      "floor": 3,
+      "area": 93.5,
+      "price": 286600,
+      "total": 26808564,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.4",
+      "floor": 3,
+      "area": 49.8,
+      "price": 289200,
+      "total": 14390592,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.5",
+      "floor": 3,
+      "area": 133.1,
+      "price": 280600,
+      "total": 37333830,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.6",
+      "floor": 3,
+      "area": 47.0,
+      "price": 289400,
+      "total": 13604694,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.13",
+      "floor": 3,
+      "area": 43.1,
+      "price": 288200,
+      "total": 12421420,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.14",
+      "floor": 3,
+      "area": 71.8,
+      "price": 293600,
+      "total": 21086352,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.18",
+      "floor": 3,
+      "area": 18.5,
+      "price": 287100,
+      "total": 5314221,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.1",
+      "floor": 4,
+      "area": 59.5,
+      "price": 281700,
+      "total": 16752699,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.2",
+      "floor": 4,
+      "area": 126.2,
+      "price": 287100,
+      "total": 36240633,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.3",
+      "floor": 4,
+      "area": 95.9,
+      "price": 287000,
+      "total": 27534780,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.4",
+      "floor": 4,
+      "area": 49.8,
+      "price": 289800,
+      "total": 14420448,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.5",
+      "floor": 4,
+      "area": 134.4,
+      "price": 281100,
+      "total": 37791084,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.6",
+      "floor": 4,
+      "area": 47.5,
+      "price": 290000,
+      "total": 13772100,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.7",
+      "floor": 4,
+      "area": 158.9,
+      "price": 281700,
+      "total": 44759313,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.8",
+      "floor": 4,
+      "area": 103.0,
+      "price": 284400,
+      "total": 29304576,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.9",
+      "floor": 4,
+      "area": 31.0,
+      "price": 292700,
+      "total": 9076627,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.10",
+      "floor": 4,
+      "area": 37.3,
+      "price": 292300,
+      "total": 10911559,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.11",
+      "floor": 4,
+      "area": 38.2,
+      "price": 292200,
+      "total": 11153274,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.12",
+      "floor": 4,
+      "area": 40.5,
+      "price": 292000,
+      "total": 11817240,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.13",
+      "floor": 4,
+      "area": 43.6,
+      "price": 288800,
+      "total": 12585904,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.14",
+      "floor": 4,
+      "area": 71.8,
+      "price": 294200,
+      "total": 21129444,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.15",
+      "floor": 4,
+      "area": 23.2,
+      "price": 287300,
+      "total": 6679725,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.16",
+      "floor": 4,
+      "area": 28.2,
+      "price": 287000,
+      "total": 8099140,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.17",
+      "floor": 4,
+      "area": 18.2,
+      "price": 287700,
+      "total": 5241894,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.18",
+      "floor": 4,
+      "area": 18.5,
+      "price": 287700,
+      "total": 5325327,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.8",
+      "floor": 5,
+      "area": 118.6,
+      "price": 293700,
+      "total": 34826946,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.9",
+      "floor": 5,
+      "area": 33.7,
+      "price": 294000,
+      "total": 9896040,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.10",
+      "floor": 5,
+      "area": 38.9,
+      "price": 293600,
+      "total": 11423976,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.11",
+      "floor": 5,
+      "area": 38.7,
+      "price": 293600,
+      "total": 11359384,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.13",
+      "floor": 5,
+      "area": 42.0,
+      "price": 290400,
+      "total": 12182280,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.14",
+      "floor": 5,
+      "area": 80.8,
+      "price": 286000,
+      "total": 23123100,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.16",
+      "floor": 5,
+      "area": 36.2,
+      "price": 287900,
+      "total": 10436375,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.17",
+      "floor": 5,
+      "area": 42.8,
+      "price": 296300,
+      "total": 12678677,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.6",
+      "floor": 6,
+      "area": 41.7,
+      "price": 293400,
+      "total": 12228912,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.8",
+      "floor": 6,
+      "area": 111.4,
+      "price": 286700,
+      "total": 31932646,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.12",
+      "floor": 6,
+      "area": 39.9,
+      "price": 295000,
+      "total": 11782300,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 7.16",
+      "floor": 7,
+      "area": 22.0,
+      "price": 291900,
+      "total": 6427638,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 7.17",
+      "floor": 7,
+      "area": 23.2,
+      "price": 291800,
+      "total": 6784350,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 7.18",
+      "floor": 7,
+      "area": 41.2,
+      "price": 299400,
+      "total": 12347256,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 8.1",
+      "floor": 8,
+      "area": 58.1,
+      "price": 287700,
+      "total": 16706739,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 8.15",
+      "floor": 8,
+      "area": 20.8,
+      "price": 293500,
+      "total": 6107735,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 9.1",
+      "floor": 9,
+      "area": 58.1,
+      "price": 289200,
+      "total": 16793844,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 9.5",
+      "floor": 9,
+      "area": 164.6,
+      "price": 303700,
+      "total": 49979909,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 9.6",
+      "floor": 9,
+      "area": 143.5,
+      "price": 297800,
+      "total": 42743234,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 9.7",
+      "floor": 9,
+      "area": 77.3,
+      "price": 293800,
+      "total": 22701926,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 9.8",
+      "floor": 9,
+      "area": 84.8,
+      "price": 293200,
+      "total": 24851632,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 10.1",
+      "floor": 10,
+      "area": 58.1,
+      "price": 290700,
+      "total": 16892577,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 10.2",
+      "floor": 10,
+      "area": 131.3,
+      "price": 295700,
+      "total": 38816539,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 10.4",
+      "floor": 10,
+      "area": 101.2,
+      "price": 295000,
+      "total": 29848100,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 10.10",
+      "floor": 10,
+      "area": 92.1,
+      "price": 282200,
+      "total": 25996264,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.1",
+      "floor": 14,
+      "area": 58.1,
+      "price": 297300,
+      "total": 17276103,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.2",
+      "floor": 14,
+      "area": 131.3,
+      "price": 302300,
+      "total": 39682921,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.3",
+      "floor": 14,
+      "area": 158.6,
+      "price": 312200,
+      "total": 49524286,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.4",
+      "floor": 14,
+      "area": 101.2,
+      "price": 301500,
+      "total": 30505770,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.5",
+      "floor": 14,
+      "area": 166.1,
+      "price": 311600,
+      "total": 51744296,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.6",
+      "floor": 14,
+      "area": 143.5,
+      "price": 305800,
+      "total": 43891474,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.7",
+      "floor": 14,
+      "area": 77.3,
+      "price": 301800,
+      "total": 23320086,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.8",
+      "floor": 14,
+      "area": 84.8,
+      "price": 301300,
+      "total": 25538188,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.9",
+      "floor": 14,
+      "area": 101.6,
+      "price": 304500,
+      "total": 30925020,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "офис 14.10",
+      "floor": 14,
+      "area": 92.1,
+      "price": 288800,
+      "total": 26604256,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "1411705766",
+      "floor": 4816,
+      "area": 293125.8,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Деловой дуэт": [
+    {
+      "block": "Здание 1",
+      "floor": 0,
+      "area": 5999.0,
+      "price": 312000,
+      "total": 1871688000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Здание 2",
+      "floor": 0,
+      "area": 17672.0,
+      "price": 312000,
+      "total": 5513664000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "7385352000",
+      "floor": 23671,
+      "area": 312000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "На берзарина": [
+    {
+      "block": "Все здание",
+      "floor": 0,
+      "area": 12000.0,
+      "price": 350000,
+      "total": 4200000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "4200000000",
+      "floor": 12000,
+      "area": 350000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Кунцево": [
+    {
+      "block": "Офис 2.1",
+      "floor": 2,
+      "area": 215.5,
+      "price": 441000,
+      "total": 95035500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.2",
+      "floor": 2,
+      "area": 89.2,
+      "price": 436800,
+      "total": 38962560,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.3",
+      "floor": 2,
+      "area": 102.0,
+      "price": 428400,
+      "total": 43696800,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.4",
+      "floor": 2,
+      "area": 94.1,
+      "price": 436800,
+      "total": 41102880,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.5",
+      "floor": 2,
+      "area": 76.7,
+      "price": 436800,
+      "total": 33502560,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.6",
+      "floor": 2,
+      "area": 233.7,
+      "price": 420000,
+      "total": 98154000,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.7",
+      "floor": 2,
+      "area": 232.7,
+      "price": 441000,
+      "total": 102620700,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.8",
+      "floor": 2,
+      "area": 87.1,
+      "price": 458640,
+      "total": 39947544,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.9",
+      "floor": 2,
+      "area": 102.3,
+      "price": 449820,
+      "total": 46016586,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.10",
+      "floor": 2,
+      "area": 84.4,
+      "price": 458640,
+      "total": 38709216,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.11",
+      "floor": 2,
+      "area": 86.1,
+      "price": 458640,
+      "total": 39488904,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 2.12",
+      "floor": 2,
+      "area": 218.5,
+      "price": 441000,
+      "total": 96358500,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.1",
+      "floor": 3,
+      "area": 216.4,
+      "price": 426300,
+      "total": 92251320,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.2",
+      "floor": 3,
+      "area": 82.6,
+      "price": 443352,
+      "total": 36620875,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.3",
+      "floor": 3,
+      "area": 97.8,
+      "price": 443352,
+      "total": 43359826,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.4",
+      "floor": 3,
+      "area": 96.0,
+      "price": 443352,
+      "total": 42561792,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.5",
+      "floor": 3,
+      "area": 88.6,
+      "price": 443352,
+      "total": 39280987,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.6",
+      "floor": 3,
+      "area": 229.6,
+      "price": 426300,
+      "total": 97878480,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.7",
+      "floor": 3,
+      "area": 227.8,
+      "price": 447615,
+      "total": 101966697,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.8",
+      "floor": 3,
+      "area": 88.6,
+      "price": 465520,
+      "total": 41245072,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.9",
+      "floor": 3,
+      "area": 102.3,
+      "price": 456567,
+      "total": 46706804,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.10",
+      "floor": 3,
+      "area": 82.5,
+      "price": 465520,
+      "total": 38405400,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.11",
+      "floor": 3,
+      "area": 89.1,
+      "price": 465520,
+      "total": 41477832,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 3.12",
+      "floor": 3,
+      "area": 193.7,
+      "price": 456567,
+      "total": 88437028,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.1",
+      "floor": 4,
+      "area": 214.1,
+      "price": 441263,
+      "total": 94474408,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.2",
+      "floor": 4,
+      "area": 89.6,
+      "price": 458913,
+      "total": 41118605,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.3",
+      "floor": 4,
+      "area": 91.2,
+      "price": 458913,
+      "total": 41852866,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.4",
+      "floor": 4,
+      "area": 94.8,
+      "price": 458913,
+      "total": 43504952,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.5",
+      "floor": 4,
+      "area": 85.9,
+      "price": 458913,
+      "total": 39420627,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.6",
+      "floor": 4,
+      "area": 208.4,
+      "price": 441263,
+      "total": 91959209,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.7",
+      "floor": 4,
+      "area": 224.3,
+      "price": 452025,
+      "total": 101389208,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.8",
+      "floor": 4,
+      "area": 84.7,
+      "price": 470106,
+      "total": 39817978,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.9",
+      "floor": 4,
+      "area": 101.8,
+      "price": 461066,
+      "total": 46936519,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.10",
+      "floor": 4,
+      "area": 101.8,
+      "price": 461066,
+      "total": 46936519,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.11",
+      "floor": 4,
+      "area": 84.8,
+      "price": 470106,
+      "total": 39864989,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 4.12",
+      "floor": 4,
+      "area": 213.9,
+      "price": 452025,
+      "total": 96688148,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.1",
+      "floor": 5,
+      "area": 215.6,
+      "price": 445568,
+      "total": 96064461,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.2",
+      "floor": 5,
+      "area": 89.2,
+      "price": 463390,
+      "total": 41334388,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.3",
+      "floor": 5,
+      "area": 102.0,
+      "price": 454479,
+      "total": 46356858,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.4",
+      "floor": 5,
+      "area": 91.9,
+      "price": 463390,
+      "total": 42585541,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.5",
+      "floor": 5,
+      "area": 78.9,
+      "price": 463390,
+      "total": 36561471,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.6",
+      "floor": 5,
+      "area": 233.8,
+      "price": 445568,
+      "total": 104173798,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.7",
+      "floor": 5,
+      "area": 232.6,
+      "price": 456435,
+      "total": 106166781,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.8",
+      "floor": 5,
+      "area": 87.1,
+      "price": 474692,
+      "total": 41345673,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.9",
+      "floor": 5,
+      "area": 102.3,
+      "price": 465564,
+      "total": 47627197,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.10",
+      "floor": 5,
+      "area": 84.4,
+      "price": 474692,
+      "total": 40064005,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.11",
+      "floor": 5,
+      "area": 86.1,
+      "price": 474692,
+      "total": 40870981,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "Офис 5.12",
+      "floor": 5,
+      "area": 218.4,
+      "price": 456435,
+      "total": 99685404,
+      "scheme": "ДДУ",
+      "size": ""
+    },
+    {
+      "block": "2890588448.2",
+      "floor": 6434,
+      "area": 449204.9,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Nevsky Plaza": [
+    {
+      "block": "Офис 6.1",
+      "floor": 6,
+      "area": 65.9,
+      "price": 293000,
+      "total": 19308700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.2",
+      "floor": 6,
+      "area": 48.0,
+      "price": 306000,
+      "total": 14688000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.4",
+      "floor": 6,
+      "area": 46.6,
+      "price": 306000,
+      "total": 14259600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.5",
+      "floor": 6,
+      "area": 35.7,
+      "price": 311000,
+      "total": 11102700,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.6",
+      "floor": 6,
+      "area": 50.4,
+      "price": 302000,
+      "total": 15220800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.7",
+      "floor": 6,
+      "area": 29.9,
+      "price": 315000,
+      "total": 9418500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.8",
+      "floor": 6,
+      "area": 34.5,
+      "price": 311000,
+      "total": 10729500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.9",
+      "floor": 6,
+      "area": 52.5,
+      "price": 302000,
+      "total": 15855000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.10",
+      "floor": 6,
+      "area": 28.2,
+      "price": 315000,
+      "total": 8883000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.1",
+      "floor": 7,
+      "area": 66.8,
+      "price": 297000,
+      "total": 19839600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.2",
+      "floor": 7,
+      "area": 48.9,
+      "price": 316724,
+      "total": 15487800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.4",
+      "floor": 7,
+      "area": 47.5,
+      "price": 311000,
+      "total": 14772500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.5",
+      "floor": 7,
+      "area": 35.7,
+      "price": 315000,
+      "total": 11245500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.6",
+      "floor": 7,
+      "area": 51.3,
+      "price": 306000,
+      "total": 15697800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.7",
+      "floor": 7,
+      "area": 30.8,
+      "price": 320000,
+      "total": 9856000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.8",
+      "floor": 7,
+      "area": 35.4,
+      "price": 315000,
+      "total": 11151000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.9",
+      "floor": 7,
+      "area": 54.3,
+      "price": 306000,
+      "total": 16615800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.10",
+      "floor": 7,
+      "area": 28.2,
+      "price": 320000,
+      "total": 9024000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 8.2",
+      "floor": 8,
+      "area": 135.2,
+      "price": 293000,
+      "total": 39613600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 9.1",
+      "floor": 9,
+      "area": 249.5,
+      "price": 288000,
+      "total": 71856000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 9.3",
+      "floor": 9,
+      "area": 94.6,
+      "price": 306000,
+      "total": 28947600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 10.2",
+      "floor": 10,
+      "area": 137.0,
+      "price": 302000,
+      "total": 41374000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 11.1",
+      "floor": 11,
+      "area": 249.5,
+      "price": 302000,
+      "total": 75349000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 12.2",
+      "floor": 12,
+      "area": 135.2,
+      "price": 315000,
+      "total": 42588000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 12.3",
+      "floor": 12,
+      "area": 94.6,
+      "price": 324000,
+      "total": 30650400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.1",
+      "floor": 13,
+      "area": 66.8,
+      "price": 306000,
+      "total": 20440800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.2",
+      "floor": 13,
+      "area": 48.9,
+      "price": 325890,
+      "total": 15936000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.3",
+      "floor": 13,
+      "area": 36.2,
+      "price": 324000,
+      "total": 11728800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.4",
+      "floor": 13,
+      "area": 47.5,
+      "price": 320000,
+      "total": 15200000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.5",
+      "floor": 13,
+      "area": 35.7,
+      "price": 324000,
+      "total": 11566800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.6",
+      "floor": 13,
+      "area": 51.3,
+      "price": 315000,
+      "total": 16159500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.7",
+      "floor": 13,
+      "area": 30.8,
+      "price": 329000,
+      "total": 10133200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.8",
+      "floor": 13,
+      "area": 35.4,
+      "price": 324000,
+      "total": 11469600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.9",
+      "floor": 13,
+      "area": 54.3,
+      "price": 315000,
+      "total": 17104500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 13.10",
+      "floor": 13,
+      "area": 28.2,
+      "price": 329000,
+      "total": 9277800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.1",
+      "floor": 14,
+      "area": 65.9,
+      "price": 315000,
+      "total": 20758500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.2",
+      "floor": 14,
+      "area": 48.0,
+      "price": 329000,
+      "total": 15792000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.5",
+      "floor": 14,
+      "area": 35.7,
+      "price": 333000,
+      "total": 11888100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.6",
+      "floor": 14,
+      "area": 50.4,
+      "price": 324000,
+      "total": 16329600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.7",
+      "floor": 14,
+      "area": 29.9,
+      "price": 338000,
+      "total": 10106200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.8",
+      "floor": 14,
+      "area": 34.5,
+      "price": 333000,
+      "total": 11488500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.9",
+      "floor": 14,
+      "area": 52.5,
+      "price": 324000,
+      "total": 17010000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 14.10",
+      "floor": 14,
+      "area": 28.2,
+      "price": 338000,
+      "total": 9531600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.1",
+      "floor": 15,
+      "area": 65.9,
+      "price": 324000,
+      "total": 21351600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.2",
+      "floor": 15,
+      "area": 48.0,
+      "price": 338000,
+      "total": 16224000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.5",
+      "floor": 15,
+      "area": 35.7,
+      "price": 342000,
+      "total": 12209400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.6",
+      "floor": 15,
+      "area": 50.4,
+      "price": 333000,
+      "total": 16783200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.7",
+      "floor": 15,
+      "area": 29.9,
+      "price": 347000,
+      "total": 10375300,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.8",
+      "floor": 15,
+      "area": 34.5,
+      "price": 342000,
+      "total": 11799000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.9",
+      "floor": 15,
+      "area": 52.5,
+      "price": 333000,
+      "total": 17482500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 15.10",
+      "floor": 15,
+      "area": 28.2,
+      "price": 347000,
+      "total": 9785400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 16",
+      "floor": 16,
+      "area": 488.5,
+      "price": 306000,
+      "total": 149481000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.1",
+      "floor": 17,
+      "area": 65.9,
+      "price": 329000,
+      "total": 21681100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.2",
+      "floor": 17,
+      "area": 48.0,
+      "price": 342000,
+      "total": 16416000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.3",
+      "floor": 17,
+      "area": 35.3,
+      "price": 347000,
+      "total": 12249100,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.4",
+      "floor": 17,
+      "area": 46.6,
+      "price": 342000,
+      "total": 15937200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.5",
+      "floor": 17,
+      "area": 35.7,
+      "price": 347000,
+      "total": 12387900,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.6",
+      "floor": 17,
+      "area": 50.4,
+      "price": 338000,
+      "total": 17035200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.7",
+      "floor": 17,
+      "area": 29.9,
+      "price": 351000,
+      "total": 10494900,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.8",
+      "floor": 17,
+      "area": 34.5,
+      "price": 347000,
+      "total": 11971500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.9",
+      "floor": 17,
+      "area": 52.5,
+      "price": 338000,
+      "total": 17745000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 17.10",
+      "floor": 17,
+      "area": 28.2,
+      "price": 351000,
+      "total": 9898200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 18.1",
+      "floor": 18,
+      "area": 249.5,
+      "price": 315000,
+      "total": 78592500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 18.2",
+      "floor": 18,
+      "area": 135.2,
+      "price": 324000,
+      "total": 43804800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 18.3",
+      "floor": 18,
+      "area": 94.6,
+      "price": 333000,
+      "total": 31501800,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 19.1",
+      "floor": 19,
+      "area": 254.9,
+      "price": 320000,
+      "total": 81568000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 20.2",
+      "floor": 20,
+      "area": 137.0,
+      "price": 328625,
+      "total": 45021600,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 20.3",
+      "floor": 20,
+      "area": 96.4,
+      "price": 335614,
+      "total": 32353200,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 21.1",
+      "floor": 21,
+      "area": 249.5,
+      "price": 329000,
+      "total": 82085500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 22.2",
+      "floor": 22,
+      "area": 137.0,
+      "price": 342000,
+      "total": 46854000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 22.3",
+      "floor": 22,
+      "area": 96.4,
+      "price": 351000,
+      "total": 33836400,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "Офис 23",
+      "floor": 23,
+      "area": 481.3,
+      "price": 315000,
+      "total": 151609500,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "1863990700",
+      "floor": 5858,
+      "area": 318152.3,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "BusinessClass Ходынка": [
+    {
+      "block": "3 здания",
+      "floor": 0,
+      "area": 11000.0,
+      "price": 450000,
+      "total": 4950000000,
+      "scheme": "Договор будущей вещи",
+      "size": ""
+    },
+    {
+      "block": "4950000000",
+      "floor": 11000,
+      "area": 450000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "БЦ Сколково": [
+    {
+      "block": "4 здания",
+      "floor": 0,
+      "area": 8500.0,
+      "price": 210000,
+      "total": 1785000000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "1785000000",
+      "floor": 8500,
+      "area": 210000.0,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Lakes": [
+    {
+      "block": "Офис 7.11.3",
+      "floor": 7,
+      "area": 53.8,
+      "price": 260486,
+      "total": 14008917,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.11.5",
+      "floor": 6,
+      "area": 74.2,
+      "price": 254534,
+      "total": 18888948,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.11.2",
+      "floor": 6,
+      "area": 65.0,
+      "price": 254534,
+      "total": 16549784,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.11.4",
+      "floor": 6,
+      "area": 126.2,
+      "price": 228757,
+      "total": 28880630,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.11.6",
+      "floor": 6,
+      "area": 192.9,
+      "price": 211302,
+      "total": 40758117,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 6.11.7",
+      "floor": 6,
+      "area": 119.1,
+      "price": 214859,
+      "total": 25591834,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.1",
+      "floor": 7,
+      "area": 175.8,
+      "price": 222853,
+      "total": 39186509,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.2",
+      "floor": 7,
+      "area": 65.0,
+      "price": 258835,
+      "total": 16829476,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.4",
+      "floor": 7,
+      "area": 126.2,
+      "price": 235506,
+      "total": 29732597,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.5",
+      "floor": 7,
+      "area": 74.2,
+      "price": 260486,
+      "total": 19330639,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.6",
+      "floor": 7,
+      "area": 192.9,
+      "price": 217510,
+      "total": 41955599,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.7",
+      "floor": 7,
+      "area": 119.1,
+      "price": 224018,
+      "total": 26682740,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.8",
+      "floor": 7,
+      "area": 172.4,
+      "price": 226398,
+      "total": 39030999,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "Офис 7.11.9",
+      "floor": 7,
+      "area": 179.6,
+      "price": 212073,
+      "total": 38088262,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "395515051",
+      "floor": 1736,
+      "area": 227755.2,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Level Воронцовская": [
+    {
+      "block": "9-38",
+      "floor": 9,
+      "area": 65.6,
+      "price": 364057,
+      "total": 23882139,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-39",
+      "floor": 9,
+      "area": 56.9,
+      "price": 364110,
+      "total": 20717859,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-40",
+      "floor": 9,
+      "area": 81.4,
+      "price": 351866,
+      "total": 28641892,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-41",
+      "floor": 9,
+      "area": 45.6,
+      "price": 382394,
+      "total": 17437166,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-42",
+      "floor": 9,
+      "area": 131.1,
+      "price": 326771,
+      "total": 42839678,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-43",
+      "floor": 9,
+      "area": 226.0,
+      "price": 327935,
+      "total": 74113310,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-44",
+      "floor": 9,
+      "area": 43.3,
+      "price": 390215,
+      "total": 16896310,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-45",
+      "floor": 9,
+      "area": 59.0,
+      "price": 371518,
+      "total": 21919562,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-46",
+      "floor": 9,
+      "area": 61.3,
+      "price": 371504,
+      "total": 22773195,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "9-47",
+      "floor": 9,
+      "area": 61.3,
+      "price": 371504,
+      "total": 22773195,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-50",
+      "floor": 10,
+      "area": 65.6,
+      "price": 370119,
+      "total": 24279806,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-51",
+      "floor": 10,
+      "area": 56.9,
+      "price": 370172,
+      "total": 21062787,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-52",
+      "floor": 10,
+      "area": 65.8,
+      "price": 370118,
+      "total": 24353764,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-53",
+      "floor": 10,
+      "area": 61.3,
+      "price": 370143,
+      "total": 22689766,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-54",
+      "floor": 10,
+      "area": 131.1,
+      "price": 332709,
+      "total": 43618150,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-55",
+      "floor": 10,
+      "area": 226.0,
+      "price": 334121,
+      "total": 75511346,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-56",
+      "floor": 10,
+      "area": 43.3,
+      "price": 396400,
+      "total": 17164120,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-57",
+      "floor": 10,
+      "area": 59.0,
+      "price": 377704,
+      "total": 22284536,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-58",
+      "floor": 10,
+      "area": 61.3,
+      "price": 377690,
+      "total": 23152397,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "10-59",
+      "floor": 10,
+      "area": 61.3,
+      "price": 377690,
+      "total": 23152397,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "15-109",
+      "floor": 15,
+      "area": 763.7,
+      "price": 320689,
+      "total": 244910189,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "15-110",
+      "floor": 15,
+      "area": 525.0,
+      "price": 337404,
+      "total": 177137100,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "1011310665.6999998",
+      "floor": 2951,
+      "area": 342608.1,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "А": [
+    {
+      "block": "118717852210.51999",
+      "floor": 296873,
+      "area": 399893.6,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "В+": [
+    {
+      "block": "16156168416.7",
+      "floor": 50145,
+      "area": 322187.9,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Общий итог": [
+    {
+      "block": "134874020627.21999",
+      "floor": 347018,
+      "area": 388664.9,
+      "price": 0,
+      "total": 0,
+      "scheme": "",
+      "size": ""
+    }
+  ]
+}
