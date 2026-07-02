@@ -202,6 +202,18 @@
     .msr-item:hover, .msr-item.active { background: #eff6ff; }
     .msr-sub { color: #999; font-size: 10px; }
 
+    /* Тоггл режима продажа/аренда */
+    #modeToggleWrap { display: flex; gap: 4px; margin-bottom: 2px; }
+    .mode-btn {
+      flex: 1; padding: 6px 0; border: 1.5px solid #d1d5db; border-radius: 6px;
+      background: #f9fafb; color: #374151; font-size: 13px; font-weight: 500;
+      cursor: pointer; transition: all .15s;
+    }
+    .mode-btn.active {
+      background: #1d4ed8; border-color: #1d4ed8; color: #fff;
+    }
+    .mode-btn:not(.active):hover { background: #e5e7eb; }
+
     /* Кнопка сворачивания панели */
     #panelToggle {
       position: absolute;
@@ -325,6 +337,14 @@
 
 <!-- Правая панель -->
 <div class="panel" id="mainPanel">
+  <h3>Режим</h3>
+  <div id="modeToggleWrap">
+    <button class="mode-btn active" id="modeSale" onclick="setRentMode(false)">Продажа</button>
+    <button class="mode-btn" id="modeRent" onclick="setRentMode(true)">Аренда</button>
+  </div>
+  <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: май 2026 · <span id="rentBldgCount">0</span> зданий</div>
+
+  <hr>
   <h3>Квартал</h3>
   <select id="quarterSelect"></select>
 
@@ -524,6 +544,7 @@
 //  и допиши строку в начало этого списка (новые сверху).
 // ============================================================
 const QUARTERS = [
+  { id: '202606', label: 'Q2 2026', file: 'data/buildings_202606.json', lots: 'data/lots_202606.json', rent: 'data/rent_lots_202606.json' },
   { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', lots: 'data/lots_202603.json' },
   { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json' },
   { id: '202509', label: 'Q3 2025', file: 'data/buildings_202509.json', lots: 'data/lots_202509.json' },
@@ -534,6 +555,8 @@ const QUARTERS = [
 ];
 let currentQuarter = QUARTERS[0];
 let lotsData = {};   // { "Название здания": [ {block,floor,area,price,scheme,size}, ... ] }
+let rentLotsData = {};  // { "Название здания": [ {block,floor,area,rate,opex,nds,size}, ... ] }
+let rentMode = false;   // true = режим аренды
 
 // ============================================================
 //  КОНФИГ СЛОЁВ
@@ -1176,38 +1199,87 @@ function renderBuildings() {
   buildingsData.forEach((b, idx) => {
     if (!filteredSet.has(b)) return;
     if (!isFinite(b.lat) || !isFinite(b.lng)) return;
+    const rentLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+    const hasRent = rentLots.length > 0;
+    // в режиме аренды: серые маркеры без данных, синие — с данными
+    let fillColor, fillOpacity;
+    if (rentMode) {
+      if (hasRent) {
+        const avgRate = rentLots.filter(l=>l.rate).reduce((s,l)=>s+l.rate*l.area,0) /
+                        (rentLots.filter(l=>l.rate).reduce((s,l)=>s+l.area,0)||1);
+        fillColor = avgRate > 70000 ? '#7c3aed' : avgRate > 50000 ? '#2563eb' : avgRate > 30000 ? '#0891b2' : '#0d9488';
+        fillOpacity = 0.9;
+      } else {
+        fillColor = '#9ca3af';
+        fillOpacity = 0.45;
+      }
+    } else {
+      fillColor = buildingColor(b.cls);
+      fillOpacity = 0.85;
+    }
     const marker = L.circleMarker([b.lat, b.lng], {
-      radius: buildingRadius(b.volume),
-      fillColor: buildingColor(b.cls),
-      color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.85
+      radius: rentMode ? (hasRent ? buildingRadius(rentLots.reduce((s,l)=>s+l.area,0)) : 5) : buildingRadius(b.volume),
+      fillColor, color: '#fff', weight: 1, opacity: 1, fillOpacity
     });
     buildingMarkers[idx] = marker;
     const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
-    const rows = [
-      ['Адрес',        b.address || '—'],
-      ['Девелопер',    b.developer || '—'],
-      ['Класс',        b.cls || '—'],
-      ['Год ввода',    b.year || '—'],
-      ['Старт продаж', b.start || '—'],
-      ['Статус',       b.status || '—'],
-      ['В продаже',    b.on_sale || '—'],
-      ['GBA, кв.м',    b.gba != null ? fmt(Math.round(b.gba)) : '—'],
-      ['GLA, кв.м',    b.gla != null ? fmt(Math.round(b.gla)) : '—'],
-      ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
-      ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
-      ['Лотов, шт.',   fmt(nLots)],
-      ['Зона',         b.geoZone ? displayName('zones', b.geoZone) : '—'],
-      ['Субрынок',     b.geoSubmarket || '—'],
-      ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
-      ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
-    ];
-    const lotsBtn = nLots > 0
-      ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Показать лоты (${nLots})</button>`
-      : '';
-    const anaBtn = `<button class="popup-lots-btn" style="background:#7c3aed;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика</button>`;
+    const nRentLots = rentLots.length;
+
+    let rows, btns;
+    if (rentMode && hasRent) {
+      const totalArea = rentLots.reduce((s,l)=>s+l.area,0);
+      const wRates = rentLots.filter(l=>l.rate);
+      const avgRate = wRates.length ? Math.round(wRates.reduce((s,l)=>s+l.rate*l.area,0)/wRates.reduce((s,l)=>s+l.area,0)) : null;
+      rows = [
+        ['Адрес',           b.address || '—'],
+        ['Девелопер',       b.developer || '—'],
+        ['Класс',           b.cls || '—'],
+        ['Год ввода',       b.year || '—'],
+        ['GBA, кв.м',       b.gba != null ? fmt(Math.round(b.gba)) : '—'],
+        ['Площадь в аренду, кв.м', fmt(Math.round(totalArea))],
+        ['Ср. взв. ставка, руб/кв.м/год', avgRate != null ? fmt(avgRate) : '—'],
+        ['Лотов в аренде',  fmt(nRentLots)],
+        ['Зона',            b.geoZone ? displayName('zones', b.geoZone) : '—'],
+        ['Субрынок',        b.geoSubmarket || '—'],
+      ];
+      btns = `<button class="popup-lots-btn" style="background:#0891b2;" onclick="openRentLotsModal(${idx})">🏢 Предложения аренды (${nRentLots})</button>`;
+      if (nLots > 0) btns += `<button class="popup-lots-btn" style="background:#6b7280;margin-left:4px;" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>`;
+    } else if (rentMode) {
+      rows = [
+        ['Адрес',     b.address || '—'],
+        ['Девелопер', b.developer || '—'],
+        ['Класс',     b.cls || '—'],
+        ['Год ввода', b.year || '—'],
+        ['Аренда',    'нет данных'],
+      ];
+      btns = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>` : '';
+    } else {
+      rows = [
+        ['Адрес',        b.address || '—'],
+        ['Девелопер',    b.developer || '—'],
+        ['Класс',        b.cls || '—'],
+        ['Год ввода',    b.year || '—'],
+        ['Старт продаж', b.start || '—'],
+        ['Статус',       b.status || '—'],
+        ['В продаже',    b.on_sale || '—'],
+        ['GBA, кв.м',    b.gba != null ? fmt(Math.round(b.gba)) : '—'],
+        ['GLA, кв.м',    b.gla != null ? fmt(Math.round(b.gla)) : '—'],
+        ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
+        ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
+        ['Лотов, шт.',   fmt(nLots)],
+        ['Зона',         b.geoZone ? displayName('zones', b.geoZone) : '—'],
+        ['Субрынок',     b.geoSubmarket || '—'],
+        ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
+        ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
+      ];
+      const lotsBtn = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Показать лоты (${nLots})</button>` : '';
+      const rentBtn = hasRent ? `<button class="popup-lots-btn" style="background:#0891b2;margin-left:4px;" onclick="openRentLotsModal(${idx})">🏢 Аренда (${nRentLots})</button>` : '';
+      const anaBtn = `<button class="popup-lots-btn" style="background:#7c3aed;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика</button>`;
+      btns = lotsBtn + rentBtn + anaBtn;
+    }
     const html = `<b>${b.name || 'Без названия'}</b>` +
       rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
-      `<div style="margin-top:8px;">${lotsBtn}${anaBtn}</div>`;
+      `<div style="margin-top:8px;">${btns}</div>`;
     marker.bindPopup(html, { maxHeight: 340 });
     marker.bindTooltip(b.name || '', { direction: 'top' });
     buildingsLayer.addLayer(marker);
@@ -1223,6 +1295,20 @@ function renderBuildingsLegend() {
     el.style.display = 'none';
     return;
   }
+
+  if (rentMode) {
+    const rentItems = [
+      ['#7c3aed', '> 70 000 руб/кв.м/год'],
+      ['#2563eb', '50 000–70 000'],
+      ['#0891b2', '30 000–50 000'],
+      ['#0d9488', '< 30 000'],
+      ['#9ca3af', 'Нет данных аренды'],
+    ].map(([c, l]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${l}</span></div>`).join('');
+    el.innerHTML = `<h4>Аренда — ставка</h4>${rentItems}`;
+    el.style.display = 'block';
+    return;
+  }
+
   // классы, реально присутствующие в данных, в желаемом порядке
   const order = ['Prime', 'A+', 'A', 'B+', 'B', 'C'];
   const present = order.filter(c => buildingsData.some(b => b.cls === c));
@@ -1249,11 +1335,21 @@ async function loadBuildings() {
     const resp = await fetch(currentQuarter.file);
     const data = await resp.json();
     buildingsData = data;
-    // лоты (для таблицы в попапе здания)
+    // лоты продажи
     lotsData = {};
     if (currentQuarter.lots) {
       try { lotsData = await (await fetch(currentQuarter.lots)).json(); } catch(e) { lotsData = {}; }
     }
+    // лоты аренды (если есть для квартала)
+    rentLotsData = {};
+    if (currentQuarter.rent) {
+      try { rentLotsData = await (await fetch(currentQuarter.rent)).json(); } catch(e) { rentLotsData = {}; }
+    }
+    const rentCount = Object.keys(rentLotsData).length;
+    document.getElementById('rentBldgCount').textContent = rentCount;
+    // аренда доступна только если данные загружены
+    document.getElementById('modeRent').disabled = rentCount === 0;
+    document.getElementById('modeRent').title = rentCount === 0 ? 'Нет данных аренды для этого квартала' : '';
     buildingPoints = data.map(b => ({
       lat: b.lat, lng: b.lng,
       area: b.volume, price: b.price
@@ -1314,6 +1410,8 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
   const q = QUARTERS.find(x => x.id === this.value);
   if (!q) return;
   currentQuarter = q;
+  // сбросить режим аренды если в новом квартале нет данных
+  if (rentMode && !q.rent) { setRentMode(false); }
   document.getElementById('fileStatus').textContent = 'Загрузка…';
   await loadBuildings();
   await renderChoropleth();
@@ -1413,26 +1511,73 @@ window.openLotsModal = function(idx) {
     <td>${l.scheme || '—'}</td><td>${l.size || '—'}</td></tr>`).join('');
   document.getElementById('lotsModalBody').innerHTML =
     `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  lotsModalIsRent = false;
   document.getElementById('lotsModalBg').classList.add('open');
 };
 function closeLotsModal() { document.getElementById('lotsModalBg').classList.remove('open'); }
 document.getElementById('lotsModalClose').addEventListener('click', closeLotsModal);
+
+// ============================================================
+//  МОДАЛКА АРЕНДЫ
+// ============================================================
+window.openRentLotsModal = function(idx) {
+  const b = buildingsData[idx]; if (!b) return;
+  currentLotsBuilding = b;
+  const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+  document.getElementById('lotsModalTitle').textContent = b.name + ' — Аренда';
+  document.getElementById('lotsModalSub').textContent =
+    `Данные аренды: май 2026 · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
+  const head = `<tr><th>Наименование</th><th>Этаж</th><th>Площадь, кв.м</th><th>Ставка, руб/кв.м/год</th><th>ОР, руб/кв.м</th><th>НДС</th><th>Размер</th></tr>`;
+  const body = lots.map(l => `<tr>
+    <td>${l.block || '—'}</td><td>${l.floor || '—'}</td>
+    <td>${l.area != null ? fmt(l.area) : '—'}</td>
+    <td>${l.rate ? fmt(Math.round(l.rate)) : '—'}</td>
+    <td>${l.opex ? fmt(Math.round(l.opex)) : '—'}</td>
+    <td>${l.nds || '—'}</td><td>${l.size || '—'}</td></tr>`).join('');
+  document.getElementById('lotsModalBody').innerHTML =
+    `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  lotsModalIsRent = true;
+  document.getElementById('lotsModalBg').classList.add('open');
+};
+
+// ============================================================
+//  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА
+// ============================================================
+window.setRentMode = function(isRent) {
+  rentMode = isRent;
+  document.getElementById('modeSale').classList.toggle('active', !isRent);
+  document.getElementById('modeRent').classList.toggle('active', isRent);
+  document.getElementById('rentNote').style.display = isRent ? 'block' : 'none';
+  renderBuildings();
+  renderBuildingsLegend();
+};
 document.getElementById('lotsModalBg').addEventListener('click', e => {
   if (e.target.id === 'lotsModalBg') closeLotsModal();
 });
+let lotsModalIsRent = false;
 document.getElementById('lotsModalDownload').addEventListener('click', function() {
   const b = currentLotsBuilding; if (!b) return;
-  const lots = lotsData[b.name] || lotsData[b.name_orig] || [];
-  const rows = lots.map(l => ({
-    'Блок': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
-    'Цена, руб/кв.м с НДС': l.price,
-    'Стоимость, руб': l.total != null ? l.total : (l.area!=null && l.price!=null ? Math.round(l.area*l.price) : null),
-    'Схема продажи': l.scheme, 'Размер блока': l.size
-  }));
+  let rows, fname;
+  if (lotsModalIsRent) {
+    const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+    rows = lots.map(l => ({
+      'Наименование': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
+      'Ставка аренды, руб/кв.м/год': l.rate,
+      'ОР, руб/кв.м': l.opex, 'НДС': l.nds, 'Размер блока': l.size
+    }));
+    fname = `${translit(b.name)}_аренда_202606.xlsx`;
+  } else {
+    const lots = lotsData[b.name] || lotsData[b.name_orig] || [];
+    rows = lots.map(l => ({
+      'Блок': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
+      'Цена, руб/кв.м с НДС': l.price,
+      'Стоимость, руб': l.total != null ? l.total : (l.area!=null && l.price!=null ? Math.round(l.area*l.price) : null),
+      'Схема продажи': l.scheme, 'Размер блока': l.size
+    }));
+    fname = `${translit(b.name)}_${currentQuarter.id}_${new Date().getFullYear()}.xlsx`;
+  }
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Лоты');
-  // имя файла: здание + квартал + год выгрузки
-  const fname = `${translit(b.name)}_${currentQuarter.id}_${new Date().getFullYear()}.xlsx`;
   XLSX.writeFile(wb, fname);
 });
 
