@@ -1,0 +1,7 @@
+
+# Одноразовые скрипты генерации данных (не нужны для работы сайта)
+fix_202603.py
+generate_202606.py
+generate_historical.py
+geocode_coworking.py
+data/coworking_geocode_cache.json

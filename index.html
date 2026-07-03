@@ -236,8 +236,8 @@
     /* Тоггл режима продажа/аренда */
     #modeToggleWrap { display: flex; gap: 4px; margin-bottom: 2px; }
     .mode-btn {
-      flex: 1; padding: 6px 0; border: 1.5px solid #d1d5db; border-radius: 6px;
-      background: #f9fafb; color: #374151; font-size: 13px; font-weight: 500;
+      flex: 1; padding: 6px 2px; border: 1.5px solid #d1d5db; border-radius: 6px;
+      background: #f9fafb; color: #374151; font-size: 11px; font-weight: 500;
       cursor: pointer; transition: all .15s;
     }
     .mode-btn.active {
@@ -380,11 +380,13 @@
 <div class="panel" id="mainPanel">
   <h3>Режим</h3>
   <div id="modeToggleWrap">
-    <button class="mode-btn active" id="modeSale" onclick="setRentMode(false)">Продажа</button>
-    <button class="mode-btn" id="modeRent" onclick="setRentMode(true)">Аренда</button>
+    <button class="mode-btn active" id="modeSale" onclick="setMode('sale')">Продажа</button>
+    <button class="mode-btn" id="modeRent" onclick="setMode('rent')">Аренда</button>
+    <button class="mode-btn" id="modeCoworking" onclick="setMode('coworking')">Коворкинги</button>
   </div>
   <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: май 2026 · <span id="rentBldgCount">0</span> зданий</div>
 
+  <div id="salerentControls">
   <hr>
   <h3>Квартал</h3>
   <select id="quarterSelect"></select>
@@ -439,6 +441,20 @@
   <label class="check-row"><input type="checkbox" class="flt-sale" value="нет" checked> Не в продаже</label>
   <label class="check-row"><input type="checkbox" class="flt-sale" value="" checked> Не указано</label>
   <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+  </div>
+
+  <div id="coworkingControls" style="display:none;">
+    <hr>
+    <h3>Коворкинги</h3>
+    <div id="cwStatus" style="font-size:11px;color:#888;">Загрузка…</div>
+    <div id="cwStats" style="display:none; margin-top:5px; padding-top:5px; border-top:1px solid #eee; grid-template-columns:1fr 1fr; gap:0 12px;">
+      <div class="stat-row"><span>Площадок</span><span id="cwCount">—</span></div>
+      <div class="stat-row"><span>Мест всего</span><span id="cwSeats">—</span></div>
+      <div class="stat-row"><span>Вакантно</span><span id="cwVacancy">—</span></div>
+      <div class="stat-row"><span>Ср. ставка/мес</span><span id="cwAvgRate">—</span></div>
+    </div>
+    <label class="check-row" style="margin-top:8px;"><input type="checkbox" id="ovCoworking" checked> Показать коворкинги</label>
+  </div>
 
   <hr>
   <h3>Рисование и выгрузка</h3>
@@ -1625,13 +1641,111 @@ window.openRentLotsModal = function(idx) {
 };
 
 // ============================================================
-//  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА
+//  КОВОРКИНГИ (отдельный срез данных, снимок март 2026)
 // ============================================================
-window.setRentMode = async function(isRent) {
-  rentMode = isRent;
-  document.getElementById('modeSale').classList.toggle('active', !isRent);
-  document.getElementById('modeRent').classList.toggle('active', isRent);
-  document.getElementById('rentNote').style.display = isRent ? 'block' : 'none';
+let coworkingMode = false;
+let coworkingData = [];
+let coworkingLoaded = false;
+let coworkingLayer = null;
+
+function coworkingRateColor(rate) {
+  if (rate == null || !isFinite(rate)) return '#9ca3af';
+  if (rate > 70000) return '#7c3aed';
+  if (rate > 50000) return '#2563eb';
+  if (rate > 30000) return '#0891b2';
+  return '#0d9488';
+}
+
+async function loadCoworking() {
+  if (coworkingLoaded) return;
+  document.getElementById('cwStatus').textContent = 'Загрузка…';
+  try {
+    const resp = await fetch('data/coworking_202603.json');
+    coworkingData = await resp.json();
+    coworkingLoaded = true;
+    const withRate = coworkingData.filter(c => c.rate != null);
+    const totalSeats = coworkingData.reduce((s,c)=>s+(c.seats||0),0);
+    const totalVac   = coworkingData.reduce((s,c)=>s+(c.vacancy||0),0);
+    const avgRate = withRate.length ? withRate.reduce((s,c)=>s+c.rate,0)/withRate.length : null;
+    document.getElementById('cwStatus').textContent = `✓ Март 2026: ${coworkingData.length} площадок`;
+    document.getElementById('cwStatus').style.color = '#16a34a';
+    document.getElementById('cwCount').textContent = fmt(coworkingData.length);
+    document.getElementById('cwSeats').textContent = fmt(Math.round(totalSeats));
+    document.getElementById('cwVacancy').textContent = fmt(Math.round(totalVac));
+    document.getElementById('cwAvgRate').textContent = avgRate != null ? fmt(Math.round(avgRate)) : '—';
+    document.getElementById('cwStats').style.display = 'grid';
+  } catch (e) {
+    document.getElementById('cwStatus').textContent = '✗ Не удалось загрузить данные коворкингов';
+    document.getElementById('cwStatus').style.color = '#dc2626';
+  }
+}
+
+function renderCoworking() {
+  if (coworkingLayer) map.removeLayer(coworkingLayer);
+  coworkingLayer = L.layerGroup();
+  coworkingData.forEach(c => {
+    if (!isFinite(c.lat) || !isFinite(c.lng)) return;
+    const color = coworkingRateColor(c.rate);
+    const marker = L.circleMarker([c.lat, c.lng], {
+      radius: 6, fillColor: color, color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.9
+    });
+    const rows = [
+      ['Сеть', c.network || '—'],
+      ['БЦ / адрес', c.bc || c.address || '—'],
+      ['Деловой район', c.district || '—'],
+      ['Всего мест', c.seats != null ? fmt(Math.round(c.seats)) : '—'],
+      ['Вакантно', c.vacancy != null ? fmt(Math.round(c.vacancy)) : '—'],
+      ['Ставка, руб/мес с НДС', c.rate != null ? fmt(Math.round(c.rate)) : '—'],
+    ];
+    const html = `<b>${c.name || 'Коворкинг'}</b>` +
+      rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('');
+    marker.bindPopup(html);
+    marker.bindTooltip(c.name || '', { direction: 'top' });
+    coworkingLayer.addLayer(marker);
+  });
+  if (document.getElementById('ovCoworking').checked) coworkingLayer.addTo(map);
+}
+
+function renderCoworkingLegend() {
+  const el = document.getElementById('buildingsLegend');
+  const items = [
+    ['#7c3aed', '> 70 000 руб/мес'],
+    ['#2563eb', '50 000–70 000'],
+    ['#0891b2', '30 000–50 000'],
+    ['#0d9488', '< 30 000'],
+    ['#9ca3af', 'Нет данных о ставке'],
+  ].map(([c, l]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${l}</span></div>`).join('');
+  el.innerHTML = `<h4>Коворкинги — ставка/мес</h4>${items}`;
+  el.style.display = 'block';
+}
+
+document.getElementById('ovCoworking').addEventListener('change', renderCoworking);
+
+// ============================================================
+//  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА / КОВОРКИНГИ
+// ============================================================
+window.setMode = async function(mode) {
+  coworkingMode = (mode === 'coworking');
+  rentMode = (mode === 'rent');
+  document.getElementById('modeSale').classList.toggle('active', mode === 'sale');
+  document.getElementById('modeRent').classList.toggle('active', mode === 'rent');
+  document.getElementById('modeCoworking').classList.toggle('active', mode === 'coworking');
+  document.getElementById('rentNote').style.display = mode === 'rent' ? 'block' : 'none';
+  document.getElementById('salerentControls').style.display = coworkingMode ? 'none' : 'block';
+  document.getElementById('coworkingControls').style.display = coworkingMode ? 'block' : 'none';
+
+  if (coworkingMode) {
+    if (buildingsLayer && map.hasLayer(buildingsLayer)) map.removeLayer(buildingsLayer);
+    if (choroplethLayer && map.hasLayer(choroplethLayer)) map.removeLayer(choroplethLayer);
+    document.getElementById('legend').style.display = 'none';
+    hideStatsTable();
+    await loadCoworking();
+    renderCoworking();
+    renderCoworkingLegend();
+    return;
+  }
+
+  if (coworkingLayer && map.hasLayer(coworkingLayer)) map.removeLayer(coworkingLayer);
   renderBuildings();
   renderBuildingsLegend();
   updateGlobalStats(getFilteredBuildings()
@@ -1640,6 +1754,7 @@ window.setRentMode = async function(isRent) {
   await recomputeAll();
   await renderChoropleth();
 };
+window.setRentMode = function(isRent) { return setMode(isRent ? 'rent' : 'sale'); };
 document.getElementById('lotsModalBg').addEventListener('click', e => {
   if (e.target.id === 'lotsModalBg') closeLotsModal();
 });
