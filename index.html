@@ -1411,8 +1411,11 @@ function renderBuildings() {
         ['Субрынок',        b.geoSubmarket || '—'],
       ];
       btns = `<button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">🏢 Предложения аренды (${nRentLots})</button>`;
-      if (nLots > 0) btns += `<button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>`;
       btns += `<button class="popup-lots-btn" style="background:#B23A48;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика аренды</button>`;
+      if (nLots > 0) {
+        btns += `<button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>`;
+        btns += `<button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика продаж</button>`;
+      }
     } else if (rentMode) {
       rows = [
         ['Адрес',     b.address || '—'],
@@ -1421,8 +1424,8 @@ function renderBuildings() {
         ['Год ввода', b.year || '—'],
         ['Аренда',    'нет данных'],
       ];
-      btns = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>` : '';
-      btns += `<button class="popup-lots-btn" style="background:#B23A48;${nLots>0?'margin-left:4px;':''}" onclick="openBuildingAnalytics(${idx})">📊 Аналитика аренды</button>`;
+      btns = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>
+        <button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика продаж</button>` : '';
     } else {
       rows = [
         ['Адрес',        b.address || '—'],
