@@ -668,7 +668,9 @@ async function applyFilters() {
   await recomputeAll();
   await renderChoropleth();
   renderBuildings();
-  updateGlobalStats(getFilteredBuildings().map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
+  updateGlobalStats(getFilteredBuildings()
+    .filter(b => !rentMode || (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
+    .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
 }
 
 // Слои Leaflet
@@ -1562,6 +1564,9 @@ window.setRentMode = function(isRent) {
   document.getElementById('rentNote').style.display = isRent ? 'block' : 'none';
   renderBuildings();
   renderBuildingsLegend();
+  updateGlobalStats(getFilteredBuildings()
+    .filter(b => !rentMode || (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
+    .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
 };
 document.getElementById('lotsModalBg').addEventListener('click', e => {
   if (e.target.id === 'lotsModalBg') closeLotsModal();
