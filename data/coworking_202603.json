@@ -98,7 +98,7 @@
   {
     "name": "Meeting point",
     "network": "Meeting point",
-    "district": "0",
+    "district": "",
     "bc": "Гостиница Москва",
     "address": "Ул. Охотный ряд, д.2",
     "vacancy": 180.0,
@@ -278,7 +278,7 @@
   {
     "name": "СODE Delegat",
     "network": "СODE",
-    "district": "0",
+    "district": "",
     "bc": "1-й Щемиловский 16с2",
     "address": "Долгоруковская 21",
     "vacancy": 600.0,
@@ -314,7 +314,7 @@
   {
     "name": "Multispace Porta",
     "network": "Multispace",
-    "district": "0",
+    "district": "",
     "bc": "Porta",
     "address": "",
     "vacancy": 650.0,
@@ -326,7 +326,7 @@
   {
     "name": "Multispace Дубинин",
     "network": "Multispace",
-    "district": "0",
+    "district": "",
     "bc": "Дубинин Скай",
     "address": "",
     "vacancy": 650.0,
@@ -362,7 +362,7 @@
   {
     "name": "SOK Арена Парк 2",
     "network": "SOK",
-    "district": "0",
+    "district": "",
     "bc": "SOK Арена Парк 2",
     "address": "Ленинградский пр-т, вл. 36",
     "vacancy": 1000.0,
@@ -386,7 +386,7 @@
   {
     "name": "SOK Земляной Вал",
     "network": "SOK",
-    "district": "0",
+    "district": "",
     "bc": "SOK Земляной Вал",
     "address": "Земляной Вал ул., 8",
     "vacancy": 200.0,
@@ -398,7 +398,7 @@
   {
     "name": "SOK Сады Пекина",
     "network": "SOK",
-    "district": "0",
+    "district": "",
     "bc": "SOK Сады Пекина",
     "address": "Садовая Большая ул., 5 корп. 1-2",
     "vacancy": 280.0,
@@ -482,7 +482,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "0",
+    "district": "",
     "bc": "Империя",
     "address": "Пресненская набережная, 6с2",
     "vacancy": 68.0,
@@ -590,7 +590,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "0",
+    "district": "",
     "bc": "Кузнецкий Мост",
     "address": "Кузнецкий мост 13",
     "vacancy": 557.0,
@@ -674,7 +674,7 @@
   {
     "name": "Онегин PMG",
     "network": "Онегин PMG",
-    "district": "#N/A",
+    "district": "",
     "bc": "Онегин",
     "address": "",
     "vacancy": 440.0,
@@ -902,7 +902,7 @@
   {
     "name": "Flexity",
     "network": "Flexity",
-    "district": "#N/A",
+    "district": "",
     "bc": "Риверсайд Тауэрс",
     "address": "Космадамианская наб., 52",
     "vacancy": 0.0,
@@ -914,7 +914,7 @@
   {
     "name": "Flexity",
     "network": "Flexity",
-    "district": "#N/A",
+    "district": "",
     "bc": "Садовая Плаза",
     "address": "Долгоруковская ул. 7",
     "vacancy": 0.0,
@@ -926,7 +926,7 @@
   {
     "name": "Flexity",
     "network": "Flexity",
-    "district": "#N/A",
+    "district": "",
     "bc": "Овчинниковский",
     "address": "Овчинниковская наб., 18",
     "vacancy": 0.0,

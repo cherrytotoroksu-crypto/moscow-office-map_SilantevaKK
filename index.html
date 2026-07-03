@@ -407,25 +407,10 @@
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,17 9,11 13,15 21,5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5 21,5 21,11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Динамика по кварталам
   </button>
-  <button class="upload-btn" id="openCompare" style="margin-top:4px; background:#B23A48;">⇄ Сравнить кварталы</button>
-
-  <hr>
-  <h3>Деление для расчёта</h3>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="mo" checked> Адм. границы Москвы</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="ao"> Автономные округа</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="zones"> Зоны (кольца)</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="submarkets"> Субрынки</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="bizFormed"> Дел. районы (сформир.)</label>
-  <label class="radio-row"><input type="radio" name="activeLayer" value="bizForming"> Дел. районы (формир.)</label>
-
-  <hr>
-  <h3>Показатель</h3>
-  <select id="metricSelect">
-    <option value="wavg">Ср. взвешенная цена (руб/кв.м)</option>
-    <option value="avg">Ср. цена (руб/кв.м)</option>
-    <option value="volume">Объём предложения (кв.м)</option>
-    <option value="count">Кол-во объектов (шт.)</option>
-  </select>
+  <button class="upload-btn" id="openCompare" style="margin-top:4px; background:#B23A48; display:flex; align-items:center; justify-content:center; gap:6px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>
+    Сравнить кварталы
+  </button>
 
   <hr>
   <h3>Объекты (здания)</h3>
@@ -455,6 +440,24 @@
     </div>
     <label class="check-row" style="margin-top:8px;"><input type="checkbox" id="ovCoworking" checked> Показать коворкинги</label>
   </div>
+
+  <hr>
+  <h3>Деление для расчёта</h3>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="mo" checked> Адм. границы Москвы</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="ao"> Автономные округа</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="zones"> Зоны (кольца)</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="submarkets"> Субрынки</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="bizFormed"> Дел. районы (сформир.)</label>
+  <label class="radio-row"><input type="radio" name="activeLayer" value="bizForming"> Дел. районы (формир.)</label>
+
+  <hr>
+  <h3>Показатель</h3>
+  <select id="metricSelect">
+    <option value="wavg">Ср. взвешенная цена (руб/кв.м)</option>
+    <option value="avg">Ср. цена (руб/кв.м)</option>
+    <option value="volume">Объём предложения (кв.м)</option>
+    <option value="count">Кол-во объектов (шт.)</option>
+  </select>
 
   <hr>
   <h3>Рисование и выгрузка</h3>
@@ -986,6 +989,53 @@ async function recomputeAll() {
   }
 }
 
+// ── Статистика коворкингов по геослоям (point-in-polygon) ──
+function computeCoworkingStats(layerKey, geojson) {
+  const cfg = LAYER_CFG[layerKey];
+  const result = {};
+  for (const f of geojson.features) {
+    const name = f.properties[cfg.nameField];
+    result[name] = { sumRateSeats: 0, sumSeats: 0, sumRate: 0, validRate: 0, count: 0, vacancy: 0, seats: 0 };
+  }
+  for (const c of coworkingData) {
+    if (!isFinite(c.lat) || !isFinite(c.lng)) continue;
+    let name = null;
+    for (const f of geojson.features) {
+      if (pointInFeature(c.lng, c.lat, f)) { name = f.properties[cfg.nameField]; break; }
+    }
+    if (name == null || !(name in result)) continue;
+    const r = result[name];
+    r.count += 1;
+    r.vacancy += (c.vacancy || 0);
+    r.seats += (c.seats || 0);
+    if (c.rate != null && isFinite(c.rate)) {
+      r.sumRate += c.rate;
+      r.validRate += 1;
+      if (c.seats) { r.sumRateSeats += c.rate * c.seats; r.sumSeats += c.seats; }
+    }
+  }
+  const out = {};
+  for (const [name, r] of Object.entries(result)) {
+    if (r.count === 0) { out[name] = null; continue; }
+    out[name] = {
+      wavgRate: r.sumSeats > 0 ? r.sumRateSeats / r.sumSeats : null,
+      avgRate:  r.validRate > 0 ? r.sumRate / r.validRate : null,
+      seats:    r.seats,
+      vacancy:  r.vacancy,
+      count:    r.count,
+    };
+  }
+  return out;
+}
+let computedCoworking = {};
+async function recomputeCoworkingAll() {
+  computedCoworking = {};
+  for (const key of Object.keys(LAYER_CFG)) {
+    const gj = await fetchGeoJSON(key);
+    computedCoworking[key] = computeCoworkingStats(key, gj);
+  }
+}
+
 // ============================================================
 //  ПРЕДРАСЧЁТ ПО ВСЕМ КВАРТАЛАМ (для динамики и сравнения)
 // ============================================================
@@ -1077,6 +1127,7 @@ async function renderChoropleth() {
   // Собираем значения метрики для шкалы
   const vals = gj.features.map(f => {
     const name = f.properties[cfg.nameField];
+    if (coworkingMode) return computedCoworking[key]?.[name]?.[currentMetric] ?? null;
     if (dataLoaded && computed[key]) {
       return computed[key][name]?.[currentMetric] ?? null;
     }
@@ -1090,7 +1141,9 @@ async function renderChoropleth() {
     style: f => {
       const name = f.properties[cfg.nameField];
       let val = null;
-      if (dataLoaded && computed[key]) {
+      if (coworkingMode) {
+        val = computedCoworking[key]?.[name]?.[currentMetric] ?? null;
+      } else if (dataLoaded && computed[key]) {
         val = computed[key][name]?.[currentMetric] ?? null;
       } else {
         const s = getBuiltinStats(key, cfg.nameField, f);
@@ -1106,10 +1159,17 @@ async function renderChoropleth() {
     onEachFeature: (f, layer) => {
       const name = f.properties[cfg.nameField];
       let stats = null;
-      if (dataLoaded && computed[key]) stats = computed[key][name];
+      if (coworkingMode) stats = computedCoworking[key]?.[name];
+      else if (dataLoaded && computed[key]) stats = computed[key][name];
       else stats = getBuiltinStats(key, cfg.nameField, f);
 
-      const rows = rentMode ? [
+      const rows = coworkingMode ? [
+        ['Площадок, шт.',              stats?.count   != null ? fmt(Math.round(stats.count)) : '—'],
+        ['Мест всего',                 stats?.seats   != null ? fmt(Math.round(stats.seats)) : '—'],
+        ['Вакантно, мест',             stats?.vacancy != null ? fmt(Math.round(stats.vacancy)) : '—'],
+        ['Ср. ставка, руб/мес',        stats?.avgRate  != null ? fmt(Math.round(stats.avgRate)) : '—'],
+        ['Ср. взв. ставка, руб/мес',   stats?.wavgRate != null ? fmt(Math.round(stats.wavgRate)) : '—'],
+      ] : rentMode ? [
         ['Объектов, шт.',                    stats?.count  != null ? fmt(Math.round(stats.count)) : '—'],
         ['Площадь в аренду, кв.м',           stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
         ['Ср. ставка, руб/кв.м/год',         stats?.avg    != null ? fmt(Math.round(stats.avg)) : '—'],
@@ -1175,9 +1235,17 @@ const METRIC_LABELS_RENT = {
   volume: 'Площадь в аренду, кв.м',
   count: 'Кол-во объектов, шт.',
 };
+const METRIC_LABELS_COWORKING = {
+  wavgRate: 'Ср. взв. ставка, руб/мес',
+  avgRate:  'Ср. ставка, руб/мес',
+  seats:    'Мест всего, шт.',
+  vacancy:  'Вакантно, мест',
+  count:    'Кол-во площадок, шт.',
+};
 
 function updateLegend(scale) {
-  document.getElementById('legendTitle').textContent = (rentMode ? METRIC_LABELS_RENT : METRIC_LABELS)[currentMetric];
+  const labels = coworkingMode ? METRIC_LABELS_COWORKING : (rentMode ? METRIC_LABELS_RENT : METRIC_LABELS);
+  document.getElementById('legendTitle').textContent = labels[currentMetric];
   document.getElementById('legendMin').textContent = fmtShort(scale.min);
   document.getElementById('legendMax').textContent = fmtShort(scale.max);
   const gradColors = ['#FFFBE0','#FBAA4C','#931F2B'];
@@ -1341,6 +1409,7 @@ function renderBuildings() {
       ];
       btns = `<button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">🏢 Предложения аренды (${nRentLots})</button>`;
       if (nLots > 0) btns += `<button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>`;
+      btns += `<button class="popup-lots-btn" style="background:#B23A48;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика аренды</button>`;
     } else if (rentMode) {
       rows = [
         ['Адрес',     b.address || '—'],
@@ -1350,6 +1419,7 @@ function renderBuildings() {
         ['Аренда',    'нет данных'],
       ];
       btns = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>` : '';
+      btns += `<button class="popup-lots-btn" style="background:#B23A48;${nLots>0?'margin-left:4px;':''}" onclick="openBuildingAnalytics(${idx})">📊 Аналитика аренды</button>`;
     } else {
       rows = [
         ['Адрес',        b.address || '—'],
@@ -1369,9 +1439,10 @@ function renderBuildings() {
         ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
         ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
       ];
-      const lotsBtn = !rentMode && nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Лоты (${nLots})</button>` : '';
+      const lotsBtn = !rentMode && nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>` : '';
       const rentBtn = rentMode && hasRent ? `<button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">🏢 Аренда (${nRentLots})</button>` : '';
-      const anaBtn = `<button class="popup-lots-btn" style="background:#C9525E;${(lotsBtn||rentBtn)?'margin-left:4px;':''}" onclick="openBuildingAnalytics(${idx})">📊 Аналитика</button>`;
+      const anaLabel = rentMode ? '📊 Аналитика аренды' : '📊 Аналитика продаж';
+      const anaBtn = `<button class="popup-lots-btn" style="background:#C9525E;${(lotsBtn||rentBtn)?'margin-left:4px;':''}" onclick="openBuildingAnalytics(${idx})">${anaLabel}</button>`;
       btns = (lotsBtn || rentBtn) + anaBtn;
     }
     const html = `<b>${b.name || 'Без названия'}</b>` +
@@ -1724,6 +1795,18 @@ document.getElementById('ovCoworking').addEventListener('change', renderCoworkin
 // ============================================================
 //  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА / КОВОРКИНГИ
 // ============================================================
+const METRIC_OPTIONS_SALERENT =
+  `<option value="wavg">Ср. взвешенная цена (руб/кв.м)</option>
+   <option value="avg">Ср. цена (руб/кв.м)</option>
+   <option value="volume">Объём предложения (кв.м)</option>
+   <option value="count">Кол-во объектов (шт.)</option>`;
+const METRIC_OPTIONS_COWORKING =
+  `<option value="wavgRate">Ср. взв. ставка (руб/мес)</option>
+   <option value="avgRate">Ср. ставка (руб/мес)</option>
+   <option value="seats">Мест всего (шт.)</option>
+   <option value="vacancy">Вакантно (мест)</option>
+   <option value="count">Кол-во площадок (шт.)</option>`;
+
 window.setMode = async function(mode) {
   coworkingMode = (mode === 'coworking');
   rentMode = (mode === 'rent');
@@ -1734,14 +1817,18 @@ window.setMode = async function(mode) {
   document.getElementById('salerentControls').style.display = coworkingMode ? 'none' : 'block';
   document.getElementById('coworkingControls').style.display = coworkingMode ? 'block' : 'none';
 
+  const metricSelect = document.getElementById('metricSelect');
+  metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
+  currentMetric = coworkingMode ? 'wavgRate' : 'wavg';
+  metricSelect.value = currentMetric;
+
   if (coworkingMode) {
     if (buildingsLayer && map.hasLayer(buildingsLayer)) map.removeLayer(buildingsLayer);
-    if (choroplethLayer && map.hasLayer(choroplethLayer)) map.removeLayer(choroplethLayer);
-    document.getElementById('legend').style.display = 'none';
-    hideStatsTable();
     await loadCoworking();
     renderCoworking();
     renderCoworkingLegend();
+    await recomputeCoworkingAll();
+    await renderChoropleth();
     return;
   }
 
