@@ -322,7 +322,7 @@
     "lots": 82
   },
   {
-    "name": "Nice Tower",
+    "name": "Солид",
     "address": "Скотопрогонная ул,, 31",
     "developer": "Coldy",
     "status": "Строится",
@@ -340,8 +340,8 @@
     "on_sale": "",
     "lat": 55.729716,
     "lng": 37.694423,
-    "id": 10,
-    "name_orig": "Nice Tower",
+    "id": "солид",
+    "name_orig": "Солид",
     "lots": 41
   },
   {

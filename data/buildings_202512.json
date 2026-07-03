@@ -667,7 +667,7 @@
     "lots": 68
   },
   {
-    "name": "Nice Tower",
+    "name": "Солид",
     "address": "Скотопрогонная ул, 31, Москва",
     "developer": "Coldy",
     "status": "Строится",
@@ -685,8 +685,8 @@
     "on_sale": "да",
     "lat": 55.729716,
     "lng": 37.694423,
-    "id": 10,
-    "name_orig": "Nice Tower",
+    "id": "солид",
+    "name_orig": "Солид",
     "lots": 24
   },
   {

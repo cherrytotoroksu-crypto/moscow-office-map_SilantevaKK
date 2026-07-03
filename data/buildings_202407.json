@@ -207,8 +207,8 @@
     "id": "nevsky_plaza"
   },
   {
-    "name": "Nice Tower",
-    "name_orig": "Nice Tower",
+    "name": "Солид",
+    "name_orig": "Солид",
     "lat": 55.729716,
     "lng": 37.694423,
     "volume": 4395.4,
@@ -227,7 +227,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "nice_tower"
+    "id": "солид"
   },
   {
     "name": "Opus",
