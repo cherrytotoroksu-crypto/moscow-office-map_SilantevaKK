@@ -1,7 +1,7 @@
 [
   {
-    "name": "iCITY",
-    "name_orig": "iCITY",
+    "name": "iCITY (Space)",
+    "name_orig": "iCITY (Space)",
     "lat": 55.753661,
     "lng": 37.530786,
     "volume": 63264.0,
@@ -322,8 +322,8 @@
     "id": "stone_ленинский"
   },
   {
-    "name": "БЦ А101 Прокшино",
-    "name_orig": "БЦ А101 Прокшино",
+    "name": "А101 Прокшино",
+    "name_orig": "А101 Прокшино",
     "lat": 55.584639,
     "lng": 37.441592,
     "volume": 5596.0,

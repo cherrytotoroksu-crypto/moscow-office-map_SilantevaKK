@@ -92,8 +92,8 @@
     "id": "geolog_2"
   },
   {
-    "name": "iCITY",
-    "name_orig": "iCITY",
+    "name": "iCITY (Space)",
+    "name_orig": "iCITY (Space)",
     "lat": 55.753661,
     "lng": 37.530786,
     "volume": 29334.5,
@@ -437,8 +437,8 @@
     "id": "stone_ленинский"
   },
   {
-    "name": "STONE Ходынка 1",
-    "name_orig": "STONE Ходынка 1",
+    "name": "STONE Ходынка I",
+    "name_orig": "STONE Ходынка I",
     "lat": 55.788171,
     "lng": 37.533598,
     "volume": 18860.0,
@@ -460,8 +460,8 @@
     "id": "stone_ходынка_1"
   },
   {
-    "name": "STONE Ходынка 2",
-    "name_orig": "STONE Ходынка 2",
+    "name": "STONE Ходынка II",
+    "name_orig": "STONE Ходынка II",
     "lat": 55.789203,
     "lng": 37.525082,
     "volume": 13963.0,

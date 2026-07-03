@@ -1,7 +1,7 @@
 [
   {
-    "name": "iCITY",
-    "name_orig": "iCITY",
+    "name": "iCITY (Space)",
+    "name_orig": "iCITY (Space)",
     "lat": 55.753661,
     "lng": 37.530786,
     "volume": 30684.9,
@@ -115,8 +115,8 @@
     "id": "stone_ленинский"
   },
   {
-    "name": "Stone Ходынка",
-    "name_orig": "Stone Ходынка",
+    "name": "STONE Ходынка I",
+    "name_orig": "STONE Ходынка I",
     "lat": 55.790491,
     "lng": 37.531373,
     "volume": 30885.0,

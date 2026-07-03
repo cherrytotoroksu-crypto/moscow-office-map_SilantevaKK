@@ -1,7 +1,7 @@
 [
   {
-    "name": "iCITY",
-    "name_orig": "iCITY",
+    "name": "iCITY (Space)",
+    "name_orig": "iCITY (Space)",
     "lat": 55.753661,
     "lng": 37.530786,
     "volume": 33956.0,
@@ -575,8 +575,8 @@
     "id": "эйлер"
   },
   {
-    "name": "Stone Ходынка",
-    "name_orig": "Stone Ходынка",
+    "name": "STONE Ходынка I",
+    "name_orig": "STONE Ходынка I",
     "lat": 55.790491,
     "lng": 37.531373,
     "volume": 0.0,
