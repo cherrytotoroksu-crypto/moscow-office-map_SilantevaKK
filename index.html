@@ -9,10 +9,37 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; color-scheme: light; }
     #map { width: 100vw; height: 100vh; }
+
+    /* Подпись автора */
+    .author-signature {
+      position: absolute;
+      bottom: 8px; right: 10px;
+      z-index: 900;
+      display: flex; align-items: center; gap: 6px;
+      max-width: 300px;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      color: #931F2B !important;
+      background: rgba(255,255,255,0.8) !important;
+      padding: 3px 7px;
+      border-radius: 6px;
+      pointer-events: none;
+      user-select: none;
+    }
+    .author-signature .sig-text { font-size: 8.5px; line-height: 1.25; white-space: normal; }
+    .author-signature .sig-text b { font-weight: 700; }
+    .author-signature img { height: 14px; width: auto; display: block; flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .author-signature { right: 6px; bottom: 6px; max-width: 220px; }
+      .author-signature .sig-text { font-size: 7px; }
+      .author-signature img { height: 11px; }
+    }
 
     /* Не инвертировать в тёмной теме браузера */
     :root { color-scheme: light; }
@@ -328,6 +355,12 @@
 </head>
 <body>
 <div id="map"></div>
+
+<!-- Подпись автора -->
+<div class="author-signature">
+  <div class="sig-text"><b>Ксения Силантьева</b> // Младший аналитик по офисной недвижимости // Департамент консалтинга и аналитики рынка</div>
+  <img src="data/nf_group_logo.png" alt="NF Group">
+</div>
 
 <!-- Поиск по зданиям (верхний левый угол) -->
 <div class="map-search">
