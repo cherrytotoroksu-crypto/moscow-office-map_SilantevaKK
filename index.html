@@ -1194,6 +1194,9 @@ async function renderChoropleth() {
   if (buildingsLayer && map.hasLayer(buildingsLayer)) {
     buildingsLayer.eachLayer(m => m.bringToFront && m.bringToFront());
   }
+  if (coworkingLayer && map.hasLayer(coworkingLayer)) {
+    coworkingLayer.eachLayer(m => m.bringToFront && m.bringToFront());
+  }
 }
 
 // ============================================================
