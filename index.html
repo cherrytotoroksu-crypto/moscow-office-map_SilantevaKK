@@ -1046,6 +1046,13 @@ let allStats = {};       // qid -> { layerKey -> {name -> stats} }
 let buildById = {};      // id -> { qid -> building }
 let precomputed = false;
 
+// Единый ключ здания для сквозной сверки между кварталами.
+// Поле b.id ненадёжно (в разных кварталах — то числовое, то текстовый
+// слаг из имени), поэтому используем нормализованное имя.
+function normId(b) {
+  return (b.name || b.name_orig || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
 async function precomputeAll() {
   if (precomputed) return;
   // порядок кварталов от старых к новым
@@ -1060,8 +1067,9 @@ async function precomputeAll() {
       allStats[q.id][key] = computeStats(key, gj, blds);
     }
     for (const b of blds) {
-      if (b.id == null) continue;
-      (buildById[b.id] ||= {})[q.id] = b;
+      const nid = normId(b);
+      if (!nid) continue;
+      (buildById[nid] ||= {})[q.id] = b;
     }
   }
   precomputed = true;
@@ -2077,8 +2085,9 @@ function buildDynBuildingList() {
   const seen = new Map();
   for (const q of QUARTERS) {
     for (const b of (allBuildings[q.id] || [])) {
-      if (b.id == null) continue;
-      if (!seen.has(b.id)) seen.set(b.id, { id: b.id, name: b.name, key: buildingSearchKey(b.name) });
+      const nid = normId(b);
+      if (!nid) continue;
+      if (!seen.has(nid)) seen.set(nid, { id: nid, name: b.name, key: buildingSearchKey(b.name) });
     }
   }
   dynBuildingList = [...seen.values()].sort((a,b)=>(a.name||'').localeCompare(b.name||'','ru'));
@@ -2108,7 +2117,7 @@ window.openBuildingAnalytics = async function(idx) {
   await precomputeAll();
   buildDynBuildingList();
   document.getElementById('dynLevel').value = 'building';
-  fillDynBuildingSelect('', b.id);
+  fillDynBuildingSelect('', normId(b));
   document.getElementById('dynBuildingSearch').value = '';
   document.getElementById('dynModalBg').classList.add('open');
   renderDynamics();
