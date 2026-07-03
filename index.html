@@ -340,11 +340,13 @@
     /* Popup */
     .leaflet-popup-content { font-size: 13px; min-width: 200px; }
     .popup-lots-btn {
-      display: inline-block; margin-top: 8px; padding: 5px 10px;
+      display: inline-block; padding: 5px 8px;
       background: #931F2B; color: #fff; border-radius: 5px;
-      font-size: 12px; cursor: pointer; border: none;
+      font-size: 11px; cursor: pointer; border: none;
+      white-space: nowrap; flex: 1;
     }
     .popup-lots-btn:hover { background: #6E1620; }
+    .popup-btn-row { display: flex; gap: 4px; margin-top: 6px; }
     .leaflet-popup-content b { font-size: 14px; }
     .prow { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid #f0f0f0; gap: 8px; }
     .prow:last-child { border-bottom: none; }
@@ -1410,11 +1412,15 @@ function renderBuildings() {
         ['Зона',            b.geoZone ? displayName('zones', b.geoZone) : '—'],
         ['Субрынок',        b.geoSubmarket || '—'],
       ];
-      btns = `<button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">🏢 Предложения аренды (${nRentLots})</button>`;
-      btns += `<button class="popup-lots-btn" style="background:#B23A48;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика аренды</button>`;
+      btns = `<div class="popup-btn-row">
+        <button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">🏢 Предложения аренды (${nRentLots})</button>
+        <button class="popup-lots-btn" style="background:#B23A48;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика аренды</button>
+      </div>`;
       if (nLots > 0) {
-        btns += `<button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>`;
-        btns += `<button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика продаж</button>`;
+        btns += `<div class="popup-btn-row">
+          <button class="popup-lots-btn" style="background:#C9525E;" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>
+          <button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика продаж</button>
+        </div>`;
       }
     } else if (rentMode) {
       rows = [
@@ -1424,8 +1430,10 @@ function renderBuildings() {
         ['Год ввода', b.year || '—'],
         ['Аренда',    'нет данных'],
       ];
-      btns = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>
-        <button class="popup-lots-btn" style="background:#C9525E;margin-left:4px;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика продаж</button>` : '';
+      btns = nLots > 0 ? `<div class="popup-btn-row">
+        <button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>
+        <button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">📊 Аналитика продаж</button>
+      </div>` : '';
     } else {
       rows = [
         ['Адрес',        b.address || '—'],
@@ -1448,13 +1456,13 @@ function renderBuildings() {
       const lotsBtn = !rentMode && nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">📋 Продажа (${nLots})</button>` : '';
       const rentBtn = rentMode && hasRent ? `<button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">🏢 Аренда (${nRentLots})</button>` : '';
       const anaLabel = rentMode ? '📊 Аналитика аренды' : '📊 Аналитика продаж';
-      const anaBtn = `<button class="popup-lots-btn" style="background:#C9525E;${(lotsBtn||rentBtn)?'margin-left:4px;':''}" onclick="openBuildingAnalytics(${idx})">${anaLabel}</button>`;
-      btns = (lotsBtn || rentBtn) + anaBtn;
+      const anaBtn = `<button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${anaLabel}</button>`;
+      btns = (lotsBtn || rentBtn) ? `<div class="popup-btn-row">${lotsBtn || rentBtn}${anaBtn}</div>` : `<div class="popup-btn-row">${anaBtn}</div>`;
     }
     const html = `<b>${b.name || 'Без названия'}</b>` +
       rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
       `<div style="margin-top:8px;">${btns}</div>`;
-    marker.bindPopup(html, { maxHeight: 340 });
+    marker.bindPopup(html, { maxHeight: 340, maxWidth: 320, minWidth: 280 });
     marker.bindTooltip(b.name || '', { direction: 'top' });
     buildingsLayer.addLayer(marker);
   });
