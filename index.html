@@ -1155,15 +1155,20 @@ function parseGeoJSON(text) {
 // ============================================================
 function updateGlobalStats(pts) {
   if (!pts.length) return;
-  const valid = pts.filter(p => isFinite(p.area) && isFinite(p.price) && p.area > 0);
-  const count = pts.length;
-  const totalArea = valid.reduce((s, p) => s + p.area, 0);
-  const avgPrice = valid.length ? valid.reduce((s, p) => s + p.price, 0) / valid.length : NaN;
-  const wavgPrice = totalArea ? valid.reduce((s, p) => s + p.price * p.area, 0) / totalArea : NaN;
-  document.getElementById('statCount').textContent = fmt(count);
-  document.getElementById('statAvgPrice').textContent = fmt(Math.round(avgPrice));
-  document.getElementById('statWAvgPrice').textContent = fmt(Math.round(wavgPrice));
-  document.getElementById('statVolume').textContent = fmt(Math.round(totalArea));
+  document.getElementById('statCount').textContent = fmt(pts.length);
+  if (rentMode) {
+    document.getElementById('statVolume').textContent = 'нет данных';
+    document.getElementById('statAvgPrice').textContent = 'нет данных';
+    document.getElementById('statWAvgPrice').textContent = 'нет данных';
+  } else {
+    const valid = pts.filter(p => isFinite(p.area) && isFinite(p.price) && p.area > 0);
+    const totalArea = valid.reduce((s, p) => s + p.area, 0);
+    const avgPrice = valid.length ? valid.reduce((s, p) => s + p.price, 0) / valid.length : NaN;
+    const wavgPrice = totalArea ? valid.reduce((s, p) => s + p.price * p.area, 0) / totalArea : NaN;
+    document.getElementById('statAvgPrice').textContent = fmt(Math.round(avgPrice));
+    document.getElementById('statWAvgPrice').textContent = fmt(Math.round(wavgPrice));
+    document.getElementById('statVolume').textContent = fmt(Math.round(totalArea));
+  }
   document.getElementById('fileStats').style.display = 'grid';
 }
 
