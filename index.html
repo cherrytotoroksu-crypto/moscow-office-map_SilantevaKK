@@ -384,7 +384,7 @@
     <button class="mode-btn" id="modeRent" onclick="setMode('rent')">Аренда</button>
     <button class="mode-btn" id="modeCoworking" onclick="setMode('coworking')">Коворкинги</button>
   </div>
-  <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: май 2026 · <span id="rentBldgCount">0</span> зданий</div>
+  <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: Q2 2026 · <span id="rentBldgCount">0</span> зданий</div>
 
   <div id="salerentControls">
   <hr>
@@ -1700,7 +1700,7 @@ window.openRentLotsModal = function(idx) {
   const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
   document.getElementById('lotsModalTitle').textContent = b.name + ' — Аренда';
   document.getElementById('lotsModalSub').textContent =
-    `Данные аренды: май 2026 · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
+    `Данные аренды: Q2 2026 · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
   const head = `<tr><th>Наименование</th><th>Этаж</th><th>Площадь, кв.м</th><th>Ставка, руб/кв.м/год</th><th>ОР, руб/кв.м</th><th>НДС</th><th>Размер</th></tr>`;
   const body = lots.map(l => `<tr>
     <td>${l.block || '—'}</td><td>${l.floor || '—'}</td>
@@ -1741,7 +1741,7 @@ async function loadCoworking() {
     const totalSeats = coworkingData.reduce((s,c)=>s+(c.seats||0),0);
     const totalVac   = coworkingData.reduce((s,c)=>s+(c.vacancy||0),0);
     const avgRate = withRate.length ? withRate.reduce((s,c)=>s+c.rate,0)/withRate.length : null;
-    document.getElementById('cwStatus').textContent = `✓ Март 2026: ${coworkingData.length} площадок`;
+    document.getElementById('cwStatus').textContent = `✓ Q1 2026: ${coworkingData.length} площадок`;
     document.getElementById('cwStatus').style.color = '#16a34a';
     document.getElementById('cwCount').textContent = fmt(coworkingData.length);
     document.getElementById('cwSeats').textContent = fmt(Math.round(totalSeats));
