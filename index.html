@@ -901,7 +901,7 @@ function pointInFeature(lng, lat, feature) {
   return false;
 }
 
-function computeStats(layerKey, geojson, blds) {
+function computeStats(layerKey, geojson, blds, useRent) {
   const cfg = LAYER_CFG[layerKey];
   const data = blds || buildingsData;
   const result = {};
@@ -921,7 +921,17 @@ function computeStats(layerKey, geojson, blds) {
     result[name].lots += (lots || 0);
   };
   for (const b of data) {
-    const area = b.volume, price = b.price, lots = b.lots || 0;
+    let area, price, lots;
+    if (useRent) {
+      const rLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+      if (!rLots.length) continue; // здания без данных аренды не учитываются
+      area = rLots.reduce((s,l)=>s+(l.area||0), 0);
+      const wRates = rLots.filter(l=>l.rate);
+      price = wRates.length ? wRates.reduce((s,l)=>s+l.rate*l.area,0)/wRates.reduce((s,l)=>s+l.area,0) : NaN;
+      lots = rLots.length;
+    } else {
+      area = b.volume; price = b.price; lots = b.lots || 0;
+    }
     if (cfg.groupBy) {
       // группировка по атрибуту здания (для деловых районов)
       const name = b[cfg.groupBy];
@@ -956,7 +966,7 @@ async function recomputeAll() {
   computed = {};
   for (const key of Object.keys(LAYER_CFG)) {
     const gj = await fetchGeoJSON(key);
-    computed[key] = computeStats(key, gj, filtered);
+    computed[key] = computeStats(key, gj, filtered, rentMode);
   }
 }
 
@@ -1083,7 +1093,12 @@ async function renderChoropleth() {
       if (dataLoaded && computed[key]) stats = computed[key][name];
       else stats = getBuiltinStats(key, cfg.nameField, f);
 
-      const rows = [
+      const rows = rentMode ? [
+        ['Объектов, шт.',                    stats?.count  != null ? fmt(Math.round(stats.count)) : '—'],
+        ['Площадь в аренду, кв.м',           stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
+        ['Ср. ставка, руб/кв.м/год',         stats?.avg    != null ? fmt(Math.round(stats.avg)) : '—'],
+        ['Ср. взв. ставка, руб/кв.м/год',    stats?.wavg   != null ? fmt(Math.round(stats.wavg)) : '—'],
+      ] : [
         ['Объектов, шт.',          stats?.count  != null ? fmt(Math.round(stats.count)) : '—'],
         ['Объём, кв.м',            stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
         ['Ср. цена, руб/кв.м',     stats?.avg    != null ? fmt(Math.round(stats.avg)) : '—'],
@@ -1138,9 +1153,15 @@ const METRIC_LABELS = {
   volume: 'Объём предложения, кв.м',
   count: 'Кол-во объектов, шт.',
 };
+const METRIC_LABELS_RENT = {
+  wavg: 'Ср. взв. ставка, руб/кв.м/год',
+  avg:  'Ср. ставка, руб/кв.м/год',
+  volume: 'Площадь в аренду, кв.м',
+  count: 'Кол-во объектов, шт.',
+};
 
 function updateLegend(scale) {
-  document.getElementById('legendTitle').textContent = METRIC_LABELS[currentMetric];
+  document.getElementById('legendTitle').textContent = (rentMode ? METRIC_LABELS_RENT : METRIC_LABELS)[currentMetric];
   document.getElementById('legendMin').textContent = fmtShort(scale.min);
   document.getElementById('legendMax').textContent = fmtShort(scale.max);
   const gradColors = ['#FFFBE0','#FBAA4C','#931F2B'];
@@ -1606,7 +1627,7 @@ window.openRentLotsModal = function(idx) {
 // ============================================================
 //  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА
 // ============================================================
-window.setRentMode = function(isRent) {
+window.setRentMode = async function(isRent) {
   rentMode = isRent;
   document.getElementById('modeSale').classList.toggle('active', !isRent);
   document.getElementById('modeRent').classList.toggle('active', isRent);
@@ -1616,6 +1637,8 @@ window.setRentMode = function(isRent) {
   updateGlobalStats(getFilteredBuildings()
     .filter(b => !rentMode || (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
     .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
+  await recomputeAll();
+  await renderChoropleth();
 };
 document.getElementById('lotsModalBg').addEventListener('click', e => {
   if (e.target.id === 'lotsModalBg') closeLotsModal();
