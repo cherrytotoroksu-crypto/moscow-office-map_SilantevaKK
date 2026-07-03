@@ -23,7 +23,7 @@
       bottom: 24px; left: 212px;
       z-index: 900;
       display: flex; align-items: center; gap: 6px;
-      max-width: 260px;
+      max-width: none;
       font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
       color: #931F2B !important;
       background: rgba(255,255,255,0.85) !important;
@@ -33,10 +33,9 @@
       pointer-events: none;
       user-select: none;
     }
-    .author-signature .sig-text { font-size: 8.5px; line-height: 1.4; white-space: normal; }
+    .author-signature .sig-text { font-size: 9px; line-height: 1.3; white-space: nowrap; }
     .author-signature .sig-text b { font-weight: 700; }
-    .author-signature .sig-text div { margin: 0; }
-    .author-signature img { height: 26px; width: auto; display: block; flex-shrink: 0; }
+    .author-signature img { height: 22px; width: auto; display: block; flex-shrink: 0; }
     @media (max-width: 640px) {
       .author-signature { display: none; }
     }
@@ -358,7 +357,7 @@
 
 <!-- Подпись автора -->
 <div class="author-signature">
-  <div class="sig-text"><div><b>Ксения Силантьева</b></div><div>Младший аналитик по офисной недвижимости</div><div>Департамент консалтинга и аналитики рынка</div></div>
+  <div class="sig-text"><b>Ксения Силантьева</b> // Младший аналитик по офисной недвижимости // Департамент консалтинга и аналитики рынка</div>
   <img src="data/nf_group_logo.png" alt="NF Group">
 </div>
 
