@@ -1773,10 +1773,18 @@ const NAME_SYNONYMS = {
   'tower':'тауэр', 'park':'парк', 'plaza':'плаза', 'hub':'хаб', 'city':'сити',
   'stone':'стоун',
 };
+// Кириллические варианты написания (расхождения в транслитерации между источниками)
+const CYRILLIC_SYNONYMS = {
+  'плэйн':'плейн',
+};
 function buildingSearchKey(name) {
   const n = (name || '').toLowerCase();
   let syn = '';
   for (const [lat, cyr] of Object.entries(NAME_SYNONYMS)) if (n.includes(lat)) syn += ' ' + cyr;
+  for (const [a, b] of Object.entries(CYRILLIC_SYNONYMS)) {
+    if (n.includes(a)) syn += ' ' + b;
+    if (n.includes(b)) syn += ' ' + a;
+  }
   return [n, translit(n), latToCyr(n), syn].join(' ');
 }
 
