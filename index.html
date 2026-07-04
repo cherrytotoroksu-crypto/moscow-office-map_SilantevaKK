@@ -1512,11 +1512,15 @@ function renderBuildings() {
         ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
         ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
       ];
-      const lotsBtn = !rentMode && nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">${ICON_LIST} Продажа (${nLots})</button>` : '';
-      const rentBtn = rentMode && hasRent ? `<button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${nRentLots})</button>` : '';
-      const anaLabel = (rentMode ? ICON_CHART + ' Аналитика аренды' : ICON_CHART + ' Аналитика продаж');
-      const anaBtn = `<button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${anaLabel}</button>`;
-      btns = (lotsBtn || rentBtn) ? `<div class="popup-btn-row">${lotsBtn || rentBtn}${anaBtn}</div>` : `<div class="popup-btn-row">${anaBtn}</div>`;
+      const lotsBtn = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">${ICON_LIST} Продажа (${nLots})</button>` : '';
+      const anaSaleBtn = `<button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика продаж</button>`;
+      btns = `<div class="popup-btn-row">${lotsBtn}${anaSaleBtn}</div>`;
+      if (hasRent) {
+        btns += `<div class="popup-btn-row">
+          <button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${nRentLots})</button>
+          <button class="popup-lots-btn" style="background:#B23A48;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика аренды</button>
+        </div>`;
+      }
     }
     const html = `<b>${b.name || 'Без названия'}</b>` +
       rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
