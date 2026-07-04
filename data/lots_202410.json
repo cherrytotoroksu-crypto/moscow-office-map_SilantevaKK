@@ -7615,7 +7615,198 @@
       "size": ""
     }
   ],
-  "Солид": [
+  "Twist": [
+    {
+      "block": "809",
+      "floor": "8",
+      "area": 57.0,
+      "price": 691000.0,
+      "total": 39387000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "808",
+      "floor": "8",
+      "area": 59.0,
+      "price": 689000.0,
+      "total": 40651000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "803",
+      "floor": "8",
+      "area": 93.0,
+      "price": 631000.0,
+      "total": 58683000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "504",
+      "floor": "5",
+      "area": 94.0,
+      "price": 584000.0,
+      "total": 54896000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "802",
+      "floor": "8",
+      "area": 105.0,
+      "price": 622000.0,
+      "total": 65310000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "805",
+      "floor": "8",
+      "area": 117.0,
+      "price": 600000.0,
+      "total": 70200000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "804",
+      "floor": "8",
+      "area": 127.0,
+      "price": 629000.0,
+      "total": 79883000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "505",
+      "floor": "5",
+      "area": 139.0,
+      "price": 546000.0,
+      "total": 75894000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "507а",
+      "floor": "5",
+      "area": 143.0,
+      "price": 554000.0,
+      "total": 79222000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "607а",
+      "floor": "6",
+      "area": 147.0,
+      "price": 567000.0,
+      "total": 83349000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "806",
+      "floor": "8",
+      "area": 149.0,
+      "price": 609000.0,
+      "total": 90741000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "810",
+      "floor": "8",
+      "area": 164.0,
+      "price": 576000.0,
+      "total": 94464000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "811",
+      "floor": "8",
+      "area": 165.0,
+      "price": 565000.0,
+      "total": 93225000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "801",
+      "floor": "8",
+      "area": 168.0,
+      "price": 576000.0,
+      "total": 96768000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "604",
+      "floor": "6",
+      "area": 178.0,
+      "price": 536000.0,
+      "total": 95408000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "904",
+      "floor": "9",
+      "area": 287.0,
+      "price": 441000.0,
+      "total": 126567000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "902",
+      "floor": "9",
+      "area": 308.0,
+      "price": 452000.0,
+      "total": 139216000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "906",
+      "floor": "9",
+      "area": 382.0,
+      "price": 418000.0,
+      "total": 159676000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "901",
+      "floor": "9",
+      "area": 456.0,
+      "price": 419000.0,
+      "total": 191064000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "701",
+      "floor": "7",
+      "area": 1381.0,
+      "price": 497000.0,
+      "total": 686357000,
+      "scheme": "ДКПБВ",
+      "size": ""
+    },
+    {
+      "block": "4719",
+      "floor": "2420961000",
+      "area": 513024.16,
+      "price": null,
+      "total": null,
+      "scheme": "",
+      "size": ""
+    }
+  ],
+  "Солид (бывший — Nice Tower)": [
     {
       "block": "№2,1",
       "floor": "2",
@@ -8124,197 +8315,6 @@
       "block": "4395.390000000002",
       "floor": "1284720000",
       "area": 292288.06,
-      "price": null,
-      "total": null,
-      "scheme": "",
-      "size": ""
-    }
-  ],
-  "Twist": [
-    {
-      "block": "809",
-      "floor": "8",
-      "area": 57.0,
-      "price": 691000.0,
-      "total": 39387000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "808",
-      "floor": "8",
-      "area": 59.0,
-      "price": 689000.0,
-      "total": 40651000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "803",
-      "floor": "8",
-      "area": 93.0,
-      "price": 631000.0,
-      "total": 58683000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "504",
-      "floor": "5",
-      "area": 94.0,
-      "price": 584000.0,
-      "total": 54896000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "802",
-      "floor": "8",
-      "area": 105.0,
-      "price": 622000.0,
-      "total": 65310000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "805",
-      "floor": "8",
-      "area": 117.0,
-      "price": 600000.0,
-      "total": 70200000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "804",
-      "floor": "8",
-      "area": 127.0,
-      "price": 629000.0,
-      "total": 79883000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "505",
-      "floor": "5",
-      "area": 139.0,
-      "price": 546000.0,
-      "total": 75894000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "507а",
-      "floor": "5",
-      "area": 143.0,
-      "price": 554000.0,
-      "total": 79222000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "607а",
-      "floor": "6",
-      "area": 147.0,
-      "price": 567000.0,
-      "total": 83349000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "806",
-      "floor": "8",
-      "area": 149.0,
-      "price": 609000.0,
-      "total": 90741000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "810",
-      "floor": "8",
-      "area": 164.0,
-      "price": 576000.0,
-      "total": 94464000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "811",
-      "floor": "8",
-      "area": 165.0,
-      "price": 565000.0,
-      "total": 93225000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "801",
-      "floor": "8",
-      "area": 168.0,
-      "price": 576000.0,
-      "total": 96768000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "604",
-      "floor": "6",
-      "area": 178.0,
-      "price": 536000.0,
-      "total": 95408000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "904",
-      "floor": "9",
-      "area": 287.0,
-      "price": 441000.0,
-      "total": 126567000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "902",
-      "floor": "9",
-      "area": 308.0,
-      "price": 452000.0,
-      "total": 139216000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "906",
-      "floor": "9",
-      "area": 382.0,
-      "price": 418000.0,
-      "total": 159676000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "901",
-      "floor": "9",
-      "area": 456.0,
-      "price": 419000.0,
-      "total": 191064000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "701",
-      "floor": "7",
-      "area": 1381.0,
-      "price": 497000.0,
-      "total": 686357000,
-      "scheme": "ДКПБВ",
-      "size": ""
-    },
-    {
-      "block": "4719",
-      "floor": "2420961000",
-      "area": 513024.16,
       "price": null,
       "total": null,
       "scheme": "",
