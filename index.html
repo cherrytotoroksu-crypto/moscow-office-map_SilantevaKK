@@ -2209,7 +2209,26 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
 const DIV_LABELS = { zones:'Зоны', ao:'Округа', submarkets:'Субрынки',
   bizFormed:'Дел. районы (сформир.)', bizForming:'Дел. районы (формир.)' };
 const METRIC_NAMES = { wavg:'Ср. взв. цена, руб/кв.м', avg:'Ср. цена, руб/кв.м',
-  volume:'Объём, кв.м', count:'Кол-во объектов', price:'Цена здания, руб/кв.м', lots:'Лотов, шт.' };
+  volume:'Объём, кв.м', count:'Кол-во объектов', price:'Цена, руб/кв.м', lots:'Лотов, шт.' };
+// На уровне одного здания wavg/avg/price — одно и то же число (b.price), поэтому
+// показываем только осмысленный для каждого уровня набор показателей.
+const DYN_METRIC_OPTIONS_DIVISION =
+  `<option value="wavg">Ср. взвешенная цена, руб/кв.м</option>
+   <option value="avg">Ср. цена, руб/кв.м</option>
+   <option value="volume">Объём, кв.м</option>
+   <option value="count">Кол-во объектов</option>`;
+const DYN_METRIC_OPTIONS_BUILDING =
+  `<option value="price">Цена, руб/кв.м</option>
+   <option value="volume">Объём, кв.м</option>
+   <option value="lots">Лотов, шт.</option>`;
+function syncDynMetricOptions() {
+  const level = document.getElementById('dynLevel').value;
+  const sel = document.getElementById('dynMetric');
+  const prev = sel.value;
+  sel.innerHTML = level === 'building' ? DYN_METRIC_OPTIONS_BUILDING : DYN_METRIC_OPTIONS_DIVISION;
+  const values = [...sel.options].map(o => o.value);
+  sel.value = values.includes(prev) ? prev : values[0];
+}
 const CHART_COLORS = ['#7c3aed','#2563eb','#0891b2','#16a34a','#ca8a04','#dc2626','#db2777',
   '#0d9488','#65a30d','#9333ea','#ea580c','#0284c7','#4d7c0f','#be123c','#7c2d12','#1e3a8a','#831843'];
 
@@ -2318,6 +2337,7 @@ document.getElementById('dynBuildingSearch').addEventListener('input', function(
   renderDynamics();
 });
 function renderDynamics() {
+  syncDynMetricOptions();
   const level = document.getElementById('dynLevel').value;
   const metric = document.getElementById('dynMetric').value;
   document.getElementById('dynDivWrap').style.display = level==='division' ? '' : 'none';
@@ -2390,8 +2410,29 @@ async function openCompare() {
   document.getElementById('cmpModalBg').classList.add('open');
   renderCompare();
 }
+// На уровне зданий wavg/avg/price дают одно и то же число, поэтому для
+// сравнения по зданиям показываем только осмысленные показатели.
+const CMP_METRIC_OPTIONS_DIVISION =
+  `<option value="wavg">Ср. взв. цена</option>
+   <option value="avg">Ср. цена</option>
+   <option value="volume">Объём</option>
+   <option value="count">Кол-во объектов</option>`;
+const CMP_METRIC_OPTIONS_BUILDING =
+  `<option value="price">Цена</option>
+   <option value="volume">Объём</option>
+   <option value="lots">Лотов, шт.</option>`;
+function syncCmpMetricOptions() {
+  const level = document.getElementById('cmpLevel').value;
+  const sel = document.getElementById('cmpMetric');
+  const prev = sel.value;
+  sel.innerHTML = level === 'building' ? CMP_METRIC_OPTIONS_BUILDING : CMP_METRIC_OPTIONS_DIVISION;
+  const values = [...sel.options].map(o => o.value);
+  sel.value = values.includes(prev) ? prev : values[0];
+}
+
 let cmpRows = [];
 function renderCompare() {
+  syncCmpMetricOptions();
   const from = document.getElementById('cmpFrom').value;
   const to = document.getElementById('cmpTo').value;
   const level = document.getElementById('cmpLevel').value;
@@ -2403,8 +2444,8 @@ function renderCompare() {
       const bF = buildById[id]?.[from], bT = buildById[id]?.[to];
       if (!bF && !bT) return;
       const name = (bT||bF).name;
-      const was = bldVal(bF, metric==='count'?'count':(metric==='volume'?'volume':'price'));
-      const now = bldVal(bT, metric==='count'?'count':(metric==='volume'?'volume':'price'));
+      const was = bldVal(bF, metric);
+      const now = bldVal(bT, metric);
       rows.push({ name, was, now });
     });
   } else {
