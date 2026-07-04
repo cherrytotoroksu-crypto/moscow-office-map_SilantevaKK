@@ -387,7 +387,7 @@
     <button class="mode-btn" id="modeRent" onclick="setMode('rent')">Аренда</button>
     <button class="mode-btn" id="modeCoworking" onclick="setMode('coworking')">Коворкинги</button>
   </div>
-  <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: Q2 2026 · <span id="rentBldgCount">0</span> зданий</div>
+  <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: <span id="rentQuarterLabel">—</span> · <span id="rentBldgCount">0</span> зданий</div>
 
   <div id="salerentControls">
   <hr>
@@ -622,7 +622,7 @@
 const QUARTERS = [
   { id: '202606', label: 'Q2 2026', file: 'data/buildings_202606.json', lots: 'data/lots_202606.json', rent: 'data/rent_lots_202606.json' },
   { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', lots: 'data/lots_202603.json' },
-  { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json' },
+  { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json', rent: 'data/rent_lots_202512.json' },
   { id: '202509', label: 'Q3 2025', file: 'data/buildings_202509.json', lots: 'data/lots_202509.json' },
   { id: '202506', label: 'Q2 2025', file: 'data/buildings_202506.json', lots: 'data/lots_202506.json' },
   { id: '202503', label: 'Q1 2025', file: 'data/buildings_202503.json', lots: 'data/lots_202503.json' },
@@ -1561,8 +1561,10 @@ async function loadBuildings() {
     }
     const rentCount = Object.keys(rentLotsData).length;
     const elRentCount = document.getElementById('rentBldgCount');
+    const elRentQLabel = document.getElementById('rentQuarterLabel');
     const elModeRent  = document.getElementById('modeRent');
     if (elRentCount) elRentCount.textContent = rentCount;
+    if (elRentQLabel) elRentQLabel.textContent = currentQuarter.label;
     if (elModeRent) {
       elModeRent.disabled = rentCount === 0;
       elModeRent.title = rentCount === 0 ? 'Нет данных аренды для этого квартала' : '';
@@ -1749,7 +1751,7 @@ window.openRentLotsModal = function(idx) {
   const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
   document.getElementById('lotsModalTitle').textContent = b.name + ' — Аренда';
   document.getElementById('lotsModalSub').textContent =
-    `Данные аренды: Q2 2026 · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
+    `Данные аренды: ${currentQuarter.label} · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
   const head = `<tr><th>Наименование</th><th>Этаж</th><th>Площадь, кв.м</th><th>Ставка, руб/кв.м/год</th><th>ОР, руб/кв.м</th><th>НДС</th><th>Размер</th></tr>`;
   const body = lots.map(l => `<tr>
     <td>${l.block || '—'}</td><td>${l.floor || '—'}</td>
