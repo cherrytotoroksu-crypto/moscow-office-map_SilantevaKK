@@ -1503,6 +1503,21 @@ function renderBuildingsLegend() {
     return;
   }
 
+  // классы, реально присутствующие в данных, в желаемом порядке
+  const order = ['Prime', 'A+', 'A', 'B+', 'B', 'C'];
+  const classSource = rentMode
+    ? buildingsData.filter(b => (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
+    : buildingsData;
+  const present = order.filter(c => classSource.some(b => b.cls === c));
+  const others = [...new Set(classSource.map(b => b.cls).filter(c => c && !order.includes(c)))];
+  const classes = [...present, ...others];
+  const classRows = classes.map(c => {
+    const d = 12;
+    return `<div class="bl-item">
+      <span class="bl-dot" style="width:${d}px;height:${d}px;background:${buildingColor(c)}"></span>
+      <span>Класс ${c}</span></div>`;
+  }).join('');
+
   if (rentMode) {
     const rentItems = [
       ['#7c3aed', '> 70 000'],
@@ -1511,26 +1526,14 @@ function renderBuildingsLegend() {
       ['#0d9488', '< 30 000'],
       ['#9ca3af', 'Нет данных аренды'],
     ].map(([c, l]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${l}</span></div>`).join('');
-    el.innerHTML = `<h4>Аренда — ставка, руб/кв.м/год</h4>${rentItems}`;
+    el.innerHTML = `<h4>Аренда — ставка, руб/кв.м/год</h4>${rentItems}` +
+      (classes.length ? `<div class="sub">Здания — класс</div>${classRows}` : '');
     el.style.display = 'block';
     repositionSignature();
     return;
   }
 
-  // классы, реально присутствующие в данных, в желаемом порядке
-  const order = ['Prime', 'A+', 'A', 'B+', 'B', 'C'];
-  const present = order.filter(c => buildingsData.some(b => b.cls === c));
-  const others = [...new Set(buildingsData.map(b => b.cls).filter(c => c && !order.includes(c)))];
-  const classes = [...present, ...others];
-
-  const colorRows = classes.map(c => {
-    const d = 14;
-    return `<div class="bl-item">
-      <span class="bl-dot" style="width:${d}px;height:${d}px;background:${buildingColor(c)}"></span>
-      <span>Класс ${c}</span></div>`;
-  }).join('');
-
-  el.innerHTML = `<h4>Здания — класс</h4>${colorRows}`;
+  el.innerHTML = `<h4>Здания — класс</h4>${classRows}`;
   el.style.display = 'block';
   repositionSignature();
 }
