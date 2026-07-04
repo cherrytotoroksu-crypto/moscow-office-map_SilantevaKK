@@ -1998,6 +1998,15 @@ function buildingsInDrawn() {
     polys.some(p => pointInFeature(b.lng, b.lat, p)));
   return inside;
 }
+// коворкинги внутри нарисованных полигонов
+function coworkingInDrawn() {
+  const polys = [];
+  drawnItems.eachLayer(l => polys.push(l.toGeoJSON()));
+  if (!polys.length) return null;
+  return getFilteredCoworking().filter(c =>
+    isFinite(c.lat) && isFinite(c.lng) &&
+    polys.some(p => pointInFeature(c.lng, c.lat, p)));
+}
 // имя файла из названия первого полигона (транслит) + квартал
 function drawnFileBase() {
   let nm = '';
@@ -2019,11 +2028,88 @@ document.getElementById('exportGeo').addEventListener('click', function() {
 });
 
 document.getElementById('exportXlsx').addEventListener('click', function() {
+  if (coworkingMode) {
+    const insideCw = coworkingInDrawn();
+    if (!insideCw) { alert('Сначала обведи область (режим рисования).'); return; }
+    if (!insideCw.length) { alert('Внутри полигона нет коворкингов.'); return; }
+
+    const withRate = insideCw.filter(c => c.rate != null);
+    const totalSeats = insideCw.reduce((s,c)=>s+(c.seats||0),0);
+    const totalVac   = insideCw.reduce((s,c)=>s+(c.vacancy||0),0);
+    const avgRate = withRate.length ? withRate.reduce((s,c)=>s+c.rate,0)/withRate.length : null;
+    const wSeats = withRate.reduce((s,c)=>s+(c.seats||0),0);
+    const wavgRate = wSeats ? withRate.reduce((s,c)=>s+c.rate*(c.seats||0),0)/wSeats : null;
+
+    const summary = [
+      ['Показатель', 'Значение'],
+      ['Срез', 'Коворкинги, Q1 2026'],
+      ['Площадок, шт.', insideCw.length],
+      ['Мест всего, шт.', Math.round(totalSeats)],
+      ['Вакантно, мест', Math.round(totalVac)],
+      ['Средняя ставка, руб/мес', avgRate != null ? Math.round(avgRate) : '—'],
+      ['Средневзвешенная ставка, руб/мес', wavgRate != null ? Math.round(wavgRate) : '—'],
+    ];
+    const rows = insideCw.map(c => ({
+      'Площадка': c.name, 'Сеть': c.network, 'БЦ/адрес': c.bc || c.address,
+      'Деловой район': c.district, 'Мест всего': c.seats, 'Вакантно': c.vacancy,
+      'Ставка, руб/мес с НДС': c.rate, 'Широта': c.lat, 'Долгота': c.lng,
+    }));
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Коворкинги');
+    XLSX.writeFile(wb, `${drawnFileBase()}_coworking.xlsx`);
+    return;
+  }
+
   const inside = buildingsInDrawn();
   if (!inside) { alert('Сначала обведи область (режим рисования).'); return; }
   if (!inside.length) { alert('Внутри полигона нет зданий.'); return; }
 
-  // показатели
+  if (rentMode) {
+    // ── Аренда ──
+    const withRent = inside.filter(b => hasRentData(b));
+    const rentRows = [];
+    withRent.forEach(b => {
+      (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).forEach(l => rentRows.push({
+        'Здание': b.name, 'Блок': l.block, 'Этаж': l.floor,
+        'Площадь, кв.м': l.area, 'Ставка, руб/кв.м/год': l.rate,
+        'ОР, руб/кв.м': l.opex, 'НДС': l.nds, 'Размер блока': l.size
+      }));
+    });
+    const totalArea = rentRows.reduce((s,r)=>s+(r['Площадь, кв.м']||0),0);
+    const withRate = rentRows.filter(r => r['Ставка, руб/кв.м/год'] != null);
+    const avg = withRate.length ? withRate.reduce((s,r)=>s+r['Ставка, руб/кв.м/год'],0)/withRate.length : null;
+    const wavg = totalArea ? withRate.reduce((s,r)=>s+r['Ставка, руб/кв.м/год']*(r['Площадь, кв.м']||0),0)/totalArea : null;
+
+    const summary = [
+      ['Показатель', 'Значение'],
+      ['Квартал', currentQuarter.label],
+      ['Срез', 'Аренда'],
+      ['Зданий с данными аренды, шт.', withRent.length],
+      ['Зданий всего в области, шт.', inside.length],
+      ['Лотов в аренде, шт.', rentRows.length],
+      ['Площадь в аренду, кв.м', Math.round(totalArea)],
+      ['Средняя ставка, руб/кв.м/год', avg != null ? Math.round(avg) : '—'],
+      ['Средневзвешенная ставка, руб/кв.м/год', wavg != null ? Math.round(wavg) : '—'],
+    ];
+    const bldRows = withRent.map(b => ({
+      'Здание': b.name, 'Адрес': b.address, 'Девелопер': b.developer, 'Класс': b.cls,
+      'Год ввода': b.year, 'GBA, кв.м': b.gba,
+      'Лотов в аренде, шт.': (rentLotsData[b.name]||rentLotsData[b.name_orig]||[]).length,
+      'Зона': b.zone, 'Субрынок': b.submarket,
+      'Широта': b.lat, 'Долгота': b.lng
+    }));
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(bldRows), 'Здания');
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rentRows.length ? rentRows : [{'Лоты аренды':'нет данных'}]), 'Лоты аренды');
+    XLSX.writeFile(wb, `${drawnFileBase()}_rent.xlsx`);
+    return;
+  }
+
+  // ── Продажа ──
   const valid = inside.filter(b => isFinite(b.volume) && isFinite(b.price) && b.volume > 0);
   const totalArea = valid.reduce((s,b) => s + b.volume, 0);
   const avg = valid.length ? valid.reduce((s,b) => s + b.price, 0) / valid.length : null;
@@ -2033,6 +2119,7 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
   const summary = [
     ['Показатель', 'Значение'],
     ['Квартал', currentQuarter.label],
+    ['Срез', 'Продажа'],
     ['Зданий, шт.', inside.length],
     ['Лотов, шт.', totalLots],
     ['Площадь на продажу, кв.м', Math.round(totalArea)],
@@ -2064,7 +2151,7 @@ document.getElementById('exportXlsx').addEventListener('click', function() {
   XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(bldRows), 'Здания');
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(lotRows.length ? lotRows : [{'Лоты':'нет данных'}]), 'Лоты');
-  XLSX.writeFile(wb, `${drawnFileBase()}_${new Date().getFullYear()}.xlsx`);
+  XLSX.writeFile(wb, `${drawnFileBase()}_sale.xlsx`);
 });
 
 // ============================================================
