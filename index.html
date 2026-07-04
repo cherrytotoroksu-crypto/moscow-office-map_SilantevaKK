@@ -522,9 +522,7 @@
       <button class="modal-dl" id="dynDownload">⬇ Excel</button>
       <button class="modal-x" id="dynClose">&times;</button>
     </div>
-    <div id="dynRentNote" style="display:none;padding:6px 18px;background:#FEF3E2;color:#92450c;font-size:12px;border-bottom:1px solid #eee;">
-      ⚠ Исторических данных по ставке аренды по кварталам пока нет — показана динамика цены продажи.
-    </div>
+    <div id="dynRentNote" style="display:none;padding:6px 18px;background:#FEF3E2;color:#92450c;font-size:12px;border-bottom:1px solid #eee;"></div>
     <div class="modal-controls">
       <label>Уровень:
         <select id="dynLevel">
@@ -1085,6 +1083,7 @@ function normId(b) {
   return (b.name || b.name_orig || '').trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
+let allRentLots = {}; // qid -> { "Название здания": [ {area,rate,...}, ... ] }
 async function precomputeAll() {
   if (precomputed) return;
   // порядок кварталов от старых к новым
@@ -1102,6 +1101,11 @@ async function precomputeAll() {
       const nid = normId(b);
       if (!nid) continue;
       (buildById[nid] ||= {})[q.id] = b;
+    }
+    if (q.rent) {
+      try { allRentLots[q.id] = await (await fetch(q.rent)).json(); } catch(e) { allRentLots[q.id] = {}; }
+    } else {
+      allRentLots[q.id] = {};
     }
   }
   precomputed = true;
@@ -2213,6 +2217,7 @@ const DIV_LABELS = { zones:'Зоны', ao:'Округа', submarkets:'Субры
   bizFormed:'Дел. районы (сформир.)', bizForming:'Дел. районы (формир.)' };
 const METRIC_NAMES = { wavg:'Ср. взв. цена, руб/кв.м', avg:'Ср. цена, руб/кв.м',
   volume:'Объём, кв.м', count:'Кол-во объектов', price:'Цена, руб/кв.м', lots:'Лотов, шт.' };
+const METRIC_NAMES_RENT_BUILDING = { price:'Ставка, руб/кв.м/год', volume:'Площадь в аренду, кв.м', lots:'Лотов в аренде, шт.' };
 // На уровне одного здания wavg/avg/price — одно и то же число (b.price), поэтому
 // показываем только осмысленный для каждого уровня набор показателей.
 const DYN_METRIC_OPTIONS_DIVISION =
@@ -2220,15 +2225,20 @@ const DYN_METRIC_OPTIONS_DIVISION =
    <option value="avg">Ср. цена, руб/кв.м</option>
    <option value="volume">Объём, кв.м</option>
    <option value="count">Кол-во объектов</option>`;
-const DYN_METRIC_OPTIONS_BUILDING =
+const DYN_METRIC_OPTIONS_BUILDING_SALE =
   `<option value="price">Цена, руб/кв.м</option>
    <option value="volume">Объём, кв.м</option>
    <option value="lots">Лотов, шт.</option>`;
+const DYN_METRIC_OPTIONS_BUILDING_RENT =
+  `<option value="price">Ставка, руб/кв.м/год</option>
+   <option value="volume">Площадь в аренду, кв.м</option>
+   <option value="lots">Лотов в аренде, шт.</option>`;
 function syncDynMetricOptions() {
   const level = document.getElementById('dynLevel').value;
   const sel = document.getElementById('dynMetric');
   const prev = sel.value;
-  sel.innerHTML = level === 'building' ? DYN_METRIC_OPTIONS_BUILDING : DYN_METRIC_OPTIONS_DIVISION;
+  sel.innerHTML = level !== 'building' ? DYN_METRIC_OPTIONS_DIVISION
+    : (rentMode ? DYN_METRIC_OPTIONS_BUILDING_RENT : DYN_METRIC_OPTIONS_BUILDING_SALE);
   const values = [...sel.options].map(o => o.value);
   sel.value = values.includes(prev) ? prev : values[0];
 }
@@ -2249,6 +2259,19 @@ function bldVal(b, metric) {
   if (metric === 'lots') return b.lots || null;
   if (metric === 'count') return 1;
   return b.price || null; // wavg/avg/price → цена здания; 0 = нет данных/не в продаже, не реальная цена
+}
+// Динамика аренды по зданию: считаем из фактических лотов аренды за квартал qid.
+function bldRentVal(b, qid, metric) {
+  if (!b) return null;
+  const rentData = allRentLots[qid] || {};
+  const lots = rentData[b.name] || rentData[b.name_orig] || [];
+  if (metric === 'lots') return lots.length || null;
+  if (!lots.length) return null;
+  if (metric === 'volume') return lots.reduce((s,l)=>s+(l.area||0),0) || null;
+  const withRate = lots.filter(l=>l.rate);
+  if (!withRate.length) return null;
+  const totalArea = withRate.reduce((s,l)=>s+(l.area||0),0) || 1;
+  return withRate.reduce((s,l)=>s+l.rate*(l.area||0),0) / totalArea; // wavg/avg/price → ставка аренды
 }
 function fmtNum(n) { return (n==null||!isFinite(n)) ? '' : Math.round(n); }
 
@@ -2333,7 +2356,6 @@ window.openBuildingAnalytics = async function(idx) {
   document.getElementById('dynLevel').value = 'building';
   fillDynBuildingSelect('', normId(b));
   document.getElementById('dynBuildingSearch').value = '';
-  document.getElementById('dynRentNote').style.display = rentMode ? 'block' : 'none';
   document.getElementById('dynModalBg').classList.add('open');
   renderDynamics();
 };
@@ -2364,9 +2386,19 @@ function renderDynamics() {
   } else {
     const id = document.getElementById('dynBuilding').value;
     const name = (buildById[id] && Object.values(buildById[id])[0]?.name) || 'Здание';
+    const values = qs.map(q => {
+      const b = buildById[id]?.[q.id];
+      return rentMode ? bldRentVal(b, q.id, metric) : bldVal(b, metric);
+    });
     datasets.push({ label: name,
-      data: qs.map(q=>{ const v=bldVal(buildById[id]?.[q.id], metric); return v==null?null:Math.round(v); }),
+      data: values.map(v => v==null?null:Math.round(v)),
       borderColor: CHART_COLORS[0], backgroundColor:'rgba(124,58,237,0.1)', tension:0.2, spanGaps:true, fill:true });
+    // если у этого конкретного здания нет ни одной точки аренды — явно об этом сказать
+    const noRentData = rentMode && values.every(v => v==null);
+    document.getElementById('dynRentNote').textContent = noRentData
+      ? `⚠ У здания «${name}» нет данных аренды ни в одном из отслеживаемых кварталов.`
+      : '';
+    document.getElementById('dynRentNote').style.display = noRentData ? 'block' : 'none';
   }
   if (dynChart) dynChart.destroy();
   dynChart = new Chart(document.getElementById('dynChart'), {
@@ -2377,7 +2409,7 @@ function renderDynamics() {
       elements:{ point:{ radius:4, hoverRadius:7, hitRadius:10 } },
       plugins:{
         legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
-        title:{ display:true, text:METRIC_NAMES[metric] },
+        title:{ display:true, text:(level==='building' && rentMode ? METRIC_NAMES_RENT_BUILDING : METRIC_NAMES)[metric] },
         tooltip:{ callbacks:{ label:c=>`${c.dataset.label}: ${c.parsed.y!=null?c.parsed.y.toLocaleString('ru-RU'):'—'}` } }
       },
       // grace добавляет отступы сверху/снизу, чтобы крайние точки не упирались в край и были видны
