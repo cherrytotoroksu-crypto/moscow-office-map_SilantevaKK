@@ -522,6 +522,9 @@
       <button class="modal-dl" id="dynDownload">⬇ Excel</button>
       <button class="modal-x" id="dynClose">&times;</button>
     </div>
+    <div id="dynRentNote" style="display:none;padding:6px 18px;background:#FEF3E2;color:#92450c;font-size:12px;border-bottom:1px solid #eee;">
+      ⚠ Исторических данных по ставке аренды по кварталам пока нет — показана динамика цены продажи.
+    </div>
     <div class="modal-controls">
       <label>Уровень:
         <select id="dynLevel">
@@ -2318,6 +2321,7 @@ async function openDynamics() {
   buildDynBuildingList();
   fillDynBuildingSelect('');
   document.getElementById('dynBuildingSearch').value = '';
+  document.getElementById('dynRentNote').style.display = 'none';
   document.getElementById('dynModalBg').classList.add('open');
   renderDynamics();
 }
@@ -2329,6 +2333,7 @@ window.openBuildingAnalytics = async function(idx) {
   document.getElementById('dynLevel').value = 'building';
   fillDynBuildingSelect('', normId(b));
   document.getElementById('dynBuildingSearch').value = '';
+  document.getElementById('dynRentNote').style.display = rentMode ? 'block' : 'none';
   document.getElementById('dynModalBg').classList.add('open');
   renderDynamics();
 };
@@ -2342,6 +2347,7 @@ function renderDynamics() {
   const metric = document.getElementById('dynMetric').value;
   document.getElementById('dynDivWrap').style.display = level==='division' ? '' : 'none';
   document.getElementById('dynBldWrap').style.display = level==='building' ? '' : 'none';
+  if (level !== 'building') document.getElementById('dynRentNote').style.display = 'none';
   const qs = quartersChrono();
   const labels = qs.map(q=>q.label);
   let datasets = [];
