@@ -2223,10 +2223,10 @@ function divVal(qid, layer, name, metric) {
 }
 function bldVal(b, metric) {
   if (!b) return null;
-  if (metric === 'volume') return b.volume;
-  if (metric === 'lots') return b.lots ?? null;
+  if (metric === 'volume') return b.volume || null;
+  if (metric === 'lots') return b.lots || null;
   if (metric === 'count') return 1;
-  return b.price; // wavg/avg/price → цена здания
+  return b.price || null; // wavg/avg/price → цена здания; 0 = нет данных/не в продаже, не реальная цена
 }
 function fmtNum(n) { return (n==null||!isFinite(n)) ? '' : Math.round(n); }
 
