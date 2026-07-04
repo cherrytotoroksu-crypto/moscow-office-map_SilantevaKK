@@ -1381,22 +1381,10 @@ function renderBuildings() {
     if (!isFinite(b.lat) || !isFinite(b.lng)) return;
     const rentLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
     const hasRent = rentLots.length > 0;
-    // в режиме аренды: серые маркеры без данных, синие — с данными
-    let fillColor, fillOpacity;
-    if (rentMode) {
-      if (hasRent) {
-        const avgRate = rentLots.filter(l=>l.rate).reduce((s,l)=>s+l.rate*l.area,0) /
-                        (rentLots.filter(l=>l.rate).reduce((s,l)=>s+l.area,0)||1);
-        fillColor = avgRate > 70000 ? '#7c3aed' : avgRate > 50000 ? '#2563eb' : avgRate > 30000 ? '#0891b2' : '#0d9488';
-        fillOpacity = 0.9;
-      } else {
-        fillColor = '#9ca3af';
-        fillOpacity = 0.45;
-      }
-    } else {
-      fillColor = buildingColor(b.cls);
-      fillOpacity = 0.85;
-    }
+    // Цвет точки всегда по классу здания; цены/ставки показывает только градиент по районам.
+    // В режиме аренды прозрачностью отмечаем наличие данных аренды.
+    const fillColor = buildingColor(b.cls);
+    const fillOpacity = rentMode ? (hasRent ? 0.9 : 0.35) : 0.85;
     const marker = L.circleMarker([b.lat, b.lng], {
       radius: rentMode ? (hasRent ? buildingRadius(rentLots.reduce((s,l)=>s+l.area,0)) : 5) : buildingRadius(b.volume),
       fillColor, color: '#fff', weight: 1, opacity: 1, fillOpacity
@@ -1505,29 +1493,21 @@ function renderBuildingsLegend() {
 
   // классы, реально присутствующие в данных, в желаемом порядке
   const order = ['Prime', 'A+', 'A', 'B+', 'B', 'C'];
-  const classSource = rentMode
-    ? buildingsData.filter(b => (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
-    : buildingsData;
-  const present = order.filter(c => classSource.some(b => b.cls === c));
-  const others = [...new Set(classSource.map(b => b.cls).filter(c => c && !order.includes(c)))];
+  const present = order.filter(c => buildingsData.some(b => b.cls === c));
+  const others = [...new Set(buildingsData.map(b => b.cls).filter(c => c && !order.includes(c)))];
   const classes = [...present, ...others];
   const classRows = classes.map(c => {
-    const d = 12;
+    const d = 14;
     return `<div class="bl-item">
       <span class="bl-dot" style="width:${d}px;height:${d}px;background:${buildingColor(c)}"></span>
       <span>Класс ${c}</span></div>`;
   }).join('');
 
   if (rentMode) {
-    const rentItems = [
-      ['#7c3aed', '> 70 000'],
-      ['#2563eb', '50 000–70 000'],
-      ['#0891b2', '30 000–50 000'],
-      ['#0d9488', '< 30 000'],
-      ['#9ca3af', 'Нет данных аренды'],
-    ].map(([c, l]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${l}</span></div>`).join('');
-    el.innerHTML = `<h4>Аренда — ставка, руб/кв.м/год</h4>${rentItems}` +
-      (classes.length ? `<div class="sub">Здания — класс</div>${classRows}` : '');
+    el.innerHTML = `<h4>Здания — класс</h4>${classRows}` +
+      `<div class="sub">Прозрачность точки</div>` +
+      `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:#888;opacity:0.9"></span><span>Есть данные аренды</span></div>` +
+      `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:#888;opacity:0.35"></span><span>Нет данных аренды</span></div>`;
     el.style.display = 'block';
     repositionSignature();
     return;
