@@ -55,7 +55,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
       padding: 8px 12px;
-      width: 210px;
+      width: 240px;
       font-size: 12px;
       max-height: calc(100vh - 20px);
       overflow-y: auto;
@@ -237,9 +237,9 @@
     /* Тоггл режима продажа/аренда */
     #modeToggleWrap { display: flex; gap: 4px; margin-bottom: 2px; }
     .mode-btn {
-      flex: 1; padding: 6px 2px; border: 1.5px solid #d1d5db; border-radius: 6px;
-      background: #f9fafb; color: #374151; font-size: 11px; font-weight: 500;
-      cursor: pointer; transition: all .15s;
+      flex: 1; padding: 6px 1px; border: 1.5px solid #d1d5db; border-radius: 6px;
+      background: #f9fafb; color: #374151; font-size: 10.5px; font-weight: 500;
+      cursor: pointer; transition: all .15s; white-space: nowrap;
     }
     .mode-btn.active {
       background: #931F2B; border-color: #931F2B; color: #fff;
@@ -399,9 +399,9 @@
   <div id="fileStatus">Загрузка…</div>
   <div id="fileStats" style="display:none; margin-top:5px; padding-top:5px; border-top:1px solid #eee; grid-template-columns:1fr 1fr; gap:0 12px;">
     <div class="stat-row"><span>Объектов</span><span id="statCount">—</span></div>
-    <div class="stat-row"><span>Объём</span><span id="statVolume">—</span></div>
-    <div class="stat-row"><span>Ср. цена</span><span id="statAvgPrice">—</span></div>
-    <div class="stat-row"><span>Ср. взв.</span><span id="statWAvgPrice">—</span></div>
+    <div class="stat-row"><span id="statVolumeLabel">Объём</span><span id="statVolume">—</span></div>
+    <div class="stat-row"><span id="statAvgPriceLabel">Ср. цена</span><span id="statAvgPrice">—</span></div>
+    <div class="stat-row"><span id="statWAvgPriceLabel">Ср. взв.</span><span id="statWAvgPrice">—</span></div>
   </div>
 
   <hr>
@@ -432,7 +432,7 @@
   </div>
   <div id="rentFilterWrap" style="display:none;">
     <label class="check-row"><input type="checkbox" class="flt-rent" value="да" checked> В аренде</label>
-    <label class="check-row"><input type="checkbox" class="flt-rent" value="нет" checked> Не в аренде</label>
+    <label class="check-row"><input type="checkbox" class="flt-rent" value="нет"> Не в аренде</label>
   </div>
   <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
   </div>
@@ -721,7 +721,7 @@ let dataLoaded = false;
 // ============================================================
 let filterStatus = new Set(['Строится', 'Построен']);
 let filterOnSale  = new Set(['да', 'нет', '']);
-let filterOnRent  = new Set(['да', 'нет']);
+let filterOnRent  = new Set(['да']);
 
 // Есть ли данные аренды у здания. Если не указано иное — считаем, что аренды нет.
 function hasRentData(b) {
@@ -758,8 +758,7 @@ async function applyFilters() {
   await recomputeAll();
   await renderChoropleth();
   renderBuildings();
-  updateGlobalStats(getFilteredBuildings()
-    .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
+  updateGlobalStats(getStatsPoints(getFilteredBuildings()));
 }
 
 // Слои Leaflet
@@ -1346,23 +1345,43 @@ function parseGeoJSON(text) {
 // ============================================================
 //  СВОДНАЯ СТАТИСТИКА
 // ============================================================
-function updateGlobalStats(pts) {
-  if (!pts.length) return;
-  document.getElementById('statCount').textContent = fmt(pts.length);
-  if (rentMode) {
-    document.getElementById('statVolume').textContent = 'нет данных';
-    document.getElementById('statAvgPrice').textContent = 'нет данных';
-    document.getElementById('statWAvgPrice').textContent = 'нет данных';
-  } else {
-    const valid = pts.filter(p => isFinite(p.area) && isFinite(p.price) && p.area > 0);
-    const totalArea = valid.reduce((s, p) => s + p.area, 0);
-    const avgPrice = valid.length ? valid.reduce((s, p) => s + p.price, 0) / valid.length : NaN;
-    const wavgPrice = totalArea ? valid.reduce((s, p) => s + p.price * p.area, 0) / totalArea : NaN;
-    document.getElementById('statAvgPrice').textContent = fmt(Math.round(avgPrice));
-    document.getElementById('statWAvgPrice').textContent = fmt(Math.round(wavgPrice));
-    document.getElementById('statVolume').textContent = fmt(Math.round(totalArea));
+// Точки для сводной статистики: в продаже — объём/цена здания,
+// в аренде — площадь в аренду и средневзв. ставка по лотам аренды.
+function getStatsPoints(buildings) {
+  if (!rentMode) {
+    return buildings.map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price }));
   }
+  return buildings.map(b => {
+    const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+    const area = lots.reduce((s,l) => s + (l.area || 0), 0);
+    const withRate = lots.filter(l => l.rate);
+    const price = withRate.length
+      ? withRate.reduce((s,l) => s + l.rate * (l.area||0), 0) / (withRate.reduce((s,l) => s + (l.area||0), 0) || 1)
+      : NaN;
+    return { lat: b.lat, lng: b.lng, area, price };
+  });
+}
+
+function updateGlobalStats(pts) {
   document.getElementById('fileStats').style.display = 'grid';
+  document.getElementById('statVolumeLabel').textContent = rentMode ? 'Площ. в аренду' : 'Объём';
+  document.getElementById('statAvgPriceLabel').textContent = rentMode ? 'Ср. ставка' : 'Ср. цена';
+  document.getElementById('statWAvgPriceLabel').textContent = rentMode ? 'Ср. взв. ставка' : 'Ср. взв.';
+  if (!pts.length) {
+    document.getElementById('statCount').textContent = '0';
+    document.getElementById('statVolume').textContent = '—';
+    document.getElementById('statAvgPrice').textContent = '—';
+    document.getElementById('statWAvgPrice').textContent = '—';
+    return;
+  }
+  document.getElementById('statCount').textContent = fmt(pts.length);
+  const valid = pts.filter(p => isFinite(p.area) && isFinite(p.price) && p.area > 0);
+  const totalArea = valid.reduce((s, p) => s + p.area, 0);
+  const avgPrice = valid.length ? valid.reduce((s, p) => s + p.price, 0) / valid.length : NaN;
+  const wavgPrice = totalArea ? valid.reduce((s, p) => s + p.price * p.area, 0) / totalArea : NaN;
+  document.getElementById('statAvgPrice').textContent = isFinite(avgPrice) ? fmt(Math.round(avgPrice)) : '—';
+  document.getElementById('statWAvgPrice').textContent = isFinite(wavgPrice) ? fmt(Math.round(wavgPrice)) : '—';
+  document.getElementById('statVolume').textContent = totalArea ? fmt(Math.round(totalArea)) : '—';
 }
 
 // ============================================================
@@ -1532,8 +1551,8 @@ function renderBuildingsLegend() {
       <span>Класс ${c}</span></div>`;
   }).join('');
 
-  if (rentMode) {
-    el.innerHTML = `<h4>Здания — класс</h4>${classRows}`;
+  if (rentMode && Object.keys(rentLotsData).length === 0) {
+    el.innerHTML = `<h4>Здания — класс</h4><div style="color:#999;font-size:11px;">Нет данных аренды для этого квартала</div>`;
     el.style.display = 'block';
     repositionSignature();
     return;
@@ -1569,10 +1588,7 @@ async function loadBuildings() {
     const elModeRent  = document.getElementById('modeRent');
     if (elRentCount) elRentCount.textContent = rentCount;
     if (elRentQLabel) elRentQLabel.textContent = currentQuarter.label;
-    if (elModeRent) {
-      elModeRent.disabled = rentCount === 0;
-      elModeRent.title = rentCount === 0 ? 'Нет данных аренды для этого квартала' : '';
-    }
+    if (elModeRent) elModeRent.title = '';
     buildingPoints = data.map(b => ({
       lat: b.lat, lng: b.lng,
       area: b.volume, price: b.price
@@ -1580,7 +1596,7 @@ async function loadBuildings() {
     dataLoaded = true;
     status.textContent = `✓ ${currentQuarter.label}: ${data.length} зданий`;
     status.style.color = '#16a34a';
-    updateGlobalStats(getFilteredBuildings().map(b => ({ lat:b.lat, lng:b.lng, area:b.volume, price:b.price })));
+    updateGlobalStats(getStatsPoints(getFilteredBuildings()));
     updateFilterStats();
     await recomputeAll();
     assignGeo();
@@ -1633,12 +1649,11 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
   const q = QUARTERS.find(x => x.id === this.value);
   if (!q) return;
   currentQuarter = q;
-  // сбросить режим аренды если в новом квартале нет данных
-  if (rentMode && !q.rent) { setRentMode(false); }
   document.getElementById('fileStatus').textContent = 'Загрузка…';
   await loadBuildings();
   await renderChoropleth();
   await renderBuildings();
+  if (rentMode) renderBuildingsLegend();
 });
 
 // ============================================================
@@ -1947,8 +1962,7 @@ window.setMode = async function(mode) {
   updateFilterStats();
   renderBuildings();
   renderBuildingsLegend();
-  updateGlobalStats(getFilteredBuildings()
-    .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
+  updateGlobalStats(getStatsPoints(getFilteredBuildings()));
   await recomputeAll();
   await renderChoropleth();
 };
