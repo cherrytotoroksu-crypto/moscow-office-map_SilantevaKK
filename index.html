@@ -390,10 +390,11 @@
   </div>
   <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: <span id="rentQuarterLabel">—</span> · <span id="rentBldgCount">0</span> зданий</div>
 
-  <div id="salerentControls">
   <hr>
   <h3>Квартал</h3>
   <select id="quarterSelect"></select>
+
+  <div id="salerentControls">
 
   <hr>
   <h3>Данные</h3>
@@ -633,15 +634,15 @@
 //  и допиши строку в начало этого списка (новые сверху).
 // ============================================================
 const QUARTERS = [
-  { id: '202606', label: 'Q2 2026', file: 'data/buildings_202606.json', lots: 'data/lots_202606.json', rent: 'data/rent_lots_202606.json' },
-  { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', lots: 'data/lots_202603.json', rent: 'data/rent_lots_202603.json' },
-  { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json', rent: 'data/rent_lots_202512.json' },
-  { id: '202509', label: 'Q3 2025', file: 'data/buildings_202509.json', lots: 'data/lots_202509.json', rent: 'data/rent_lots_202509.json' },
-  { id: '202506', label: 'Q2 2025', file: 'data/buildings_202506.json', lots: 'data/lots_202506.json', rent: 'data/rent_lots_202506.json' },
-  { id: '202503', label: 'Q1 2025', file: 'data/buildings_202503.json', lots: 'data/lots_202503.json', rent: 'data/rent_lots_202503.json' },
-  { id: '202412', label: 'Q4 2024', file: 'data/buildings_202412.json', lots: 'data/lots_202412.json', rent: 'data/rent_lots_202412.json' },
-  { id: '202410', label: 'Q3 2024', file: 'data/buildings_202410.json', lots: 'data/lots_202410.json' },
-  { id: '202407', label: 'Q2 2024', file: 'data/buildings_202407.json', lots: 'data/lots_202407.json', rent: 'data/rent_lots_202407.json' },
+  { id: '202606', label: 'Q2 2026', file: 'data/buildings_202606.json', lots: 'data/lots_202606.json', rent: 'data/rent_lots_202606.json', coworking: 'data/coworking_202606.json' },
+  { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', lots: 'data/lots_202603.json', rent: 'data/rent_lots_202603.json', coworking: 'data/coworking_202603.json' },
+  { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json', rent: 'data/rent_lots_202512.json', coworking: 'data/coworking_202512.json' },
+  { id: '202509', label: 'Q3 2025', file: 'data/buildings_202509.json', lots: 'data/lots_202509.json', rent: 'data/rent_lots_202509.json', coworking: 'data/coworking_202509.json' },
+  { id: '202506', label: 'Q2 2025', file: 'data/buildings_202506.json', lots: 'data/lots_202506.json', rent: 'data/rent_lots_202506.json', coworking: 'data/coworking_202506.json' },
+  { id: '202503', label: 'Q1 2025', file: 'data/buildings_202503.json', lots: 'data/lots_202503.json', rent: 'data/rent_lots_202503.json', coworking: 'data/coworking_202503.json' },
+  { id: '202412', label: 'Q4 2024', file: 'data/buildings_202412.json', lots: 'data/lots_202412.json', rent: 'data/rent_lots_202412.json', coworking: 'data/coworking_202412.json' },
+  { id: '202410', label: 'Q3 2024', file: 'data/buildings_202410.json', lots: 'data/lots_202410.json', coworking: 'data/coworking_202410.json' },
+  { id: '202407', label: 'Q2 2024', file: 'data/buildings_202407.json', lots: 'data/lots_202407.json', rent: 'data/rent_lots_202407.json', coworking: 'data/coworking_202407.json' },
   { id: '202403', label: 'Q1 2024', file: 'data/buildings_202403.json', lots: 'data/lots_202403.json', rent: 'data/rent_lots_202403.json' },
   { id: '202311', label: 'Q4 2023', file: 'data/buildings_202311.json', lots: 'data/lots_202311.json', rent: 'data/rent_lots_202311.json' },
   { id: '202308', label: 'Q3 2023', file: 'data/buildings_202308.json', lots: 'data/lots_202308.json', rent: 'data/rent_lots_202308.json' },
@@ -1674,7 +1675,15 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
   if (!q) return;
   currentQuarter = q;
   document.getElementById('fileStatus').textContent = 'Загрузка…';
-  await loadBuildings();
+  await loadBuildings(); // обновляем buildingsData/rentLotsData в любом режиме, чтобы не было рассинхрона
+  if (coworkingMode) {
+    await loadCoworking();
+    renderCoworking();
+    renderCoworkingLegend();
+    await recomputeCoworkingAll();
+    await renderChoropleth();
+    return;
+  }
   await renderChoropleth();
   await renderBuildings();
   if (rentMode) renderBuildingsLegend();
@@ -1842,6 +1851,7 @@ window.openRentLotsModal = function(idx) {
 let coworkingMode = false;
 let coworkingData = [];
 let coworkingLoaded = false;
+let coworkingLoadedFor = null; // id квартала, для которого сейчас загружены coworkingData
 let coworkingLayer = null;
 
 function coworkingRateColor(rate) {
@@ -1868,16 +1878,27 @@ function updateCoworkingStatsUI() {
 }
 
 async function loadCoworking() {
-  if (coworkingLoaded) return;
+  if (coworkingLoaded && coworkingLoadedFor === currentQuarter.id) return;
   document.getElementById('cwStatus').textContent = 'Загрузка…';
+  if (!currentQuarter.coworking) {
+    coworkingData = [];
+    coworkingLoaded = true;
+    coworkingLoadedFor = currentQuarter.id;
+    document.getElementById('cwStatus').textContent = `Нет данных коворкингов для ${currentQuarter.label}`;
+    document.getElementById('cwStatus').style.color = '#999';
+    document.getElementById('cwStats').style.display = 'none';
+    return;
+  }
   try {
-    const resp = await fetch('data/coworking_202603.json');
+    const resp = await fetch(currentQuarter.coworking);
     coworkingData = await resp.json();
     coworkingLoaded = true;
-    document.getElementById('cwStatus').textContent = `✓ Q1 2026: ${coworkingData.length} площадок`;
+    coworkingLoadedFor = currentQuarter.id;
+    document.getElementById('cwStatus').textContent = `✓ ${currentQuarter.label}: ${coworkingData.length} площадок`;
     document.getElementById('cwStatus').style.color = '#16a34a';
     updateCoworkingStatsUI();
   } catch (e) {
+    coworkingData = [];
     document.getElementById('cwStatus').textContent = '✗ Не удалось загрузить данные коворкингов';
     document.getElementById('cwStatus').style.color = '#dc2626';
   }
