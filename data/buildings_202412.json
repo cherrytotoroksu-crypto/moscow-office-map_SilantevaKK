@@ -713,7 +713,7 @@
     "lots": 2
   },
   {
-    "name": "БЦ Twist",
+    "name": "Twist",
     "address": "Бутырская ул., 1",
     "developer": "Sminex",
     "status": "Строится",
@@ -732,7 +732,7 @@
     "lat": 55.793278,
     "lng": 37.585449,
     "id": 31,
-    "name_orig": "БЦ Twist",
+    "name_orig": "Twist",
     "lots": 21
   },
   {
