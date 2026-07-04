@@ -427,8 +427,8 @@
   <h3 id="saleRentFilterTitle" style="margin-top:5px;">Фильтр по продаже</h3>
   <div id="saleFilterWrap">
     <label class="check-row"><input type="checkbox" class="flt-sale" value="да" checked> В продаже</label>
-    <label class="check-row"><input type="checkbox" class="flt-sale" value="нет" checked> Не в продаже</label>
-    <label class="check-row"><input type="checkbox" class="flt-sale" value="" checked> Не указано</label>
+    <label class="check-row"><input type="checkbox" class="flt-sale" value="нет"> Не в продаже</label>
+    <label class="check-row"><input type="checkbox" class="flt-sale" value=""> Не указано</label>
   </div>
   <div id="rentFilterWrap" style="display:none;">
     <label class="check-row"><input type="checkbox" class="flt-rent" value="да" checked> В аренде</label>
@@ -720,7 +720,7 @@ let dataLoaded = false;
 //  ФИЛЬТРЫ
 // ============================================================
 let filterStatus = new Set(['Строится', 'Построен']);
-let filterOnSale  = new Set(['да', 'нет', '']);
+let filterOnSale  = new Set(['да']);
 let filterOnRent  = new Set(['да']);
 
 // Есть ли данные аренды у здания. Если не указано иное — считаем, что аренды нет.
