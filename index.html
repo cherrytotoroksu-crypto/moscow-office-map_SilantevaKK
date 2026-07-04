@@ -506,6 +506,10 @@
       <button class="modal-dl" id="lotsModalDownload">⬇ Скачать Excel</button>
       <button class="modal-x" id="lotsModalClose">&times;</button>
     </div>
+    <div id="rentFinishFilterWrap" style="display:none; padding:8px 18px; border-bottom:1px solid #eee; font-size:12px;">
+      <span style="color:#888; margin-right:8px;">Отделка:</span>
+      <span id="rentFinishFilterItems"></span>
+    </div>
     <div class="modal-body" id="lotsModalBody"></div>
   </div>
 </div>
@@ -1745,22 +1749,50 @@ document.getElementById('lotsModalClose').addEventListener('click', closeLotsMod
 // ============================================================
 //  МОДАЛКА АРЕНДЫ
 // ============================================================
-window.openRentLotsModal = function(idx) {
-  const b = buildingsData[idx]; if (!b) return;
-  currentLotsBuilding = b;
-  const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
-  document.getElementById('lotsModalTitle').textContent = b.name + ' — Аренда';
+let filterRentFinish = new Set();
+function renderRentLotsTable() {
+  const b = currentLotsBuilding; if (!b) return;
+  const allLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+  const lots = allLots.filter(l => filterRentFinish.has(l.finish || 'не указано'));
   document.getElementById('lotsModalSub').textContent =
-    `Данные аренды: ${currentQuarter.label} · лотов: ${lots.length}` + (b.address ? ` · ${b.address}` : '');
-  const head = `<tr><th>Наименование</th><th>Этаж</th><th>Площадь, кв.м</th><th>Ставка, руб/кв.м/год</th><th>ОР, руб/кв.м</th><th>НДС</th><th>Размер</th></tr>`;
+    `Данные аренды: ${currentQuarter.label} · лотов: ${lots.length} из ${allLots.length}` + (b.address ? ` · ${b.address}` : '');
+  const head = `<tr><th>Наименование</th><th>Этаж</th><th>Площадь, кв.м</th><th>Ставка, руб/кв.м/год</th><th>ОР, руб/кв.м</th><th>НДС</th><th>Отделка</th><th>Размер</th></tr>`;
   const body = lots.map(l => `<tr>
     <td>${l.block || '—'}</td><td>${l.floor || '—'}</td>
     <td>${l.area != null ? fmt(l.area) : '—'}</td>
     <td>${l.rate ? fmt(Math.round(l.rate)) : '—'}</td>
     <td>${l.opex ? fmt(Math.round(l.opex)) : '—'}</td>
-    <td>${l.nds || '—'}</td><td>${l.size || '—'}</td></tr>`).join('');
+    <td>${l.nds || '—'}</td><td>${l.finish || '—'}</td><td>${l.size || '—'}</td></tr>`).join('');
   document.getElementById('lotsModalBody').innerHTML =
     `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+}
+
+window.openRentLotsModal = function(idx) {
+  const b = buildingsData[idx]; if (!b) return;
+  currentLotsBuilding = b;
+  const allLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+  document.getElementById('lotsModalTitle').textContent = b.name + ' — Аренда';
+
+  // Фильтр по отделке — список значений, реально встречающихся у этого здания
+  const finishValues = [...new Set(allLots.map(l => l.finish || 'не указано'))];
+  filterRentFinish = new Set(finishValues);
+  const filterWrap = document.getElementById('rentFinishFilterWrap');
+  if (finishValues.length > 1) {
+    document.getElementById('rentFinishFilterItems').innerHTML = finishValues.map(v =>
+      `<label style="margin-right:12px; cursor:pointer;"><input type="checkbox" class="rent-finish-cb" value="${v}" checked> ${v}</label>`
+    ).join('');
+    filterWrap.style.display = 'block';
+    document.querySelectorAll('.rent-finish-cb').forEach(cb => {
+      cb.addEventListener('change', function() {
+        if (this.checked) filterRentFinish.add(this.value); else filterRentFinish.delete(this.value);
+        renderRentLotsTable();
+      });
+    });
+  } else {
+    filterWrap.style.display = 'none';
+  }
+
+  renderRentLotsTable();
   lotsModalIsRent = true;
   document.getElementById('lotsModalBg').classList.add('open');
 };
@@ -1929,13 +1961,14 @@ document.getElementById('lotsModalDownload').addEventListener('click', function(
   const b = currentLotsBuilding; if (!b) return;
   let rows, fname;
   if (lotsModalIsRent) {
-    const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+    const allLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+    const lots = allLots.filter(l => filterRentFinish.has(l.finish || 'не указано'));
     rows = lots.map(l => ({
       'Наименование': l.block, 'Этаж': l.floor, 'Площадь, кв.м': l.area,
       'Ставка аренды, руб/кв.м/год': l.rate,
-      'ОР, руб/кв.м': l.opex, 'НДС': l.nds, 'Размер блока': l.size
+      'ОР, руб/кв.м': l.opex, 'НДС': l.nds, 'Отделка': l.finish, 'Размер блока': l.size
     }));
-    fname = `${translit(b.name)}_аренда_202606.xlsx`;
+    fname = `${translit(b.name)}_аренда_${currentQuarter.id}.xlsx`;
   } else {
     const lots = lotsData[b.name] || lotsData[b.name_orig] || [];
     rows = lots.map(l => ({
