@@ -424,10 +424,16 @@
   <h3>Фильтр по статусу</h3>
   <label class="check-row"><input type="checkbox" class="flt-status" value="Строится" checked> Строится</label>
   <label class="check-row"><input type="checkbox" class="flt-status" value="Построен" checked> Введён в эксплуатацию</label>
-  <h3 style="margin-top:5px;">Фильтр по продаже</h3>
-  <label class="check-row"><input type="checkbox" class="flt-sale" value="да" checked> В продаже</label>
-  <label class="check-row"><input type="checkbox" class="flt-sale" value="нет" checked> Не в продаже</label>
-  <label class="check-row"><input type="checkbox" class="flt-sale" value="" checked> Не указано</label>
+  <h3 id="saleRentFilterTitle" style="margin-top:5px;">Фильтр по продаже</h3>
+  <div id="saleFilterWrap">
+    <label class="check-row"><input type="checkbox" class="flt-sale" value="да" checked> В продаже</label>
+    <label class="check-row"><input type="checkbox" class="flt-sale" value="нет" checked> Не в продаже</label>
+    <label class="check-row"><input type="checkbox" class="flt-sale" value="" checked> Не указано</label>
+  </div>
+  <div id="rentFilterWrap" style="display:none;">
+    <label class="check-row"><input type="checkbox" class="flt-rent" value="да" checked> В аренде</label>
+    <label class="check-row"><input type="checkbox" class="flt-rent" value="нет" checked> Не в аренде</label>
+  </div>
   <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
   </div>
 
@@ -442,6 +448,10 @@
       <div class="stat-row"><span>Ср. ставка/мес</span><span id="cwAvgRate">—</span></div>
     </div>
     <label class="check-row" style="margin-top:8px;"><input type="checkbox" id="ovCoworking" checked> Показать коворкинги</label>
+    <h3 style="margin-top:8px;">Фильтр по ставке</h3>
+    <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="да" checked> Со ставкой</label>
+    <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="нет" checked> Без ставки</label>
+    <div id="cwFilterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
   </div>
 
   <hr>
@@ -707,6 +717,12 @@ let dataLoaded = false;
 // ============================================================
 let filterStatus = new Set(['Строится', 'Построен']);
 let filterOnSale  = new Set(['да', 'нет', '']);
+let filterOnRent  = new Set(['да', 'нет']);
+
+// Есть ли данные аренды у здания. Если не указано иное — считаем, что аренды нет.
+function hasRentData(b) {
+  return (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0;
+}
 
 function getFilteredBuildings() {
   return buildingsData.filter(b => {
@@ -715,9 +731,13 @@ function getFilteredBuildings() {
     if (filterStatus.has('Строится') && (st === 'Строится' || st === 'Строится/Построен')) statusOk = true;
     if (filterStatus.has('Построен') && (st === 'Построен' || st === 'Строится/Построен')) statusOk = true;
     if (!statusOk && filterStatus.has(st)) statusOk = true; // прочие/неизвестные
+    if (!statusOk) return false;
+    if (rentMode) {
+      return filterOnRent.has(hasRentData(b) ? 'да' : 'нет');
+    }
     const sale = (b.on_sale || '').trim().toLowerCase() === 'да' ? 'да'
                : (b.on_sale || '').trim().toLowerCase() === 'нет' ? 'нет' : '';
-    return statusOk && filterOnSale.has(sale);
+    return filterOnSale.has(sale);
   });
 }
 
@@ -735,7 +755,6 @@ async function applyFilters() {
   await renderChoropleth();
   renderBuildings();
   updateGlobalStats(getFilteredBuildings()
-    .filter(b => !rentMode || (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
     .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
 }
 
@@ -992,6 +1011,12 @@ async function recomputeAll() {
   }
 }
 
+// Фильтр по наличию ставки. Если ставка не указана — считаем, что данных нет.
+let filterCwRate = new Set(['да', 'нет']);
+function getFilteredCoworking() {
+  return coworkingData.filter(c => filterCwRate.has(c.rate != null && isFinite(c.rate) ? 'да' : 'нет'));
+}
+
 // ── Статистика коворкингов по геослоям (point-in-polygon) ──
 function computeCoworkingStats(layerKey, geojson) {
   const cfg = LAYER_CFG[layerKey];
@@ -1000,7 +1025,7 @@ function computeCoworkingStats(layerKey, geojson) {
     const name = f.properties[cfg.nameField];
     result[name] = { sumRateSeats: 0, sumSeats: 0, sumRate: 0, validRate: 0, count: 0, vacancy: 0, seats: 0 };
   }
-  for (const c of coworkingData) {
+  for (const c of getFilteredCoworking()) {
     if (!isFinite(c.lat) || !isFinite(c.lng)) continue;
     let name = null;
     for (const f of geojson.features) {
@@ -1382,9 +1407,9 @@ function renderBuildings() {
     const rentLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
     const hasRent = rentLots.length > 0;
     // Цвет точки всегда по классу здания; цены/ставки показывает только градиент по районам.
-    // В режиме аренды прозрачностью отмечаем наличие данных аренды.
+    // Наличие данных аренды регулируется фильтром «В аренде / Не в аренде», а не прозрачностью.
     const fillColor = buildingColor(b.cls);
-    const fillOpacity = rentMode ? (hasRent ? 0.9 : 0.35) : 0.85;
+    const fillOpacity = 0.85;
     const marker = L.circleMarker([b.lat, b.lng], {
       radius: rentMode ? (hasRent ? buildingRadius(rentLots.reduce((s,l)=>s+l.area,0)) : 5) : buildingRadius(b.volume),
       fillColor, color: '#fff', weight: 1, opacity: 1, fillOpacity
@@ -1504,10 +1529,7 @@ function renderBuildingsLegend() {
   }).join('');
 
   if (rentMode) {
-    el.innerHTML = `<h4>Здания — класс</h4>${classRows}` +
-      `<div class="sub">Прозрачность точки</div>` +
-      `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:#888;opacity:0.9"></span><span>Есть данные аренды</span></div>` +
-      `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:#888;opacity:0.35"></span><span>Нет данных аренды</span></div>`;
+    el.innerHTML = `<h4>Здания — класс</h4>${classRows}`;
     el.style.display = 'block';
     repositionSignature();
     return;
@@ -1664,6 +1686,12 @@ document.querySelectorAll('.flt-sale').forEach(cb => {
     applyFilters();
   });
 });
+document.querySelectorAll('.flt-rent').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) filterOnRent.add(this.value); else filterOnRent.delete(this.value);
+    applyFilters();
+  });
+});
 
 // ============================================================
 //  ТРАНСЛИТЕРАЦИЯ И СКАЧИВАНИЕ
@@ -1751,6 +1779,21 @@ function coworkingRateColor(rate) {
   return '#0d9488';
 }
 
+function updateCoworkingStatsUI() {
+  const filtered = getFilteredCoworking();
+  const withRate = filtered.filter(c => c.rate != null);
+  const totalSeats = filtered.reduce((s,c)=>s+(c.seats||0),0);
+  const totalVac   = filtered.reduce((s,c)=>s+(c.vacancy||0),0);
+  const avgRate = withRate.length ? withRate.reduce((s,c)=>s+c.rate,0)/withRate.length : null;
+  document.getElementById('cwCount').textContent = fmt(filtered.length);
+  document.getElementById('cwSeats').textContent = fmt(Math.round(totalSeats));
+  document.getElementById('cwVacancy').textContent = fmt(Math.round(totalVac));
+  document.getElementById('cwAvgRate').textContent = avgRate != null ? fmt(Math.round(avgRate)) : '—';
+  document.getElementById('cwStats').style.display = 'grid';
+  document.getElementById('cwFilterStats').textContent =
+    filtered.length === coworkingData.length ? '' : `Показано: ${filtered.length} из ${coworkingData.length}`;
+}
+
 async function loadCoworking() {
   if (coworkingLoaded) return;
   document.getElementById('cwStatus').textContent = 'Загрузка…';
@@ -1758,27 +1801,33 @@ async function loadCoworking() {
     const resp = await fetch('data/coworking_202603.json');
     coworkingData = await resp.json();
     coworkingLoaded = true;
-    const withRate = coworkingData.filter(c => c.rate != null);
-    const totalSeats = coworkingData.reduce((s,c)=>s+(c.seats||0),0);
-    const totalVac   = coworkingData.reduce((s,c)=>s+(c.vacancy||0),0);
-    const avgRate = withRate.length ? withRate.reduce((s,c)=>s+c.rate,0)/withRate.length : null;
     document.getElementById('cwStatus').textContent = `✓ Q1 2026: ${coworkingData.length} площадок`;
     document.getElementById('cwStatus').style.color = '#16a34a';
-    document.getElementById('cwCount').textContent = fmt(coworkingData.length);
-    document.getElementById('cwSeats').textContent = fmt(Math.round(totalSeats));
-    document.getElementById('cwVacancy').textContent = fmt(Math.round(totalVac));
-    document.getElementById('cwAvgRate').textContent = avgRate != null ? fmt(Math.round(avgRate)) : '—';
-    document.getElementById('cwStats').style.display = 'grid';
+    updateCoworkingStatsUI();
   } catch (e) {
     document.getElementById('cwStatus').textContent = '✗ Не удалось загрузить данные коворкингов';
     document.getElementById('cwStatus').style.color = '#dc2626';
   }
 }
 
+async function applyCoworkingFilters() {
+  if (!coworkingLoaded) return;
+  updateCoworkingStatsUI();
+  renderCoworking();
+  await recomputeCoworkingAll();
+  await renderChoropleth();
+}
+document.querySelectorAll('.flt-cw-rate').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) filterCwRate.add(this.value); else filterCwRate.delete(this.value);
+    applyCoworkingFilters();
+  });
+});
+
 function renderCoworking() {
   if (coworkingLayer) map.removeLayer(coworkingLayer);
   coworkingLayer = L.layerGroup();
-  coworkingData.forEach(c => {
+  getFilteredCoworking().forEach(c => {
     if (!isFinite(c.lat) || !isFinite(c.lng)) return;
     const color = coworkingRateColor(c.rate);
     const marker = L.circleMarker([c.lat, c.lng], {
@@ -1841,6 +1890,9 @@ window.setMode = async function(mode) {
   document.getElementById('rentNote').style.display = mode === 'rent' ? 'block' : 'none';
   document.getElementById('salerentControls').style.display = coworkingMode ? 'none' : 'block';
   document.getElementById('coworkingControls').style.display = coworkingMode ? 'block' : 'none';
+  document.getElementById('saleRentFilterTitle').textContent = rentMode ? 'Фильтр по аренде' : 'Фильтр по продаже';
+  document.getElementById('saleFilterWrap').style.display = rentMode ? 'none' : 'block';
+  document.getElementById('rentFilterWrap').style.display = rentMode ? 'block' : 'none';
 
   const metricSelect = document.getElementById('metricSelect');
   metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
@@ -1858,10 +1910,10 @@ window.setMode = async function(mode) {
   }
 
   if (coworkingLayer && map.hasLayer(coworkingLayer)) map.removeLayer(coworkingLayer);
+  updateFilterStats();
   renderBuildings();
   renderBuildingsLegend();
   updateGlobalStats(getFilteredBuildings()
-    .filter(b => !rentMode || (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0)
     .map(b => ({ lat: b.lat, lng: b.lng, area: b.volume, price: b.price })));
   await recomputeAll();
   await renderChoropleth();
