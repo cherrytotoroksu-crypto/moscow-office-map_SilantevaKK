@@ -22,6 +22,7 @@
       position: absolute;
       bottom: 24px; left: 212px;
       z-index: 900;
+      transition: left .1s;
       display: flex; align-items: center; gap: 6px;
       max-width: none;
       font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
@@ -1264,6 +1265,7 @@ function updateLegend(scale) {
   const gradColors = ['#FFFBE0','#FBAA4C','#931F2B'];
   document.getElementById('legendGradient').style.background =
     `linear-gradient(to right, ${gradColors.join(',')})`;
+  repositionSignature();
 }
 
 // ============================================================
@@ -1479,23 +1481,39 @@ function renderBuildings() {
 }
 
 // Легенда зданий: классы (цвет) + объём (размер)
+// Подпись автора стоит правее блока легенд — пересчитываем её отступ
+// по фактической (динамической) ширине левого стека, чтобы плашки не наезжали друг на друга.
+function repositionSignature() {
+  const stack = document.querySelector('.left-stack');
+  const sig = document.querySelector('.author-signature');
+  if (!stack || !sig) return;
+  requestAnimationFrame(() => {
+    const rect = stack.getBoundingClientRect();
+    const left = rect.width > 0 ? rect.right + 10 : 212;
+    sig.style.left = left + 'px';
+  });
+}
+window.addEventListener('resize', repositionSignature);
+
 function renderBuildingsLegend() {
   const el = document.getElementById('buildingsLegend');
   if (!document.getElementById('ovBuildings').checked || !buildingsData.length) {
     el.style.display = 'none';
+    repositionSignature();
     return;
   }
 
   if (rentMode) {
     const rentItems = [
-      ['#7c3aed', '> 70 000 руб/кв.м/год'],
+      ['#7c3aed', '> 70 000'],
       ['#2563eb', '50 000–70 000'],
       ['#0891b2', '30 000–50 000'],
       ['#0d9488', '< 30 000'],
       ['#9ca3af', 'Нет данных аренды'],
     ].map(([c, l]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${l}</span></div>`).join('');
-    el.innerHTML = `<h4>Аренда — ставка</h4>${rentItems}`;
+    el.innerHTML = `<h4>Аренда — ставка, руб/кв.м/год</h4>${rentItems}`;
     el.style.display = 'block';
+    repositionSignature();
     return;
   }
 
@@ -1514,6 +1532,7 @@ function renderBuildingsLegend() {
 
   el.innerHTML = `<h4>Здания — класс</h4>${colorRows}`;
   el.style.display = 'block';
+  repositionSignature();
 }
 
 // ============================================================
@@ -1802,14 +1821,15 @@ function renderCoworking() {
 function renderCoworkingLegend() {
   const el = document.getElementById('buildingsLegend');
   const items = [
-    ['#7c3aed', '> 70 000 руб/мес'],
+    ['#7c3aed', '> 70 000'],
     ['#2563eb', '50 000–70 000'],
     ['#0891b2', '30 000–50 000'],
     ['#0d9488', '< 30 000'],
     ['#9ca3af', 'Нет данных о ставке'],
   ].map(([c, l]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${l}</span></div>`).join('');
-  el.innerHTML = `<h4>Коворкинги — ставка/мес</h4>${items}`;
+  el.innerHTML = `<h4>Коворкинги — ставка, руб/мес</h4>${items}`;
   el.style.display = 'block';
+  repositionSignature();
 }
 
 document.getElementById('ovCoworking').addEventListener('change', renderCoworking);
