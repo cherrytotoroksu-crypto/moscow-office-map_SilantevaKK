@@ -213,7 +213,7 @@
     .lots-table td:first-child, .lots-table th:first-child { text-align: left; }
 
     /* Поиск по зданиям (верхний левый угол) */
-    .map-search { position: absolute; top: 10px; left: 52px; z-index: 1100; width: 340px; }
+    .map-search { position: absolute; top: 10px; left: 52px; z-index: 1100; width: 380px; }
     .map-search .search-icon {
       position: absolute; left: 9px; top: 50%; transform: translateY(-50%);
       width: 18px; height: 18px; pointer-events: none; z-index: 1;
@@ -524,6 +524,13 @@
       <button class="modal-x" id="dynClose">&times;</button>
     </div>
     <div id="dynRentNote" style="display:none;padding:6px 18px;background:#FEF3E2;color:#92450c;font-size:12px;border-bottom:1px solid #eee;"></div>
+    <div style="padding:10px 18px 0;">
+      <div id="dynModeToggleWrap" style="display:flex;gap:4px;max-width:340px;">
+        <button class="mode-btn" id="dynModeSale" onclick="setDynMode('sale')">Продажа</button>
+        <button class="mode-btn" id="dynModeRent" onclick="setDynMode('rent')">Аренда</button>
+        <button class="mode-btn" id="dynModeCoworking" disabled title="Данные скоро появятся" style="opacity:.5;cursor:not-allowed;">Коворкинги</button>
+      </div>
+    </div>
     <div class="modal-controls">
       <label>Уровень:
         <select id="dynLevel">
@@ -2349,12 +2356,23 @@ function fillDynBuildingSelect(query, keepId) {
 }
 
 let dynChart = null;
+function syncDynModeButtons() {
+  document.getElementById('dynModeSale').classList.toggle('active', !rentMode);
+  document.getElementById('dynModeRent').classList.toggle('active', rentMode);
+}
+// переключатель Продажа/Аренда внутри модалки «Динамика» — переиспользует общий setMode
+window.setDynMode = async function(mode) {
+  await setMode(mode);
+  syncDynModeButtons();
+  renderDynamics();
+};
 async function openDynamics() {
   await precomputeAll();
   buildDynBuildingList();
   fillDynBuildingSelect('');
   document.getElementById('dynBuildingSearch').value = '';
   document.getElementById('dynRentNote').style.display = 'none';
+  syncDynModeButtons();
   document.getElementById('dynModalBg').classList.add('open');
   renderDynamics();
 }
@@ -2366,6 +2384,7 @@ window.openBuildingAnalytics = async function(idx) {
   document.getElementById('dynLevel').value = 'building';
   fillDynBuildingSelect('', normId(b));
   document.getElementById('dynBuildingSearch').value = '';
+  syncDynModeButtons();
   document.getElementById('dynModalBg').classList.add('open');
   renderDynamics();
 };
