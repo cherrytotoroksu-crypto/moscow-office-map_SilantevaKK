@@ -732,7 +732,7 @@
     "lat": 55.797025,
     "lng": 37.595362,
     "id": 17,
-    "name_orig": "STONE Cавеловская",
+    "name_orig": "STONE Савеловская",
     "lots": 11
   },
   {
@@ -851,7 +851,7 @@
     "lots": 4
   },
   {
-    "name": "STONE Мневники",
+    "name": "STONE Мневники II",
     "address": "Москва, ул. Нижние Мнёвники, з/у 41",
     "developer": "STONE",
     "status": "Строится",
@@ -870,7 +870,7 @@
     "lat": 55.754038,
     "lng": 37.456532,
     "id": 57,
-    "name_orig": "STONE Мневники",
+    "name_orig": "STONE Мневники II",
     "lots": 38
   },
   {
