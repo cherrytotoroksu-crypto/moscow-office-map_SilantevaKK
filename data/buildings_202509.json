@@ -1495,7 +1495,7 @@
     "lots": 0
   },
   {
-    "name": "МФК North Wind",
+    "name": "МФК Юг",
     "address": "Москва, 2-й Хорошевский проезд, 7",
     "developer": "Sezar Group",
     "status": "Строится",
@@ -1514,7 +1514,7 @@
     "lat": 55.772292,
     "lng": 37.534881,
     "id": 95,
-    "name_orig": "МФК North Wind",
+    "name_orig": "МФК Юг",
     "lots": 12
   },
   {
