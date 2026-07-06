@@ -1853,6 +1853,8 @@ let coworkingData = [];
 let coworkingLoaded = false;
 let coworkingLoadedFor = null; // id квартала, для которого сейчас загружены coworkingData
 let coworkingLayer = null;
+let coworkingMarkers = {};   // idx -> circleMarker (для поиска/перелёта)
+let coworkingRendered = [];  // отрисованный (отфильтрованный) список — индексы совпадают с coworkingMarkers
 
 function coworkingRateColor(rate) {
   if (rate == null || !isFinite(rate)) return '#9ca3af';
@@ -1921,7 +1923,9 @@ document.querySelectorAll('.flt-cw-rate').forEach(cb => {
 function renderCoworking() {
   if (coworkingLayer) map.removeLayer(coworkingLayer);
   coworkingLayer = L.layerGroup();
-  getFilteredCoworking().forEach(c => {
+  coworkingMarkers = {};
+  coworkingRendered = getFilteredCoworking();
+  coworkingRendered.forEach((c, idx) => {
     if (!isFinite(c.lat) || !isFinite(c.lng)) return;
     const color = coworkingRateColor(c.rate);
     const marker = L.circleMarker([c.lat, c.lng], {
@@ -1940,6 +1944,7 @@ function renderCoworking() {
     marker.bindPopup(html);
     marker.bindTooltip(c.name || '', { direction: 'top' });
     coworkingLayer.addLayer(marker);
+    coworkingMarkers[idx] = marker;
   });
   if (document.getElementById('ovCoworking').checked) coworkingLayer.addTo(map);
 }
@@ -1992,6 +1997,13 @@ window.setMode = async function(mode) {
   metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
   currentMetric = coworkingMode ? 'wavgRate' : 'wavg';
   metricSelect.value = currentMetric;
+
+  // поиск: в режиме коворкингов ищем по коворкингам
+  const ms = document.getElementById('mapSearch');
+  ms.placeholder = coworkingMode ? 'Поиск коворкинга — карта приблизится…' : 'Поиск здания — карта приблизится…';
+  ms.value = '';
+  const msr = document.getElementById('mapSearchResults');
+  msr.classList.remove('open'); msr.innerHTML = '';
 
   if (coworkingMode) {
     if (buildingsLayer && map.hasLayer(buildingsLayer)) map.removeLayer(buildingsLayer);
@@ -2606,6 +2618,22 @@ function flyToBuilding(idx) {
     else m.openPopup();
   });
 }
+function flyToCoworking(idx) {
+  const c = coworkingRendered[idx];
+  if (!c || !isFinite(c.lat) || !isFinite(c.lng)) return;
+  document.getElementById('mapSearchResults').classList.remove('open');
+  document.getElementById('mapSearch').value = c.name || '';
+  // включить слой коворкингов, если выключен
+  if (!document.getElementById('ovCoworking').checked) {
+    document.getElementById('ovCoworking').checked = true;
+    renderCoworking();
+  }
+  map.flyTo([c.lat, c.lng], 16, { duration: 0.8 });
+  map.once('moveend', () => {
+    const m = coworkingMarkers[idx];
+    if (m) m.openPopup();
+  });
+}
 const msInput = document.getElementById('mapSearch');
 const msBox = document.getElementById('mapSearchResults');
 msInput.addEventListener('input', function() {
@@ -2613,25 +2641,32 @@ msInput.addEventListener('input', function() {
   if (!q) { msBox.classList.remove('open'); msBox.innerHTML = ''; return; }
   const variants = [q, translit(q), latToCyr(q)];
   const matches = [];
-  buildingsData.forEach((b, idx) => {
-    if (!isFinite(b.lat)) return;
-    const key = buildingSearchKey(b.name);
-    if (variants.some(v => key.includes(v))) matches.push({ idx, b });
-  });
+  if (coworkingMode) {
+    coworkingRendered.forEach((c, idx) => {
+      if (!isFinite(c.lat)) return;
+      const key = buildingSearchKey([c.name, c.network, c.bc, c.address].filter(Boolean).join(' '));
+      if (variants.some(v => key.includes(v))) matches.push({ idx, kind: 'cw', name: c.name || 'Коворкинг', sub: c.bc || c.address || '' });
+    });
+  } else {
+    buildingsData.forEach((b, idx) => {
+      if (!isFinite(b.lat)) return;
+      const key = buildingSearchKey(b.name);
+      if (variants.some(v => key.includes(v))) matches.push({ idx, kind: 'b', name: b.name, sub: b.address || '' });
+    });
+  }
   msBox.innerHTML = matches.map(m =>
-    `<div class="msr-item" data-idx="${m.idx}">${m.b.name}<div class="msr-sub">${m.b.address||''}</div></div>`
+    `<div class="msr-item" data-idx="${m.idx}" data-kind="${m.kind}">${m.name}<div class="msr-sub">${m.sub}</div></div>`
   ).join('') || '<div class="msr-item" style="color:#999">Ничего не найдено</div>';
   msBox.classList.add('open');
 });
-msBox.addEventListener('click', e => {
-  const it = e.target.closest('.msr-item');
-  if (it && it.dataset.idx != null) flyToBuilding(+it.dataset.idx);
-});
+function msGo(it) {
+  if (!it || it.dataset.idx == null) return;
+  if (it.dataset.kind === 'cw') flyToCoworking(+it.dataset.idx);
+  else flyToBuilding(+it.dataset.idx);
+}
+msBox.addEventListener('click', e => msGo(e.target.closest('.msr-item')));
 msInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter') {
-    const first = msBox.querySelector('.msr-item[data-idx]');
-    if (first) flyToBuilding(+first.dataset.idx);
-  }
+  if (e.key === 'Enter') msGo(msBox.querySelector('.msr-item[data-idx]'));
 });
 document.addEventListener('click', e => {
   if (!e.target.closest('.map-search')) msBox.classList.remove('open');
