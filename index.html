@@ -529,7 +529,7 @@
       <div id="dynModeToggleWrap" style="display:flex;gap:4px;max-width:340px;">
         <button class="mode-btn" id="dynModeSale" onclick="setDynMode('sale')">Продажа</button>
         <button class="mode-btn" id="dynModeRent" onclick="setDynMode('rent')">Аренда</button>
-        <button class="mode-btn" id="dynModeCoworking" disabled title="Данные скоро появятся" style="opacity:.5;cursor:not-allowed;">Коворкинги</button>
+        <button class="mode-btn" id="dynModeCoworking" onclick="setDynMode('coworking')">Коворкинги</button>
       </div>
     </div>
     <div class="modal-controls">
@@ -1093,6 +1093,7 @@ function normId(b) {
 }
 
 let allRentLots = {}; // qid -> { "Название здания": [ {area,rate,...}, ... ] }
+let allCoworking = {}; // qid -> [ {name,network,bc,seats,vacancy,rate,lat,lng}, ... ]
 async function precomputeAll() {
   if (precomputed) return;
   // порядок кварталов от старых к новым
@@ -1115,6 +1116,11 @@ async function precomputeAll() {
       try { allRentLots[q.id] = await (await fetch(q.rent)).json(); } catch(e) { allRentLots[q.id] = {}; }
     } else {
       allRentLots[q.id] = {};
+    }
+    if (q.coworking) {
+      try { allCoworking[q.id] = await (await fetch(q.coworking)).json(); } catch(e) { allCoworking[q.id] = []; }
+    } else {
+      allCoworking[q.id] = [];
     }
   }
   precomputed = true;
@@ -1446,6 +1452,7 @@ function renderBuildings() {
   buildingMarkers = {};
   const filteredSet = new Set(getFilteredBuildings());
   buildingsData.forEach((b, idx) => {
+    const bCoworkings = coworkingsInBuilding(b);
     if (!filteredSet.has(b)) return;
     if (!isFinite(b.lat) || !isFinite(b.lng)) return;
     const rentLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
@@ -1530,6 +1537,14 @@ function renderBuildings() {
         </div>`;
       }
     }
+    // здание может реализовываться сразу несколькими способами —
+    // если в нём есть коворкинги, добавляем их плашку в любой режим
+    if (bCoworkings.length) {
+      btns += `<div class="popup-btn-row">
+        <button class="popup-lots-btn" style="background:#0d9488;" onclick="openCoworkingModal(${idx})">${ICON_LIST} Коворкинги (${bCoworkings.length})</button>
+        <button class="popup-lots-btn" style="background:#0891b2;" onclick="openCoworkingAnalytics(${idx})">${ICON_CHART} Аналитика коворкингов</button>
+      </div>`;
+    }
     const html = `<b>${b.name || 'Без названия'}</b>` +
       rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
       `<div style="margin-top:8px;">${btns}</div>`;
@@ -1607,6 +1622,9 @@ async function loadBuildings() {
     if (currentQuarter.rent) {
       try { rentLotsData = await (await fetch(currentQuarter.rent)).json(); } catch(e) { rentLotsData = {}; }
     }
+    // коворкинги квартала — нужны и вне режима коворкингов: попапы зданий
+    // показывают плашку «Коворкинги (N)», если в здании есть площадки
+    await loadCoworking();
     const rentCount = Object.keys(rentLotsData).length;
     const elRentCount = document.getElementById('rentBldgCount');
     const elRentQLabel = document.getElementById('rentQuarterLabel');
@@ -1789,6 +1807,7 @@ window.openLotsModal = function(idx) {
   document.getElementById('lotsModalBody').innerHTML =
     `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
   lotsModalIsRent = false;
+  lotsModalKind = 'sale';
   document.getElementById('lotsModalBg').classList.add('open');
 };
 function closeLotsModal() { document.getElementById('lotsModalBg').classList.remove('open'); }
@@ -1842,12 +1861,50 @@ window.openRentLotsModal = function(idx) {
 
   renderRentLotsTable();
   lotsModalIsRent = true;
+  lotsModalKind = 'rent';
   document.getElementById('lotsModalBg').classList.add('open');
 };
 
 // ============================================================
 //  КОВОРКИНГИ (отдельный срез данных, снимок март 2026)
 // ============================================================
+// Гео-привязка коворкингов к зданиям: точка площадки ближе 80 м от точки
+// здания (имена БЦ в выгрузках коворкингов не совпадают с реестром зданий,
+// поэтому матчим по координатам). Координаты-заглушки (центр Москвы) не матчим.
+const CW_PLACEHOLDER = [55.755819, 37.617644];
+function coworkingsInBuilding(b, cwList) {
+  if (!b || !isFinite(b.lat) || !isFinite(b.lng)) return [];
+  return (cwList || coworkingData).filter(c => {
+    if (!isFinite(c.lat) || !isFinite(c.lng)) return false;
+    if (Math.abs(c.lat - CW_PLACEHOLDER[0]) < 1e-6 && Math.abs(c.lng - CW_PLACEHOLDER[1]) < 1e-6) return false;
+    const dy = (c.lat - b.lat) * 111320;
+    const dx = (c.lng - b.lng) * 111320 * Math.cos(b.lat * Math.PI / 180);
+    return Math.hypot(dx, dy) < 80;
+  });
+}
+
+window.openCoworkingModal = function(idx) {
+  const b = buildingsData[idx]; if (!b) return;
+  currentLotsBuilding = b;
+  const cws = coworkingsInBuilding(b);
+  document.getElementById('lotsModalTitle').textContent = b.name + ' — Коворкинги';
+  document.getElementById('lotsModalSub').textContent =
+    `${currentQuarter.label} · площадок: ${cws.length}` + (b.address ? ` · ${b.address}` : '');
+  document.getElementById('rentFinishFilterWrap').style.display = 'none';
+  const head = `<tr><th>Название</th><th>Сеть</th><th>БЦ / адрес</th><th>Мест всего</th><th>Вакантно</th><th>Ставка, руб/мес с НДС</th></tr>`;
+  const body = cws.map(c => `<tr>
+    <td>${c.name || '—'}</td><td>${c.network || '—'}</td>
+    <td>${c.bc || c.address || '—'}</td>
+    <td>${c.seats != null ? fmt(Math.round(c.seats)) : '—'}</td>
+    <td>${c.vacancy != null ? fmt(Math.round(c.vacancy)) : '—'}</td>
+    <td>${c.rate ? fmt(Math.round(c.rate)) : '—'}</td></tr>`).join('');
+  document.getElementById('lotsModalBody').innerHTML =
+    `<table class="lots-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  lotsModalIsRent = false;
+  lotsModalKind = 'cw';
+  document.getElementById('lotsModalBg').classList.add('open');
+};
+
 let coworkingMode = false;
 let coworkingData = [];
 let coworkingLoaded = false;
@@ -2028,10 +2085,17 @@ document.getElementById('lotsModalBg').addEventListener('click', e => {
   if (e.target.id === 'lotsModalBg') closeLotsModal();
 });
 let lotsModalIsRent = false;
+let lotsModalKind = 'sale'; // 'sale' | 'rent' | 'cw'
 document.getElementById('lotsModalDownload').addEventListener('click', function() {
   const b = currentLotsBuilding; if (!b) return;
   let rows, fname;
-  if (lotsModalIsRent) {
+  if (lotsModalKind === 'cw') {
+    rows = coworkingsInBuilding(b).map(c => ({
+      'Название': c.name, 'Сеть': c.network, 'БЦ / адрес': c.bc || c.address,
+      'Мест всего': c.seats, 'Вакантно': c.vacancy, 'Ставка, руб/мес с НДС': c.rate
+    }));
+    fname = `${translit(b.name)}_коворкинги_${currentQuarter.id}.xlsx`;
+  } else if (lotsModalIsRent) {
     const allLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
     const lots = allLots.filter(l => filterRentFinish.has(l.finish || 'не указано'));
     rows = lots.map(l => ({
@@ -2268,6 +2332,7 @@ const DIV_LABELS = { zones:'Зоны', ao:'Округа', submarkets:'Субры
 const METRIC_NAMES = { wavg:'Ср. взв. цена, руб/кв.м', avg:'Ср. цена, руб/кв.м',
   volume:'Объём, кв.м', count:'Кол-во объектов', price:'Цена, руб/кв.м', lots:'Лотов, шт.' };
 const METRIC_NAMES_RENT_BUILDING = { price:'Ставка, руб/кв.м/год', volume:'Площадь в аренду, кв.м', lots:'Лотов в аренде, шт.' };
+const METRIC_NAMES_COWORK_BUILDING = { price:'Ставка, руб/мес с НДС', seats:'Мест всего, шт.', vacancy:'Вакантно, мест', lots:'Площадок, шт.' };
 // На уровне одного здания wavg/avg/price — одно и то же число (b.price), поэтому
 // показываем только осмысленный для каждого уровня набор показателей.
 const DYN_METRIC_OPTIONS_DIVISION =
@@ -2283,12 +2348,23 @@ const DYN_METRIC_OPTIONS_BUILDING_RENT =
   `<option value="price">Ставка, руб/кв.м/год</option>
    <option value="volume">Площадь в аренду, кв.м</option>
    <option value="lots">Лотов в аренде, шт.</option>`;
+const DYN_METRIC_OPTIONS_BUILDING_COWORK =
+  `<option value="price">Ставка, руб/мес с НДС</option>
+   <option value="seats">Мест всего, шт.</option>
+   <option value="vacancy">Вакантно, мест</option>
+   <option value="lots">Площадок, шт.</option>`;
 function syncDynMetricOptions() {
-  const level = document.getElementById('dynLevel').value;
+  const levelSel = document.getElementById('dynLevel');
+  // статистика по делениям считается только для продажи/аренды —
+  // в режиме коворкингов доступен лишь уровень зданий
+  levelSel.querySelector('option[value="division"]').disabled = coworkingMode;
+  if (coworkingMode && levelSel.value === 'division') levelSel.value = 'building';
+  const level = levelSel.value;
   const sel = document.getElementById('dynMetric');
   const prev = sel.value;
   sel.innerHTML = level !== 'building' ? DYN_METRIC_OPTIONS_DIVISION
-    : (rentMode ? DYN_METRIC_OPTIONS_BUILDING_RENT : DYN_METRIC_OPTIONS_BUILDING_SALE);
+    : (coworkingMode ? DYN_METRIC_OPTIONS_BUILDING_COWORK
+       : rentMode ? DYN_METRIC_OPTIONS_BUILDING_RENT : DYN_METRIC_OPTIONS_BUILDING_SALE);
   const values = [...sel.options].map(o => o.value);
   sel.value = values.includes(prev) ? prev : values[0];
 }
@@ -2309,6 +2385,22 @@ function bldVal(b, metric) {
   if (metric === 'lots') return b.lots || null;
   if (metric === 'count') return 1;
   return b.price || null; // wavg/avg/price → цена здания; 0 = нет данных/не в продаже, не реальная цена
+}
+// Динамика коворкингов по зданию: агрегируем площадки, гео-привязанные к зданию,
+// из среза allCoworking[qid]. Ставка — взвешенная по числу мест (или простое среднее).
+function bldCoworkVal(b, qid, metric) {
+  if (!b) return null;
+  const cws = coworkingsInBuilding(b, allCoworking[qid] || []);
+  if (!cws.length) return null;
+  if (metric === 'lots') return cws.length;
+  if (metric === 'seats') return cws.reduce((s,c)=>s+(c.seats||0),0) || null;
+  if (metric === 'vacancy') return cws.reduce((s,c)=>s+(c.vacancy||0),0);
+  const withRate = cws.filter(c=>c.rate);
+  if (!withRate.length) return null;
+  const seats = withRate.reduce((s,c)=>s+(c.seats||0),0);
+  return seats > 0
+    ? withRate.reduce((s,c)=>s+c.rate*(c.seats||0),0) / seats
+    : withRate.reduce((s,c)=>s+c.rate,0) / withRate.length;
 }
 // Динамика аренды по зданию: считаем из фактических лотов аренды за квартал qid.
 function bldRentVal(b, qid, metric) {
@@ -2390,8 +2482,9 @@ function fillDynBuildingSelect(query, keepId) {
 
 let dynChart = null;
 function syncDynModeButtons() {
-  document.getElementById('dynModeSale').classList.toggle('active', !rentMode);
+  document.getElementById('dynModeSale').classList.toggle('active', !rentMode && !coworkingMode);
   document.getElementById('dynModeRent').classList.toggle('active', rentMode);
+  document.getElementById('dynModeCoworking').classList.toggle('active', coworkingMode);
 }
 // переключатель Продажа/Аренда внутри модалки «Динамика» — переиспользует общий setMode
 window.setDynMode = async function(mode) {
@@ -2416,6 +2509,22 @@ window.openBuildingAnalytics = async function(idx) {
   buildDynBuildingList();
   document.getElementById('dynLevel').value = 'building';
   fillDynBuildingSelect('', normId(b));
+  document.getElementById('dynBuildingSearch').value = '';
+  syncDynModeButtons();
+  document.getElementById('dynModalBg').classList.add('open');
+  renderDynamics();
+};
+// «Аналитика коворкингов» из попапа здания: как openBuildingAnalytics, но
+// сразу в режиме коворкингов (setDynMode переключает и карту — так же,
+// как кнопки Продажа/Аренда внутри модалки)
+window.openCoworkingAnalytics = async function(idx) {
+  const b = buildingsData[idx]; if (!b) return;
+  const nid = normId(b);
+  await setMode('coworking');
+  await precomputeAll();
+  buildDynBuildingList();
+  document.getElementById('dynLevel').value = 'building';
+  fillDynBuildingSelect('', nid);
   document.getElementById('dynBuildingSearch').value = '';
   syncDynModeButtons();
   document.getElementById('dynModalBg').classList.add('open');
@@ -2448,19 +2557,23 @@ function renderDynamics() {
   } else {
     const id = document.getElementById('dynBuilding').value;
     const name = (buildById[id] && Object.values(buildById[id])[0]?.name) || 'Здание';
+    // для коворкингов матчинг гео-точкой: если здания нет в своде квартала,
+    // берём его координаты из любого другого квартала
+    const anyB = buildById[id] ? Object.values(buildById[id])[0] : null;
     const values = qs.map(q => {
       const b = buildById[id]?.[q.id];
+      if (coworkingMode) return bldCoworkVal(b || anyB, q.id, metric);
       return rentMode ? bldRentVal(b, q.id, metric) : bldVal(b, metric);
     });
     datasets.push({ label: name,
       data: values.map(v => v==null?null:Math.round(v)),
       borderColor: CHART_COLORS[0], backgroundColor:'rgba(124,58,237,0.1)', tension:0.2, spanGaps:true, fill:true });
-    // если у этого конкретного здания нет ни одной точки аренды — явно об этом сказать
-    const noRentData = rentMode && values.every(v => v==null);
-    document.getElementById('dynRentNote').textContent = noRentData
-      ? `⚠ У здания «${name}» нет данных аренды ни в одном из отслеживаемых кварталов.`
+    // если у этого конкретного здания нет данных аренды/коворкингов — явно об этом сказать
+    const noData = (rentMode || coworkingMode) && values.every(v => v==null);
+    document.getElementById('dynRentNote').textContent = noData
+      ? `⚠ У здания «${name}» нет данных ${coworkingMode ? 'коворкингов' : 'аренды'} ни в одном из отслеживаемых кварталов.`
       : '';
-    document.getElementById('dynRentNote').style.display = noRentData ? 'block' : 'none';
+    document.getElementById('dynRentNote').style.display = noData ? 'block' : 'none';
   }
   if (dynChart) dynChart.destroy();
   dynChart = new Chart(document.getElementById('dynChart'), {
@@ -2471,7 +2584,9 @@ function renderDynamics() {
       elements:{ point:{ radius:4, hoverRadius:7, hitRadius:10 } },
       plugins:{
         legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
-        title:{ display:true, text:(level==='building' && rentMode ? METRIC_NAMES_RENT_BUILDING : METRIC_NAMES)[metric] },
+        title:{ display:true, text:(level==='building'
+          ? (coworkingMode ? METRIC_NAMES_COWORK_BUILDING : rentMode ? METRIC_NAMES_RENT_BUILDING : METRIC_NAMES)
+          : METRIC_NAMES)[metric] },
         tooltip:{ callbacks:{ label:c=>`${c.dataset.label}: ${c.parsed.y!=null?c.parsed.y.toLocaleString('ru-RU'):'—'}` } }
       },
       // grace добавляет отступы сверху/снизу, чтобы крайние точки не упирались в край и были видны
