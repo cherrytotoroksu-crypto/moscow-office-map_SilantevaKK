@@ -851,9 +851,9 @@
     "lots": 2
   },
   {
-    "name": "Орбитал",
+    "name": "Orbital",
     "address": "3-Я МАГИСТРАЛЬНАЯ УЛИЦА, 10",
-    "developer": "Ультима Девелопмент",
+    "developer": "Ultima Development",
     "status": "Строится",
     "year": "2023",
     "start": "",
@@ -870,7 +870,7 @@
     "lat": 55.762961,
     "lng": 37.523115,
     "id": 37,
-    "name_orig": "Орбитал",
+    "name_orig": "Orbital",
     "lots": 0
   },
   {

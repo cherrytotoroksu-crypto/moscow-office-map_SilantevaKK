@@ -575,8 +575,8 @@
     "id": "прайм_тайм"
   },
   {
-    "name": "Орбитал",
-    "name_orig": "Орбитал",
+    "name": "Orbital",
+    "name_orig": "Orbital",
     "lat": 55.762961,
     "lng": 37.523115,
     "volume": 0.0,
@@ -590,7 +590,7 @@
     "zone": "ТТК-МКАД",
     "submarket": "ТТК-Мкад Запад",
     "biz": "",
-    "developer": "Ультима Девелопмент",
+    "developer": "Ultima Development",
     "address": "3-Я МАГИСТРАЛЬНАЯ УЛИЦА, 10",
     "year": "2023",
     "start": "",
