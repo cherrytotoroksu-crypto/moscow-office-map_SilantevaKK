@@ -1541,7 +1541,7 @@
     "lots": 158
   },
   {
-    "name": "Upside Кунцево (бывший — Kuntsevo Upside)",
+    "name": "Upside Кунцево",
     "address": "Москва, Молдавская ул., 1",
     "developer": "Upside Development",
     "status": "Построен",
@@ -2574,28 +2574,5 @@
     "id": 127,
     "name_orig": "Энтузиаст",
     "lots": 1
-  },
-  {
-    "name": "Upside Кунцево",
-    "name_orig": "Upside Кунцево",
-    "lat": 55.729925,
-    "lng": 37.44321,
-    "volume": 6423.5,
-    "price": 684256,
-    "cls": "A",
-    "status": "Строится",
-    "on_sale": "да",
-    "lots": 16,
-    "gba": 36280,
-    "gla": 23225,
-    "zone": "ТТК-МКАД",
-    "submarket": "ТТК-МКАД Запад",
-    "biz": "-",
-    "developer": "Upside Development",
-    "address": "Москва, Молдавская ул., 1",
-    "year": "2025",
-    "start": "",
-    "weight": 0,
-    "id": "upside_кунцево"
   }
 ]

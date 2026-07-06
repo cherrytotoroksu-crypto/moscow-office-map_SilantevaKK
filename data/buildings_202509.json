@@ -391,7 +391,7 @@
     "lots": 21
   },
   {
-    "name": "Upside Кунцево (бывший — Kuntsevo Upside)",
+    "name": "Upside Кунцево",
     "address": "Москва, Молдавская ул., 1",
     "developer": "Upside Development",
     "status": "Строится",
@@ -410,7 +410,7 @@
     "lat": 55.729925,
     "lng": 37.44321,
     "id": 26,
-    "name_orig": "Kuntsevo Upside",
+    "name_orig": "Upside Кунцево",
     "lots": 20
   },
   {
@@ -1335,7 +1335,7 @@
   },
   {
     "name": "Бизнес-центр SEZAR",
-    "address": "Москва, 1-й Силикатный проезд, 13",
+    "address": "Москва, 2-й Силикатный проезд, 13",
     "developer": "Sezar Group",
     "status": "Строится",
     "year": "2026",
@@ -1350,8 +1350,8 @@
     "submarket": "ТТК-МКАД Запад",
     "biz": "Большой Сити",
     "on_sale": "да",
-    "lat": 55.767798,
-    "lng": 37.510502,
+    "lat": 55.768578,
+    "lng": 37.506874,
     "id": 93,
     "name_orig": "Бизнес-центр SEZAR",
     "lots": 9

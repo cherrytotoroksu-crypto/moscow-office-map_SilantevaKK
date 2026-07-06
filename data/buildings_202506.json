@@ -299,7 +299,7 @@
     "lots": 24
   },
   {
-    "name": "Upside Кунцево (бывший — Kuntsevo Upside)",
+    "name": "Upside Кунцево",
     "address": "Москва, Молдавская ул., 1",
     "developer": "Upside Development",
     "status": "Строится",
@@ -318,7 +318,7 @@
     "lat": 55.729925,
     "lng": 37.44321,
     "id": 26,
-    "name_orig": "Kuntsevo Upside",
+    "name_orig": "Upside Кунцево",
     "lots": 28
   },
   {

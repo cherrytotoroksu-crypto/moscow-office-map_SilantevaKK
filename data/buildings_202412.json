@@ -115,7 +115,7 @@
     "lots": 37
   },
   {
-    "name": "iCITY",
+    "name": "iCITY (Space)",
     "address": "г. Москва, Пресненский р-н, проезд Шмитовский, д. 37, стр 1",
     "developer": "MR Group",
     "status": "Строится",
@@ -134,7 +134,7 @@
     "lat": 55.753661,
     "lng": 37.530786,
     "id": 5,
-    "name_orig": "iCITY",
+    "name_orig": "iCITY (Space)",
     "lots": 39
   },
   {
@@ -598,7 +598,7 @@
     "lots": 34
   },
   {
-    "name": "Upside Кунцево (бывший — Kuntsevo Upside)",
+    "name": "Upside Кунцево",
     "address": "Молдавская ул., 1",
     "developer": "Upside",
     "status": "Строится",

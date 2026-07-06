@@ -23,7 +23,7 @@
     "lots": 10
   },
   {
-    "name": "AFI Сиреневый парк",
+    "name": "AFI2B Tagilskaya",
     "address": "Москва, ул. Тагильская, 4А",
     "developer": "AFI development",
     "status": "Строится",
@@ -42,7 +42,7 @@
     "lat": 55.818103,
     "lng": 37.752868,
     "id": 50,
-    "name_orig": "AFI Сиреневый парк",
+    "name_orig": "AFI2B Tagilskaya",
     "lots": 1
   },
   {
@@ -161,7 +161,7 @@
     "lots": 32
   },
   {
-    "name": "Workplace REPUBLIC Frame",
+    "name": "Frame",
     "address": "ул. Пресненский Вал, 27",
     "developer": "Forma",
     "status": "Строится",
@@ -180,7 +180,7 @@
     "lat": 55.774281,
     "lng": 37.575982,
     "id": 52,
-    "name_orig": "Workplace REPUBLIC Frame",
+    "name_orig": "Frame",
     "lots": 0
   },
   {
@@ -989,7 +989,7 @@
     "lots": 1
   },
   {
-    "name": "Кунцево Upside",
+    "name": "Upside Кунцево",
     "address": "Молдавская ул., 1",
     "developer": "Upside Development",
     "status": "Строится",
@@ -1008,7 +1008,7 @@
     "lat": 55.729925,
     "lng": 37.44321,
     "id": 63,
-    "name_orig": "Кунцево Upside",
+    "name_orig": "Upside Кунцево",
     "lots": 0
   },
   {
