@@ -967,9 +967,10 @@ function pointInFeature(lng, lat, feature) {
   return false;
 }
 
-function computeStats(layerKey, geojson, blds, useRent) {
+function computeStats(layerKey, geojson, blds, useRent, rentSource) {
   const cfg = LAYER_CFG[layerKey];
   const data = blds || buildingsData;
+  const rentLots = rentSource || rentLotsData;
   const result = {};
   for (const f of geojson.features) {
     const name = f.properties[cfg.nameField];
@@ -989,7 +990,7 @@ function computeStats(layerKey, geojson, blds, useRent) {
   for (const b of data) {
     let area, price, lots;
     if (useRent) {
-      const rLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+      const rLots = rentLots[b.name] || rentLots[b.name_orig] || [];
       if (!rLots.length) continue; // здания без данных аренды не учитываются
       area = rLots.reduce((s,l)=>s+(l.area||0), 0);
       const wRates = rLots.filter(l=>l.rate);
@@ -1093,7 +1094,8 @@ async function recomputeCoworkingAll() {
 //  ПРЕДРАСЧЁТ ПО ВСЕМ КВАРТАЛАМ (для динамики и сравнения)
 // ============================================================
 let allBuildings = {};   // qid -> [building]
-let allStats = {};       // qid -> { layerKey -> {name -> stats} }
+let allStats = {};       // qid -> { layerKey -> {name -> stats} }  (продажа)
+let allRentStats = {};   // qid -> { layerKey -> {name -> stats} }  (аренда)
 let buildById = {};      // id -> { qid -> building }
 let precomputed = false;
 
@@ -1129,6 +1131,11 @@ async function precomputeAll() {
       try { allRentLots[q.id] = await (await fetch(q.rent)).json(); } catch(e) { allRentLots[q.id] = {}; }
     } else {
       allRentLots[q.id] = {};
+    }
+    allRentStats[q.id] = {};
+    for (const key of Object.keys(LAYER_CFG)) {
+      const gj = await fetchGeoJSON(key);
+      allRentStats[q.id][key] = computeStats(key, gj, blds, true, allRentLots[q.id]);
     }
     if (q.coworking) {
       try { allCoworking[q.id] = await (await fetch(q.coworking)).json(); } catch(e) { allCoworking[q.id] = []; }
@@ -2352,6 +2359,7 @@ const METRIC_NAMES = { wavg:'Ср. взв. цена, руб/кв.м', avg:'Ср.
 const METRIC_NAMES_RENT_BUILDING = { price:'Ставка, руб/кв.м/год', volume:'Площадь в аренду, кв.м', lots:'Лотов в аренде, шт.' };
 const METRIC_NAMES_COWORK_BUILDING = { price:'Ставка, руб/мес с НДС', seats:'Мест всего, шт.', vacancy:'Вакантно, мест', lots:'Площадок, шт.' };
 const METRIC_NAMES_COWORK_DIVISION = { wavgRate:'Ср. взв. ставка, руб/мес', avgRate:'Ср. ставка, руб/мес', seats:'Мест всего, шт.', vacancy:'Вакантно, мест', count:'Кол-во площадок' };
+const METRIC_NAMES_RENT_DIVISION = { wavg:'Ср. взвешенная ставка, руб/кв.м/год', avg:'Ср. ставка, руб/кв.м/год', volume:'Площадь в аренду, кв.м', count:'Кол-во объектов' };
 // На уровне одного здания wavg/avg/price — одно и то же число (b.price), поэтому
 // показываем только осмысленный для каждого уровня набор показателей.
 const DYN_METRIC_OPTIONS_DIVISION =
@@ -2365,6 +2373,11 @@ const DYN_METRIC_OPTIONS_DIVISION_COWORK =
    <option value="seats">Мест всего, шт.</option>
    <option value="vacancy">Вакантно, мест</option>
    <option value="count">Кол-во площадок</option>`;
+const DYN_METRIC_OPTIONS_DIVISION_RENT =
+  `<option value="wavg">Ср. взвешенная ставка, руб/кв.м/год</option>
+   <option value="avg">Ср. ставка, руб/кв.м/год</option>
+   <option value="volume">Площадь в аренду, кв.м</option>
+   <option value="count">Кол-во объектов</option>`;
 const DYN_METRIC_OPTIONS_BUILDING_SALE =
   `<option value="price">Цена, руб/кв.м</option>
    <option value="volume">Объём, кв.м</option>
@@ -2384,7 +2397,7 @@ function syncDynMetricOptions() {
   const sel = document.getElementById('dynMetric');
   const prev = sel.value;
   sel.innerHTML = level !== 'building'
-    ? (coworkingMode ? DYN_METRIC_OPTIONS_DIVISION_COWORK : DYN_METRIC_OPTIONS_DIVISION)
+    ? (coworkingMode ? DYN_METRIC_OPTIONS_DIVISION_COWORK : rentMode ? DYN_METRIC_OPTIONS_DIVISION_RENT : DYN_METRIC_OPTIONS_DIVISION)
     : (coworkingMode ? DYN_METRIC_OPTIONS_BUILDING_COWORK
        : rentMode ? DYN_METRIC_OPTIONS_BUILDING_RENT : DYN_METRIC_OPTIONS_BUILDING_SALE);
   const values = [...sel.options].map(o => o.value);
@@ -2568,7 +2581,7 @@ function renderDynamics() {
   let datasets = [];
   if (level === 'division') {
     const layer = document.getElementById('dynDivision').value;
-    const statsSource = coworkingMode ? allCoworkingStats : allStats;
+    const statsSource = coworkingMode ? allCoworkingStats : rentMode ? allRentStats : allStats;
     // имена с данными хотя бы в одном квартале
     const names = new Set();
     qs.forEach(q => Object.entries(statsSource[q.id]?.[layer]||{}).forEach(([n,v])=>{ if(v&&v.count>0) names.add(n); }));
@@ -2609,7 +2622,7 @@ function renderDynamics() {
         legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
         title:{ display:true, text:(level==='building'
           ? (coworkingMode ? METRIC_NAMES_COWORK_BUILDING : rentMode ? METRIC_NAMES_RENT_BUILDING : METRIC_NAMES)
-          : (coworkingMode ? METRIC_NAMES_COWORK_DIVISION : METRIC_NAMES))[metric] },
+          : (coworkingMode ? METRIC_NAMES_COWORK_DIVISION : rentMode ? METRIC_NAMES_RENT_DIVISION : METRIC_NAMES))[metric] },
         tooltip:{ callbacks:{ label:c=>`${c.dataset.label}: ${c.parsed.y!=null?c.parsed.y.toLocaleString('ru-RU'):'—'}` } }
       },
       // grace добавляет отступы сверху/снизу, чтобы крайние точки не упирались в край и были видны
@@ -2661,10 +2674,19 @@ const CMP_METRIC_OPTIONS_DIVISION_COWORK =
    <option value="seats">Мест всего</option>
    <option value="vacancy">Вакантно, мест</option>
    <option value="count">Кол-во площадок</option>`;
+const CMP_METRIC_OPTIONS_DIVISION_RENT =
+  `<option value="wavg">Ср. взв. ставка</option>
+   <option value="avg">Ср. ставка</option>
+   <option value="volume">Площадь в аренду</option>
+   <option value="count">Кол-во объектов</option>`;
 const CMP_METRIC_OPTIONS_BUILDING =
   `<option value="price">Цена</option>
    <option value="volume">Объём</option>
    <option value="lots">Лотов, шт.</option>`;
+const CMP_METRIC_OPTIONS_BUILDING_RENT =
+  `<option value="price">Ставка, руб/кв.м/год</option>
+   <option value="volume">Площадь в аренду, кв.м</option>
+   <option value="lots">Лотов в аренде, шт.</option>`;
 const CMP_METRIC_OPTIONS_COWORK =
   `<option value="price">Ставка, руб/мес с НДС</option>
    <option value="seats">Мест всего, шт.</option>
@@ -2676,8 +2698,8 @@ function syncCmpMetricOptions() {
   const sel = document.getElementById('cmpMetric');
   const prev = sel.value;
   sel.innerHTML = level !== 'building'
-    ? (coworkingMode ? CMP_METRIC_OPTIONS_DIVISION_COWORK : CMP_METRIC_OPTIONS_DIVISION)
-    : (coworkingMode ? CMP_METRIC_OPTIONS_COWORK : CMP_METRIC_OPTIONS_BUILDING);
+    ? (coworkingMode ? CMP_METRIC_OPTIONS_DIVISION_COWORK : rentMode ? CMP_METRIC_OPTIONS_DIVISION_RENT : CMP_METRIC_OPTIONS_DIVISION)
+    : (coworkingMode ? CMP_METRIC_OPTIONS_COWORK : rentMode ? CMP_METRIC_OPTIONS_BUILDING_RENT : CMP_METRIC_OPTIONS_BUILDING);
   const values = [...sel.options].map(o => o.value);
   sel.value = values.includes(prev) ? prev : values[0];
 }
@@ -2696,13 +2718,13 @@ function renderCompare() {
       const bF = buildById[id]?.[from], bT = buildById[id]?.[to];
       if (!bF && !bT) return;
       const name = (bT||bF).name;
-      const was = coworkingMode ? bldCoworkVal(bF, from, metric) : bldVal(bF, metric);
-      const now = coworkingMode ? bldCoworkVal(bT, to, metric) : bldVal(bT, metric);
-      if (coworkingMode && was == null && now == null) return; // здание без коворкинга ни в одном из кварталов
+      const was = coworkingMode ? bldCoworkVal(bF, from, metric) : rentMode ? bldRentVal(bF, from, metric) : bldVal(bF, metric);
+      const now = coworkingMode ? bldCoworkVal(bT, to, metric) : rentMode ? bldRentVal(bT, to, metric) : bldVal(bT, metric);
+      if ((coworkingMode || rentMode) && was == null && now == null) return; // здание без данных ни в одном из кварталов
       rows.push({ name, was, now });
     });
   } else {
-    const statsSource = coworkingMode ? allCoworkingStats : allStats;
+    const statsSource = coworkingMode ? allCoworkingStats : rentMode ? allRentStats : allStats;
     const names = new Set();
     [from,to].forEach(q=>Object.entries(statsSource[q]?.[level]||{}).forEach(([n,v])=>{ if(v) names.add(n); }));
     names.forEach(n=>{
