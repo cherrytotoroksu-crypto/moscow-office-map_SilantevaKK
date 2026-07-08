@@ -952,7 +952,28 @@ function pipRing(ring, x, y) {
   }
   return inside;
 }
+// Bounding box фичи считаем один раз и кэшируем на самой фиче — дешёвая
+// проверка «точка точно снаружи» отсекает большинство фич до дорогого
+// обхода всех вершин полигона (у mo/ao — тысячи вершин на контур).
+function featureBBox(feature) {
+  if (feature._bbox) return feature._bbox;
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  const geom = feature.geometry;
+  const polys = geom.type === 'Polygon' ? [geom.coordinates]
+               : geom.type === 'MultiPolygon' ? geom.coordinates : [];
+  for (const poly of polys) {
+    for (const ring of poly) {
+      for (const [x, y] of ring) {
+        if (x < minX) minX = x; if (x > maxX) maxX = x;
+        if (y < minY) minY = y; if (y > maxY) maxY = y;
+      }
+    }
+  }
+  return (feature._bbox = [minX, minY, maxX, maxY]);
+}
 function pointInFeature(lng, lat, feature) {
+  const [minX, minY, maxX, maxY] = featureBBox(feature);
+  if (lng < minX || lng > maxX || lat < minY || lat > maxY) return false;
   const geom = feature.geometry;
   const polys = geom.type === 'Polygon' ? [geom.coordinates]
                : geom.type === 'MultiPolygon' ? geom.coordinates : [];
@@ -1113,39 +1134,42 @@ async function precomputeAll() {
   if (precomputed) return;
   // порядок кварталов от старых к новым
   const qs = [...QUARTERS].slice().reverse();
-  for (const q of qs) {
-    let blds;
-    try { blds = await (await fetch(q.file)).json(); } catch(e) { blds = []; }
+  // 1) сначала тянем данные всех кварталов ПАРАЛЛЕЛЬНО (раньше это были
+  // 17 последовательных раундов по 3 файла — самая долгая часть первого
+  // открытия «Динамики»/«Сравнения»), считать статистику будем потом
+  const fetched = await Promise.all(qs.map(async q => {
+    const [blds, rent, coworking] = await Promise.all([
+      fetchJSON(q.file, []),
+      q.rent ? fetchJSON(q.rent, {}) : Promise.resolve({}),
+      q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]),
+    ]);
+    return { q, blds, rent, coworking };
+  }));
+  // 2) считаем статистику — чисто CPU-работа поверх уже закэшированных
+  // geojson-слоёв (preloadAll успел их загрузить раньше), без сетевых пауз
+  // «mo» (адм. границы Москвы) — самый тяжёлый полигон (1 МБ, один сплошной
+  // контур на весь город) и при этом НЕ входит ни в один селект «по делениям»
+  // (там только zones/ao/submarkets/bizFormed/bizForming) — считать его
+  // 17×3 раза для истории смысла нет, это используется только на живой
+  // карте текущего квартала через отдельный recomputeAll().
+  const divisionLayers = Object.keys(LAYER_CFG).filter(k => k !== 'mo');
+  for (const { q, blds, rent, coworking } of fetched) {
     allBuildings[q.id] = blds;
+    allRentLots[q.id] = rent;
+    allCoworking[q.id] = coworking;
     allStats[q.id] = {};
-    for (const key of Object.keys(LAYER_CFG)) {
+    allRentStats[q.id] = {};
+    allCoworkingStats[q.id] = {};
+    for (const key of divisionLayers) {
       const gj = await fetchGeoJSON(key);
       allStats[q.id][key] = computeStats(key, gj, blds);
+      allRentStats[q.id][key] = computeStats(key, gj, blds, true, rent);
+      allCoworkingStats[q.id][key] = computeCoworkingStats(key, gj, coworking);
     }
     for (const b of blds) {
       const nid = normId(b);
       if (!nid) continue;
       (buildById[nid] ||= {})[q.id] = b;
-    }
-    if (q.rent) {
-      try { allRentLots[q.id] = await (await fetch(q.rent)).json(); } catch(e) { allRentLots[q.id] = {}; }
-    } else {
-      allRentLots[q.id] = {};
-    }
-    allRentStats[q.id] = {};
-    for (const key of Object.keys(LAYER_CFG)) {
-      const gj = await fetchGeoJSON(key);
-      allRentStats[q.id][key] = computeStats(key, gj, blds, true, allRentLots[q.id]);
-    }
-    if (q.coworking) {
-      try { allCoworking[q.id] = await (await fetch(q.coworking)).json(); } catch(e) { allCoworking[q.id] = []; }
-    } else {
-      allCoworking[q.id] = [];
-    }
-    allCoworkingStats[q.id] = {};
-    for (const key of Object.keys(LAYER_CFG)) {
-      const gj = await fetchGeoJSON(key);
-      allCoworkingStats[q.id][key] = computeCoworkingStats(key, gj, allCoworking[q.id]);
     }
   }
   precomputed = true;
@@ -1631,25 +1655,27 @@ function renderBuildingsLegend() {
 // ============================================================
 //  ИНИЦИАЛИЗАЦИЯ
 // ============================================================
+// Данные квартала (здания/лоты/аренда/коворкинги) меняются часто в течение
+// одного дня работы над проектом — no-cache заставляет браузер сверяться
+// с сервером (ETag/Last-Modified) вместо слепого доверия локальному кэшу.
+// Полигоны границ (fetchGeoJSON) в это не заворачиваем — они почти
+// неизменны, агрессивное кэширование там ускоряет переключение кварталов.
+function fetchJSON(url, fallback) {
+  return fetch(url, { cache: 'no-cache' }).then(r => r.json()).catch(() => fallback);
+}
+
 async function loadBuildings() {
   const status = document.getElementById('fileStatus');
   try {
-    const resp = await fetch(currentQuarter.file);
-    const data = await resp.json();
+    const [data, lots, rent] = await Promise.all([
+      fetchJSON(currentQuarter.file, []),
+      currentQuarter.lots ? fetchJSON(currentQuarter.lots, {}) : Promise.resolve({}),
+      currentQuarter.rent ? fetchJSON(currentQuarter.rent, {}) : Promise.resolve({}),
+      loadCoworking(), // сама пишет в coworkingData + обновляет статус коворкингов
+    ]);
     buildingsData = data;
-    // лоты продажи
-    lotsData = {};
-    if (currentQuarter.lots) {
-      try { lotsData = await (await fetch(currentQuarter.lots)).json(); } catch(e) { lotsData = {}; }
-    }
-    // лоты аренды (если есть для квартала)
-    rentLotsData = {};
-    if (currentQuarter.rent) {
-      try { rentLotsData = await (await fetch(currentQuarter.rent)).json(); } catch(e) { rentLotsData = {}; }
-    }
-    // коворкинги квартала — нужны и вне режима коворкингов: попапы зданий
-    // показывают плашку «Коворкинги (N)», если в здании есть площадки
-    await loadCoworking();
+    lotsData = lots;
+    rentLotsData = rent;
     const rentCount = Object.keys(rentLotsData).length;
     const elRentCount = document.getElementById('rentBldgCount');
     const elRentQLabel = document.getElementById('rentQuarterLabel');
@@ -1974,8 +2000,7 @@ async function loadCoworking() {
     return;
   }
   try {
-    const resp = await fetch(currentQuarter.coworking);
-    coworkingData = await resp.json();
+    coworkingData = await fetch(currentQuarter.coworking, { cache: 'no-cache' }).then(r => r.json());
     coworkingLoaded = true;
     coworkingLoadedFor = currentQuarter.id;
     document.getElementById('cwStatus').textContent = `✓ ${currentQuarter.label}: ${coworkingData.length} площадок`;
