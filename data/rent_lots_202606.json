@@ -2214,5 +2214,107 @@
       "size": "Более 1000 кв. м",
       "finish": ""
     }
+  ],
+  "STONE Савеловская": [
+    {
+      "block": "of.ru 106798",
+      "floor": "",
+      "area": 272.0,
+      "rate": 65000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "От 100 до 300 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 62304",
+      "floor": "",
+      "area": 5431.0,
+      "rate": 56000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "Более 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 58587",
+      "floor": "",
+      "area": 1813.0,
+      "rate": 52500.0,
+      "opex": 0,
+      "nds": "",
+      "size": "Более 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 106797",
+      "floor": "",
+      "area": 272.0,
+      "rate": 65000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "От 100 до 300 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 64273",
+      "floor": "",
+      "area": 1781.0,
+      "rate": 55500.0,
+      "opex": 0,
+      "nds": "",
+      "size": "Более 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 64274",
+      "floor": "",
+      "area": 1825.0,
+      "rate": 56000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "Более 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 64275",
+      "floor": "",
+      "area": 1824.0,
+      "rate": 56500.0,
+      "opex": 0,
+      "nds": "",
+      "size": "Более 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 63720",
+      "floor": "",
+      "area": 1531.0,
+      "rate": 54000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "Более 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 106116",
+      "floor": "",
+      "area": 842.0,
+      "rate": 55000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "От 300 до 1000 кв. м",
+      "finish": ""
+    },
+    {
+      "block": "of.ru 106796",
+      "floor": "",
+      "area": 902.0,
+      "rate": 55000.0,
+      "opex": 0,
+      "nds": "",
+      "size": "От 300 до 1000 кв. м",
+      "finish": ""
+    }
   ]
 }
