@@ -83,6 +83,12 @@
       border: 1px solid #ddd; border-radius: 4px;
       font-size: 12px; margin-top: 1px; cursor: pointer;
     }
+    .range-row { display: flex; gap: 6px; margin: 2px 0; }
+    .range-input {
+      width: 50%; padding: 3px 5px;
+      border: 1px solid #ddd; border-radius: 4px;
+      font-size: 12px; color: #333; background: #fff;
+    }
 
     /* Кнопка загрузки */
     .upload-btn {
@@ -198,6 +204,7 @@
     .modal-body { overflow: auto; padding: 12px 18px 16px; }
     .modal label { font-size: 12px; color: #555; }
     .modal label select { font-size: 12px; margin-left: 4px; padding: 3px 5px; border: 1px solid #ddd; border-radius: 4px; }
+    #bcSearchInput { display: block; box-sizing: border-box; width: 100%; margin-top: 4px; padding: 5px 7px; border: 1px solid #ddd; border-radius: 4px; } /* font-size не задаём тут — на мобильных его переопределяет .modal-controls input[type=text] на 16px против авто-зума iOS */
     .modal-controls {
       padding: 10px 18px; display: flex; flex-wrap: wrap;
       gap: 10px; align-items: center; border-bottom: 1px solid #eee;
@@ -275,7 +282,7 @@
     @media (max-width: 640px) {
       #panelToggle { display: flex; top: 10px; right: 10px; z-index: 1103; }
       .map-search { top: 10px; left: 10px; width: calc(100vw - 66px); z-index: 1102; }
-      .map-search input, select { font-size: 16px; } /* 16px — иначе iOS Safari зумит страницу при фокусе на поле */
+      .map-search input, select, .range-input { font-size: 16px; } /* 16px — иначе iOS Safari зумит страницу при фокусе на поле */
       .radio-row, .check-row { padding: 6px 0; } /* тап-таргет ближе к 44px вместо исходных ~15px */
       .panel {
         position: fixed;
@@ -342,6 +349,7 @@
     }
     @media (min-width: 641px) {
       .panel { display: block !important; transform: none !important; }
+      #bcSearchInput { font-size: 12px; }
     }
 
     /* Popup */
@@ -394,6 +402,10 @@
     <button class="mode-btn" id="modeCoworking" onclick="setMode('coworking')">Коворкинги</button>
   </div>
   <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: <span id="rentQuarterLabel">—</span> · <span id="rentBldgCount">0</span> зданий</div>
+  <button class="upload-btn" id="copyLinkBtn" style="margin-top:4px; background:#555; display:flex; align-items:center; justify-content:center; gap:6px;">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 14a4 4 0 0 0 5.66 0l2.34-2.34a4 4 0 0 0-5.66-5.66l-1 1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10a4 4 0 0 0-5.66 0l-2.34 2.34a4 4 0 0 0 5.66 5.66l1-1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Скопировать ссылку на вид
+  </button>
 
   <hr>
   <h3>Квартал</h3>
@@ -421,11 +433,17 @@
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>
     Сравнить кварталы
   </button>
+  <button class="upload-btn" id="openBldCompare" style="margin-top:4px; background:#6b7280; display:flex; align-items:center; justify-content:center; gap:6px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#ffffff" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#ffffff" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#ffffff" stroke-width="2"/></svg>
+    Сравнить здания
+  </button>
 
   <hr>
   <h3>Объекты (здания)</h3>
   <label class="check-row"><input type="checkbox" id="ovBuildings" checked> Показать здания</label>
   <label class="check-row"><input type="checkbox" id="ovCluster" checked> Группировать (кластеры)</label>
+  <label class="check-row"><input type="checkbox" id="ovChanges"> Подсветить изменения кв/кв</label>
+  <div id="changesNote" style="font-size:10px;color:#888;margin:2px 0 0;"></div>
 
   <hr>
   <h3>Фильтр по статусу</h3>
@@ -442,6 +460,17 @@
     <label class="check-row"><input type="checkbox" class="flt-rent" value="нет"> Не в аренде</label>
   </div>
   <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+
+  <h3 id="rangeFilterTitle" style="margin-top:5px;">Диапазон: цена, руб/кв.м</h3>
+  <div class="range-row">
+    <input type="number" id="fltPriceMin" class="range-input" placeholder="от">
+    <input type="number" id="fltPriceMax" class="range-input" placeholder="до">
+  </div>
+  <h3 style="margin-top:5px;">Диапазон: площадь, кв.м</h3>
+  <div class="range-row">
+    <input type="number" id="fltAreaMin" class="range-input" placeholder="от">
+    <input type="number" id="fltAreaMax" class="range-input" placeholder="до">
+  </div>
   </div>
 
   <div id="coworkingControls" style="display:none;">
@@ -619,6 +648,25 @@
   </div>
 </div>
 
+<!-- Модалка СРАВНЕНИЕ ЗДАНИЙ -->
+<div class="modal-bg" id="bldCompareModalBg">
+  <div class="modal" style="width:min(900px,94vw);">
+    <div class="modal-head">
+      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#931F2B" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#931F2B" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#931F2B" stroke-width="2"/></svg>Сравнение зданий</h3>
+      <button class="modal-dl" id="bcDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
+      <button class="modal-x" id="bcClose">&times;</button>
+    </div>
+    <div class="modal-controls" style="position:relative;">
+      <label style="flex:1; min-width:220px; position:relative;">Добавить здание:
+        <input id="bcSearchInput" type="text" placeholder="начните вводить название…" autocomplete="off">
+        <div class="map-search-results" id="bcSearchResults" style="position:absolute; top:100%; left:0; right:0;"></div>
+      </label>
+    </div>
+    <div style="padding:0 18px;" id="bcChips"></div>
+    <div class="modal-body" id="bcBody"></div>
+  </div>
+</div>
+
 <!-- Левая стопка легенд (снизу вверх: шкала/таблица → легенда зданий) -->
 <div class="left-stack">
   <!-- Легенда -->
@@ -749,10 +797,28 @@ let dataLoaded = false;
 let filterStatus = new Set(['Строится', 'Построен']);
 let filterOnSale  = new Set(['да']);
 let filterOnRent  = new Set(['да']);
+let priceRange = { min: null, max: null }; // фильтр «Диапазон: цена/ставка»
+let areaRange  = { min: null, max: null }; // фильтр «Диапазон: площадь»
 
 // Есть ли данные аренды у здания. Если не указано иное — считаем, что аренды нет.
 function hasRentData(b) {
   return (rentLotsData[b.name] || rentLotsData[b.name_orig] || []).length > 0;
+}
+
+// Средняя ставка, взвешенная по площади лота (используется и в попапе, и в фильтре, и в подсветке изменений).
+function weightedAvgRate(lots) {
+  const w = (lots || []).filter(l => l.rate);
+  if (!w.length) return null;
+  return w.reduce((s,l)=>s+l.rate*l.area,0) / w.reduce((s,l)=>s+l.area,0);
+}
+
+// Цена/ставка и площадь здания для диапазонных фильтров — зависит от текущего режима.
+function bldMetricValue(b) {
+  if (rentMode) {
+    const lots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+    return { price: weightedAvgRate(lots), area: lots.length ? lots.reduce((s,l)=>s+l.area,0) : null };
+  }
+  return { price: b.price || null, area: b.volume || null };
 }
 
 function getFilteredBuildings() {
@@ -764,11 +830,20 @@ function getFilteredBuildings() {
     if (!statusOk && filterStatus.has(st)) statusOk = true; // прочие/неизвестные
     if (!statusOk) return false;
     if (rentMode) {
-      return filterOnRent.has(hasRentData(b) ? 'да' : 'нет');
+      if (!filterOnRent.has(hasRentData(b) ? 'да' : 'нет')) return false;
+    } else {
+      const sale = (b.on_sale || '').trim().toLowerCase() === 'да' ? 'да'
+                 : (b.on_sale || '').trim().toLowerCase() === 'нет' ? 'нет' : '';
+      if (!filterOnSale.has(sale)) return false;
     }
-    const sale = (b.on_sale || '').trim().toLowerCase() === 'да' ? 'да'
-               : (b.on_sale || '').trim().toLowerCase() === 'нет' ? 'нет' : '';
-    return filterOnSale.has(sale);
+    if (priceRange.min != null || priceRange.max != null || areaRange.min != null || areaRange.max != null) {
+      const { price, area } = bldMetricValue(b);
+      if (priceRange.min != null && (price == null || price < priceRange.min)) return false;
+      if (priceRange.max != null && (price == null || price > priceRange.max)) return false;
+      if (areaRange.min != null && (area == null || area < areaRange.min)) return false;
+      if (areaRange.max != null && (area == null || area > areaRange.max)) return false;
+    }
+    return true;
   });
 }
 
@@ -1132,6 +1207,28 @@ function normId(b) {
   return (b.name || b.name_orig || '').trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
+// Подсветка изменений кв/кв (чекбокс «Подсветить изменения») — лёгкая точечная загрузка
+// ОДНОГО предыдущего квартала (не путать с precomputeAll(), который тянет все 17 сразу).
+let changesData = null;        // { byId, rentById } для квартала перед currentQuarter
+let changesCache = {};         // qid -> { byId, rentById } — чтобы не грузить повторно
+async function loadChanges() {
+  const idx = QUARTERS.indexOf(currentQuarter);
+  const prevQ = QUARTERS[idx + 1];
+  const note = document.getElementById('changesNote');
+  if (!prevQ) { changesData = null; note.textContent = 'Нет предыдущего квартала для сравнения.'; return; }
+  if (!changesCache[prevQ.id]) {
+    const blds = await fetchJSON(prevQ.file, []);
+    const rent = prevQ.rent ? await fetchJSON(prevQ.rent, {}) : {};
+    const byId = {};
+    blds.forEach(pb => { const nid = normId(pb); if (nid) byId[nid] = pb; });
+    const rentById = {};
+    Object.keys(rent).forEach(name => { rentById[name.trim().toLowerCase().replace(/\s+/g,' ')] = rent[name]; });
+    changesCache[prevQ.id] = { byId, rentById };
+  }
+  changesData = changesCache[prevQ.id];
+  note.textContent = `Сравнение с ${prevQ.label}. Обводка: зелёная ≥+3%, красная ≤-3%, синяя — новое здание.`;
+}
+
 let allRentLots = {}; // qid -> { "Название здания": [ {area,rate,...}, ... ] }
 let allCoworking = {}; // qid -> [ {name,network,bc,seats,vacancy,rate,lat,lng}, ... ]
 let allCoworkingStats = {}; // qid -> { layerKey -> { name -> {wavgRate,avgRate,seats,vacancy,count} } }
@@ -1492,9 +1589,27 @@ function buildingRadius(vol) {
   return Math.max(4, Math.min(18, Math.sqrt(vol) / 12));
 }
 
+// Подсветка изменений кв/кв: сравнение текущего значения (цена/ставка) со значением
+// того же здания (по normId) в предыдущем квартале из changesData (см. loadChanges()).
+function computeChange(b) {
+  if (!changesData) return null;
+  const nid = normId(b);
+  const prevB = changesData.byId[nid];
+  if (!prevB) return { isNew: true, pct: null };
+  const curVal = rentMode
+    ? weightedAvgRate(rentLotsData[b.name] || rentLotsData[b.name_orig] || [])
+    : (b.price || null);
+  const prevVal = rentMode
+    ? weightedAvgRate(changesData.rentById[nid] || [])
+    : (prevB.price || null);
+  if (!curVal || !prevVal) return { isNew: false, pct: null };
+  return { isNew: false, pct: Math.round((curVal - prevVal) / prevVal * 1000) / 10 };
+}
+
 function renderBuildings() {
   if (buildingsLayer) map.removeLayer(buildingsLayer);
   const clustered = document.getElementById('ovCluster').checked;
+  const showChanges = document.getElementById('ovChanges').checked && changesData;
   buildingsLayer = clustered
     ? L.markerClusterGroup({
         maxClusterRadius: 50,
@@ -1515,9 +1630,26 @@ function renderBuildings() {
     // Наличие данных аренды регулируется фильтром «В аренде / Не в аренде», а не прозрачностью.
     const fillColor = buildingColor(b.cls);
     const fillOpacity = 0.85;
+    // Обводка кружка: зелёная/красная — рост/падение цены (ставки) к прошлому кварталу
+    // на ≥3%, синяя — здание новое (не было в предыдущем квартале), белая — без изменений.
+    let strokeColor = '#fff', strokeWeight = 1, changeRow = null;
+    if (showChanges) {
+      const chg = computeChange(b);
+      if (chg) {
+        const metricLabel = rentMode ? 'ставки' : 'цены';
+        if (chg.isNew) {
+          strokeColor = '#2563eb'; strokeWeight = 3;
+          changeRow = ['Δ к прошлому кварталу', '<span style="color:#2563eb;">новое здание</span>'];
+        } else if (chg.pct != null) {
+          const upDown = chg.pct > 0 ? '#16a34a' : chg.pct < 0 ? '#dc2626' : '#666';
+          if (Math.abs(chg.pct) >= 3) { strokeColor = upDown; strokeWeight = 3; }
+          changeRow = [`Δ ${metricLabel} к прошлому кварталу`, `<span style="color:${upDown};">${chg.pct > 0 ? '+' : ''}${chg.pct}%</span>`];
+        }
+      }
+    }
     const marker = L.circleMarker([b.lat, b.lng], {
       radius: rentMode ? (hasRent ? buildingRadius(rentLots.reduce((s,l)=>s+l.area,0)) : 5) : buildingRadius(b.volume),
-      fillColor, color: '#fff', weight: 1, opacity: 1, fillOpacity
+      fillColor, color: strokeColor, weight: strokeWeight, opacity: 1, fillOpacity
     });
     buildingMarkers[idx] = marker;
     const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
@@ -1526,8 +1658,8 @@ function renderBuildings() {
     let rows, btns;
     if (rentMode && hasRent) {
       const totalArea = rentLots.reduce((s,l)=>s+l.area,0);
-      const wRates = rentLots.filter(l=>l.rate);
-      const avgRate = wRates.length ? Math.round(wRates.reduce((s,l)=>s+l.rate*l.area,0)/wRates.reduce((s,l)=>s+l.area,0)) : null;
+      const avgRateRaw = weightedAvgRate(rentLots);
+      const avgRate = avgRateRaw != null ? Math.round(avgRateRaw) : null;
       rows = [
         ['Адрес',           b.address || '—'],
         ['Девелопер',       b.developer || '—'],
@@ -1591,6 +1723,7 @@ function renderBuildings() {
         </div>`;
       }
     }
+    if (changeRow) rows.push(changeRow);
     // здание может реализовываться сразу несколькими способами —
     // если в нём есть коворкинги, добавляем их плашку в любой режим
     if (bCoworkings.length) {
@@ -1735,13 +1868,136 @@ function populateQuarters() {
 
 async function init() {
   populateQuarters();
+  applyStateFromURL();
   await preloadAll();
   await loadBuildings();
   await renderChoropleth();
   await renderBuildings();
   await renderOverlays();
+  syncURL();
 }
-init();
+// вызов init() — в самом конце файла (после того как определены setMode/METRIC_OPTIONS_*/basemaps,
+// от которых зависит applyStateFromURL внутри этой функции)
+
+// ============================================================
+//  ССЫЛКА С СОСТОЯНИЕМ ВИДА (шаребл URL)
+//  Кодируем в query-параметры всё, что нужно, чтобы прислать коллеге
+//  ссылку на конкретный вид карты, а не объяснять словами.
+// ============================================================
+function syncURL() {
+  const p = new URLSearchParams();
+  p.set('q', currentQuarter.id);
+  p.set('mode', coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale'));
+  p.set('layer', activeLayerKey);
+  p.set('metric', currentMetric);
+  const basemap = document.querySelector('input[name="basemap"]:checked');
+  if (basemap) p.set('basemap', basemap.value);
+  p.set('cluster', document.getElementById('ovCluster').checked ? '1' : '0');
+  p.set('bld', document.getElementById('ovBuildings').checked ? '1' : '0');
+  if (!coworkingMode) {
+    p.set('status', [...filterStatus].join(','));
+    if (rentMode) p.set('rentf', [...filterOnRent].join(','));
+    else p.set('salef', [...filterOnSale].join(','));
+    if (priceRange.min != null) p.set('pmin', priceRange.min);
+    if (priceRange.max != null) p.set('pmax', priceRange.max);
+    if (areaRange.min != null) p.set('amin', areaRange.min);
+    if (areaRange.max != null) p.set('amax', areaRange.max);
+  }
+  const c = map.getCenter();
+  p.set('lat', c.lat.toFixed(5)); p.set('lng', c.lng.toFixed(5)); p.set('z', map.getZoom());
+  history.replaceState(null, '', '?' + p.toString());
+}
+
+function applyStateFromURL() {
+  const p = new URLSearchParams(location.search);
+  if (![...p.keys()].length) return;
+  const q = p.get('q');
+  if (q && QUARTERS.some(x => x.id === q)) {
+    currentQuarter = QUARTERS.find(x => x.id === q);
+    document.getElementById('quarterSelect').value = q;
+  }
+  const mode = p.get('mode');
+  if (mode === 'sale' || mode === 'rent' || mode === 'coworking') {
+    rentMode = (mode === 'rent');
+    coworkingMode = (mode === 'coworking');
+    document.getElementById('modeSale').classList.toggle('active', mode === 'sale');
+    document.getElementById('modeRent').classList.toggle('active', mode === 'rent');
+    document.getElementById('modeCoworking').classList.toggle('active', mode === 'coworking');
+    document.getElementById('rentNote').style.display = rentMode ? 'block' : 'none';
+    document.getElementById('salerentControls').style.display = coworkingMode ? 'none' : 'block';
+    document.getElementById('coworkingControls').style.display = coworkingMode ? 'block' : 'none';
+    document.getElementById('saleRentFilterTitle').textContent = rentMode ? 'Фильтр по аренде' : 'Фильтр по продаже';
+    document.getElementById('saleFilterWrap').style.display = rentMode ? 'none' : 'block';
+    document.getElementById('rentFilterWrap').style.display = rentMode ? 'block' : 'none';
+    document.getElementById('rangeFilterTitle').textContent = rentMode ? 'Диапазон: ставка, руб/кв.м/год' : 'Диапазон: цена, руб/кв.м';
+    const metricSelect = document.getElementById('metricSelect');
+    metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
+  }
+  const layer = p.get('layer');
+  if (layer && LAYER_CFG[layer]) {
+    activeLayerKey = layer;
+    const r = document.querySelector(`input[name="activeLayer"][value="${layer}"]`);
+    if (r) r.checked = true;
+  }
+  const metric = p.get('metric');
+  if (metric) {
+    currentMetric = metric;
+    document.getElementById('metricSelect').value = metric;
+  }
+  const basemap = p.get('basemap');
+  if (basemap && basemaps[basemap]) {
+    const r = document.querySelector(`input[name="basemap"][value="${basemap}"]`);
+    if (r) r.checked = true;
+    Object.values(basemaps).forEach(l => map.removeLayer(l));
+    basemaps[basemap].addTo(map);
+  }
+  if (p.has('cluster')) document.getElementById('ovCluster').checked = p.get('cluster') === '1';
+  if (p.has('bld')) document.getElementById('ovBuildings').checked = p.get('bld') === '1';
+  if (p.has('status')) {
+    filterStatus = new Set(p.get('status').split(',').filter(Boolean));
+    document.querySelectorAll('.flt-status').forEach(cb => cb.checked = filterStatus.has(cb.value));
+  }
+  if (rentMode && p.has('rentf')) {
+    filterOnRent = new Set(p.get('rentf').split(',').filter(Boolean));
+    document.querySelectorAll('.flt-rent').forEach(cb => cb.checked = filterOnRent.has(cb.value));
+  } else if (p.has('salef')) {
+    filterOnSale = new Set(p.get('salef').split(',').filter(Boolean));
+    document.querySelectorAll('.flt-sale').forEach(cb => cb.checked = filterOnSale.has(cb.value));
+  }
+  if (p.has('pmin')) { priceRange.min = Number(p.get('pmin')); document.getElementById('fltPriceMin').value = priceRange.min; }
+  if (p.has('pmax')) { priceRange.max = Number(p.get('pmax')); document.getElementById('fltPriceMax').value = priceRange.max; }
+  if (p.has('amin')) { areaRange.min = Number(p.get('amin')); document.getElementById('fltAreaMin').value = areaRange.min; }
+  if (p.has('amax')) { areaRange.max = Number(p.get('amax')); document.getElementById('fltAreaMax').value = areaRange.max; }
+  const lat = p.get('lat'), lng = p.get('lng'), z = p.get('z');
+  if (lat && lng && z) map.setView([+lat, +lng], +z);
+}
+
+const COPY_LINK_LABEL = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 14a4 4 0 0 0 5.66 0l2.34-2.34a4 4 0 0 0-5.66-5.66l-1 1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10a4 4 0 0 0-5.66 0l-2.34 2.34a4 4 0 0 0 5.66 5.66l1-1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Скопировать ссылку на вид';
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => copyViaTextarea(text));
+  }
+  return copyViaTextarea(text);
+}
+function copyViaTextarea(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { /* браузер не поддерживает — ссылка всё равно уже в адресной строке */ }
+  document.body.removeChild(ta);
+  return ok;
+}
+document.getElementById('copyLinkBtn').addEventListener('click', function() {
+  syncURL();
+  Promise.resolve(copyToClipboard(location.href)).then(() => {
+    this.textContent = 'Ссылка скопирована!';
+    setTimeout(() => { this.innerHTML = COPY_LINK_LABEL; }, 1500);
+  });
+});
+map.on('moveend', () => syncURL());
 
 // Смена квартала
 document.getElementById('quarterSelect').addEventListener('change', async function() {
@@ -1750,17 +2006,20 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
   currentQuarter = q;
   document.getElementById('fileStatus').textContent = 'Загрузка…';
   await loadBuildings(); // обновляем buildingsData/rentLotsData в любом режиме, чтобы не было рассинхрона
+  if (document.getElementById('ovChanges').checked) await loadChanges();
   if (coworkingMode) {
     await loadCoworking();
     renderCoworking();
     renderCoworkingLegend();
     await recomputeCoworkingAll();
     await renderChoropleth();
+    syncURL();
     return;
   }
   await renderChoropleth();
   await renderBuildings();
   if (rentMode) renderBuildingsLegend();
+  syncURL();
 });
 
 // ============================================================
@@ -1772,6 +2031,7 @@ document.querySelectorAll('input[name="activeLayer"]').forEach(r => {
   r.addEventListener('change', function() {
     activeLayerKey = this.value;
     renderChoropleth();
+    syncURL();
   });
 });
 
@@ -1779,6 +2039,7 @@ document.querySelectorAll('input[name="activeLayer"]').forEach(r => {
 document.getElementById('metricSelect').addEventListener('change', function() {
   currentMetric = this.value;
   renderChoropleth();
+  syncURL();
 });
 
 // Оверлеи
@@ -1794,10 +2055,23 @@ document.getElementById('ovBuildings').addEventListener('change', function() {
   if (!buildingsLayer) return;
   this.checked ? buildingsLayer.addTo(map) : map.removeLayer(buildingsLayer);
   renderBuildingsLegend();
+  syncURL();
 });
 
 // Кластеризация (группировка при отдалении)
 document.getElementById('ovCluster').addEventListener('change', function() {
+  renderBuildings();
+  syncURL();
+});
+
+// Подсветка изменений кв/кв
+document.getElementById('ovChanges').addEventListener('change', async function() {
+  if (this.checked) {
+    await loadChanges();
+  } else {
+    changesData = null;
+    document.getElementById('changesNote').textContent = '';
+  }
   renderBuildings();
 });
 
@@ -1806,19 +2080,34 @@ document.querySelectorAll('.flt-status').forEach(cb => {
   cb.addEventListener('change', function() {
     if (this.checked) filterStatus.add(this.value); else filterStatus.delete(this.value);
     applyFilters();
+    syncURL();
   });
 });
 document.querySelectorAll('.flt-sale').forEach(cb => {
   cb.addEventListener('change', function() {
     if (this.checked) filterOnSale.add(this.value); else filterOnSale.delete(this.value);
     applyFilters();
+    syncURL();
   });
 });
 document.querySelectorAll('.flt-rent').forEach(cb => {
   cb.addEventListener('change', function() {
     if (this.checked) filterOnRent.add(this.value); else filterOnRent.delete(this.value);
     applyFilters();
+    syncURL();
   });
+});
+
+// Диапазонные фильтры (цена/ставка, площадь)
+function readRangeInputs() {
+  const v = id => { const x = document.getElementById(id).value; return x === '' ? null : Number(x); };
+  priceRange = { min: v('fltPriceMin'), max: v('fltPriceMax') };
+  areaRange  = { min: v('fltAreaMin'),  max: v('fltAreaMax') };
+  applyFilters();
+  syncURL();
+}
+['fltPriceMin','fltPriceMax','fltAreaMin','fltAreaMax'].forEach(id => {
+  document.getElementById(id).addEventListener('input', readRangeInputs);
 });
 
 // ============================================================
@@ -2104,6 +2393,10 @@ window.setMode = async function(mode) {
   document.getElementById('saleRentFilterTitle').textContent = rentMode ? 'Фильтр по аренде' : 'Фильтр по продаже';
   document.getElementById('saleFilterWrap').style.display = rentMode ? 'none' : 'block';
   document.getElementById('rentFilterWrap').style.display = rentMode ? 'block' : 'none';
+  document.getElementById('rangeFilterTitle').textContent = rentMode ? 'Диапазон: ставка, руб/кв.м/год' : 'Диапазон: цена, руб/кв.м';
+  // цена и ставка не сопоставимы по величине — при смене режима сбрасываем диапазон, чтобы не отфильтровать всё случайно
+  priceRange = { min: null, max: null }; areaRange = { min: null, max: null };
+  ['fltPriceMin','fltPriceMax','fltAreaMin','fltAreaMax'].forEach(id => document.getElementById(id).value = '');
 
   const metricSelect = document.getElementById('metricSelect');
   metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
@@ -2124,6 +2417,7 @@ window.setMode = async function(mode) {
     renderCoworkingLegend();
     await recomputeCoworkingAll();
     await renderChoropleth();
+    syncURL();
     return;
   }
 
@@ -2134,6 +2428,7 @@ window.setMode = async function(mode) {
   updateGlobalStats(getStatsPoints(getFilteredBuildings()));
   await recomputeAll();
   await renderChoropleth();
+  syncURL();
 };
 window.setRentMode = function(isRent) { return setMode(isRent ? 'rent' : 'sale'); };
 document.getElementById('lotsModalBg').addEventListener('click', e => {
@@ -2800,6 +3095,7 @@ document.querySelectorAll('input[name="basemap"]').forEach(r => {
   r.addEventListener('change', function() {
     Object.values(basemaps).forEach(l => map.removeLayer(l));
     basemaps[this.value].addTo(map);
+    syncURL();
   });
 });
 
@@ -2903,6 +3199,111 @@ document.addEventListener('click', e => {
   });
   backdrop.addEventListener('click', closePanel);
 })();
+
+// ============================================================
+//  СРАВНЕНИЕ ЗДАНИЙ (текущий квартал, до 4 зданий рядом)
+// ============================================================
+let bldCompareList = []; // индексы в buildingsData
+
+function bcRowsDef() {
+  return rentMode ? [
+    ['Класс',        b => b.cls || '—'],
+    ['Девелопер',    b => b.developer || '—'],
+    ['Год ввода',    b => b.year || '—'],
+    ['Зона',         b => b.geoZone ? displayName('zones', b.geoZone) : '—'],
+    ['Субрынок',     b => b.geoSubmarket || '—'],
+    ['Площадь в аренду, кв.м', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; return l.length ? fmt(Math.round(l.reduce((s,x)=>s+x.area,0))) : '—'; }],
+    ['Ср. взв. ставка, руб/кв.м/год', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; const r = weightedAvgRate(l); return r != null ? fmt(Math.round(r)) : '—'; }],
+    ['Лотов в аренде', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; return l.length || '—'; }],
+  ] : [
+    ['Класс',        b => b.cls || '—'],
+    ['Девелопер',    b => b.developer || '—'],
+    ['Год ввода',    b => b.year || '—'],
+    ['Статус',       b => b.status || '—'],
+    ['Зона',         b => b.geoZone ? displayName('zones', b.geoZone) : '—'],
+    ['Субрынок',     b => b.geoSubmarket || '—'],
+    ['GBA, кв.м',    b => b.gba != null ? fmt(Math.round(b.gba)) : '—'],
+    ['Объём на продажу, кв.м', b => b.volume != null ? fmt(Math.round(b.volume)) : '—'],
+    ['Цена, руб/кв.м', b => b.price != null ? fmt(Math.round(b.price)) : '—'],
+    ['Лотов, шт.',   b => fmt((lotsData[b.name] || lotsData[b.name_orig] || []).length || b.lots || 0)],
+  ];
+}
+
+function renderBldCompare() {
+  const chipsEl = document.getElementById('bcChips');
+  chipsEl.innerHTML = bldCompareList.map(idx => {
+    const b = buildingsData[idx];
+    return `<span style="display:inline-flex;align-items:center;gap:5px;background:#F7E4E6;color:#931F2B;border-radius:14px;padding:4px 10px;font-size:12px;margin:2px 4px 2px 0;">${b.name}<span style="cursor:pointer;font-weight:700;" onclick="removeBldCompare(${idx})">&times;</span></span>`;
+  }).join('') || '<span style="color:#999;font-size:12px;">Добавьте здания для сравнения (до 4)</span>';
+
+  const body = document.getElementById('bcBody');
+  if (!bldCompareList.length) { body.innerHTML = ''; return; }
+  const rowsDef = bcRowsDef();
+  let html = '<table class="cmp-table"><thead><tr><th>Показатель</th>';
+  bldCompareList.forEach(idx => html += `<th>${buildingsData[idx].name}</th>`);
+  html += '</tr></thead><tbody>';
+  rowsDef.forEach(([label, fn]) => {
+    html += `<tr><td>${label}</td>`;
+    bldCompareList.forEach(idx => html += `<td>${fn(buildingsData[idx])}</td>`);
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  body.innerHTML = html;
+}
+
+window.addBldCompare = function(idx) {
+  if (bldCompareList.length >= 4 || bldCompareList.includes(idx)) return;
+  bldCompareList.push(idx);
+  renderBldCompare();
+};
+window.removeBldCompare = function(idx) {
+  bldCompareList = bldCompareList.filter(i => i !== idx);
+  renderBldCompare();
+};
+
+const bcInput = document.getElementById('bcSearchInput');
+const bcResultsBox = document.getElementById('bcSearchResults');
+bcInput.addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  bcResultsBox.innerHTML = '';
+  if (!q) { bcResultsBox.classList.remove('open'); return; }
+  const matches = buildingsData
+    .map((b, idx) => ({ b, idx }))
+    .filter(({ b, idx }) => b.name && b.name.toLowerCase().includes(q) && !bldCompareList.includes(idx))
+    .slice(0, 8);
+  matches.forEach(({ b, idx }) => {
+    const div = document.createElement('div');
+    div.className = 'msr-item';
+    div.textContent = b.name;
+    div.onclick = () => { addBldCompare(idx); bcInput.value = ''; bcResultsBox.classList.remove('open'); bcResultsBox.innerHTML = ''; };
+    bcResultsBox.appendChild(div);
+  });
+  bcResultsBox.classList.toggle('open', matches.length > 0);
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('#bcSearchInput') && !e.target.closest('#bcSearchResults')) bcResultsBox.classList.remove('open');
+});
+
+document.getElementById('openBldCompare').addEventListener('click', function() {
+  document.getElementById('bldCompareModalBg').classList.add('open');
+  renderBldCompare();
+});
+document.getElementById('bcClose').addEventListener('click', () => document.getElementById('bldCompareModalBg').classList.remove('open'));
+document.getElementById('bldCompareModalBg').addEventListener('click', e => {
+  if (e.target.id === 'bldCompareModalBg') document.getElementById('bldCompareModalBg').classList.remove('open');
+});
+document.getElementById('bcDownload').addEventListener('click', () => {
+  if (!bldCompareList.length) return;
+  const rowsDef = bcRowsDef();
+  const aoa = [['Показатель', ...bldCompareList.map(idx => buildingsData[idx].name)]];
+  rowsDef.forEach(([label, fn]) => aoa.push([label, ...bldCompareList.map(idx => fn(buildingsData[idx]))]));
+  const ws = XLSX.utils.aoa_to_sheet(aoa);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Сравнение');
+  XLSX.writeFile(wb, `sravnenie_zdaniy_${currentQuarter.id}.xlsx`);
+});
+
+init();
 </script>
 </body>
 </html>
