@@ -1301,6 +1301,17 @@ async function loadChanges() {
 let allRentLots = {}; // qid -> { "Название здания": [ {area,rate,...}, ... ] }
 let allCoworking = {}; // qid -> [ {name,network,bc,seats,vacancy,rate,lat,lng}, ... ]
 let allCoworkingStats = {}; // qid -> { layerKey -> { name -> {wavgRate,avgRate,seats,vacancy,count} } }
+// Лоты продажи по кварталам — в отличие от allRentLots/allCoworking, НЕ грузятся
+// в precomputeAll() (это добавило бы ~17 лишних файлов, до 700 КБ каждый, к каждому
+// открытию «Динамики»/«Сравнения кварталов», хотя нужны только в «Сравнении зданий»
+// в режиме Продажа). Подгружаем по требованию — только для «Было»/«Стало».
+let allLots = {}; // qid -> { "Название здания": [ {block,floor,area,price,...}, ... ] }
+async function ensureLots(qid) {
+  if (allLots[qid]) return allLots[qid];
+  const q = QUARTERS.find(x => x.id === qid);
+  allLots[qid] = q?.lots ? await fetchJSON(q.lots, {}) : {};
+  return allLots[qid];
+}
 async function precomputeAll() {
   if (precomputed) return;
   // порядок кварталов от старых к новым
@@ -3303,9 +3314,14 @@ function bcRowsDef() {
   const fLbl = QUARTERS.find(q => q.id === from)?.label || from, tLbl = QUARTERS.find(q => q.id === to)?.label || to;
   // b здесь — здание ТЕКУЩЕГО квартала (для статичных полей типа класса/девелопера);
   // для Было/Стало ищем то же здание по normId в срезах precomputeAll за конкретный квартал.
-  function crossQuarter(b, valFn) {
+  // здание в конкретном квартале (по normId, через срезы precomputeAll) — не путать
+  // с b, который приходит в rowsDef всегда из ТЕКУЩЕГО квартала карты.
+  function atQuarter(b, qid) {
     const nid = normId(b);
-    const bF = buildById[nid]?.[from], bT = buildById[nid]?.[to];
+    return buildById[nid]?.[qid];
+  }
+  function crossQuarter(b, valFn) {
+    const bF = atQuarter(b, from), bT = atQuarter(b, to);
     const was = valFn(bF, from), now = valFn(bT, to);
     const pct = (was != null && now != null && was) ? (now - was) / was * 100 : null;
     return { was, now, pct };
@@ -3313,6 +3329,27 @@ function bcRowsDef() {
   const deltaCell = r => r.pct == null
     ? plainCell('—')
     : { value: (r.pct > 0 ? '+' : '') + r.pct.toFixed(1) + '%', cls: r.pct > 0 ? 'cmp-up' : (r.pct < 0 ? 'cmp-down' : '') };
+  // Лотов/площадок — считаем на срезе НУЖНОГО квартала (bq/qid), а не на живых
+  // lotsData/rentLotsData/coworkingData, которые всегда про ТЕКУЩИЙ квартал карты.
+  const lotsCountCell = (b, qid) => {
+    const bq = atQuarter(b, qid);
+    if (!bq) return plainCell('—');
+    const src = allLots[qid] || {};
+    const l = src[bq.name] || src[bq.name_orig] || [];
+    return plainCell(fmt(l.length || bq.lots || 0));
+  };
+  const rentLotsCountCell = (b, qid) => {
+    const bq = atQuarter(b, qid);
+    if (!bq) return plainCell('—');
+    const src = allRentLots[qid] || {};
+    const l = src[bq.name] || src[bq.name_orig] || [];
+    return plainCell(l.length || '—');
+  };
+  const coworkCountCell = (b, qid) => {
+    const bq = atQuarter(b, qid);
+    if (!bq) return plainCell('—');
+    return plainCell(fmt(coworkingsInBuilding(bq, allCoworking[qid] || []).length));
+  };
   if (mode === 'coworking') {
     return [
       ['Класс',        b => plainCell(b.cls || '—')],
@@ -3322,7 +3359,8 @@ function bcRowsDef() {
       [`Ставка ${fLbl}, руб/мес`, b => { const r = crossQuarter(b, bldCoworkVal).was; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
       [`Ставка ${tLbl}, руб/мес`, b => { const r = crossQuarter(b, bldCoworkVal).now; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
       ['Δ ставки, %',  b => deltaCell(crossQuarter(b, bldCoworkVal))],
-      ['Площадок в здании (тек. кв.)', b => plainCell(fmt(coworkingsInBuilding(b).length))],
+      [`Площадок в здании ${fLbl}`, b => coworkCountCell(b, from)],
+      [`Площадок в здании ${tLbl}`, b => coworkCountCell(b, to)],
     ];
   }
   if (mode === 'rent') {
@@ -3335,7 +3373,8 @@ function bcRowsDef() {
       [`Ставка ${fLbl}, руб/кв.м/год`, b => { const r = crossQuarter(b, bldRentVal).was; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
       [`Ставка ${tLbl}, руб/кв.м/год`, b => { const r = crossQuarter(b, bldRentVal).now; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
       ['Δ ставки, %',  b => deltaCell(crossQuarter(b, bldRentVal))],
-      ['Лотов в аренде (тек. кв.)', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; return plainCell(l.length || '—'); }],
+      [`Лотов в аренде ${fLbl}`, b => rentLotsCountCell(b, from)],
+      [`Лотов в аренде ${tLbl}`, b => rentLotsCountCell(b, to)],
     ];
   }
   return [
@@ -3351,11 +3390,12 @@ function bcRowsDef() {
     [`Цена ${fLbl}, руб/кв.м`, b => { const v = crossQuarter(b, bldVal).was; return plainCell(v != null ? fmt(Math.round(v)) : '—'); }],
     [`Цена ${tLbl}, руб/кв.м`, b => { const v = crossQuarter(b, bldVal).now; return plainCell(v != null ? fmt(Math.round(v)) : '—'); }],
     ['Δ цены, %',    b => deltaCell(crossQuarter(b, bldVal))],
-    ['Лотов, шт. (тек. кв.)', b => plainCell(fmt((lotsData[b.name] || lotsData[b.name_orig] || []).length || b.lots || 0))],
+    [`Лотов, шт. ${fLbl}`, b => lotsCountCell(b, from)],
+    [`Лотов, шт. ${tLbl}`, b => lotsCountCell(b, to)],
   ];
 }
 
-function renderBldCompare() {
+async function renderBldCompare() {
   const chipsEl = document.getElementById('bcChips');
   chipsEl.innerHTML = bldCompareList.map(idx => {
     const b = buildingsData[idx];
@@ -3364,6 +3404,12 @@ function renderBldCompare() {
 
   const body = document.getElementById('bcBody');
   if (!bldCompareList.length) { body.innerHTML = ''; return; }
+  // лоты продажи по кварталам грузятся лениво (см. ensureLots) — в отличие от
+  // аренды/коворкингов, для режима Продажа их ещё нет в кэше после precomputeAll()
+  if (document.getElementById('bcMode').value === 'sale') {
+    const from = document.getElementById('bcFrom').value, to = document.getElementById('bcTo').value;
+    await Promise.all([ensureLots(from), ensureLots(to)]);
+  }
   const rowsDef = bcRowsDef();
   let html = '<table class="cmp-table"><thead><tr><th>Показатель</th>';
   bldCompareList.forEach(idx => html += `<th>${buildingsData[idx].name}</th>`);
