@@ -367,6 +367,14 @@
     .prow:last-child { border-bottom: none; }
     .plabel { color: #888; font-size: 11px; white-space: nowrap; }
     .pval { font-weight: 600; color: #222; text-align: right; }
+    .coord-val { font-family: 'SFMono-Regular', Consolas, Menlo, monospace; font-size: 11.5px; }
+    .coord-copy-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; margin-left: 5px; padding: 0; vertical-align: middle;
+      border: 1px solid #ddd; border-radius: 4px; background: #f7f7f7; cursor: pointer;
+    }
+    .coord-copy-btn:hover { background: #eee; }
+    .coord-copy-btn.copied { background: #dcfce7; border-color: #86efac; }
   </style>
 </head>
 <body>
@@ -1676,6 +1684,24 @@ function buildingColor(cls) { return CLASS_COLORS[cls] || '#6b7280'; }
 const ICON_BUILDING = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3" width="10" height="18" stroke="#ffffff" stroke-width="1.8"/><rect x="15" y="9" width="6" height="12" stroke="#ffffff" stroke-width="1.8"/><line x1="8" y1="7" x2="8" y2="7.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="7" x2="12" y2="7.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="11" x2="8" y2="11.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="11.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="15" x2="8" y2="15.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="12" y2="15.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>';
 const ICON_LIST = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="4" y1="6" x2="20" y2="6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="12" x2="20" y2="12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="18" x2="20" y2="18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>';
 const ICON_CHART = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="20" x2="5" y2="10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="20" x2="19" y2="14" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>';
+// Иконки нейтрального (не белого) цвета — для мелкой кнопки копирования на светлом фоне.
+const ICON_COPY = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="12" height="12" rx="2" stroke="#555" stroke-width="1.8"/><path d="M4 16V5a1 1 0 0 1 1-1h11" stroke="#555" stroke-width="1.8" stroke-linecap="round"/></svg>';
+const ICON_CHECK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+// Координаты здания — с кнопкой копирования (формат "lat, lng", годится для вставки
+// в Яндекс/Google Карты). Общая функция для попапа здания и карточки здания.
+function coordsCell(b) {
+  if (!isFinite(b.lat) || !isFinite(b.lng)) return '—';
+  const lat = b.lat.toFixed(6), lng = b.lng.toFixed(6);
+  return `<span class="coord-val">${lat}, ${lng}</span><button class="coord-copy-btn" type="button" onclick="copyBuildingCoords(this, '${lat}, ${lng}')" title="Скопировать координаты">${ICON_COPY}</button>`;
+}
+window.copyBuildingCoords = function(btn, text) {
+  Promise.resolve(copyToClipboard(text)).then(() => {
+    const original = btn.innerHTML;
+    btn.classList.add('copied');
+    btn.innerHTML = ICON_CHECK;
+    setTimeout(() => { btn.innerHTML = original; btn.classList.remove('copied'); }, 1200);
+  });
+};
 function buildingRadius(vol) {
   if (!isFinite(vol) || vol <= 0) return 4;
   return Math.max(4, Math.min(18, Math.sqrt(vol) / 12));
@@ -1705,6 +1731,7 @@ function buildingCardRows(b) {
   const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
   return [
     ['Адрес',        b.address || '—'],
+    ['Координаты',   coordsCell(b)],
     ['Девелопер',    b.developer || '—'],
     ['Класс',        b.cls || '—'],
     ['Год ввода',    b.year || '—'],
@@ -1780,6 +1807,7 @@ function renderBuildings() {
       const avgRate = avgRateRaw != null ? Math.round(avgRateRaw) : null;
       rows = [
         ['Адрес',           b.address || '—'],
+        ['Координаты',      coordsCell(b)],
         ['Девелопер',       b.developer || '—'],
         ['Класс',           b.cls || '—'],
         ['Год ввода',       b.year || '—'],
@@ -1803,6 +1831,7 @@ function renderBuildings() {
     } else if (rentMode) {
       rows = [
         ['Адрес',     b.address || '—'],
+        ['Координаты', coordsCell(b)],
         ['Девелопер', b.developer || '—'],
         ['Класс',     b.cls || '—'],
         ['Год ввода', b.year || '—'],
