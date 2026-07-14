@@ -566,6 +566,17 @@
   </div>
 </div>
 
+<!-- Модалка КАРТОЧКА ЗДАНИЯ (полная информация — из попапа коворкинга и т.п.) -->
+<div class="modal-bg" id="bldCardModalBg">
+  <div class="modal" style="width:min(420px,94vw);">
+    <div class="modal-head">
+      <h3 id="bldCardTitle">Здание</h3>
+      <button class="modal-x" id="bldCardClose">&times;</button>
+    </div>
+    <div class="modal-body" id="bldCardBody"></div>
+  </div>
+</div>
+
 <!-- Модалка ДИНАМИКА -->
 <div class="modal-bg" id="dynModalBg">
   <div class="modal" style="width:min(860px,94vw);">
@@ -1687,6 +1698,32 @@ function computeChange(b) {
   return { isNew: false, pct: Math.round((curVal - prevVal) / prevVal * 1000) / 10 };
 }
 
+// Полный набор полей здания (продажа) — единая функция для попапа зданий
+// И для карточки здания (модалка bldCardModalBg, открывается из попапа
+// коворкинга и т.п., где своего попапа у здания нет).
+function buildingCardRows(b) {
+  const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
+  return [
+    ['Адрес',        b.address || '—'],
+    ['Девелопер',    b.developer || '—'],
+    ['Класс',        b.cls || '—'],
+    ['Год ввода',    b.year || '—'],
+    ['Старт строительства', b.constructionStart || '—'],
+    ['Старт продаж', b.start || '—'],
+    ['Статус',       b.status || '—'],
+    ['В продаже',    b.on_sale || '—'],
+    ['GBA, кв.м',    b.gba != null ? fmt(Math.round(b.gba)) : '—'],
+    ['GLA, кв.м',    b.gla != null ? fmt(Math.round(b.gla)) : '—'],
+    ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
+    ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
+    ['Лотов, шт.',   fmt(nLots)],
+    ['Зона',         b.geoZone ? displayName('zones', b.geoZone) : '—'],
+    ['Субрынок',     b.geoSubmarket || '—'],
+    ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
+    ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
+  ];
+}
+
 function renderBuildings() {
   if (buildingsLayer) map.removeLayer(buildingsLayer);
   const clustered = document.getElementById('ovCluster').checked;
@@ -1776,25 +1813,7 @@ function renderBuildings() {
         <button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика продаж</button>
       </div>` : '';
     } else {
-      rows = [
-        ['Адрес',        b.address || '—'],
-        ['Девелопер',    b.developer || '—'],
-        ['Класс',        b.cls || '—'],
-        ['Год ввода',    b.year || '—'],
-        ['Старт строительства', b.constructionStart || '—'],
-        ['Старт продаж', b.start || '—'],
-        ['Статус',       b.status || '—'],
-        ['В продаже',    b.on_sale || '—'],
-        ['GBA, кв.м',    b.gba != null ? fmt(Math.round(b.gba)) : '—'],
-        ['GLA, кв.м',    b.gla != null ? fmt(Math.round(b.gla)) : '—'],
-        ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
-        ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
-        ['Лотов, шт.',   fmt(nLots)],
-        ['Зона',         b.geoZone ? displayName('zones', b.geoZone) : '—'],
-        ['Субрынок',     b.geoSubmarket || '—'],
-        ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
-        ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
-      ];
+      rows = buildingCardRows(b);
       const lotsBtn = nLots > 0 ? `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">${ICON_LIST} Продажа (${nLots})</button>` : '';
       const anaSaleBtn = `<button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика продаж</button>`;
       btns = `<div class="popup-btn-row">${lotsBtn}${anaSaleBtn}</div>`;
@@ -2318,6 +2337,54 @@ function coworkingsInBuilding(b, cwList) {
     return Math.hypot(dx, dy) < 80;
   });
 }
+// Обратный поиск: ближайшее (в пределах тех же 80 м) здание для точки коворкинга —
+// чтобы из попапа коворкинга можно было открыть полную карточку здания.
+function buildingIndexForCoworking(c) {
+  if (!isFinite(c.lat) || !isFinite(c.lng)) return -1;
+  if (Math.abs(c.lat - CW_PLACEHOLDER[0]) < 1e-6 && Math.abs(c.lng - CW_PLACEHOLDER[1]) < 1e-6) return -1;
+  let best = -1, bestDist = 80;
+  buildingsData.forEach((b, idx) => {
+    if (!isFinite(b.lat) || !isFinite(b.lng)) return;
+    const dy = (c.lat - b.lat) * 111320;
+    const dx = (c.lng - b.lng) * 111320 * Math.cos(b.lat * Math.PI / 180);
+    const d = Math.hypot(dx, dy);
+    if (d < bestDist) { bestDist = d; best = idx; }
+  });
+  return best;
+}
+// Полная карточка здания (адрес, даты, GBA/GLA, статус и т.д.) — вызывается
+// ссылкой из попапа коворкинга, где у самого здания попапа нет (маркеры
+// зданий скрыты в режиме «Коворкинги»).
+window.openBuildingCard = function(idx) {
+  const b = buildingsData[idx]; if (!b) return;
+  const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
+  const rentLots = rentLotsData[b.name] || rentLotsData[b.name_orig] || [];
+  const bCoworkings = coworkingsInBuilding(b);
+  document.getElementById('bldCardTitle').textContent = b.name || 'Здание';
+  let btns = `<div class="popup-btn-row">`;
+  if (nLots > 0) btns += `<button class="popup-lots-btn" onclick="openLotsModal(${idx})">${ICON_LIST} Продажа (${nLots})</button>`;
+  btns += `<button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика продаж</button></div>`;
+  if (rentLots.length) {
+    btns += `<div class="popup-btn-row">
+      <button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${rentLots.length})</button>
+      <button class="popup-lots-btn" style="background:#B23A48;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика аренды</button>
+    </div>`;
+  }
+  if (bCoworkings.length) {
+    btns += `<div class="popup-btn-row">
+      <button class="popup-lots-btn" style="background:#0d9488;" onclick="openCoworkingModal(${idx})">${ICON_LIST} Коворкинги (${bCoworkings.length})</button>
+      <button class="popup-lots-btn" style="background:#0891b2;" onclick="openCoworkingAnalytics(${idx})">${ICON_CHART} Аналитика коворкингов</button>
+    </div>`;
+  }
+  document.getElementById('bldCardBody').innerHTML =
+    buildingCardRows(b).map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
+    `<div style="margin-top:10px;">${btns}</div>`;
+  document.getElementById('bldCardModalBg').classList.add('open');
+};
+document.getElementById('bldCardClose').addEventListener('click', () => document.getElementById('bldCardModalBg').classList.remove('open'));
+document.getElementById('bldCardModalBg').addEventListener('click', e => {
+  if (e.target.id === 'bldCardModalBg') e.currentTarget.classList.remove('open');
+});
 
 window.openCoworkingModal = function(idx) {
   const b = buildingsData[idx]; if (!b) return;
@@ -2423,17 +2490,26 @@ function renderCoworking() {
     const marker = L.circleMarker([c.lat, c.lng], {
       radius: 6, fillColor: color, color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.9
     });
+    const bIdx = buildingIndexForCoworking(c);
+    const bcVal = c.bc || c.address || '—';
+    const bcCell = bIdx >= 0
+      ? `<a href="#" onclick="openBuildingCard(${bIdx});return false;" style="color:#931F2B;text-decoration:underline;" title="Открыть карточку здания">${bcVal}</a>`
+      : bcVal;
     const rows = [
       ['Сеть', c.network || '—'],
-      ['БЦ / адрес', c.bc || c.address || '—'],
+      ['БЦ / адрес', bcCell],
       ['Деловой район', c.district || '—'],
       ['Всего мест', c.seats != null ? fmt(Math.round(c.seats)) : '—'],
       ['Вакантно', c.vacancy != null ? fmt(Math.round(c.vacancy)) : '—'],
       ['Ставка, руб/мес с НДС', c.rate != null ? fmt(Math.round(c.rate)) : '—'],
     ];
+    const bldBtn = bIdx >= 0
+      ? `<div class="popup-btn-row"><button class="popup-lots-btn" style="background:#6b7280;" onclick="openBuildingCard(${bIdx})">${ICON_BUILDING} Карточка здания</button></div>`
+      : '';
     const html = `<b>${c.name || 'Коворкинг'}</b>` +
-      rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('');
-    marker.bindPopup(html);
+      rows.map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v}</span></div>`).join('') +
+      (bldBtn ? `<div style="margin-top:8px;">${bldBtn}</div>` : '');
+    marker.bindPopup(html, { maxWidth: 320, minWidth: 280 });
     marker.bindTooltip(c.name || '', { direction: 'top' });
     coworkingLayer.addLayer(marker);
     coworkingMarkers[idx] = marker;
