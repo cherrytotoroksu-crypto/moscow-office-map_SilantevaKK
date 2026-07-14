@@ -661,6 +661,8 @@
         <input id="bcSearchInput" type="text" placeholder="начните вводить название…" autocomplete="off">
         <div class="map-search-results" id="bcSearchResults" style="position:absolute; top:100%; left:0; right:0;"></div>
       </label>
+      <label>Было: <select id="bcFrom"></select></label>
+      <label>Стало: <select id="bcTo"></select></label>
     </div>
     <div style="padding:0 18px;" id="bcChips"></div>
     <div class="modal-body" id="bcBody"></div>
@@ -940,8 +942,10 @@ async function fetchGeoJSON(key) {
 
 async function preloadAll() {
   // грузим только файловые слои; синтетические — после загрузки зданий
-  await Promise.all(Object.keys(LAYER_CFG)
-    .filter(k => !LAYER_CFG[k].synth).map(fetchGeoJSON));
+  await Promise.all([
+    ...Object.keys(LAYER_CFG).filter(k => !LAYER_CFG[k].synth).map(fetchGeoJSON),
+    loadBuildingDates(),
+  ]);
 }
 
 // ============================================================
@@ -1207,6 +1211,37 @@ function normId(b) {
   return (b.name || b.name_orig || '').trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
+// ============================================================
+//  ДАТЫ ЗДАНИЙ (старт строительства / старт продаж / ввод в эксплуатацию)
+//  Один общий реестр data/building_dates.json (не дублируется по 17 файлам
+//  кварталов) — по нему же вычисляется актуальный статус здания для
+//  ЛЮБОГО просматриваемого квартала, вместо статичного status из JSON.
+// ============================================================
+let buildingDates = {}; // normId → { construction_start_q, start_q, commission_q }
+async function loadBuildingDates() {
+  buildingDates = await fetchJSON('data/building_dates.json', {});
+}
+function qLabel(yyyymm) {
+  if (!yyyymm) return null;
+  const y = yyyymm.slice(0, 4), m = +yyyymm.slice(4, 6);
+  const q = Math.floor((m - 1) / 3) + 1;
+  return `Q${q} ${y}`;
+}
+// Мутирует здания квартала qid на месте: подставляет start (старт продаж)
+// и, если известен commission_q, пересчитывает status относительно qid —
+// вместо статичного значения из buildings_QQQQMM.json.
+function applyBuildingDates(blds, qid) {
+  for (const b of blds) {
+    const d = buildingDates[normId(b)];
+    if (!d) continue;
+    b.constructionStart = qLabel(d.construction_start_q);
+    if (d.start_q) b.start = qLabel(d.start_q);
+    if (d.commission_q) {
+      b.status = qid >= d.commission_q ? 'Построен' : 'Строится';
+    }
+  }
+}
+
 // Подсветка изменений кв/кв (чекбокс «Подсветить изменения») — лёгкая точечная загрузка
 // ОДНОГО предыдущего квартала (не путать с precomputeAll(), который тянет все 17 сразу).
 let changesData = null;        // { byId, rentById } для квартала перед currentQuarter
@@ -1256,6 +1291,7 @@ async function precomputeAll() {
   // карте текущего квартала через отдельный recomputeAll().
   const divisionLayers = Object.keys(LAYER_CFG).filter(k => k !== 'mo');
   for (const { q, blds, rent, coworking } of fetched) {
+    applyBuildingDates(blds, q.id);
     allBuildings[q.id] = blds;
     allRentLots[q.id] = rent;
     allCoworking[q.id] = coworking;
@@ -1700,6 +1736,7 @@ function renderBuildings() {
         ['Девелопер',    b.developer || '—'],
         ['Класс',        b.cls || '—'],
         ['Год ввода',    b.year || '—'],
+        ['Старт строительства', b.constructionStart || '—'],
         ['Старт продаж', b.start || '—'],
         ['Статус',       b.status || '—'],
         ['В продаже',    b.on_sale || '—'],
@@ -1812,6 +1849,7 @@ async function loadBuildings() {
       loadCoworking(), // сама пишет в coworkingData + обновляет статус коворкингов
     ]);
     buildingsData = data;
+    applyBuildingDates(buildingsData, currentQuarter.id);
     lotsData = lots;
     rentLotsData = rent;
     const rentCount = Object.keys(rentLotsData).length;
@@ -3205,27 +3243,51 @@ document.addEventListener('click', e => {
 // ============================================================
 let bldCompareList = []; // индексы в buildingsData
 
+// Каждая строка возвращает { value, cls } — value для ячейки (и для Excel), cls — CSS-класс подсветки (cmp-up/cmp-down).
+function plainCell(v) { return { value: v }; }
+
 function bcRowsDef() {
-  return rentMode ? [
-    ['Класс',        b => b.cls || '—'],
-    ['Девелопер',    b => b.developer || '—'],
-    ['Год ввода',    b => b.year || '—'],
-    ['Зона',         b => b.geoZone ? displayName('zones', b.geoZone) : '—'],
-    ['Субрынок',     b => b.geoSubmarket || '—'],
-    ['Площадь в аренду, кв.м', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; return l.length ? fmt(Math.round(l.reduce((s,x)=>s+x.area,0))) : '—'; }],
-    ['Ср. взв. ставка, руб/кв.м/год', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; const r = weightedAvgRate(l); return r != null ? fmt(Math.round(r)) : '—'; }],
-    ['Лотов в аренде', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; return l.length || '—'; }],
-  ] : [
-    ['Класс',        b => b.cls || '—'],
-    ['Девелопер',    b => b.developer || '—'],
-    ['Год ввода',    b => b.year || '—'],
-    ['Статус',       b => b.status || '—'],
-    ['Зона',         b => b.geoZone ? displayName('zones', b.geoZone) : '—'],
-    ['Субрынок',     b => b.geoSubmarket || '—'],
-    ['GBA, кв.м',    b => b.gba != null ? fmt(Math.round(b.gba)) : '—'],
-    ['Объём на продажу, кв.м', b => b.volume != null ? fmt(Math.round(b.volume)) : '—'],
-    ['Цена, руб/кв.м', b => b.price != null ? fmt(Math.round(b.price)) : '—'],
-    ['Лотов, шт.',   b => fmt((lotsData[b.name] || lotsData[b.name_orig] || []).length || b.lots || 0)],
+  const from = document.getElementById('bcFrom').value, to = document.getElementById('bcTo').value;
+  const fLbl = QUARTERS.find(q => q.id === from)?.label || from, tLbl = QUARTERS.find(q => q.id === to)?.label || to;
+  // b здесь — здание ТЕКУЩЕГО квартала (для статичных полей типа класса/девелопера);
+  // для Было/Стало ищем то же здание по normId в срезах precomputeAll за конкретный квартал.
+  function crossQuarter(b, valFn) {
+    const nid = normId(b);
+    const bF = buildById[nid]?.[from], bT = buildById[nid]?.[to];
+    const was = valFn(bF, from), now = valFn(bT, to);
+    const pct = (was != null && now != null && was) ? (now - was) / was * 100 : null;
+    return { was, now, pct };
+  }
+  const deltaCell = r => r.pct == null
+    ? plainCell('—')
+    : { value: (r.pct > 0 ? '+' : '') + r.pct.toFixed(1) + '%', cls: r.pct > 0 ? 'cmp-up' : (r.pct < 0 ? 'cmp-down' : '') };
+  if (rentMode) {
+    return [
+      ['Класс',        b => plainCell(b.cls || '—')],
+      ['Девелопер',    b => plainCell(b.developer || '—')],
+      ['Год ввода',    b => plainCell(b.year || '—')],
+      ['Зона',         b => plainCell(b.geoZone ? displayName('zones', b.geoZone) : '—')],
+      ['Субрынок',     b => plainCell(b.geoSubmarket || '—')],
+      [`Ставка ${fLbl}, руб/кв.м/год`, b => { const r = crossQuarter(b, bldRentVal).was; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
+      [`Ставка ${tLbl}, руб/кв.м/год`, b => { const r = crossQuarter(b, bldRentVal).now; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
+      ['Δ ставки, %',  b => deltaCell(crossQuarter(b, bldRentVal))],
+      ['Лотов в аренде (тек. кв.)', b => { const l = rentLotsData[b.name] || rentLotsData[b.name_orig] || []; return plainCell(l.length || '—'); }],
+    ];
+  }
+  return [
+    ['Класс',        b => plainCell(b.cls || '—')],
+    ['Девелопер',    b => plainCell(b.developer || '—')],
+    ['Год ввода',    b => plainCell(b.year || '—')],
+    ['Старт строительства', b => plainCell(b.constructionStart || '—')],
+    ['Старт продаж', b => plainCell(b.start || '—')],
+    ['Статус',       b => plainCell(b.status || '—')],
+    ['Зона',         b => plainCell(b.geoZone ? displayName('zones', b.geoZone) : '—')],
+    ['Субрынок',     b => plainCell(b.geoSubmarket || '—')],
+    ['GBA, кв.м',    b => plainCell(b.gba != null ? fmt(Math.round(b.gba)) : '—')],
+    [`Цена ${fLbl}, руб/кв.м`, b => { const v = crossQuarter(b, bldVal).was; return plainCell(v != null ? fmt(Math.round(v)) : '—'); }],
+    [`Цена ${tLbl}, руб/кв.м`, b => { const v = crossQuarter(b, bldVal).now; return plainCell(v != null ? fmt(Math.round(v)) : '—'); }],
+    ['Δ цены, %',    b => deltaCell(crossQuarter(b, bldVal))],
+    ['Лотов, шт. (тек. кв.)', b => plainCell(fmt((lotsData[b.name] || lotsData[b.name_orig] || []).length || b.lots || 0))],
   ];
 }
 
@@ -3244,7 +3306,7 @@ function renderBldCompare() {
   html += '</tr></thead><tbody>';
   rowsDef.forEach(([label, fn]) => {
     html += `<tr><td>${label}</td>`;
-    bldCompareList.forEach(idx => html += `<td>${fn(buildingsData[idx])}</td>`);
+    bldCompareList.forEach(idx => { const c = fn(buildingsData[idx]); html += `<td class="${c.cls||''}">${c.value}</td>`; });
     html += '</tr>';
   });
   html += '</tbody></table>';
@@ -3284,10 +3346,15 @@ document.addEventListener('click', e => {
   if (!e.target.closest('#bcSearchInput') && !e.target.closest('#bcSearchResults')) bcResultsBox.classList.remove('open');
 });
 
-document.getElementById('openBldCompare').addEventListener('click', function() {
+document.getElementById('openBldCompare').addEventListener('click', async function() {
+  await precomputeAll();
+  const qs = quartersChrono();
+  fillQuarterSelect(document.getElementById('bcFrom'), qs[0].id);
+  fillQuarterSelect(document.getElementById('bcTo'), qs[qs.length - 1].id);
   document.getElementById('bldCompareModalBg').classList.add('open');
   renderBldCompare();
 });
+['bcFrom', 'bcTo'].forEach(id => document.getElementById(id).addEventListener('change', renderBldCompare));
 document.getElementById('bcClose').addEventListener('click', () => document.getElementById('bldCompareModalBg').classList.remove('open'));
 document.getElementById('bldCompareModalBg').addEventListener('click', e => {
   if (e.target.id === 'bldCompareModalBg') document.getElementById('bldCompareModalBg').classList.remove('open');
@@ -3296,11 +3363,12 @@ document.getElementById('bcDownload').addEventListener('click', () => {
   if (!bldCompareList.length) return;
   const rowsDef = bcRowsDef();
   const aoa = [['Показатель', ...bldCompareList.map(idx => buildingsData[idx].name)]];
-  rowsDef.forEach(([label, fn]) => aoa.push([label, ...bldCompareList.map(idx => fn(buildingsData[idx]))]));
+  rowsDef.forEach(([label, fn]) => aoa.push([label, ...bldCompareList.map(idx => fn(buildingsData[idx]).value)]));
   const ws = XLSX.utils.aoa_to_sheet(aoa);
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'Сравнение');
-  XLSX.writeFile(wb, `sravnenie_zdaniy_${currentQuarter.id}.xlsx`);
+  const from = document.getElementById('bcFrom').value, to = document.getElementById('bcTo').value;
+  XLSX.writeFile(wb, `sravnenie_zdaniy_${from}_${to}.xlsx`);
 });
 
 init();
