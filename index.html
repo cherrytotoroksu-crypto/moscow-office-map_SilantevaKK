@@ -700,10 +700,35 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
-<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
+// ============================================================
+//  ЛЕНИВАЯ ЗАГРУЗКА ТЯЖЁЛЫХ БИБЛИОТЕК
+//  xlsx (~1 МБ), chart.js (~200 КБ) и leaflet-draw нужны не на
+//  каждой загрузке сайта, а только при первом реальном использовании
+//  (клик «Выгрузить Excel», открытие «Динамики», включение рисования) —
+//  подключаем их по требованию, а не блокируем ими старт страницы.
+// ============================================================
+const _scriptCache = {};
+function loadScript(src) {
+  if (_scriptCache[src]) return _scriptCache[src];
+  _scriptCache[src] = new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = () => reject(new Error(`Не удалось загрузить ${src}`));
+    document.head.appendChild(s);
+  });
+  return _scriptCache[src];
+}
+function ensureXLSX() {
+  return window.XLSX ? Promise.resolve() : loadScript('https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js');
+}
+function ensureChart() {
+  return window.Chart ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js');
+}
+function ensureDraw() {
+  return window.L?.Draw ? Promise.resolve() : loadScript('https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js');
+}
 // ============================================================
 //  КВАРТАЛЫ
 //  Чтобы добавить новый квартал: положи файл data/buildings_YYYYQN.json
@@ -2491,8 +2516,9 @@ document.getElementById('lotsModalBg').addEventListener('click', e => {
 });
 let lotsModalIsRent = false;
 let lotsModalKind = 'sale'; // 'sale' | 'rent' | 'cw'
-document.getElementById('lotsModalDownload').addEventListener('click', function() {
+document.getElementById('lotsModalDownload').addEventListener('click', async function() {
   const b = currentLotsBuilding; if (!b) return;
+  await ensureXLSX();
   let rows, fname;
   if (lotsModalKind === 'cw') {
     rows = coworkingsInBuilding(b).map(c => ({
@@ -2536,8 +2562,22 @@ function updateDrawStatus() {
     n ? `Нарисовано полигонов: ${n}` : 'Включи режим, обведи область — потом выгрузи.';
 }
 
-document.getElementById('ovDraw').addEventListener('change', function() {
+let drawEventsBound = false;
+document.getElementById('ovDraw').addEventListener('change', async function() {
   if (this.checked) {
+    await ensureDraw();
+    if (!drawEventsBound) {
+      map.on(L.Draw.Event.CREATED, function(e) {
+        const layer = e.layer;
+        const name = prompt('Название области (например, Белорусский):', '');
+        if (name === null) return;
+        layer.feature = { type: 'Feature', properties: { name: name || '' } };
+        layer.bindTooltip(name || '—', { sticky: true });
+        drawnItems.addLayer(layer);
+        updateDrawStatus();
+      });
+      drawEventsBound = true;
+    }
     map.addLayer(drawnItems);
     drawControl = new L.Control.Draw({
       edit: { featureGroup: drawnItems, remove: true },
@@ -2551,16 +2591,6 @@ document.getElementById('ovDraw').addEventListener('change', function() {
   } else {
     if (drawControl) { map.removeControl(drawControl); drawControl = null; }
   }
-});
-
-map.on(L.Draw.Event.CREATED, function(e) {
-  const layer = e.layer;
-  const name = prompt('Название области (например, Белорусский):', '');
-  if (name === null) return;
-  layer.feature = { type: 'Feature', properties: { name: name || '' } };
-  layer.bindTooltip(name || '—', { sticky: true });
-  drawnItems.addLayer(layer);
-  updateDrawStatus();
 });
 
 // здания внутри нарисованных полигонов
@@ -2602,7 +2632,8 @@ document.getElementById('exportGeo').addEventListener('click', function() {
     `${drawnFileBase()}.geojson`);
 });
 
-document.getElementById('exportXlsx').addEventListener('click', function() {
+document.getElementById('exportXlsx').addEventListener('click', async function() {
+  await ensureXLSX();
   if (coworkingMode) {
     const insideCw = coworkingInDrawn();
     if (!insideCw) { alert('Сначала обведи область (режим рисования).'); return; }
@@ -2949,7 +2980,8 @@ document.getElementById('dynBuildingSearch').addEventListener('input', function(
   fillDynBuildingSelect(this.value);
   renderDynamics();
 });
-function renderDynamics() {
+async function renderDynamics() {
+  await ensureChart();
   syncDynMetricOptions();
   const level = document.getElementById('dynLevel').value;
   const metric = document.getElementById('dynMetric').value;
@@ -3015,8 +3047,9 @@ document.getElementById('dynClose').addEventListener('click', ()=>document.getEl
 document.getElementById('dynModalBg').addEventListener('click', e=>{ if(e.target.id==='dynModalBg') e.currentTarget.classList.remove('open'); });
 ['dynLevel','dynDivision','dynBuilding','dynMetric'].forEach(id=>
   document.getElementById(id).addEventListener('change', renderDynamics));
-document.getElementById('dynDownload').addEventListener('click', ()=>{
+document.getElementById('dynDownload').addEventListener('click', async ()=>{
   if (!dynChart) return;
+  await ensureXLSX();
   const qs = quartersChrono();
   const rows = dynChart.data.datasets.map(ds=>{
     const row = { 'Серия': ds.label };
@@ -3135,7 +3168,8 @@ document.getElementById('cmpClose').addEventListener('click', ()=>document.getEl
 document.getElementById('cmpModalBg').addEventListener('click', e=>{ if(e.target.id==='cmpModalBg') e.currentTarget.classList.remove('open'); });
 ['cmpFrom','cmpTo','cmpLevel','cmpMetric'].forEach(id=>
   document.getElementById(id).addEventListener('change', renderCompare));
-document.getElementById('cmpDownload').addEventListener('click', ()=>{
+document.getElementById('cmpDownload').addEventListener('click', async ()=>{
+  await ensureXLSX();
   const from = document.getElementById('cmpFrom').value, to = document.getElementById('cmpTo').value;
   const fLbl = QUARTERS.find(q=>q.id===from)?.label, tLbl = QUARTERS.find(q=>q.id===to)?.label;
   const rows = cmpRows.map(r=>({ 'Объект':r.name, [fLbl]:fmtNum(r.was), [tLbl]:fmtNum(r.now),
@@ -3393,8 +3427,9 @@ document.getElementById('bcClose').addEventListener('click', () => document.getE
 document.getElementById('bldCompareModalBg').addEventListener('click', e => {
   if (e.target.id === 'bldCompareModalBg') document.getElementById('bldCompareModalBg').classList.remove('open');
 });
-document.getElementById('bcDownload').addEventListener('click', () => {
+document.getElementById('bcDownload').addEventListener('click', async () => {
   if (!bldCompareList.length) return;
+  await ensureXLSX();
   const rowsDef = bcRowsDef();
   const aoa = [['Показатель', ...bldCompareList.map(idx => buildingsData[idx].name)]];
   rowsDef.forEach(([label, fn]) => aoa.push([label, ...bldCompareList.map(idx => fn(buildingsData[idx]).value)]));
