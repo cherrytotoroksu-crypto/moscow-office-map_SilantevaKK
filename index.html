@@ -1909,8 +1909,16 @@ async function init() {
   applyStateFromURL();
   await preloadAll();
   await loadBuildings();
-  await renderChoropleth();
-  await renderBuildings();
+  if (coworkingMode) {
+    renderCoworking();
+    renderCoworkingLegend();
+    await recomputeCoworkingAll();
+    await renderChoropleth();
+  } else {
+    await renderChoropleth();
+    await renderBuildings();
+    if (rentMode) renderBuildingsLegend();
+  }
   await renderOverlays();
   syncURL();
 }
