@@ -1292,6 +1292,7 @@ function applyBuildingDates(blds, qid) {
     if (d.start_q) b.start = qLabel(d.start_q);
     if (d.commission_q) {
       b.status = qid >= d.commission_q ? 'Построен' : 'Строится';
+      b.commissionQ = qLabel(d.commission_q); // «Ввод» с точностью до квартала — есть только для зданий из реестра
     }
   }
 }
@@ -1735,7 +1736,7 @@ function buildingCardRows(b) {
     ['Координаты',   coordsCell(b)],
     ['Девелопер',    b.developer || '—'],
     ['Класс',        b.cls || '—'],
-    ['Год ввода',    b.year || '—'],
+    ['Ввод',         b.commissionQ || b.year || '—'],
     ['Старт строительства', b.constructionStart || '—'],
     ['Старт продаж', b.start || '—'],
     ['Статус',       b.status || '—'],
@@ -1811,7 +1812,7 @@ function renderBuildings() {
         ['Координаты',      coordsCell(b)],
         ['Девелопер',       b.developer || '—'],
         ['Класс',           b.cls || '—'],
-        ['Год ввода',       b.year || '—'],
+        ['Ввод',            b.commissionQ || b.year || '—'],
         ['GBA, кв.м',       b.gba != null ? fmt(Math.round(b.gba)) : '—'],
         ['Площадь в аренду, кв.м', fmt(Math.round(totalArea))],
         ['Ср. взв. ставка, руб/кв.м/год', avgRate != null ? fmt(avgRate) : '—'],
@@ -1835,7 +1836,7 @@ function renderBuildings() {
         ['Координаты', coordsCell(b)],
         ['Девелопер', b.developer || '—'],
         ['Класс',     b.cls || '—'],
-        ['Год ввода', b.year || '—'],
+        ['Ввод',      b.commissionQ || b.year || '—'],
         ['Аренда',    'нет данных'],
       ];
       btns = nLots > 0 ? `<div class="popup-btn-row">
@@ -2827,7 +2828,7 @@ document.getElementById('exportXlsx').addEventListener('click', async function()
     ];
     const bldRows = withRent.map(b => ({
       'Здание': b.name, 'Адрес': b.address, 'Девелопер': b.developer, 'Класс': b.cls,
-      'Год ввода': b.year, 'GBA, кв.м': b.gba,
+      'Ввод': b.commissionQ || b.year, 'GBA, кв.м': b.gba,
       'Лотов в аренде, шт.': (rentLotsData[b.name]||rentLotsData[b.name_orig]||[]).length,
       'Зона': b.zone, 'Субрынок': b.submarket,
       'Широта': b.lat, 'Долгота': b.lng
@@ -2860,7 +2861,7 @@ document.getElementById('exportXlsx').addEventListener('click', async function()
   ];
   const bldRows = inside.map(b => ({
     'Здание': b.name, 'Адрес': b.address, 'Девелопер': b.developer, 'Класс': b.cls,
-    'Год ввода': b.year, 'Статус': b.status, 'В продаже': b.on_sale,
+    'Ввод': b.commissionQ || b.year, 'Статус': b.status, 'В продаже': b.on_sale,
     'GBA, кв.м': b.gba, 'GLA, кв.м': b.gla,
     'Объём на продажу, кв.м': b.volume, 'Цена с НДС, руб/кв.м': b.price,
     'Лотов, шт.': (lotsData[b.name]||lotsData[b.name_orig]||[]).length || b.lots || 0,
@@ -3482,7 +3483,7 @@ function bcRowsDef() {
     return [
       ['Класс',        b => plainCell(b.cls || '—')],
       ['Девелопер',    b => plainCell(b.developer || '—')],
-      ['Год ввода',    b => plainCell(b.year || '—')],
+      ['Ввод',         b => plainCell(b.commissionQ || b.year || '—')],
       ['Зона',         b => plainCell(b.geoZone ? displayName('zones', b.geoZone) : '—')],
       ['Субрынок',     b => plainCell(b.geoSubmarket || '—')],
       [`Ставка ${fLbl}, руб/кв.м/год`, b => { const r = crossQuarter(b, bldRentVal).was; return plainCell(r != null ? fmt(Math.round(r)) : '—'); }],
@@ -3495,7 +3496,7 @@ function bcRowsDef() {
   return [
     ['Класс',        b => plainCell(b.cls || '—')],
     ['Девелопер',    b => plainCell(b.developer || '—')],
-    ['Год ввода',    b => plainCell(b.year || '—')],
+    ['Ввод',         b => plainCell(b.commissionQ || b.year || '—')],
     ['Старт строительства', b => plainCell(b.constructionStart || '—')],
     ['Старт продаж', b => plainCell(b.start || '—')],
     ['Статус',       b => plainCell(b.status || '—')],
