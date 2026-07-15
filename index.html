@@ -563,6 +563,7 @@
         <h3 id="lotsModalTitle">Лоты</h3>
         <div class="sub" id="lotsModalSub"></div>
       </div>
+      <button class="modal-dl" id="lotsModalCard" style="display:flex;align-items:center;gap:5px;background:#6b7280;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3" width="10" height="18" stroke="#ffffff" stroke-width="1.8"/><rect x="15" y="9" width="6" height="12" stroke="#ffffff" stroke-width="1.8"/><line x1="8" y1="7" x2="8" y2="7.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="7" x2="12" y2="7.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="11" x2="8" y2="11.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="11.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="15" x2="8" y2="15.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="12" y2="15.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>Карточка здания</button>
       <button class="modal-dl" id="lotsModalDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать Excel</button>
       <button class="modal-x" id="lotsModalClose">&times;</button>
     </div>
@@ -2296,6 +2297,15 @@ window.openLotsModal = function(idx) {
 };
 function closeLotsModal() { document.getElementById('lotsModalBg').classList.remove('open'); }
 document.getElementById('lotsModalClose').addEventListener('click', closeLotsModal);
+// «Карточка здания» из модалки лотов (общая для Продажи/Аренды/Коворкингов —
+// currentLotsBuilding выставляется во всех трёх openXLotsModal/openCoworkingModal).
+document.getElementById('lotsModalCard').addEventListener('click', () => {
+  if (!currentLotsBuilding) return;
+  const idx = buildingsData.indexOf(currentLotsBuilding);
+  if (idx < 0) return;
+  closeLotsModal();
+  openBuildingCard(idx);
+});
 
 // ============================================================
 //  МОДАЛКА АРЕНДЫ
