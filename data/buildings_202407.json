@@ -20,13 +20,13 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "ahead"
+    "id": 109
   },
   {
-    "name": "BusinessClass Ходынка",
-    "name_orig": "BusinessClass Ходынка",
-    "lat": 55.7895,
-    "lng": 37.535,
+    "name": "Обсидиан (бывший — BusinessClass Ходынка)",
+    "name_orig": "Обсидиан",
+    "lat": 55.788409,
+    "lng": 37.544117,
     "volume": 8905.6,
     "price": 510000,
     "cls": "A",
@@ -43,7 +43,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "businessclass_ходынка"
+    "id": 100
   },
   {
     "name": "Fili Centre",
@@ -66,7 +66,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "fili_centre"
+    "id": 122
   },
   {
     "name": "Geolog 2",
@@ -89,7 +89,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "geolog_2"
+    "id": 128
   },
   {
     "name": "iCITY (Space)",
@@ -112,13 +112,13 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "icity"
+    "id": 129
   },
   {
     "name": "Lakes",
     "name_orig": "Lakes",
-    "lat": 55.760322,
-    "lng": 37.579825,
+    "lat": 55.669739,
+    "lng": 37.443768,
     "volume": 2125.2,
     "price": 246363,
     "cls": "B+",
@@ -135,7 +135,7 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": "lakes"
+    "id": 77
   },
   {
     "name": "Level Воронцовская",
@@ -158,7 +158,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "level_воронцовская"
+    "id": 144
   },
   {
     "name": "Lunar модуль В",
@@ -181,7 +181,7 @@
     "year": "2023",
     "start": "",
     "weight": 0,
-    "id": "lunar_модуль_в"
+    "id": 80
   },
   {
     "name": "Nevsky Plaza",
@@ -204,7 +204,7 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": "nevsky_plaza"
+    "id": 155
   },
   {
     "name": "Солид (бывший — Nice Tower)",
@@ -227,7 +227,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "солид"
+    "id": 158
   },
   {
     "name": "Opus",
@@ -250,7 +250,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "opus"
+    "id": 165
   },
   {
     "name": "Plaza Botanica",
@@ -273,7 +273,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "plaza_botanica"
+    "id": 170
   },
   {
     "name": "Porta Forma",
@@ -296,7 +296,7 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": "porta_forma"
+    "id": 86
   },
   {
     "name": "QOOB",
@@ -319,7 +319,7 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": "qoob"
+    "id": 171
   },
   {
     "name": "STONE Савеловская",
@@ -342,7 +342,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "stone_cавеловская"
+    "id": 194
   },
   {
     "name": "STONE Towers",
@@ -365,7 +365,7 @@
     "year": "2022-2024",
     "start": "",
     "weight": 0,
-    "id": "stone_towers"
+    "id": 33
   },
   {
     "name": "STONE Дмитровская",
@@ -388,7 +388,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "stone_дмитровская"
+    "id": 177
   },
   {
     "name": "STONE Курская",
@@ -411,7 +411,7 @@
     "year": "2023",
     "start": "",
     "weight": 0,
-    "id": "stone_курская"
+    "id": 181
   },
   {
     "name": "STONE Ленинский",
@@ -434,7 +434,7 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": "stone_ленинский"
+    "id": 184
   },
   {
     "name": "STONE Ходынка I",
@@ -457,7 +457,7 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": "stone_ходынка_1"
+    "id": 196
   },
   {
     "name": "STONE Ходынка II",
@@ -480,7 +480,7 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": "stone_ходынка_2"
+    "id": 197
   },
   {
     "name": "Taller",
@@ -503,7 +503,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "taller"
+    "id": 201
   },
   {
     "name": "Upside Кунцево",
@@ -526,7 +526,7 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": "upside_кунцево"
+    "id": 138
   },
   {
     "name": "Frame",
@@ -549,7 +549,7 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": "frame"
+    "id": 126
   },
   {
     "name": "А101 Прокшино",
@@ -572,7 +572,7 @@
     "year": "2023",
     "start": "",
     "weight": 0,
-    "id": "а101_прокшино"
+    "id": 216
   },
   {
     "name": "Берников",
@@ -595,7 +595,7 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": "берников"
+    "id": 19
   },
   {
     "name": "Twist",
@@ -618,7 +618,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "бц_twist"
+    "id": 205
   },
   {
     "name": "БЦ Серебряный Фонтан",
@@ -641,7 +641,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "бц_серебряный_фонтан"
+    "id": 20
   },
   {
     "name": "БЦ Сколково",
@@ -664,7 +664,7 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": "бц_сколково"
+    "id": 22
   },
   {
     "name": "Деловой дуэт",
@@ -687,7 +687,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "деловой_дуэт"
+    "id": 277
   },
   {
     "name": "На берзарина",
@@ -710,7 +710,7 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": "на_берзарина"
+    "id": 57
   },
   {
     "name": "Останкино",
@@ -733,7 +733,7 @@
     "year": "2022-2024",
     "start": "",
     "weight": 0,
-    "id": "останкино"
+    "id": 274
   },
   {
     "name": "Рублево Бизнес-Парк",
@@ -756,7 +756,7 @@
     "year": "2023",
     "start": "",
     "weight": 0,
-    "id": "рублево_бизнес-парк"
+    "id": 244
   },
   {
     "name": "Эйлер",
@@ -779,7 +779,7 @@
     "year": "2023",
     "start": "",
     "weight": 0,
-    "id": "эйлер"
+    "id": 250
   },
   {
     "name": "STONE Калужская",
@@ -802,7 +802,7 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": "stone_калужская"
+    "id": 180
   },
   {
     "name": "Башня Власов",
@@ -825,7 +825,7 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "башня_власов"
+    "id": 96
   },
   {
     "name": "Башня Рябов",
@@ -848,6 +848,6 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": "башня_рябов"
+    "id": 220
   }
 ]
