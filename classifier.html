@@ -150,6 +150,7 @@
   td.cell-green  { background: var(--green-bg) !important; color: var(--green-ink) !important; }
   td.cell-amber  { background: var(--amber-bg) !important; color: var(--amber-ink) !important; }
   td.cell-red    { background: var(--red-bg) !important; color: var(--red-ink) !important; }
+  td.has-note    { text-decoration: underline dotted; text-decoration-color: currentColor; cursor: help; }
 
   footer.note {
     margin-top: 14px; font-size: 11.5px; color: var(--muted); max-width: 80ch;
@@ -8627,7 +8628,7 @@ const COLORMAP = {
     "Lakes": ["lat","lng","ao","raion","zone","submarket"],
     "Алкон 3": ["address","gba","commission_q"],
     "Fili residence": ["address","cls","gba","gla"],
-    "Обсидиан (бывший — BusinessClass Ходынка)": ["name","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming"],
+    "Обсидиан (бывший — BusinessClass Ходынка)": ["name","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","developer"],
     "Level Южнопортовая": ["gba","gla"],
     "А101 Прокшино": ["gba"],
     "Солид (бывший — Nice Tower)": ["gba","cls"],
@@ -8698,6 +8699,12 @@ const COLORMAP = {
   }
 }
 ;
+
+const NOTES = {
+  "Обсидиан (бывший — BusinessClass Ходынка)": {
+    developer: "3 независимых источника (включая офиц. сайт obsidian.moscow, tadviser, news.tek.fm) называют застройщика «Business Club», не «Capital Group» — возможно спутано с другим проектом Capital Group на Ходынском поле. Значение не изменено, требует дальнейшей проверки."
+  }
+};
 
 const HEADERS = ["№","Проект","Здание/Корпус","Прежнее название","ID","Адрес","Latitude","Longitude",
   "Административный округ","Район","Зона","Субрынок","Деловой район (сформированный)","Деловой район (формирующийся)",
@@ -8770,6 +8777,17 @@ function colorClassFor(name, colIdx) {
   return null;
 }
 
+function noteFor(name, colIdx) {
+  const notes = NOTES[name];
+  if (!notes) return null;
+  for (const f in notes) {
+    const target = FIELD_COL[f];
+    const cols = Array.isArray(target) ? target : [target];
+    if (cols.includes(colIdx)) return notes[f];
+  }
+  return null;
+}
+
 const NUMERIC_COLS = new Set([0,4,6,7,16,17,20,22,24,29,31]);
 const WRAP_COLS = new Set([5]);
 const FLAG_COLS = new Set([25,26,27]);
@@ -8797,8 +8815,11 @@ function render(filterText) {
       if (NUMERIC_COLS.has(i)) classes.push("num");
       if (WRAP_COLS.has(i)) classes.push("wrap");
       if (FLAG_COLS.has(i)) classes.push(val === "Да" ? "flag-yes" : "flag-no");
+      const note = noteFor(row.name, i);
+      if (note) classes.push("has-note");
+      const titleAttr = note ? ` title="${note.replace(/"/g, '&quot;')}"` : "";
       const display = (val === null || val === undefined || val === "") ? "<span class=\"muted\">—</span>" : String(val);
-      tr += `<td class="${classes.join(' ')}">${display}</td>`;
+      tr += `<td class="${classes.join(' ')}"${titleAttr}>${display}</td>`;
     });
     tr += "</tr>";
     html += tr;
