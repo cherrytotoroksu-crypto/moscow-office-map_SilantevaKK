@@ -8625,8 +8625,9 @@ const COLORMAP = {
     "Бизнес-парк Раменки (бывший — Огни)": ["lat","lng","ao","raion","zone","submarket"],
     "CHALET Пятницкая 40": ["lat","lng","ao","raion","zone","submarket","bizFormed"],
     "KORP. Молодежная": ["lat","lng","gba","cls","ao","raion","zone","submarket"],
-    "Lakes": ["lat","lng","ao","raion","zone","submarket"],
-    "Алкон 3": ["address","gba","commission_q"],
+    "Lakes": ["lat","lng","ao","raion","zone","submarket","cls","developer"],
+    "Lunar модуль В": ["cls"],
+    "Алкон 3": ["address","gba","commission_q","cls","status"],
     "Fili residence": ["address","cls","gba","gla"],
     "Обсидиан (бывший — BusinessClass Ходынка)": ["name","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","developer"],
     "Level Южнопортовая": ["gba","gla"],
@@ -8657,7 +8658,7 @@ const COLORMAP = {
     "Cityzen": ["gba"],
     "БЦ Серебряный Фонтан": ["lat","lng","ao","raion","zone","submarket"],
     "Магистральная 12 (бывший — Магистральная ул., 12)": ["address"],
-    "Slava": ["address"],
+    "Slava": ["address","status"],
     "Берников": ["status"],
     "Upside Tech Сколково": ["cls"],
     "Квартал Lucky": ["gla","gba"],
@@ -8667,7 +8668,7 @@ const COLORMAP = {
     "ASPACE Хорошевская": ["cls","gba","status","commission_q"],
     "Avium": ["cls","gba"],
     "Эйлер": ["lat","lng","ao","raion","zone","submarket","bizForming"],
-    "STONE Белорусская": ["gba","lat","lng","ao","raion","zone","submarket","bizFormed","construction_start_q"],
+    "STONE Белорусская": ["gba","lat","lng","ao","raion","zone","submarket","bizFormed","construction_start_q","cls","status"],
     "МФК Юг": ["gba"],
     "West Pier": ["cls"],
     "Башня Рябов": ["cls","gla"],
@@ -8701,6 +8702,9 @@ const COLORMAP = {
 ;
 
 const NOTES = {
+  "Slava": {
+    status: "У нас: Строится. Источники противоречат друг другу — один говорит «планируется ввод в Q4 2025» (будущее время), другой прямо «put into operation in 2025» (уже введён). Проверить вручную: https://www.vedomosti.ru/realty/articles/2025/04/16/1104610-ryadom-s-delovim-kvartalom-slava-poyavitsya-esche-odin | https://slava-office.ru/"
+  },
   "Обсидиан (бывший — BusinessClass Ходынка)": {
     developer: "У нас: Capital Group. 3 источника называют застройщика «Business Club», не Capital Group — возможно спутано с другим проектом Capital Group на Ходынском поле. Проверить вручную: https://obsidian.moscow/ | https://www.tadviser.ru/index.php/Компания:Обсидиан_(бизнес-центр) | https://news.tek.fm/news/457248"
   }
