@@ -8639,7 +8639,7 @@ const COLORMAP = {
     "Link": ["cls","gla"],
     "Top Tower": ["cls","construction_start_q","gba","developer"],
     "Королев (Рассвет)": ["gba"],
-    "БЦ Мещерский": ["gba","gla","lat","lng","ao","raion","zone","submarket","developer"],
+    "БЦ Мещерский": ["gba","gla","lat","lng","ao","raion","zone","submarket","developer","cls"],
     "Парк Легенд класс А": ["gba","lat","lng","ao","raion","zone","submarket","bizForming"],
     "STONE Мневники I": ["gba","lat","lng","cls","ao","raion","zone","submarket","bizForming"],
     "STONE Мневники III": ["gba","lat","lng","cls","ao","raion","zone","submarket","bizForming"],
@@ -8660,6 +8660,7 @@ const COLORMAP = {
     "Магистральная 12 (бывший — Магистральная ул., 12)": ["address"],
     "Slava": ["address","status","cls"],
     "Fly Tower": ["cls","developer"],
+    "STONE Пресня": ["cls","gba","developer"],
     "Берников": ["status","developer"],
     "Upside Tech Сколково": ["cls"],
     "Квартал Lucky": ["gla","gba"],
@@ -8703,6 +8704,9 @@ const COLORMAP = {
 ;
 
 const NOTES = {
+  "БЦ Мещерский": {
+    cls: "У нас: B+. Источник (of.ru) называет класс B- (ниже нашего, но не радикально). Проверить вручную: https://of.ru/bc/zk-meshherskii-les"
+  },
   "Slava": {
     status: "У нас: Строится. Источники противоречат друг другу — один говорит «планируется ввод в Q4 2025» (будущее время), другой прямо «put into operation in 2025» (уже введён). Проверить вручную: https://www.vedomosti.ru/realty/articles/2025/04/16/1104610-ryadom-s-delovim-kvartalom-slava-poyavitsya-esche-odin | https://slava-office.ru/"
   },
