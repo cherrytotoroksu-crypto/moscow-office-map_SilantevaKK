@@ -8607,7 +8607,7 @@ const COLORMAP = {
     "ВАРСТ": ["lat","lng","gba","ao","raion","zone","submarket","bizForming"],
     "Технопарк Густав": ["lat","lng","gba","cls","ao","raion","zone","submarket","bizForming"],
     "Taller": ["lat","lng","cls","developer","ao","raion","zone","submarket","bizFormed"],
-    "Twist": ["gba","developer","lat","lng","ao","raion","zone","submarket","bizForming"],
+    "Twist": ["gba","developer","lat","lng","ao","raion","zone","submarket","bizForming","construction_start_q","cls"],
     "Upside Ямская": ["cls","gba","lat","lng","ao","raion","zone","submarket","bizForming"],
     "Минто (бывший — Workplace Волоколамское)": ["developer"],
     "STONE Ходынка III": ["gba","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming"],
@@ -8623,7 +8623,7 @@ const COLORMAP = {
     "Прайм Тайм": ["lat","lng","gba","address","ao","raion","zone","submarket","bizFormed","bizForming","status"],
     "Парк Легенд класс В+": ["lat","lng","gba","ao","raion","zone","submarket","bizForming"],
     "Бизнес-парк Раменки (бывший — Огни)": ["lat","lng","ao","raion","zone","submarket"],
-    "CHALET Пятницкая 40": ["lat","lng","ao","raion","zone","submarket","bizFormed"],
+    "CHALET Пятницкая 40": ["lat","lng","ao","raion","zone","submarket","bizFormed","developer"],
     "KORP. Молодежная": ["lat","lng","gba","cls","ao","raion","zone","submarket"],
     "Lakes": ["lat","lng","ao","raion","zone","submarket","cls","developer"],
     "Lunar модуль В": ["cls","developer","status"],
@@ -8709,6 +8709,9 @@ const COLORMAP = {
 ;
 
 const NOTES = {
+  "Twist": {
+    cls: "У нас: A. Источники расходятся: archi.ru и cian.ru называют класс A, voshod.estate прямо называет «класса В+». Проверить вручную: https://archi.ru/projects/russia/17959/bc-twist-na-butyrskoi-ulice | https://voshod.estate/delovoy-tsentr-twist/"
+  },
   "БЦ Мещерский": {
     cls: "У нас: B+. Источник (of.ru) называет класс B- (ниже нашего, но не радикально). Проверить вручную: https://of.ru/bc/zk-meshherskii-les"
   },
