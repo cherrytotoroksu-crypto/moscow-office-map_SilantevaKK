@@ -255,8 +255,8 @@
   {
     "name": "Plaza Botanica",
     "name_orig": "Plaza Botanica",
-    "lat": 55.845031,
-    "lng": 37.639222,
+    "lat": 55.842236,
+    "lng": 37.646247,
     "volume": 630.1,
     "price": 400594,
     "cls": "A",
@@ -439,8 +439,8 @@
   {
     "name": "STONE Ходынка I",
     "name_orig": "STONE Ходынка I",
-    "lat": 55.788171,
-    "lng": 37.533598,
+    "lat": 55.787376,
+    "lng": 37.537865,
     "volume": 18860.0,
     "price": 450433,
     "cls": "A",
@@ -784,8 +784,8 @@
   {
     "name": "STONE Калужская",
     "name_orig": "STONE Калужская",
-    "lat": 55.65887,
-    "lng": 37.537184,
+    "lat": 55.660734,
+    "lng": 37.533292,
     "volume": 19390.0,
     "price": 330572,
     "cls": "A",
