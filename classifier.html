@@ -150,7 +150,24 @@
   td.cell-green  { background: var(--green-bg) !important; color: var(--green-ink) !important; }
   td.cell-amber  { background: var(--amber-bg) !important; color: var(--amber-ink) !important; }
   td.cell-red    { background: var(--red-bg) !important; color: var(--red-ink) !important; }
-  td.has-note    { text-decoration: underline dotted; text-decoration-color: currentColor; cursor: pointer; }
+  td.has-note {
+    position: relative; cursor: pointer;
+  }
+  td.has-note::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0;
+    border-style: solid; border-width: 0 9px 9px 0;
+    border-color: transparent #E8623F transparent transparent;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.6));
+    pointer-events: none;
+  }
+  .swatch.note {
+    position: relative; background: var(--surface); border-color: var(--line);
+  }
+  .swatch.note::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0;
+    border-style: solid; border-width: 0 7px 7px 0;
+    border-color: transparent #E8623F transparent transparent;
+  }
 
   #notePopup {
     position: fixed; z-index: 1000; max-width: 420px; padding: 12px 14px;
@@ -195,6 +212,7 @@
     <span class="legend-item"><span class="swatch amber"></span>исправлено / спорно</span>
     <span class="legend-item"><span class="swatch red"></span>данных нет</span>
     <span class="legend-item">без заливки — не перепроверялось</span>
+    <span class="legend-item"><span class="swatch note"></span>уголок — есть заметка, кликнуть для источников</span>
   </div>
 </div>
 
