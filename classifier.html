@@ -2909,7 +2909,7 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  47000.0,
         "gla":  33000.0,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  "202503",
         "start_q":  "202212",
         "commission_q":  "202606",
@@ -3499,10 +3499,10 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  26408,
         "gla":  10677,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  null,
         "start_q":  null,
-        "commission_q":  null,
+        "commission_q":  "202409",
         "sale":  true,
         "rent":  false,
         "coworking":  false,
@@ -4370,7 +4370,7 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  36280,
         "gla":  23225,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  null,
         "start_q":  "202401",
         "commission_q":  "202509",
@@ -4610,7 +4610,7 @@ const RAW_DATA = [
         "cls":  "B+",
         "gba":  2295,
         "gla":  2295,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  "202203",
         "start_q":  "202206",
         "commission_q":  "202606",
@@ -5330,7 +5330,7 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  33350,
         "gla":  29500,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  "202201",
         "start_q":  null,
         "commission_q":  "202503",
@@ -6259,10 +6259,10 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  46134,
         "gla":  36000,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  "202201",
         "start_q":  "202201",
-        "commission_q":  null,
+        "commission_q":  "202609",
         "sale":  true,
         "rent":  true,
         "coworking":  false,
@@ -6859,7 +6859,7 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  43200,
         "gla":  26617,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  null,
         "start_q":  null,
         "commission_q":  "202512",
@@ -8488,7 +8488,7 @@ const RAW_DATA = [
         "cls":  "A",
         "gba":  22751.0,
         "gla":  null,
-        "status":  "Строится",
+        "status":  "Построен",
         "construction_start_q":  null,
         "start_q":  "202504",
         "commission_q":  "202604",
@@ -8584,6 +8584,8 @@ const COLORMAP = {
     "Обсидиан (бывший — BusinessClass Ходынка)": ["gba"]
   },
   "yellow": {
+    "STONE Towers. Tower D": ["status"],
+    "Upside Кунцево": ["status"],
     "Бизнес-хаб Потапово": ["lat","lng","start_q","commission_q","ao","raion","zone","bizForming","address"],
     "iCITY (Space)": ["lat","lng","cls","ao","raion","zone","submarket","bizFormed","bizForming","address"],
     "Fili Centre": ["cls","status"],
@@ -8596,7 +8598,7 @@ const COLORMAP = {
     "Omni Tower": ["cls","gba","gla","developer","status","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "One Tower": ["developer","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","address"],
     "Opus": ["cls","developer","lat","lng","ao","raion","zone","submarket","bizFormed","address","status"],
-    "Plaza Botanica": ["cls","gla","developer","lat","lng"],
+    "Plaza Botanica": ["cls","gla","developer","lat","lng","status"],
     "QOOB": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "Solo": ["gba","developer","lat","lng","ao","raion","zone","submarket","address","cls","status"],
     "Bell": ["lat","lng","cls","gba","ao","raion","zone","submarket","bizFormed","status","address","developer"],
@@ -8606,7 +8608,7 @@ const COLORMAP = {
     "Бадаевский Западная лента": ["developer","cls","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "ВАРСТ": ["lat","lng","gba","ao","raion","zone","submarket","bizForming","address"],
     "Технопарк Густав": ["lat","lng","gba","cls","ao","raion","zone","submarket","bizForming","address"],
-    "Taller": ["lat","lng","cls","developer","ao","raion","zone","submarket","bizFormed","address"],
+    "Taller": ["lat","lng","cls","developer","ao","raion","zone","submarket","bizFormed","address","status","commission_q"],
     "Twist": ["gba","developer","lat","lng","ao","raion","zone","submarket","bizForming","construction_start_q","cls","address"],
     "Upside Ямская": ["cls","gba","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "Минто (бывший — Workplace Волоколамское)": ["developer"],
@@ -8622,7 +8624,7 @@ const COLORMAP = {
     "Nevsky Plaza": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","bizFormed","address"],
     "Прайм Тайм": ["lat","lng","gba","address","ao","raion","zone","submarket","bizFormed","bizForming","status"],
     "Парк Легенд класс В+": ["lat","lng","gba","ao","raion","zone","submarket","bizForming","address"],
-    "Бизнес-парк Раменки (бывший — Огни)": ["lat","lng","ao","raion","zone","submarket","address"],
+    "Бизнес-парк Раменки (бывший — Огни)": ["lat","lng","ao","raion","zone","submarket","address","status"],
     "CHALET Пятницкая 40": ["lat","lng","ao","raion","zone","submarket","bizFormed","developer","address"],
     "KORP. Молодежная": ["lat","lng","gba","cls","ao","raion","zone","submarket","address","developer","status"],
     "Lakes": ["lat","lng","ao","raion","zone","submarket","cls","developer","address"],
@@ -8630,7 +8632,7 @@ const COLORMAP = {
     "Алкон 3": ["address","gba","commission_q","cls","status"],
     "Fili residence": ["address","cls","gba","gla","lat","lng","ao","raion","zone","submarket","developer"],
     "Обсидиан (бывший — BusinessClass Ходынка)": ["name","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","developer","address"],
-    "Level Южнопортовая": ["gba","gla"],
+    "Level Южнопортовая": ["gba","gla","status"],
     "А101 Прокшино": ["gba"],
     "Солид (бывший — Nice Tower)": ["gba","cls","lat","lng","ao","raion","zone","submarket","address"],
     "Valtri": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","bizFormed","address","status","commission_q"],
@@ -8665,7 +8667,7 @@ const COLORMAP = {
     "Upside Tech Сколково": ["cls"],
     "Квартал Lucky": ["gla","gba","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "AFI2B Tagilskaya": ["cls","gba","gla","lat","lng","ao","raion","zone","submarket","address","developer","status","commission_q"],
-    "Ahead": ["lat","lng","cls","gla","ao","raion","zone","submarket","bizForming","address","gba","developer"],
+    "Ahead": ["lat","lng","cls","gla","ao","raion","zone","submarket","bizForming","address","gba","developer","status","commission_q"],
     "Air": ["cls","gba","status","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","address"],
     "ASPACE Хорошевская": ["cls","gba","status","commission_q","lat","lng","ao","raion","zone","submarket","bizForming","address","developer","start_q"],
     "Avium": ["cls","gba"],
@@ -8674,7 +8676,7 @@ const COLORMAP = {
     "МФК Юг": ["gba","lat","lng"],
     "West Pier": ["cls","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "Башня Рябов": ["cls","gla","lat","lng","ao","raion","zone","submarket","address"],
-    "Бизнес-парк Переделкино": ["cls","gba","developer"],
+    "Бизнес-парк Переделкино": ["cls","gba","developer","status"],
     "БЦ Варшавская": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","address"],
     "МФК Строгино": ["cls","developer"],
     "Родина Парк": ["cls","lat","lng","ao","raion","zone","submarket","bizForming","address"],
@@ -8711,7 +8713,7 @@ const COLORMAP = {
 const NOTES = {
   "Twist": {
     cls: "У нас: A. Источники расходятся: archi.ru и cian.ru называют класс A, voshod.estate прямо называет «класса В+». Проверить вручную: https://archi.ru/projects/russia/17959/bc-twist-na-butyrskoi-ulice | https://voshod.estate/delovoy-tsentr-twist/",
-    status: "У нас: Строится. Источник (archi.ru) указывал ввод в эксплуатацию на конец 2025 года — срок уже прошёл на момент проверки (июль 2026). Проверить вручную: https://archi.ru/projects/russia/17959/bc-twist-na-butyrskoi-ulice | https://twist-office.ru/novosti-stroitelstva/"
+    status: "У нас: Строится — ПРОВЕРЕНО повторно (2026-07-26), статус подтверждён верным. Ранний план был на конец 2025, но более новый источник (twist-office.ru) прямо говорит: сдача государственной комиссии перенесена на III квартал 2026 — здание всё ещё строится, срок просто сдвинулся. Источники: https://archi.ru/projects/russia/17959/bc-twist-na-butyrskoi-ulice | https://twist-office.ru/novosti-stroitelstva/"
   },
   "БЦ Мещерский": {
     cls: "У нас: B+. Источник (of.ru) называет класс B- (ниже нашего, но не радикально). Проверить вручную: https://of.ru/bc/zk-meshherskii-les"
@@ -8723,16 +8725,13 @@ const NOTES = {
     developer: "У нас: Capital Group. 3 источника называют застройщика «Business Club», не Capital Group — возможно спутано с другим проектом Capital Group на Ходынском поле. Проверить вручную: https://obsidian.moscow/ | https://www.tadviser.ru/index.php/Компания:Обсидиан_(бизнес-центр) | https://news.tek.fm/news/457248"
   },
   "Fili residence": {
-    status: "У нас: Строится. Источник называет срок сдачи I квартал 2025, крайний срок передачи ключей 29.09.2025 — обе даты уже в прошлом на момент проверки (июль 2026), похоже здание уже должно быть построено. Проверить вручную: https://xn--b1agapfwapgcl.xn--p1ai/zhk/biznes-centr-fili-residence/ | https://www.filigarden.ru/"
+    status: "У нас: Строится — ПРОВЕРЕНО повторно (2026-07-26), статус подтверждён верным. Ранний план сдачи (Q1 2025 / 29.09.2025) не сбылся, но более свежий источник (novostroy-m.ru) прямо описывает текущую стадию: здание готовится к получению ЗОС, идут пусконаладочные работы и благоустройство — реально ещё строится. Источники: https://xn--b1agapfwapgcl.xn--p1ai/zhk/biznes-centr-fili-residence/ | https://www.novostroy-m.ru/baza/biznestsentr_fili_residence_fili/infrastruktura"
   },
   "БЦ Варшавская": {
     status: "У нас: Строится. Источник (office-news.ru) прямо пишет: девелопер PIONEER начал передачу офисных помещений собственникам в корпусе №1, здание сдано в эксплуатацию в сентябре 2025 года — возможно наша запись относится к другому корпусу того же комплекса, не однозначно. Проверить вручную: https://office-news.ru/OFFICE_NEWS/gk-pioner/ | https://bc-varshavskaya.ru/"
   },
   "Эйлер": {
-    status: "У нас: Строится. Источник указывает ввод в эксплуатацию на август 2024 (уже в прошлом на момент проверки, июль 2026). Тот же конфликт отмечался и раньше (75% продано за год к 2024), но статус так и не поменяли — сигнал усилился. Проверить вручную: https://www.cian.ru/biznes-centr-eyler-moskva-238929/ | https://eiler.moscow/"
-  },
-  "Ahead": {
-    status: "У нас: Строится. Источник (urbanus.ru) прямо называет статус «Построено» с годом строительства 2024, срок сдачи был заявлен на Q3 2024 — уже в прошлом на момент проверки (июль 2026). Проверить вручную: https://www.urbanus.ru/d-voshod/ahead | https://voshodmoscow.ru/news/Kompaniya-VOSHOD-stala-developerom-mnogofunktsionalnogo-kompleksa-AHEAD"
+    status: "У нас: Строится. Источники дают только планы («достроят к Q2 2024», «арендаторы заедут к концу 2024») — явного подтверждения РНВ/ввода не найдено ни в одном заходе (проверялось дважды, 2026-07-21 и 2026-07-26). Статус остаётся под вопросом, но менять не на что определённое. Проверить вручную: https://www.cian.ru/biznes-centr-eyler-moskva-238929/ | https://eiler.moscow/"
   }
 };
 
