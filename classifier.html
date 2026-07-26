@@ -8672,14 +8672,14 @@ const COLORMAP = {
     "Квартал Lucky": ["gla","gba","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "AFI2B Tagilskaya": ["cls","gba","gla","lat","lng","ao","raion","zone","submarket","address","developer","status","commission_q"],
     "Ahead": ["lat","lng","cls","gla","ao","raion","zone","submarket","bizForming","address","gba","developer","status","commission_q"],
-    "Air": ["cls","gba","status","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","address"],
+    "Air": ["cls","gba","status","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","address","developer"],
     "ASPACE Хорошевская": ["cls","gba","status","commission_q","lat","lng","ao","raion","zone","submarket","bizForming","address","developer","start_q"],
     "Avium": ["cls","gba"],
     "Эйлер": ["lat","lng","ao","raion","zone","submarket","bizForming","cls","gba","gla","developer","address","start_q"],
     "STONE Белорусская": ["gba","lat","lng","ao","raion","zone","submarket","bizFormed","construction_start_q","cls","status","address"],
     "МФК Юг": ["gba","lat","lng"],
     "West Pier": ["cls","lat","lng","ao","raion","zone","submarket","bizForming","address"],
-    "Башня Рябов": ["cls","gla","lat","lng","ao","raion","zone","submarket","address","developer"],
+    "Башня Рябов": ["cls","gla","lat","lng","ao","raion","zone","submarket","address","developer","status"],
     "Бизнес-парк Переделкино": ["cls","gba","developer","status","commission_q"],
     "БЦ Варшавская": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","address"],
     "МФК Строгино": ["cls","developer"],
@@ -8760,6 +8760,12 @@ const NOTES = {
   },
   "БЦ Сколковский": {
     developer: "⚠️ У нас: «Пожарная охрана» — это явно не название девелоперской компании. Проверено (2026-07-26): значение одинаково во ВСЕХ 6 кварталах исходных данных (data/buildings_*.json), то есть это не баг скрипта сборки классификатора, а, вероятно, артефакт в исходном Excel от NF Group (сдвиг столбцов или ошибочно перенесённое описание арендатора/назначения здания). Веб-поиск по адресу (Кулибина ул., 8) не нашёл здание вообще — не относится к известному кластеру БЦ «Сколково» на Сколковском шоссе. Требует ручной проверки исходного Excel-файла, не решается через WebSearch."
+  },
+  "Nevsky Plaza": {
+    commission_q: "У нас: Q4 2026 (202612). Источник (novostroy-m.ru) прямо называет срок ввода Q4 2025 — на целый год раньше нашего значения. Не меняла, нужен ещё источник для разрешения годового расхождения. Проверить вручную: https://www.novostroy-m.ru/baza/apartkompleks_nevskiy_18 | https://krost.ru/news/eksklyuzivnyj-partner-koncerna-krost-kompaniya-com"
+  },
+  "QOOB": {
+    status: "У нас: Строится. Источник (companies.rbc.ru) сообщает: Dominanta получила ЗОС (заключение о соответствии) — это последний шаг ПЕРЕД разрешением на ввод, ещё не сам ввод (правило проекта: ЗОС≠ввод). Срок «завершение в 2025» уже прошёл, но формального РНВ/подтверждения фактического ввода не найдено — статус не меняла. Проверить вручную: https://companies.rbc.ru/news/D6UfBuoJcp/biznes-tsentr-qoob-ot-dominanta-poluchil-zaklyuchenie-o-sootvetstvii/"
   }
 };
 
