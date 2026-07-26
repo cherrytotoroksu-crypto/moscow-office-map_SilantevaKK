@@ -6743,7 +6743,7 @@ const RAW_DATA = [
         "developer":  "A101",
         "cls":  "A",
         "gba":  42000,
-        "gla":  67357,
+        "gla":  22700,
         "status":  "Строится",
         "construction_start_q":  null,
         "start_q":  null,
@@ -8669,8 +8669,8 @@ const COLORMAP = {
     "Алкон 3": ["address","gba","commission_q","cls","status"],
     "Fili residence": ["address","cls","gba","gla","lat","lng","ao","raion","zone","submarket","developer"],
     "Обсидиан (бывший — BusinessClass Ходынка)": ["name","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","developer","address"],
-    "Level Южнопортовая": ["gba","gla","status","developer"],
-    "А101 Прокшино": ["gba","developer","cls"],
+    "Level Южнопортовая": ["gba","gla","status","developer","commission_q"],
+    "А101 Прокшино": ["gba","developer","cls","gla"],
     "Дом Правды": ["developer","status","commission_q"],
     "Солид (бывший — Nice Tower)": ["gba","cls","lat","lng","ao","raion","zone","submarket","address","developer"],
     "Valtri": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","bizFormed","address","status","commission_q"],
@@ -8800,6 +8800,9 @@ const NOTES = {
   },
   "QOOB": {
     status: "У нас: Строится. Источник (companies.rbc.ru) сообщает: Dominanta получила ЗОС (заключение о соответствии) — это последний шаг ПЕРЕД разрешением на ввод, ещё не сам ввод (правило проекта: ЗОС≠ввод). Срок «завершение в 2025» уже прошёл, но формального РНВ/подтверждения фактического ввода не найдено — статус не меняла. Проверить вручную: https://companies.rbc.ru/news/D6UfBuoJcp/biznes-tsentr-qoob-ot-dominanta-poluchil-zaklyuchenie-o-sootvetstvii/"
+  },
+  "А101 Прокшино": {
+    gla: "⚠️ БАГ ИСПРАВЛЕН (2026-07-26): GLA прыгала между 22700 (нормально) и 67357 (физически невозможно — больше GBA=42000) через квартал: 202506→22700, 202509→22700, 202512→67357, 202603→22700, 202606(текущий)→67357. Классический паттерн «скачущего» значения из памяти проекта — не веб-подтверждение, а внутренняя проверка на непротиворечивость данных. Исправлено на 22700 в data/buildings_202512.json и data/buildings_202606.json (текущий live-квартал). GBA (42000) не трогала — стабильна во всех кварталах."
   }
 };
 
