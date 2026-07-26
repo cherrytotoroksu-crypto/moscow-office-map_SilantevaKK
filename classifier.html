@@ -7162,7 +7162,7 @@ const RAW_DATA = [
         "status":  "Строится",
         "construction_start_q":  null,
         "start_q":  null,
-        "commission_q":  null,
+        "commission_q":  "202806",
         "sale":  true,
         "rent":  true,
         "coworking":  false,
@@ -8586,6 +8586,7 @@ const COLORMAP = {
   "yellow": {
     "STONE Towers. Tower D": ["status"],
     "Upside Кунцево": ["status"],
+    "STONE Ходынка IV": ["developer","status"],
     "Бизнес-хаб Потапово": ["lat","lng","start_q","commission_q","ao","raion","zone","bizForming","address"],
     "iCITY (Space)": ["lat","lng","cls","ao","raion","zone","submarket","bizFormed","bizForming","address"],
     "Fili Centre": ["cls","status"],
@@ -8632,8 +8633,9 @@ const COLORMAP = {
     "Алкон 3": ["address","gba","commission_q","cls","status"],
     "Fili residence": ["address","cls","gba","gla","lat","lng","ao","raion","zone","submarket","developer"],
     "Обсидиан (бывший — BusinessClass Ходынка)": ["name","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","developer","address"],
-    "Level Южнопортовая": ["gba","gla","status"],
-    "А101 Прокшино": ["gba"],
+    "Level Южнопортовая": ["gba","gla","status","developer"],
+    "А101 Прокшино": ["gba","developer","cls"],
+    "Дом Правды": ["developer","status","commission_q"],
     "Солид (бывший — Nice Tower)": ["gba","cls","lat","lng","ao","raion","zone","submarket","address"],
     "Valtri": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","bizFormed","address","status","commission_q"],
     "SEZAR TOWER": ["cls","gba","gla","lat","lng","ao","raion","zone","submarket","bizFormed","bizForming","address","developer","status","commission_q"],
@@ -8652,7 +8654,7 @@ const COLORMAP = {
     "STONE Савеловская": ["cls","gba","developer","lat","lng","ao","raion","zone","submarket","bizForming","address"],
     "STONE Калужская": ["gba","cls","lat","lng"],
     "STONE Римская": ["gba","cls","lat","lng"],
-    "STONE Ходынка I": ["gba","lat","lng"],
+    "STONE Ходынка I": ["gba","lat","lng","cls","developer","status"],
     "STONE Ходынка II": ["gba","lat","lng","cls","ao","raion","zone","submarket","bizFormed","bizForming","address"],
     "Мануфактура XIX": ["gba","developer","commission_q","lat","lng","ao","raion","zone","submarket","bizForming","address","status","cls"],
     "Aurus": ["gba","address"],
@@ -8732,6 +8734,9 @@ const NOTES = {
   },
   "Эйлер": {
     status: "У нас: Строится. Источники дают только планы («достроят к Q2 2024», «арендаторы заедут к концу 2024») — явного подтверждения РНВ/ввода не найдено ни в одном заходе (проверялось дважды, 2026-07-21 и 2026-07-26). Статус остаётся под вопросом, но менять не на что определённое. Проверить вручную: https://www.cian.ru/biznes-centr-eyler-moskva-238929/ | https://eiler.moscow/"
+  },
+  "Дом Правды": {
+    gba: "У нас: 15845, GLA 13100, developer Metropolis. ВАЖНО (2026-07-26, разрешён старый конфликт): по адресу ул. Правды, 24 есть ДВА разных объекта — (1) старое здание типографии «Правда» 1934 года, класс B+, площадь 19631 м² (это НЕ наша запись, её путали раньше), и (2) новый редевелопмент-проект METROPOLIS «Дом Правды», сдача Q2 2028 — это наша запись (developer/status/commission_q подтверждены). GBA/GLA самого нового проекта источник не называет отдельно — наши 15845/13100 не подтверждены, но и не опровергнуты старым зданием (разные объекты). Проверить вручную: https://yandex.com/maps/org/dom_pravdy/31984142067/ | https://www.cian.ru/biznes-centr-pravda-moskva-140333/"
   }
 };
 
