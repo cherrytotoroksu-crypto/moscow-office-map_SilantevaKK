@@ -150,7 +150,21 @@
   td.cell-green  { background: var(--green-bg) !important; color: var(--green-ink) !important; }
   td.cell-amber  { background: var(--amber-bg) !important; color: var(--amber-ink) !important; }
   td.cell-red    { background: var(--red-bg) !important; color: var(--red-ink) !important; }
-  td.has-note    { text-decoration: underline dotted; text-decoration-color: currentColor; cursor: help; }
+  td.has-note    { text-decoration: underline dotted; text-decoration-color: currentColor; cursor: pointer; }
+
+  #notePopup {
+    position: fixed; z-index: 1000; max-width: 420px; padding: 12px 14px;
+    background: var(--surface); color: var(--ink); border: 1px solid var(--line);
+    border-radius: 8px; box-shadow: var(--shadow); font-size: 12.5px; line-height: 1.5;
+    display: none; white-space: normal;
+  }
+  #notePopup.open { display: block; }
+  #notePopup a { color: var(--accent); word-break: break-all; }
+  #notePopup .note-close {
+    position: absolute; top: 4px; right: 8px; cursor: pointer; color: var(--muted);
+    font-size: 14px; line-height: 1; background: none; border: none; padding: 4px;
+  }
+  #notePopup .note-close:hover { color: var(--ink); }
 
   footer.note {
     margin-top: 14px; font-size: 11.5px; color: var(--muted); max-width: 80ch;
@@ -192,6 +206,8 @@
     </table>
   </div>
 </div>
+
+<div id="notePopup"><button class="note-close" aria-label="Закрыть">&times;</button><div id="notePopupBody"></div></div>
 
 <footer class="note">Обновлено 2026-07-19 — добавлены район (по границам муниципальных образований, data/mo.geojson) и 150 коворкингов отдельными строками. Собрано из <span class="mono">data/buildings_*.json</span> (17 кварталов) + <span class="mono">building_dates.json</span>, geo-поля вычислены point-in-polygon по границам проекта. Цветовая карта — по итогам ручного веб-аудита в этой сессии, не идеальна на 100% ячеек.</footer>
 
@@ -8855,6 +8871,16 @@ const NUMERIC_COLS = new Set([0,4,6,7,16,17,20,22,24,29,31]);
 const WRAP_COLS = new Set([5]);
 const FLAG_COLS = new Set([25,26,27]);
 
+let NOTE_REGISTRY = [];
+
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function linkifyNote(s) {
+  const escaped = escapeHtml(s);
+  return escaped.replace(/https?:\/\/[^\s|]+/g, url => `<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+}
+
 function render(filterText) {
   const theadRow = document.getElementById("theadRow");
   theadRow.innerHTML = HEADERS.map(h => `<th>${h}</th>`).join("");
@@ -8863,6 +8889,7 @@ function render(filterText) {
   const q = (filterText || "").toLowerCase().trim();
   let shown = 0;
   let html = "";
+  NOTE_REGISTRY = [];
   for (const row of RAW_DATA) {
     if (q) {
       const hay = (row.name + " " + (row.address||"") + " " + (row.developer||"")).toLowerCase();
@@ -8879,10 +8906,14 @@ function render(filterText) {
       if (WRAP_COLS.has(i)) classes.push("wrap");
       if (FLAG_COLS.has(i)) classes.push(val === "Да" ? "flag-yes" : "flag-no");
       const note = noteFor(row.name, i);
-      if (note) classes.push("has-note");
-      const titleAttr = note ? ` title="${note.replace(/"/g, '&quot;')}"` : "";
+      let noteAttr = "";
+      if (note) {
+        classes.push("has-note");
+        NOTE_REGISTRY.push(note);
+        noteAttr = ` data-note-id="${NOTE_REGISTRY.length - 1}"`;
+      }
       const display = (val === null || val === undefined || val === "") ? "<span class=\"muted\">—</span>" : String(val);
-      tr += `<td class="${classes.join(' ')}"${titleAttr}>${display}</td>`;
+      tr += `<td class="${classes.join(' ')}"${noteAttr}>${display}</td>`;
     });
     tr += "</tr>";
     html += tr;
@@ -8890,6 +8921,42 @@ function render(filterText) {
   tbody.innerHTML = html;
   document.getElementById("rowcount").textContent = shown + " / " + RAW_DATA.length;
 }
+
+const notePopup = document.getElementById("notePopup");
+const notePopupBody = document.getElementById("notePopupBody");
+
+function showNotePopup(cell) {
+  const id = cell.getAttribute("data-note-id");
+  if (id === null || !NOTE_REGISTRY[id]) return;
+  notePopupBody.innerHTML = linkifyNote(NOTE_REGISTRY[id]);
+  notePopup.classList.add("open");
+  const rect = cell.getBoundingClientRect();
+  const popupWidth = 420;
+  let left = rect.left;
+  if (left + popupWidth > window.innerWidth - 12) left = window.innerWidth - popupWidth - 12;
+  if (left < 12) left = 12;
+  let top = rect.bottom + 6;
+  notePopup.style.left = left + "px";
+  notePopup.style.top = top + "px";
+  // if popup would overflow bottom of viewport, place above the cell instead
+  requestAnimationFrame(() => {
+    const popRect = notePopup.getBoundingClientRect();
+    if (popRect.bottom > window.innerHeight - 12) {
+      notePopup.style.top = (rect.top - popRect.height - 6) + "px";
+    }
+  });
+}
+function hideNotePopup() { notePopup.classList.remove("open"); }
+
+document.getElementById("tbody").addEventListener("click", e => {
+  const cell = e.target.closest("td.has-note");
+  if (cell) { showNotePopup(cell); e.stopPropagation(); }
+});
+notePopup.querySelector(".note-close").addEventListener("click", hideNotePopup);
+document.addEventListener("click", e => {
+  if (!notePopup.contains(e.target)) hideNotePopup();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") hideNotePopup(); });
 
 function countColors() {
   let g=0,y=0,r=0;
