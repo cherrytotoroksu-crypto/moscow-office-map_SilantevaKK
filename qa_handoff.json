@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-07-27T09:00:00+03:00",
+  "updated_at": "2026-07-27T12:30:00+03:00",
+  "project": "moscow-office-map",
+  "coordination": {
+    "source_editor": "Claude Code",
+    "independent_auditor": "Codex",
+    "workflow": [
+      "OPEN",
+      "CLAIMED",
+      "FIXED",
+      "RECHECKED"
+    ],
+    "rule": "A finding is complete only after independent recheck."
+  },
+  "findings": [
+    {
+      "id": "QA-001",
+      "entity_id": 183,
+      "entity": "Apollax Space — Федерация",
+      "status": "FIXED",
+      "priority": "high",
+      "confidence": "high",
+      "files": [
+        "data/coworking_202606.json",
+        "classifier.html"
+      ],
+      "issue": "Known placeholder coordinates remain in Q2 2026.",
+      "observed": {
+        "lat": 55.755819,
+        "lng": 37.617644,
+        "address": "Пресненская наб. 12, башня Федерация, 18 этаж"
+      },
+      "resolution": "Re-geocoded to lat=55.749633, lng=37.537434 (Yandex Geocoder, house-level exact match on Пресненская наб., 12) — same point already applied to Workki Сити/F2-Федерация in the same tower. Applied in both files. Geo-fields (ao/raion/zone/submarket) NOT recomputed — flagged as follow-up."
+    },
+    {
+      "id": "QA-002",
+      "entity": "Flexity SOLO/Flexity",
+      "status": "FIXED",
+      "priority": "critical",
+      "confidence": "high",
+      "files": [
+        "data/coworking_202606.json"
+      ],
+      "issue": "Duplicate IDs: 255 occurs four times and 257 occurs twice; rows have different vacancy values and require a documented aggregation/entity rule.",
+      "resolution": "Confirmed these are distinct sub-blocks/lots within the same coworking (same name/bc/address/lat/lng/rate, only vacancy differs) — NOT simple duplicates, so rows were kept, not merged. Assigned unique ids to the extra rows using unused gaps in the same quarter file: id 255 kept for the first row, duplicates renumbered to 249/250/251; id 257 kept for the first row, duplicate renumbered to 252. classifier.html already deduplicates these into one merged row per (name, bc, address), so no classifier.html change was needed for this specific finding."
+    },
+    {
+      "id": "QA-003",
+      "entity_id": 257,
+      "entity": "Flexity — Башня на набережной (В)",
+      "status": "FIXED",
+      "priority": "high",
+      "confidence": "high",
+      "files": [
+        "data/coworking_202606.json"
+      ],
+      "issue": "Business center and coordinates point to Moscow City, while address is copied from Paveletskaya Plaza.",
+      "resolution": "Confirmed via WebSearch: real address is Пресненская наб., 10 (Naberezhnaya Tower blocks B/C, Moscow-City), not Павелецкая площадь, 2. Existing coordinates (55.746856, 37.536796) were already approximately correct for that location; re-geocoded to precise value (55.746593, 37.53738, house-level exact). Address text field corrected in both id 257 rows and in classifier.html's merged row."
+    },
+    {
+      "id": "QA-004",
+      "entity_id": 135,
+      "entity": "Speace Jet Белая площадь",
+      "status": "FIXED",
+      "priority": "high",
+      "confidence": "high",
+      "files": [
+        "data/coworking_202606.json",
+        "classifier.html"
+      ],
+      "issue": "Coordinates do not match the stated address at Lesnaya Street 5.",
+      "resolution": "Yandex Geocoder API repeatedly resolved 'Лесная улица, 5' to wrong same-named streets outside Moscow (Пушкинский район, Балашиха) despite Москва prefix/postal code — known geocoder limitation for common street names. Got precise coordinates via Yandex Maps organization page (White Square BC, org id 36072730071): lat=55.777942, lng=37.586801. Applied to the live id=135 row AND to a second historical duplicate in classifier.html (name_orig same, bc without 'площадка закрыта') that was still sitting on the same placeholder coordinate as QA-001 and had been missed in the first placeholder-cleanup pass."
+    },
+    {
+      "id": "QA-005",
+      "entity_id": 215,
+      "entity": "Регус (Гринвуд)",
+      "status": "FIXED",
+      "priority": "high",
+      "confidence": "high",
+      "files": [
+        "data/coworking_202606.json",
+        "classifier.html"
+      ],
+      "issue": "Latitude 55.078473 is incompatible with Greenwood Business Park at the north-western MKAD; exact building 19 must be geocoded.",
+      "resolution": "Confirmed via Yandex Maps org page (Greenwood, org id 1087753981): lat=55.868617, lng=37.403261 (~87km from the wrong value). Applied to data/coworking_202606.json and classifier.html. NOTE: found the SAME bad lat=55.078473 in 7 older quarter files (202407–202512) plus the geocode cache — not fixed there, lower priority since those aren't the live quarter."
+    },
+    {
+      "id": "QA-006",
+      "entity": "Flexity — Риверсайд Тауэрс / Садовая Плаза",
+      "status": "FIXED",
+      "priority": "high",
+      "confidence": "high",
+      "files": [
+        "data/coworking_202606.json",
+        "classifier.html"
+      ],
+      "issue": "Coordinates do not match the official addresses at Kosmodamianskaya Embankment 52 and Dolgorukovskaya Street 7.",
+      "resolution": "Re-geocoded via Yandex Geocoder API (both house-level exact): Риверсайд Тауэрс → lat=55.732063, lng=37.647244; Садовая Плаза → lat=55.773849, lng=37.603541. Applied in both files."
+    },
+    {
+      "id": "QA-007",
+      "entity_id": 260,
+      "entity": "Север.Сити",
+      "status": "FIXED",
+      "priority": "high",
+      "confidence": "medium",
+      "files": [
+        "data/buildings_202603.json",
+        "data/buildings_202606.json",
+        "data/lots_202606.json",
+        "classifier.html"
+      ],
+      "issue": "The entity moves by about 7.2 km between quarters and Q2 address, coordinates and current market location disagree; possible entity collision or ID reuse.",
+      "resolution": "Root cause confirmed by cross-checking against independent research already done this session on this exact building (address/GBA verified against Kommersant and other sources before this handoff surfaced): the Q2 2026 (202606, live) record was already correct (address ул. Сущевский Вал 5, lat 55.755996/lng 37.536535, gba 208330). The Q1 2026 (202603) record was corrupted — its address had been overwritten with 'улица Антонова-Овсеенко, вл. 13-15' (which belongs to neither Север.Сити nor even Aurus, a separate project that shares the same developer and was independently confirmed correct at 2-й Красногвардейский проезд), and its gba (393264) was a straight duplicate of Aurus's true gba, with gla (208330) actually holding Север.Сити's true gba value — a combined address-swap + gba/gla-swap bug isolated to the 202603 snapshot. Restored 202603 to match the verified-correct 202606 values (address, gba=208330, gla=186009, lat, lng). No entity collision with a different project — same entity, corrupted single-quarter import. data/lots_202606.json was not touched (issue was isolated to the buildings file)."
+    }
+  ],
+  "session_note": "All 7 findings independently verified and fixed by Claude Code (not blindly applied) using WebSearch + Yandex Geocoder API cross-checks, per project rule requiring 2+ independent confirmations or one strong primary source before changing production data. Two additional issues found during this pass that weren't in the original findings list: (1) the QA-004 duplicate historical row in classifier.html sitting on the QA-001-style placeholder coordinate, now fixed; (2) the same Гринвуд placeholder value (QA-005) also present in 7 older quarter files, left unfixed as lower priority (not live). Status changed OPEN→FIXED for all seven; RECHECKED is for Codex's independent pass."
+}
