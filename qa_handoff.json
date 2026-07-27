@@ -204,5 +204,41 @@
     "json_classifier_parity": "Not implemented as an automated check. Spot-checked manually for every row touched this round (all match their source quarter file after the fixes), but no general per-row old_id⇄classifier reconciliation test exists yet.",
     "per_cell_provenance_registry": "Not implemented as Codex's verification_registry.json proposal (Поток D). Source/date/method/confidence are recorded in NOTES text per finding (see each round3_findings entry above) but not in a separate structured, machine-queryable registry."
   },
-  "round3_commit_policy": "Local checkpoint commit only, on top of 92263f5. NOT pushed — push remains blocked until Codex reviews this round3 batch and returns ACCEPTED for QA-007 (BLOCKED_BY_EVIDENCE, so realistically stays open until someone finds a primary source) and the others."
+  "round3_commit_policy": "Local checkpoint commit only, on top of 92263f5. NOT pushed — push remains blocked until Codex reviews this round3 batch and returns ACCEPTED for QA-007 (BLOCKED_BY_EVIDENCE, so realistically stays open until someone finds a primary source) and the others.",
+  "round4_base_commit": "5436144",
+  "round4_findings": [
+    {
+      "id": "QA-007",
+      "status": "BLOCKED_BY_EVIDENCE",
+      "unchanged_since_round3": true,
+      "verified_2026-07-28_by": "Claude Code",
+      "method": "WebSearch + WebFetch, additional angles beyond round 3",
+      "detail": "Made a further attempt per instruction, did NOT reuse Сущевский Вал 5 geocoding, did NOT substitute a neighboring building's coordinate. New sources checked this round: (a) WebSearch for Мосгосстройнадзор/permit registry — found only registry portal links (mos.ru/stroinadzor, minstroyrf.gov.ru) and one industry mention (dvizhenie.ru) stating 'разрешение на строительство первой очереди ожидается в течение года' as of a September-2025-dated source — i.e. as of that source, phase-1 permit had NOT yet been issued. (b) WebFetch of dvizhenie.ru's RZD-Nedvizhimost article directly — confirms only the 43.6ha zone and 'Страна Девелопмент' as partner, explicitly states no street address, no architect assignment, no precise geographic marker are given for this specific site in that source. (c) Attempted WebFetch of mos.ru/stroinadzor permit registry directly — connection error (ECONNRESET), could not retrieve. Conclusion: the convergence of a government zone-description page, the developer's own project page, an industry real-estate press portal, and (failed) direct registry access all point the same way — no precise tower-level coordinate is publicly published yet, consistent with the permit for phase 1 apparently not having been issued as of the most recent dated source found. This is now the SECOND consecutive round reaching this conclusion via different source combinations. Recommend not re-attempting via WebSearch/WebFetch again next round without a new source type (e.g. actual registry account access, a direct developer contact, or a satellite-imagery/QGIS approach cross-referencing the 43.6ha polygon boundary description against current construction activity) — further identical-method attempts are unlikely to change the outcome."
+    },
+    {
+      "id": "QA-012",
+      "status": "ACCEPTED_PENDING_CODEX",
+      "verified_2026-07-28_by": "Claude Code",
+      "method": "scripts/validate_classifier.py, re-run fresh this round",
+      "detail": "No new work needed — this was already closed in round 3 (commit 5436144). Re-ran the validator this round to confirm no regression: 0 geo-field-drift errors across all 278 RAW_DATA rows with a lat/lng. Not re-claiming as newly fixed, just reconfirming the round-3 fix held."
+    },
+    {
+      "id": "QA-011",
+      "status": "FIXED_PENDING_REVIEW",
+      "verified_2026-07-28_by": "Claude Code",
+      "method": "Direct edit of scripts/validate_classifier.py",
+      "detail": "Round 3's version treated geo-field drift as a non-blocking warning. Per this round's explicit instruction ('падает при любом расхождении'), promoted it to a blocking problem (exit code 1). Verified safe to promote: a fresh run before and after the change produced IDENTICAL output (6 blocking placeholder-coordinate errors, 0 geo-drift, 12 name-collision warnings) — promoting the check did not retroactively fail anything already accepted, it only now guards against future regressions. This satisfies the specific ask: 'блокирующий тест, который сверяет геополя classifier.html с GeoJSON и падает при расхождении'."
+    },
+    {
+      "id": "numeric_acceptance_packet",
+      "status": "BLOCKED_BY_EVIDENCE",
+      "detail": "The file `numeric_acceptance_packet_2026-07-27.json` referenced in the instruction (item 4: 45 'А101 Прокшино' name-canonicalization rows + 105 'total' values needing ×1000 unit correction) DOES NOT EXIST in the repository as of this round (checked both root and searched by filename — not found anywhere in the working tree). Did not fabricate its contents or guess at which 105 rows/which 45 rows might be intended — a blind ×1000 multiplication on financial totals without the actual packet would be exactly the kind of unverified bulk numeric edit this project's own rules (and this instruction's own constraint 'не считать отсутствие источника нулевым значением' / general caution around financial data) argue against. Needs: the packet file to be committed/delivered before this item can be attempted. Flagging this explicitly rather than silently skipping it."
+    },
+    {
+      "id": "source_manifest_17x4",
+      "status": "NEEDS_REWORK",
+      "detail": "Item 5 (source manifest for 17 periods × 4 channels: sale ₽/m²+₽, rent ₽/m²/year, coworking ₽/seat/month; reconcile 54 unmatched sale keys, 797 potentially-lost rows, 731 ambiguous no-source-id duplicates, 12 duplicate coworking IDs) was NOT attempted as a full reconciliation this round. Reasons: (1) the instruction's own constraint 'один пакет изменений за заход' — items 1/3 (QA-007 re-verification, QA-011 promotion) plus investigating item 4 already constitute a full, carefully-verified package; bolting on a 700+-row reconciliation in the same pass risks exactly the kind of rushed, unverifiable bulk change this project has been actively trying to move away from since round 1. (2) 'не удалять одинаковые лоты без source_offer_id' presupposes a source_offer_id scheme that does not exist yet in this data model — that is QA-010's explicit scope (canonical location_id vs offer_id vs quarter-version), itself still unresolved and flagged by Codex as needing a schema decision BEFORE new IDs get assigned. Building a manifest without that schema first would just be more of the same ad-hoc identity model the audit is trying to get away from. DID do one small, bounded, verifiable diagnostic slice: confirmed via direct JSON parsing that duplicate coworking IDs (id=256 'Flexity SOLO/Flexity' x4 rows, id=84 'Manufaqtury Поклонка' x2-3 rows) exist ONLY in historical quarters 202509/202512/202603 — the LIVE quarter (coworking_202606.json) has zero duplicate IDs, already clean (consistent with round-1's QA-002 fix). Did not touch these historical duplicates — no ID scheme to assign new ones under yet. Recommend as the actual next step: resolve QA-010 (schema decision) FIRST, in its own focused pass, before attempting any part of the 731-row/797-row/54-key reconciliation — attempting the big reconciliation without a schema is very likely to just create MORE ambiguous rows, not fewer."
+    }
+  ],
+  "round4_commit_policy": "Local checkpoint on top of 5436144. NOT pushed — same policy as round 3, push blocked pending Codex ACCEPTED."
 }

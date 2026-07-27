@@ -169,7 +169,12 @@ def main():
         if len(coords) > 1 or len(addrs) > 1:
             warnings.append(f"{name!r}: {len(recs)} rows share this display name but differ in lat/lng or address — a COLORMAP entry for this name colors ALL of them")
 
-    # 5. Geo-field drift (only for rows with a real lat/lng)
+    # 5. Geo-field drift (only for rows with a real lat/lng) — BLOCKING.
+    # Per Codex/QA-011: this must fail the run on any mismatch, not just warn.
+    # (Kept non-blocking through round 3 while QA-012 was still being closed out;
+    # promoted to blocking now that a fresh run shows zero drift, so this doesn't
+    # retroactively fail anything already accepted — it only guards against new
+    # regressions from here on.)
     for rec in raw_data:
         lat, lng = rec.get("lat"), rec.get("lng")
         if lat is None or lng is None:
@@ -182,7 +187,7 @@ def main():
             if stored != expect:
                 mismatches.append(f"{field}: stored={stored!r} expected={expect!r}")
         if mismatches:
-            warnings.append(f"{rec.get('name')!r} geo drift: " + "; ".join(mismatches))
+            problems.append(f"{rec.get('name')!r} geo drift: " + "; ".join(mismatches))
 
     print(f"=== RAW_DATA rows: {len(raw_data)} ===")
     print(f"=== PROBLEMS (blocking): {len(problems)} ===")
