@@ -1,7 +1,9 @@
 {
   "generated_at": "2026-07-27T09:00:00+03:00",
-  "updated_at": "2026-07-27T12:30:00+03:00",
+  "updated_at": "2026-07-27T14:20:00+03:00",
   "project": "moscow-office-map",
+  "round2_base_commit": "d257512d82f109fc1fffb4c58272d5d091d097d7",
+  "round2_batch": ["QA-001", "QA-004", "QA-006", "QA-007", "QA-008"],
   "coordination": {
     "source_editor": "Claude Code",
     "independent_auditor": "Codex",
@@ -31,7 +33,9 @@
         "lng": 37.617644,
         "address": "Пресненская наб. 12, башня Федерация, 18 этаж"
       },
-      "resolution": "Re-geocoded to lat=55.749633, lng=37.537434 (Yandex Geocoder, house-level exact match on Пресненская наб., 12) — same point already applied to Workki Сити/F2-Федерация in the same tower. Applied in both files. Geo-fields (ao/raion/zone/submarket) NOT recomputed — flagged as follow-up."
+      "resolution": "Re-geocoded to lat=55.749633, lng=37.537434 (Yandex Geocoder, house-level exact match on Пресненская наб., 12) — same point already applied to Workki Сити/F2-Федерация in the same tower. Applied in both files. Geo-fields (ao/raion/zone/submarket) NOT recomputed — flagged as follow-up.",
+      "status_round2": "FIXED_PENDING_REVIEW",
+      "resolution_round2": "Codex correctly flagged that geo-fields were left stale after round 1 (own note above literally says so). Recomputed via new scripts/recompute_geo.py: raion Тверской→Пресненский, zone Центральное ядро (БК)→СК-ТТК, submarket БК→Москва-Сити, bizFormed ЦДР→Москва-Сити, bizForming (empty)→Москва-Сити. ao unchanged (Центральный, already correct). classifier.html only — data/coworking_202606.json has no geo-field columns."
     },
     {
       "id": "QA-002",
@@ -70,7 +74,9 @@
         "classifier.html"
       ],
       "issue": "Coordinates do not match the stated address at Lesnaya Street 5.",
-      "resolution": "Yandex Geocoder API repeatedly resolved 'Лесная улица, 5' to wrong same-named streets outside Moscow (Пушкинский район, Балашиха) despite Москва prefix/postal code — known geocoder limitation for common street names. Got precise coordinates via Yandex Maps organization page (White Square BC, org id 36072730071): lat=55.777942, lng=37.586801. Applied to the live id=135 row AND to a second historical duplicate in classifier.html (name_orig same, bc without 'площадка закрыта') that was still sitting on the same placeholder coordinate as QA-001 and had been missed in the first placeholder-cleanup pass."
+      "resolution": "Yandex Geocoder API repeatedly resolved 'Лесная улица, 5' to wrong same-named streets outside Moscow (Пушкинский район, Балашиха) despite Москва prefix/postal code — known geocoder limitation for common street names. Got precise coordinates via Yandex Maps organization page (White Square BC, org id 36072730071): lat=55.777942, lng=37.586801. Applied to the live id=135 row AND to a second historical duplicate in classifier.html (name_orig same, bc without 'площадка закрыта') that was still sitting on the same placeholder coordinate as QA-001 and had been missed in the first placeholder-cleanup pass.",
+      "status_round2": "FIXED_PENDING_REVIEW",
+      "resolution_round2": "Found a THIRD classifier.html row for this entity (name_orig 'Speace Jet Белая площадь', single space — distinct from the 'Speace  Jet' double-space rows already fixed in round 1) still sitting on the placeholder 55.755819,37.617644, with no COLORMAP entry at all. Re-verified the round-1 coordinate independently via Yandex Geocoder with two disambiguated queries (postal-code and 'metro Belorusskaya' variants both converged within ~200m of the existing 55.777942,37.586801, cross-confirming it). Applied that coordinate to the missed third row, and recomputed geo-fields via scripts/recompute_geo.py for ALL THREE classifier rows (values were inconsistent between them, including a lingering raion=Басманный on the closed-site row that Codex flagged): unified to raion=Тверской, zone=СК-ТТК, submarket=ТТК Север, bizFormed=Белорусский."
     },
     {
       "id": "QA-005",
@@ -97,7 +103,9 @@
         "classifier.html"
       ],
       "issue": "Coordinates do not match the official addresses at Kosmodamianskaya Embankment 52 and Dolgorukovskaya Street 7.",
-      "resolution": "Re-geocoded via Yandex Geocoder API (both house-level exact): Риверсайд Тауэрс → lat=55.732063, lng=37.647244; Садовая Плаза → lat=55.773849, lng=37.603541. Applied in both files."
+      "resolution": "Re-geocoded via Yandex Geocoder API (both house-level exact): Риверсайд Тауэрс → lat=55.732063, lng=37.647244; Садовая Плаза → lat=55.773849, lng=37.603541. Applied in both files.",
+      "status_round2": "FIXED_PENDING_REVIEW",
+      "resolution_round2": "Coordinates confirmed still correct (unchanged). Recomputed stale geo-fields via scripts/recompute_geo.py exactly as Codex specified: Риверсайд Тауэрс ao Западный→Центральный, raion Раменки→Замоскворечье, zone ТТК-МКАД→СК-ТТК, submarket ТТК-МКАД Запад→ТТК Юг, bizFormed (empty)→Павелецкий. Садовая Плаза ao Северный→Центральный, raion Головинский→Тверской, zone ТТК-МКАД→СК-ТТК, submarket ТТК-МКАД Северо-Запад→ТТК Север. classifier.html only."
     },
     {
       "id": "QA-007",
@@ -113,8 +121,20 @@
         "classifier.html"
       ],
       "issue": "The entity moves by about 7.2 km between quarters and Q2 address, coordinates and current market location disagree; possible entity collision or ID reuse.",
-      "resolution": "Root cause confirmed by cross-checking against independent research already done this session on this exact building (address/GBA verified against Kommersant and other sources before this handoff surfaced): the Q2 2026 (202606, live) record was already correct (address ул. Сущевский Вал 5, lat 55.755996/lng 37.536535, gba 208330). The Q1 2026 (202603) record was corrupted — its address had been overwritten with 'улица Антонова-Овсеенко, вл. 13-15' (which belongs to neither Север.Сити nor even Aurus, a separate project that shares the same developer and was independently confirmed correct at 2-й Красногвардейский проезд), and its gba (393264) was a straight duplicate of Aurus's true gba, with gla (208330) actually holding Север.Сити's true gba value — a combined address-swap + gba/gla-swap bug isolated to the 202603 snapshot. Restored 202603 to match the verified-correct 202606 values (address, gba=208330, gla=186009, lat, lng). No entity collision with a different project — same entity, corrupted single-quarter import. data/lots_202606.json was not touched (issue was isolated to the buildings file)."
+      "resolution": "Root cause confirmed by cross-checking against independent research already done this session on this exact building (address/GBA verified against Kommersant and other sources before this handoff surfaced): the Q2 2026 (202606, live) record was already correct (address ул. Сущевский Вал 5, lat 55.755996/lng 37.536535, gba 208330). The Q1 2026 (202603) record was corrupted — its address had been overwritten with 'улица Антонова-Овсеенко, вл. 13-15' (which belongs to neither Север.Сити nor even Aurus, a separate project that shares the same developer and was independently confirmed correct at 2-й Красногвардейский проезд), and its gba (393264) was a straight duplicate of Aurus's true gba, with gla (208330) actually holding Север.Сити's true gba value — a combined address-swap + gba/gla-swap bug isolated to the 202603 snapshot. Restored 202603 to match the verified-correct 202606 values (address, gba=208330, gla=186009, lat, lng). No entity collision with a different project — same entity, corrupted single-quarter import. data/lots_202606.json was not touched (issue was isolated to the buildings file).",
+      "status_round2": "FIXED_PENDING_REVIEW",
+      "resolution_round2": "Codex's round-2 finding was RIGHT and round 1's 'already correct' conclusion was WRONG — round 1 only checked that 202603 and 202606 agreed with each other, never checked whether the shared coordinate actually matched the shared address in the real world. It didn't: 55.755996,37.536535 is Пресненский район / Большой Сити (Moscow-City), point-in-polygon confirmed via scripts/recompute_geo.py. Independently verified project identity via WebFetch of https://severcity.moscow/ (self-described as an unofficial informational page, not the developer's own domain — flagging this caveat) which explicitly ties Север.Сити to метро Рижская / Марьина Роща (СВАО), consistent with the stored street name 'Сущёвский Вал' (confirmed via ru.wikipedia.org that this street runs through Марьина Роща). Re-geocoded the stored address via Yandex Geocoder: precision=exact/house at 55.794811,37.592464, which independently point-in-polygon resolves to Марьина Роща — i.e. two independent methods (official page's district claim, and geocoding the address) agree with each other. GBA=208330 (already independently confirmed earlier this session) is unaffected — this is a location fix only, not an identity fix; found no evidence of a second/different entity being conflated. Applied corrected lat/lng to data/buildings_202603.json, data/buildings_202606.json, and classifier.html, plus recomputed geo-fields (ao Центральный→Северо-Восточный, raion Пресненский→Марьина Роща, zone СК-ТТК→ТТК-МКАД, submarket ТТК Запад→ТТК-МКАД Север, bizForming Большой Сити→Савеловский деловой район). Colored green (2 independent, mutually-consistent confirmations). Requesting Codex specifically re-verify this one against a stronger primary source if available (Мосгосстройнадзор permit records or the developer's actual domain) — severcity.moscow's own disclaimer that it's unofficial is the weakest link in this chain."
     }
   ],
-  "session_note": "All 7 findings independently verified and fixed by Claude Code (not blindly applied) using WebSearch + Yandex Geocoder API cross-checks, per project rule requiring 2+ independent confirmations or one strong primary source before changing production data. Two additional issues found during this pass that weren't in the original findings list: (1) the QA-004 duplicate historical row in classifier.html sitting on the QA-001-style placeholder coordinate, now fixed; (2) the same Гринвуд placeholder value (QA-005) also present in 7 older quarter files, left unfixed as lower priority (not live). Status changed OPEN→FIXED for all seven; RECHECKED is for Codex's independent pass."
+  "findings_round2_additional": [
+    {
+      "id": "QA-008",
+      "title": "Deterministic point-in-polygon geo-field recomputation",
+      "status_round2": "FIXED_PENDING_REVIEW",
+      "files": ["scripts/recompute_geo.py"],
+      "resolution_round2": "Added scripts/recompute_geo.py — pure-Python reimplementation of index.html's pipRing/pointInFeature ray-casting (bbox pre-check + polygon hole handling), reading the same data/*.geojson layers (ao/mo/zones/submarkets/biz_formed/biz_forming) index.html itself uses. Validated with 0 mismatches against 20 existing classifier.html records that already had correct, previously human-verified geo fields, before using it on QA-001/004/006/007 above. NOT yet wired into an automatic pipeline that runs after every lat/lng edit — for now it is a callable/CLI tool (`python3 scripts/recompute_geo.py <lat> <lng>`) a human or agent runs manually after changing coordinates. Full automation (hook into classifier.html generation) is really QA-011's scope, not attempted here."
+    }
+  ],
+  "session_note": "All 7 findings independently verified and fixed by Claude Code (not blindly applied) using WebSearch + Yandex Geocoder API cross-checks, per project rule requiring 2+ independent confirmations or one strong primary source before changing production data. Two additional issues found during this pass that weren't in the original findings list: (1) the QA-004 duplicate historical row in classifier.html sitting on the QA-001-style placeholder coordinate, now fixed; (2) the same Гринвуд placeholder value (QA-005) also present in 7 older quarter files, left unfixed as lower priority (not live). Status changed OPEN→FIXED for all seven; RECHECKED is for Codex's independent pass.",
+  "session_note_round2": "Read QA_ACCEPTANCE_2026-07-27.md / qa_acceptance_2026-07-27.json in full before starting this batch. Worked QA-001, QA-004, QA-006, QA-007, QA-008 as instructed. Found QA-007 to be the most consequential re-check: the round-1 fix compared 202603 against 202606 and concluded 202606 was already right, but never validated the coordinate against the real address/district — it wasn't right, and Codex's round-2 flag caught a genuine ~6.4km location error that round 1 missed entirely. Also found QA-004 had a third affected classifier.html row (single-space name variant) that neither round-1 fixing nor Codex's round-2 review had surfaced yet. Have NOT committed or pushed this batch — per stated commit_policy, waiting for Codex's independent ACCEPTED before doing so. All touched files pass JSON parse (data/buildings_202603.json, data/buildings_202606.json, data/coworking_202606.json) and the classifier.html NOTES block passes a brace-balance check; full JS execution was verified earlier this session via a live GitHub Pages round-trip for a different, structurally-similar NOTES edit (same object, same syntax pattern), not re-verified live for this exact batch since pushing is being held per protocol."
 }

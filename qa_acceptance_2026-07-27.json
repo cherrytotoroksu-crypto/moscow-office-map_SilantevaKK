@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-07-27T13:00:00+03:00",
+  "reviewer": "Codex",
+  "reviewed_commit": "d257512d82f109fc1fffb4c58272d5d091d097d7",
+  "source_editor": "Claude Code",
+  "workflow": [
+    "OPEN",
+    "CLAIMED",
+    "FIXED_PENDING_REVIEW",
+    "ACCEPTED",
+    "NEEDS_REWORK"
+  ],
+  "decisions": [
+    {
+      "id": "QA-001",
+      "decision": "NEEDS_REWORK",
+      "accepted_scope": ["lat", "lng"],
+      "remaining": ["raion", "zone", "submarket", "bizFormed", "bizForming"]
+    },
+    {
+      "id": "QA-002",
+      "decision": "ACCEPTED",
+      "evidence": "IDs 249-252 are unique across coworking_YYYYMM.json snapshots."
+    },
+    {
+      "id": "QA-003",
+      "decision": "ACCEPTED"
+    },
+    {
+      "id": "QA-004",
+      "decision": "NEEDS_REWORK",
+      "remaining": [
+        "One classifier row still has 55.755819,37.617644.",
+        "Closed-site classifier row still has raion=Басманный after relocation."
+      ]
+    },
+    {
+      "id": "QA-005",
+      "decision": "ACCEPTED_SCOPED",
+      "accepted_scope": ["data/coworking_202606.json", "live classifier row"],
+      "follow_up": "QA-009"
+    },
+    {
+      "id": "QA-006",
+      "decision": "NEEDS_REWORK",
+      "remaining": ["Recompute all derived geo fields from corrected coordinates."]
+    },
+    {
+      "id": "QA-007",
+      "decision": "NEEDS_REWORK",
+      "reason": "Project characteristics point to Rizhskaya while stored coordinates point to Presnensky/Moscow-City."
+    }
+  ],
+  "new_findings": [
+    {"id": "QA-008", "title": "Deterministic point-in-polygon geo-field recomputation", "priority": "critical"},
+    {"id": "QA-009", "title": "Historical Regus Greenwood coordinates and geocode cache", "priority": "medium"},
+    {"id": "QA-010", "title": "Separate location identity from offer/row identity", "priority": "high"},
+    {"id": "QA-011", "title": "Generate classifier.html from canonical sources", "priority": "critical"}
+  ],
+  "next_batch": ["QA-001", "QA-004", "QA-006", "QA-007", "QA-008"],
+  "commit_policy": "Do not commit or push a batch before independent ACCEPTED status.",
+  "concurrency_policy": "One production-data writer at a time."
+}
