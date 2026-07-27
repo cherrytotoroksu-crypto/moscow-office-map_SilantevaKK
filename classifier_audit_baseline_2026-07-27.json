@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-07-27T17:00:00+03:00",
+  "reviewer": "Codex",
+  "source_commit": "92263f580254d47f28587b65a39b7c978ca7c6b5",
+  "rows": {
+    "total": 278,
+    "buildings": 123,
+    "coworkings": 155,
+    "live_buildings": 97,
+    "live_coworkings": 77,
+    "distinct_names": 256,
+    "duplicate_name_groups": 15
+  },
+  "coverage": {
+    "displayed_columns": 33,
+    "colorable_displayed_columns": 21,
+    "non_colorable_displayed_columns": 12,
+    "verifiable_field_instances": 5004,
+    "colored_field_instances": 1043,
+    "colored_pct": 20.84,
+    "green_field_instances": 54,
+    "green_pct": 1.08,
+    "yellow_field_instances": 959,
+    "red_field_instances": 30,
+    "green_with_note": 1,
+    "green_with_url_note": 1,
+    "yellow_with_note": 8,
+    "yellow_with_url_note": 4
+  },
+  "live_coverage": {
+    "buildings": {
+      "nonempty_fields": 1426,
+      "colored_fields": 835,
+      "colored_nonempty_pct": 58.56,
+      "green_fields": 34
+    },
+    "coworkings": {
+      "nonempty_fields": 747,
+      "colored_fields": 51,
+      "colored_nonempty_pct": 6.83,
+      "green_fields": 0
+    }
+  },
+  "machine_audits": {
+    "geo": {
+      "classifier_rows": 278,
+      "rows_with_mismatches": 12,
+      "field_mismatches": 57,
+      "known_placeholder_rows": 9
+    },
+    "source_parity": {
+      "unique_id_matches": 272,
+      "ambiguous_id_matches": 1,
+      "missing_id_matches": 5,
+      "substantive_or_structural_issue_rows": 13
+    }
+  },
+  "external_findings": [
+    {
+      "id": "QA-013",
+      "entity": "Ключ Сретенка",
+      "priority": "high",
+      "status": "EXTERNAL_CONFIRMED_CONFLICT",
+      "issue": "Live address duplicates Ключ Арма; operator evidence points to Сретенский бульвар, 5."
+    },
+    {
+      "id": "QA-014",
+      "entity": "Multispace Tverskaya / Галерея Актер",
+      "priority": "critical",
+      "status": "EXTERNAL_CONFIRMED_CONFLICT",
+      "issue": "Three classifier/source variants disagree; primary evidence points to Тверская 16с1 near 55.764552,37.606406."
+    },
+    {
+      "id": "QA-015",
+      "entity": "Space 1 Балчуг",
+      "priority": "high",
+      "status": "EXTERNAL_CONFIRMED_CONFLICT",
+      "issue": "Live address is the technical placeholder 'повтор'; primary evidence gives Садовническая 9А."
+    },
+    {
+      "id": "QA-016",
+      "entity": "CODE Delegat",
+      "priority": "medium",
+      "status": "IDENTITY_REVIEW_REQUIRED",
+      "issue": "Live row matches 1-й Щемиловский 16с2 and about 600 seats; historical same-name row points elsewhere."
+    }
+  ],
+  "critical_model_risks": [
+    "COLORMAP is keyed by non-unique name instead of stable row identity.",
+    "COLORMAP.yellow contains a duplicate Upside Кунцево key; the earlier status mark is silently overwritten.",
+    "Only 21 of 33 displayed columns can be color-coded.",
+    "Most green/yellow fields have no cell-level provenance.",
+    "External truth, machine consistency, corrections and conflicts share one color model.",
+    "Classifier and canonical quarterly JSON can diverge after manual fixes.",
+    "Classifier omits live volume, price, lots and vacancy coverage."
+  ],
+  "omitted_live_fields": {
+    "buildings": ["volume", "price", "lots"],
+    "coworkings": ["vacancy"],
+    "sale_lot_rows_not_represented": 20921,
+    "rent_lot_rows_not_represented": 1322
+  },
+  "recommended_statuses": [
+    "EXTERNAL_CONFIRMED",
+    "PRIMARY_CONFIRMED",
+    "MACHINE_CONSISTENT",
+    "SINGLE_SOURCE",
+    "CONFLICT",
+    "MISSING",
+    "UNCHECKED"
+  ],
+  "priority_order": [
+    "Fix confidence/provenance model",
+    "Complete automated consistency checks",
+    "Externally verify 97 live buildings",
+    "Externally verify 77 live coworking locations",
+    "Audit historical rows"
+  ]
+}

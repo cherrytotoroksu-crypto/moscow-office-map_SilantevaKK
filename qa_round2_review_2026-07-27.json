@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-07-27T16:00:00+03:00",
+  "reviewer": "Codex",
+  "reviewed_commit": "92263f580254d47f28587b65a39b7c978ca7c6b5",
+  "origin_main": "d257512d82f109fc1fffb4c58272d5d091d097d7",
+  "pushed": false,
+  "working_tree_clean": true,
+  "decisions": [
+    {"id": "QA-001", "decision": "ACCEPTED"},
+    {"id": "QA-004", "decision": "ACCEPTED"},
+    {"id": "QA-006", "decision": "ACCEPTED"},
+    {
+      "id": "QA-008",
+      "decision": "ACCEPTED_SCOPED",
+      "remaining_scope": "QA-011: automatic blocking validation/generation"
+    },
+    {
+      "id": "QA-007",
+      "decision": "NEEDS_REWORK",
+      "reason": "55.794811,37.592464 is the geocode of a questionable stored address near Savyolovskaya, not a verified point for the Rizhskaya project.",
+      "push_blocker": true
+    }
+  ],
+  "new_findings": [
+    {
+      "id": "QA-012",
+      "priority": "high",
+      "title": "Remaining classifier geo-field drift",
+      "rows": 12,
+      "distinct_entities": 11,
+      "field_mismatches": 57
+    }
+  ],
+  "next_run_order": ["QA-007", "QA-012", "QA-011"],
+  "next_run_rules": [
+    "Do not push commit 92263f5.",
+    "Do not geocode Sushchyovsky Val 5 again as a proxy for project identity.",
+    "Use a primary source for the exact project parcel or mark BLOCKED_BY_EVIDENCE.",
+    "Verify coordinates before recomputing geo fields.",
+    "Add a blocking automated classifier geo consistency test.",
+    "After acceptance, squash the checkpoint and fixup into one clean commit before push."
+  ],
+  "audit": {
+    "json_files": 62,
+    "building_rows": 833,
+    "coworking_rows": 752,
+    "sale_lots": 20921,
+    "rent_lots": 1322,
+    "classifier_rows": 278,
+    "target_geo_mismatches": 0,
+    "remaining_classifier_rows_with_geo_mismatches": 12,
+    "remaining_classifier_geo_field_mismatches": 57
+  }
+}

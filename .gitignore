@@ -5,3 +5,4 @@ generate_202606.py
 generate_historical.py
 geocode_coworking.py
 data/coworking_geocode_cache.json
+scripts/__pycache__/

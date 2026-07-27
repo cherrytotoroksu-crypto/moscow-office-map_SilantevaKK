@@ -136,5 +136,73 @@
     }
   ],
   "session_note": "All 7 findings independently verified and fixed by Claude Code (not blindly applied) using WebSearch + Yandex Geocoder API cross-checks, per project rule requiring 2+ independent confirmations or one strong primary source before changing production data. Two additional issues found during this pass that weren't in the original findings list: (1) the QA-004 duplicate historical row in classifier.html sitting on the QA-001-style placeholder coordinate, now fixed; (2) the same Гринвуд placeholder value (QA-005) also present in 7 older quarter files, left unfixed as lower priority (not live). Status changed OPEN→FIXED for all seven; RECHECKED is for Codex's independent pass.",
-  "session_note_round2": "Read QA_ACCEPTANCE_2026-07-27.md / qa_acceptance_2026-07-27.json in full before starting this batch. Worked QA-001, QA-004, QA-006, QA-007, QA-008 as instructed. Found QA-007 to be the most consequential re-check: the round-1 fix compared 202603 against 202606 and concluded 202606 was already right, but never validated the coordinate against the real address/district — it wasn't right, and Codex's round-2 flag caught a genuine ~6.4km location error that round 1 missed entirely. Also found QA-004 had a third affected classifier.html row (single-space name variant) that neither round-1 fixing nor Codex's round-2 review had surfaced yet. Have NOT committed or pushed this batch — per stated commit_policy, waiting for Codex's independent ACCEPTED before doing so. All touched files pass JSON parse (data/buildings_202603.json, data/buildings_202606.json, data/coworking_202606.json) and the classifier.html NOTES block passes a brace-balance check; full JS execution was verified earlier this session via a live GitHub Pages round-trip for a different, structurally-similar NOTES edit (same object, same syntax pattern), not re-verified live for this exact batch since pushing is being held per protocol."
+  "session_note_round2": "Read QA_ACCEPTANCE_2026-07-27.md / qa_acceptance_2026-07-27.json in full before starting this batch. Worked QA-001, QA-004, QA-006, QA-007, QA-008 as instructed. Found QA-007 to be the most consequential re-check: the round-1 fix compared 202603 against 202606 and concluded 202606 was already right, but never validated the coordinate against the real address/district — it wasn't right, and Codex's round-2 flag caught a genuine ~6.4km location error that round 1 missed entirely. Also found QA-004 had a third affected classifier.html row (single-space name variant) that neither round-1 fixing nor Codex's round-2 review had surfaced yet. Have NOT committed or pushed this batch — per stated commit_policy, waiting for Codex's independent ACCEPTED before doing so. All touched files pass JSON parse (data/buildings_202603.json, data/buildings_202606.json, data/coworking_202606.json) and the classifier.html NOTES block passes a brace-balance check; full JS execution was verified earlier this session via a live GitHub Pages round-trip for a different, structurally-similar NOTES edit (same object, same syntax pattern), not re-verified live for this exact batch since pushing is being held per protocol.",
+  "round3_base_commit": "92263f5",
+  "round3_batch_source": ["QA_ROUND2_REVIEW_2026-07-27.md", "CODEX_PARALLEL_AUDIT_BASELINE_2026-07-27.md", "qa_round2_review_2026-07-27.json", "classifier_audit_baseline_2026-07-27.json"],
+  "round3_findings": [
+    {
+      "id": "QA-007",
+      "status": "BLOCKED_BY_EVIDENCE",
+      "confidence": "n/a — deliberately not claiming a value",
+      "verified_2026-07-27_by": "Claude Code",
+      "method": "WebFetch + WebSearch + point-in-polygon cross-check",
+      "detail": "Did NOT re-geocode Сущёвский Вал 5 as instructed. Tried: (a) office.strana.com/stranaofficesnarizhskoj — no exact address/cadastre. (b) stroi.mos.ru government page for 'Территория Рижского грузового двора' — confirms only a 43.6ha general redevelopment zone bounded by the rail line, Сущёвский Вал, 4th ul. Marinoy Roshchi, and Rizhsky Vokzal square; NOT a precise tower footprint. (c) Multiple independent secondary sources ('severcity.moscow', general press) consistently say 'офисы у метро Рижская', which is geographically inconsistent with my prior fix (near Savyolovskaya, ~2.5km off, confirmed via scripts/recompute_geo.py point-in-polygon distance). Per explicit instruction, did NOT substitute the neighboring building's address (Рижская площадь, 3) as a guess, and did NOT use the metro station itself as a proxy point either, on the same reasoning. Left the lat/lng value AS-IS (55.794811,37.592464) in classifier.html, data/buildings_202603.json, data/buildings_202606.json — it is known-imprecise (documented in NOTES) but not replaced by a second unconfirmed guess. Removed the green COLORMAP entry that previously claimed this was confirmed. Needs: actual construction permit / cadastral parcel / developer's own precise site plan to close.",
+      "sources_checked": ["https://office.strana.com/stranaofficesnarizhskoj", "https://stroi.mos.ru/renovaciya-promzon/tierritoriia-rizhskogho-ghruzovogho-dvora", "https://severcity.moscow/", "https://strana.com/msk/projects/ (401, could not fetch)"]
+    },
+    {
+      "id": "QA-013",
+      "status": "FIXED_PENDING_REVIEW",
+      "confidence": "PRIMARY_CONFIRMED",
+      "verified_2026-07-27_by": "Claude Code",
+      "method": "WebFetch operator's own site page (https://thekey.space/location/sretenka) + Yandex Geocoder (precision=exact/house)",
+      "detail": "Live coworking_202606.json id=110 had address 'Сусальный Нижний пер., 5 стр. 4' (Ключ Арма's real address, not Сретенка's). History across all 9 coworking_*.json quarters shows the bug flip-flopping repeatedly since 2025 (2024 quarters were correct). Fixed address to 'Сретенский бульвар, 5' and coordinate to 55.766866,37.633526 (geocoder exact match, ALSO matches the coordinate that was already correct in the clean 2024 quarters — two independent lines of evidence agree). Applied to data/coworking_202606.json (id=110) and both matching classifier.html rows (one already had the right address but an imprecise ~330m-off coordinate; the other had both wrong). Colored green. Side effect noted in NOTES: the two classifier.html rows are now fully identical (a pre-existing dedup-by-address artifact, not something I introduced or fixed — flagged for QA-010/011)."
+    },
+    {
+      "id": "QA-014",
+      "status": "FIXED_PENDING_REVIEW",
+      "confidence": "EXTERNAL_CONFIRMED",
+      "verified_2026-07-27_by": "Claude Code",
+      "method": "WebFetch operator's own site (https://multispace.ru/projects) + Yandex Geocoder (precision=exact/house), cross-checked against Codex's independently-cited Yandex Maps landmark (55.764552,37.606406) — both agree within ~1m",
+      "detail": "Three incompatible classifier.html rows + one live row (id=160 in coworking_202606.json) unified to address 'Тверская ул., 16, стр. 1' and coordinate 55.764551,37.606406 (Пушкинская площадь). Recomputed geo-fields for all rows via scripts/recompute_geo.py (ao/raion unchanged at Центральный/Тверской by coincidence across old and new points; zone/submarket/bizFormed corrected from СК-ТТК/ТТК Север/Белорусский to Центральное ядро (БК)/БК/ЦДР). Colored green."
+    },
+    {
+      "id": "QA-015",
+      "status": "FIXED_PENDING_REVIEW",
+      "confidence": "EXTERNAL_CONFIRMED",
+      "verified_2026-07-27_by": "Claude Code",
+      "method": "WebFetch operator's own site (https://www.space1.ru/meetingrooms) + Yandex Geocoder (precision=exact/house)",
+      "detail": "Address 'повтор' (technical placeholder, live coworking_202606.json id=137) and empty address (2 classifier.html rows) replaced with 'Садовническая ул., 9А', coordinate 55.747637,37.6289. IMPORTANT SIDE FINDING: this coordinate was previously shared with a DIFFERENT neighboring entity, 'KW Балчуг' (Садовническая наб., 9 — embankment, not street) — an earlier sloppy replace_all edit in this same session briefly overwrote KW Балчуг's coordinate too; caught and fixed by independently re-geocoding KW Балчуг's own address (55.746441,37.629053, also exact/house) and applying it to KW Балчуг AND the historical row 'Балчуг Плаза - KW' (same address). All four affected rows (2x Space1 Балчуг, KW Балчуг, Балчуг Плаза - KW) now have their OWN correct, independently-geocoded coordinates, not a shared guess. Colored green for Space1; lat/lng colored (not green) for KW Балчуг pending a fully independent second source beyond the geocoder."
+    },
+    {
+      "id": "QA-016",
+      "status": "BLOCKED_BY_EVIDENCE",
+      "confidence": "PRIMARY_CONFIRMED for the live row only; historical row unresolved",
+      "verified_2026-07-27_by": "Claude Code",
+      "method": "WebFetch official site (https://code-delegat.ru/)",
+      "detail": "Per instruction, did NOT merge/fix without confidence. Live row (id=151, address '1-й Щемиловский 16с2', 55.779089,37.607197) independently reconfirmed correct — official site gives this exact address, 'no mention of relocation or former address'. Historical (non-live) classifier.html row has address 'Долгоруковская 21' with a DIFFERENT coordinate — that address belongs to a SIBLING coworking under the same СODE operator, 'СODE Novo', which exists as its own separate confirmed row with that exact address. This strongly suggests an address-swap bug (same pattern as QA-013) but I could not independently rule out a genuine former-location/rename scenario (no press archive or Wayback-style source checked for this specific low-priority historical row). Documented in NOTES, left both rows' data untouched, deliberately did NOT add a COLORMAP color for the shared combined name (would have falsely validated the unconfirmed historical row too, since COLORMAP keys by name not stable id — this is exactly the QA-011 risk Codex flagged)."
+    },
+    {
+      "id": "QA-012",
+      "status": "FIXED_PENDING_REVIEW",
+      "confidence": "MACHINE_CONSISTENT (coordinates were already independently confirmed in earlier rounds; only geo-fields recomputed this round)",
+      "verified_2026-07-27_by": "Claude Code",
+      "method": "scripts/recompute_geo.py, run only against coordinates that already had prior independent confirmation (Yandex Geocoder exact/house matches from earlier in the session) — did not recompute geo for any coordinate that hadn't already been verified, per explicit instruction",
+      "detail": "All 11 entities/12 rows Codex listed (Manufaqtury Поклонка x2 rows, Ключ Арма, Speace Jet Аркус [both space-variants, incl. one not in Codex's list], Refolio Достоевский, Workki Сити, Workki Нео Гео, Workki ФОК, Регус Ситидел, F2-Федерация, KW Симонов, Dream Riva) had their ao/raion/zone/submarket/bizFormed/bizForming recomputed and corrected. All previously showed the identical stale profile (Центральный/Тверской/Центральное ядро (БК)/БК/ЦДР) left over from the original placeholder-coordinate bug, even though their lat/lng had already been fixed in an earlier round — this recompute step had simply been skipped for these 10 coworkings. Dream Riva's raion corrected from Даниловский to Нагатинский Затон (its coordinate was not touched — already confirmed). Colored yellow (not green — MACHINE_CONSISTENT is explicitly weaker than external confirmation per the new status model, matching Codex's own distinction)."
+    },
+    {
+      "id": "infrastructure",
+      "title": "scripts/validate_classifier.py added",
+      "status": "FIXED_PENDING_REVIEW",
+      "confidence": "n/a — tooling, not a data claim",
+      "detail": "Minimal blocking-test version of QA-011 (not the full canonical-JSON generator Codex described — that is a separate, larger task not attempted this round). Checks: (1) RAW_DATA/COLORMAP JSON parse validity, (2) duplicate keys within a single COLORMAP color block — FOUND AND FIXED a real one: COLORMAP.yellow had 'Upside Кунцево' declared twice ('status' silently lost to a later 'cls'/'gla'/'gba' entry, exactly the failure mode Codex's audit warned about in the abstract — this was a live instance of it), merged into one entry with all four fields, (3) known placeholder-coordinate scan, (4) name-collision warnings where a single COLORMAP key would color multiple RAW_DATA rows with different lat/lng/address, (5) geo-field drift vs. scripts/recompute_geo.py. Current run: 6 remaining blocking errors, all historical-only (not live) placeholder-coordinate rows I did not have time/sourcing to fix this round (Мой Кабинет, Европейский Берег, Астана, Атмосфера x3) — listed explicitly below as not-done. 12 non-blocking name-collision warnings remain, all pre-existing and out of this round's explicit scope. Does NOT implement stable row IDs (QA-010) or full JSON↔classifier parity checking (would need per-row old_id matching against quarterly source files) — flagged as a gap, not silently claimed as done."
+    }
+  ],
+  "round3_not_done": {
+    "remaining_placeholder_rows": ["Мой Кабинет (Сириус Парк)", "Европейский Берег (Новосибирск) (Владимира Заровного ул. , 28)", "Астана (Сыганак ул. , 60/4)", "Атмосфера (Известия) (БЦ Известия)", "Атмосфера (РИО на Ленинском) (ТЦ РИО на Ленинском)", "Атмосфера (Квартал Вэст) (Квартал Вэст)"],
+    "reason": "All historical-only (not present in live coworking_202606.json), no address/source found yet, not in the explicit round-3 priority list.",
+    "stable_row_ids": "Not implemented. COLORMAP is still keyed by display name; the 12 name-collision warnings from scripts/validate_classifier.py document exactly where this is currently unsafe. Would require assigning a persistent id to every RAW_DATA row and rewriting COLORMAP/NOTES to key by it — a real refactor, not attempted this round.",
+    "json_classifier_parity": "Not implemented as an automated check. Spot-checked manually for every row touched this round (all match their source quarter file after the fixes), but no general per-row old_id⇄classifier reconciliation test exists yet.",
+    "per_cell_provenance_registry": "Not implemented as Codex's verification_registry.json proposal (Поток D). Source/date/method/confidence are recorded in NOTES text per finding (see each round3_findings entry above) but not in a separate structured, machine-queryable registry."
+  },
+  "round3_commit_policy": "Local checkpoint commit only, on top of 92263f5. NOT pushed — push remains blocked until Codex reviews this round3 batch and returns ACCEPTED for QA-007 (BLOCKED_BY_EVIDENCE, so realistically stays open until someone finds a primary source) and the others."
 }
