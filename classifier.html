@@ -1336,15 +1336,17 @@ const RAW_DATA = [
     {
         "name":  "Европейский Берег (Новосибирск) (Владимира Заровного ул. , 28)",
         "name_orig":  "Европейский Берег (Новосибирск)",
+        "city":  "Новосибирск",
+        "out_of_scope":  true,
         "address":  "",
-        "lat":  55.755819,
-        "lng":  37.617644,
-        "ao":  "Центральный",
-        "raion":  "Тверской",
-        "zone":  "Центральное ядро (БК)",
-        "submarket":  "БК",
-        "bizFormed":  "ЦДР",
-        "bizForming":  "",
+        "lat":  null,
+        "lng":  null,
+        "ao":  null,
+        "raion":  null,
+        "zone":  null,
+        "submarket":  null,
+        "bizFormed":  null,
+        "bizForming":  null,
         "developer":  "Практик",
         "cls":  null,
         "gba":  null,
@@ -1367,15 +1369,17 @@ const RAW_DATA = [
     {
         "name":  "Астана (Сыганак ул. , 60/4)",
         "name_orig":  "Астана",
+        "city":  "Астана",
+        "out_of_scope":  true,
         "address":  "",
-        "lat":  55.755819,
-        "lng":  37.617644,
-        "ao":  "Центральный",
-        "raion":  "Тверской",
-        "zone":  "Центральное ядро (БК)",
-        "submarket":  "БК",
-        "bizFormed":  "ЦДР",
-        "bizForming":  "",
+        "lat":  null,
+        "lng":  null,
+        "ao":  null,
+        "raion":  null,
+        "zone":  null,
+        "submarket":  null,
+        "bizFormed":  null,
+        "bizForming":  null,
         "developer":  "Практик",
         "cls":  null,
         "gba":  null,
@@ -9042,6 +9046,12 @@ function linkifyNote(s) {
   return escaped.replace(/https?:\/\/[^\s|]+/g, url => `<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
 }
 
+// Активный московский набор. Строки с out_of_scope:true — объекты других
+// городов (филиалы сетей, попавшие в московский датасет по ошибке импорта).
+// Они сохранены в RAW_DATA ради прослеживаемости, но не входят ни в таблицу,
+// ни в счётчики и не имеют координат — см. QUARANTINE_2026-07-29.md.
+const ACTIVE_DATA = RAW_DATA.filter(r => !r.out_of_scope);
+
 function render(filterText) {
   const theadRow = document.getElementById("theadRow");
   theadRow.innerHTML = HEADERS.map(h => `<th>${h}</th>`).join("");
@@ -9051,7 +9061,7 @@ function render(filterText) {
   let shown = 0;
   let html = "";
   NOTE_REGISTRY = [];
-  for (const row of RAW_DATA) {
+  for (const row of ACTIVE_DATA) {
     if (q) {
       const hay = (row.name + " " + (row.address||"") + " " + (row.developer||"")).toLowerCase();
       if (!hay.includes(q)) continue;
@@ -9121,12 +9131,12 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") hideNotePopu
 
 function countColors() {
   let g=0,y=0,r=0;
-  for (const row of RAW_DATA) {
+  for (const row of ACTIVE_DATA) {
     for (const f of (COLORMAP.green[row.name]||[])) g++;
     for (const f of (COLORMAP.yellow[row.name]||[])) y++;
     for (const f of (COLORMAP.red[row.name]||[])) r++;
   }
-  document.getElementById("statTotal").textContent = RAW_DATA.length;
+  document.getElementById("statTotal").textContent = ACTIVE_DATA.length;
   document.getElementById("statGreen").textContent = g;
   document.getElementById("statAmber").textContent = y;
   document.getElementById("statRed").textContent = r;

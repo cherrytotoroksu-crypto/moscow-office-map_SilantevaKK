@@ -9,14 +9,24 @@ All six currently sit on the same placeholder point (55.755819, 37.617644 — Re
 **Out of scope — QUARANTINE (not Moscow, do not force a Moscow coordinate):**
 - `Европейский Берег (Новосибирск)` — `name_orig` itself says Novosibirsk; developer field is "Практик" (a multi-city coworking network). This is the network's Novosibirsk branch, mixed into the Moscow dataset by mistake.
 - `Астана (Сыганак ул., 60/4)` — confirmed via WebSearch: this is "Практик" network's Astana, Kazakhstan branch (Сыганак ул., 60/4 is an exact address match to a Praktik Office location in Astana). Not Moscow.
-- **Recommendation:** exclude both from the live Moscow classifier (or tag with an explicit `out_of_scope: true` / city field) rather than assign them any Moscow point. Not actioned yet — needs a decision on removal vs. tagging convention.
+- **✅ ACTIONED 2026-07-29** (was: "recommendation, not actioned yet"). Both are now genuinely out of the active Moscow set, not merely described here:
+  - `classifier.html` RAW_DATA: each row tagged `"out_of_scope": true` + explicit `"city"` ("Новосибирск" / "Астана"); `lat`/`lng` set to `null` (the Red Square placeholder removed, no Moscow point substituted); fabricated Moscow geo-fields `ao`/`raion`/`zone`/`submarket`/`bizFormed` nulled — they had been derived from the placeholder coordinate and were polluting district-level aggregates.
+  - Render path: added `const ACTIVE_DATA = RAW_DATA.filter(r => !r.out_of_scope);`. Both `render()` and `countColors()` now iterate `ACTIVE_DATA`, so the rows cannot appear in the table and no longer inflate the colour counters. Row totals: 279 in RAW_DATA → **277 active**.
+  - `data/coworking_202503.json`: both records deleted outright (this is the only quarterly file that carried them), so they cannot be drawn on the index.html map for any quarter.
+  - The rows stay in RAW_DATA on purpose, tagged, so the import error remains traceable rather than vanishing silently.
+  - Guarded by `tests/test_moscow_scope_regression.py` — see below.
+
+### Regression guard: Moscow bounds / city field
+`tests/test_moscow_scope_regression.py` asserts that every active row with coordinates falls inside the Moscow bounding box (lat 55.10–56.05, lng 36.75–38.00, incl. TiNAO), that the two known non-Moscow entities stay tagged + coordinate-free, that no out-of-scope row ever keeps a coordinate, that the render path still filters on `out_of_scope`, and that neither entity reappears in any quarterly `buildings_*` / `coworking_*` file.
+
+**It immediately caught a real pre-existing bug:** `Регус (Гринвуд)` sat on `55.078473, 37.764492` — about 87 km outside Moscow — in **8** historical coworking files (202403–202512). This is the already-diagnosed QA-005 error, which had been fixed only in the live quarter and explicitly left unfixed in the older ones. Corrected to the previously verified `55.868617, 37.403261` (the value already in `coworking_202606.json`, matching the recorded address "72 км МКАД, п/о Путилково, стр. 19"). This is propagation of an existing verified coordinate, **not** a new guess. `data/coworking_geocode_cache.json` still holds the stale value but is gitignored and does not feed the map.
 
 **Confirmed Moscow, real address found, precise coordinate still pending (not yet geocoded to house-level):**
 - `Мой Кабинет (Сириус Парк)` — Москва, Каширское шоссе, 3, стр. 12 (м. Нагатинская). Source: brightrich.moscow, m2data.net, co-working.moscow.
 - `Атмосфера (Известия)` — Москва, Тверская ул., 18, стр. 1 (здание «Известий»). Source: kovorkingi.ru, officenavigator.ru.
 - `Атмосфера (РИО на Ленинском)` — Москва, Ленинский просп., 109, ТРЦ «РИО» (6-й этаж). Source: 2ГИС, co-atmosphere.ru.
 - `Атмосфера (Квартал Вэст)` — Аминьевское шоссе, 6, Москва. Source: co-atmosphere.ru.
-- **Status:** addresses are solid (2+ independent listings agree per building), but none has been run through the Geocoder/Yandex Maps house-level lookup yet — do that before writing a new lat/lng, per project's coordinate-fix protocol (address+coordinate only change together).
+- **Status (unchanged as of 2026-07-29):** addresses are solid (2+ independent listings agree per building), but none has been run through the Geocoder/Yandex Maps house-level lookup yet — do that before writing a new lat/lng, per project's coordinate-fix protocol (address+coordinate only change together). **These four were deliberately NOT touched in the 2026-07-29 pass** (explicit instruction: do not guess or accept unverified coordinates). They remain the 4 blocking errors reported by `scripts/validate_classifier.py`, down from 6 — the other 2 were the non-Moscow rows now excluded above. `tests/test_moscow_scope_regression.py` reports their count as `active_rows_still_on_placeholder: 4` but does **not** assert on them, so the quarantine stays visible without blocking.
 
 ## 12 name-collision warnings
 

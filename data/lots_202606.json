@@ -32496,13 +32496,124 @@
   ],
   "River Park Коломенское": [
     {
-      "block": "aggregate_only",
+      "lot_key": "cian_329556781",
+      "block": "",
       "floor": "",
-      "area": 486,
-      "price": 412181.88292181067,
-      "total": 200320395.1,
+      "area": 35.3,
+      "price": 400519,
+      "total": 14138320.7,
       "scheme": "",
-      "size": "aggregate_only — поштучная разбивка на 10 лотов не найдена (не в интернете, не в исходном своде); это одна агрегированная строка, СУММА совпадает с принятым срезом на 06.07 (10 лотов, 486 м², 200 320 395,10 ₽), но НЕ представляет 10 реальных отдельных объектов"
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/329556781/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_327732390",
+      "block": "",
+      "floor": "",
+      "area": 45.0,
+      "price": 385864,
+      "total": 17363880.0,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/327732390/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_331313584",
+      "block": "",
+      "floor": "",
+      "area": 71.3,
+      "price": 372787,
+      "total": 26579713.1,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/331313584/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_327732492",
+      "block": "",
+      "floor": "",
+      "area": 57.3,
+      "price": 469302,
+      "total": 26891004.6,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/327732492/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_327732408",
+      "block": "",
+      "floor": "",
+      "area": 35.5,
+      "price": 399509,
+      "total": 14182569.5,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/327732408/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_327732384",
+      "block": "",
+      "floor": "",
+      "area": 64.5,
+      "price": 430275,
+      "total": 27752737.5,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/327732384/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_331313575",
+      "block": "",
+      "floor": "",
+      "area": 45.1,
+      "price": 384349,
+      "total": 17334139.9,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/331313575/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_331313588",
+      "block": "",
+      "floor": "",
+      "area": 58.2,
+      "price": 454260,
+      "total": 26437932.0,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/331313588/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_327732425",
+      "block": "",
+      "floor": "",
+      "area": 35.4,
+      "price": 401529,
+      "total": 14214126.6,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/327732425/",
+      "source_snapshot": "2026-07-06"
+    },
+    {
+      "lot_key": "cian_327732420",
+      "block": "",
+      "floor": "",
+      "area": 38.4,
+      "price": 401718,
+      "total": 15425971.2,
+      "scheme": "",
+      "size": "До 100 кв. м",
+      "source_url": "https://www.cian.ru/sale/commercial/327732420/",
+      "source_snapshot": "2026-07-06"
     }
   ]
 }
