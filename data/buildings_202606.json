@@ -2133,7 +2133,7 @@
     "biz": "-",
     "developer": "Hitech Development",
     "address": "ул. Пятницкая, д. 40",
-    "year": "2026",
+    "year": "2028",
     "start": "",
     "weight": 0,
     "id": 272
@@ -2298,5 +2298,28 @@
     "id": 97,
     "name_orig": "Звенигородская от Гранель",
     "lots": 19
+  },
+  {
+    "name": "River Park Коломенское",
+    "address": "ул. Корабельная, 3А",
+    "developer": "Речников Инвест",
+    "status": "Строится",
+    "year": "",
+    "start": "",
+    "cls": "A",
+    "gba": null,
+    "gla": null,
+    "volume": 486,
+    "price": 412181.88292181067,
+    "weight": 200320395.1,
+    "zone": "ТТК-МКАД",
+    "submarket": "ТТК-МКАД Юг",
+    "biz": "",
+    "on_sale": "да",
+    "lat": 55.686558,
+    "lng": 37.700056,
+    "id": 279,
+    "name_orig": "River Park Коломенское",
+    "lots": 10
   }
 ]
