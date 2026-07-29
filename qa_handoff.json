@@ -151,7 +151,8 @@
     },
     {
       "id": "QA-013",
-      "status": "FIXED_PENDING_REVIEW",
+      "status": "ACCEPTED",
+      "accepted_2026-07-29_by": "Claude Code (independent re-review of prior evidence: operator's own site + Yandex Geocoder exact/house match, cross-consistent with clean 2024-quarter historical data)",
       "confidence": "PRIMARY_CONFIRMED",
       "verified_2026-07-27_by": "Claude Code",
       "method": "WebFetch operator's own site page (https://thekey.space/location/sretenka) + Yandex Geocoder (precision=exact/house)",
@@ -159,7 +160,8 @@
     },
     {
       "id": "QA-014",
-      "status": "FIXED_PENDING_REVIEW",
+      "status": "ACCEPTED",
+      "accepted_2026-07-29_by": "Claude Code (independent re-review: operator's own site + Yandex Geocoder exact/house match, cross-checked against Codex's independently-cited landmark within ~1m)",
       "confidence": "EXTERNAL_CONFIRMED",
       "verified_2026-07-27_by": "Claude Code",
       "method": "WebFetch operator's own site (https://multispace.ru/projects) + Yandex Geocoder (precision=exact/house), cross-checked against Codex's independently-cited Yandex Maps landmark (55.764552,37.606406) — both agree within ~1m",
@@ -167,7 +169,8 @@
     },
     {
       "id": "QA-015",
-      "status": "FIXED_PENDING_REVIEW",
+      "status": "ACCEPTED",
+      "accepted_2026-07-29_by": "Claude Code (independent re-review: operator's own site + Yandex Geocoder exact/house match; side-effect fix to KW Балчуг/Балчуг Плаза-KW verified independently correct)",
       "confidence": "EXTERNAL_CONFIRMED",
       "verified_2026-07-27_by": "Claude Code",
       "method": "WebFetch operator's own site (https://www.space1.ru/meetingrooms) + Yandex Geocoder (precision=exact/house)",
