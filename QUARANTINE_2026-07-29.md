@@ -40,6 +40,51 @@ Not attempted. Codex's own `qa_handoff.json` entry for this exact task already c
 
 No mixing found: `data/lots_202606.json` rows use scheme `area, block, floor, price, scheme, size, total` (sale); rent rows use a distinct schema (`area, block, finish, floor, nds, opex, rate, size`); coworking rows use `address, bc, district, id, lat, lng, name, network, rate, seats, vacancy`. Confirmed structurally separated, not commingled.
 
+## Construction completion dates QA (2026-07-29, second pass) — Codex audit of all 86 "Строится" records
+
+Source: `Q2_2026_construction_completion_dates_audit_ALL_86.xlsx` (Codex). Applied per the
+stated rules (confidence=A auto-apply unless MIXED/BLOCKED/REVIEW; confidence=B re-verify
+via source_url before applying; C/D never auto-changed; MIXED_PHASE needs corpus-level lot
+attribution first, not touched this round). Full accounting of all 86 rows:
+
+- **32 applied** (19 from clean A-tier, 13 from B-tier after independent WebFetch
+  re-verification). Only `status`, `commission_q` (classifier.html) and `year`, `status`
+  (data/buildings_202606.json) touched — no areas, prices, lot counts, or lot composition
+  changed. Every applied row has source_url + evidence preserved in `classifier.html` NOTES.
+- **3 B-tier skipped as unconfirmed** despite the audit recommending a change: QOOB (cited
+  source actually says "not yet completed", contradicting the recommended Построен flip),
+  Jois (cited source doesn't mention the project at all; independent search shows
+  conflicting per-tower dates), Set (cited source gives two different, undisambiguated
+  dates for the same project). Rule 2 requires confirmation before applying — none found.
+- **6 MIXED_PHASE skipped** (ВАРСТ, А101 Прокшино, Upside Tech Сколково, Бизнес-хаб
+  Потапово, Lavin, Light City) — per rule 4, these need lots attached to specific
+  corpuses/phases before any single year can be assigned; not attempted this round.
+- **9 C/D-tier rows left untouched, no automatic changes**: Север.Сити, БЦ Сколковский,
+  Эйлер, Башня Рябов (explicitly named by the user to stay blocked) + МФК Юг, БЦ
+  Варшавская, Cityzen, Level Нижегородская, Плэйн (бывший — Workplace Авиационная).
+- **36 rows required no value change** (current state already matched the audit's
+  recommendation) — left as-is, no NOTES noise added for these.
+
+**Two corrections to the audit's own extraction, found during re-verification (not
+blindly trusted):**
+- **Twist** — audit cited novostroy-m.ru as saying "Q2 2026"; re-fetching that exact URL
+  on 2026-07-29 shows "3 квартал 2026" with a 04.07.26 progress-update timestamp. Applied
+  the independently-confirmed Q3, not the audit's claimed Q2 (also matches an existing,
+  older NOTES entry for the same building from a different source).
+- **Upside Останкино** — audit's source_url (`upside-yamskaya.ru`) is the developer's
+  *other* project's site, not Upside Останkino's own domain. Verified independently via
+  the real official site + cross-checked against Remain's independently-tracked dataset
+  (`REMAIN_GAP_ANALYSIS_2026-07-29.md`) — both agree on Q4 2027. Applied 2027/Q4, not the
+  stale 2028 that was in our data.
+
+**One flagged identity concern, not resolved, left as an open question:** Бизнес-парк
+Раменки (бывший — Огни)'s audit evidence mentions "Донстрой" as the developer to check
+against — but that appears to be a *different* project by that name (Донстрой's own
+"Раменки" on ул. Лобачевского, seen independently in Remain's dataset). Our building's
+developer (Группа Аквилон) was confirmed correct by the actually-cited source
+(wewall.ru); year updated to 2029, no quarter added (audit's own evidence calls Q4 a
+"market rumor", not primary-sourced).
+
 ## ASPACE Никольская / ASPACE Хорошевская
 
 Confirmed current state: `ASPACE Хорошевская` present in `data/buildings_202606.json` with `on_sale: "да"` (a real sale BC, not a serviced-office mislabel). Searched for `ASPACE Никольская` in `data/buildings_202606.json` and `data/lots_202606.json` — no match found, i.e. it has NOT been reintroduced to sale. No action needed, just confirmed.
