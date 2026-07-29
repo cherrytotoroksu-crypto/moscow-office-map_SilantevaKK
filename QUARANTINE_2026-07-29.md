@@ -91,6 +91,26 @@ developer (Группа Аквилон) was confirmed correct by the actually-ci
 (wewall.ru); year updated to 2029, no quarter added (audit's own evidence calls Q4 a
 "market rumor", not primary-sourced).
 
+## Construction completion dates QA (2026-07-30, final transfer pass)
+
+Sources: `Q2_2026_DATE_VERIFICATION_RECHECK_2026-07-30.md`, `Q2_2026_SUSPICIOUS_DATES_RECHECK_2026-07-30.md` (Codex). Closes out several items the 2026-07-29 pass above had explicitly left open.
+
+**Applied (5 rows, `commission_q` only, no other fields touched):**
+- **Lavin** — III кв. 2028 (202809) for the *current/first* queue only (MIXED_PHASE: 2nd queue is I кв. 2030, not written to this field). 2 independent sources agree (workplace.forma.ru + novostroy-m.ru). COLORMAP promoted to green.
+- **Light City** — `commission_q` deliberately left `null` (still MIXED_PHASE — 4 corpuses, no single project date). Corpus A's I кв. 2028 is documented only as a NOTES annotation (2 independent sources: lightcity.moscow + nikoliers.ru), not written into any field — the schema has no per-corpus field to hold it.
+- **Cityzen** — I кв. 2030 (203003) for the *office* multi-quarter specifically, distinct from the residential 2027-Q3 date on the same developer page. Only 1 clear source (companies.rbc.ru) — a possibly-related but ambiguous second RBC mention ("7 new MR projects by 2026") was found and logged as a caveat rather than treated as corroboration. COLORMAP: yellow, not green.
+- **Jois** — IV кв. 2028 (202812) for the office towers (Mast/Credo), previously skipped 2026-07-29 as unconfirmed (audit's cited PDF didn't actually mention the project). Independently re-verified 2026-07-30 via WebSearch aggregation (novostroy.ru-sourced summary): office component Q4 2028, distinct from the residential ЖК JOIS's Q4 2027. COLORMAP: yellow (aggregated search evidence, not a single directly-read page).
+- **Set** — III кв. 2028 (202809), also previously skipped 2026-07-29 (audit's source gave two undisambiguated dates). Re-verified 2026-07-30: office component (SET Office, Верейская 29/32Б) Q3 2028, distinct from the residential ЖК SET/ВЕЕР. COLORMAP: yellow.
+
+**Still blocked / unresolved, re-confirmed this pass, deliberately not touched:**
+- **Север.Сити** (QA-007) — no new evidence found; `BLOCKED_BY_EVIDENCE` stands.
+- **Башня Рябов** — identity conflict confirmed again: one source describes an existing 2024-completion building at Холодильный пер., 3к1с4, another describes an unrelated new 13-storey MFC permit dated 2026-Q4. Cannot resolve without splitting old vs. new object; `BLOCKED_IDENTITY` stands.
+- **Эйлер** — project page confirmed (address, developer, specs) but no completion date anywhere on it; a nearby "Q4 2026" mention on the same page belongs to a different project (Omega Park). `BLOCKED_DATE` stands.
+- **БЦ Сколковский** — identity still not pinned down; candidate pages resolve to either "БЦ Сколково" (different complex) or a residential "Сколковский" in Odintsovo. Not filled.
+- **МФК Юг** — only a secondary CIAN listing (Q3 2028) found, address overlaps mixed-use/residential objects nearby; kept as an unconfirmed candidate, not written as canonical.
+- **Upside Tech Сколково** — range 2027–2028 confirmed for two corpuses (Alfa/Beta) but not split; per rule, no single date assigned without corpus-level lot attribution (same reasoning as the 2026-07-29 MIXED_PHASE skip).
+- **ВАРСТ, А101 Прокшино, Бизнес-хаб Потапово** — unchanged from the 2026-07-29 pass; still MIXED_PHASE, still need corpus/phase-level lot attribution before any single date.
+
 ## ASPACE Никольская / ASPACE Хорошевская
 
 Confirmed current state: `ASPACE Хорошевская` present in `data/buildings_202606.json` with `on_sale: "да"` (a real sale BC, not a serviced-office mislabel). Searched for `ASPACE Никольская` in `data/buildings_202606.json` and `data/lots_202606.json` — no match found, i.e. it has NOT been reintroduced to sale. No action needed, just confirmed.
