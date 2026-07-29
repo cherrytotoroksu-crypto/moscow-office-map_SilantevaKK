@@ -10,10 +10,12 @@ coworking file so they cannot appear on the map.
 
 This test stops any such row from silently re-entering the active Moscow set.
 
-Deliberately NOT asserted here: the four rows still on the placeholder point
-(Мой Кабинет / Атмосфера x3). Those are confirmed Moscow with real addresses but
-no house-level geocode yet — they stay quarantined and must not be guessed.
-See QUARANTINE_2026-07-29.md.
+The four rows that used to sit on the same Red Square placeholder point while
+still being genuine Moscow addresses (Мой Кабинет / Атмосфера x3) were given
+real house-level coordinates on 2026-07-29 (Codex COORDINATE_PLACEHOLDER_RECHECK,
+see classifier.html NOTES). This test now asserts active_rows_still_on_placeholder
+stays at 0 so a future data refresh cannot silently regress them back onto the
+placeholder. See QUARANTINE_2026-07-29.md.
 """
 
 import json
@@ -132,11 +134,6 @@ def main() -> None:
                 f"{path.name}: '{name}' is outside Moscow bounds ({lat}, {lng})",
             )
 
-    if failures:
-        for message in failures:
-            print(f"FAIL: {message}")
-        sys.exit(1)
-
     placeholder_active = sum(
         1 for r in active
         if r.get("lat") is not None
@@ -144,14 +141,23 @@ def main() -> None:
         and abs(r["lng"] - PLACEHOLDER[1]) < PLACEHOLDER_EPS
     )
 
+    check(
+        placeholder_active == 0,
+        f"{placeholder_active} active Moscow row(s) are back on the Red Square "
+        "placeholder point — real coordinates were regressed",
+    )
+
+    if failures:
+        for message in failures:
+            print(f"FAIL: {message}")
+        sys.exit(1)
+
     print(json.dumps({
         "raw_data_rows": len(raw_data),
         "active_moscow_rows": len(active),
         "out_of_scope_rows": len(inactive),
         "out_of_scope_cities": sorted({r.get("city") for r in inactive if r.get("city")}),
         "active_rows_still_on_placeholder": placeholder_active,
-        "note": "placeholder rows are quarantined Moscow objects awaiting house-level "
-                "geocoding; not guessed, not asserted here",
         "status": "PASS",
     }, ensure_ascii=False, indent=2))
 
