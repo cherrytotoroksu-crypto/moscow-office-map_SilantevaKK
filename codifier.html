@@ -53,11 +53,17 @@
 <div class="tabs">
   <div class="tab active" data-tab="codifier">Общий кодификатор</div>
   <div class="tab" data-tab="buildings">Здания квартала</div>
+  <div class="tab" data-tab="lots">Лоты квартала</div>
 </div>
 
 <div class="toolbar" id="toolbar">
   <input type="search" id="globalSearch" placeholder="Поиск по всей таблице...">
   <select id="quarterSelect" style="display:none;"></select>
+  <select id="channelSelect" style="display:none;">
+    <option value="sale">Продажа</option>
+    <option value="rent">Аренда</option>
+    <option value="coworking">Коворкинг</option>
+  </select>
   <button class="btn" id="btnColumns">Колонки ▾</button>
   <button class="btn" id="btnReset">Сбросить фильтры</button>
   <button class="btn" id="btnExportCsv">Экспорт CSV</button>
@@ -148,8 +154,45 @@ const BUILDINGS_COLUMNS = [
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:false},
 ];
 
+// Лоты — три РАЗНЫЕ схемы по каналам (не смешивать продажу/аренду/коворкинг
+// в одной таблице, см. ONLINE_TABLES_SPEC раздел 4). Переключаются селектором
+// канала, а не общим фильтром — физически разные наборы колонок.
+const LOTS_SALE_COLUMNS = [
+  {key:'building', label:'Здание', type:'text', visible:true},
+  {key:'floor', label:'Этаж', type:'text', visible:true},
+  {key:'area', label:'Площадь', type:'number', visible:true},
+  {key:'size', label:'Размер', type:'number', visible:false},
+  {key:'price', label:'Цена, руб/кв.м', type:'number', visible:true},
+  {key:'total', label:'Итого, руб', type:'number', visible:true},
+  {key:'scheme', label:'Планировка', type:'text', visible:true},
+  {key:'block', label:'Корпус', type:'text', visible:false},
+];
+const LOTS_RENT_COLUMNS = [
+  {key:'building', label:'Здание', type:'text', visible:true},
+  {key:'floor', label:'Этаж', type:'text', visible:true},
+  {key:'area', label:'Площадь', type:'number', visible:true},
+  {key:'size', label:'Размер', type:'number', visible:false},
+  {key:'rate', label:'Ставка, руб/кв.м/год', type:'number', visible:true},
+  {key:'opex', label:'Опекс', type:'number', visible:true},
+  {key:'nds', label:'НДС', type:'text', visible:false},
+  {key:'finish', label:'Отделка', type:'text', visible:true},
+  {key:'block', label:'Корпус', type:'text', visible:false},
+];
+const LOTS_COWORKING_COLUMNS = [
+  {key:'name', label:'Название', type:'text', visible:true},
+  {key:'network', label:'Сеть', type:'text', visible:true},
+  {key:'bc', label:'БЦ', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:false},
+  {key:'district', label:'Район', type:'text', visible:false},
+  {key:'seats', label:'Мест всего', type:'number', visible:true},
+  {key:'vacancy', label:'Вакантно', type:'number', visible:true},
+  {key:'rate', label:'Ставка, руб/мес', type:'number', visible:true},
+];
+const LOTS_COLUMNS_BY_CHANNEL = {sale: LOTS_SALE_COLUMNS, rent: LOTS_RENT_COLUMNS, coworking: LOTS_COWORKING_COLUMNS};
+const LOTS_FILE_BY_CHANNEL = {sale: 'lots', rent: 'rent_lots', coworking: 'coworking'};
+
 // ============================================================
-//  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для обеих вкладок)
+//  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для всех вкладок)
 // ============================================================
 function makeTableState(columns) {
   return {
@@ -162,13 +205,15 @@ function makeTableState(columns) {
 }
 
 let currentTab = 'codifier';
+let currentChannel = 'sale';
 const state = {
   codifier: makeTableState(CODIFIER_COLUMNS),
   buildings: makeTableState(BUILDINGS_COLUMNS),
+  lots: makeTableState(LOTS_SALE_COLUMNS),
 };
 let allProjectsLayer = [];
 let currentQuarterId = QUARTERS[0].id;
-let dataMeta = {codifier: null, buildings: null};
+let dataMeta = {codifier: null, buildings: null, lots: null};
 
 // ============================================================
 //  ЗАГРУЗКА ДАННЫХ
@@ -199,6 +244,36 @@ async function loadBuildings(quarterId) {
   state.buildings.rows = rows;
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
   dataMeta.buildings = {updated: label, count: rows.length};
+  render();
+}
+
+async function loadLots(quarterId, channel) {
+  const filePrefix = LOTS_FILE_BY_CHANNEL[channel];
+  let rows;
+  try {
+    const raw = await fetchJSON(`data/${filePrefix}_${quarterId}.json`);
+    if (channel === 'coworking') {
+      // coworking_*.json уже плоский массив строк.
+      rows = raw;
+    } else {
+      // lots_*.json / rent_lots_*.json — словарь {"Здание": [{...}, ...]}.
+      rows = [];
+      for (const [building, lotRows] of Object.entries(raw)) {
+        for (const lot of lotRows) rows.push({building, ...lot});
+      }
+    }
+  } catch (e) {
+    // Не у каждого квартала есть все три файла (см. index.html: некоторые
+    // старые кварталы без rent/coworking) — пустая таблица, не ошибка.
+    rows = [];
+  }
+  state.lots.columns = LOTS_COLUMNS_BY_CHANNEL[channel].map(c => ({...c}));
+  state.lots.rows = rows;
+  state.lots.filters = {};
+  state.lots.sort = {key:null, dir:1};
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  const channelLabel = {sale:'Продажа', rent:'Аренда', coworking:'Коворкинг'}[channel];
+  dataMeta.lots = {updated: `${label} · ${channelLabel}`, count: rows.length};
   render();
 }
 
@@ -294,7 +369,9 @@ function render() {
     `Строк: ${rows.length} из ${ts.rows.length}` +
     (meta ? ` · срез: ${meta.updated ?? '—'}` : '');
   document.getElementById('metaLine').textContent =
-    currentTab === 'codifier' ? 'data/all_projects_layer.json' : `data/buildings_${currentQuarterId}.json (+ join по реестру)`;
+    currentTab === 'codifier' ? 'data/all_projects_layer.json' :
+    currentTab === 'buildings' ? `data/buildings_${currentQuarterId}.json (+ join по реестру)` :
+    `data/${LOTS_FILE_BY_CHANNEL[currentChannel]}_${currentQuarterId}.json`;
 
   attachHeaderHandlers();
 }
@@ -455,7 +532,8 @@ document.getElementById('btnExportCsv').onclick = () => {
   const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `${currentTab}_${currentTab==='buildings'?currentQuarterId:'all'}.csv`;
+  const suffix = currentTab === 'codifier' ? 'all' : (currentTab === 'lots' ? `${currentQuarterId}_${currentChannel}` : currentQuarterId);
+  a.download = `${currentTab}_${suffix}.csv`;
   a.click();
 };
 
@@ -463,8 +541,10 @@ document.getElementById('btnExportXlsx').onclick = () => {
   const {cols, rows} = currentExportRows();
   const aoa = [cols.map(c => c.label)].concat(rows.map(row => cols.map(col => cellValue(row, col) ?? '')));
   const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), currentTab === 'codifier' ? 'Кодификатор' : 'Здания квартала');
-  XLSX.writeFile(wb, `${currentTab}_${currentTab==='buildings'?currentQuarterId:'all'}.xlsx`);
+  const sheetName = {codifier:'Кодификатор', buildings:'Здания квартала', lots:'Лоты квартала'}[currentTab];
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), sheetName);
+  const suffix = currentTab === 'codifier' ? 'all' : (currentTab === 'lots' ? `${currentQuarterId}_${currentChannel}` : currentQuarterId);
+  XLSX.writeFile(wb, `${currentTab}_${suffix}.xlsx`);
 };
 
 document.querySelectorAll('.tab').forEach(tab => {
@@ -472,10 +552,15 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     currentTab = tab.dataset.tab;
-    document.getElementById('quarterSelect').style.display = currentTab === 'buildings' ? '' : 'none';
+    document.getElementById('quarterSelect').style.display = (currentTab === 'buildings' || currentTab === 'lots') ? '' : 'none';
+    document.getElementById('channelSelect').style.display = currentTab === 'lots' ? '' : 'none';
     document.getElementById('globalSearch').value = state[currentTab].globalSearch || '';
     closePanels();
-    render();
+    if (currentTab === 'lots' && dataMeta.lots === null) {
+      loadLots(currentQuarterId, currentChannel);
+    } else {
+      render();
+    }
   };
 });
 
@@ -483,7 +568,14 @@ const quarterSelect = document.getElementById('quarterSelect');
 quarterSelect.innerHTML = QUARTERS.map(q => `<option value="${q.id}">${q.label}</option>`).join('');
 quarterSelect.onchange = (e) => {
   currentQuarterId = e.target.value;
-  loadBuildings(currentQuarterId);
+  if (currentTab === 'lots') loadLots(currentQuarterId, currentChannel);
+  else loadBuildings(currentQuarterId);
+};
+
+const channelSelect = document.getElementById('channelSelect');
+channelSelect.onchange = (e) => {
+  currentChannel = e.target.value;
+  loadLots(currentQuarterId, currentChannel);
 };
 
 // ============================================================
