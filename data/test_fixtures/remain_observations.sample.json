@@ -1,0 +1,128 @@
+[
+  {
+    "observation_id": "remain-2026-07-29-city-4",
+    "source": "remain_datalens",
+    "source_url": "https://datalens.yandex/nu0fxe8ld1hab",
+    "observed_at": "2026-07-29",
+    "external_name": "Сити-4",
+    "external_id": null,
+    "canonical_project_id": "city-4",
+    "entity_grain": "project",
+    "verification_status": "accepted",
+    "fields": {
+      "developer": {
+        "raw_value": "Sezar Group",
+        "normalized_value": "Sezar Group",
+        "confidence": "high",
+        "verification_status": "accepted",
+        "evidence_note": "Подтверждено REMAP_VERIFICATION_REGISTRY_2026-07-29: официальный сайт Sezar Group.",
+        "source_url": "https://sezar-group.ru/commercial-projects"
+      },
+      "completion_quarter": {
+        "raw_value": "2027-Q3",
+        "normalized_value": "2027-Q3",
+        "confidence": "medium",
+        "verification_status": "accepted",
+        "evidence_note": "accepted_with_date_scope — заявленный срок текущих офисных помещений, не путать со сроком SEZAR TOWER.",
+        "source_url": "https://sezar-group.ru/commercial-projects"
+      }
+    }
+  },
+  {
+    "observation_id": "remain-2026-07-29-sezar-tower",
+    "source": "remain_datalens",
+    "source_url": "https://datalens.yandex/nu0fxe8ld1hab",
+    "observed_at": "2026-07-29",
+    "external_name": "SEZAR TOWER",
+    "external_id": null,
+    "canonical_project_id": "sezar-tower",
+    "entity_grain": "project",
+    "verification_status": "accepted",
+    "fields": {
+      "distinct_from_city_4": {
+        "raw_value": true,
+        "normalized_value": true,
+        "confidence": "high",
+        "verification_status": "accepted",
+        "evidence_note": "На той же официальной странице SEZAR TOWER и СИТИ-4 перечислены раздельными карточками — НЕ объединять по девелоперу/району.",
+        "source_url": "https://sezar-group.ru/commercial-projects"
+      }
+    }
+  },
+  {
+    "observation_id": "remain-2026-07-29-obsidian",
+    "source": "remain_datalens",
+    "source_url": "https://datalens.yandex/nu0fxe8ld1hab",
+    "observed_at": "2026-07-29",
+    "external_name": "Обсидиан",
+    "external_id": null,
+    "canonical_project_id": "obsidian",
+    "entity_grain": "project",
+    "verification_status": "accepted",
+    "fields": {
+      "developer": {
+        "raw_value": "Business Club",
+        "normalized_value": "Business Club",
+        "confidence": "high",
+        "verification_status": "accepted",
+        "evidence_note": "Не Capital Group — независимое (третье) подтверждение уже отмеченного в NOTES классификатора конфликта.",
+        "source_url": "https://bncb.ru/company/about"
+      }
+    }
+  },
+  {
+    "observation_id": "remain-2026-07-29-a101-prokshino",
+    "source": "remain_datalens",
+    "source_url": "https://datalens.yandex/nu0fxe8ld1hab",
+    "observed_at": "2026-07-29",
+    "external_name": "Бизнес-квартал Прокшино",
+    "external_id": null,
+    "canonical_project_id": "a101-prokshino",
+    "entity_grain": "project",
+    "verification_status": "under_review",
+    "fields": {
+      "office_area": {
+        "raw_value": 113029,
+        "normalized_value": null,
+        "confidence": "low",
+        "verification_status": "under_review",
+        "evidence_note": "conflict_requires_scope: официальные материалы дают 22093.2 м² для 3-й очереди и >177 тыс. м² для 5 башен — разные area_scope, нельзя заменять наши 42000 без разбивки по башням.",
+        "source_url": "https://a101.ru/commercial/projects/bk-prokshino/"
+      },
+      "completion_quarter": {
+        "raw_value": null,
+        "normalized_value": null,
+        "confidence": "low",
+        "verification_status": "under_review",
+        "evidence_note": "Разные сроки по очередям/помещениям — хранить на уровне башни/очереди, не проекта целиком."
+      }
+    }
+  },
+  {
+    "observation_id": "remain-2026-07-29-central-telegraph",
+    "source": "remain_datalens",
+    "source_url": "https://datalens.yandex/nu0fxe8ld1hab",
+    "observed_at": "2026-07-29",
+    "external_name": "МФК Центральный Телеграф",
+    "external_id": null,
+    "canonical_project_id": null,
+    "entity_grain": "unknown",
+    "verification_status": "unverified",
+    "fields": {
+      "developer": {
+        "raw_value": "VOS'HOD",
+        "normalized_value": null,
+        "confidence": "low",
+        "verification_status": "unverified",
+        "evidence_note": "Пробел из REMAIN_GAP_ANALYSIS_2026-07-29.md — отсутствует у нас вообще ни в одном квартале/канале. Заявлен ввод Q2 2026, GBA 64824/28121. Перед добавлением проверить наличие реальных лотов на продажу."
+      },
+      "completion_quarter": {
+        "raw_value": "2026-Q2",
+        "normalized_value": null,
+        "confidence": "low",
+        "verification_status": "unverified",
+        "evidence_note": "Remain указывает сроки как заявленные девелопером, не как подтверждённые."
+      }
+    }
+  }
+]

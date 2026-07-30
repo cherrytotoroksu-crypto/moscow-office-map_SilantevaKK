@@ -1,0 +1,79 @@
+import copy
+import json
+import sys
+import unittest
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from validate_all_projects_layer import validate
+
+SAMPLE = json.loads(
+    (REPO_ROOT / "data" / "test_fixtures" / "all_projects_layer.sample.json").read_text(encoding="utf-8")
+)
+
+
+def find(records, canonical_building_id):
+    for r in records:
+        if r.get("canonical_building_id") == canonical_building_id:
+            return r
+    raise KeyError(canonical_building_id)
+
+
+class AllProjectsLayerValidationTests(unittest.TestCase):
+    def test_sample_is_valid(self):
+        self.assertEqual(validate(SAMPLE), [])
+
+    def test_badaevsky_shared_project_id_is_not_a_duplicate(self):
+        # Два корпуса Бадаевского с одним canonical_project_id — это правило,
+        # не баг. Сам факт, что sample проходит валидацию (см. выше), уже
+        # это подтверждает; здесь дополнительно проверяем сами записи.
+        west = find(SAMPLE, "badaevsky-west")
+        east = find(SAMPLE, "badaevsky-east")
+        self.assertEqual(west["canonical_project_id"], east["canonical_project_id"])
+        self.assertNotEqual(west["canonical_building_id"], east["canonical_building_id"])
+        self.assertEqual(validate([west, east]), [])
+
+    def test_duplicate_canonical_building_id_is_rejected(self):
+        payload = copy.deepcopy(SAMPLE)
+        dup = copy.deepcopy(find(payload, "badaevsky-west"))
+        payload.append(dup)
+        errors = validate(payload)
+        self.assertTrue(any("duplicate canonical_building_id" in e for e in errors))
+
+    def test_offer_not_started_requires_reason(self):
+        payload = copy.deepcopy(SAMPLE)
+        rec = next(r for r in payload if r["canonical_project_id"] == "chalet-pyatnitskaya-40")
+        rec["project_status"] = "Ещё не вышел в продажу"
+        rec["offer_not_started_reason"] = None
+        errors = validate(payload)
+        self.assertTrue(any("offer_not_started_reason" in e for e in errors))
+
+    def test_coordinate_outside_moscow_is_rejected(self):
+        payload = copy.deepcopy(SAMPLE)
+        payload[0]["latitude"] = 60.0
+        errors = validate(payload)
+        self.assertTrue(any("latitude" in e and "outside" in e for e in errors))
+
+    def test_embedded_lots_are_forbidden(self):
+        payload = copy.deepcopy(SAMPLE)
+        payload[0]["lots"] = []
+        errors = validate(payload)
+        self.assertTrue(any("embedded lot payload forbidden" in e for e in errors))
+
+    def test_unverified_public_record_is_rejected(self):
+        payload = copy.deepcopy(SAMPLE)
+        payload[0]["public_visibility"] = "public"
+        payload[0]["verification_status"] = "unverified"
+        errors = validate(payload)
+        self.assertTrue(any("should be internal_only" in e for e in errors))
+
+    def test_unknown_project_status_is_rejected(self):
+        payload = copy.deepcopy(SAMPLE)
+        payload[0]["project_status"] = "На паузе"
+        errors = validate(payload)
+        self.assertTrue(any("invalid project_status" in e for e in errors))
+
+
+if __name__ == "__main__":
+    unittest.main()

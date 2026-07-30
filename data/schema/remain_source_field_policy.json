@@ -1,0 +1,29 @@
+{
+  "source": "remain_datalens",
+  "as_of": "2026-07-29",
+  "_note": "Портировано из подготовленного Codex remain_source_field_policy.json без изменений по существу.",
+  "default_confidence": "medium",
+  "field_policy": {
+    "external_name": {"use": "candidate_match", "auto_accept": false},
+    "developer": {"use": "candidate_match", "auto_accept": false},
+    "address": {"use": "candidate_match", "auto_accept": false},
+    "latitude": {"use": "discovery_only", "auto_accept": false},
+    "longitude": {"use": "discovery_only", "auto_accept": false},
+    "completion_year": {"use": "discovery_only", "auto_accept": false},
+    "completion_quarter": {"use": "discovery_only", "auto_accept": false},
+    "construction_status": {"use": "review_queue", "auto_accept": false},
+    "office_area": {"use": "review_queue", "auto_accept": false},
+    "district": {"use": "analytics_hint", "auto_accept": false},
+    "ring": {"use": "analytics_hint", "auto_accept": false},
+    "class": {"use": "candidate_match", "auto_accept": false}
+  },
+  "never_import_as_detail": ["lots", "sale_lots", "deal_rows", "quarterly_supply"],
+  "manual_review_triggers": [
+    "same name with multiple addresses",
+    "distance over 300 m from canonical point",
+    "completion year conflict",
+    "project/building grain mismatch",
+    "office area scope unknown",
+    "district overlap"
+  ]
+}

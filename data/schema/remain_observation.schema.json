@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "remain-observation.schema.json",
+  "title": "Внешнее наблюдение Remain/DataLens",
+  "description": "Портировано из подготовленного Codex remain_observation_schema.json (2026-07-29) без изменений по существу. Одна запись = одно наблюдение по ОДНОМУ внешнему объекту, значения полей — с собственной метаинформацией (см. $defs/observedField). НЕ импортировать как каноническую запись напрямую — это вход для сверки в entity_matches/qa_flags, см. REMAIN_REVIEW_QUEUE.md.",
+  "type": "object",
+  "required": ["observation_id", "source", "observed_at", "external_name", "verification_status", "fields"],
+  "properties": {
+    "observation_id": {"type": "string", "minLength": 3},
+    "source": {"const": "remain_datalens"},
+    "source_url": {"type": "string", "format": "uri"},
+    "observed_at": {"type": "string", "format": "date"},
+    "external_name": {"type": "string", "minLength": 1},
+    "external_id": {"type": ["string", "null"]},
+    "canonical_project_id": {"type": ["string", "null"], "description": "Заполняется только после сопоставления через entity_matches — null означает 'кандидат, ещё не сопоставлен'."},
+    "entity_grain": {"enum": ["project", "building", "unknown"]},
+    "verification_status": {"enum": ["unverified", "under_review", "accepted", "blocked", "quarantine"]},
+    "fields": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/observedField"}
+    }
+  },
+  "$defs": {
+    "observedField": {
+      "type": "object",
+      "required": ["raw_value", "confidence", "verification_status"],
+      "properties": {
+        "raw_value": {},
+        "normalized_value": {},
+        "confidence": {"enum": ["low", "medium", "high"]},
+        "verification_status": {"enum": ["unverified", "under_review", "accepted", "blocked", "quarantine"]},
+        "evidence_note": {"type": "string"},
+        "source_url": {"type": "string", "format": "uri"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "all-projects-layer.schema.json",
+  "title": "Общий слой карты «Все офисные проекты Москвы» — одна запись",
+  "description": "Один канонический проект ИЛИ один корпус/башня внутри проекта (см. entity_grain). Не путать с quarterly_supply (data/buildings_*.json/lots_*.json) — эта запись не завязана на наличие лотов в конкретном квартале.",
+  "type": "object",
+  "required": [
+    "canonical_project_id",
+    "entity_grain",
+    "raw_name",
+    "canonical_name",
+    "project_status",
+    "construction_status",
+    "source",
+    "source_date",
+    "verification_status",
+    "confidence",
+    "public_visibility"
+  ],
+  "properties": {
+    "canonical_project_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Устойчивый ID аналитического проекта. Для Бадаевского — ОДИН id на обе ленты (см. canonical_building_id для разделения корпусов)."
+    },
+    "canonical_building_id": {
+      "type": ["string", "null"],
+      "description": "ID конкретного корпуса/башни, если у него собственный жизненный цикл (свои сроки/статус/координата). null — если запись описывает проект целиком без разбивки на корпуса."
+    },
+    "entity_grain": {
+      "enum": ["project", "building"],
+      "description": "project — запись уровня всего проекта; building — запись уровня отдельного корпуса/башни (Codex: entity_grain)."
+    },
+
+    "raw_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Название ровно как оно встретилось в источнике (нашем классификаторе или у Remain/Remapp) — не нормализовать здесь."
+    },
+    "canonical_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Нормализованное отображаемое имя проекта, используемое на карте и в таблицах."
+    },
+    "aliases": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Известные альтернативные названия (в т.ч. из Remain), для entity_matches."
+    },
+
+    "developer": {"type": ["string", "null"]},
+    "address": {"type": ["string", "null"]},
+    "latitude": {"type": ["number", "null"], "minimum": 54.0, "maximum": 57.0},
+    "longitude": {"type": ["number", "null"], "minimum": 35.0, "maximum": 40.0},
+    "geometry_quality": {
+      "enum": ["house_exact", "geocoded_approx", "centroid", "unverified", "unknown"],
+      "description": "Насколько надёжна координата — независимо от общего confidence записи (правило Codex: координаты/сроки/площади нельзя оценивать одним общим числом)."
+    },
+
+    "project_status": {
+      "enum": ["В продаже", "Продажи завершены", "Ещё не вышел в продажу", "Не применяется"],
+      "description": "СТАТУС ПРЕДЛОЖЕНИЯ (по формулировке задачи это поле называется project_status, но по значениям — это статус продаж/предложения, не стадия стройки; см. отдельное поле construction_status для стадии проекта). 'Не применяется' добавлено сверх трёх значений из задачи — нужно для BTS/аренды/объектов вне канала продажи."
+    },
+    "construction_status": {
+      "enum": ["Проектируется", "Строится", "Введён", "Заморожен", "Отменён", "Не установлен"],
+      "description": "Стадия жизненного цикла объекта (независимо от того, продаются лоты или нет)."
+    },
+    "offer_not_started_reason": {
+      "type": ["string", "null"],
+      "enum": ["Проектная стадия", "Нет подтверждённых лотов", "Продажи не раскрыты", null],
+      "description": "Обязательно заполнять, если project_status = 'Ещё не вышел в продажу' — не оставлять статус без причины (Codex)."
+    },
+
+    "input_year": {
+      "type": ["integer", "null"],
+      "minimum": 2015,
+      "maximum": 2035
+    },
+    "input_quarter": {
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, 4, null]
+    },
+    "input_date_kind": {
+      "enum": ["planned", "confirmed", "unknown"],
+      "description": "Заявленный застройщиком срок или подтверждённый (разрешение на ввод/факт). НЕ путать заявленное с подтверждённым — правило из REMAIN_INTEGRATION_HANDOFF."
+    },
+
+    "cls": {"type": ["string", "null"], "description": "Класс (A/B/B+/Prime), поле называется как в существующем classifier.html, не 'class', для совместимости."},
+    "gba": {"type": ["number", "null"]},
+    "gla": {"type": ["number", "null"]},
+    "office_area": {"type": ["number", "null"], "description": "Офисная площадь, если отличается от GBA/GLA всего комплекса (см. area_scope)."},
+    "area_scope": {
+      "enum": ["project", "building", "phase", "unknown"],
+      "description": "К какому уровню относится area/gba/gla — нельзя суммировать площади разных area_scope без явного правила (см. кейс А101 Прокшино в REMAIN_REVIEW_QUEUE.md)."
+    },
+
+    "zone": {"type": ["string", "null"]},
+    "submarket": {"type": ["string", "null"]},
+    "bizFormed": {"type": ["string", "null"]},
+    "bizForming": {"type": ["string", "null"]},
+
+    "market_channel": {
+      "type": "array",
+      "items": {"enum": ["sale", "rent", "coworking", "bts", "off_market"]},
+      "description": "Массив, а не одно значение — проект может иметь несколько каналов, но они не должны смешиваться в одном агрегате (см. ALL_PROJECTS_LAYER_SPEC раздел «Каналы»)."
+    },
+
+    "source": {"type": "string", "minLength": 1, "description": "Основной источник ЭТОЙ записи целиком (для истории по каждому полю см. отдельную таблицу sources — не реализована в этой задаче, см. открытые вопросы)."},
+    "source_date": {"type": "string", "format": "date"},
+    "verification_status": {
+      "enum": ["unverified", "under_review", "accepted", "blocked", "quarantine"],
+      "description": "Общий статус проверки записи. Для координат/сроков/площади — см. рекомендацию хранить это же поле на уровне значения (открытый вопрос, не реализовано здесь для all_projects_layer, уже реализовано для remain_observation.schema.json)."
+    },
+    "confidence": {"enum": ["low", "medium", "high"]},
+
+    "external_only": {
+      "type": "boolean",
+      "description": "true — запись существует только благодаря внешнему наблюдению (Remain и т.п.), нет собственного подтверждения. Не путать с verification_status."
+    },
+    "quarter_offer_refs": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^\\d{6}$"},
+      "description": "Ссылки на кварталы (YYYYMM), где у проекта ЕСТЬ детальные лоты в quarterly_supply. Не встроенные лоты — просто список id кварталов, вычисляемое поле."
+    },
+    "quarter_offer_exists": {
+      "type": "boolean",
+      "description": "Вычисляемый признак 'есть предложение в ТЕКУЩЕМ выбранном квартале' — используется для фильтра квартальной карты. Не хранить руками, пересчитывать из quarter_offer_refs + выбранного квартала."
+    },
+
+    "qa_status": {
+      "enum": ["ok", "conflict", "duplicate_suspect", "missing_required", "quarantine"],
+      "description": "Итог автоматической проверки (см. scripts/validate_all_projects_layer.py)."
+    },
+    "qa_notes": {"type": ["string", "null"]},
+
+    "public_visibility": {
+      "enum": ["public", "internal_only"],
+      "description": "public — можно показывать на публичной карте/таблице; internal_only — запись существует только для QA (например verification_status=unverified с чужим сырым Remain-именем) и не должна попасть в публичный слой."
+    },
+
+    "first_seen_at": {"type": ["string", "null"], "format": "date"},
+    "last_verified_at": {"type": ["string", "null"], "format": "date"},
+    "source_count": {"type": ["integer", "null"], "minimum": 0}
+  },
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": {"properties": {"project_status": {"const": "Ещё не вышел в продажу"}}},
+      "then": {"required": ["offer_not_started_reason"]}
+    },
+    {
+      "if": {"properties": {"entity_grain": {"const": "building"}}},
+      "then": {"required": ["canonical_building_id"]}
+    }
+  ]
+}
