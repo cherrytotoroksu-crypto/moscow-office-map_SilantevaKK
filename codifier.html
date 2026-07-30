@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Кодификатор — Офисный рынок Москвы</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size:13px; color:#1a1a1a; background:#f4f5f7; }
+  header { background:#2F4858; color:#fff; padding:10px 16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  header h1 { font-size:15px; font-weight:600; }
+  header .meta { font-size:11px; color:#c9d3d8; }
+  .tabs { display:flex; gap:2px; padding:0 16px; background:#e8eaee; }
+  .tab { padding:8px 16px; cursor:pointer; font-weight:500; color:#555; border-bottom:2px solid transparent; }
+  .tab.active { color:#2F4858; border-bottom-color:#C9525E; background:#fff; }
+  .toolbar { display:flex; align-items:center; gap:8px; padding:10px 16px; background:#fff; border-bottom:1px solid #dde; flex-wrap:wrap; }
+  .toolbar input[type=search] { padding:6px 10px; border:1px solid #ccc; border-radius:4px; width:240px; font-size:12px; }
+  .toolbar select { padding:6px 8px; border:1px solid #ccc; border-radius:4px; font-size:12px; }
+  button.btn { padding:6px 12px; border:1px solid #ccc; background:#fff; border-radius:4px; cursor:pointer; font-size:12px; }
+  button.btn:hover { background:#f0f0f0; }
+  button.btn.primary { background:#2F4858; color:#fff; border-color:#2F4858; }
+  button.btn.primary:hover { background:#25394a; }
+  .cols-panel, .filter-panel { position:absolute; z-index:50; background:#fff; border:1px solid #ccc; border-radius:6px; box-shadow:0 4px 16px rgba(0,0,0,.15); padding:10px; max-height:320px; overflow:auto; min-width:200px; }
+  .cols-panel label, .filter-panel label { display:flex; align-items:center; gap:6px; padding:3px 2px; font-size:12px; white-space:nowrap; cursor:pointer; }
+  .filter-panel .fp-actions { display:flex; gap:6px; margin-top:6px; border-top:1px solid #eee; padding-top:6px; }
+  .filter-panel input[type=text] { width:100%; padding:4px 6px; margin-bottom:6px; border:1px solid #ccc; border-radius:4px; }
+  .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid #dde; border-radius:6px; max-height:calc(100vh - 160px); }
+  table { border-collapse:collapse; width:100%; font-size:12px; }
+  th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left; white-space:nowrap; }
+  th { background:#f8f9fb; position:sticky; top:0; z-index:2; cursor:pointer; user-select:none; }
+  th:first-child, td:first-child { position:sticky; left:0; background:#fff; z-index:1; box-shadow:2px 0 3px rgba(0,0,0,.04); }
+  th:first-child { z-index:3; background:#f8f9fb; }
+  th .sort-ind { color:#C9525E; margin-left:4px; }
+  th .filter-ind { color:#2F4858; margin-left:4px; font-weight:700; }
+  tr:hover td { background:#fafbfc; }
+  tr:hover td:first-child { background:#f4f6f7; }
+  .empty-cell { color:#bbb; }
+  .status-row { padding:6px 16px; font-size:11px; color:#666; background:#fff; }
+  .qa-conflict { background:#fff3f0 !important; }
+  .qa-quarantine { background:#fff8e1 !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Кодификатор</h1>
+  <span class="meta" id="metaLine"></span>
+</header>
+
+<div class="tabs">
+  <div class="tab active" data-tab="codifier">Общий кодификатор</div>
+  <div class="tab" data-tab="buildings">Здания квартала</div>
+</div>
+
+<div class="toolbar" id="toolbar">
+  <input type="search" id="globalSearch" placeholder="Поиск по всей таблице...">
+  <select id="quarterSelect" style="display:none;"></select>
+  <button class="btn" id="btnColumns">Колонки ▾</button>
+  <button class="btn" id="btnReset">Сбросить фильтры</button>
+  <button class="btn" id="btnExportCsv">Экспорт CSV</button>
+  <button class="btn primary" id="btnExportXlsx">Экспорт XLSX</button>
+</div>
+
+<div class="status-row" id="statusRow"></div>
+<div class="table-wrap"><table id="mainTable"><thead></thead><tbody></tbody></table></div>
+
+<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+// ============================================================
+//  КВАРТАЛЫ (для таблицы «Здания квартала»)
+// ============================================================
+const QUARTERS = [
+  {id:'202606', label:'Q2 2026'}, {id:'202603', label:'Q1 2026'},
+  {id:'202512', label:'Q4 2025'}, {id:'202509', label:'Q3 2025'},
+  {id:'202506', label:'Q2 2025'}, {id:'202503', label:'Q1 2025'},
+  {id:'202412', label:'Q4 2024'}, {id:'202410', label:'Q3 2024'},
+  {id:'202407', label:'Q2 2024'}, {id:'202403', label:'Q1 2024'},
+  {id:'202311', label:'Q4 2023'}, {id:'202308', label:'Q3 2023'},
+  {id:'202305', label:'Q2 2023'}, {id:'202212', label:'Q4 2022'},
+  {id:'202207', label:'Q2 2022'}, {id:'202112', label:'Q4 2021'},
+  {id:'202105', label:'Q2 2021'},
+];
+
+function escapeHtml(s) {
+  if (s == null) return s;
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function fetchJSON(url) {
+  return fetch(url, {cache:'no-cache'}).then(r => { if (!r.ok) throw new Error(url); return r.json(); });
+}
+
+// ============================================================
+//  ОПРЕДЕЛЕНИЯ КОЛОНОК
+// ============================================================
+const CODIFIER_COLUMNS = [
+  {key:'canonical_name', label:'Проект', type:'text', visible:true},
+  {key:'raw_name', label:'Исходное название', type:'text', visible:true},
+  {key:'canonical_building_id', label:'Корпус', type:'text', visible:true},
+  {key:'developer', label:'Девелопер', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'cls', label:'Класс', type:'text', visible:true},
+  {key:'project_status', label:'Статус предложения', type:'text', visible:true},
+  {key:'construction_status', label:'Стадия стройки', type:'text', visible:true},
+  {key:'input_year', label:'Год ввода', type:'number', visible:true},
+  {key:'input_quarter', label:'Квартал ввода', type:'number', visible:true},
+  {key:'input_date_kind', label:'Заявлено/подтверждено', type:'text', visible:false},
+  {key:'gba', label:'GBA', type:'number', visible:true},
+  {key:'gla', label:'GLA', type:'number', visible:true},
+  {key:'office_area', label:'Офисная площадь', type:'number', visible:false},
+  {key:'area_scope', label:'Уровень площади', type:'text', visible:false},
+  {key:'zone', label:'Зона', type:'text', visible:true},
+  {key:'submarket', label:'Субрынок', type:'text', visible:true},
+  {key:'bizFormed', label:'Дел. район (сформ.)', type:'text', visible:false},
+  {key:'bizForming', label:'Дел. район (форм.)', type:'text', visible:false},
+  {key:'market_channel', label:'Канал(ы)', type:'list', visible:true},
+  {key:'quarter_offer_exists', label:'Есть в текущем квартале', type:'bool', visible:true},
+  {key:'external_only', label:'Только внешний источник', type:'bool', visible:false},
+  {key:'source', label:'Источник', type:'text', visible:true},
+  {key:'last_verified_at', label:'Дата проверки', type:'text', visible:false},
+  {key:'confidence', label:'Уровень доверия', type:'text', visible:true},
+  {key:'verification_status', label:'Статус проверки', type:'text', visible:false},
+  {key:'qa_status', label:'QA', type:'text', visible:true},
+  {key:'public_visibility', label:'Видимость', type:'text', visible:false},
+];
+
+const BUILDINGS_COLUMNS = [
+  {key:'name', label:'Здание', type:'text', visible:true},
+  {key:'name_orig', label:'Прежнее название', type:'text', visible:false},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'developer', label:'Девелопер', type:'text', visible:true},
+  {key:'cls', label:'Класс', type:'text', visible:true},
+  {key:'status', label:'Статус (квартал)', type:'text', visible:true},
+  {key:'year', label:'Год', type:'number', visible:true},
+  {key:'gba', label:'GBA', type:'number', visible:true},
+  {key:'gla', label:'GLA', type:'number', visible:true},
+  {key:'volume', label:'Объём на продажу', type:'number', visible:true},
+  {key:'price', label:'Ср. цена', type:'number', visible:true},
+  {key:'lots', label:'Лотов', type:'number', visible:true},
+  {key:'zone', label:'Зона', type:'text', visible:true},
+  {key:'submarket', label:'Субрынок', type:'text', visible:false},
+  {key:'biz', label:'Дел. район', type:'text', visible:false},
+  {key:'on_sale', label:'В продаже', type:'text', visible:true},
+  {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:true},
+  {key:'reg_project_status', label:'Статус предл. (реестр)', type:'text', visible:true},
+  {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:false},
+];
+
+// ============================================================
+//  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для обеих вкладок)
+// ============================================================
+function makeTableState(columns) {
+  return {
+    columns: columns.map(c => ({...c})),
+    rows: [],
+    filters: {},        // key -> {mode:'values'|'search', values:Set, search:'', emptyOnly:false, nonEmptyOnly:false}
+    sort: {key:null, dir:1},
+    globalSearch: '',
+  };
+}
+
+let currentTab = 'codifier';
+const state = {
+  codifier: makeTableState(CODIFIER_COLUMNS),
+  buildings: makeTableState(BUILDINGS_COLUMNS),
+};
+let allProjectsLayer = [];
+let currentQuarterId = QUARTERS[0].id;
+let dataMeta = {codifier: null, buildings: null};
+
+// ============================================================
+//  ЗАГРУЗКА ДАННЫХ
+// ============================================================
+async function loadCodifier() {
+  const rows = await fetchJSON('data/all_projects_layer.json');
+  allProjectsLayer = rows;
+  state.codifier.rows = rows;
+  dataMeta.codifier = {updated: rows.length ? rows[0].last_verified_at : null, count: rows.length};
+  render();
+}
+
+async function loadBuildings(quarterId) {
+  const rows = await fetchJSON(`data/buildings_${quarterId}.json`);
+  // Join к общему реестру по имени/исходному имени — без изменения production-файлов,
+  // сопоставление делается здесь, на чтении.
+  const byName = new Map();
+  for (const r of allProjectsLayer) {
+    if (r.canonical_name) byName.set(r.canonical_name, r);
+    if (r.raw_name) byName.set(r.raw_name, r);
+  }
+  for (const row of rows) {
+    const match = byName.get(row.name) || byName.get(row.name_orig);
+    row.canonical_project_id = match ? match.canonical_project_id : null;
+    row.reg_project_status = match ? match.project_status : null;
+    row.reg_confidence = match ? match.confidence : null;
+  }
+  state.buildings.rows = rows;
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.buildings = {updated: label, count: rows.length};
+  render();
+}
+
+// ============================================================
+//  ФИЛЬТРАЦИЯ / СОРТИРОВКА
+// ============================================================
+function cellValue(row, col) {
+  let v = row[col.key];
+  if (col.type === 'list' && Array.isArray(v)) return v.join(', ');
+  if (col.type === 'bool') return v === true ? 'да' : (v === false ? 'нет' : '');
+  return v;
+}
+
+function passesFilter(row, col, filter) {
+  if (!filter) return true;
+  const raw = row[col.key];
+  const isEmpty = raw == null || raw === '' || (Array.isArray(raw) && raw.length === 0);
+  if (filter.emptyOnly) return isEmpty;
+  if (filter.nonEmptyOnly) return !isEmpty;
+  if (filter.values && filter.values.size > 0) {
+    const v = String(cellValue(row, col) ?? '');
+    return filter.values.has(v);
+  }
+  return true;
+}
+
+function getFilteredSortedRows(ts) {
+  let rows = ts.rows.filter(row => {
+    for (const col of ts.columns) {
+      const f = ts.filters[col.key];
+      if (f && !passesFilter(row, col, f)) return false;
+    }
+    if (ts.globalSearch) {
+      const q = ts.globalSearch.toLowerCase();
+      const hit = ts.columns.some(col => {
+        if (!col.visible) return false;
+        const v = cellValue(row, col);
+        return v != null && String(v).toLowerCase().includes(q);
+      });
+      if (!hit) return false;
+    }
+    return true;
+  });
+  if (ts.sort.key) {
+    const col = ts.columns.find(c => c.key === ts.sort.key);
+    rows = rows.slice().sort((a, b) => {
+      let av = cellValue(a, col), bv = cellValue(b, col);
+      if (col.type === 'number') {
+        av = av == null ? -Infinity : Number(av);
+        bv = bv == null ? -Infinity : Number(bv);
+        return (av - bv) * ts.sort.dir;
+      }
+      av = (av ?? '').toString().toLowerCase();
+      bv = (bv ?? '').toString().toLowerCase();
+      return av.localeCompare(bv, 'ru') * ts.sort.dir;
+    });
+  }
+  return rows;
+}
+
+// ============================================================
+//  РЕНДЕР
+// ============================================================
+function render() {
+  const ts = state[currentTab];
+  const rows = getFilteredSortedRows(ts);
+  const cols = ts.columns.filter(c => c.visible);
+
+  const thead = document.querySelector('#mainTable thead');
+  thead.innerHTML = '<tr>' + cols.map(col => {
+    const isSorted = ts.sort.key === col.key;
+    const sortInd = isSorted ? `<span class="sort-ind">${ts.sort.dir === 1 ? '▲' : '▼'}</span>` : '';
+    const hasFilter = ts.filters[col.key] && (
+      (ts.filters[col.key].values && ts.filters[col.key].values.size > 0) ||
+      ts.filters[col.key].emptyOnly || ts.filters[col.key].nonEmptyOnly
+    );
+    const filterInd = hasFilter ? '<span class="filter-ind">▾*</span>' : '<span class="filter-ind" style="color:#bbb;">▾</span>';
+    return `<th data-key="${col.key}">${escapeHtml(col.label)}${sortInd}${filterInd}</th>`;
+  }).join('') + '</tr>';
+
+  const tbody = document.querySelector('#mainTable tbody');
+  tbody.innerHTML = rows.map(row => {
+    const rowClass = row.qa_status === 'conflict' ? 'qa-conflict' : (row.qa_status === 'quarantine' ? 'qa-quarantine' : '');
+    return `<tr class="${rowClass}">` + cols.map(col => {
+      const v = cellValue(row, col);
+      const display = (v == null || v === '') ? '<span class="empty-cell">—</span>' : escapeHtml(String(v));
+      return `<td>${display}</td>`;
+    }).join('') + '</tr>';
+  }).join('');
+
+  const meta = dataMeta[currentTab];
+  document.getElementById('statusRow').textContent =
+    `Строк: ${rows.length} из ${ts.rows.length}` +
+    (meta ? ` · срез: ${meta.updated ?? '—'}` : '');
+  document.getElementById('metaLine').textContent =
+    currentTab === 'codifier' ? 'data/all_projects_layer.json' : `data/buildings_${currentQuarterId}.json (+ join по реестру)`;
+
+  attachHeaderHandlers();
+}
+
+function attachHeaderHandlers() {
+  document.querySelectorAll('#mainTable th').forEach(th => {
+    th.onclick = (e) => {
+      const key = th.dataset.key;
+      const ts = state[currentTab];
+      const col = ts.columns.find(c => c.key === key);
+      // Клик по краю (последние ~20px) — открыть фильтр; иначе — сортировка.
+      const rect = th.getBoundingClientRect();
+      if (e.clientX > rect.right - 24) {
+        openFilterPanel(th, col);
+      } else {
+        if (ts.sort.key === key) ts.sort.dir *= -1;
+        else { ts.sort.key = key; ts.sort.dir = 1; }
+        render();
+      }
+    };
+  });
+}
+
+// ============================================================
+//  ПАНЕЛЬ ФИЛЬТРА ПО КОЛОНКЕ
+// ============================================================
+function closePanels() {
+  document.querySelectorAll('.filter-panel, .cols-panel').forEach(p => p.remove());
+}
+
+function openFilterPanel(th, col) {
+  closePanels();
+  const ts = state[currentTab];
+  const values = new Map(); // string value -> count
+  ts.rows.forEach(row => {
+    const v = cellValue(row, col);
+    const key = (v == null || v === '') ? '' : String(v);
+    if (key === '') return;
+    values.set(key, (values.get(key) || 0) + 1);
+  });
+  const sortedValues = [...values.keys()].sort((a,b) => a.localeCompare(b, 'ru'));
+  const current = ts.filters[col.key] || {values: new Set(), emptyOnly:false, nonEmptyOnly:false};
+
+  const panel = document.createElement('div');
+  panel.className = 'filter-panel';
+  const rect = th.getBoundingClientRect();
+  panel.style.top = (rect.bottom + window.scrollY) + 'px';
+  panel.style.left = (rect.left + window.scrollX) + 'px';
+
+  panel.innerHTML = `
+    <input type="text" placeholder="Найти значение..." id="fpSearch">
+    <label><input type="checkbox" id="fpEmpty" ${current.emptyOnly?'checked':''}> Только пустые</label>
+    <label><input type="checkbox" id="fpNonEmpty" ${current.nonEmptyOnly?'checked':''}> Только не пустые</label>
+    <div id="fpValues"></div>
+    <div class="fp-actions">
+      <button class="btn" id="fpApply">Применить</button>
+      <button class="btn" id="fpClear">Очистить</button>
+    </div>
+  `;
+  document.body.appendChild(panel);
+
+  function renderValueList(filterText) {
+    const box = panel.querySelector('#fpValues');
+    const list = sortedValues.filter(v => !filterText || v.toLowerCase().includes(filterText.toLowerCase()));
+    box.innerHTML = list.map(v => `<label><input type="checkbox" class="fpVal" value="${escapeHtml(v)}" ${current.values.has(v)?'checked':''}> ${escapeHtml(v)} (${values.get(v)})</label>`).join('');
+  }
+  renderValueList('');
+  panel.querySelector('#fpSearch').oninput = (e) => renderValueList(e.target.value);
+
+  panel.querySelector('#fpApply').onclick = () => {
+    const checked = [...panel.querySelectorAll('.fpVal:checked')].map(el => el.value);
+    ts.filters[col.key] = {
+      values: new Set(checked),
+      emptyOnly: panel.querySelector('#fpEmpty').checked,
+      nonEmptyOnly: panel.querySelector('#fpNonEmpty').checked,
+    };
+    closePanels();
+    render();
+  };
+  panel.querySelector('#fpClear').onclick = () => {
+    delete ts.filters[col.key];
+    closePanels();
+    render();
+  };
+  setTimeout(() => {
+    document.addEventListener('click', function onDocClick(ev) {
+      if (!panel.contains(ev.target) && ev.target !== th) {
+        closePanels();
+        document.removeEventListener('click', onDocClick);
+      }
+    });
+  }, 0);
+}
+
+// ============================================================
+//  ПАНЕЛЬ ВЫБОРА КОЛОНОК
+// ============================================================
+document.getElementById('btnColumns').onclick = (e) => {
+  closePanels();
+  const ts = state[currentTab];
+  const panel = document.createElement('div');
+  panel.className = 'cols-panel';
+  const rect = e.target.getBoundingClientRect();
+  panel.style.top = (rect.bottom + window.scrollY) + 'px';
+  panel.style.left = (rect.left + window.scrollX) + 'px';
+  panel.innerHTML = ts.columns.map(col =>
+    `<label><input type="checkbox" class="colVis" data-key="${col.key}" ${col.visible?'checked':''}> ${escapeHtml(col.label)}</label>`
+  ).join('');
+  document.body.appendChild(panel);
+  panel.querySelectorAll('.colVis').forEach(cb => {
+    cb.onchange = () => {
+      const col = ts.columns.find(c => c.key === cb.dataset.key);
+      col.visible = cb.checked;
+      render();
+    };
+  });
+  setTimeout(() => {
+    document.addEventListener('click', function onDocClick(ev) {
+      if (!panel.contains(ev.target) && ev.target !== e.target) {
+        closePanels();
+        document.removeEventListener('click', onDocClick);
+      }
+    });
+  }, 0);
+};
+
+// ============================================================
+//  ТУЛБАР: поиск / сброс / экспорт / вкладки
+// ============================================================
+document.getElementById('globalSearch').oninput = (e) => {
+  state[currentTab].globalSearch = e.target.value;
+  render();
+};
+document.getElementById('btnReset').onclick = () => {
+  const ts = state[currentTab];
+  ts.filters = {};
+  ts.sort = {key:null, dir:1};
+  ts.globalSearch = '';
+  document.getElementById('globalSearch').value = '';
+  render();
+};
+
+function currentExportRows() {
+  const ts = state[currentTab];
+  const cols = ts.columns.filter(c => c.visible);
+  const rows = getFilteredSortedRows(ts);
+  return {cols, rows};
+}
+
+document.getElementById('btnExportCsv').onclick = () => {
+  const {cols, rows} = currentExportRows();
+  const header = cols.map(c => c.label).join(';');
+  const lines = rows.map(row => cols.map(col => {
+    const v = cellValue(row, col);
+    return '"' + String(v ?? '').replace(/"/g, '""') + '"';
+  }).join(';'));
+  const csv = '﻿' + [header, ...lines].join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${currentTab}_${currentTab==='buildings'?currentQuarterId:'all'}.csv`;
+  a.click();
+};
+
+document.getElementById('btnExportXlsx').onclick = () => {
+  const {cols, rows} = currentExportRows();
+  const aoa = [cols.map(c => c.label)].concat(rows.map(row => cols.map(col => cellValue(row, col) ?? '')));
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), currentTab === 'codifier' ? 'Кодификатор' : 'Здания квартала');
+  XLSX.writeFile(wb, `${currentTab}_${currentTab==='buildings'?currentQuarterId:'all'}.xlsx`);
+};
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.onclick = () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentTab = tab.dataset.tab;
+    document.getElementById('quarterSelect').style.display = currentTab === 'buildings' ? '' : 'none';
+    document.getElementById('globalSearch').value = state[currentTab].globalSearch || '';
+    closePanels();
+    render();
+  };
+});
+
+const quarterSelect = document.getElementById('quarterSelect');
+quarterSelect.innerHTML = QUARTERS.map(q => `<option value="${q.id}">${q.label}</option>`).join('');
+quarterSelect.onchange = (e) => {
+  currentQuarterId = e.target.value;
+  loadBuildings(currentQuarterId);
+};
+
+// ============================================================
+//  ИНИЦИАЛИЗАЦИЯ
+// ============================================================
+(async function init() {
+  await loadCodifier();
+  await loadBuildings(currentQuarterId);
+})();
+</script>
+</body>
+</html>
