@@ -103,8 +103,13 @@ def build_data_dir():
 
 
 def build_robots_txt():
+    # По просьбе пользователя (2026-07-30): сайт должен быть сложно найти без
+    # точной ссылки — поисковики не должны его индексировать вообще.
+    # Основная защита — <meta name="robots" content="noindex, nofollow">
+    # в index.html (работает даже если краулер проигнорирует robots.txt);
+    # это — вторая линия, явный запрет на обход.
     with open(os.path.join(OUT_DIR, "robots.txt"), "w", encoding="utf-8") as f:
-        f.write("User-agent: *\nAllow: /\n")
+        f.write("User-agent: *\nDisallow: /\n")
 
 
 def main():
