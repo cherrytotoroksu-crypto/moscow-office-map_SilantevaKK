@@ -47,7 +47,7 @@ GitHub Actions → GitHub Pages.
   - `Классификатор_H1_2026.gpkg`
   - `Классификатор_зданий.xlsx`
   - `generate_historical.py` — содержал захардкоженный локальный путь
-    `C:\Users\zapas\...` (см. «Служебные пути» ниже)
+    Windows-пользователя (см. «Служебные пути» ниже)
 - **`.gitignore`** дополнен: `*.xlsx`, `*.xls`, `*.gpkg`, `*.gpkg-*`, плюс
   общая гигиена (`*.log`, `.env*`, `*.pem`, `*.key`, `_site/`,
   `__pycache__/`).

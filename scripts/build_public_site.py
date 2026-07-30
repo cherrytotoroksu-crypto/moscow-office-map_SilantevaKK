@@ -1,8 +1,10 @@
 """
-Собирает публичный артефакт сайта в _site/ — только то, что нужно карте
-для работы по прямой ссылке без авторизации. Не копирует: classifier.html,
-любые QA/аудит .md и .json файлы, scripts/, tests/, сырые .xlsx/.gpkg,
-.bat, CLAUDE.md, README.md.
+Собирает публичный артефакт сайта в _site/ — то, что нужно карте для работы
+по прямой ссылке без авторизации, плюс (по прямой просьбе пользователя,
+2026-07-30) classifier.html и все QA/аудит .md и .json файлы — их снова
+можно открыть по ссылке. НЕ копирует: SECURITY_AUDIT.md (сам документ
+перечисляет непочиненные риски — публиковать такой список не стоит),
+scripts/, tests/, сырые .xlsx/.gpkg, .bat, .claude/, .github/.
 
 Используется workflow'ом .github/workflows/deploy.yml вместо публикации
 всего репозитория (path: '.'). Можно запускать и локально для проверки
@@ -11,7 +13,7 @@
     python scripts/build_public_site.py
 
 Тогда _site/ можно поднять локально (например `python -m http.server`
-из _site/) и убедиться, что карта работает и внутренних файлов там нет.
+из _site/) и убедиться, что карта и classifier.html работают.
 """
 import json
 import os
@@ -22,7 +24,9 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO_ROOT, "_site")
 
 # Поля building_dates.json, которые реально использует карта.
-# "source"/"last_checked" — внутренние QA-заметки, в паблик не идут.
+# "source"/"last_checked" — внутренние QA-заметки, в паблик не идут
+# (это про одно поле одного файла данных, отдельно от вопроса про
+# classifier.html/QA-документы ниже — пользователь про это не просил).
 BUILDING_DATES_PUBLIC_FIELDS = {
     "construction_start_q", "start_q", "commission_q", "stage", "stage_as_of",
 }
@@ -38,12 +42,16 @@ DATA_ALLOW_PATTERNS = [
     re.compile(r"^nf_group_logo\.png$"),
 ]
 
-# Строка в index.html, ведущая на внутренний QA-инструмент — вырезается
-# только из публичной копии (в рабочем index.html для локальной разработки
-# кнопка остаётся).
-CLASSIFIER_LINK_RE = re.compile(
-    r'<a class="upload-btn" href="classifier\.html"[\s\S]*?</a>\n?'
-)
+# Корневые файлы, которые тоже публикуются по прямой просьбе пользователя
+# (classifier.html + все QA/аудит .md и .json). SECURITY_AUDIT.md намеренно
+# не в списке — см. docstring выше.
+ROOT_ALLOW_PATTERNS = [
+    re.compile(r"^classifier\.html$"),
+    re.compile(r"^.+\.md$"),
+    re.compile(r"^qa_.+\.json$"),
+    re.compile(r"^classifier_audit_baseline.*\.json$"),
+]
+ROOT_DENY_NAMES = {"SECURITY_AUDIT.md"}
 
 
 def clean_dir(path):
@@ -65,16 +73,22 @@ def clean_dir(path):
 
 
 def build_index_html():
-    with open(os.path.join(REPO_ROOT, "index.html"), encoding="utf-8") as f:
-        html = f.read()
-    new_html, n = CLASSIFIER_LINK_RE.subn("", html)
-    if n != 1:
-        raise SystemExit(
-            f"ОШИБКА: ожидалась ровно 1 ссылка на classifier.html в index.html, найдено {n}. "
-            "Проверь CLASSIFIER_LINK_RE — публичная сборка не должна ссылаться на внутренний инструмент."
-        )
-    with open(os.path.join(OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(new_html)
+    # classifier.html теперь тоже публикуется (см. ROOT_ALLOW_PATTERNS), поэтому
+    # ссылка на него в index.html больше не вырезается — иначе получилось бы,
+    # что страница доступна по прямому URL, но кнопки на неё нигде нет.
+    shutil.copy2(os.path.join(REPO_ROOT, "index.html"), os.path.join(OUT_DIR, "index.html"))
+
+
+def build_root_files():
+    copied = []
+    for name in sorted(os.listdir(REPO_ROOT)):
+        full = os.path.join(REPO_ROOT, name)
+        if not os.path.isfile(full) or name in ROOT_DENY_NAMES:
+            continue
+        if any(p.match(name) for p in ROOT_ALLOW_PATTERNS):
+            shutil.copy2(full, os.path.join(OUT_DIR, name))
+            copied.append(name)
+    print(f"  корень: скопировано {len(copied)} файлов (classifier.html + QA .md/.json): {', '.join(copied)}")
 
 
 def build_data_dir():
@@ -116,12 +130,12 @@ def main():
     clean_dir(OUT_DIR)
     build_index_html()
     build_data_dir()
+    build_root_files()
     build_robots_txt()
 
     # Явный список того, что НЕ попало в сборку, для наглядности при проверке.
     excluded = [
-        "classifier.html", "README.md", "CLAUDE.md",
-        "*.md (QA/аудит)", "*.json (qa_*, classifier_audit_baseline_*)",
+        "SECURITY_AUDIT.md (сам документ описывает непочиненные риски)",
         "scripts/ (кроме этого сборочного скрипта, он не копируется тоже)",
         "tests/", "*.xlsx", "*.gpkg", "*.bat", ".claude/", ".github/",
     ]

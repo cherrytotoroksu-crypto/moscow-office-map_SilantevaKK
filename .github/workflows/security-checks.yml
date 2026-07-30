@@ -19,20 +19,20 @@ jobs:
         run: python scripts/scan_secrets.py
       - name: Build public site
         run: python scripts/build_public_site.py
-      - name: Verify internal files are absent from public build
+      - name: Verify raw sources / SECURITY_AUDIT.md are absent from public build
         run: |
           set -e
-          FORBIDDEN="classifier.html QUARANTINE_2026-07-29.md QA_ACCEPTANCE_2026-07-27.md QA_COORDINATION.md QA_ROUND2_REVIEW_2026-07-27.md CODEX_PARALLEL_AUDIT_BASELINE_2026-07-27.md CLAUDE_NEXT_RUN_PROMPT_2026-07-27.md REMAIN_GAP_ANALYSIS_2026-07-29.md qa_handoff.json qa_acceptance_2026-07-27.json qa_round2_review_2026-07-27.json classifier_audit_baseline_2026-07-27.json"
+          # classifier.html and QA .md/.json docs are intentionally public
+          # (2026-07-30, explicit request) — only raw source files, scripts,
+          # and the security-findings doc itself must never appear in _site/.
           fail=0
-          for f in $FORBIDDEN; do
-            if find _site -name "$f" | grep -q .; then
-              echo "FAIL: $f found in public build artifact"
-              fail=1
-            fi
-          done
+          if find _site -name "SECURITY_AUDIT.md" | grep -q .; then
+            echo "FAIL: SECURITY_AUDIT.md found in public build artifact"
+            fail=1
+          fi
           if find _site -iname "*.xlsx" -o -iname "*.gpkg" -o -iname "*.bat" | grep -q .; then
             echo "FAIL: raw source or script file found in public build artifact"
             fail=1
           fi
           if [ "$fail" -ne 0 ]; then exit 1; fi
-          echo "OK: no internal/QA files in _site/"
+          echo "OK: no raw sources / SECURITY_AUDIT.md in _site/"
