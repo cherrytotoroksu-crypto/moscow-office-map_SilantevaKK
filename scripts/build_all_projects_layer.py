@@ -9,14 +9,14 @@ UNIFIED_DATA_ARCHITECTURE_2026-07-30.md.
 Что делается надёжно (прямое копирование уже проверенных полей):
   raw_name, canonical_name, developer, address, latitude, longitude, cls,
   gba, gla, zone, submarket, bizFormed, bizForming, market_channel,
-  construction_status (из status), input_year/input_quarter (из commission_q),
+  project_status (из status), input_year/input_quarter (из commission_q),
   quarter_offer_refs/quarter_offer_exists (вычислено сверкой со всеми
   data/buildings_*.json — не догадка, а проверка присутствия построчно).
 
 Что ЯВЛЯЕТСЯ ЭВРИСТИКОЙ и помечается в qa_notes как «производное, требует
 проверки» (не выдаётся за проверенный факт):
-  project_status (статус предложения) — правило по construction_status +
-  market_channel + quarter_offer_exists, см. функцию derive_project_status();
+  offer_status (статус предложения) — правило по project_status +
+  market_channel + quarter_offer_exists, см. функцию derive_offer_status();
   geometry_quality — по присутствию lat/lng в тире COLORMAP (green/yellow),
   иначе средний по умолчанию, а не факт отдельной перепроверки координаты;
   source/source_date — ссылка на classifier.html и дата запуска ЭТОГО
@@ -29,6 +29,18 @@ UNIFIED_DATA_ARCHITECTURE_2026-07-30.md.
   - out_of_scope (не Москва) — исключены из реестра совсем.
   - Дубли имён (12 известных коллизий) — НЕ объединяются; каждая строка
     RAW_DATA получает собственный canonical_project_id = f"proj-{old_id}".
+
+⚠️ 2026-07-31: поля project_status/construction_status переименованы в
+project_status (жизненный цикл)/offer_status (статус предложения) — эта
+задача явно определила семантику наоборот тому, что было названо раньше.
+Значение offer_status "Продажи завершены" переименовано в "Продано / снято".
+
+⚠️ Известное ограничение: market_channel допускает 'serviced_office'
+отдельно от 'coworking' (сервисный офис — Регус/WeWork/BusinessClub через
+оператора, vs чистый коворкинг), но эта конвертация продолжает писать всё
+как 'coworking' — в RAW_DATA/classifier.html нет структурного признака,
+различающего их, а угадывать по названию оператора без доказательства
+нельзя (см. правило "не исправляй данные без доказательства").
 """
 import json
 import os
@@ -37,7 +49,7 @@ import sys
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_PATH = os.path.join(REPO_ROOT, "data", "all_projects_layer.json")
-TODAY = "2026-07-30"
+TODAY = "2026-07-31"
 
 QUARTER_MONTH_TO_Q = {"03": 1, "06": 2, "09": 3, "12": 4}
 
@@ -95,7 +107,8 @@ def commission_to_input(commission_q):
     return year, quarter
 
 
-def derive_construction_status(status):
+def derive_project_status(status):
+    """Жизненный цикл (Проектируется/Строится/Введён/...) — из поля status."""
     if status == "Строится":
         return "Строится"
     if status == "Построен":
@@ -114,15 +127,17 @@ def derive_market_channel(row):
     return channels
 
 
-def derive_project_status(construction_status, channels, quarter_offer_exists):
-    """ЭВРИСТИКА — см. docstring модуля. Не факт, а вычисленное приближение."""
+def derive_offer_status(project_status, channels, quarter_offer_exists):
+    """Статус предложения — ЭВРИСТИКА, см. docstring модуля. Не факт, а
+    вычисленное приближение по project_status (жизненный цикл) +
+    market_channel + quarter_offer_exists."""
     if not channels or channels == ["coworking"]:
         return "Не применяется", None
     if quarter_offer_exists:
         return "В продаже", None
-    if construction_status == "Введён":
-        return "Продажи завершены", None
-    if construction_status in ("Строится", "Проектируется"):
+    if project_status == "Введён":
+        return "Продано / снято", None
+    if project_status in ("Строится", "Проектируется"):
         return "Ещё не вышел в продажу", "Нет подтверждённых лотов"
     return "Не применяется", None
 
@@ -170,21 +185,21 @@ def convert_row(row, colormap, quarter_presence, warnings):
         entity_grain = "project"
         area_scope = "project"
 
-    construction_status = derive_construction_status(row.get("status"))
+    project_status = derive_project_status(row.get("status"))
     channels = derive_market_channel(row)
     input_year, input_quarter = commission_to_input(row.get("commission_q"))
 
     refs = sorted(quarter_presence.get(name, set()) | quarter_presence.get(name_orig, set()))
     quarter_offer_exists = "202606" in refs
 
-    project_status, offer_reason = derive_project_status(construction_status, channels, quarter_offer_exists)
+    offer_status, offer_reason = derive_offer_status(project_status, channels, quarter_offer_exists)
     geometry_quality = derive_geometry_quality(name, colormap)
     confidence, verification_status = derive_confidence_and_status(name, colormap)
 
     qa_notes = []
-    if construction_status == "Не установлен":
-        qa_notes.append("Коворкинг-оператор без собственного статуса стройки — construction_status/project_status не применимы буквально.")
-    qa_notes.append("project_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.")
+    if project_status == "Не установлен":
+        qa_notes.append("Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально.")
+    qa_notes.append("offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.")
 
     has_area = any(row.get(k) is not None for k in ("gba", "gla"))
     qa_status = "ok"
@@ -204,11 +219,11 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "longitude": row.get("lng"),
         "geometry_quality": geometry_quality,
         "project_status": project_status,
-        "construction_status": construction_status,
+        "offer_status": offer_status,
         "offer_not_started_reason": offer_reason,
         "input_year": input_year,
         "input_quarter": input_quarter,
-        "input_date_kind": "confirmed" if construction_status == "Введён" else ("planned" if input_year else "unknown"),
+        "input_date_kind": "confirmed" if project_status == "Введён" else ("planned" if input_year else "unknown"),
         "cls": row.get("cls"),
         "gba": row.get("gba"),
         "gla": row.get("gla"),
@@ -251,9 +266,11 @@ def main():
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
 
-    counts = {}
+    project_counts = {}
+    offer_counts = {}
     for r in records:
-        counts[r["project_status"]] = counts.get(r["project_status"], 0) + 1
+        project_counts[r["project_status"]] = project_counts.get(r["project_status"], 0) + 1
+        offer_counts[r["offer_status"]] = offer_counts.get(r["offer_status"], 0) + 1
     conf_counts = {}
     for r in records:
         conf_counts[r["confidence"]] = conf_counts.get(r["confidence"], 0) + 1
@@ -261,7 +278,8 @@ def main():
     print(f"RAW_DATA rows: {len(raw_data)}")
     print(f"Excluded (out_of_scope, not Moscow): {excluded_out_of_scope}")
     print(f"Written records: {len(records)} -> {OUT_PATH}")
-    print(f"project_status breakdown: {counts}")
+    print(f"project_status (жизненный цикл) breakdown: {project_counts}")
+    print(f"offer_status (статус предложения) breakdown: {offer_counts}")
     print(f"confidence breakdown: {conf_counts}")
     print(f"Бадаевский: {sum(1 for r in records if r['canonical_project_id']=='badaevsky')} записи под общим canonical_project_id")
 

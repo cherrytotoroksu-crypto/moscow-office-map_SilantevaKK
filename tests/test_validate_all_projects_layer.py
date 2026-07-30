@@ -44,7 +44,7 @@ class AllProjectsLayerValidationTests(unittest.TestCase):
     def test_offer_not_started_requires_reason(self):
         payload = copy.deepcopy(SAMPLE)
         rec = next(r for r in payload if r["canonical_project_id"] == "chalet-pyatnitskaya-40")
-        rec["project_status"] = "Ещё не вышел в продажу"
+        rec["offer_status"] = "Ещё не вышел в продажу"
         rec["offer_not_started_reason"] = None
         errors = validate(payload)
         self.assertTrue(any("offer_not_started_reason" in e for e in errors))
@@ -73,6 +73,22 @@ class AllProjectsLayerValidationTests(unittest.TestCase):
         payload[0]["project_status"] = "На паузе"
         errors = validate(payload)
         self.assertTrue(any("invalid project_status" in e for e in errors))
+
+    def test_unknown_offer_status_is_rejected(self):
+        payload = copy.deepcopy(SAMPLE)
+        payload[0]["offer_status"] = "На паузе"
+        errors = validate(payload)
+        self.assertTrue(any("invalid offer_status" in e for e in errors))
+
+    def test_project_status_is_lifecycle_not_offer(self):
+        # Регресс на переименование 2026-07-31: project_status обязан быть
+        # жизненным циклом (Проектируется/.../Не установлен), а не статусом
+        # предложения — раньше в этом проекте было названо наоборот.
+        lifecycle_values = {"Проектируется", "Строится", "Введён", "Заморожен", "Отменён", "Не установлен"}
+        offer_values = {"В продаже", "Продано / снято", "Ещё не вышел в продажу", "Не применяется"}
+        for r in SAMPLE:
+            self.assertIn(r["project_status"], lifecycle_values)
+            self.assertIn(r["offer_status"], offer_values)
 
 
 if __name__ == "__main__":

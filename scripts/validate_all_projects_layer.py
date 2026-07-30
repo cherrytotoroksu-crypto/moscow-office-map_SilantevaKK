@@ -7,9 +7,14 @@ Usage:
 scripts/validate_remain_layer.py) — проверяет инварианты, которые защищают
 модель: уникальность записей, правило Бадаевского (общий canonical_project_id,
 разные canonical_building_id — это НЕ дубль), координаты в разумных пределах
-Москвы, обязательную причину при project_status='Ещё не вышел в продажу',
+Москвы, обязательную причину при offer_status='Ещё не вышел в продажу',
 непустой canonical_building_id при entity_grain='building', и то, что
 запись не тащит встроенные лоты (это должно жить в quarterly_supply, не здесь).
+
+⚠️ 2026-07-31: project_status/construction_status переименованы (см. схему) —
+project_status теперь означает жизненный цикл (Проектируется/.../Не установлен),
+offer_status — статус предложения (В продаже/.../Не применяется). Раньше в
+этом файле было названо наоборот.
 """
 
 from __future__ import annotations
@@ -20,13 +25,13 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-PROJECT_STATUSES = {"В продаже", "Продажи завершены", "Ещё не вышел в продажу", "Не применяется"}
-CONSTRUCTION_STATUSES = {"Проектируется", "Строится", "Введён", "Заморожен", "Отменён", "Не установлен"}
+OFFER_STATUSES = {"В продаже", "Продано / снято", "Ещё не вышел в продажу", "Не применяется"}
+PROJECT_STATUSES = {"Проектируется", "Строится", "Введён", "Заморожен", "Отменён", "Не установлен"}
 VERIFICATION_STATUSES = {"unverified", "under_review", "accepted", "blocked", "quarantine"}
 CONFIDENCE = {"low", "medium", "high"}
 GRAINS = {"project", "building"}
 AREA_SCOPES = {"project", "building", "phase", "unknown"}
-MARKET_CHANNELS = {"sale", "rent", "coworking", "bts", "off_market"}
+MARKET_CHANNELS = {"sale", "rent", "serviced_office", "coworking", "other"}
 GEOMETRY_QUALITY = {"house_exact", "geocoded_approx", "centroid", "unverified", "unknown"}
 QA_STATUSES = {"ok", "conflict", "duplicate_suspect", "missing_required", "quarantine"}
 PUBLIC_VISIBILITY = {"public", "internal_only"}
@@ -34,7 +39,7 @@ OFFER_NOT_STARTED_REASONS = {"Проектная стадия", "Нет подт
 
 REQUIRED = {
     "canonical_project_id", "entity_grain", "raw_name", "canonical_name",
-    "project_status", "construction_status", "source", "source_date",
+    "project_status", "offer_status", "source", "source_date",
     "verification_status", "confidence", "public_visibility",
 }
 
@@ -107,17 +112,17 @@ def validate(doc: Any) -> list[str]:
         if not isinstance(canonical_name, str) or not canonical_name.strip():
             errors.append(issue(row, "canonical_name must be a non-empty string"))
 
+        ostatus = item.get("offer_status")
+        if ostatus not in OFFER_STATUSES:
+            errors.append(issue(row, f"invalid offer_status: {ostatus!r}"))
+        if ostatus == "Ещё не вышел в продажу":
+            reason = item.get("offer_not_started_reason")
+            if reason not in OFFER_NOT_STARTED_REASONS:
+                errors.append(issue(row, "offer_status='Ещё не вышел в продажу' requires a valid offer_not_started_reason"))
+
         pstatus = item.get("project_status")
         if pstatus not in PROJECT_STATUSES:
             errors.append(issue(row, f"invalid project_status: {pstatus!r}"))
-        if pstatus == "Ещё не вышел в продажу":
-            reason = item.get("offer_not_started_reason")
-            if reason not in OFFER_NOT_STARTED_REASONS:
-                errors.append(issue(row, "project_status='Ещё не вышел в продажу' requires a valid offer_not_started_reason"))
-
-        cstatus = item.get("construction_status")
-        if cstatus not in CONSTRUCTION_STATUSES:
-            errors.append(issue(row, f"invalid construction_status: {cstatus!r}"))
 
         vstatus = item.get("verification_status")
         if vstatus not in VERIFICATION_STATUSES:

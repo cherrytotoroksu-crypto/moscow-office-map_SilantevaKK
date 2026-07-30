@@ -5,14 +5,14 @@
     "entity_grain": "project",
     "raw_name": "CHALET Пятницкая 40",
     "canonical_name": "CHALET Пятницкая 40",
-    "aliases": ["Шале Пятницкая 40"],
+    "aliases": [
+      "Шале Пятницкая 40"
+    ],
     "developer": "Хайтек Девелопмент",
     "address": "г. Замоскворечье, Пятницкая ул., 40",
     "latitude": 55.741,
     "longitude": 37.629,
     "geometry_quality": "geocoded_approx",
-    "project_status": "В продаже",
-    "construction_status": "Строится",
     "offer_not_started_reason": null,
     "input_year": 2028,
     "input_quarter": 2,
@@ -26,20 +26,26 @@
     "submarket": null,
     "bizFormed": null,
     "bizForming": null,
-    "market_channel": ["sale"],
+    "market_channel": [
+      "sale"
+    ],
     "source": "https://chalet40.moscow/about",
     "source_date": "2026-07-29",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
-    "quarter_offer_refs": ["202606"],
+    "quarter_offer_refs": [
+      "202606"
+    ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
     "qa_notes": null,
     "public_visibility": "public",
     "first_seen_at": "2026-07-16",
     "last_verified_at": "2026-07-29",
-    "source_count": 1
+    "source_count": 1,
+    "project_status": "Строится",
+    "offer_status": "В продаже"
   },
   {
     "canonical_project_id": "badaevsky",
@@ -53,8 +59,6 @@
     "latitude": 55.749324,
     "longitude": 37.5588,
     "geometry_quality": "geocoded_approx",
-    "project_status": "В продаже",
-    "construction_status": "Строится",
     "offer_not_started_reason": null,
     "input_year": 2026,
     "input_quarter": 4,
@@ -68,20 +72,26 @@
     "submarket": "ТТК Запад",
     "bizFormed": null,
     "bizForming": "Большой Сити",
-    "market_channel": ["sale"],
+    "market_channel": [
+      "sale"
+    ],
     "source": "https://cg-projects.ru/projects/badayevskiy",
     "source_date": "2026-07-29",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
-    "quarter_offer_refs": ["202606"],
+    "quarter_offer_refs": [
+      "202606"
+    ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
     "qa_notes": "Правило: один аналитический проект (canonical_project_id=badaevsky) с двумя лентами-корпусами. В квартальных сводах агрегировать как один проект; здесь — оба корпуса раздельно.",
     "public_visibility": "public",
     "first_seen_at": "2026-07-27",
     "last_verified_at": "2026-07-29",
-    "source_count": 1
+    "source_count": 1,
+    "project_status": "Строится",
+    "offer_status": "В продаже"
   },
   {
     "canonical_project_id": "badaevsky",
@@ -95,8 +105,6 @@
     "latitude": 55.749324,
     "longitude": 37.5602,
     "geometry_quality": "geocoded_approx",
-    "project_status": "В продаже",
-    "construction_status": "Строится",
     "offer_not_started_reason": null,
     "input_year": 2027,
     "input_quarter": 4,
@@ -110,20 +118,26 @@
     "submarket": "ТТК Запад",
     "bizFormed": null,
     "bizForming": "Большой Сити",
-    "market_channel": ["sale"],
+    "market_channel": [
+      "sale"
+    ],
     "source": "https://cg-projects.ru/projects/badayevskiy",
     "source_date": "2026-07-29",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
-    "quarter_offer_refs": ["202606"],
+    "quarter_offer_refs": [
+      "202606"
+    ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
     "qa_notes": "См. заметку у badaevsky-west — общий canonical_project_id, разные сроки/GBA у корпусов, не объединять сроки/площади без разбивки.",
     "public_visibility": "public",
     "first_seen_at": "2026-07-27",
     "last_verified_at": "2026-07-29",
-    "source_count": 1
+    "source_count": 1,
+    "project_status": "Строится",
+    "offer_status": "В продаже"
   },
   {
     "canonical_project_id": "a101-prokshino",
@@ -131,14 +145,14 @@
     "entity_grain": "project",
     "raw_name": "А101 Прокшино",
     "canonical_name": "А101 Прокшино",
-    "aliases": ["Бизнес-квартал Прокшино"],
+    "aliases": [
+      "Бизнес-квартал Прокшино"
+    ],
     "developer": "А101",
     "address": "Прокшино",
     "latitude": null,
     "longitude": null,
     "geometry_quality": "unverified",
-    "project_status": "В продаже",
-    "construction_status": "Строится",
     "offer_not_started_reason": null,
     "input_year": 2027,
     "input_quarter": null,
@@ -152,20 +166,26 @@
     "submarket": null,
     "bizFormed": null,
     "bizForming": null,
-    "market_channel": ["sale"],
+    "market_channel": [
+      "sale"
+    ],
     "source": "internal-classifier",
     "source_date": "2026-07-27",
     "verification_status": "under_review",
     "confidence": "low",
     "external_only": false,
-    "quarter_offer_refs": ["202606"],
+    "quarter_offer_refs": [
+      "202606"
+    ],
     "quarter_offer_exists": true,
     "qa_status": "conflict",
     "qa_notes": "conflict_requires_scope (REMAP_VERIFICATION_REGISTRY): наши 42000 vs Remain-сумма 113029 для 5 башен, официально 22093.2 для 3-й очереди — разные area_scope, не заменять автоматически. См. REMAIN_REVIEW_QUEUE.md.",
     "public_visibility": "public",
     "first_seen_at": "2026-07-27",
     "last_verified_at": "2026-07-29",
-    "source_count": 2
+    "source_count": 2,
+    "project_status": "Строится",
+    "offer_status": "В продаже"
   },
   {
     "canonical_project_id": "central-telegraph-mfc",
@@ -179,8 +199,6 @@
     "latitude": null,
     "longitude": null,
     "geometry_quality": "unverified",
-    "project_status": "Ещё не вышел в продажу",
-    "construction_status": "Не установлен",
     "offer_not_started_reason": "Нет подтверждённых лотов",
     "input_year": 2026,
     "input_quarter": 2,
@@ -207,6 +225,8 @@
     "public_visibility": "internal_only",
     "first_seen_at": "2026-07-29",
     "last_verified_at": "2026-07-29",
-    "source_count": 1
+    "source_count": 1,
+    "project_status": "Не установлен",
+    "offer_status": "Ещё не вышел в продажу"
   }
 ]
