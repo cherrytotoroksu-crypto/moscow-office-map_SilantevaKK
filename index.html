@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
+  <!--
+    CSP задана через meta, т.к. GitHub Pages не отдаёт кастомные HTTP-заголовки
+    (см. SECURITY_AUDIT.md). Ограничения meta-варианта CSP:
+    - frame-ancestors в meta браузеры игнорируют (работает только как HTTP-заголовок) —
+      защиты от clickjacking на текущем хостинге НЕТ, это отдельно описано в аудите.
+    - script-src вынужденно включает 'unsafe-inline': вся логика — один инлайновый
+      <script> плюс onclick-атрибуты в разметке; без большого рефакторинга на
+      addEventListener это не убрать. CSP всё равно ограничивает домены-источники
+      скриптов/стилей/тайлов и запрещает <object>/плагины.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org https://server.arcgisonline.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Офисный рынок Москвы</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
@@ -1667,6 +1679,20 @@ function fmt(n) {
   if (n == null || !isFinite(n)) return '—';
   return n.toLocaleString('ru-RU');
 }
+// Экранирование HTML для строковых полей из data/*.json, которые вставляются
+// через innerHTML (адрес, девелопер, статус, названия коворкингов и т.п.).
+// Данные ведутся вручную внутри команды, а не пользователями сайта, поэтому
+// это защита "на всякий случай" (defense in depth), а не заплатка от
+// конкретной найденной уязвимости.
+function escapeHtml(s) {
+  if (s == null) return s;
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 function fmtShort(n) {
   if (!isFinite(n)) return '—';
   if (n >= 1e6) return (n/1e6).toFixed(1) + 'М';
@@ -1732,25 +1758,26 @@ function computeChange(b) {
 // коворкинга и т.п., где своего попапа у здания нет).
 function buildingCardRows(b) {
   const nLots = (lotsData[b.name] || lotsData[b.name_orig] || []).length || (b.lots ?? 0);
+  const e = escapeHtml;
   return [
-    ['Адрес',        b.address || '—'],
+    ['Адрес',        e(b.address) || '—'],
     ['Координаты',   coordsCell(b)],
-    ['Девелопер',    b.developer || '—'],
-    ['Класс',        b.cls || '—'],
-    ['Ввод',         b.commissionQ || b.year || '—'],
-    ['Старт строительства', b.constructionStart || '—'],
-    ['Старт продаж', b.start || '—'],
-    ['Статус',       b.status || '—'],
-    ['В продаже',    b.on_sale || '—'],
+    ['Девелопер',    e(b.developer) || '—'],
+    ['Класс',        e(b.cls) || '—'],
+    ['Ввод',         e(b.commissionQ || b.year) || '—'],
+    ['Старт строительства', e(b.constructionStart) || '—'],
+    ['Старт продаж', e(b.start) || '—'],
+    ['Статус',       e(b.status) || '—'],
+    ['В продаже',    e(b.on_sale) || '—'],
     ['GBA, кв.м',    b.gba != null ? fmt(Math.round(b.gba)) : '—'],
     ['GLA, кв.м',    b.gla != null ? fmt(Math.round(b.gla)) : '—'],
     ['Объём на продажу, кв.м', b.volume != null ? fmt(Math.round(b.volume)) : '—'],
     ['Цена с НДС, руб/кв.м',   b.price  != null ? fmt(Math.round(b.price)) : '—'],
     ['Лотов, шт.',   fmt(nLots)],
-    ['Зона',         b.geoZone ? displayName('zones', b.geoZone) : '—'],
-    ['Субрынок',     b.geoSubmarket || '—'],
-    ['Деловой р-н (сформир.)',  b.geoBizFormed || '—'],
-    ['Деловой р-н (формир.)',   b.geoBizForming || '—'],
+    ['Зона',         b.geoZone ? escapeHtml(displayName('zones', b.geoZone)) : '—'],
+    ['Субрынок',     e(b.geoSubmarket) || '—'],
+    ['Деловой р-н (сформир.)',  e(b.geoBizFormed) || '—'],
+    ['Деловой р-н (формир.)',   e(b.geoBizForming) || '—'],
   ];
 }
 
@@ -2437,8 +2464,8 @@ window.openCoworkingModal = function(idx) {
   document.getElementById('rentFinishFilterWrap').style.display = 'none';
   const head = `<tr><th>Название</th><th>Сеть</th><th>БЦ / адрес</th><th>Мест всего</th><th>Вакантно</th><th>Ставка, руб/мес с НДС</th></tr>`;
   const body = cws.map(c => `<tr>
-    <td>${c.name || '—'}</td><td>${c.network || '—'}</td>
-    <td>${c.bc || c.address || '—'}</td>
+    <td>${escapeHtml(c.name) || '—'}</td><td>${escapeHtml(c.network) || '—'}</td>
+    <td>${escapeHtml(c.bc || c.address) || '—'}</td>
     <td>${c.seats != null ? fmt(Math.round(c.seats)) : '—'}</td>
     <td>${c.vacancy != null ? fmt(Math.round(c.vacancy)) : '—'}</td>
     <td>${c.rate ? fmt(Math.round(c.rate)) : '—'}</td></tr>`).join('');
