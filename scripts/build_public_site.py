@@ -32,7 +32,8 @@ BUILDING_DATES_PUBLIC_FIELDS = {
 }
 
 # Регексы имён файлов в data/, которые нужны карте (см. index.html: QUARTERS,
-# LAYER_CFG, fetchJSON('data/building_dates.json'), <img src="data/nf_group_logo.png">).
+# LAYER_CFG, fetchJSON('data/building_dates.json'), <img src="data/nf_group_logo.png">)
+# плюс data/all_projects_layer.json — читает codifier.html (см. ниже).
 DATA_ALLOW_PATTERNS = [
     re.compile(r"^buildings_\d{6}\.json$"),
     re.compile(r"^lots_\d{6}\.json$"),
@@ -40,13 +41,18 @@ DATA_ALLOW_PATTERNS = [
     re.compile(r"^coworking_\d{6}\.json$"),
     re.compile(r"^.+\.geojson$"),
     re.compile(r"^nf_group_logo\.png$"),
+    re.compile(r"^all_projects_layer\.json$"),
 ]
 
 # Корневые файлы, которые тоже публикуются по прямой просьбе пользователя
 # (classifier.html + все QA/аудит .md и .json). SECURITY_AUDIT.md намеренно
-# не в списке — см. docstring выше.
+# не в списке — см. docstring выше. codifier.html добавлен 2026-07-31 (по
+# просьбе пользователя — таблицы должны открываться по прямой ссылке, не
+# только локально) — не содержит внутренних QA-заметок, безопасно публиковать
+# как есть, без строк/трансформаций (в отличие от building_dates.json ниже).
 ROOT_ALLOW_PATTERNS = [
     re.compile(r"^classifier\.html$"),
+    re.compile(r"^codifier\.html$"),
     re.compile(r"^.+\.md$"),
     re.compile(r"^qa_.+\.json$"),
     re.compile(r"^classifier_audit_baseline.*\.json$"),
@@ -97,10 +103,28 @@ def build_data_dir():
     os.makedirs(out_data, exist_ok=True)
     copied = 0
     for name in sorted(os.listdir(src_data)):
+        if name == "all_projects_layer.json":
+            continue  # копируется отдельно, с фильтром по public_visibility — см. ниже
         if any(p.match(name) for p in DATA_ALLOW_PATTERNS):
             shutil.copy2(os.path.join(src_data, name), os.path.join(out_data, name))
             copied += 1
     print(f"  data/: скопировано {copied} файлов (geojson + квартальные json + логотип)")
+
+    # all_projects_layer.json — только public_visibility='public'. Сейчас (2026-07-31)
+    # все 277 записей публичные, но фильтр защищает на будущее: если реестр
+    # пополнится внешними/неподтверждёнными Remain-кандидатами с
+    # public_visibility='internal_only', они не должны утечь в сыром JSON,
+    # даже если UI codifier.html их не показывает.
+    src_registry = os.path.join(src_data, "all_projects_layer.json")
+    if os.path.exists(src_registry):
+        with open(src_registry, encoding="utf-8") as f:
+            records = json.load(f)
+        public_records = [r for r in records if r.get("public_visibility") == "public"]
+        with open(os.path.join(out_data, "all_projects_layer.json"), "w", encoding="utf-8") as f:
+            json.dump(public_records, f, ensure_ascii=False)
+        hidden = len(records) - len(public_records)
+        print(f"  data/all_projects_layer.json: {len(public_records)} публичных записей"
+              + (f" ({hidden} internal_only скрыто)" if hidden else ""))
 
     # building_dates.json — с транформацией, без source/last_checked
     src_bd = os.path.join(src_data, "building_dates.json")
