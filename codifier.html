@@ -193,6 +193,13 @@ const VIEWS = {
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
 // каждой таблицы — это не фильтр, а то, какой раздел/файл выбран.
 const SEGMENT_LABEL = {codifier:null, sale:'Продажа офисов', rent:'Аренда офисов', flex:'Гибкие офисы', compare:null};
+// ID проекта в данных хранится как "proj-1" и т.п. — в интерфейсе показываем
+// только число, само значение canonical_project_id в данных не меняем
+// (используется как есть для join/сопоставления, только отображение другое).
+function PROJECT_ID_NUMBER(v) {
+  const m = String(v).match(/-?(\d+)\s*$/);
+  return m ? m[1] : v;
+}
 // Технические enum-значения из общего реестра — не показываем как есть,
 // переводим в понятные бизнес-формулировки. Ключи — в исходном регистре
 // ИЛИ в нижнем (сопоставление в translateValue() регистронезависимое), т.к.
@@ -239,7 +246,7 @@ const CODIFIER_COLUMNS = [
   // ID и QA-статус/примечания — ядро смысла кодификатора (сквозная
   // идентификация + видимая проверка данных), не прячем их за режим QA:
   // internal:true оставлен только для действительно служебных полей ниже.
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'canonical_name', label:'Проект', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
@@ -307,7 +314,7 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_bizFormed', label:'Дел. район (сформ., реестр)', type:'text', visible:false},
   {key:'reg_bizForming', label:'Дел. район (форм., реестр)', type:'text', visible:false},
   {key:'on_sale', label:'В продаже', type:'text', visible:true},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_market_channel', label:'Сегменты рынка проекта (справочно)', type:'list', visible:false, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:true},
@@ -333,7 +340,7 @@ const SALE_LOTS_COLUMNS = [
   {key:'total', label:'Итого, руб', type:'number', visible:true},
   {key:'scheme', label:'Планировка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -356,7 +363,7 @@ const RENT_BUILDINGS_COLUMNS = [
   {key:'lotsCount', label:'Предложений аренды', type:'number', visible:true},
   {key:'areaSum', label:'Площадь предложений аренды (сумма), м²', type:'number', visible:true},
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
 ];
 const RENT_LANDLORDS_COLUMNS = [
@@ -377,7 +384,7 @@ const RENT_LOTS_COLUMNS = [
   {key:'nds', label:'НДС', type:'text', visible:false},
   {key:'finish', label:'Отделка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -396,7 +403,7 @@ const FLEX_OPERATORS_COLUMNS = [
   {key:'weightedRate', label:'Ср. ставка (взвеш. по местам)', type:'number', visible:true},
 ];
 const FLEX_LOTS_COLUMNS = [
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'name', label:'Объект', type:'text', visible:true},
   {key:'network', label:'Оператор', type:'text', visible:true},
   {key:'flex_type', label:'Тип', type:'text', visible:true},
@@ -828,7 +835,12 @@ function cellValue(row, col) {
   let v = row[col.key];
   if (col.type === 'list' && Array.isArray(v)) return listDisplayValues(row, col).join(', ');
   if (col.type === 'bool') return v === true ? (col.boolTrueLabel || 'да') : (v === false ? (col.boolFalseLabel || 'нет') : '');
-  return translateValue(col, v);
+  v = translateValue(col, v);
+  // Отображение-only форматирование (например, ID проекта "proj-1" -> "1")
+  // — не трогает исходное значение в данных, применяется только здесь, а
+  // значит одинаково и в ячейке, и в сортировке, и в фильтре, и в экспорте.
+  if (col.format && v != null && v !== '') v = col.format(v);
+  return v;
 }
 
 function passesCondition(row, col, cond) {
