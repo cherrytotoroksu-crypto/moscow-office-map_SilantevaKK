@@ -208,8 +208,8 @@ const VERIFICATION_STATUS_DISPLAY = {
   blocked_by_evidence: 'Требует подтверждения', source_missing: 'Источник не указан',
 };
 const AREA_SCOPE_DISPLAY = {
-  project: 'Проект (целиком)', building: 'Здание', phase: 'Очередь/фаза',
-  unknown: 'Не определено', aggregate_only: 'Только агрегированные данные',
+  project: 'Проект', building: 'Здание', block: 'Корпус', phase: 'Фаза',
+  unknown: 'Неизвестно', aggregate_only: 'Только агрегированные данные',
 };
 const GEOMETRY_QUALITY_DISPLAY = {
   geocoded_approx: 'Приблизительно (геокодирование)', house_exact: 'Точно (по дому)',
@@ -243,10 +243,13 @@ const CODIFIER_COLUMNS = [
   {key:'input_year', label:'Год ввода', type:'number', visible:true},
   {key:'input_quarter', label:'Квартал ввода', type:'number', visible:true},
   {key:'input_date_kind', label:'Заявлено/подтверждено', type:'text', visible:false},
-  {key:'gba', label:'GBA', type:'number', visible:true},
-  {key:'gla', label:'GLA', type:'number', visible:true},
-  {key:'office_area', label:'Офисная площадь', type:'number', visible:false},
-  {key:'area_scope', label:'Уровень площади', type:'text', visible:false, displayMap: AREA_SCOPE_DISPLAY},
+  // GLA — основная площадь (показывается первой, не пересчитывается из GBA:
+  // если источник дал только GBA, GLA остаётся "нет данных", а не подменяется).
+  // GBA — вторичная/справочная, скрыта по умолчанию, всегда после GLA.
+  {key:'gla', label:'GLA, м²', type:'number', visible:true},
+  {key:'gba', label:'GBA, м²', type:'number', visible:false},
+  {key:'office_area', label:'GLA офисная (если указана отдельно), м²', type:'number', visible:false},
+  {key:'area_scope', label:'Уровень площади', type:'text', visible:true, displayMap: AREA_SCOPE_DISPLAY},
   {key:'market_channel', label:'Сегменты рынка (справочно)', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'quarter_offer_exists', label:'Есть предложение в квартале', type:'bool', visible:false},
   {key:'offer_status', label:'Статус предложения', type:'text', visible:false},
@@ -285,9 +288,9 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_offer_status', label:'Статус предл. (реестр)', type:'text', visible:false},
   {key:'year', label:'Год', type:'number', visible:true},
   {key:'reg_input_quarter', label:'Квартал ввода (реестр)', type:'number', visible:false},
-  {key:'gba', label:'GBA', type:'number', visible:true},
-  {key:'gla', label:'GLA', type:'number', visible:true},
-  {key:'volume', label:'Объём на продажу', type:'number', visible:true},
+  {key:'gla', label:'GLA здания, м²', type:'number', visible:true},
+  {key:'gba', label:'GBA здания, м² (справочно)', type:'number', visible:false},
+  {key:'volume', label:'Площадь лотов в продаже, м² (объём предложения)', type:'number', visible:true},
   {key:'price', label:'Ср. цена', type:'number', visible:true},
   {key:'lots', label:'Лотов', type:'number', visible:true},
   {key:'zone', label:'Зона', type:'text', visible:true},
@@ -305,8 +308,9 @@ const SALE_DEVELOPERS_COLUMNS = [
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'projects', label:'Проектов в квартале', type:'number', visible:true},
   {key:'buildings', label:'Зданий', type:'number', visible:true},
-  {key:'gbaSum', label:'GBA суммарно', type:'number', visible:true},
-  {key:'volumeSum', label:'Объём на продажу суммарно', type:'number', visible:true},
+  {key:'glaSum', label:'GLA суммарно, м² (по зданиям с известной GLA)', type:'number', visible:true},
+  {key:'gbaSum', label:'GBA суммарно, м² (справочно)', type:'number', visible:false},
+  {key:'volumeSum', label:'Площадь лотов в продаже суммарно, м²', type:'number', visible:true},
   {key:'lotsSum', label:'Лотов суммарно', type:'number', visible:true},
   {key:'weightedPrice', label:'Ср. взвешенная цена', type:'number', visible:true},
   {key:'classes', label:'Классы', type:'text', visible:true},
@@ -315,7 +319,7 @@ const SALE_LOTS_COLUMNS = [
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
-  {key:'area', label:'Площадь', type:'number', visible:true},
+  {key:'area', label:'Площадь лота, м²', type:'number', visible:true},
   {key:'size', label:'Размер', type:'number', visible:false},
   {key:'price', label:'Цена, руб/кв.м', type:'number', visible:true},
   {key:'total', label:'Итого, руб', type:'number', visible:true},
@@ -337,8 +341,12 @@ const RENT_BUILDINGS_COLUMNS = [
   {key:'cls', label:'Класс (реестр)', type:'text', visible:true},
   {key:'zone', label:'Кольцо (реестр)', type:'text', visible:false},
   {key:'submarket', label:'Субрынок (реестр)', type:'text', visible:false},
-  {key:'lotsCount', label:'Предложений', type:'number', visible:true},
-  {key:'areaSum', label:'Площадь суммарно', type:'number', visible:true},
+  // GLA/GBA здания (реестр) — атрибут самого здания, площадь предложений
+  // аренды (areaSum) — отдельная сумма по лотам, не путать одно с другим (п.5).
+  {key:'reg_gla', label:'GLA здания (реестр), м²', type:'number', visible:true},
+  {key:'reg_gba', label:'GBA здания (реестр), м² (справочно)', type:'number', visible:false},
+  {key:'lotsCount', label:'Предложений аренды', type:'number', visible:true},
+  {key:'areaSum', label:'Площадь предложений аренды (сумма), м²', type:'number', visible:true},
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
   {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
@@ -347,14 +355,14 @@ const RENT_LANDLORDS_COLUMNS = [
   {key:'developer', label:'Арендодатель/девелопер', type:'text', visible:true},
   {key:'objects', label:'Объектов', type:'number', visible:true},
   {key:'lotsCount', label:'Предложений', type:'number', visible:true},
-  {key:'areaSum', label:'Площадь суммарно', type:'number', visible:true},
+  {key:'areaSum', label:'Площадь предложений аренды (сумма), м²', type:'number', visible:true},
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
 ];
 const RENT_LOTS_COLUMNS = [
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
-  {key:'area', label:'Площадь', type:'number', visible:true},
+  {key:'area', label:'Площадь предложения аренды, м²', type:'number', visible:true},
   {key:'size', label:'Размер', type:'number', visible:false},
   {key:'rate', label:'Ставка, руб/кв.м/год', type:'number', visible:true},
   {key:'opex', label:'Опекс', type:'number', visible:true},
@@ -386,7 +394,13 @@ const FLEX_LOTS_COLUMNS = [
   {key:'bc', label:'БЦ', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:false},
   {key:'district', label:'Район', type:'text', visible:false},
-  {key:'seats', label:'Рабочие места / вместимость', type:'number', visible:true},
+  // GLA объекта — из реестра, если проект сопоставлен (join по имени, см.
+  // loadFlexLots); flex_area — площадь именно гибкого предложения. У
+  // источника data/coworking_*.json такого поля нет — колонка честно
+  // покажет "нет данных" для всех строк, а не подменится местами (п.6).
+  {key:'reg_gla', label:'GLA объекта (реестр), м², если известна', type:'number', visible:true},
+  {key:'flex_area', label:'Площадь гибкого предложения, м²', type:'number', visible:true},
+  {key:'seats', label:'Рабочие места', type:'number', visible:true},
   {key:'vacancy', label:'Свободные места', type:'number', visible:true},
   {key:'rate', label:'Ставка, руб/мес', type:'number', visible:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
@@ -495,6 +509,8 @@ function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
   row.reg_cls = match ? match.cls : null;
   row.reg_zone = match ? match.zone : null;
   row.reg_submarket = match ? match.submarket : null;
+  row.reg_gla = match ? match.gla : null;
+  row.reg_gba = match ? match.gba : null;
   return match;
 }
 
@@ -521,11 +537,12 @@ async function loadSaleDevelopers(quarterId) {
   for (const b of buildings) {
     const dev = b.developer || '—';
     if (!byDev.has(dev)) {
-      byDev.set(dev, {developer: dev, projectIds: new Set(), buildings: 0, gbaSum: 0, volumeSum: 0, lotsSum: 0, priceWeighted: 0, classes: new Set()});
+      byDev.set(dev, {developer: dev, projectIds: new Set(), buildings: 0, glaSum: 0, glaCount: 0, gbaSum: 0, volumeSum: 0, lotsSum: 0, priceWeighted: 0, classes: new Set()});
     }
     const acc = byDev.get(dev);
     acc.projectIds.add(b.canonical_project_id || b.name);
     acc.buildings += 1;
+    if (b.gla != null) { acc.glaSum += Number(b.gla); acc.glaCount += 1; }
     if (b.gba != null) acc.gbaSum += Number(b.gba);
     if (b.volume != null) acc.volumeSum += Number(b.volume);
     if (b.lots != null) acc.lotsSum += Number(b.lots);
@@ -536,6 +553,10 @@ async function loadSaleDevelopers(quarterId) {
     developer: acc.developer,
     projects: acc.projectIds.size,
     buildings: acc.buildings,
+    // GLA — основная площадь: сумма только там, где GLA реально известна по
+    // зданию (glaCount из acc.buildings), не подставляем GBA вместо пропуска.
+    glaSum: acc.glaSum || null,
+    glaKnownBuildings: acc.glaCount,
     gbaSum: acc.gbaSum || null,
     volumeSum: acc.volumeSum || null,
     lotsSum: acc.lotsSum || null,
@@ -590,6 +611,10 @@ async function loadRentBuildings(quarterId) {
         zone: match ? match.zone : null, submarket: match ? match.submarket : null,
         canonical_project_id: match ? match.canonical_project_id : null,
         reg_source: match ? match.source : null,
+        // GLA/GBA здания — атрибут самого здания (из реестра), не сумма по
+        // лотам аренды: площадь предложений аренды (areaSum ниже) — отдельная
+        // величина, её нельзя путать с GLA здания (п.5 задачи).
+        reg_gla: match ? match.gla : null, reg_gba: match ? match.gba : null,
         lotsCount: 0, areaSum: 0, rateWeighted: 0,
       });
     }
@@ -603,6 +628,7 @@ async function loadRentBuildings(quarterId) {
   const rows = [...byBuilding.values()].map(acc => ({
     building: acc.building, developer: acc.developer, cls: acc.cls, zone: acc.zone, submarket: acc.submarket,
     canonical_project_id: acc.canonical_project_id, reg_source: acc.reg_source,
+    reg_gla: acc.reg_gla, reg_gba: acc.reg_gba,
     lotsCount: acc.lotsCount || null,
     areaSum: acc.areaSum || null,
     weightedRate: acc.areaSum ? Math.round(acc.rateWeighted / acc.areaSum) : null,
@@ -888,6 +914,12 @@ function sumField(rows, key) {
   for (const r of rows) { const v = r[key]; if (v != null && isFinite(v)) { sum += Number(v); n++; } }
   return {sum, n};
 }
+// Отдельно от fmtNum: если ни у одной строки значение не известно (n===0),
+// пишем "нет данных", а не "0" — ноль означал бы, что площадь действительно
+// нулевая, а не то, что источник её просто не дал (п.8 задачи).
+function fmtSum(agg) {
+  return agg.n === 0 ? 'нет данных' : fmtNum(agg.sum);
+}
 function uniqueCount(rows, keyFn) {
   return new Set(rows.map(keyFn).filter(v => v != null)).size;
 }
@@ -901,62 +933,83 @@ function computeTotals(view, rows) {
   const prefix = segmentLabel ? `${segmentLabel} · ` : '';
   if (view === 'codifier') {
     const projects = uniqueCount(rows, r => r.canonical_project_id);
+    // GLA — основная площадь, считается первой. area_scope='building' —
+    // корпуса ВНУТРИ проекта, который уже посчитан на уровне 'project';
+    // складывать их с проектными GLA нельзя (задвоение), поэтому считаем
+    // раздельно по уровню агрегации (п.3: "не суммировать одновременно
+    // GLA корпуса и GLA проекта").
+    const projectRows = rows.filter(r => (r.area_scope || 'project') !== 'building');
+    const buildingRows = rows.filter(r => r.area_scope === 'building');
+    const glaProject = sumField(projectRows, 'gla');
+    const glaBuilding = sumField(buildingRows, 'gla');
     const gba = sumField(rows, 'gba');
-    const gla = sumField(rows, 'gla');
     return `Уникальных проектов: ${fmtNum(projects)} · Записей: ${rows.length} · `
-      + `GBA (сумма по ${gba.n} из ${rows.length}): ${fmtNum(gba.sum)} · GLA (${gla.n} из ${rows.length}): ${fmtNum(gla.sum)}`;
+      + `GLA проектов (сумма по ${glaProject.n} из ${projectRows.length}): ${fmtSum(glaProject)} м²`
+      + (buildingRows.length ? ` · GLA отдельных корпусов (сумма по ${glaBuilding.n} из ${buildingRows.length}, НЕ входит в сумму выше): ${fmtSum(glaBuilding)} м²` : '')
+      + ` · GBA (справочно, сумма по ${gba.n} из ${rows.length}): ${fmtSum(gba)} м²`;
   }
   if (view === 'sale_buildings') {
     const projects = uniqueCount(rows, r => r.canonical_project_id || r.name);
+    const gla = sumField(rows, 'gla');
     const gba = sumField(rows, 'gba');
     const volume = sumField(rows, 'volume');
     const lots = sumField(rows, 'lots');
     const priceRows = rows.filter(r => r.price != null && r.volume != null);
     const weighted = priceRows.length ? priceRows.reduce((s,r)=>s+r.price*r.volume,0) / priceRows.reduce((s,r)=>s+r.volume,0) : null;
     return prefix + `Уникальных проектов: ${fmtNum(projects)} · Зданий: ${rows.length} · Лотов (сумма): ${fmtNum(lots.sum)} · `
-      + `GBA: ${fmtNum(gba.sum)} · Объём на продажу: ${fmtNum(volume.sum)} · Ср.взв. цена: ${fmtNum(weighted)}`;
+      + `GLA зданий (сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · GBA (справочно): ${fmtSum(gba)} м² · `
+      + `Площадь лотов в продаже (сумма): ${fmtNum(volume.sum)} м² · Ср.взв. цена: ${fmtNum(weighted)}`;
   }
   if (view === 'sale_developers') {
+    const gla = sumField(rows, 'glaSum');
     const gba = sumField(rows, 'gbaSum');
     const volume = sumField(rows, 'volumeSum');
     const lots = sumField(rows, 'lotsSum');
-    return prefix + `Девелоперов: ${rows.length} · GBA (сумма): ${fmtNum(gba.sum)} · Объём (сумма): ${fmtNum(volume.sum)} · Лотов (сумма): ${fmtNum(lots.sum)}`;
+    return prefix + `Девелоперов: ${rows.length} · GLA зданий (сумма): ${fmtSum(gla)} м² · GBA (справочно): ${fmtSum(gba)} м² · `
+      + `Площадь лотов в продаже (сумма): ${fmtNum(volume.sum)} м² · Лотов (сумма): ${fmtNum(lots.sum)}`;
   }
   if (view === 'sale_lots') {
     const buildings = uniqueCount(rows, r => r.building);
     const area = sumField(rows, 'area');
     const total = sumField(rows, 'total');
     const weighted = total.sum && area.sum ? total.sum / area.sum : null;
-    return prefix + `Лотов: ${rows.length} · Зданий (уникальных): ${buildings} · Площадь (сумма): ${fmtNum(area.sum)} · `
+    return prefix + `Лотов: ${rows.length} · Зданий (уникальных): ${buildings} · Площадь лотов (сумма): ${fmtNum(area.sum)} м² · `
       + `Стоимость (сумма): ${fmtNum(total.sum)} · Ср.взв. цена: ${fmtNum(weighted)}`;
   }
   if (view === 'rent_buildings') {
+    const gla = sumField(rows, 'reg_gla');
+    const gba = sumField(rows, 'reg_gba');
     const lots = sumField(rows, 'lotsCount');
     const area = sumField(rows, 'areaSum');
-    return prefix + `Объектов: ${rows.length} · Предложений (сумма): ${fmtNum(lots.sum)} · Площадь (сумма): ${fmtNum(area.sum)}`;
+    return prefix + `Объектов: ${rows.length} · GLA зданий (сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · GBA (справочно): ${fmtSum(gba)} м² · `
+      + `Предложений (сумма): ${fmtNum(lots.sum)} · Площадь предложений аренды (сумма): ${fmtNum(area.sum)} м²`;
   }
   if (view === 'rent_landlords') {
     const objects = sumField(rows, 'objects');
     const lots = sumField(rows, 'lotsCount');
     const area = sumField(rows, 'areaSum');
-    return prefix + `Арендодателей: ${rows.length} · Объектов (сумма): ${fmtNum(objects.sum)} · Предложений (сумма): ${fmtNum(lots.sum)} · Площадь (сумма): ${fmtNum(area.sum)}`;
+    return prefix + `Арендодателей: ${rows.length} · Объектов (сумма): ${fmtNum(objects.sum)} · Предложений (сумма): ${fmtNum(lots.sum)} · Площадь предложений аренды (сумма): ${fmtNum(area.sum)} м²`;
   }
   if (view === 'rent_lots') {
     const buildings = uniqueCount(rows, r => r.building);
     const area = sumField(rows, 'area');
     const rateRows = rows.filter(r => r.rate != null && r.area != null);
     const weighted = rateRows.length ? rateRows.reduce((s,r)=>s+r.rate*r.area,0) / rateRows.reduce((s,r)=>s+r.area,0) : null;
-    return prefix + `Предложений: ${rows.length} · Объектов (уникальных): ${buildings} · Площадь (сумма): ${fmtNum(area.sum)} · Ср.взв. ставка: ${fmtNum(weighted)}`;
+    return prefix + `Предложений: ${rows.length} · Объектов (уникальных): ${buildings} · Площадь предложений аренды (сумма): ${fmtNum(area.sum)} м² · Ср.взв. ставка: ${fmtNum(weighted)}`;
   }
   if (view === 'flex_operators') {
     const seats = sumField(rows, 'seatsSum');
     const vacancy = sumField(rows, 'vacancySum');
-    return prefix + `Операторов: ${rows.length} · Мест (сумма): ${fmtNum(seats.sum)} · Вакантно (сумма): ${fmtNum(vacancy.sum)}`;
+    return prefix + `Операторов: ${rows.length} · Рабочих мест (сумма): ${fmtNum(seats.sum)} · Свободно (сумма): ${fmtNum(vacancy.sum)} · Площадь гибкого предложения: нет данных в источнике`;
   }
   if (view === 'flex_lots') {
+    const gla = sumField(rows, 'reg_gla');
+    const area = sumField(rows, 'flex_area');
     const seats = sumField(rows, 'seats');
     const vacancy = sumField(rows, 'vacancy');
-    return prefix + `Объектов: ${rows.length} · Мест (сумма): ${fmtNum(seats.sum)} · Вакантно (сумма): ${fmtNum(vacancy.sum)}`;
+    return prefix + `Объектов: ${rows.length} · GLA объектов (реестр, сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · `
+      + `Площадь гибкого предложения (сумма по ${area.n} из ${rows.length}): ${fmtSum(area)} м² · `
+      + `Рабочих мест (сумма): ${fmtNum(seats.sum)} · Свободно (сумма): ${fmtNum(vacancy.sum)}`;
   }
   if (view === 'compare_segments') {
     return `Сегментов: ${rows.length} · сравнение агрегатов/KPI, без детальных строк лотов/зданий`;
@@ -1104,12 +1157,18 @@ function openSourceCard(row) {
     const conflictInfo = record.qa_status === 'conflict'
       ? 'Обнаружен конфликт источников — запись требует проверки.'
       : (record.verification_status === 'under_review' ? 'Запись на проверке, окончательно не подтверждена.' : 'Конфликтов источников не выявлено.');
+    // GLA — основная площадь; если её нет, а GBA есть, явно предупреждаем,
+    // а не подставляем GBA молча вместо GLA (п.8 задачи).
+    const areaWarning = (record.gla == null && record.gba != null)
+      ? 'GLA не указана, доступна только GBA — не использовать GBA как замену GLA.'
+      : null;
     const fields = [
       ['Источник', record.source],
       ['Дата последней проверки', record.last_verified_at],
       ['Уровень доверия', record.confidence],
       ['Точность координат', translateValue({displayMap: GEOMETRY_QUALITY_DISPLAY}, record.geometry_quality)],
       ['Исходное название', record.raw_name],
+      ...(areaWarning ? [['⚠ Площадь', areaWarning]] : []),
       ['Предупреждения', record.qa_notes],
       ['Причина отсутствия предложения', record.offer_not_started_reason],
       ['Сведения о конфликте источников', conflictInfo],
