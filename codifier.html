@@ -57,6 +57,8 @@
   tr:hover td { background:#fafbfc; }
   tr:hover td:first-child { background:#f4f6f7; }
   .empty-cell { color:#bbb; }
+  td.flagged { position:relative; }
+  td.flagged::after { content:''; position:absolute; top:0; right:0; border-width:0 7px 7px 0; border-style:solid; border-color:transparent #d9822b transparent transparent; }
   .status-row { padding:6px 16px; font-size:11px; color:#666; background:#fff; }
   .qa-conflict { background:#fff3f0 !important; }
   .qa-quarantine { background:#fff8e1 !important; }
@@ -124,6 +126,7 @@
   Подсветка строк: <span style="background:#fff3f0;padding:1px 6px;border-radius:3px;">конфликт источников</span>
   <span style="background:#fff8e1;padding:1px 6px;border-radius:3px;margin-left:6px;">на карантине/проверке</span>
   <span style="margin-left:6px;">— без цвета: проверено, конфликтов нет</span>
+  <span style="margin-left:6px;">· уголок в ячейке (наведите) — спорный момент по этому полю</span>
 </div>
 <div class="status-row" id="totalsRow" style="font-weight:600;"></div>
 <div class="table-wrap"><table id="mainTable"><thead></thead><tbody></tbody></table></div>
@@ -831,6 +834,20 @@ function listDisplayValues(row, col) {
   return raw.map(v => String(translateValue(col, v)));
 }
 
+// Уголок на ячейке = спорный/сомнительный момент, найденный при проверке.
+// title на ячейке — причина, при наведении.
+function cellFlag(row, col) {
+  const qa = row.qa_status || row.reg_qa_status;
+  if (col.key === 'qa_status' && qa === 'conflict') return 'Конфликт источников — запись требует проверки.';
+  if (col.key === 'qa_status' && qa === 'quarantine') return 'Запись на карантине, не подтверждена окончательно.';
+  if ((col.key === 'gla' || col.key === 'reg_gla') && row[col.key] == null && (row.gba != null || row.reg_gba != null)) {
+    return 'GLA не указана, доступна только GBA — не использовать GBA как замену GLA.';
+  }
+  if (col.key === 'canonical_name' && qa === 'conflict') return 'Конфликт источников по этой записи — см. карточку источника (ℹ).';
+  if (col.key === 'offer_not_started_reason' && row.offer_not_started_reason) return 'Причина отсутствия предложения указана — проверить актуальность.';
+  return null;
+}
+
 function cellValue(row, col) {
   let v = row[col.key];
   if (col.type === 'list' && Array.isArray(v)) return listDisplayValues(row, col).join(', ');
@@ -1101,7 +1118,10 @@ function render() {
       return `<tr class="${rowClass}">` + cardCell + cols.map(col => {
         const v = cellValue(row, col);
         const display = (v == null || v === '') ? '<span class="empty-cell">—</span>' : escapeHtml(String(v));
-        return `<td>${display}</td>`;
+        const flag = cellFlag(row, col);
+        return flag
+          ? `<td class="flagged" title="${escapeHtml(flag)}">${display}</td>`
+          : `<td>${display}</td>`;
       }).join('') + '</tr>';
     }).join('');
     if (showCard) {
