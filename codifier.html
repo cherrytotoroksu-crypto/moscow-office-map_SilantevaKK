@@ -62,6 +62,14 @@
   .qa-quarantine { background:#fff8e1 !important; }
   .no-results-row td { text-align:center; padding:28px 16px; color:#888; font-size:13px; }
   .no-results-row .btn { margin-left:8px; }
+  .card-btn { width:22px; height:22px; border-radius:4px; border:1px solid transparent; background:none; cursor:pointer; color:#8a94a3; font-size:12px; }
+  .card-btn:hover { background:#e8eaee; color:#2F4858; }
+  th.card-th { width:30px; text-align:center; }
+  .source-card { width:340px; }
+  .sc-row { font-size:12px; padding:5px 2px; border-bottom:1px solid #f2f2f2; line-height:1.4; }
+  .sc-row b { color:#2F4858; display:block; font-size:11px; text-transform:uppercase; letter-spacing:.02em; margin-bottom:1px; }
+  .qa-toggle { display:flex; align-items:center; gap:5px; font-size:12px; color:#555; cursor:pointer; padding:4px 8px; border:1px solid #ccc; border-radius:4px; background:#fff; }
+  .qa-toggle input { cursor:pointer; }
   .segment-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; padding:14px 16px; background:#f4f5f7; }
   .seg-card { background:#fff; border:1px solid #dde; border-radius:8px; padding:14px; }
   .seg-card h3 { font-size:13px; margin-bottom:8px; color:#2F4858; }
@@ -103,6 +111,9 @@
   </select>
   <button class="btn" id="btnColumns">Колонки ▾</button>
   <button class="btn" id="btnReset">Сбросить фильтры</button>
+  <label class="qa-toggle" title="Показывает технические/служебные поля (ID, raw-названия, QA-заметки и т.п.) — только для внутренней проверки">
+    <input type="checkbox" id="qaModeToggle"> Режим QA (технические поля)
+  </label>
   <button class="btn" id="btnCopyLink">Скопировать ссылку на вид</button>
   <button class="btn" id="btnExportCsv">Экспорт CSV</button>
   <button class="btn primary" id="btnExportXlsx">Экспорт XLSX</button>
@@ -177,12 +188,32 @@ const VIEWS = {
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
 // каждой таблицы — это не фильтр, а то, какой раздел/файл выбран.
 const SEGMENT_LABEL = {codifier:null, sale:'Продажа офисов', rent:'Аренда офисов', flex:'Гибкие офисы', compare:null};
-// Технические enum-значения market_channel из общего реестра — не показываем
-// как есть, переводим в те же формулировки, что и разделы навигации.
+// Технические enum-значения из общего реестра — не показываем как есть,
+// переводим в понятные бизнес-формулировки. Ключи — в исходном регистре
+// ИЛИ в нижнем (сопоставление в translateValue() регистронезависимое), т.к.
+// в разных QA-документах проекта одни и те же коды встречаются в обоих
+// регистрах (например BLOCKED_BY_EVIDENCE в qa_handoff.json).
 const MARKET_CHANNEL_DISPLAY = {
   sale: 'Продажа офисов', rent: 'Аренда офисов',
   coworking: 'Гибкие офисы (коворкинг)', serviced_office: 'Гибкие офисы (серв. офис)',
   other: 'Другое / не установлено',
+};
+const QA_STATUS_DISPLAY = {
+  ok: 'Проверено', conflict: 'Конфликт источников',
+  quarantine: 'На карантине (проверка)', historical_quarantine: 'Историческая запись на проверке',
+  source_missing: 'Источник не указан', blocked_by_evidence: 'Требует подтверждения',
+};
+const VERIFICATION_STATUS_DISPLAY = {
+  accepted: 'Принято', under_review: 'На проверке',
+  blocked_by_evidence: 'Требует подтверждения', source_missing: 'Источник не указан',
+};
+const AREA_SCOPE_DISPLAY = {
+  project: 'Проект (целиком)', building: 'Здание', phase: 'Очередь/фаза',
+  unknown: 'Не определено', aggregate_only: 'Только агрегированные данные',
+};
+const GEOMETRY_QUALITY_DISPLAY = {
+  geocoded_approx: 'Приблизительно (геокодирование)', house_exact: 'Точно (по дому)',
+  unverified: 'Не проверено', unknown: 'Неизвестно',
 };
 
 // ============================================================
@@ -193,38 +224,53 @@ const MARKET_CHANNEL_DISPLAY = {
 // (они у себя в разделах Продажа/Аренда/Гибкие офисы); offer_status —
 // статус предложения именно КАНАЛА ПРОДАЖИ — оставлен только справочно и
 // скрыт по умолчанию, чтобы не путать с общим статусом проекта.
+// internal:true — техническое/служебное поле: не показывается в обычном
+// режиме вообще (ни в таблице, ни в панели "Колонки", ни в фильтрах,
+// ни в экспорте), доступно только когда включён режим QA (см. qaMode
+// ниже). Обычные скрытые-по-умолчанию поля (visible:false, без internal)
+// остаются доступны всем через панель "Колонки" — это просто "свёрнутые",
+// а не "запрещённые" колонки.
 const CODIFIER_COLUMNS = [
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:false},
   {key:'canonical_name', label:'Проект', type:'text', visible:true},
-  {key:'raw_name', label:'Исходное название', type:'text', visible:true},
-  {key:'canonical_building_id', label:'Корпус', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
-  {key:'latitude', label:'Широта', type:'number', visible:false},
-  {key:'longitude', label:'Долгота', type:'number', visible:false},
   {key:'cls', label:'Класс', type:'text', visible:true},
   {key:'bizFormed', label:'Дел. район (сформ.)', type:'text', visible:false},
   {key:'bizForming', label:'Дел. район (форм.)', type:'text', visible:false},
   {key:'submarket', label:'Субрынок', type:'text', visible:true},
   {key:'zone', label:'Кольцо', type:'text', visible:true},
-  {key:'project_status', label:'Статус проекта / стадия строительства', type:'text', visible:true},
+  {key:'project_status', label:'Статус проекта', type:'text', visible:true},
   {key:'input_year', label:'Год ввода', type:'number', visible:true},
   {key:'input_quarter', label:'Квартал ввода', type:'number', visible:true},
   {key:'input_date_kind', label:'Заявлено/подтверждено', type:'text', visible:false},
   {key:'gba', label:'GBA', type:'number', visible:true},
   {key:'gla', label:'GLA', type:'number', visible:true},
   {key:'office_area', label:'Офисная площадь', type:'number', visible:false},
-  {key:'area_scope', label:'Уровень площади', type:'text', visible:false},
+  {key:'area_scope', label:'Уровень площади', type:'text', visible:false, displayMap: AREA_SCOPE_DISPLAY},
   {key:'market_channel', label:'Сегменты рынка (справочно)', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
-  {key:'quarter_offer_exists', label:'Есть в текущем квартале', type:'bool', visible:false},
-  {key:'offer_status', label:'Статус предложения (справочно, сегмент «Продажа офисов»)', type:'text', visible:false},
-  {key:'external_only', label:'Только внешний источник', type:'bool', visible:false},
+  {key:'quarter_offer_exists', label:'Есть предложение в квартале', type:'bool', visible:false},
+  {key:'offer_status', label:'Статус предложения', type:'text', visible:false},
   {key:'source', label:'Источник', type:'text', visible:true},
-  {key:'last_verified_at', label:'Дата проверки', type:'text', visible:true},
+  {key:'last_verified_at', label:'Дата последней проверки', type:'text', visible:true},
   {key:'confidence', label:'Уровень доверия', type:'text', visible:true},
-  {key:'verification_status', label:'Статус проверки', type:'text', visible:false},
-  {key:'qa_status', label:'QA', type:'text', visible:true},
-  {key:'public_visibility', label:'Видимость', type:'text', visible:false},
+  {key:'qa_status', label:'Статус проверки', type:'text', visible:true, displayMap: QA_STATUS_DISPLAY},
+  {key:'geometry_quality', label:'Точность координат', type:'text', visible:false, displayMap: GEOMETRY_QUALITY_DISPLAY},
+  {key:'offer_not_started_reason', label:'Причина отсутствия предложения', type:'text', visible:false},
+  {key:'latitude', label:'Широта', type:'number', visible:false},
+  {key:'longitude', label:'Долгота', type:'number', visible:false},
+  // --- технические/служебные поля — только в режиме QA ---
+  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
+  {key:'canonical_building_id', label:'ID корпуса (техн.)', type:'text', visible:false, internal:true},
+  {key:'raw_name', label:'Исходное название (техн.)', type:'text', visible:false, internal:true},
+  {key:'aliases', label:'Альт. названия (техн.)', type:'list', visible:false, internal:true},
+  {key:'external_only', label:'Только внешний источник (техн.)', type:'bool', visible:false, internal:true, boolTrueLabel:'Найдено только во внешнем источнике'},
+  {key:'public_visibility', label:'Видимость (техн.)', type:'text', visible:false, internal:true},
+  {key:'quarter_offer_refs', label:'Ссылки на квартальные записи (техн.)', type:'list', visible:false, internal:true},
+  {key:'verification_status', label:'Статус верификации (техн.)', type:'text', visible:false, internal:true, displayMap: VERIFICATION_STATUS_DISPLAY},
+  {key:'qa_notes', label:'QA-заметки (техн.)', type:'text', visible:false, internal:true},
+  {key:'entity_grain', label:'Уровень записи (техн.)', type:'text', visible:false, internal:true},
+  {key:'first_seen_at', label:'Впервые зафиксировано (техн.)', type:'text', visible:false, internal:true},
+  {key:'source_count', label:'Число источников (техн.)', type:'number', visible:false, internal:true},
 ];
 
 // --- Продажа офисов ---
@@ -250,7 +296,7 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_bizFormed', label:'Дел. район (сформ., реестр)', type:'text', visible:false},
   {key:'reg_bizForming', label:'Дел. район (форм., реестр)', type:'text', visible:false},
   {key:'on_sale', label:'В продаже', type:'text', visible:true},
-  {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:true},
+  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
   {key:'reg_market_channel', label:'Сегменты рынка проекта (справочно)', type:'list', visible:false, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:true},
@@ -275,7 +321,7 @@ const SALE_LOTS_COLUMNS = [
   {key:'total', label:'Итого, руб', type:'number', visible:true},
   {key:'scheme', label:'Планировка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:false},
+  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -294,7 +340,7 @@ const RENT_BUILDINGS_COLUMNS = [
   {key:'lotsCount', label:'Предложений', type:'number', visible:true},
   {key:'areaSum', label:'Площадь суммарно', type:'number', visible:true},
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
-  {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:false},
+  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
 ];
 const RENT_LANDLORDS_COLUMNS = [
@@ -315,7 +361,7 @@ const RENT_LOTS_COLUMNS = [
   {key:'nds', label:'НДС', type:'text', visible:false},
   {key:'finish', label:'Отделка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:false},
+  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -402,6 +448,16 @@ let currentQuarterId = QUARTERS[0].id;
 let dataMeta = {};
 let pageSize = 100;
 let suppressURLSync = false; // true пока восстанавливаем состояние из URL — не переписывать URL посреди восстановления
+// Режим QA — открывает доступ к техническим/служебным колонкам (internal:true).
+// В обычном режиме такие колонки не видны нигде: ни в таблице, ни в панели
+// "Колонки", ни в фильтрах, ни в глобальном поиске, ни в экспорте — это не
+// два параллельных набора данных, а один и тот же движок с одним переключателем
+// видимости, так что режимы не могут "смешаться" (в internal-режиме всё то же,
+// что в обычном, плюс дополнительные колонки).
+let qaMode = false;
+function isColumnShown(col) {
+  return col.visible && (qaMode || !col.internal);
+}
 
 // ============================================================
 //  ЗАГРУЗКА ДАННЫХ
@@ -716,17 +772,24 @@ async function loadCompareSegments(quarterId) {
 // Технические enum-значения (market_channel и т.п.) переводятся в
 // пользовательские подписи через col.displayMap — единая точка перевода
 // для отображения, сортировки, фильтра и экспорта одной и той же колонки.
+// Регистронезависимо: одни и те же технические коды встречаются в проекте
+// в разных регистрах (например BLOCKED_BY_EVIDENCE в одних QA-документах,
+// blocked_by_evidence в других).
+function translateValue(col, v) {
+  if (v == null || v === '' || !col.displayMap) return v;
+  return col.displayMap[v] ?? col.displayMap[String(v).toLowerCase()] ?? v;
+}
 function listDisplayValues(row, col) {
   const raw = row[col.key];
   if (!Array.isArray(raw)) return [];
-  return raw.map(v => (col.displayMap && col.displayMap[v]) || String(v));
+  return raw.map(v => String(translateValue(col, v)));
 }
 
 function cellValue(row, col) {
   let v = row[col.key];
   if (col.type === 'list' && Array.isArray(v)) return listDisplayValues(row, col).join(', ');
-  if (col.type === 'bool') return v === true ? 'да' : (v === false ? 'нет' : '');
-  return v;
+  if (col.type === 'bool') return v === true ? (col.boolTrueLabel || 'да') : (v === false ? (col.boolFalseLabel || 'нет') : '');
+  return translateValue(col, v);
 }
 
 function passesCondition(row, col, cond) {
@@ -786,7 +849,7 @@ function getFilteredSortedRows(ts) {
     if (ts.globalSearch) {
       const q = ts.globalSearch.toLowerCase();
       const hit = ts.columns.some(col => {
-        if (!col.visible) return false;
+        if (!isColumnShown(col)) return false;
         const v = cellValue(row, col);
         return v != null && String(v).toLowerCase().includes(q);
       });
@@ -914,17 +977,24 @@ const VIEW_SOURCE_LABEL = {
   compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
 };
 
+// Виды, где строка соответствует ровно одной записи общего кодификатора
+// (сама запись либо надёжно joined через canonical_project_id) — там есть
+// смысл в кнопке "Источник и проверка". Агрегаты (девелоперы/арендодатели/
+// операторы) и сравнение сегментов — не привязаны к одной записи, кнопки нет.
+const SOURCE_CARD_VIEWS = new Set(['codifier', 'sale_buildings', 'sale_lots', 'rent_buildings', 'rent_lots', 'flex_lots']);
+
 function render() {
   const ts = state[currentView];
   const filteredRows = getFilteredSortedRows(ts);
-  const cols = ts.columns.filter(c => c.visible);
+  const cols = ts.columns.filter(isColumnShown);
+  const showCard = SOURCE_CARD_VIEWS.has(currentView);
 
   const totalPages = Math.max(1, Math.ceil(filteredRows.length / pageSize));
   ts.page = Math.min(Math.max(1, ts.page || 1), totalPages);
   const pageRows = filteredRows.slice((ts.page - 1) * pageSize, ts.page * pageSize);
 
   const thead = document.querySelector('#mainTable thead');
-  thead.innerHTML = '<tr>' + cols.map(col => {
+  thead.innerHTML = '<tr>' + (showCard ? '<th class="card-th" title="Источник и проверка">ℹ</th>' : '') + cols.map(col => {
     const isSorted = ts.sort.key === col.key;
     const sortInd = isSorted ? `<span class="sort-ind">${ts.sort.dir === 1 ? '▲' : '▼'}</span>` : '';
     const f = ts.filters[col.key];
@@ -938,7 +1008,7 @@ function render() {
 
   const tbody = document.querySelector('#mainTable tbody');
   if (pageRows.length === 0) {
-    const colspan = Math.max(1, cols.length);
+    const colspan = Math.max(1, cols.length + (showCard ? 1 : 0));
     tbody.innerHTML = `<tr class="no-results-row"><td colspan="${colspan}">`
       + (filteredRows.length === 0 && ts.rows.length > 0
           ? 'Нет строк, удовлетворяющих текущим фильтрам.'
@@ -946,14 +1016,20 @@ function render() {
       + (filteredRows.length === 0 && ts.rows.length > 0 ? ' <button type="button" class="btn" id="btnResetInline">Сбросить фильтры</button>' : '')
       + `</td></tr>`;
   } else {
-    tbody.innerHTML = pageRows.map(row => {
+    tbody.innerHTML = pageRows.map((row, i) => {
       const rowClass = row.qa_status === 'conflict' ? 'qa-conflict' : (row.qa_status === 'quarantine' ? 'qa-quarantine' : '');
-      return `<tr class="${rowClass}">` + cols.map(col => {
+      const cardCell = showCard ? `<td><button type="button" class="card-btn" data-row-idx="${i}" title="Источник и проверка">ℹ</button></td>` : '';
+      return `<tr class="${rowClass}">` + cardCell + cols.map(col => {
         const v = cellValue(row, col);
         const display = (v == null || v === '') ? '<span class="empty-cell">—</span>' : escapeHtml(String(v));
         return `<td>${display}</td>`;
       }).join('') + '</tr>';
     }).join('');
+    if (showCard) {
+      document.querySelectorAll('#mainTable .card-btn').forEach(btn => {
+        btn.onclick = () => openSourceCard(pageRows[Number(btn.dataset.rowIdx)]);
+      });
+    }
   }
   const resetInline = document.getElementById('btnResetInline');
   if (resetInline) resetInline.onclick = () => document.getElementById('btnReset').click();
@@ -996,6 +1072,67 @@ function attachHeaderHandlers() {
       openFilterPanel(btn, col);
     };
   });
+}
+
+// ============================================================
+//  РАСШИРЕННАЯ КАРТОЧКА ИСТОЧНИКА (кнопка ℹ в начале строки)
+// ============================================================
+// Здесь, а не в основной таблице, живут "технические, но нужные для
+// проверки" поля — источник/дата/доверие/точность координат/исходное
+// название/QA-заметки/причина отсутствия предложения/конфликт источников.
+// В общем кодификаторе строка сама и есть запись реестра; в остальных
+// разделах ищем запись реестра по canonical_project_id, который уже
+// проставлен join'ом при загрузке (см. joinRegistryFields).
+function resolveRegistryRecord(row) {
+  if (currentView === 'codifier') return row;
+  if (row.canonical_project_id) return allProjectsLayer.find(r => r.canonical_project_id === row.canonical_project_id) || null;
+  return null;
+}
+
+function openSourceCard(row) {
+  closePanels();
+  const record = resolveRegistryRecord(row);
+  const panel = document.createElement('div');
+  panel.className = 'filter-panel source-card';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', 'Источник и проверка записи');
+
+  if (!record) {
+    panel.innerHTML = `<div class="fp-header"><span class="fp-title">Источник и проверка</span><span class="fp-close" id="scClose">×</span></div>`
+      + `<div style="font-size:12px;color:#888;padding:8px 0;">Строка не сопоставлена с общим кодификатором — расширенные сведения недоступны.</div>`;
+  } else {
+    const conflictInfo = record.qa_status === 'conflict'
+      ? 'Обнаружен конфликт источников — запись требует проверки.'
+      : (record.verification_status === 'under_review' ? 'Запись на проверке, окончательно не подтверждена.' : 'Конфликтов источников не выявлено.');
+    const fields = [
+      ['Источник', record.source],
+      ['Дата последней проверки', record.last_verified_at],
+      ['Уровень доверия', record.confidence],
+      ['Точность координат', translateValue({displayMap: GEOMETRY_QUALITY_DISPLAY}, record.geometry_quality)],
+      ['Исходное название', record.raw_name],
+      ['Предупреждения', record.qa_notes],
+      ['Причина отсутствия предложения', record.offer_not_started_reason],
+      ['Сведения о конфликте источников', conflictInfo],
+    ];
+    panel.innerHTML = `<div class="fp-header"><span class="fp-title">Источник и проверка — ${escapeHtml(record.canonical_name || '')}</span><span class="fp-close" id="scClose">×</span></div>`
+      + fields.map(([label, value]) => `<div class="sc-row"><b>${escapeHtml(label)}</b>${escapeHtml(value == null || value === '' ? '—' : String(value))}</div>`).join('');
+  }
+  document.body.appendChild(panel);
+  const left = Math.max(8, (window.innerWidth - panel.offsetWidth) / 2);
+  const top = Math.max(8, (window.innerHeight - panel.offsetHeight) / 2);
+  panel.style.left = left + 'px';
+  panel.style.top = top + 'px';
+
+  function cancel() { closePanels(); }
+  panel.querySelector('#scClose').onclick = cancel;
+  setTimeout(() => {
+    document.addEventListener('click', function onDocClick(ev) {
+      if (!panel.contains(ev.target)) { cancel(); document.removeEventListener('click', onDocClick); }
+    });
+    document.addEventListener('keydown', function onEsc(ev) {
+      if (ev.key === 'Escape') { cancel(); document.removeEventListener('keydown', onEsc); }
+    });
+  }, 0);
 }
 
 // ============================================================
@@ -1211,7 +1348,10 @@ document.getElementById('btnColumns').onclick = (e) => {
   const ts = state[currentView];
   const panel = document.createElement('div');
   panel.className = 'cols-panel';
-  panel.innerHTML = ts.columns.map(col =>
+  // Технические колонки (internal:true) в панели "Колонки" не появляются
+  // вообще, пока не включён режим QA — пользовательский и внутренний режимы
+  // не смешиваются: без QA их нельзя ни увидеть, ни включить отсюда.
+  panel.innerHTML = ts.columns.filter(col => qaMode || !col.internal).map(col =>
     `<label><input type="checkbox" class="colVis" data-key="${col.key}" ${col.visible?'checked':''}> ${escapeHtml(col.label)}</label>`
   ).join('');
   document.body.appendChild(panel);
@@ -1253,10 +1393,16 @@ document.getElementById('btnReset').onclick = () => {
   document.getElementById('globalSearch').value = '';
   render();
 };
+document.getElementById('qaModeToggle').onchange = (e) => {
+  qaMode = e.target.checked;
+  closePanels(); // открытая панель "Колонки"/фильтра могла ссылаться на internal-колонку
+  render();
+  if (!suppressURLSync) syncURL();
+};
 
 function currentExportRows() {
   const ts = state[currentView];
-  const cols = ts.columns.filter(c => c.visible);
+  const cols = ts.columns.filter(isColumnShown);
   const rows = getFilteredSortedRows(ts);
   return {cols, rows};
 }
@@ -1391,6 +1537,7 @@ function syncURL() {
   const ts = state[currentView];
   const p = new URLSearchParams();
   p.set('view', currentView);
+  if (qaMode) p.set('qa', '1');
   if (VIEWS[currentView].section !== 'codifier') p.set('q', currentQuarterId);
   if (currentView === 'sale_buildings' && compareQuarterId) p.set('cmp', compareQuarterId);
   if (ts.globalSearch) p.set('search', ts.globalSearch);
@@ -1425,6 +1572,7 @@ function restoreFromURL() {
     currentView = view;
     currentSection = VIEWS[view].section;
   }
+  qaMode = p.get('qa') === '1';
   const q = p.get('q');
   if (q && QUARTERS.some(x => x.id === q)) currentQuarterId = q;
   const cmp = p.get('cmp');
@@ -1583,6 +1731,7 @@ quarterSelect.onchange = (e) => {
 (async function init() {
   restoreFromURL();
   document.getElementById('pageSizeSelect').value = String(pageSize);
+  document.getElementById('qaModeToggle').checked = qaMode;
   await loadCodifier();
   syncSectionTabsActive();
   renderSubtabs();
