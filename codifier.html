@@ -305,8 +305,10 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_project_status', label:'Статус проекта (реестр)', type:'text', visible:true},
   {key:'reg_offer_status', label:'Статус предл. (реестр)', type:'text', visible:false},
   {key:'year', label:'Год', type:'number', visible:true},
-  {key:'construction_start_q', label:'Начало строительства', type:'text', visible:true},
-  {key:'sales_start_q', label:'Старт продаж', type:'text', visible:true},
+  {key:'construction_start_year', label:'Начало стр-ва, год', type:'number', visible:true},
+  {key:'construction_start_quarter', label:'Начало стр-ва, квартал', type:'number', visible:true},
+  {key:'sales_start_year', label:'Старт продаж, год', type:'number', visible:true},
+  {key:'sales_start_quarter', label:'Старт продаж, квартал', type:'number', visible:true},
   {key:'reg_input_quarter', label:'Квартал ввода (реестр)', type:'number', visible:false},
   {key:'gla', label:'GLA здания, м²', type:'number', visible:true},
   {key:'gba', label:'GBA здания, м² (справочно)', type:'number', visible:false},
@@ -548,12 +550,13 @@ async function loadBuildingDates() {
   catch (e) { buildingDatesCache = {}; }
   return buildingDatesCache;
 }
-// "202503" -> "Q1 2025"
-function formatQuarterId(q) {
-  if (!q || String(q).length !== 6) return q;
-  const y = String(q).slice(0, 4), m = String(q).slice(4, 6);
-  const qtr = {'01':'Q1','02':'Q1','03':'Q1','04':'Q2','05':'Q2','06':'Q2','07':'Q3','08':'Q3','09':'Q3','10':'Q4','11':'Q4','12':'Q4'}[m] || m;
-  return `${qtr} ${y}`;
+// "202503" -> {year:2025, quarter:1} — тот же вид, что input_year/input_quarter
+// у ввода в реестре (2 числовые колонки, фильтруются отдельно).
+function parseQuarterId(q) {
+  if (!q || String(q).length !== 6) return {year: null, quarter: null};
+  const year = Number(String(q).slice(0, 4));
+  const month = Number(String(q).slice(4, 6));
+  return {year, quarter: Math.ceil(month / 3)};
 }
 
 async function fetchBuildingsWithJoin(quarterId) {
@@ -563,8 +566,12 @@ async function fetchBuildingsWithJoin(quarterId) {
   for (const row of rows) {
     joinRegistryFields(row, byName, 'name', 'name_orig');
     const bd = dates[String(row.name || '').toLowerCase()] || dates[String(row.name_orig || '').toLowerCase()];
-    row.construction_start_q = bd ? formatQuarterId(bd.construction_start_q) : null;
-    row.sales_start_q = bd ? formatQuarterId(bd.start_q) : null;
+    const cs = parseQuarterId(bd?.construction_start_q);
+    const ss = parseQuarterId(bd?.start_q);
+    row.construction_start_year = cs.year;
+    row.construction_start_quarter = cs.quarter;
+    row.sales_start_year = ss.year;
+    row.sales_start_quarter = ss.quarter;
   }
   return rows;
 }
