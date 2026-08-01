@@ -120,6 +120,11 @@
 </div>
 
 <div class="status-row" id="statusRow"></div>
+<div class="status-row" id="qaLegend">
+  Подсветка строк: <span style="background:#fff3f0;padding:1px 6px;border-radius:3px;">конфликт источников</span>
+  <span style="background:#fff8e1;padding:1px 6px;border-radius:3px;margin-left:6px;">на карантине/проверке</span>
+  <span style="margin-left:6px;">— без цвета: проверено, конфликтов нет</span>
+</div>
 <div class="status-row" id="totalsRow" style="font-weight:600;"></div>
 <div class="table-wrap"><table id="mainTable"><thead></thead><tbody></tbody></table></div>
 <div class="status-row" id="pagerRow" style="display:flex; align-items:center; gap:8px;">
@@ -231,6 +236,10 @@ const GEOMETRY_QUALITY_DISPLAY = {
 // остаются доступны всем через панель "Колонки" — это просто "свёрнутые",
 // а не "запрещённые" колонки.
 const CODIFIER_COLUMNS = [
+  // ID и QA-статус/примечания — ядро смысла кодификатора (сквозная
+  // идентификация + видимая проверка данных), не прячем их за режим QA:
+  // internal:true оставлен только для действительно служебных полей ниже.
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
   {key:'canonical_name', label:'Проект', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
@@ -257,12 +266,12 @@ const CODIFIER_COLUMNS = [
   {key:'last_verified_at', label:'Дата последней проверки', type:'text', visible:true},
   {key:'confidence', label:'Уровень доверия', type:'text', visible:true},
   {key:'qa_status', label:'Статус проверки', type:'text', visible:true, displayMap: QA_STATUS_DISPLAY},
+  {key:'qa_notes', label:'Примечания', type:'text', visible:true},
   {key:'geometry_quality', label:'Точность координат', type:'text', visible:false, displayMap: GEOMETRY_QUALITY_DISPLAY},
   {key:'offer_not_started_reason', label:'Причина отсутствия предложения', type:'text', visible:false},
   {key:'latitude', label:'Широта', type:'number', visible:false},
   {key:'longitude', label:'Долгота', type:'number', visible:false},
   // --- технические/служебные поля — только в режиме QA ---
-  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
   {key:'canonical_building_id', label:'ID корпуса (техн.)', type:'text', visible:false, internal:true},
   {key:'raw_name', label:'Исходное название (техн.)', type:'text', visible:false, internal:true},
   {key:'aliases', label:'Альт. названия (техн.)', type:'list', visible:false, internal:true},
@@ -270,7 +279,6 @@ const CODIFIER_COLUMNS = [
   {key:'public_visibility', label:'Видимость (техн.)', type:'text', visible:false, internal:true},
   {key:'quarter_offer_refs', label:'Ссылки на квартальные записи (техн.)', type:'list', visible:false, internal:true},
   {key:'verification_status', label:'Статус верификации (техн.)', type:'text', visible:false, internal:true, displayMap: VERIFICATION_STATUS_DISPLAY},
-  {key:'qa_notes', label:'QA-заметки (техн.)', type:'text', visible:false, internal:true},
   {key:'entity_grain', label:'Уровень записи (техн.)', type:'text', visible:false, internal:true},
   {key:'first_seen_at', label:'Впервые зафиксировано (техн.)', type:'text', visible:false, internal:true},
   {key:'source_count', label:'Число источников (техн.)', type:'number', visible:false, internal:true},
@@ -299,7 +307,7 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_bizFormed', label:'Дел. район (сформ., реестр)', type:'text', visible:false},
   {key:'reg_bizForming', label:'Дел. район (форм., реестр)', type:'text', visible:false},
   {key:'on_sale', label:'В продаже', type:'text', visible:true},
-  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
   {key:'reg_market_channel', label:'Сегменты рынка проекта (справочно)', type:'list', visible:false, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:true},
@@ -325,7 +333,7 @@ const SALE_LOTS_COLUMNS = [
   {key:'total', label:'Итого, руб', type:'number', visible:true},
   {key:'scheme', label:'Планировка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -348,7 +356,7 @@ const RENT_BUILDINGS_COLUMNS = [
   {key:'lotsCount', label:'Предложений аренды', type:'number', visible:true},
   {key:'areaSum', label:'Площадь предложений аренды (сумма), м²', type:'number', visible:true},
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
-  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
 ];
 const RENT_LANDLORDS_COLUMNS = [
@@ -369,7 +377,7 @@ const RENT_LOTS_COLUMNS = [
   {key:'nds', label:'НДС', type:'text', visible:false},
   {key:'finish', label:'Отделка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'ID проекта (техн.)', type:'text', visible:false, internal:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -388,6 +396,7 @@ const FLEX_OPERATORS_COLUMNS = [
   {key:'weightedRate', label:'Ср. ставка (взвеш. по местам)', type:'number', visible:true},
 ];
 const FLEX_LOTS_COLUMNS = [
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true},
   {key:'name', label:'Объект', type:'text', visible:true},
   {key:'network', label:'Оператор', type:'text', visible:true},
   {key:'flex_type', label:'Тип', type:'text', visible:true},
@@ -511,6 +520,10 @@ function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
   row.reg_submarket = match ? match.submarket : null;
   row.reg_gla = match ? match.gla : null;
   row.reg_gba = match ? match.gba : null;
+  // Для цветовой подсветки конфликтов/карантина в разделах Продажа/Аренда/
+  // Гибкие офисы — те же строки, что joined к реестру, должны подсвечиваться
+  // так же, как в общем кодификаторе, а не только там (см. rowClass в render()).
+  row.reg_qa_status = match ? match.qa_status : null;
   return match;
 }
 
@@ -1070,7 +1083,8 @@ function render() {
       + `</td></tr>`;
   } else {
     tbody.innerHTML = pageRows.map((row, i) => {
-      const rowClass = row.qa_status === 'conflict' ? 'qa-conflict' : (row.qa_status === 'quarantine' ? 'qa-quarantine' : '');
+      const effectiveQaStatus = row.qa_status || row.reg_qa_status;
+      const rowClass = effectiveQaStatus === 'conflict' ? 'qa-conflict' : (effectiveQaStatus === 'quarantine' ? 'qa-quarantine' : '');
       const cardCell = showCard ? `<td><button type="button" class="card-btn" data-row-idx="${i}" title="Источник и проверка">ℹ</button></td>` : '';
       return `<tr class="${rowClass}">` + cardCell + cols.map(col => {
         const v = cellValue(row, col);
