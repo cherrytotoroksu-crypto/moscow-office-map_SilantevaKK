@@ -62,6 +62,12 @@
   .qa-quarantine { background:#fff8e1 !important; }
   .no-results-row td { text-align:center; padding:28px 16px; color:#888; font-size:13px; }
   .no-results-row .btn { margin-left:8px; }
+  .segment-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; padding:14px 16px; background:#f4f5f7; }
+  .seg-card { background:#fff; border:1px solid #dde; border-radius:8px; padding:14px; }
+  .seg-card h3 { font-size:13px; margin-bottom:8px; color:#2F4858; }
+  .seg-card .seg-row { font-size:12px; color:#555; margin-bottom:4px; }
+  .seg-card .seg-row b { color:#1a1a1a; }
+  .seg-card button { margin-top:10px; width:100%; }
 </style>
 </head>
 <body>
@@ -76,8 +82,10 @@
   <div class="tab" data-section="sale">Продажа офисов</div>
   <div class="tab" data-section="rent">Аренда офисов</div>
   <div class="tab" data-section="flex">Гибкие офисы</div>
+  <div class="tab" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</div>
 </div>
 <div class="subtabs" id="viewTabs" style="display:none;"></div>
+<div class="segment-cards" id="segmentCards" style="display:none;"></div>
 
 <div class="toolbar" id="toolbar">
   <input type="search" id="globalSearch" placeholder="Поиск по всей таблице...">
@@ -87,7 +95,7 @@
   </select>
   <select id="presetSelect">
     <option value="">Пресеты...</option>
-    <option value="all_sale">Только канал продажи</option>
+    <option value="all_sale">Только сегмент «Продажа офисов»</option>
     <option value="under_construction">Строящиеся</option>
     <option value="delivered">Введённые</option>
     <option value="no_source">Без источника</option>
@@ -143,10 +151,10 @@ function fetchJSON(url) {
 // ============================================================
 //  РАЗДЕЛЫ И ВКЛАДКИ
 // ============================================================
-// Верхний уровень навигации — 4 раздела. Канал определяется ВЫБРАННЫМ
-// РАЗДЕЛОМ, а не отдельным селектором (см. правки этой задачи, раньше
-// «Все лоты» была одной вкладкой с выпадающим списком sale/rent/coworking,
-// что и создавало ощущение смешения каналов).
+// Верхний уровень навигации — 4 раздела + отдельный режим сравнения
+// агрегатов. Сегмент рынка определяется ВЫБРАННЫМ РАЗДЕЛОМ, а не отдельным
+// селектором (раньше «Все лоты» была одной вкладкой с выпадающим списком
+// sale/rent/coworking, что и создавало ощущение смешения сегментов).
 const SECTIONS = [
   {id:'codifier', label:'Общий кодификатор', views:['codifier']},
   {id:'sale',     label:'Продажа офисов',    views:['sale_buildings','sale_developers','sale_lots']},
@@ -163,11 +171,19 @@ const VIEWS = {
   rent_lots:       {section:'rent',     label:'Все предложения аренды'},
   flex_operators:  {section:'flex',     label:'Операторы и объекты'},
   flex_lots:       {section:'flex',     label:'Все гибкие предложения'},
+  compare_segments:{section:'compare',  label:'Сравнение сегментов'},
 };
-// Канал показывается в шапке/итогах каждой таблицы (требование "не должен
-// быть одним неоднозначным фильтром в смешанной таблице" — здесь канал
-// вообще не фильтр, это то, какой раздел/файл выбран).
-const SECTION_CHANNEL_LABEL = {codifier:null, sale:'Продажа', rent:'Аренда', flex:'Гибкие офисы'};
+// Пользовательское название — "Сегмент рынка" (не "Канал", технический
+// market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
+// каждой таблицы — это не фильтр, а то, какой раздел/файл выбран.
+const SEGMENT_LABEL = {codifier:null, sale:'Продажа офисов', rent:'Аренда офисов', flex:'Гибкие офисы', compare:null};
+// Технические enum-значения market_channel из общего реестра — не показываем
+// как есть, переводим в те же формулировки, что и разделы навигации.
+const MARKET_CHANNEL_DISPLAY = {
+  sale: 'Продажа офисов', rent: 'Аренда офисов',
+  coworking: 'Гибкие офисы (коворкинг)', serviced_office: 'Гибкие офисы (серв. офис)',
+  other: 'Другое / не установлено',
+};
 
 // ============================================================
 //  ОПРЕДЕЛЕНИЯ КОЛОНОК
@@ -199,9 +215,9 @@ const CODIFIER_COLUMNS = [
   {key:'gla', label:'GLA', type:'number', visible:true},
   {key:'office_area', label:'Офисная площадь', type:'number', visible:false},
   {key:'area_scope', label:'Уровень площади', type:'text', visible:false},
-  {key:'market_channel', label:'Каналы (справочно)', type:'list', visible:true},
+  {key:'market_channel', label:'Сегменты рынка (справочно)', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'quarter_offer_exists', label:'Есть в текущем квартале', type:'bool', visible:false},
-  {key:'offer_status', label:'Статус предложения (справочно, канал продажи)', type:'text', visible:false},
+  {key:'offer_status', label:'Статус предложения (справочно, сегмент «Продажа офисов»)', type:'text', visible:false},
   {key:'external_only', label:'Только внешний источник', type:'bool', visible:false},
   {key:'source', label:'Источник', type:'text', visible:true},
   {key:'last_verified_at', label:'Дата проверки', type:'text', visible:true},
@@ -235,7 +251,7 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_bizForming', label:'Дел. район (форм., реестр)', type:'text', visible:false},
   {key:'on_sale', label:'В продаже', type:'text', visible:true},
   {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:true},
-  {key:'reg_market_channel', label:'Каналы проекта (справочно)', type:'list', visible:false},
+  {key:'reg_market_channel', label:'Сегменты рынка проекта (справочно)', type:'list', visible:false, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:true},
 ];
@@ -251,7 +267,7 @@ const SALE_DEVELOPERS_COLUMNS = [
 ];
 const SALE_LOTS_COLUMNS = [
   {key:'building', label:'Здание', type:'text', visible:true},
-  {key:'market_channel', label:'Канал', type:'text', visible:true},
+  {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
   {key:'area', label:'Площадь', type:'number', visible:true},
   {key:'size', label:'Размер', type:'number', visible:false},
@@ -290,7 +306,7 @@ const RENT_LANDLORDS_COLUMNS = [
 ];
 const RENT_LOTS_COLUMNS = [
   {key:'building', label:'Здание', type:'text', visible:true},
-  {key:'market_channel', label:'Канал', type:'text', visible:true},
+  {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
   {key:'area', label:'Площадь', type:'number', visible:true},
   {key:'size', label:'Размер', type:'number', visible:false},
@@ -334,6 +350,24 @@ const FLEX_LOTS_COLUMNS = [
 const FLEX_FILE_BY_TYPE = {coworking: 'coworking'}; // service_office: файла-источника пока нет
 const FLEX_TYPE_LABEL = {coworking: 'Коворкинг', service_office: 'Сервисный офис'};
 
+// --- Сравнение сегментов ---
+// Только агрегаты/KPI по трём сегментам (не детальные строки лотов/зданий —
+// см. требование "не объединяй детальные строки продаж, аренды и гибких
+// офисов в одну таблицу"). volumeLabel/rateLabel — единица показателя
+// объёма/ставки различается по сегменту (площадь для продажи/аренды, места
+// для гибких офисов), поэтому подпись — тоже отдельное поле, не жёстко
+// зашитая в заголовок колонки.
+const COMPARE_COLUMNS = [
+  {key:'segment', label:'Сегмент рынка', type:'text', visible:true},
+  {key:'objects', label:'Объектов', type:'number', visible:true},
+  {key:'volumeLabel', label:'Показатель объёма', type:'text', visible:true},
+  {key:'volume', label:'Объём предложения', type:'number', visible:true},
+  {key:'lotsCount', label:'Лотов/предложений', type:'number', visible:true},
+  {key:'rateLabel', label:'Показатель ставки/цены', type:'text', visible:true},
+  {key:'rate', label:'Ставка/цена (ср.взв.)', type:'number', visible:true},
+  {key:'updated', label:'Дата среза', type:'text', visible:true},
+];
+
 // ============================================================
 //  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для всех вкладок)
 // ============================================================
@@ -361,6 +395,7 @@ const state = {
   rent_lots: makeTableState(RENT_LOTS_COLUMNS),
   flex_operators: makeTableState(FLEX_OPERATORS_COLUMNS),
   flex_lots: makeTableState(FLEX_LOTS_COLUMNS),
+  compare_segments: makeTableState(COMPARE_COLUMNS),
 };
 let allProjectsLayer = [];
 let currentQuarterId = QUARTERS[0].id;
@@ -471,7 +506,7 @@ async function loadSaleLots(quarterId) {
   }
   const byName = registryByNameMap();
   for (const row of rows) {
-    row.market_channel = 'Продажа'; // явное, константное поле — вся вкладка = один канал
+    row.market_channel = SEGMENT_LABEL.sale; // явное, константное поле — вся вкладка = один сегмент рынка
     joinRegistryFields(row, byName, 'building', null);
   }
   state.sale_lots.rows = rows;
@@ -559,7 +594,7 @@ async function loadRentLots(quarterId) {
   }
   const byName = registryByNameMap();
   for (const row of rows) {
-    row.market_channel = 'Аренда';
+    row.market_channel = SEGMENT_LABEL.rent;
     joinRegistryFields(row, byName, 'building', null);
   }
   state.rent_lots.rows = rows;
@@ -616,12 +651,80 @@ async function loadFlexLots(quarterId) {
   render();
 }
 
+// --- Сравнение сегментов ---
+// Лёгкие агрегаты-KPI по трём сегментам для режима "Сравнить сегменты" и
+// для карточек на стартовом экране кодификатора. Формулы средневзвешенных
+// — те же самые, что уже используются в loadRentBuildings/computeTotals
+// (sum(rate*area)/sum(area) и т.п.), просто без побочных эффектов на
+// детальные state[view].rows — здесь не расчёты меняются, а способ их
+// применить, чтобы посчитать сводку без полной загрузки детальных таблиц.
+async function computeSegmentKPIs(quarterId) {
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+
+  let saleRaw = {};
+  try { saleRaw = await fetchJSON(`data/lots_${quarterId}.json`); } catch (e) {}
+  let saleObjects = 0, saleLots = 0, saleArea = 0, saleTotal = 0;
+  for (const lotRows of Object.values(saleRaw)) {
+    saleObjects += 1;
+    for (const lot of lotRows) {
+      saleLots += 1;
+      if (lot.area != null) saleArea += Number(lot.area);
+      if (lot.total != null) saleTotal += Number(lot.total);
+    }
+  }
+
+  const rentRaw = await fetchRentLotsRaw(quarterId);
+  let rentObjects = 0, rentLots = 0, rentArea = 0, rentRateWeighted = 0;
+  for (const lotRows of Object.values(rentRaw)) {
+    rentObjects += 1;
+    for (const lot of lotRows) {
+      rentLots += 1;
+      if (lot.area != null) rentArea += Number(lot.area);
+      if (lot.rate != null && lot.area != null) rentRateWeighted += Number(lot.rate) * Number(lot.area);
+    }
+  }
+
+  const flexRaw = await fetchFlexRowsRaw(quarterId);
+  let flexSeats = 0, flexRateWeighted = 0, flexSeatsForRate = 0;
+  for (const r of flexRaw) {
+    if (r.seats != null) flexSeats += Number(r.seats);
+    if (r.rate != null && r.seats != null) { flexRateWeighted += Number(r.rate) * Number(r.seats); flexSeatsForRate += Number(r.seats); }
+  }
+
+  return {
+    sale: {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel:'Площадь, м²', volume: saleArea || null,
+           lotsCount: saleLots, rateLabel:'Цена (ср.взв.), руб/м²', rate: saleArea ? Math.round(saleTotal / saleArea) : null, updated: label},
+    rent: {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel:'Площадь, м²', volume: rentArea || null,
+           lotsCount: rentLots, rateLabel:'Ставка (ср.взв.), руб/м²/год', rate: rentArea ? Math.round(rentRateWeighted / rentArea) : null, updated: label},
+    flex: {segment: SEGMENT_LABEL.flex, objects: flexRaw.length, volumeLabel:'Мест, всего', volume: flexSeats || null,
+           lotsCount: flexRaw.length, rateLabel:'Ставка (ср.взв.), руб/мес', rate: flexSeatsForRate ? Math.round(flexRateWeighted / flexSeatsForRate) : null, updated: label},
+  };
+}
+
+async function loadCompareSegments(quarterId) {
+  const kpi = await computeSegmentKPIs(quarterId);
+  state.compare_segments.rows = [kpi.sale, kpi.rent, kpi.flex];
+  if (!suppressURLSync) state.compare_segments.page = 1;
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.compare_segments = {updated: label, count: 3};
+  render();
+}
+
 // ============================================================
 //  ФИЛЬТРАЦИЯ / СОРТИРОВКА
 // ============================================================
+// Технические enum-значения (market_channel и т.п.) переводятся в
+// пользовательские подписи через col.displayMap — единая точка перевода
+// для отображения, сортировки, фильтра и экспорта одной и той же колонки.
+function listDisplayValues(row, col) {
+  const raw = row[col.key];
+  if (!Array.isArray(raw)) return [];
+  return raw.map(v => (col.displayMap && col.displayMap[v]) || String(v));
+}
+
 function cellValue(row, col) {
   let v = row[col.key];
-  if (col.type === 'list' && Array.isArray(v)) return v.join(', ');
+  if (col.type === 'list' && Array.isArray(v)) return listDisplayValues(row, col).join(', ');
   if (col.type === 'bool') return v === true ? 'да' : (v === false ? 'нет' : '');
   return v;
 }
@@ -662,10 +765,11 @@ function passesFilter(row, col, filter) {
     return passesCondition(row, col, filter.condition);
   }
   if (filter.values && filter.values.size > 0) {
-    // Для колонок-списков (market_channel и т.п.) — "содержит хотя бы одно
-    // выбранное значение", а не сравнение со всей склеенной строкой целиком.
+    // Для колонок-списков — "содержит хотя бы одно выбранное значение", а не
+    // сравнение со всей склеенной строкой целиком. Сравниваем по тем же
+    // переведённым подписям, что показаны в панели фильтра (listDisplayValues).
     if (col.type === 'list' && Array.isArray(raw)) {
-      return raw.some(v => filter.values.has(String(v)));
+      return listDisplayValues(row, col).some(v => filter.values.has(v));
     }
     const v = String(cellValue(row, col) ?? '');
     return filter.values.has(v);
@@ -725,13 +829,13 @@ function uniqueCount(rows, keyFn) {
   return new Set(rows.map(keyFn).filter(v => v != null)).size;
 }
 
-// Итоги каждого раздела считаются только по его собственному каналу (rows
-// всегда приходят из ОДНОГО файла-источника этого view — см. загрузку выше),
-// и каждая непустая формула начинается с явной метки канала.
+// Итоги каждого раздела считаются только по его собственному сегменту рынка
+// (rows всегда приходят из ОДНОГО файла-источника этого view — см. загрузку
+// выше), и каждая непустая формула начинается с явной метки сегмента.
 function computeTotals(view, rows) {
   const section = VIEWS[view].section;
-  const channelLabel = SECTION_CHANNEL_LABEL[section];
-  const prefix = channelLabel ? `${channelLabel} · ` : '';
+  const segmentLabel = SEGMENT_LABEL[section];
+  const prefix = segmentLabel ? `${segmentLabel} · ` : '';
   if (view === 'codifier') {
     const projects = uniqueCount(rows, r => r.canonical_project_id);
     const gba = sumField(rows, 'gba');
@@ -791,6 +895,9 @@ function computeTotals(view, rows) {
     const vacancy = sumField(rows, 'vacancy');
     return prefix + `Объектов: ${rows.length} · Мест (сумма): ${fmtNum(seats.sum)} · Вакантно (сумма): ${fmtNum(vacancy.sum)}`;
   }
+  if (view === 'compare_segments') {
+    return `Сегментов: ${rows.length} · сравнение агрегатов/KPI, без детальных строк лотов/зданий`;
+  }
   return '';
 }
 
@@ -804,6 +911,7 @@ const VIEW_SOURCE_LABEL = {
   rent_lots: () => `data/rent_lots_${currentQuarterId}.json`,
   flex_operators: () => `data/coworking_${currentQuarterId}.json (агрегат по операторам)`,
   flex_lots: () => `data/coworking_${currentQuarterId}.json`,
+  compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
 };
 
 function render() {
@@ -858,9 +966,11 @@ function render() {
   document.getElementById('pagerLabel').textContent = `Стр. ${ts.page} из ${totalPages}`;
   document.getElementById('btnPrevPage').disabled = ts.page <= 1;
   document.getElementById('btnNextPage').disabled = ts.page >= totalPages;
-  const channelLabel = SECTION_CHANNEL_LABEL[VIEWS[currentView].section];
-  document.getElementById('metaLine').textContent =
-    (channelLabel ? `Канал: ${channelLabel} · ` : '') + VIEW_SOURCE_LABEL[currentView]();
+  const segmentLabel = SEGMENT_LABEL[VIEWS[currentView].section];
+  const headerPrefix = currentView === 'compare_segments'
+    ? 'Сравнение всех сегментов (Продажа офисов / Аренда офисов / Гибкие офисы) · '
+    : (segmentLabel ? `Сегмент рынка: ${segmentLabel} · ` : '');
+  document.getElementById('metaLine').textContent = headerPrefix + VIEW_SOURCE_LABEL[currentView]();
 
   attachHeaderHandlers();
   if (!suppressURLSync) syncURL();
@@ -902,7 +1012,7 @@ function openFilterPanel(anchorEl, col) {
   ts.rows.forEach(row => {
     const raw = row[col.key];
     if (col.type === 'list' && Array.isArray(raw)) {
-      raw.forEach(item => {
+      listDisplayValues(row, col).forEach(item => {
         const key = String(item ?? '');
         if (key === '') return;
         values.set(key, (values.get(key) || 0) + 1);
@@ -1155,6 +1265,7 @@ const VIEW_EXPORT_LABEL = {
   codifier: 'Кодификатор', sale_buildings: 'Продажа_Здания', sale_developers: 'Продажа_Девелоперы', sale_lots: 'Продажа_Лоты',
   rent_buildings: 'Аренда_Объекты', rent_landlords: 'Аренда_Арендодатели', rent_lots: 'Аренда_Предложения',
   flex_operators: 'Гибкие_Операторы', flex_lots: 'Гибкие_Предложения',
+  compare_segments: 'Сравнение_сегментов',
 };
 
 document.getElementById('btnExportCsv').onclick = () => {
@@ -1208,7 +1319,7 @@ document.getElementById('presetSelect').onchange = (e) => {
   const findKey = (...candidates) => candidates.find(k => ts.columns.some(c => c.key === k));
   if (preset === 'all_sale') {
     const key = findKey('market_channel', 'reg_market_channel');
-    if (key) ts.filters[key] = {mode:'values', values: new Set(['sale', 'Продажа']), emptyOnly:false, nonEmptyOnly:false};
+    if (key) ts.filters[key] = {mode:'values', values: new Set([SEGMENT_LABEL.sale]), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'under_construction') {
     const key = findKey('project_status', 'reg_project_status');
     if (key) ts.filters[key] = {mode:'values', values: new Set(['Строится']), emptyOnly:false, nonEmptyOnly:false};
@@ -1390,6 +1501,9 @@ function syncSectionTabsActive() {
 
 document.querySelectorAll('#sectionTabs .tab').forEach(tab => {
   tab.onclick = () => {
+    // "⇄ Сравнить сегменты" указывает вид напрямую (data-view) — он не
+    // входит в SECTIONS (это отдельный режим, не раздел с подвкладками).
+    if (tab.dataset.view) { switchToView(tab.dataset.view); return; }
     const section = SECTIONS.find(s => s.id === tab.dataset.section);
     switchToView(section.views[0]);
   };
@@ -1406,8 +1520,38 @@ function loadCurrentView() {
     case 'rent_lots': return loadRentLots(currentQuarterId);
     case 'flex_operators': return loadFlexOperators(currentQuarterId);
     case 'flex_lots': return loadFlexLots(currentQuarterId);
+    case 'compare_segments': return loadCompareSegments(currentQuarterId);
     default: render(); return Promise.resolve();
   }
+}
+
+// Карточки-сводка на стартовом экране "Общий кодификатор": по одной на
+// сегмент, с числом объектов/объёмом предложения/датой среза и кнопкой
+// перехода в раздел. Показываются только на codifier, не заменяют таблицу.
+async function renderSegmentCards() {
+  const wrap = document.getElementById('segmentCards');
+  if (currentView !== 'codifier') { wrap.style.display = 'none'; return; }
+  wrap.style.display = '';
+  wrap.innerHTML = '<div class="seg-card">Загрузка сводки по сегментам…</div>';
+  const quarterId = QUARTERS[0].id;
+  const kpi = await computeSegmentKPIs(quarterId);
+  if (currentView !== 'codifier') return; // пользователь мог уже переключиться, пока грузилось
+  const cards = [
+    {k: kpi.sale, gotoView: 'sale_buildings'},
+    {k: kpi.rent, gotoView: 'rent_buildings'},
+    {k: kpi.flex, gotoView: 'flex_operators'},
+  ];
+  wrap.innerHTML = cards.map(({k, gotoView}) => `
+    <div class="seg-card">
+      <h3>${escapeHtml(k.segment)}</h3>
+      <div class="seg-row">Объектов: <b>${fmtNum(k.objects)}</b></div>
+      <div class="seg-row">${escapeHtml(k.volumeLabel)}: <b>${fmtNum(k.volume)}</b></div>
+      <div class="seg-row">Срез: <b>${escapeHtml(k.updated)}</b></div>
+      <button type="button" class="btn" data-goto-view="${gotoView}">Перейти в раздел →</button>
+    </div>`).join('');
+  wrap.querySelectorAll('[data-goto-view]').forEach(btn => {
+    btn.onclick = () => switchToView(btn.dataset.gotoView);
+  });
 }
 
 function switchToView(viewId) {
@@ -1421,6 +1565,8 @@ function switchToView(viewId) {
   quarterSelect.value = currentQuarterId;
   compareSelect.value = compareQuarterId;
   closePanels();
+  if (currentView === 'codifier') renderSegmentCards();
+  else document.getElementById('segmentCards').style.display = 'none';
   return loadCurrentView();
 }
 
@@ -1442,6 +1588,7 @@ quarterSelect.onchange = (e) => {
   renderSubtabs();
   if (currentView === 'codifier') {
     render();
+    renderSegmentCards();
   } else {
     document.getElementById('quarterSelect').style.display = currentSection !== 'codifier' ? '' : 'none';
     document.getElementById('compareSelect').style.display = currentView === 'sale_buildings' ? '' : 'none';
