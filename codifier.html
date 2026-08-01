@@ -23,24 +23,41 @@
   button.btn:hover { background:#f0f0f0; }
   button.btn.primary { background:#2F4858; color:#fff; border-color:#2F4858; }
   button.btn.primary:hover { background:#25394a; }
-  .cols-panel, .filter-panel { position:absolute; z-index:50; background:#fff; border:1px solid #ccc; border-radius:6px; box-shadow:0 4px 16px rgba(0,0,0,.15); padding:10px; max-height:320px; overflow:auto; min-width:200px; }
+  .cols-panel, .filter-panel { position:fixed; z-index:200; background:#fff; border:1px solid #ccc; border-radius:6px; box-shadow:0 4px 16px rgba(0,0,0,.2); padding:10px; max-height:min(420px, 80vh); overflow:auto; width:260px; max-width:92vw; }
   .cols-panel label, .filter-panel label { display:flex; align-items:center; gap:6px; padding:3px 2px; font-size:12px; white-space:nowrap; cursor:pointer; }
-  .filter-panel .fp-actions { display:flex; gap:6px; margin-top:6px; border-top:1px solid #eee; padding-top:6px; }
-  .filter-panel input[type=text] { width:100%; padding:4px 6px; margin-bottom:6px; border:1px solid #ccc; border-radius:4px; }
+  .filter-panel .fp-actions { display:flex; gap:6px; margin-top:8px; border-top:1px solid #eee; padding-top:8px; }
+  .filter-panel input[type=text], .filter-panel input[type=number], .filter-panel select { width:100%; padding:4px 6px; margin-bottom:6px; border:1px solid #ccc; border-radius:4px; font-size:12px; }
+  .fp-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+  .fp-header .fp-title { font-weight:600; font-size:12px; }
+  .fp-close { cursor:pointer; font-size:18px; line-height:1; color:#888; padding:0 4px; }
+  .fp-close:hover { color:#333; }
+  .fp-mode-tabs { display:flex; gap:4px; margin-bottom:8px; }
+  .fp-mode-tab { flex:1; padding:4px 6px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:11px; text-align:center; background:#fff; }
+  .fp-mode-tab.active { background:#2F4858; color:#fff; border-color:#2F4858; }
+  .fp-select-all { border-bottom:1px solid #eee; padding-bottom:6px; margin-bottom:4px; font-weight:600; }
+  .fp-condition-row { display:flex; gap:6px; align-items:center; }
+  .fp-condition-row input { margin-bottom:0; }
   .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid #dde; border-radius:6px; max-height:calc(100vh - 160px); }
   table { border-collapse:collapse; width:100%; font-size:12px; }
   th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left; white-space:nowrap; }
-  th { background:#f8f9fb; position:sticky; top:0; z-index:2; cursor:pointer; user-select:none; }
+  th { background:#f8f9fb; position:sticky; top:0; z-index:2; user-select:none; padding:0; }
   th:first-child, td:first-child { position:sticky; left:0; background:#fff; z-index:1; box-shadow:2px 0 3px rgba(0,0,0,.04); }
   th:first-child { z-index:3; background:#f8f9fb; }
-  th .sort-ind { color:#C9525E; margin-left:4px; }
-  th .filter-ind { color:#2F4858; margin-left:4px; font-weight:700; }
+  .th-inner { display:flex; align-items:center; gap:2px; padding:6px 4px 6px 10px; }
+  .th-label { flex:1; cursor:pointer; min-width:0; }
+  .sort-ind { color:#C9525E; margin-left:4px; }
+  .filter-btn { flex-shrink:0; width:22px; height:22px; display:flex; align-items:center; justify-content:center; border-radius:4px; cursor:pointer; color:#8a94a3; border:1px solid transparent; font-size:12px; background:none; }
+  .filter-btn:hover { background:#e8eaee; color:#2F4858; }
+  .filter-btn.active { color:#fff; background:#C9525E; border-color:#C9525E; }
+  .filter-btn:focus-visible { outline:2px solid #2F4858; outline-offset:1px; }
   tr:hover td { background:#fafbfc; }
   tr:hover td:first-child { background:#f4f6f7; }
   .empty-cell { color:#bbb; }
   .status-row { padding:6px 16px; font-size:11px; color:#666; background:#fff; }
   .qa-conflict { background:#fff3f0 !important; }
   .qa-quarantine { background:#fff8e1 !important; }
+  .no-results-row td { text-align:center; padding:28px 16px; color:#888; font-size:13px; }
+  .no-results-row .btn { margin-left:8px; }
 </style>
 </head>
 <body>
@@ -412,12 +429,41 @@ function cellValue(row, col) {
   return v;
 }
 
+function passesCondition(row, col, cond) {
+  if (!cond || !cond.op) return true;
+  const raw = cellValue(row, col);
+  if (col.type === 'number') {
+    if (raw == null || raw === '') return false;
+    const n = Number(raw);
+    if (cond.op === 'eq') return cond.value !== '' && n === Number(cond.value);
+    if (cond.op === 'gt') return cond.value !== '' && n > Number(cond.value);
+    if (cond.op === 'lt') return cond.value !== '' && n < Number(cond.value);
+    if (cond.op === 'between') {
+      const lo = cond.value === '' ? -Infinity : Number(cond.value);
+      const hi = cond.value2 === '' ? Infinity : Number(cond.value2);
+      return n >= lo && n <= hi;
+    }
+    return true;
+  }
+  // текстовые операторы
+  const s = String(raw ?? '').toLowerCase();
+  const needle = String(cond.value ?? '').toLowerCase();
+  if (needle === '') return true;
+  if (cond.op === 'eq') return s === needle;
+  if (cond.op === 'contains') return s.includes(needle);
+  if (cond.op === 'startswith') return s.startsWith(needle);
+  return true;
+}
+
 function passesFilter(row, col, filter) {
   if (!filter) return true;
   const raw = row[col.key];
   const isEmpty = raw == null || raw === '' || (Array.isArray(raw) && raw.length === 0);
   if (filter.emptyOnly) return isEmpty;
   if (filter.nonEmptyOnly) return !isEmpty;
+  if (filter.mode === 'condition' && filter.condition) {
+    return passesCondition(row, col, filter.condition);
+  }
   if (filter.values && filter.values.size > 0) {
     // Для колонок-списков (market_channel и т.п.) — "содержит хотя бы одно
     // выбранное значение", а не сравнение со всей склеенной строкой целиком
@@ -545,23 +591,36 @@ function render() {
   thead.innerHTML = '<tr>' + cols.map(col => {
     const isSorted = ts.sort.key === col.key;
     const sortInd = isSorted ? `<span class="sort-ind">${ts.sort.dir === 1 ? '▲' : '▼'}</span>` : '';
-    const hasFilter = ts.filters[col.key] && (
-      (ts.filters[col.key].values && ts.filters[col.key].values.size > 0) ||
-      ts.filters[col.key].emptyOnly || ts.filters[col.key].nonEmptyOnly
-    );
-    const filterInd = hasFilter ? '<span class="filter-ind">▾*</span>' : '<span class="filter-ind" style="color:#bbb;">▾</span>';
-    return `<th data-key="${col.key}">${escapeHtml(col.label)}${sortInd}${filterInd}</th>`;
+    const f = ts.filters[col.key];
+    const hasFilter = !!(f && ((f.values && f.values.size > 0) || f.emptyOnly || f.nonEmptyOnly || (f.mode === 'condition' && f.condition && f.condition.op)));
+    return `<th data-key="${col.key}"><div class="th-inner">`
+      + `<span class="th-label" data-sort-key="${col.key}" title="Сортировать">${escapeHtml(col.label)}${sortInd}</span>`
+      + `<button type="button" class="filter-btn${hasFilter ? ' active' : ''}" data-filter-key="${col.key}" `
+      + `aria-label="Фильтр по столбцу «${escapeHtml(col.label)}»"${hasFilter ? ' aria-pressed="true"' : ''} title="Фильтр">▾</button>`
+      + `</div></th>`;
   }).join('') + '</tr>';
 
   const tbody = document.querySelector('#mainTable tbody');
-  tbody.innerHTML = pageRows.map(row => {
-    const rowClass = row.qa_status === 'conflict' ? 'qa-conflict' : (row.qa_status === 'quarantine' ? 'qa-quarantine' : '');
-    return `<tr class="${rowClass}">` + cols.map(col => {
-      const v = cellValue(row, col);
-      const display = (v == null || v === '') ? '<span class="empty-cell">—</span>' : escapeHtml(String(v));
-      return `<td>${display}</td>`;
-    }).join('') + '</tr>';
-  }).join('');
+  if (pageRows.length === 0) {
+    const colspan = Math.max(1, cols.length);
+    tbody.innerHTML = `<tr class="no-results-row"><td colspan="${colspan}">`
+      + (filteredRows.length === 0 && ts.rows.length > 0
+          ? 'Нет строк, удовлетворяющих текущим фильтрам.'
+          : (ts.rows.length === 0 ? 'Нет данных для этого среза.' : 'Пустая страница.'))
+      + (filteredRows.length === 0 && ts.rows.length > 0 ? ' <button type="button" class="btn" id="btnResetInline">Сбросить фильтры</button>' : '')
+      + `</td></tr>`;
+  } else {
+    tbody.innerHTML = pageRows.map(row => {
+      const rowClass = row.qa_status === 'conflict' ? 'qa-conflict' : (row.qa_status === 'quarantine' ? 'qa-quarantine' : '');
+      return `<tr class="${rowClass}">` + cols.map(col => {
+        const v = cellValue(row, col);
+        const display = (v == null || v === '') ? '<span class="empty-cell">—</span>' : escapeHtml(String(v));
+        return `<td>${display}</td>`;
+      }).join('') + '</tr>';
+    }).join('');
+  }
+  const resetInline = document.getElementById('btnResetInline');
+  if (resetInline) resetInline.onclick = () => document.getElementById('btnReset').click();
 
   const meta = dataMeta[currentTab];
   document.getElementById('statusRow').textContent =
@@ -582,20 +641,24 @@ function render() {
 }
 
 function attachHeaderHandlers() {
-  document.querySelectorAll('#mainTable th').forEach(th => {
-    th.onclick = (e) => {
-      const key = th.dataset.key;
+  // Сортировка и фильтрация — два РАЗНЫХ элемента (.th-label / button.filter-btn),
+  // не одна и та же зона клика, разделённая координатой.
+  document.querySelectorAll('#mainTable .th-label').forEach(label => {
+    label.onclick = () => {
+      const key = label.dataset.sortKey;
+      const ts = state[currentTab];
+      if (ts.sort.key === key) ts.sort.dir *= -1;
+      else { ts.sort.key = key; ts.sort.dir = 1; }
+      render();
+    };
+  });
+  document.querySelectorAll('#mainTable .filter-btn').forEach(btn => {
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      const key = btn.dataset.filterKey;
       const ts = state[currentTab];
       const col = ts.columns.find(c => c.key === key);
-      // Клик по краю (последние ~20px) — открыть фильтр; иначе — сортировка.
-      const rect = th.getBoundingClientRect();
-      if (e.clientX > rect.right - 24) {
-        openFilterPanel(th, col);
-      } else {
-        if (ts.sort.key === key) ts.sort.dir *= -1;
-        else { ts.sort.key = key; ts.sort.dir = 1; }
-        render();
-      }
+      openFilterPanel(btn, col);
     };
   });
 }
@@ -607,7 +670,7 @@ function closePanels() {
   document.querySelectorAll('.filter-panel, .cols-panel').forEach(p => p.remove());
 }
 
-function openFilterPanel(th, col) {
+function openFilterPanel(anchorEl, col) {
   closePanels();
   const ts = state[currentTab];
   const values = new Map(); // string value -> count
@@ -627,42 +690,157 @@ function openFilterPanel(th, col) {
     if (key === '') return;
     values.set(key, (values.get(key) || 0) + 1);
   });
-  const sortedValues = [...values.keys()].sort((a,b) => a.localeCompare(b, 'ru'));
-  const current = ts.filters[col.key] || {values: new Set(), emptyOnly:false, nonEmptyOnly:false};
+  const sortedValues = [...values.keys()].sort((a,b) => a.localeCompare(b, 'ru', {numeric:true}));
+
+  // Снимок фильтра ДО открытия — используется и для инициализации полей, и
+  // чтобы "Отмена"/клик вне панели гарантированно вернули именно это состояние
+  // (панель работает с черновиком в DOM, ts.filters не трогается до "Применить").
+  const original = ts.filters[col.key]
+    ? {
+        mode: ts.filters[col.key].mode || 'values',
+        values: new Set(ts.filters[col.key].values || []),
+        emptyOnly: !!ts.filters[col.key].emptyOnly,
+        nonEmptyOnly: !!ts.filters[col.key].nonEmptyOnly,
+        condition: ts.filters[col.key].condition ? {...ts.filters[col.key].condition} : {op:'', value:'', value2:''},
+      }
+    : {mode:'values', values:new Set(), emptyOnly:false, nonEmptyOnly:false, condition:{op:'', value:'', value2:''}};
+
+  const isNumber = col.type === 'number';
+  const opOptions = isNumber
+    ? `<option value="eq">Равно</option><option value="gt">Больше</option><option value="lt">Меньше</option><option value="between">Диапазон</option>`
+    : `<option value="contains">Содержит</option><option value="eq">Равно</option><option value="startswith">Начинается с</option>`;
 
   const panel = document.createElement('div');
   panel.className = 'filter-panel';
-  const rect = th.getBoundingClientRect();
-  panel.style.top = (rect.bottom + window.scrollY) + 'px';
-  panel.style.left = (rect.left + window.scrollX) + 'px';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', `Фильтр: ${col.label}`);
 
   panel.innerHTML = `
-    <input type="text" placeholder="Найти значение..." id="fpSearch">
-    <label><input type="checkbox" id="fpEmpty" ${current.emptyOnly?'checked':''}> Только пустые</label>
-    <label><input type="checkbox" id="fpNonEmpty" ${current.nonEmptyOnly?'checked':''}> Только не пустые</label>
-    <div id="fpValues"></div>
+    <div class="fp-header">
+      <span class="fp-title">${escapeHtml(col.label)}</span>
+      <span class="fp-close" id="fpClose" title="Закрыть (отмена)">×</span>
+    </div>
+    <div class="fp-mode-tabs">
+      <div class="fp-mode-tab" id="fpTabValues" data-mode="values">Значения</div>
+      <div class="fp-mode-tab" id="fpTabCondition" data-mode="condition">Условие</div>
+    </div>
+    <div id="fpValuesMode">
+      <input type="text" placeholder="Поиск по значениям..." id="fpSearch">
+      <label class="fp-select-all"><input type="checkbox" id="fpSelectAll"> Выбрать всё</label>
+      <label><input type="checkbox" id="fpEmpty"> Пустые</label>
+      <label><input type="checkbox" id="fpNonEmpty"> Непустые</label>
+      <div id="fpValues"></div>
+    </div>
+    <div id="fpConditionMode" style="display:none;">
+      <select id="fpCondOp">${opOptions}</select>
+      <div class="fp-condition-row">
+        <input type="${isNumber ? 'number' : 'text'}" id="fpCondValue" placeholder="${isNumber ? 'Значение' : 'Текст'}">
+        <input type="number" id="fpCondValue2" placeholder="До" style="display:none;">
+      </div>
+    </div>
     <div class="fp-actions">
-      <button class="btn" id="fpApply">Применить</button>
-      <button class="btn" id="fpClear">Очистить</button>
+      <button class="btn primary" id="fpApply">Применить</button>
+      <button class="btn" id="fpClear">Сбросить</button>
+      <button class="btn" id="fpCancel">Отмена</button>
     </div>
   `;
   document.body.appendChild(panel);
 
+  // --- позиционирование: сначала под кнопкой, затем зажать в границы окна ---
+  function positionPanel() {
+    const rect = anchorEl.getBoundingClientRect();
+    const pw = panel.offsetWidth, ph = panel.offsetHeight;
+    let top = rect.bottom + 4;
+    let left = rect.right - pw; // по умолчанию выровнять по правому краю кнопки
+    if (left < 8) left = 8;
+    if (left + pw > window.innerWidth - 8) left = window.innerWidth - pw - 8;
+    if (top + ph > window.innerHeight - 8) {
+      // не помещается снизу — открыть вверх от кнопки
+      top = rect.top - ph - 4;
+      if (top < 8) top = 8;
+    }
+    panel.style.top = top + 'px';
+    panel.style.left = left + 'px';
+  }
+  positionPanel();
+
+  // --- режим (Значения / Условие) ---
+  function setMode(mode) {
+    panel.querySelector('#fpTabValues').classList.toggle('active', mode === 'values');
+    panel.querySelector('#fpTabCondition').classList.toggle('active', mode === 'condition');
+    panel.querySelector('#fpValuesMode').style.display = mode === 'values' ? '' : 'none';
+    panel.querySelector('#fpConditionMode').style.display = mode === 'condition' ? '' : 'none';
+    panel.dataset.mode = mode;
+    positionPanel();
+  }
+  panel.querySelector('#fpTabValues').onclick = () => setMode('values');
+  panel.querySelector('#fpTabCondition').onclick = () => setMode('condition');
+
+  // --- вкладка "Значения" ---
+  panel.querySelector('#fpEmpty').checked = original.emptyOnly;
+  panel.querySelector('#fpNonEmpty').checked = original.nonEmptyOnly;
+  panel.querySelector('#fpEmpty').onchange = (e) => { if (e.target.checked) panel.querySelector('#fpNonEmpty').checked = false; };
+  panel.querySelector('#fpNonEmpty').onchange = (e) => { if (e.target.checked) panel.querySelector('#fpEmpty').checked = false; };
+
   function renderValueList(filterText) {
     const box = panel.querySelector('#fpValues');
     const list = sortedValues.filter(v => !filterText || v.toLowerCase().includes(filterText.toLowerCase()));
-    box.innerHTML = list.map(v => `<label><input type="checkbox" class="fpVal" value="${escapeHtml(v)}" ${current.values.has(v)?'checked':''}> ${escapeHtml(v)} (${values.get(v)})</label>`).join('');
+    box.innerHTML = list.map(v => `<label><input type="checkbox" class="fpVal" value="${escapeHtml(v)}" ${original.values.has(v)?'checked':''}> ${escapeHtml(v)} (${values.get(v)})</label>`).join('');
+    syncSelectAll();
+  }
+  function syncSelectAll() {
+    const boxes = [...panel.querySelectorAll('.fpVal')];
+    panel.querySelector('#fpSelectAll').checked = boxes.length > 0 && boxes.every(b => b.checked);
   }
   renderValueList('');
   panel.querySelector('#fpSearch').oninput = (e) => renderValueList(e.target.value);
+  panel.querySelector('#fpSelectAll').onchange = (e) => {
+    panel.querySelectorAll('.fpVal').forEach(b => { b.checked = e.target.checked; });
+  };
+  panel.querySelector('#fpValues').addEventListener('change', (e) => {
+    if (e.target.classList.contains('fpVal')) syncSelectAll();
+  });
 
+  // --- вкладка "Условие" ---
+  panel.querySelector('#fpCondOp').value = original.condition.op || (isNumber ? 'eq' : 'contains');
+  panel.querySelector('#fpCondValue').value = original.condition.value ?? '';
+  panel.querySelector('#fpCondValue2').value = original.condition.value2 ?? '';
+  panel.querySelector('#fpCondValue').placeholder = (isNumber && panel.querySelector('#fpCondOp').value === 'between') ? 'От' : (isNumber ? 'Значение' : 'Текст');
+  panel.querySelector('#fpCondValue2').style.display = (isNumber && panel.querySelector('#fpCondOp').value === 'between') ? '' : 'none';
+  panel.querySelector('#fpCondOp').onchange = (e) => {
+    const isBetween = isNumber && e.target.value === 'between';
+    panel.querySelector('#fpCondValue2').style.display = isBetween ? '' : 'none';
+    panel.querySelector('#fpCondValue').placeholder = isBetween ? 'От' : (isNumber ? 'Значение' : 'Текст');
+  };
+
+  setMode(original.mode === 'condition' ? 'condition' : 'values');
+
+  // --- действия ---
   panel.querySelector('#fpApply').onclick = () => {
-    const checked = [...panel.querySelectorAll('.fpVal:checked')].map(el => el.value);
-    ts.filters[col.key] = {
-      values: new Set(checked),
-      emptyOnly: panel.querySelector('#fpEmpty').checked,
-      nonEmptyOnly: panel.querySelector('#fpNonEmpty').checked,
-    };
+    const mode = panel.dataset.mode;
+    const emptyOnly = panel.querySelector('#fpEmpty').checked;
+    const nonEmptyOnly = panel.querySelector('#fpNonEmpty').checked;
+    if (emptyOnly || nonEmptyOnly) {
+      ts.filters[col.key] = {mode:'values', values:new Set(), emptyOnly, nonEmptyOnly};
+    } else if (mode === 'condition') {
+      const condition = {
+        op: panel.querySelector('#fpCondOp').value,
+        value: panel.querySelector('#fpCondValue').value,
+        value2: panel.querySelector('#fpCondValue2').value,
+      };
+      if (condition.value === '' && condition.value2 === '') {
+        delete ts.filters[col.key];
+      } else {
+        ts.filters[col.key] = {mode:'condition', values:new Set(), emptyOnly:false, nonEmptyOnly:false, condition};
+      }
+    } else {
+      const checked = [...panel.querySelectorAll('.fpVal:checked')].map(el => el.value);
+      if (checked.length === 0) {
+        delete ts.filters[col.key];
+      } else {
+        ts.filters[col.key] = {mode:'values', values:new Set(checked), emptyOnly:false, nonEmptyOnly:false};
+      }
+    }
     closePanels();
     render();
   };
@@ -671,11 +849,25 @@ function openFilterPanel(th, col) {
     closePanels();
     render();
   };
+  function cancel() {
+    // Черновик в DOM просто выбрасывается — ts.filters не менялся, поэтому
+    // "отмена" = закрыть без вызова render() с уже неизменным состоянием.
+    closePanels();
+  }
+  panel.querySelector('#fpCancel').onclick = cancel;
+  panel.querySelector('#fpClose').onclick = cancel;
+
   setTimeout(() => {
     document.addEventListener('click', function onDocClick(ev) {
-      if (!panel.contains(ev.target) && ev.target !== th) {
-        closePanels();
+      if (!panel.contains(ev.target) && ev.target !== anchorEl) {
+        cancel();
         document.removeEventListener('click', onDocClick);
+      }
+    });
+    document.addEventListener('keydown', function onEsc(ev) {
+      if (ev.key === 'Escape') {
+        cancel();
+        document.removeEventListener('keydown', onEsc);
       }
     });
   }, 0);
@@ -689,13 +881,17 @@ document.getElementById('btnColumns').onclick = (e) => {
   const ts = state[currentTab];
   const panel = document.createElement('div');
   panel.className = 'cols-panel';
-  const rect = e.target.getBoundingClientRect();
-  panel.style.top = (rect.bottom + window.scrollY) + 'px';
-  panel.style.left = (rect.left + window.scrollX) + 'px';
   panel.innerHTML = ts.columns.map(col =>
     `<label><input type="checkbox" class="colVis" data-key="${col.key}" ${col.visible?'checked':''}> ${escapeHtml(col.label)}</label>`
   ).join('');
   document.body.appendChild(panel);
+  // position:fixed — координаты окна, зажать в границы (та же логика, что у filter-panel).
+  const rect = e.target.getBoundingClientRect();
+  let left = rect.left, top = rect.bottom + 4;
+  if (left + panel.offsetWidth > window.innerWidth - 8) left = window.innerWidth - panel.offsetWidth - 8;
+  if (top + panel.offsetHeight > window.innerHeight - 8) top = Math.max(8, rect.top - panel.offsetHeight - 4);
+  panel.style.left = left + 'px';
+  panel.style.top = top + 'px';
   panel.querySelectorAll('.colVis').forEach(cb => {
     cb.onchange = () => {
       const col = ts.columns.find(c => c.key === cb.dataset.key);
@@ -873,8 +1069,10 @@ function syncURL() {
       const f = ts.filters[k];
       const parts = [];
       if (f.emptyOnly) parts.push('EMPTY');
-      if (f.nonEmptyOnly) parts.push('NONEMPTY');
-      if (f.values && f.values.size) parts.push(...[...f.values]);
+      else if (f.nonEmptyOnly) parts.push('NONEMPTY');
+      else if (f.mode === 'condition' && f.condition && f.condition.op) {
+        parts.push('COND=' + JSON.stringify({op: f.condition.op, value: f.condition.value, value2: f.condition.value2}));
+      } else if (f.values && f.values.size) parts.push(...[...f.values]);
       return `${k}:${parts.map(encodeURIComponent).join('|')}`;
     });
     p.set('filters', encoded.join(';'));
@@ -918,10 +1116,17 @@ function restoreFromURL() {
       const [key, valuesStr] = part.split(':');
       if (!key) continue;
       const parts = (valuesStr || '').split('|').filter(Boolean).map(decodeURIComponent);
-      const f = {values: new Set(), emptyOnly:false, nonEmptyOnly:false};
+      const f = {mode:'values', values: new Set(), emptyOnly:false, nonEmptyOnly:false, condition:{op:'', value:'', value2:''}};
       for (const v of parts) {
         if (v === 'EMPTY') f.emptyOnly = true;
         else if (v === 'NONEMPTY') f.nonEmptyOnly = true;
+        else if (v.startsWith('COND=')) {
+          try {
+            const cond = JSON.parse(v.slice('COND='.length));
+            f.mode = 'condition';
+            f.condition = {op: cond.op || '', value: cond.value ?? '', value2: cond.value2 ?? ''};
+          } catch (e) { /* некорректная ссылка — игнорируем это условие */ }
+        }
         else f.values.add(v);
       }
       ts.filters[key] = f;
