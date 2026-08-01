@@ -16,6 +16,10 @@
   .tabs { display:flex; gap:2px; padding:0 16px; background:#e8eaee; }
   .tab { padding:8px 16px; cursor:pointer; font-weight:500; color:#555; border-bottom:2px solid transparent; }
   .tab.active { color:#2F4858; border-bottom-color:#C9525E; background:#fff; }
+  .subtabs { display:flex; gap:2px; padding:0 16px; background:#f4f5f7; border-bottom:1px solid #dde; }
+  .subtab { padding:6px 14px; cursor:pointer; font-size:12px; color:#666; border-bottom:2px solid transparent; }
+  .subtab:hover { color:#2F4858; }
+  .subtab.active { color:#2F4858; border-bottom-color:#8aa4ab; background:#fff; font-weight:600; }
   .toolbar { display:flex; align-items:center; gap:8px; padding:10px 16px; background:#fff; border-bottom:1px solid #dde; flex-wrap:wrap; }
   .toolbar input[type=search] { padding:6px 10px; border:1px solid #ccc; border-radius:4px; width:240px; font-size:12px; }
   .toolbar select { padding:6px 8px; border:1px solid #ccc; border-radius:4px; font-size:12px; }
@@ -37,7 +41,7 @@
   .fp-select-all { border-bottom:1px solid #eee; padding-bottom:6px; margin-bottom:4px; font-weight:600; }
   .fp-condition-row { display:flex; gap:6px; align-items:center; }
   .fp-condition-row input { margin-bottom:0; }
-  .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid #dde; border-radius:6px; max-height:calc(100vh - 160px); }
+  .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid #dde; border-radius:6px; max-height:calc(100vh - 190px); }
   table { border-collapse:collapse; width:100%; font-size:12px; }
   th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left; white-space:nowrap; }
   th { background:#f8f9fb; position:sticky; top:0; z-index:2; user-select:none; padding:0; }
@@ -67,12 +71,13 @@
   <span class="meta" id="metaLine"></span>
 </header>
 
-<div class="tabs">
-  <div class="tab active" data-tab="codifier">Общий кодификатор</div>
-  <div class="tab" data-tab="buildings">Здания квартала</div>
-  <div class="tab" data-tab="developers">Девелоперы квартала</div>
-  <div class="tab" data-tab="lots">Все лоты</div>
+<div class="tabs" id="sectionTabs">
+  <div class="tab" data-section="codifier">Общий кодификатор</div>
+  <div class="tab" data-section="sale">Продажа офисов</div>
+  <div class="tab" data-section="rent">Аренда офисов</div>
+  <div class="tab" data-section="flex">Гибкие офисы</div>
 </div>
+<div class="subtabs" id="viewTabs" style="display:none;"></div>
 
 <div class="toolbar" id="toolbar">
   <input type="search" id="globalSearch" placeholder="Поиск по всей таблице...">
@@ -80,14 +85,9 @@
   <select id="compareSelect" style="display:none;">
     <option value="">Без сравнения</option>
   </select>
-  <select id="channelSelect" style="display:none;">
-    <option value="sale">Продажа</option>
-    <option value="rent">Аренда</option>
-    <option value="coworking">Коворкинг</option>
-  </select>
   <select id="presetSelect">
     <option value="">Пресеты...</option>
-    <option value="all_sale">Все продажи</option>
+    <option value="all_sale">Только канал продажи</option>
     <option value="under_construction">Строящиеся</option>
     <option value="delivered">Введённые</option>
     <option value="no_source">Без источника</option>
@@ -118,7 +118,7 @@
 <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 // ============================================================
-//  КВАРТАЛЫ (для таблицы «Здания квартала»)
+//  КВАРТАЛЫ
 // ============================================================
 const QUARTERS = [
   {id:'202606', label:'Q2 2026'}, {id:'202603', label:'Q1 2026'},
@@ -141,17 +141,57 @@ function fetchJSON(url) {
 }
 
 // ============================================================
+//  РАЗДЕЛЫ И ВКЛАДКИ
+// ============================================================
+// Верхний уровень навигации — 4 раздела. Канал определяется ВЫБРАННЫМ
+// РАЗДЕЛОМ, а не отдельным селектором (см. правки этой задачи, раньше
+// «Все лоты» была одной вкладкой с выпадающим списком sale/rent/coworking,
+// что и создавало ощущение смешения каналов).
+const SECTIONS = [
+  {id:'codifier', label:'Общий кодификатор', views:['codifier']},
+  {id:'sale',     label:'Продажа офисов',    views:['sale_buildings','sale_developers','sale_lots']},
+  {id:'rent',     label:'Аренда офисов',     views:['rent_buildings','rent_landlords','rent_lots']},
+  {id:'flex',     label:'Гибкие офисы',      views:['flex_operators','flex_lots']},
+];
+const VIEWS = {
+  codifier:        {section:'codifier', label:'Общий кодификатор'},
+  sale_buildings:  {section:'sale',     label:'Здания квартала'},
+  sale_developers: {section:'sale',     label:'Девелоперы квартала'},
+  sale_lots:       {section:'sale',     label:'Все лоты в продаже'},
+  rent_buildings:  {section:'rent',     label:'Объекты квартала'},
+  rent_landlords:  {section:'rent',     label:'Арендодатели/девелоперы'},
+  rent_lots:       {section:'rent',     label:'Все предложения аренды'},
+  flex_operators:  {section:'flex',     label:'Операторы и объекты'},
+  flex_lots:       {section:'flex',     label:'Все гибкие предложения'},
+};
+// Канал показывается в шапке/итогах каждой таблицы (требование "не должен
+// быть одним неоднозначным фильтром в смешанной таблице" — здесь канал
+// вообще не фильтр, это то, какой раздел/файл выбран).
+const SECTION_CHANNEL_LABEL = {codifier:null, sale:'Продажа', rent:'Аренда', flex:'Гибкие офисы'};
+
+// ============================================================
 //  ОПРЕДЕЛЕНИЯ КОЛОНОК
 // ============================================================
+// Общий кодификатор — универсальные атрибуты проекта/здания. Специфические
+// показатели лотов/аренды/коворкинга сюда НЕ добавляются как основные поля
+// (они у себя в разделах Продажа/Аренда/Гибкие офисы); offer_status —
+// статус предложения именно КАНАЛА ПРОДАЖИ — оставлен только справочно и
+// скрыт по умолчанию, чтобы не путать с общим статусом проекта.
 const CODIFIER_COLUMNS = [
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:false},
   {key:'canonical_name', label:'Проект', type:'text', visible:true},
   {key:'raw_name', label:'Исходное название', type:'text', visible:true},
   {key:'canonical_building_id', label:'Корпус', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'latitude', label:'Широта', type:'number', visible:false},
+  {key:'longitude', label:'Долгота', type:'number', visible:false},
   {key:'cls', label:'Класс', type:'text', visible:true},
-  {key:'project_status', label:'Стадия проекта', type:'text', visible:true},
-  {key:'offer_status', label:'Статус предложения', type:'text', visible:true},
+  {key:'bizFormed', label:'Дел. район (сформ.)', type:'text', visible:false},
+  {key:'bizForming', label:'Дел. район (форм.)', type:'text', visible:false},
+  {key:'submarket', label:'Субрынок', type:'text', visible:true},
+  {key:'zone', label:'Кольцо', type:'text', visible:true},
+  {key:'project_status', label:'Статус проекта / стадия строительства', type:'text', visible:true},
   {key:'input_year', label:'Год ввода', type:'number', visible:true},
   {key:'input_quarter', label:'Квартал ввода', type:'number', visible:true},
   {key:'input_date_kind', label:'Заявлено/подтверждено', type:'text', visible:false},
@@ -159,31 +199,28 @@ const CODIFIER_COLUMNS = [
   {key:'gla', label:'GLA', type:'number', visible:true},
   {key:'office_area', label:'Офисная площадь', type:'number', visible:false},
   {key:'area_scope', label:'Уровень площади', type:'text', visible:false},
-  {key:'zone', label:'Зона', type:'text', visible:true},
-  {key:'submarket', label:'Субрынок', type:'text', visible:true},
-  {key:'bizFormed', label:'Дел. район (сформ.)', type:'text', visible:false},
-  {key:'bizForming', label:'Дел. район (форм.)', type:'text', visible:false},
-  {key:'market_channel', label:'Канал(ы)', type:'list', visible:true},
-  {key:'quarter_offer_exists', label:'Есть в текущем квартале', type:'bool', visible:true},
+  {key:'market_channel', label:'Каналы (справочно)', type:'list', visible:true},
+  {key:'quarter_offer_exists', label:'Есть в текущем квартале', type:'bool', visible:false},
+  {key:'offer_status', label:'Статус предложения (справочно, канал продажи)', type:'text', visible:false},
   {key:'external_only', label:'Только внешний источник', type:'bool', visible:false},
   {key:'source', label:'Источник', type:'text', visible:true},
-  {key:'last_verified_at', label:'Дата проверки', type:'text', visible:false},
+  {key:'last_verified_at', label:'Дата проверки', type:'text', visible:true},
   {key:'confidence', label:'Уровень доверия', type:'text', visible:true},
   {key:'verification_status', label:'Статус проверки', type:'text', visible:false},
   {key:'qa_status', label:'QA', type:'text', visible:true},
   {key:'public_visibility', label:'Видимость', type:'text', visible:false},
 ];
 
-const BUILDINGS_COLUMNS = [
+// --- Продажа офисов ---
+const SALE_BUILDINGS_COLUMNS = [
   {key:'name', label:'Здание', type:'text', visible:true},
   {key:'name_orig', label:'Прежнее название', type:'text', visible:false},
   {key:'address', label:'Адрес', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'cls', label:'Класс', type:'text', visible:true},
   {key:'status', label:'Статус (квартал)', type:'text', visible:true},
-  {key:'reg_market_channel', label:'Канал', type:'list', visible:true},
-  {key:'reg_project_status', label:'Стадия проекта (реестр)', type:'text', visible:true},
-  {key:'reg_offer_status', label:'Статус предл. (реестр)', type:'text', visible:true},
+  {key:'reg_project_status', label:'Статус проекта (реестр)', type:'text', visible:true},
+  {key:'reg_offer_status', label:'Статус предл. (реестр)', type:'text', visible:false},
   {key:'year', label:'Год', type:'number', visible:true},
   {key:'reg_input_quarter', label:'Квартал ввода (реестр)', type:'number', visible:false},
   {key:'gba', label:'GBA', type:'number', visible:true},
@@ -198,16 +235,21 @@ const BUILDINGS_COLUMNS = [
   {key:'reg_bizForming', label:'Дел. район (форм., реестр)', type:'text', visible:false},
   {key:'on_sale', label:'В продаже', type:'text', visible:true},
   {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:true},
+  {key:'reg_market_channel', label:'Каналы проекта (справочно)', type:'list', visible:false},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:true},
 ];
-
-// Лоты — три РАЗНЫЕ схемы по каналам (не смешивать продажу/аренду/коворкинг
-// в одной таблице, см. ONLINE_TABLES_SPEC раздел 4). Переключаются селектором
-// канала, а не общим фильтром — физически разные наборы колонок. У каждой
-// схемы есть явная колонка market_channel (константа по вкладке) — требование
-// «в каждой таблице явно показывай поле market_channel».
-const LOTS_SALE_COLUMNS = [
+const SALE_DEVELOPERS_COLUMNS = [
+  {key:'developer', label:'Девелопер', type:'text', visible:true},
+  {key:'projects', label:'Проектов в квартале', type:'number', visible:true},
+  {key:'buildings', label:'Зданий', type:'number', visible:true},
+  {key:'gbaSum', label:'GBA суммарно', type:'number', visible:true},
+  {key:'volumeSum', label:'Объём на продажу суммарно', type:'number', visible:true},
+  {key:'lotsSum', label:'Лотов суммарно', type:'number', visible:true},
+  {key:'weightedPrice', label:'Ср. взвешенная цена', type:'number', visible:true},
+  {key:'classes', label:'Классы', type:'text', visible:true},
+];
+const SALE_LOTS_COLUMNS = [
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Канал', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
@@ -218,8 +260,35 @@ const LOTS_SALE_COLUMNS = [
   {key:'scheme', label:'Планировка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
   {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:false},
+  {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
-const LOTS_RENT_COLUMNS = [
+
+// --- Аренда офисов ---
+// Готового файла-агрегата по зданиям/арендодателям аренды в проекте нет
+// (в отличие от продажи — buildings_*.json). Считаем на клиенте из
+// rent_lots_{quarter}.json + join к общему реестру, тем же приёмом, каким
+// уже раньше на клиенте считались "Девелоперы квартала" по продаже —
+// исходные файлы не меняются, чисел не выдумываем.
+const RENT_BUILDINGS_COLUMNS = [
+  {key:'building', label:'Объект', type:'text', visible:true},
+  {key:'developer', label:'Девелопер (реестр)', type:'text', visible:true},
+  {key:'cls', label:'Класс (реестр)', type:'text', visible:true},
+  {key:'zone', label:'Кольцо (реестр)', type:'text', visible:false},
+  {key:'submarket', label:'Субрынок (реестр)', type:'text', visible:false},
+  {key:'lotsCount', label:'Предложений', type:'number', visible:true},
+  {key:'areaSum', label:'Площадь суммарно', type:'number', visible:true},
+  {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
+  {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:false},
+  {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
+];
+const RENT_LANDLORDS_COLUMNS = [
+  {key:'developer', label:'Арендодатель/девелопер', type:'text', visible:true},
+  {key:'objects', label:'Объектов', type:'number', visible:true},
+  {key:'lotsCount', label:'Предложений', type:'number', visible:true},
+  {key:'areaSum', label:'Площадь суммарно', type:'number', visible:true},
+  {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
+];
+const RENT_LOTS_COLUMNS = [
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Канал', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
@@ -231,35 +300,39 @@ const LOTS_RENT_COLUMNS = [
   {key:'finish', label:'Отделка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
   {key:'canonical_project_id', label:'Canonical ID', type:'text', visible:false},
+  {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
-const LOTS_COWORKING_COLUMNS = [
-  {key:'name', label:'Название', type:'text', visible:true},
-  {key:'market_channel', label:'Канал', type:'text', visible:true},
-  {key:'network', label:'Сеть', type:'text', visible:true},
+
+// --- Гибкие офисы ---
+// Единственный источник данных сейчас — data/coworking_{quarter}.json.
+// Отдельного файла для service_office в проекте нет: раздел структурно
+// готов принять его (см. FLEX_FILE_BY_TYPE ниже), но пока показывает 0
+// записей этого типа — честно, без досочинения данных. flex_type — явное
+// поле на каждой строке, различающее коворкинг/сервисный офис.
+const FLEX_OPERATORS_COLUMNS = [
+  {key:'network', label:'Оператор', type:'text', visible:true},
+  {key:'objectsCount', label:'Объектов', type:'number', visible:true},
+  {key:'types', label:'Типы', type:'text', visible:true},
+  {key:'seatsSum', label:'Мест всего', type:'number', visible:true},
+  {key:'vacancySum', label:'Свободно', type:'number', visible:true},
+  {key:'weightedRate', label:'Ср. ставка (взвеш. по местам)', type:'number', visible:true},
+];
+const FLEX_LOTS_COLUMNS = [
+  {key:'name', label:'Объект', type:'text', visible:true},
+  {key:'network', label:'Оператор', type:'text', visible:true},
+  {key:'flex_type', label:'Тип', type:'text', visible:true},
   {key:'bc', label:'БЦ', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:false},
   {key:'district', label:'Район', type:'text', visible:false},
-  {key:'seats', label:'Мест всего', type:'number', visible:true},
-  {key:'vacancy', label:'Вакантно', type:'number', visible:true},
+  {key:'seats', label:'Рабочие места / вместимость', type:'number', visible:true},
+  {key:'vacancy', label:'Свободные места', type:'number', visible:true},
   {key:'rate', label:'Ставка, руб/мес', type:'number', visible:true},
+  {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
+  {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:false},
 ];
-const LOTS_COLUMNS_BY_CHANNEL = {sale: LOTS_SALE_COLUMNS, rent: LOTS_RENT_COLUMNS, coworking: LOTS_COWORKING_COLUMNS};
-const LOTS_FILE_BY_CHANNEL = {sale: 'lots', rent: 'rent_lots', coworking: 'coworking'};
-const CHANNEL_LABEL = {sale:'Продажа', rent:'Аренда', coworking:'Коворкинг', serviced_office:'Сервисный офис', other:'Другое/не установлено'};
 
-// «Девелоперы квартала» — агрегат по зданиям ВЫБРАННОГО квартала (не по
-// всему кодификатору), группировка только по проектам, входящим в этот
-// квартал (см. ONLINE_TABLES_SPEC раздел 3).
-const DEVELOPERS_COLUMNS = [
-  {key:'developer', label:'Девелопер', type:'text', visible:true},
-  {key:'projects', label:'Проектов в квартале', type:'number', visible:true},
-  {key:'buildings', label:'Зданий', type:'number', visible:true},
-  {key:'gbaSum', label:'GBA суммарно', type:'number', visible:true},
-  {key:'volumeSum', label:'Объём на продажу суммарно', type:'number', visible:true},
-  {key:'lotsSum', label:'Лотов суммарно', type:'number', visible:true},
-  {key:'weightedPrice', label:'Ср. взвешенная цена', type:'number', visible:true},
-  {key:'classes', label:'Классы', type:'text', visible:true},
-];
+const FLEX_FILE_BY_TYPE = {coworking: 'coworking'}; // service_office: файла-источника пока нет
+const FLEX_TYPE_LABEL = {coworking: 'Коворкинг', service_office: 'Сервисный офис'};
 
 // ============================================================
 //  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для всех вкладок)
@@ -268,25 +341,30 @@ function makeTableState(columns) {
   return {
     columns: columns.map(c => ({...c})),
     rows: [],
-    filters: {},        // key -> {mode:'values'|'search', values:Set, search:'', emptyOnly:false, nonEmptyOnly:false}
+    filters: {},        // key -> {mode:'values'|'condition', values:Set, emptyOnly, nonEmptyOnly, condition:{op,value,value2}}
     sort: {key:null, dir:1},
     globalSearch: '',
     page: 1,
   };
 }
 
-let currentTab = 'codifier';
-let currentChannel = 'sale';
+let currentSection = 'codifier';
+let currentView = 'codifier';
 let compareQuarterId = '';
 const state = {
   codifier: makeTableState(CODIFIER_COLUMNS),
-  buildings: makeTableState(BUILDINGS_COLUMNS),
-  developers: makeTableState(DEVELOPERS_COLUMNS),
-  lots: makeTableState(LOTS_SALE_COLUMNS),
+  sale_buildings: makeTableState(SALE_BUILDINGS_COLUMNS),
+  sale_developers: makeTableState(SALE_DEVELOPERS_COLUMNS),
+  sale_lots: makeTableState(SALE_LOTS_COLUMNS),
+  rent_buildings: makeTableState(RENT_BUILDINGS_COLUMNS),
+  rent_landlords: makeTableState(RENT_LANDLORDS_COLUMNS),
+  rent_lots: makeTableState(RENT_LOTS_COLUMNS),
+  flex_operators: makeTableState(FLEX_OPERATORS_COLUMNS),
+  flex_lots: makeTableState(FLEX_LOTS_COLUMNS),
 };
 let allProjectsLayer = [];
 let currentQuarterId = QUARTERS[0].id;
-let dataMeta = {codifier: null, buildings: null, developers: null, lots: null};
+let dataMeta = {};
 let pageSize = 100;
 let suppressURLSync = false; // true пока восстанавливаем состояние из URL — не переписывать URL посреди восстановления
 
@@ -302,8 +380,7 @@ async function loadCodifier() {
 }
 
 // Join к общему реестру по имени/исходному имени — без изменения production-файлов,
-// сопоставление делается здесь, на чтении (см. открытый вопрос в ONLINE_TABLES_SPEC:
-// join-поле в саму production-схему buildings_*.json не добавлено).
+// сопоставление делается здесь, на чтении.
 function registryByNameMap() {
   const byName = new Map();
   for (const r of allProjectsLayer) {
@@ -323,6 +400,10 @@ function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
   row.reg_bizFormed = match ? match.bizFormed : null;
   row.reg_bizForming = match ? match.bizForming : null;
   row.reg_market_channel = match ? match.market_channel : null;
+  row.reg_developer = match ? match.developer : null;
+  row.reg_cls = match ? match.cls : null;
+  row.reg_zone = match ? match.zone : null;
+  row.reg_submarket = match ? match.submarket : null;
   return match;
 }
 
@@ -333,18 +414,17 @@ async function fetchBuildingsWithJoin(quarterId) {
   return rows;
 }
 
-async function loadBuildings(quarterId) {
+// --- Продажа офисов ---
+async function loadSaleBuildings(quarterId) {
   const rows = await fetchBuildingsWithJoin(quarterId);
-  state.buildings.rows = rows;
-  if (!suppressURLSync) state.buildings.page = 1; // не сбрасывать страницу, если сейчас идёт восстановление вида из URL
+  state.sale_buildings.rows = rows;
+  if (!suppressURLSync) state.sale_buildings.page = 1;
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
-  dataMeta.buildings = {updated: label, count: rows.length};
+  dataMeta.sale_buildings = {updated: label, count: rows.length};
   render();
 }
 
-// «Девелоперы квартала» — группировка ТОЛЬКО по проектам этого квартала
-// (не по всему кодификатору), см. ONLINE_TABLES_SPEC раздел 3.
-async function loadDevelopers(quarterId) {
+async function loadSaleDevelopers(quarterId) {
   const buildings = await fetchBuildingsWithJoin(quarterId);
   const byDev = new Map();
   for (const b of buildings) {
@@ -371,51 +451,168 @@ async function loadDevelopers(quarterId) {
     weightedPrice: acc.volumeSum ? Math.round(acc.priceWeighted / acc.volumeSum) : null,
     classes: [...acc.classes].sort().join(', '),
   }));
-  state.developers.rows = rows;
-  if (!suppressURLSync) state.developers.page = 1;
+  state.sale_developers.rows = rows;
+  if (!suppressURLSync) state.sale_developers.page = 1;
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
-  dataMeta.developers = {updated: label, count: rows.length};
+  dataMeta.sale_developers = {updated: label, count: rows.length};
   render();
 }
 
-async function loadLots(quarterId, channel) {
-  const filePrefix = LOTS_FILE_BY_CHANNEL[channel];
+async function loadSaleLots(quarterId) {
   let rows;
   try {
-    const raw = await fetchJSON(`data/${filePrefix}_${quarterId}.json`);
-    if (channel === 'coworking') {
-      // coworking_*.json уже плоский массив строк.
-      rows = raw;
-    } else {
-      // lots_*.json / rent_lots_*.json — словарь {"Здание": [{...}, ...]}.
-      rows = [];
-      for (const [building, lotRows] of Object.entries(raw)) {
-        for (const lot of lotRows) rows.push({building, ...lot});
-      }
+    const raw = await fetchJSON(`data/lots_${quarterId}.json`);
+    rows = [];
+    for (const [building, lotRows] of Object.entries(raw)) {
+      for (const lot of lotRows) rows.push({building, ...lot});
     }
   } catch (e) {
-    // Не у каждого квартала есть все три файла (см. index.html: некоторые
-    // старые кварталы без rent/coworking) — пустая таблица, не ошибка.
-    rows = [];
+    rows = []; // не у каждого квартала есть файл — пустая таблица, не ошибка
   }
   const byName = registryByNameMap();
-  const nameKey = channel === 'coworking' ? 'name' : 'building';
   for (const row of rows) {
-    row.market_channel = CHANNEL_LABEL[channel]; // явное, взаимоисключающее поле — вся вкладка = один канал
-    joinRegistryFields(row, byName, nameKey, null);
+    row.market_channel = 'Продажа'; // явное, константное поле — вся вкладка = один канал
+    joinRegistryFields(row, byName, 'building', null);
   }
-  state.lots.columns = LOTS_COLUMNS_BY_CHANNEL[channel].map(c => ({...c}));
-  state.lots.rows = rows;
-  // Смена канала — разные схемы колонок, старые фильтры/сортировка почти
-  // наверняка не имеют смысла. НЕ сбрасывать, если сейчас идёт восстановление
-  // вида из URL (там колонки/фильтры для нужного канала уже применены выше).
-  if (!suppressURLSync) {
-    state.lots.filters = {};
-    state.lots.sort = {key:null, dir:1};
-    state.lots.page = 1;
-  }
+  state.sale_lots.rows = rows;
+  if (!suppressURLSync) { state.sale_lots.filters = {}; state.sale_lots.sort = {key:null, dir:1}; state.sale_lots.page = 1; }
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
-  dataMeta.lots = {updated: `${label} · ${CHANNEL_LABEL[channel]}`, count: rows.length};
+  dataMeta.sale_lots = {updated: label, count: rows.length};
+  render();
+}
+
+// --- Аренда офисов ---
+async function fetchRentLotsRaw(quarterId) {
+  try { return await fetchJSON(`data/rent_lots_${quarterId}.json`); }
+  catch (e) { return {}; }
+}
+
+async function loadRentBuildings(quarterId) {
+  const raw = await fetchRentLotsRaw(quarterId);
+  const byName = registryByNameMap();
+  const byBuilding = new Map();
+  for (const [building, lotRows] of Object.entries(raw)) {
+    const match = byName.get(building);
+    if (!byBuilding.has(building)) {
+      byBuilding.set(building, {
+        building, developer: match ? match.developer : null, cls: match ? match.cls : null,
+        zone: match ? match.zone : null, submarket: match ? match.submarket : null,
+        canonical_project_id: match ? match.canonical_project_id : null,
+        reg_source: match ? match.source : null,
+        lotsCount: 0, areaSum: 0, rateWeighted: 0,
+      });
+    }
+    const acc = byBuilding.get(building);
+    for (const lot of lotRows) {
+      acc.lotsCount += 1;
+      if (lot.area != null) acc.areaSum += Number(lot.area);
+      if (lot.rate != null && lot.area != null) acc.rateWeighted += Number(lot.rate) * Number(lot.area);
+    }
+  }
+  const rows = [...byBuilding.values()].map(acc => ({
+    building: acc.building, developer: acc.developer, cls: acc.cls, zone: acc.zone, submarket: acc.submarket,
+    canonical_project_id: acc.canonical_project_id, reg_source: acc.reg_source,
+    lotsCount: acc.lotsCount || null,
+    areaSum: acc.areaSum || null,
+    weightedRate: acc.areaSum ? Math.round(acc.rateWeighted / acc.areaSum) : null,
+  }));
+  state.rent_buildings.rows = rows;
+  if (!suppressURLSync) state.rent_buildings.page = 1;
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.rent_buildings = {updated: label, count: rows.length};
+  render();
+}
+
+async function loadRentLandlords(quarterId) {
+  const raw = await fetchRentLotsRaw(quarterId);
+  const byName = registryByNameMap();
+  const byDev = new Map();
+  for (const [building, lotRows] of Object.entries(raw)) {
+    const match = byName.get(building);
+    const dev = match && match.developer ? match.developer : '—';
+    if (!byDev.has(dev)) byDev.set(dev, {developer: dev, buildingSet: new Set(), lotsCount: 0, areaSum: 0, rateWeighted: 0});
+    const acc = byDev.get(dev);
+    acc.buildingSet.add(building);
+    for (const lot of lotRows) {
+      acc.lotsCount += 1;
+      if (lot.area != null) acc.areaSum += Number(lot.area);
+      if (lot.rate != null && lot.area != null) acc.rateWeighted += Number(lot.rate) * Number(lot.area);
+    }
+  }
+  const rows = [...byDev.values()].map(acc => ({
+    developer: acc.developer, objects: acc.buildingSet.size, lotsCount: acc.lotsCount || null,
+    areaSum: acc.areaSum || null,
+    weightedRate: acc.areaSum ? Math.round(acc.rateWeighted / acc.areaSum) : null,
+  }));
+  state.rent_landlords.rows = rows;
+  if (!suppressURLSync) state.rent_landlords.page = 1;
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.rent_landlords = {updated: label, count: rows.length};
+  render();
+}
+
+async function loadRentLots(quarterId) {
+  const raw = await fetchRentLotsRaw(quarterId);
+  const rows = [];
+  for (const [building, lotRows] of Object.entries(raw)) {
+    for (const lot of lotRows) rows.push({building, ...lot});
+  }
+  const byName = registryByNameMap();
+  for (const row of rows) {
+    row.market_channel = 'Аренда';
+    joinRegistryFields(row, byName, 'building', null);
+  }
+  state.rent_lots.rows = rows;
+  if (!suppressURLSync) { state.rent_lots.filters = {}; state.rent_lots.sort = {key:null, dir:1}; state.rent_lots.page = 1; }
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.rent_lots = {updated: label, count: rows.length};
+  render();
+}
+
+// --- Гибкие офисы ---
+async function fetchFlexRowsRaw(quarterId) {
+  const rows = [];
+  for (const [flexType, filePrefix] of Object.entries(FLEX_FILE_BY_TYPE)) {
+    let raw;
+    try { raw = await fetchJSON(`data/${filePrefix}_${quarterId}.json`); } catch (e) { raw = []; }
+    for (const r of raw) rows.push({...r, flex_type: FLEX_TYPE_LABEL[flexType] || flexType});
+  }
+  return rows;
+}
+
+async function loadFlexOperators(quarterId) {
+  const raw = await fetchFlexRowsRaw(quarterId);
+  const byOperator = new Map();
+  for (const r of raw) {
+    const op = r.network || '—';
+    if (!byOperator.has(op)) byOperator.set(op, {network: op, objectSet: new Set(), types: new Set(), seatsSum: 0, vacancySum: 0, rateWeighted: 0, seatsForRate: 0});
+    const acc = byOperator.get(op);
+    acc.objectSet.add(r.bc || r.name);
+    acc.types.add(r.flex_type);
+    if (r.seats != null) acc.seatsSum += Number(r.seats);
+    if (r.vacancy != null) acc.vacancySum += Number(r.vacancy);
+    if (r.rate != null && r.seats != null) { acc.rateWeighted += Number(r.rate) * Number(r.seats); acc.seatsForRate += Number(r.seats); }
+  }
+  const rows = [...byOperator.values()].map(acc => ({
+    network: acc.network, objectsCount: acc.objectSet.size, types: [...acc.types].sort().join(', '),
+    seatsSum: acc.seatsSum || null, vacancySum: acc.vacancySum || null,
+    weightedRate: acc.seatsForRate ? Math.round(acc.rateWeighted / acc.seatsForRate) : null,
+  }));
+  state.flex_operators.rows = rows;
+  if (!suppressURLSync) state.flex_operators.page = 1;
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.flex_operators = {updated: label, count: rows.length};
+  render();
+}
+
+async function loadFlexLots(quarterId) {
+  const rows = await fetchFlexRowsRaw(quarterId);
+  const byName = registryByNameMap();
+  for (const row of rows) joinRegistryFields(row, byName, 'name', null);
+  state.flex_lots.rows = rows;
+  if (!suppressURLSync) { state.flex_lots.filters = {}; state.flex_lots.sort = {key:null, dir:1}; state.flex_lots.page = 1; }
+  const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  dataMeta.flex_lots = {updated: label, count: rows.length};
   render();
 }
 
@@ -466,8 +663,7 @@ function passesFilter(row, col, filter) {
   }
   if (filter.values && filter.values.size > 0) {
     // Для колонок-списков (market_channel и т.п.) — "содержит хотя бы одно
-    // выбранное значение", а не сравнение со всей склеенной строкой целиком
-    // (иначе "sale, rent" никогда не совпадёт с выбранным "sale").
+    // выбранное значение", а не сравнение со всей склеенной строкой целиком.
     if (col.type === 'list' && Array.isArray(raw)) {
       return raw.some(v => filter.values.has(String(v)));
     }
@@ -515,9 +711,7 @@ function getFilteredSortedRows(ts) {
 //  РЕНДЕР
 // ============================================================
 // Итоги считаются по ПОЛНОЙ отфильтрованной выборке (не по текущей странице
-// пагинации). Пустые значения не превращаются в 0 — суммируются только
-// реально присутствующие числа, а количество непустых указывается отдельно,
-// если оно меньше числа строк.
+// пагинации). Пустые значения не превращаются в 0.
 function fmtNum(n) {
   if (n == null || !isFinite(n)) return '—';
   return Math.round(n).toLocaleString('ru-RU');
@@ -531,55 +725,89 @@ function uniqueCount(rows, keyFn) {
   return new Set(rows.map(keyFn).filter(v => v != null)).size;
 }
 
-function computeTotals(tab, rows) {
-  if (tab === 'codifier') {
+// Итоги каждого раздела считаются только по его собственному каналу (rows
+// всегда приходят из ОДНОГО файла-источника этого view — см. загрузку выше),
+// и каждая непустая формула начинается с явной метки канала.
+function computeTotals(view, rows) {
+  const section = VIEWS[view].section;
+  const channelLabel = SECTION_CHANNEL_LABEL[section];
+  const prefix = channelLabel ? `${channelLabel} · ` : '';
+  if (view === 'codifier') {
     const projects = uniqueCount(rows, r => r.canonical_project_id);
     const gba = sumField(rows, 'gba');
     const gla = sumField(rows, 'gla');
     return `Уникальных проектов: ${fmtNum(projects)} · Записей: ${rows.length} · `
       + `GBA (сумма по ${gba.n} из ${rows.length}): ${fmtNum(gba.sum)} · GLA (${gla.n} из ${rows.length}): ${fmtNum(gla.sum)}`;
   }
-  if (tab === 'buildings') {
+  if (view === 'sale_buildings') {
     const projects = uniqueCount(rows, r => r.canonical_project_id || r.name);
     const gba = sumField(rows, 'gba');
     const volume = sumField(rows, 'volume');
     const lots = sumField(rows, 'lots');
     const priceRows = rows.filter(r => r.price != null && r.volume != null);
     const weighted = priceRows.length ? priceRows.reduce((s,r)=>s+r.price*r.volume,0) / priceRows.reduce((s,r)=>s+r.volume,0) : null;
-    return `Уникальных проектов: ${fmtNum(projects)} · Зданий: ${rows.length} · Лотов (сумма): ${fmtNum(lots.sum)} · `
+    return prefix + `Уникальных проектов: ${fmtNum(projects)} · Зданий: ${rows.length} · Лотов (сумма): ${fmtNum(lots.sum)} · `
       + `GBA: ${fmtNum(gba.sum)} · Объём на продажу: ${fmtNum(volume.sum)} · Ср.взв. цена: ${fmtNum(weighted)}`;
   }
-  if (tab === 'developers') {
+  if (view === 'sale_developers') {
     const gba = sumField(rows, 'gbaSum');
     const volume = sumField(rows, 'volumeSum');
     const lots = sumField(rows, 'lotsSum');
-    return `Девелоперов: ${rows.length} · GBA (сумма): ${fmtNum(gba.sum)} · Объём (сумма): ${fmtNum(volume.sum)} · Лотов (сумма): ${fmtNum(lots.sum)}`;
+    return prefix + `Девелоперов: ${rows.length} · GBA (сумма): ${fmtNum(gba.sum)} · Объём (сумма): ${fmtNum(volume.sum)} · Лотов (сумма): ${fmtNum(lots.sum)}`;
   }
-  if (tab === 'lots') {
-    const buildings = uniqueCount(rows, r => r.building || r.name);
-    if (currentChannel === 'sale') {
-      const area = sumField(rows, 'area');
-      const total = sumField(rows, 'total');
-      const weighted = total.sum && area.sum ? total.sum / area.sum : null;
-      return `Лотов: ${rows.length} · Зданий (уникальных): ${buildings} · Площадь (сумма): ${fmtNum(area.sum)} · `
-        + `Стоимость (сумма): ${fmtNum(total.sum)} · Ср.взв. цена: ${fmtNum(weighted)}`;
-    }
-    if (currentChannel === 'rent') {
-      const area = sumField(rows, 'area');
-      const rateRows = rows.filter(r => r.rate != null && r.area != null);
-      const weighted = rateRows.length ? rateRows.reduce((s,r)=>s+r.rate*r.area,0) / rateRows.reduce((s,r)=>s+r.area,0) : null;
-      return `Лотов: ${rows.length} · Зданий (уникальных): ${buildings} · Площадь (сумма): ${fmtNum(area.sum)} · Ср.взв. ставка: ${fmtNum(weighted)}`;
-    }
-    // coworking
+  if (view === 'sale_lots') {
+    const buildings = uniqueCount(rows, r => r.building);
+    const area = sumField(rows, 'area');
+    const total = sumField(rows, 'total');
+    const weighted = total.sum && area.sum ? total.sum / area.sum : null;
+    return prefix + `Лотов: ${rows.length} · Зданий (уникальных): ${buildings} · Площадь (сумма): ${fmtNum(area.sum)} · `
+      + `Стоимость (сумма): ${fmtNum(total.sum)} · Ср.взв. цена: ${fmtNum(weighted)}`;
+  }
+  if (view === 'rent_buildings') {
+    const lots = sumField(rows, 'lotsCount');
+    const area = sumField(rows, 'areaSum');
+    return prefix + `Объектов: ${rows.length} · Предложений (сумма): ${fmtNum(lots.sum)} · Площадь (сумма): ${fmtNum(area.sum)}`;
+  }
+  if (view === 'rent_landlords') {
+    const objects = sumField(rows, 'objects');
+    const lots = sumField(rows, 'lotsCount');
+    const area = sumField(rows, 'areaSum');
+    return prefix + `Арендодателей: ${rows.length} · Объектов (сумма): ${fmtNum(objects.sum)} · Предложений (сумма): ${fmtNum(lots.sum)} · Площадь (сумма): ${fmtNum(area.sum)}`;
+  }
+  if (view === 'rent_lots') {
+    const buildings = uniqueCount(rows, r => r.building);
+    const area = sumField(rows, 'area');
+    const rateRows = rows.filter(r => r.rate != null && r.area != null);
+    const weighted = rateRows.length ? rateRows.reduce((s,r)=>s+r.rate*r.area,0) / rateRows.reduce((s,r)=>s+r.area,0) : null;
+    return prefix + `Предложений: ${rows.length} · Объектов (уникальных): ${buildings} · Площадь (сумма): ${fmtNum(area.sum)} · Ср.взв. ставка: ${fmtNum(weighted)}`;
+  }
+  if (view === 'flex_operators') {
+    const seats = sumField(rows, 'seatsSum');
+    const vacancy = sumField(rows, 'vacancySum');
+    return prefix + `Операторов: ${rows.length} · Мест (сумма): ${fmtNum(seats.sum)} · Вакантно (сумма): ${fmtNum(vacancy.sum)}`;
+  }
+  if (view === 'flex_lots') {
     const seats = sumField(rows, 'seats');
     const vacancy = sumField(rows, 'vacancy');
-    return `Площадок: ${rows.length} · Мест (сумма): ${fmtNum(seats.sum)} · Вакантно (сумма): ${fmtNum(vacancy.sum)}`;
+    return prefix + `Объектов: ${rows.length} · Мест (сумма): ${fmtNum(seats.sum)} · Вакантно (сумма): ${fmtNum(vacancy.sum)}`;
   }
   return '';
 }
 
+const VIEW_SOURCE_LABEL = {
+  codifier: () => 'data/all_projects_layer.json',
+  sale_buildings: () => `data/buildings_${currentQuarterId}.json (+ join по реестру)`,
+  sale_developers: () => `data/buildings_${currentQuarterId}.json (агрегат по девелоперам)`,
+  sale_lots: () => `data/lots_${currentQuarterId}.json`,
+  rent_buildings: () => `data/rent_lots_${currentQuarterId}.json (агрегат по объектам)`,
+  rent_landlords: () => `data/rent_lots_${currentQuarterId}.json (агрегат по арендодателям)`,
+  rent_lots: () => `data/rent_lots_${currentQuarterId}.json`,
+  flex_operators: () => `data/coworking_${currentQuarterId}.json (агрегат по операторам)`,
+  flex_lots: () => `data/coworking_${currentQuarterId}.json`,
+};
+
 function render() {
-  const ts = state[currentTab];
+  const ts = state[currentView];
   const filteredRows = getFilteredSortedRows(ts);
   const cols = ts.columns.filter(c => c.visible);
 
@@ -622,31 +850,28 @@ function render() {
   const resetInline = document.getElementById('btnResetInline');
   if (resetInline) resetInline.onclick = () => document.getElementById('btnReset').click();
 
-  const meta = dataMeta[currentTab];
+  const meta = dataMeta[currentView];
   document.getElementById('statusRow').textContent =
     `Строк: ${filteredRows.length} из ${ts.rows.length}` +
     (meta ? ` · срез: ${meta.updated ?? '—'}` : '');
-  document.getElementById('totalsRow').textContent = 'Итого по выборке: ' + computeTotals(currentTab, filteredRows);
+  document.getElementById('totalsRow').textContent = 'Итого по выборке: ' + computeTotals(currentView, filteredRows);
   document.getElementById('pagerLabel').textContent = `Стр. ${ts.page} из ${totalPages}`;
   document.getElementById('btnPrevPage').disabled = ts.page <= 1;
   document.getElementById('btnNextPage').disabled = ts.page >= totalPages;
+  const channelLabel = SECTION_CHANNEL_LABEL[VIEWS[currentView].section];
   document.getElementById('metaLine').textContent =
-    currentTab === 'codifier' ? 'data/all_projects_layer.json' :
-    currentTab === 'buildings' ? `data/buildings_${currentQuarterId}.json (+ join по реестру)` :
-    currentTab === 'developers' ? `data/buildings_${currentQuarterId}.json (агрегат по девелоперам)` :
-    `data/${LOTS_FILE_BY_CHANNEL[currentChannel]}_${currentQuarterId}.json`;
+    (channelLabel ? `Канал: ${channelLabel} · ` : '') + VIEW_SOURCE_LABEL[currentView]();
 
   attachHeaderHandlers();
   if (!suppressURLSync) syncURL();
 }
 
 function attachHeaderHandlers() {
-  // Сортировка и фильтрация — два РАЗНЫХ элемента (.th-label / button.filter-btn),
-  // не одна и та же зона клика, разделённая координатой.
+  // Сортировка и фильтрация — два РАЗНЫХ элемента (.th-label / button.filter-btn).
   document.querySelectorAll('#mainTable .th-label').forEach(label => {
     label.onclick = () => {
       const key = label.dataset.sortKey;
-      const ts = state[currentTab];
+      const ts = state[currentView];
       if (ts.sort.key === key) ts.sort.dir *= -1;
       else { ts.sort.key = key; ts.sort.dir = 1; }
       render();
@@ -656,7 +881,7 @@ function attachHeaderHandlers() {
     btn.onclick = (e) => {
       e.stopPropagation();
       const key = btn.dataset.filterKey;
-      const ts = state[currentTab];
+      const ts = state[currentView];
       const col = ts.columns.find(c => c.key === key);
       openFilterPanel(btn, col);
     };
@@ -672,12 +897,11 @@ function closePanels() {
 
 function openFilterPanel(anchorEl, col) {
   closePanels();
-  const ts = state[currentTab];
+  const ts = state[currentView];
   const values = new Map(); // string value -> count
   ts.rows.forEach(row => {
     const raw = row[col.key];
     if (col.type === 'list' && Array.isArray(raw)) {
-      // Отдельная опция на каждый элемент списка, а не на всю склеенную строку.
       raw.forEach(item => {
         const key = String(item ?? '');
         if (key === '') return;
@@ -693,8 +917,7 @@ function openFilterPanel(anchorEl, col) {
   const sortedValues = [...values.keys()].sort((a,b) => a.localeCompare(b, 'ru', {numeric:true}));
 
   // Снимок фильтра ДО открытия — используется и для инициализации полей, и
-  // чтобы "Отмена"/клик вне панели гарантированно вернули именно это состояние
-  // (панель работает с черновиком в DOM, ts.filters не трогается до "Применить").
+  // чтобы "Отмена"/клик вне панели гарантированно вернули именно это состояние.
   const original = ts.filters[col.key]
     ? {
         mode: ts.filters[col.key].mode || 'values',
@@ -751,11 +974,10 @@ function openFilterPanel(anchorEl, col) {
     const rect = anchorEl.getBoundingClientRect();
     const pw = panel.offsetWidth, ph = panel.offsetHeight;
     let top = rect.bottom + 4;
-    let left = rect.right - pw; // по умолчанию выровнять по правому краю кнопки
+    let left = rect.right - pw;
     if (left < 8) left = 8;
     if (left + pw > window.innerWidth - 8) left = window.innerWidth - pw - 8;
     if (top + ph > window.innerHeight - 8) {
-      // не помещается снизу — открыть вверх от кнопки
       top = rect.top - ph - 4;
       if (top < 8) top = 8;
     }
@@ -850,8 +1072,6 @@ function openFilterPanel(anchorEl, col) {
     render();
   };
   function cancel() {
-    // Черновик в DOM просто выбрасывается — ts.filters не менялся, поэтому
-    // "отмена" = закрыть без вызова render() с уже неизменным состоянием.
     closePanels();
   }
   panel.querySelector('#fpCancel').onclick = cancel;
@@ -878,14 +1098,13 @@ function openFilterPanel(anchorEl, col) {
 // ============================================================
 document.getElementById('btnColumns').onclick = (e) => {
   closePanels();
-  const ts = state[currentTab];
+  const ts = state[currentView];
   const panel = document.createElement('div');
   panel.className = 'cols-panel';
   panel.innerHTML = ts.columns.map(col =>
     `<label><input type="checkbox" class="colVis" data-key="${col.key}" ${col.visible?'checked':''}> ${escapeHtml(col.label)}</label>`
   ).join('');
   document.body.appendChild(panel);
-  // position:fixed — координаты окна, зажать в границы (та же логика, что у filter-panel).
   const rect = e.target.getBoundingClientRect();
   let left = rect.left, top = rect.bottom + 4;
   if (left + panel.offsetWidth > window.innerWidth - 8) left = window.innerWidth - panel.offsetWidth - 8;
@@ -910,14 +1129,14 @@ document.getElementById('btnColumns').onclick = (e) => {
 };
 
 // ============================================================
-//  ТУЛБАР: поиск / сброс / экспорт / вкладки
+//  ТУЛБАР: поиск / сброс / экспорт
 // ============================================================
 document.getElementById('globalSearch').oninput = (e) => {
-  state[currentTab].globalSearch = e.target.value;
+  state[currentView].globalSearch = e.target.value;
   render();
 };
 document.getElementById('btnReset').onclick = () => {
-  const ts = state[currentTab];
+  const ts = state[currentView];
   ts.filters = {};
   ts.sort = {key:null, dir:1};
   ts.globalSearch = '';
@@ -926,11 +1145,17 @@ document.getElementById('btnReset').onclick = () => {
 };
 
 function currentExportRows() {
-  const ts = state[currentTab];
+  const ts = state[currentView];
   const cols = ts.columns.filter(c => c.visible);
   const rows = getFilteredSortedRows(ts);
   return {cols, rows};
 }
+
+const VIEW_EXPORT_LABEL = {
+  codifier: 'Кодификатор', sale_buildings: 'Продажа_Здания', sale_developers: 'Продажа_Девелоперы', sale_lots: 'Продажа_Лоты',
+  rent_buildings: 'Аренда_Объекты', rent_landlords: 'Аренда_Арендодатели', rent_lots: 'Аренда_Предложения',
+  flex_operators: 'Гибкие_Операторы', flex_lots: 'Гибкие_Предложения',
+};
 
 document.getElementById('btnExportCsv').onclick = () => {
   const {cols, rows} = currentExportRows();
@@ -943,8 +1168,8 @@ document.getElementById('btnExportCsv').onclick = () => {
   const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  const suffix = currentTab === 'codifier' ? 'all' : (currentTab === 'lots' ? `${currentQuarterId}_${currentChannel}` : currentQuarterId);
-  a.download = `${currentTab}_${suffix}.csv`;
+  const suffix = currentView === 'codifier' ? 'all' : currentQuarterId;
+  a.download = `${VIEW_EXPORT_LABEL[currentView]}_${suffix}.csv`;
   a.click();
 };
 
@@ -952,56 +1177,57 @@ document.getElementById('btnExportXlsx').onclick = () => {
   const {cols, rows} = currentExportRows();
   const aoa = [cols.map(c => c.label)].concat(rows.map(row => cols.map(col => cellValue(row, col) ?? '')));
   const wb = XLSX.utils.book_new();
-  const sheetName = {codifier:'Кодификатор', buildings:'Здания квартала', developers:'Девелоперы квартала', lots:'Все лоты'}[currentTab];
-  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), sheetName);
-  const suffix = currentTab === 'codifier' ? 'all' : (currentTab === 'lots' ? `${currentQuarterId}_${currentChannel}` : currentQuarterId);
-  XLSX.writeFile(wb, `${currentTab}_${suffix}.xlsx`);
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), VIEWS[currentView].label.slice(0, 31));
+  const suffix = currentView === 'codifier' ? 'all' : currentQuarterId;
+  XLSX.writeFile(wb, `${VIEW_EXPORT_LABEL[currentView]}_${suffix}.xlsx`);
 };
 
 // ============================================================
 //  ПАГИНАЦИЯ
 // ============================================================
-document.getElementById('btnPrevPage').onclick = () => { state[currentTab].page -= 1; render(); };
-document.getElementById('btnNextPage').onclick = () => { state[currentTab].page += 1; render(); };
+document.getElementById('btnPrevPage').onclick = () => { state[currentView].page -= 1; render(); };
+document.getElementById('btnNextPage').onclick = () => { state[currentView].page += 1; render(); };
 document.getElementById('pageSizeSelect').onchange = (e) => {
   pageSize = Number(e.target.value);
-  state[currentTab].page = 1;
+  state[currentView].page = 1;
   render();
 };
 
 // ============================================================
 //  ПРЕСЕТЫ
 // ============================================================
+// Ключи ищутся по факту наличия колонки в текущем view — так пресет
+// остаётся безопасным для всех 9 представлений без явного списка на
+// каждое (там, где подходящей колонки нет, пресет просто ничего не делает).
 document.getElementById('presetSelect').onchange = (e) => {
   const preset = e.target.value;
   e.target.value = '';
   if (!preset) return;
-  const ts = state[currentTab];
+  const ts = state[currentView];
   ts.filters = {};
+  const findKey = (...candidates) => candidates.find(k => ts.columns.some(c => c.key === k));
   if (preset === 'all_sale') {
-    if (currentTab === 'lots') { channelSelect.value = 'sale'; currentChannel = 'sale'; loadLots(currentQuarterId, 'sale'); return; }
-    const key = currentTab === 'codifier' ? 'market_channel' : 'reg_market_channel';
-    ts.filters[key] = {values: new Set(['sale']), emptyOnly:false, nonEmptyOnly:false};
+    const key = findKey('market_channel', 'reg_market_channel');
+    if (key) ts.filters[key] = {mode:'values', values: new Set(['sale', 'Продажа']), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'under_construction') {
-    const key = currentTab === 'codifier' ? 'project_status' : 'reg_project_status';
-    ts.filters[key] = {values: new Set(['Строится']), emptyOnly:false, nonEmptyOnly:false};
+    const key = findKey('project_status', 'reg_project_status');
+    if (key) ts.filters[key] = {mode:'values', values: new Set(['Строится']), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'delivered') {
-    const key = currentTab === 'codifier' ? 'project_status' : 'reg_project_status';
-    ts.filters[key] = {values: new Set(['Введён']), emptyOnly:false, nonEmptyOnly:false};
+    const key = findKey('project_status', 'reg_project_status');
+    if (key) ts.filters[key] = {mode:'values', values: new Set(['Введён']), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'no_source') {
-    const key = currentTab === 'codifier' ? 'source' : 'reg_source';
-    ts.filters[key] = {values: new Set(), emptyOnly:true, nonEmptyOnly:false};
+    const key = findKey('source', 'reg_source');
+    if (key) ts.filters[key] = {mode:'values', values: new Set(), emptyOnly:true, nonEmptyOnly:false};
   } else if (preset === 'changed_only') {
-    // "Только изменения" — требует сравнения кварталов; включаем режим
-    // сравнения (если ещё не включён) и фильтруем по наличию дельты объёма.
-    if (currentTab === 'buildings') {
+    // "Только изменения" реализовано только для "Здания квартала" (Продажа) — нужен режим сравнения кварталов.
+    if (currentView === 'sale_buildings') {
       if (!compareQuarterId) {
         alert('Выберите квартал для сравнения (селектор «Без сравнения»), чтобы увидеть только изменившиеся здания.');
         return;
       }
-      ts.filters['delta_volume'] = {values: new Set(), emptyOnly:false, nonEmptyOnly:true};
+      ts.filters['delta_volume'] = {mode:'values', values: new Set(), emptyOnly:false, nonEmptyOnly:true};
     } else {
-      alert('«Только изменения» пока реализовано только для вкладки «Здания квартала» (нужен режим сравнения кварталов).');
+      alert('«Только изменения» пока реализовано только для вкладки «Здания квартала» в разделе «Продажа офисов».');
       return;
     }
   }
@@ -1009,7 +1235,7 @@ document.getElementById('presetSelect').onchange = (e) => {
 };
 
 // ============================================================
-//  СРАВНЕНИЕ ДВУХ КВАРТАЛОВ (только вкладка «Здания квартала»)
+//  СРАВНЕНИЕ ДВУХ КВАРТАЛОВ (только «Здания квартала» в разделе «Продажа»)
 // ============================================================
 const COMPARE_EXTRA_COLUMNS = [
   {key:'cmp_volume', label:'Объём (сравн. квартал)', type:'number', visible:true},
@@ -1019,7 +1245,7 @@ const COMPARE_EXTRA_COLUMNS = [
 ];
 
 function removeCompareColumns() {
-  state.buildings.columns = state.buildings.columns.filter(c => !c.key.startsWith('cmp_') && !c.key.startsWith('delta_'));
+  state.sale_buildings.columns = state.sale_buildings.columns.filter(c => !c.key.startsWith('cmp_') && !c.key.startsWith('delta_'));
 }
 
 async function applyCompare(quarterId, compareId) {
@@ -1029,14 +1255,14 @@ async function applyCompare(quarterId, compareId) {
   try { compareRows = await fetchBuildingsWithJoin(compareId); }
   catch (e) { compareRows = []; }
   const byKey = new Map(compareRows.map(r => [r.canonical_project_id || r.name, r]));
-  for (const row of state.buildings.rows) {
+  for (const row of state.sale_buildings.rows) {
     const cmp = byKey.get(row.canonical_project_id || row.name);
     row.cmp_volume = cmp ? cmp.volume ?? null : null;
     row.cmp_price = cmp ? cmp.price ?? null : null;
     row.delta_volume = (row.volume != null && row.cmp_volume != null) ? (row.volume - row.cmp_volume) : null;
     row.delta_price_pct = (row.price != null && row.cmp_price) ? Math.round(((row.price - row.cmp_price) / row.cmp_price) * 1000) / 10 : null;
   }
-  state.buildings.columns.push(...COMPARE_EXTRA_COLUMNS.map(c => ({...c})));
+  state.sale_buildings.columns.push(...COMPARE_EXTRA_COLUMNS.map(c => ({...c})));
   render();
 }
 
@@ -1048,15 +1274,14 @@ compareSelect.onchange = (e) => {
 };
 
 // ============================================================
-//  СОСТОЯНИЕ В URL (квартал/канал/сравнение/фильтры/сортировка/колонки)
+//  СОСТОЯНИЕ В URL (раздел/вид/квартал/сравнение/фильтры/сортировка/колонки)
 // ============================================================
 function syncURL() {
-  const ts = state[currentTab];
+  const ts = state[currentView];
   const p = new URLSearchParams();
-  p.set('tab', currentTab);
-  if (currentTab === 'buildings' || currentTab === 'developers' || currentTab === 'lots') p.set('q', currentQuarterId);
-  if (currentTab === 'lots') p.set('channel', currentChannel);
-  if (currentTab === 'buildings' && compareQuarterId) p.set('cmp', compareQuarterId);
+  p.set('view', currentView);
+  if (VIEWS[currentView].section !== 'codifier') p.set('q', currentQuarterId);
+  if (currentView === 'sale_buildings' && compareQuarterId) p.set('cmp', compareQuarterId);
   if (ts.globalSearch) p.set('search', ts.globalSearch);
   if (ts.sort.key) { p.set('sortKey', ts.sort.key); p.set('sortDir', String(ts.sort.dir)); }
   p.set('page', String(ts.page || 1));
@@ -1084,21 +1309,19 @@ function restoreFromURL() {
   const p = new URLSearchParams(location.search);
   if (![...p.keys()].length) return;
   suppressURLSync = true;
-  const tab = p.get('tab');
-  if (tab && state[tab]) {
-    currentTab = tab;
-    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  const view = p.get('view') || p.get('tab'); // 'tab' — совместимость со старыми ссылками до разделения на разделы
+  if (view && VIEWS[view]) {
+    currentView = view;
+    currentSection = VIEWS[view].section;
   }
   const q = p.get('q');
   if (q && QUARTERS.some(x => x.id === q)) currentQuarterId = q;
-  const channel = p.get('channel');
-  if (channel && LOTS_COLUMNS_BY_CHANNEL[channel]) currentChannel = channel;
   const cmp = p.get('cmp');
   if (cmp && QUARTERS.some(x => x.id === cmp)) compareQuarterId = cmp;
   const pageSizeParam = Number(p.get('pageSize'));
   if (pageSizeParam) pageSize = pageSizeParam;
 
-  const ts = state[currentTab];
+  const ts = state[currentView];
   const search = p.get('search');
   if (search) ts.globalSearch = search;
   const sortKey = p.get('sortKey');
@@ -1132,9 +1355,7 @@ function restoreFromURL() {
       ts.filters[key] = f;
     }
   }
-  // suppressURLSync остаётся true до конца первоначальной загрузки данных —
-  // см. init(): иначе loadBuildings/loadDevelopers/loadLots сбросят только что
-  // восстановленные страницу/фильтры/сортировку как будто это обычная смена квартала.
+  // suppressURLSync остаётся true до конца первоначальной загрузки данных — см. init().
 }
 
 document.getElementById('btnCopyLink').onclick = () => {
@@ -1149,49 +1370,65 @@ document.getElementById('btnCopyLink').onclick = () => {
   });
 };
 
-document.querySelectorAll('.tab').forEach(tab => {
+// ============================================================
+//  НАВИГАЦИЯ: РАЗДЕЛЫ + ВКЛАДКИ ВНУТРИ РАЗДЕЛА
+// ============================================================
+function renderSubtabs() {
+  const section = SECTIONS.find(s => s.id === currentSection);
+  const wrap = document.getElementById('viewTabs');
+  if (!section || section.views.length <= 1) { wrap.style.display = 'none'; wrap.innerHTML = ''; return; }
+  wrap.style.display = '';
+  wrap.innerHTML = section.views.map(v => `<div class="subtab${v === currentView ? ' active' : ''}" data-view="${v}">${escapeHtml(VIEWS[v].label)}</div>`).join('');
+  wrap.querySelectorAll('.subtab').forEach(st => {
+    st.onclick = () => switchToView(st.dataset.view);
+  });
+}
+
+function syncSectionTabsActive() {
+  document.querySelectorAll('#sectionTabs .tab').forEach(t => t.classList.toggle('active', t.dataset.section === currentSection));
+}
+
+document.querySelectorAll('#sectionTabs .tab').forEach(tab => {
   tab.onclick = () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    currentTab = tab.dataset.tab;
-    switchToCurrentTab();
+    const section = SECTIONS.find(s => s.id === tab.dataset.section);
+    switchToView(section.views[0]);
   };
 });
 
-function switchToCurrentTab() {
-  document.getElementById('quarterSelect').style.display = (currentTab === 'buildings' || currentTab === 'developers' || currentTab === 'lots') ? '' : 'none';
-  document.getElementById('compareSelect').style.display = currentTab === 'buildings' ? '' : 'none';
-  document.getElementById('channelSelect').style.display = currentTab === 'lots' ? '' : 'none';
-  document.getElementById('globalSearch').value = state[currentTab].globalSearch || '';
+function loadCurrentView() {
+  switch (currentView) {
+    case 'codifier': render(); return Promise.resolve();
+    case 'sale_buildings': return loadSaleBuildings(currentQuarterId).then(() => { if (compareQuarterId) return applyCompare(currentQuarterId, compareQuarterId); });
+    case 'sale_developers': return loadSaleDevelopers(currentQuarterId);
+    case 'sale_lots': return loadSaleLots(currentQuarterId);
+    case 'rent_buildings': return loadRentBuildings(currentQuarterId);
+    case 'rent_landlords': return loadRentLandlords(currentQuarterId);
+    case 'rent_lots': return loadRentLots(currentQuarterId);
+    case 'flex_operators': return loadFlexOperators(currentQuarterId);
+    case 'flex_lots': return loadFlexLots(currentQuarterId);
+    default: render(); return Promise.resolve();
+  }
+}
+
+function switchToView(viewId) {
+  currentView = viewId;
+  currentSection = VIEWS[viewId].section;
+  syncSectionTabsActive();
+  renderSubtabs();
+  document.getElementById('quarterSelect').style.display = currentSection !== 'codifier' ? '' : 'none';
+  document.getElementById('compareSelect').style.display = currentView === 'sale_buildings' ? '' : 'none';
+  document.getElementById('globalSearch').value = state[currentView].globalSearch || '';
   quarterSelect.value = currentQuarterId;
-  channelSelect.value = currentChannel;
   compareSelect.value = compareQuarterId;
   closePanels();
-  if (currentTab === 'lots') {
-    return loadLots(currentQuarterId, currentChannel);
-  } else if (currentTab === 'developers') {
-    return loadDevelopers(currentQuarterId);
-  } else if (currentTab === 'buildings') {
-    return loadBuildings(currentQuarterId).then(() => { if (compareQuarterId) return applyCompare(currentQuarterId, compareQuarterId); });
-  } else {
-    render();
-    return Promise.resolve();
-  }
+  return loadCurrentView();
 }
 
 const quarterSelect = document.getElementById('quarterSelect');
 quarterSelect.innerHTML = QUARTERS.map(q => `<option value="${q.id}">${q.label}</option>`).join('');
 quarterSelect.onchange = (e) => {
   currentQuarterId = e.target.value;
-  if (currentTab === 'lots') loadLots(currentQuarterId, currentChannel);
-  else if (currentTab === 'developers') loadDevelopers(currentQuarterId);
-  else loadBuildings(currentQuarterId).then(() => { if (compareQuarterId) applyCompare(currentQuarterId, compareQuarterId); });
-};
-
-const channelSelect = document.getElementById('channelSelect');
-channelSelect.onchange = (e) => {
-  currentChannel = e.target.value;
-  loadLots(currentQuarterId, currentChannel);
+  loadCurrentView();
 };
 
 // ============================================================
@@ -1201,10 +1438,16 @@ channelSelect.onchange = (e) => {
   restoreFromURL();
   document.getElementById('pageSizeSelect').value = String(pageSize);
   await loadCodifier();
-  if (currentTab === 'codifier') {
+  syncSectionTabsActive();
+  renderSubtabs();
+  if (currentView === 'codifier') {
     render();
   } else {
-    await switchToCurrentTab();
+    document.getElementById('quarterSelect').style.display = currentSection !== 'codifier' ? '' : 'none';
+    document.getElementById('compareSelect').style.display = currentView === 'sale_buildings' ? '' : 'none';
+    quarterSelect.value = currentQuarterId;
+    compareSelect.value = compareQuarterId;
+    await loadCurrentView();
   }
   suppressURLSync = false;
   syncURL();
