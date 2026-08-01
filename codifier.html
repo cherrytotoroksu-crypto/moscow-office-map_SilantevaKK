@@ -203,6 +203,14 @@ function PROJECT_ID_NUMBER(v) {
   const m = String(v).match(/-?(\d+)\s*$/);
   return m ? m[1] : v;
 }
+// Все текущие адреса — Москва (проверено по данным, исключений нет). Убираем
+// только явный префикс "Москва"/"г. Москва" в начале строки — если адрес его
+// не содержит (другой город/область), строка остаётся как есть, без догадок.
+function STRIP_MOSCOW_PREFIX(v) {
+  const s = String(v);
+  const m = s.match(/^\s*г\.?\s*Москва\s*,?\s*(.*)$/i);
+  return m ? (m[1] || s) : s;
+}
 // Технические enum-значения из общего реестра — не показываем как есть,
 // переводим в понятные бизнес-формулировки. Ключи — в исходном регистре
 // ИЛИ в нижнем (сопоставление в translateValue() регистронезависимое), т.к.
@@ -253,7 +261,7 @@ const CODIFIER_COLUMNS = [
   {key:'project_group_name', label:'Проект', type:'text', visible:true},
   {key:'canonical_name', label:'Название записи (проект/корпус)', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
-  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true, format: STRIP_MOSCOW_PREFIX},
   {key:'cls', label:'Класс', type:'text', visible:true},
   {key:'bizFormed', label:'Дел. район (сформ.)', type:'text', visible:false},
   {key:'bizForming', label:'Дел. район (форм.)', type:'text', visible:false},
@@ -299,7 +307,7 @@ const CODIFIER_COLUMNS = [
 const SALE_BUILDINGS_COLUMNS = [
   {key:'name', label:'Здание', type:'text', visible:true},
   {key:'name_orig', label:'Прежнее название', type:'text', visible:false},
-  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true, format: STRIP_MOSCOW_PREFIX},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'cls', label:'Класс', type:'text', visible:true},
   {key:'status', label:'Статус (квартал)', type:'text', visible:true},
@@ -985,7 +993,11 @@ function getFilteredSortedRows(ts) {
         if (!isColumnShown(col)) return false;
         const v = cellValue(row, col);
         return v != null && String(v).toLowerCase().includes(q);
-      });
+      })
+        // Старые/исходные названия ищутся всегда, даже когда raw_name/aliases
+        // скрыты (не в режиме QA) — поиск не должен зависеть от видимости колонки.
+        || (row.raw_name && String(row.raw_name).toLowerCase().includes(q))
+        || (Array.isArray(row.aliases) && row.aliases.some(a => String(a).toLowerCase().includes(q)));
       if (!hit) return false;
     }
     return true;
@@ -1346,6 +1358,9 @@ function openFilterPanel(anchorEl, col) {
     : {mode:'values', values:new Set(), emptyOnly:false, nonEmptyOnly:false, condition:{op:'', value:'', value2:''}};
 
   const isNumber = col.type === 'number';
+  // Условие (равно/больше/содержит/...) не имеет смысла для да/нет — там
+  // только 2 состояния, их полностью покрывают Значения + Пустые/Непустые.
+  const hasCondition = col.type !== 'bool';
   const opOptions = isNumber
     ? `<option value="eq">Равно</option><option value="gt">Больше</option><option value="lt">Меньше</option><option value="between">Диапазон</option>`
     : `<option value="contains">Содержит</option><option value="eq">Равно</option><option value="startswith">Начинается с</option>`;
@@ -1362,7 +1377,7 @@ function openFilterPanel(anchorEl, col) {
     </div>
     <div class="fp-mode-tabs">
       <div class="fp-mode-tab" id="fpTabValues" data-mode="values">Значения</div>
-      <div class="fp-mode-tab" id="fpTabCondition" data-mode="condition">Условие</div>
+      ${hasCondition ? `<div class="fp-mode-tab" id="fpTabCondition" data-mode="condition">Условие</div>` : ''}
     </div>
     <div id="fpValuesMode">
       <input type="text" placeholder="Поиск по значениям..." id="fpSearch">
@@ -1371,13 +1386,13 @@ function openFilterPanel(anchorEl, col) {
       <label><input type="checkbox" id="fpNonEmpty"> Непустые</label>
       <div id="fpValues"></div>
     </div>
-    <div id="fpConditionMode" style="display:none;">
+    ${hasCondition ? `<div id="fpConditionMode" style="display:none;">
       <select id="fpCondOp">${opOptions}</select>
       <div class="fp-condition-row">
         <input type="${isNumber ? 'number' : 'text'}" id="fpCondValue" placeholder="${isNumber ? 'Значение' : 'Текст'}">
         <input type="number" id="fpCondValue2" placeholder="До" style="display:none;">
       </div>
-    </div>
+    </div>` : ''}
     <div class="fp-actions">
       <button class="btn primary" id="fpApply">Применить</button>
       <button class="btn" id="fpClear">Сбросить</button>
@@ -1405,15 +1420,16 @@ function openFilterPanel(anchorEl, col) {
 
   // --- режим (Значения / Условие) ---
   function setMode(mode) {
+    if (!hasCondition) mode = 'values';
     panel.querySelector('#fpTabValues').classList.toggle('active', mode === 'values');
-    panel.querySelector('#fpTabCondition').classList.toggle('active', mode === 'condition');
+    if (hasCondition) panel.querySelector('#fpTabCondition').classList.toggle('active', mode === 'condition');
     panel.querySelector('#fpValuesMode').style.display = mode === 'values' ? '' : 'none';
-    panel.querySelector('#fpConditionMode').style.display = mode === 'condition' ? '' : 'none';
+    if (hasCondition) panel.querySelector('#fpConditionMode').style.display = mode === 'condition' ? '' : 'none';
     panel.dataset.mode = mode;
     positionPanel();
   }
   panel.querySelector('#fpTabValues').onclick = () => setMode('values');
-  panel.querySelector('#fpTabCondition').onclick = () => setMode('condition');
+  if (hasCondition) panel.querySelector('#fpTabCondition').onclick = () => setMode('condition');
 
   // --- вкладка "Значения" ---
   panel.querySelector('#fpEmpty').checked = original.emptyOnly;
@@ -1441,16 +1457,18 @@ function openFilterPanel(anchorEl, col) {
   });
 
   // --- вкладка "Условие" ---
-  panel.querySelector('#fpCondOp').value = original.condition.op || (isNumber ? 'eq' : 'contains');
-  panel.querySelector('#fpCondValue').value = original.condition.value ?? '';
-  panel.querySelector('#fpCondValue2').value = original.condition.value2 ?? '';
-  panel.querySelector('#fpCondValue').placeholder = (isNumber && panel.querySelector('#fpCondOp').value === 'between') ? 'От' : (isNumber ? 'Значение' : 'Текст');
-  panel.querySelector('#fpCondValue2').style.display = (isNumber && panel.querySelector('#fpCondOp').value === 'between') ? '' : 'none';
-  panel.querySelector('#fpCondOp').onchange = (e) => {
-    const isBetween = isNumber && e.target.value === 'between';
-    panel.querySelector('#fpCondValue2').style.display = isBetween ? '' : 'none';
-    panel.querySelector('#fpCondValue').placeholder = isBetween ? 'От' : (isNumber ? 'Значение' : 'Текст');
-  };
+  if (hasCondition) {
+    panel.querySelector('#fpCondOp').value = original.condition.op || (isNumber ? 'eq' : 'contains');
+    panel.querySelector('#fpCondValue').value = original.condition.value ?? '';
+    panel.querySelector('#fpCondValue2').value = original.condition.value2 ?? '';
+    panel.querySelector('#fpCondValue').placeholder = (isNumber && panel.querySelector('#fpCondOp').value === 'between') ? 'От' : (isNumber ? 'Значение' : 'Текст');
+    panel.querySelector('#fpCondValue2').style.display = (isNumber && panel.querySelector('#fpCondOp').value === 'between') ? '' : 'none';
+    panel.querySelector('#fpCondOp').onchange = (e) => {
+      const isBetween = isNumber && e.target.value === 'between';
+      panel.querySelector('#fpCondValue2').style.display = isBetween ? '' : 'none';
+      panel.querySelector('#fpCondValue').placeholder = isBetween ? 'От' : (isNumber ? 'Значение' : 'Текст');
+    };
+  }
 
   setMode(original.mode === 'condition' ? 'condition' : 'values');
 
