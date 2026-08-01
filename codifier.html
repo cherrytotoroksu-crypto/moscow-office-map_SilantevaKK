@@ -250,7 +250,8 @@ const CODIFIER_COLUMNS = [
   // идентификация + видимая проверка данных), не прячем их за режим QA:
   // internal:true оставлен только для действительно служебных полей ниже.
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
-  {key:'canonical_name', label:'Проект', type:'text', visible:true},
+  {key:'project_group_name', label:'Проект', type:'text', visible:true},
+  {key:'canonical_name', label:'Название записи (проект/корпус)', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
   {key:'cls', label:'Класс', type:'text', visible:true},
@@ -499,8 +500,40 @@ function isColumnShown(col) {
 // ============================================================
 //  ЗАГРУЗКА ДАННЫХ
 // ============================================================
+// Разграничение "проект" vs "здание/корпус" в общем кодификаторе — без
+// выдумывания текста: там где у одного canonical_project_id несколько
+// building-строк (напр. Бадаевский Восточная/Западная), берём общий для
+// них префикс слов из УЖЕ существующих canonical_name как имя проекта.
+// Не трогает GLA/GBA/подсчёты — они по-прежнему считаются через area_scope
+// (см. computeTotals), это чисто текстовая группировка для отображения.
+function computeProjectGroupNames(rows) {
+  const byProject = new Map();
+  for (const r of rows) {
+    if (!r.canonical_project_id) continue;
+    if (!byProject.has(r.canonical_project_id)) byProject.set(r.canonical_project_id, []);
+    byProject.get(r.canonical_project_id).push(r.canonical_name || '');
+  }
+  const groupName = new Map();
+  for (const [pid, names] of byProject) {
+    if (names.length === 1) { groupName.set(pid, names[0]); continue; }
+    const wordLists = names.map(n => n.split(/\s+/));
+    const minLen = Math.min(...wordLists.map(w => w.length));
+    const common = [];
+    for (let i = 0; i < minLen; i++) {
+      const w = wordLists[0][i];
+      if (wordLists.every(wl => wl[i] === w)) common.push(w); else break;
+    }
+    groupName.set(pid, common.length ? common.join(' ') : names[0]);
+  }
+  return groupName;
+}
+
 async function loadCodifier() {
   const rows = await fetchJSON('data/all_projects_layer.json');
+  const groupNames = computeProjectGroupNames(rows);
+  for (const r of rows) {
+    r.project_group_name = r.canonical_project_id ? (groupNames.get(r.canonical_project_id) || r.canonical_name) : r.canonical_name;
+  }
   allProjectsLayer = rows;
   state.codifier.rows = rows;
   dataMeta.codifier = {updated: rows.length ? rows[0].last_verified_at : null, count: rows.length};
