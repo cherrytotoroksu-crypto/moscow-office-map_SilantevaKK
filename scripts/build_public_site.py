@@ -110,6 +110,20 @@ def build_data_dir():
             copied += 1
     print(f"  data/: скопировано {copied} файлов (geojson + квартальные json + логотип)")
 
+    # data/qa/ — контрольные цифры (Golden File reference), которые читает
+    # вкладка "Golden File" в codifier.html. Не внутренние QA-заметки про
+    # процесс, а публикуемый контрольный отчёт — копируем как есть.
+    src_qa = os.path.join(src_data, "qa")
+    if os.path.isdir(src_qa):
+        out_qa = os.path.join(out_data, "qa")
+        os.makedirs(out_qa, exist_ok=True)
+        qa_copied = 0
+        for name in sorted(os.listdir(src_qa)):
+            if name.endswith(".json"):
+                shutil.copy2(os.path.join(src_qa, name), os.path.join(out_qa, name))
+                qa_copied += 1
+        print(f"  data/qa/: скопировано {qa_copied} файлов (Golden File reference)")
+
     # all_projects_layer.json — только public_visibility='public'. Сейчас (2026-07-31)
     # все 277 записей публичные, но фильтр защищает на будущее: если реестр
     # пополнится внешними/неподтверждёнными Remain-кандидатами с

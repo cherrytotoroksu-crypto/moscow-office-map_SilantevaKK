@@ -1,0 +1,39 @@
+{
+  "quarter": "202606",
+  "source_file": "Golden File_Q2_2026 (2).xlsx",
+  "source_sheet": "отчет деление А и прайм",
+  "source_column": "Q2 2026",
+  "note": "Цифры переписаны вручную из выгруженного пользователем Golden File, не выведены расчётом из наших лотов. Используются как официальный контрольный итог для сегмента 'Продажа офисов' за Q2 2026, пока данные лотов (data/lots_202606.json) не приведены к той же методике с Q3 2026.",
+  "sale": {
+    "available_area_sqm": 407575,
+    "available_area_by_class": {
+      "prime": 10900,
+      "class_a": 128765.60000000002,
+      "class_b": 267909.69
+    },
+    "weighted_price_rub_per_sqm": 507000,
+    "price_by_class": {
+      "class_a_plus_prime": 530038,
+      "class_b": 329917,
+      "psn": 520468.1316739344
+    },
+    "stock_total_sqm": 4275555,
+    "stock_by_class": {
+      "prime": 538457,
+      "class_a": 1796624,
+      "class_b": 1940474
+    },
+    "vacancy_overall": 0.09532680552583232
+  },
+  "rent": {
+    "stock_total_sqm": 15404300.7,
+    "available_area_sqm": 1074522.2099999997,
+    "vacancy_overall": 0.06975468935113684,
+    "rate_class_a_plus_prime_rub_sqm_year": 39136.74242753725
+  },
+  "flex": {
+    "coworking_vacancy": 0.202,
+    "coworking_rate_rub_month": 57008,
+    "open_space_seats_sqm": 423000
+  }
+}

@@ -1,0 +1,2365 @@
+{
+  "quarter": "202606",
+  "generated_by": "scripts/audit_sale_lots_kpi.py",
+  "note": "Диагностика: source data/lots_*.json НЕ менялись. Дубли зданий и мега-лоты здесь только ПОМЕЧЕНЫ для ручного подтверждения, не исключены из расчётов.",
+  "exact_duplicate_rows": [
+    {
+      "building": "Air",
+      "row": {
+        "area": 77.0,
+        "block": "AR-1-3",
+        "floor": "7",
+        "price": 652800,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 50265600
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 59.9,
+        "block": "AR-1-18",
+        "floor": "9",
+        "price": 657200,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 39366280
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 77.3,
+        "block": "AR-1-20",
+        "floor": "9",
+        "price": 620100,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 47933730
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 60.0,
+        "block": "AR-1-46",
+        "floor": "11",
+        "price": 724300,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 43458000
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 78.2,
+        "block": "AR-1-48",
+        "floor": "11",
+        "price": 659400,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 51565080
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 70.4,
+        "block": "AR-2-59",
+        "floor": "7",
+        "price": 676400,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 47618560
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 73.7,
+        "block": "AR-2-60",
+        "floor": "7",
+        "price": 646600,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 47654420
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 64.4,
+        "block": "AR-2-165",
+        "floor": "22",
+        "price": 761700,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 49053480
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Air",
+      "row": {
+        "area": 64.4,
+        "block": "AR-2-171",
+        "floor": "22",
+        "price": 789300,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 50830920
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Frame",
+      "row": {
+        "area": 464.1,
+        "block": "",
+        "floor": "11",
+        "price": 652389,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 302773761
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Frame",
+      "row": {
+        "area": 464.1,
+        "block": "",
+        "floor": "9",
+        "price": 622981,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 289125678
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Frame",
+      "row": {
+        "area": 470.0,
+        "block": "",
+        "floor": "12",
+        "price": 663832,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 312001274
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jenga",
+      "row": {
+        "area": 232.3,
+        "block": "",
+        "floor": "8",
+        "price": 223428,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 51902389
+      },
+      "extra_count": 6
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 1735.3,
+        "block": "№18.07",
+        "floor": "18",
+        "price": 445000,
+        "scheme": "ДКПБВ",
+        "size": "Более 1000 кв. м",
+        "total": 772208500
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 1728.0,
+        "block": "№22.07",
+        "floor": "22",
+        "price": 470000,
+        "scheme": "ДКПБВ",
+        "size": "Более 1000 кв. м",
+        "total": 812150600
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 1730.0,
+        "block": "№21.07",
+        "floor": "21",
+        "price": 465000,
+        "scheme": "ДКПБВ",
+        "size": "Более 1000 кв. м",
+        "total": 804440700
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 161.6,
+        "block": "№13.21",
+        "floor": "13",
+        "price": 467600,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 75559484
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 1733.6,
+        "block": "№19.07",
+        "floor": "19",
+        "price": 450000,
+        "scheme": "ДКПБВ",
+        "size": "Более 1000 кв. м",
+        "total": 780138000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 114.1,
+        "block": "№06.18",
+        "floor": "6",
+        "price": 459300,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 52392351
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 210.1,
+        "block": "№11.16",
+        "floor": "11",
+        "price": 461400,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 96921684
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 209.5,
+        "block": "№11.17",
+        "floor": "11",
+        "price": 461400,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 96654072
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 169.0,
+        "block": "№03.20",
+        "floor": "3",
+        "price": 436600,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 73767936
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 96.6,
+        "block": "№15.18",
+        "floor": "15",
+        "price": 490400,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 47377544
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 111.1,
+        "block": "№13.13",
+        "floor": "13",
+        "price": 482100,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 53561310
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 96.6,
+        "block": "№10.19",
+        "floor": "10",
+        "price": 474900,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 45880089
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 209.5,
+        "block": "№14.17",
+        "floor": "14",
+        "price": 470700,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 98602236
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 160.0,
+        "block": "№15.20",
+        "floor": "15",
+        "price": 473800,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 75789048
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 166.2,
+        "block": "№07.21",
+        "floor": "7",
+        "price": 449000,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 74605840
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 114.2,
+        "block": "№09.15",
+        "floor": "9",
+        "price": 467600,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 53395244
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 114.1,
+        "block": "№16.19",
+        "floor": "16",
+        "price": 490400,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 55939928
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 171.0,
+        "block": "№05.22",
+        "floor": "5",
+        "price": 442800,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 75701088
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 111.1,
+        "block": "№05.13",
+        "floor": "5",
+        "price": 457300,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 50806030
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 96.6,
+        "block": "№06.14",
+        "floor": "6",
+        "price": 462400,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 44672464
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 166.9,
+        "block": "№06.21",
+        "floor": "6",
+        "price": 445900,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 74411792
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 114.1,
+        "block": "№11.18",
+        "floor": "11",
+        "price": 474900,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 54171843
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 209.5,
+        "block": "№15.16",
+        "floor": "15",
+        "price": 473800,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 99251624
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 96.6,
+        "block": "№13.19",
+        "floor": "13",
+        "price": 484200,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 46778562
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 170.2,
+        "block": "№06.22",
+        "floor": "6",
+        "price": 445900,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 75914475
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 96.6,
+        "block": "№05.14",
+        "floor": "5",
+        "price": 459300,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 44372973
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 111.1,
+        "block": "№07.13",
+        "floor": "7",
+        "price": 463500,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 51494850
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Jois",
+      "row": {
+        "area": 209.5,
+        "block": "№09.17",
+        "floor": "9",
+        "price": 455200,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 95355296
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 94.3,
+        "block": "",
+        "floor": "16",
+        "price": 441585,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 41641442
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 94.3,
+        "block": "",
+        "floor": "16",
+        "price": 445957,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 42053733
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 94.3,
+        "block": "",
+        "floor": "15",
+        "price": 432840,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 40816859
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 94.3,
+        "block": "",
+        "floor": "15",
+        "price": 441497,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 41633196
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 89.4,
+        "block": "",
+        "floor": "13",
+        "price": 428468,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 38305072
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 89.4,
+        "block": "",
+        "floor": "13",
+        "price": 437038,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 39071174
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 89.4,
+        "block": "",
+        "floor": "14",
+        "price": 432840,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 38695940
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 89.4,
+        "block": "",
+        "floor": "14",
+        "price": 441497,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 39469859
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 84.4,
+        "block": "",
+        "floor": "11",
+        "price": 424096,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 35793723
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 84.4,
+        "block": "",
+        "floor": "11",
+        "price": 432578,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 36509597
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 84.4,
+        "block": "",
+        "floor": "12",
+        "price": 428468,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 36162730
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 84.4,
+        "block": "",
+        "floor": "12",
+        "price": 437038,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 36885985
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 79.5,
+        "block": "",
+        "floor": "9",
+        "price": 407132,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 32367025
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 79.5,
+        "block": "",
+        "floor": "9",
+        "price": 428119,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 34035429
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 79.5,
+        "block": "",
+        "floor": "10",
+        "price": 424096,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 33715651
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 79.5,
+        "block": "",
+        "floor": "10",
+        "price": 432578,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 34389964
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 74.5,
+        "block": "",
+        "floor": "7",
+        "price": 398738,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 29705974
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 74.5,
+        "block": "",
+        "floor": "8",
+        "price": 402935,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 30018669
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 69.6,
+        "block": "",
+        "floor": "5",
+        "price": 390431,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 27173989
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 69.6,
+        "block": "",
+        "floor": "6",
+        "price": 394584,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 27463074
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "Omni Tower",
+      "row": {
+        "area": 63.6,
+        "block": "",
+        "floor": "4",
+        "price": 390431,
+        "scheme": "",
+        "size": "До 100 кв. м",
+        "total": 24831403
+      },
+      "extra_count": 3
+    },
+    {
+      "building": "QOOB",
+      "row": {
+        "area": 53.4,
+        "block": "",
+        "floor": "4",
+        "price": 596001,
+        "scheme": "ДДУ",
+        "size": "До 100 кв. м",
+        "total": 31826434
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "STONE Мневники II",
+      "row": {
+        "area": 494.8,
+        "block": "M2.2-1001",
+        "floor": "10",
+        "price": 544000,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 269171200
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "STONE Мневники II",
+      "row": {
+        "area": 49.1,
+        "block": "M2.2-1012",
+        "floor": "10",
+        "price": 803000,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 39427300
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 30.0,
+        "block": "Офис STANDART",
+        "floor": "2",
+        "price": 996333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 29890000
+      },
+      "extra_count": 13
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 61.0,
+        "block": "Офис DELUXE",
+        "floor": "2",
+        "price": 878333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 53578333
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 220.0,
+        "block": "Офис PANORAMA SUITE",
+        "floor": "2",
+        "price": 986167,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 216956667
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 305.0,
+        "block": "Офис BUSINESS SUITE",
+        "floor": "2",
+        "price": 710000,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 216550000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 30.0,
+        "block": "Офис STANDART",
+        "floor": "3",
+        "price": 996333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 29890000
+      },
+      "extra_count": 13
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 61.0,
+        "block": "Офис DELUXE",
+        "floor": "3",
+        "price": 878333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 53578333
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 220.0,
+        "block": "Офис PANORAMA SUITE",
+        "floor": "3",
+        "price": 986167,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 216956667
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 305.0,
+        "block": "Офис BUSINESS SUITE",
+        "floor": "3",
+        "price": 710000,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 216550000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 30.0,
+        "block": "Офис STANDART",
+        "floor": "4",
+        "price": 996333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 29890000
+      },
+      "extra_count": 13
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 61.0,
+        "block": "Офис DELUXE",
+        "floor": "4",
+        "price": 878333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 53578333
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 220.0,
+        "block": "Офис PANORAMA SUITE",
+        "floor": "4",
+        "price": 986167,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 216956667
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 305.0,
+        "block": "Офис BUSINESS SUITE",
+        "floor": "4",
+        "price": 710000,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 216550000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 30.0,
+        "block": "Офис STANDART",
+        "floor": "5",
+        "price": 996333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 29890000
+      },
+      "extra_count": 13
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 61.0,
+        "block": "Офис DELUXE",
+        "floor": "5",
+        "price": 878333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 53578333
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 220.0,
+        "block": "Офис PANORAMA SUITE",
+        "floor": "5",
+        "price": 986167,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 216956667
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 305.0,
+        "block": "Офис BUSINESS SUITE",
+        "floor": "5",
+        "price": 710000,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 216550000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 30.0,
+        "block": "Офис STANDART",
+        "floor": "6",
+        "price": 996333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 29890000
+      },
+      "extra_count": 13
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 61.0,
+        "block": "Офис DELUXE",
+        "floor": "6",
+        "price": 878333,
+        "scheme": "ДКПБВ",
+        "size": "До 100 кв. м",
+        "total": 53578333
+      },
+      "extra_count": 7
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 220.0,
+        "block": "Офис PANORAMA SUITE",
+        "floor": "6",
+        "price": 986167,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 216956667
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 305.0,
+        "block": "Офис BUSINESS SUITE",
+        "floor": "6",
+        "price": 710000,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 216550000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 460.0,
+        "block": "PENTHOUSE",
+        "floor": "7",
+        "price": 1370290,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 630333333
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Дом Правды",
+      "row": {
+        "area": 590.0,
+        "block": "PENTHOUSE",
+        "floor": "8-9",
+        "price": 1068362,
+        "scheme": "ДКПБВ",
+        "size": "От 300 до 1000 кв. м",
+        "total": 630333333
+      },
+      "extra_count": 2
+    },
+    {
+      "building": "МФК Строгино",
+      "row": {
+        "area": 115.3,
+        "block": "",
+        "floor": "5",
+        "price": 550000,
+        "scheme": "ДДУ",
+        "size": "От 100 до 300 кв. м",
+        "total": 63415000
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 215.1,
+        "block": "",
+        "floor": "12",
+        "price": 351440,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 75591230
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 199.0,
+        "block": "",
+        "floor": "7",
+        "price": 337640,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 67176854
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 214.7,
+        "block": "",
+        "floor": "11",
+        "price": 348680,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 74858109
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 212.5,
+        "block": "",
+        "floor": "6",
+        "price": 334880,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 71155302
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 203.3,
+        "block": "",
+        "floor": "9",
+        "price": 343160,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 69778154
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 215.1,
+        "block": "",
+        "floor": "13",
+        "price": 354200,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 76184878
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 215.1,
+        "block": "",
+        "floor": "14",
+        "price": 356960,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 76778526
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 131.5,
+        "block": "",
+        "floor": "12",
+        "price": 361560,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 47548756
+      },
+      "extra_count": 1
+    },
+    {
+      "building": "Set",
+      "row": {
+        "area": 212.7,
+        "block": "",
+        "floor": "8",
+        "price": 340400,
+        "scheme": "ДКПБВ",
+        "size": "От 100 до 300 кв. м",
+        "total": 72406484
+      },
+      "extra_count": 1
+    }
+  ],
+  "suspected_duplicate_buildings": [
+    {
+      "building_a": "Сити-4",
+      "building_b": "SEZAR TOWER",
+      "lots_a": 50,
+      "lots_b": 50,
+      "matched_areas": 50,
+      "overlap_ratio": 1.0,
+      "area_sum_a": 289244.0,
+      "area_sum_b": 289217.0
+    }
+  ],
+  "mega_lots_over_threshold_m2": 3000,
+  "mega_lots": [
+    {
+      "building": "Fili Centre",
+      "block": "Здание",
+      "floor": "-",
+      "area": 19453.0,
+      "price": 463600,
+      "total": 9018410800,
+      "scheme": "ДКП",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Orbital-2",
+      "block": "Здание",
+      "floor": "-",
+      "area": 57967.0,
+      "price": 500000,
+      "total": 28983500000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Дмитровская",
+      "block": "SD-1600-1800",
+      "floor": "16",
+      "area": 4418.6,
+      "price": 440000,
+      "total": 1944184000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Дмитровская",
+      "block": "SD-2000-2100",
+      "floor": "20",
+      "area": 3088.6,
+      "price": 465000,
+      "total": 1436199000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Калужская",
+      "block": "Здание",
+      "floor": "-",
+      "area": 19876.0,
+      "price": 418363,
+      "total": 8315382988,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Курская",
+      "block": "Здание",
+      "floor": "-",
+      "area": 15700.0,
+      "price": 424720,
+      "total": 6668104000,
+      "scheme": "ДКП",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Мневники II",
+      "block": "M2.1-1000-1100",
+      "floor": "10",
+      "area": 3135.0,
+      "price": 556961,
+      "total": 1746073750,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Мневники II",
+      "block": "M2.1-1000-1200",
+      "floor": "10",
+      "area": 4447.9,
+      "price": 543825,
+      "total": 2418880500,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "STONE Ходынка III",
+      "block": "Здание",
+      "floor": "-",
+      "area": 70500.0,
+      "price": 430000,
+      "total": 30315000000,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Valtri",
+      "block": "Офис 8983 м2",
+      "floor": "17-24",
+      "area": 8983.0,
+      "price": 750000,
+      "total": 6737250000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "А101 Прокшино",
+      "block": "101Л-3.1-10-11-12",
+      "floor": "10—12",
+      "area": 6750.2,
+      "price": 178270,
+      "total": 1203358154,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Бадаевский Восточная лента",
+      "block": "Здание",
+      "floor": "-",
+      "area": 11145.0,
+      "price": 1200000,
+      "total": 13374000000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Бизнес-парк Переделкино",
+      "block": "",
+      "floor": "4",
+      "area": 8774.3,
+      "price": 210000,
+      "total": 1842603000,
+      "scheme": "ДКП",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "БЦ на ул. Эдварда Грига",
+      "block": "Здание",
+      "floor": "-",
+      "area": 3671.6,
+      "price": 185900,
+      "total": 682550440,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "БЦ Сколковский",
+      "block": "Здание",
+      "floor": "-",
+      "area": 8500.0,
+      "price": 287500,
+      "total": 2443750000,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "БЦ Сколковский",
+      "block": "Здание",
+      "floor": "-",
+      "area": 8500.0,
+      "price": 287500,
+      "total": 2443750000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "35",
+      "area": 3011.2,
+      "price": 756000,
+      "total": 2276467200,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "47",
+      "area": 3020.6,
+      "price": 892500,
+      "total": 2695885500,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "43",
+      "area": 3026.0,
+      "price": 798000,
+      "total": 2414748000,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "34",
+      "area": 3037.3,
+      "price": 756000,
+      "total": 2296198800,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "33",
+      "area": 3045.1,
+      "price": 756000,
+      "total": 2302095600,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "32",
+      "area": 3056.2,
+      "price": 756000,
+      "total": 2310487200,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "44",
+      "area": 3058.8,
+      "price": 798000,
+      "total": 2440922400,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "46",
+      "area": 3121.5,
+      "price": 892500,
+      "total": 2785938750,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "25",
+      "area": 5893.9,
+      "price": 735000,
+      "total": 4332016500,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "46",
+      "area": 8995.8,
+      "price": 892500,
+      "total": 8028751500,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "41",
+      "area": 11888.1,
+      "price": 798000,
+      "total": 9486703800,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "5",
+      "area": 14139.1,
+      "price": 651000,
+      "total": 9204554100,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "5",
+      "area": 20068.3,
+      "price": 657204,
+      "total": 13188976500,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "12",
+      "area": 43822.9,
+      "price": 701211,
+      "total": 30729108900,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Сити-4",
+      "block": "",
+      "floor": "28",
+      "area": 58854.6,
+      "price": 787529,
+      "total": 46349688000,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Aurus",
+      "block": "",
+      "floor": "3",
+      "area": 6736.0,
+      "price": 947328,
+      "total": 6381200000,
+      "scheme": "ДДУ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Энтузиаст",
+      "block": "Здание",
+      "floor": "-",
+      "area": 43821.0,
+      "price": 290000,
+      "total": 12708090000,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "LIKOVA",
+      "block": "Здание",
+      "floor": "-",
+      "area": 53293.0,
+      "price": 140731,
+      "total": 7500000000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "35",
+      "area": 3011.0,
+      "price": 756050,
+      "total": 2276466550,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "47",
+      "area": 3020.0,
+      "price": 892677,
+      "total": 2695884540,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "43",
+      "area": 3026.0,
+      "price": 798000,
+      "total": 2414748000,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "34",
+      "area": 3037.0,
+      "price": 756075,
+      "total": 2296199775,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "33",
+      "area": 3045.0,
+      "price": 756025,
+      "total": 2302096125,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "32",
+      "area": 3056.0,
+      "price": 756049,
+      "total": 2310485744,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "44",
+      "area": 3058.0,
+      "price": 798209,
+      "total": 2440923122,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "46",
+      "area": 3121.0,
+      "price": 892643,
+      "total": 2785938803,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "25",
+      "area": 5893.0,
+      "price": 735112,
+      "total": 4332015016,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "46",
+      "area": 8995.0,
+      "price": 892579,
+      "total": 8028748105,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "41",
+      "area": 11888.0,
+      "price": 798007,
+      "total": 9486707216,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "5",
+      "area": 14139.0,
+      "price": 651005,
+      "total": 9204559695,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "5",
+      "area": 20068.0,
+      "price": 657214,
+      "total": 13188970552,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "12",
+      "area": 43822.0,
+      "price": 701226,
+      "total": 30729125772,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "SEZAR TOWER",
+      "block": "",
+      "floor": "28",
+      "area": 58854.0,
+      "price": 787537,
+      "total": 46349702598,
+      "scheme": "",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Бадаевский Западная лента",
+      "block": "Здание",
+      "floor": "-",
+      "area": 7713.0,
+      "price": 1200000,
+      "total": 9255600000,
+      "scheme": "ДКПБВ",
+      "size": "Более 1000 кв. м"
+    },
+    {
+      "building": "Плэйн (бывший — Workplace Авиационная)",
+      "block": "здание",
+      "floor": "здание",
+      "area": 15984.0,
+      "price": 299764.0,
+      "total": 4791427776,
+      "scheme": "ДКПБВ",
+      "size": "Свыше 3000 кв. м"
+    },
+    {
+      "building": "Деловой дуэт",
+      "block": "Здание 1",
+      "floor": "1-7",
+      "area": 21166.0,
+      "price": 260000,
+      "total": 5503160000.0,
+      "scheme": "ДКПБВ",
+      "size": "Свыше 3000 кв. м"
+    },
+    {
+      "building": "Деловой дуэт",
+      "block": "Здание 2",
+      "floor": "1-8",
+      "area": 7584.0,
+      "price": 260000,
+      "total": 1971840000.0,
+      "scheme": "ДКПБВ",
+      "size": "Свыше 3000 кв. м"
+    }
+  ],
+  "uniform_size_clusters": [
+    {
+      "building": "Air",
+      "area": 77.0,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 59.9,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 77.3,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 60.0,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 78.2,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 70.4,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 73.7,
+      "count": 8
+    },
+    {
+      "building": "Air",
+      "area": 64.4,
+      "count": 16
+    },
+    {
+      "building": "Jenga",
+      "area": 73.6,
+      "count": 5
+    },
+    {
+      "building": "Jenga",
+      "area": 232.3,
+      "count": 7
+    },
+    {
+      "building": "Jois",
+      "area": 114.1,
+      "count": 8
+    },
+    {
+      "building": "Jois",
+      "area": 209.5,
+      "count": 9
+    },
+    {
+      "building": "Jois",
+      "area": 96.6,
+      "count": 16
+    },
+    {
+      "building": "Jois",
+      "area": 111.1,
+      "count": 10
+    },
+    {
+      "building": "K-city",
+      "area": 173.3,
+      "count": 5
+    },
+    {
+      "building": "K-city",
+      "area": 138.6,
+      "count": 5
+    },
+    {
+      "building": "Lakes 2",
+      "area": 99.7,
+      "count": 5
+    },
+    {
+      "building": "Lakes 2",
+      "area": 101.4,
+      "count": 6
+    },
+    {
+      "building": "Lakes 2",
+      "area": 119.8,
+      "count": 6
+    },
+    {
+      "building": "Lakes 2",
+      "area": 133.3,
+      "count": 5
+    },
+    {
+      "building": "Lavin",
+      "area": 69.1,
+      "count": 5
+    },
+    {
+      "building": "Light City",
+      "area": 204.6,
+      "count": 6
+    },
+    {
+      "building": "Light City",
+      "area": 202.9,
+      "count": 5
+    },
+    {
+      "building": "Light City",
+      "area": 113.4,
+      "count": 6
+    },
+    {
+      "building": "Light City",
+      "area": 94.6,
+      "count": 5
+    },
+    {
+      "building": "Light City",
+      "area": 89.7,
+      "count": 7
+    },
+    {
+      "building": "Light City",
+      "area": 82.4,
+      "count": 5
+    },
+    {
+      "building": "Link",
+      "area": 73.9,
+      "count": 30
+    },
+    {
+      "building": "Link",
+      "area": 75.7,
+      "count": 8
+    },
+    {
+      "building": "Link",
+      "area": 71.5,
+      "count": 21
+    },
+    {
+      "building": "Link",
+      "area": 190.7,
+      "count": 6
+    },
+    {
+      "building": "Link",
+      "area": 190.0,
+      "count": 6
+    },
+    {
+      "building": "Link",
+      "area": 179.4,
+      "count": 6
+    },
+    {
+      "building": "Link",
+      "area": 180.9,
+      "count": 6
+    },
+    {
+      "building": "Link",
+      "area": 1537.2,
+      "count": 7
+    },
+    {
+      "building": "Mount",
+      "area": 73.5,
+      "count": 5
+    },
+    {
+      "building": "Nevsky Plaza",
+      "area": 46.6,
+      "count": 6
+    },
+    {
+      "building": "Nevsky Plaza",
+      "area": 35.7,
+      "count": 9
+    },
+    {
+      "building": "Nevsky Plaza",
+      "area": 29.9,
+      "count": 5
+    },
+    {
+      "building": "Nevsky Plaza",
+      "area": 34.5,
+      "count": 5
+    },
+    {
+      "building": "Nevsky Plaza",
+      "area": 50.4,
+      "count": 5
+    },
+    {
+      "building": "Nevsky Plaza",
+      "area": 52.5,
+      "count": 6
+    },
+    {
+      "building": "Omni Tower",
+      "area": 94.3,
+      "count": 12
+    },
+    {
+      "building": "Omni Tower",
+      "area": 89.4,
+      "count": 12
+    },
+    {
+      "building": "Omni Tower",
+      "area": 84.4,
+      "count": 12
+    },
+    {
+      "building": "Omni Tower",
+      "area": 79.5,
+      "count": 12
+    },
+    {
+      "building": "Omni Tower",
+      "area": 74.5,
+      "count": 8
+    },
+    {
+      "building": "Omni Tower",
+      "area": 69.6,
+      "count": 8
+    },
+    {
+      "building": "Opus",
+      "area": 322.8,
+      "count": 9
+    },
+    {
+      "building": "Opus",
+      "area": 186.8,
+      "count": 9
+    },
+    {
+      "building": "Opus",
+      "area": 75.3,
+      "count": 8
+    },
+    {
+      "building": "Opus",
+      "area": 73.4,
+      "count": 12
+    },
+    {
+      "building": "Opus",
+      "area": 72.8,
+      "count": 10
+    },
+    {
+      "building": "Opus",
+      "area": 73.6,
+      "count": 8
+    },
+    {
+      "building": "Opus",
+      "area": 149.5,
+      "count": 8
+    },
+    {
+      "building": "Opus",
+      "area": 149.7,
+      "count": 6
+    },
+    {
+      "building": "STONE Калужская",
+      "area": 75.9,
+      "count": 12
+    },
+    {
+      "building": "STONE Калужская",
+      "area": 60.1,
+      "count": 7
+    },
+    {
+      "building": "STONE Калужская",
+      "area": 127.0,
+      "count": 5
+    },
+    {
+      "building": "STONE Калужская",
+      "area": 154.0,
+      "count": 5
+    },
+    {
+      "building": "STONE Калужская",
+      "area": 76.7,
+      "count": 15
+    },
+    {
+      "building": "STONE Мневники II",
+      "area": 853.8,
+      "count": 6
+    },
+    {
+      "building": "STONE Мневники II",
+      "area": 496.0,
+      "count": 6
+    },
+    {
+      "building": "STONE Мневники II",
+      "area": 196.3,
+      "count": 5
+    },
+    {
+      "building": "STONE Мневники III",
+      "area": 133.0,
+      "count": 5
+    },
+    {
+      "building": "STONE Мневники III",
+      "area": 253.0,
+      "count": 9
+    },
+    {
+      "building": "STONE Мневники III",
+      "area": 430.0,
+      "count": 6
+    },
+    {
+      "building": "STONE Мневники III",
+      "area": 218.0,
+      "count": 6
+    },
+    {
+      "building": "STONE Римская",
+      "area": 156.5,
+      "count": 5
+    },
+    {
+      "building": "STONE Римская",
+      "area": 68.5,
+      "count": 9
+    },
+    {
+      "building": "STONE Римская",
+      "area": 55.9,
+      "count": 5
+    },
+    {
+      "building": "STONE Римская",
+      "area": 131.7,
+      "count": 5
+    },
+    {
+      "building": "STONE Ходынка II",
+      "area": 341.0,
+      "count": 5
+    },
+    {
+      "building": "Upside Ямская",
+      "area": 67.0,
+      "count": 5
+    },
+    {
+      "building": "Дом Правды",
+      "area": 30.0,
+      "count": 70
+    },
+    {
+      "building": "Дом Правды",
+      "area": 61.0,
+      "count": 40
+    },
+    {
+      "building": "Дом Правды",
+      "area": 220.0,
+      "count": 10
+    },
+    {
+      "building": "Дом Правды",
+      "area": 305.0,
+      "count": 10
+    },
+    {
+      "building": "Ольховая SKY",
+      "area": 2012.0,
+      "count": 8
+    },
+    {
+      "building": "KORP. Молодежная",
+      "area": 45.8,
+      "count": 5
+    },
+    {
+      "building": "KORP. Молодежная",
+      "area": 60.5,
+      "count": 6
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 74.3,
+      "count": 6
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 72.3,
+      "count": 12
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 74.1,
+      "count": 5
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 74.2,
+      "count": 7
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 72.4,
+      "count": 5
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 93.6,
+      "count": 7
+    },
+    {
+      "building": "Upside Tech Сколково",
+      "area": 72.6,
+      "count": 6
+    },
+    {
+      "building": "STONE Ходынка IV",
+      "area": 85.0,
+      "count": 8
+    },
+    {
+      "building": "Set",
+      "area": 215.1,
+      "count": 6
+    },
+    {
+      "building": "Set",
+      "area": 114.6,
+      "count": 5
+    },
+    {
+      "building": "Set",
+      "area": 131.5,
+      "count": 5
+    },
+    {
+      "building": "Cityzen",
+      "area": 195.5,
+      "count": 6
+    },
+    {
+      "building": "Cityzen",
+      "area": 82.5,
+      "count": 26
+    },
+    {
+      "building": "Cityzen",
+      "area": 197.3,
+      "count": 6
+    },
+    {
+      "building": "Cityzen",
+      "area": 82.3,
+      "count": 6
+    },
+    {
+      "building": "Cityzen",
+      "area": 82.6,
+      "count": 6
+    },
+    {
+      "building": "Cityzen",
+      "area": 198.0,
+      "count": 8
+    },
+    {
+      "building": "Cityzen",
+      "area": 82.7,
+      "count": 25
+    },
+    {
+      "building": "Cityzen",
+      "area": 196.2,
+      "count": 8
+    },
+    {
+      "building": "Cityzen",
+      "area": 83.7,
+      "count": 8
+    },
+    {
+      "building": "Cityzen",
+      "area": 83.8,
+      "count": 12
+    },
+    {
+      "building": "Cityzen",
+      "area": 84.0,
+      "count": 12
+    },
+    {
+      "building": "Cityzen",
+      "area": 186.7,
+      "count": 9
+    },
+    {
+      "building": "Cityzen",
+      "area": 83.9,
+      "count": 9
+    },
+    {
+      "building": "Минто (бывший — Workplace Волоколамское)",
+      "area": 81.2,
+      "count": 5
+    },
+    {
+      "building": "Минто (бывший — Workplace Волоколамское)",
+      "area": 84.0,
+      "count": 5
+    },
+    {
+      "building": "Минто (бывший — Workplace Волоколамское)",
+      "area": 84.3,
+      "count": 8
+    },
+    {
+      "building": "Минто (бывший — Workplace Волоколамское)",
+      "area": 256.8,
+      "count": 8
+    },
+    {
+      "building": "МФК Юг",
+      "area": 1860.0,
+      "count": 12
+    }
+  ]
+}

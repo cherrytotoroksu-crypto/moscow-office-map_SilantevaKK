@@ -89,6 +89,7 @@
 
 <div class="tabs" id="sectionTabs">
   <div class="tab" data-section="codifier">Общий кодификатор</div>
+  <div class="tab" data-section="golden">Golden File</div>
   <div class="tab" data-section="sale">Продажа офисов</div>
   <div class="tab" data-section="rent">Аренда офисов</div>
   <div class="tab" data-section="flex">Гибкие офисы</div>
@@ -176,12 +177,14 @@ function fetchJSON(url) {
 // sale/rent/coworking, что и создавало ощущение смешения сегментов).
 const SECTIONS = [
   {id:'codifier', label:'Общий кодификатор', views:['codifier']},
+  {id:'golden',   label:'Golden File',       views:['golden_report']},
   {id:'sale',     label:'Продажа офисов',    views:['sale_buildings','sale_developers','sale_lots']},
   {id:'rent',     label:'Аренда офисов',     views:['rent_buildings','rent_landlords','rent_lots']},
   {id:'flex',     label:'Гибкие офисы',      views:['flex_operators','flex_lots']},
 ];
 const VIEWS = {
   codifier:        {section:'codifier', label:'Общий кодификатор'},
+  golden_report:   {section:'golden',   label:'Отчёт (Golden File)'},
   sale_buildings:  {section:'sale',     label:'Здания квартала'},
   sale_developers: {section:'sale',     label:'Девелоперы квартала'},
   sale_lots:       {section:'sale',     label:'Все лоты в продаже'},
@@ -195,7 +198,13 @@ const VIEWS = {
 // Пользовательское название — "Сегмент рынка" (не "Канал", технический
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
 // каждой таблицы — это не фильтр, а то, какой раздел/файл выбран.
-const SEGMENT_LABEL = {codifier:null, sale:'Продажа офисов', rent:'Аренда офисов', flex:'Гибкие офисы', compare:null};
+const SEGMENT_LABEL = {codifier:null, golden:null, sale:'Продажа офисов', rent:'Аренда офисов', flex:'Гибкие офисы', compare:null};
+// Порог "подозрительно большого лота" — см. scripts/audit_sale_lots_kpi.py
+// (тот же порог). Одиночный лот такого размера на практике почти всегда
+// остаток продаж по зданию/блоку, а не то, что реально можно купить одним
+// лотом — подтверждено выборочно по рынку (см. отчёт аудита), но не по
+// каждой конкретной строке, поэтому это флаг, а не удаление строки.
+const MEGA_LOT_AREA_THRESHOLD = 3000;
 // ID проекта в данных хранится как "proj-1" и т.п. — в интерфейсе показываем
 // только число, само значение canonical_project_id в данных не меняем
 // (используется как есть для join/сопоставления, только отображение другое).
@@ -458,6 +467,18 @@ const COMPARE_COLUMNS = [
   {key:'rateLabel', label:'Показатель ставки/цены', type:'text', visible:true},
   {key:'rate', label:'Ставка/цена (ср.взв.)', type:'number', visible:true},
   {key:'updated', label:'Дата среза', type:'text', visible:true},
+  {key:'sourceNote', label:'Источник цифры', type:'text', visible:true},
+];
+
+// Golden File — вкладка рядом с общим кодификатором, показывает лист
+// "отчет деление А и прайм" целиком (сток/вакансия/ставки/цена продажи по
+// классам, все кварталы), как прислал пользователь. Колонки-кварталы
+// добавляются динамически при первой загрузке (см. loadGoldenReport) —
+// таблица не хардкодит список кварталов, читает их из data/qa/
+// golden_report_full.json.
+const GOLDEN_REPORT_COLUMNS = [
+  {key:'section', label:'Раздел', type:'text', visible:true},
+  {key:'metric', label:'Показатель', type:'text', visible:true},
 ];
 
 // ============================================================
@@ -488,6 +509,7 @@ const state = {
   flex_operators: makeTableState(FLEX_OPERATORS_COLUMNS),
   flex_lots: makeTableState(FLEX_LOTS_COLUMNS),
   compare_segments: makeTableState(COMPARE_COLUMNS),
+  golden_report: makeTableState(GOLDEN_REPORT_COLUMNS),
 };
 let allProjectsLayer = [];
 let currentQuarterId = QUARTERS[0].id;
@@ -681,11 +703,17 @@ async function loadSaleLots(quarterId) {
   for (const row of rows) {
     row.market_channel = SEGMENT_LABEL.sale; // явное, константное поле — вся вкладка = один сегмент рынка
     joinRegistryFields(row, byName, 'building', null);
+    // Подозрение (не подтверждено по каждой строке): единичный "лот" такого
+    // размера обычно на практике — остаток продаж по зданию/блоку целиком,
+    // выложенный застройщиком одной строкой, а не индивидуальный лот (см.
+    // qa_quarantine_lots_202606.json). Не исключаем из данных — только флаг.
+    row.suspected_aggregate_lot = (row.area || 0) > MEGA_LOT_AREA_THRESHOLD;
   }
   state.sale_lots.rows = rows;
   if (!suppressURLSync) { state.sale_lots.filters = {}; state.sale_lots.sort = {key:null, dir:1}; state.sale_lots.page = 1; }
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
   dataMeta.sale_lots = {updated: label, count: rows.length};
+  await loadGoldenReference(quarterId); // прогреть кэш для computeTotals (синхронный)
   render();
 }
 
@@ -836,8 +864,25 @@ async function loadFlexLots(quarterId) {
 // (sum(rate*area)/sum(area) и т.п.), просто без побочных эффектов на
 // детальные state[view].rows — здесь не расчёты меняются, а способ их
 // применить, чтобы посчитать сводку без полной загрузки детальных таблиц.
+// Golden File — контрольные цифры аналитиков (переписаны вручную из
+// присланного workbook, см. data/qa/golden_reference_<quarter>.json).
+// Пока наши лоты (data/lots_*.json) не приведены к той же методике —
+// с Q3 2026 планируется нормальный сбор — итоговое число KPI берём из
+// Golden File, а не из сырого bottom-up по лотам (там пока задвоение/
+// подмешаны агрегатные "лоты" размером с половину здания, см. qa_
+// quarantine_lots_202606.json). Сырые лоты в таблице не меняются.
+const goldenReferenceCache = {};
+async function loadGoldenReference(quarterId) {
+  if (quarterId in goldenReferenceCache) return goldenReferenceCache[quarterId];
+  let ref = null;
+  try { ref = await fetchJSON(`data/qa/golden_reference_${quarterId}.json`); } catch (e) { ref = null; }
+  goldenReferenceCache[quarterId] = ref;
+  return ref;
+}
+
 async function computeSegmentKPIs(quarterId) {
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
+  const golden = await loadGoldenReference(quarterId);
 
   let saleRaw = {};
   try { saleRaw = await fetchJSON(`data/lots_${quarterId}.json`); } catch (e) {}
@@ -869,14 +914,36 @@ async function computeSegmentKPIs(quarterId) {
     if (r.rate != null && r.seats != null) { flexRateWeighted += Number(r.rate) * Number(r.seats); flexSeatsForRate += Number(r.seats); }
   }
 
-  return {
-    sale: {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel:'Площадь, м²', volume: saleArea || null,
-           lotsCount: saleLots, rateLabel:'Цена (ср.взв.), руб/м²', rate: saleArea ? Math.round(saleTotal / saleArea) : null, updated: label},
-    rent: {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel:'Площадь, м²', volume: rentArea || null,
-           lotsCount: rentLots, rateLabel:'Ставка (ср.взв.), руб/м²/год', rate: rentArea ? Math.round(rentRateWeighted / rentArea) : null, updated: label},
-    flex: {segment: SEGMENT_LABEL.flex, objects: flexRaw.length, volumeLabel:'Мест, всего', volume: flexSeats || null,
-           lotsCount: flexRaw.length, rateLabel:'Ставка (ср.взв.), руб/мес', rate: flexSeatsForRate ? Math.round(flexRateWeighted / flexSeatsForRate) : null, updated: label},
-  };
+  const goldenNoteFor = (sheet) => golden ? `по данным ${golden.source_file}, лист "${sheet}" — не расчёт по строкам данных` : '';
+
+  const saleGolden = golden && golden.sale;
+  const sale = saleGolden
+    ? {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel: 'Площадь, м² (Golden File, контрольно)',
+       volume: saleGolden.available_area_sqm, lotsCount: saleLots,
+       rateLabel: 'Цена (ср.взв.), руб/м² (Golden File)', rate: saleGolden.weighted_price_rub_per_sqm,
+       updated: label, sourceNote: goldenNoteFor(golden.source_sheet)}
+    : {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel:'Площадь, м²', volume: saleArea || null,
+       lotsCount: saleLots, rateLabel:'Цена (ср.взв.), руб/м²', rate: saleArea ? Math.round(saleTotal / saleArea) : null, updated: label};
+
+  const rentGolden = golden && golden.rent;
+  const rent = rentGolden
+    ? {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel: 'Площадь, м² (Golden File, контрольно)',
+       volume: rentGolden.available_area_sqm, lotsCount: rentLots,
+       rateLabel: 'Ставка (ср.взв.), руб/м²/год (Golden File)', rate: Math.round(rentGolden.rate_class_a_plus_prime_rub_sqm_year),
+       updated: label, sourceNote: goldenNoteFor(golden.source_sheet)}
+    : {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel:'Площадь, м²', volume: rentArea || null,
+       lotsCount: rentLots, rateLabel:'Ставка (ср.взв.), руб/м²/год', rate: rentArea ? Math.round(rentRateWeighted / rentArea) : null, updated: label};
+
+  const flexGolden = golden && golden.flex;
+  const flex = flexGolden
+    ? {segment: SEGMENT_LABEL.flex, objects: flexRaw.length, volumeLabel: 'Открытые площадки, м² (Golden File, контрольно)',
+       volume: flexGolden.open_space_seats_sqm, lotsCount: flexRaw.length,
+       rateLabel: 'Ставка, руб/мес (Golden File)', rate: flexGolden.coworking_rate_rub_month,
+       updated: label, sourceNote: goldenNoteFor(golden.source_sheet)}
+    : {segment: SEGMENT_LABEL.flex, objects: flexRaw.length, volumeLabel:'Мест, всего', volume: flexSeats || null,
+       lotsCount: flexRaw.length, rateLabel:'Ставка (ср.взв.), руб/мес', rate: flexSeatsForRate ? Math.round(flexRateWeighted / flexSeatsForRate) : null, updated: label};
+
+  return {sale, rent, flex};
 }
 
 async function loadCompareSegments(quarterId) {
@@ -885,6 +952,26 @@ async function loadCompareSegments(quarterId) {
   if (!suppressURLSync) state.compare_segments.page = 1;
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
   dataMeta.compare_segments = {updated: label, count: 3};
+  render();
+}
+
+let goldenReportColumnsAdded = false;
+async function loadGoldenReport() {
+  let data;
+  try { data = await fetchJSON('data/qa/golden_report_full.json'); }
+  catch (e) { data = {sheet: '—', quarters: [], rows: []}; }
+  if (!goldenReportColumnsAdded) {
+    // По умолчанию видны последние 9 кварталов (текущий срез аудита), более
+    // старые — скрыты, но доступны через "Колонки", не удалены.
+    const recentQuarters = new Set(data.quarters.slice(-9));
+    for (const q of data.quarters) {
+      state.golden_report.columns.push({key: q, label: q, type: 'number', visible: recentQuarters.has(q)});
+    }
+    goldenReportColumnsAdded = true;
+  }
+  state.golden_report.rows = data.rows;
+  if (!suppressURLSync) state.golden_report.page = 1;
+  dataMeta.golden_report = {updated: `лист "${data.sheet}"`, count: data.rows.length};
   render();
 }
 
@@ -918,6 +1005,9 @@ function cellFlag(row, col) {
   }
   if (col.key === 'canonical_name' && qa === 'conflict') return 'Конфликт источников по этой записи — см. карточку источника (ℹ).';
   if (col.key === 'offer_not_started_reason' && row.offer_not_started_reason) return 'Причина отсутствия предложения указана — проверить актуальность.';
+  if (col.key === 'area' && row.suspected_aggregate_lot) {
+    return `Подозрительно большой лот (>${MEGA_LOT_AREA_THRESHOLD} м²) — похоже на остаток продаж по зданию/блоку целиком, а не отдельный лот. Не исключён из данных, только флаг — не учтён в итоговой площади сегмента (см. карточку "Продажа офисов" / сравнение сегментов, там цифра из Golden File).`;
+  }
   return null;
 }
 
@@ -1089,11 +1179,17 @@ function computeTotals(view, rows) {
   }
   if (view === 'sale_lots') {
     const buildings = uniqueCount(rows, r => r.building);
+    const flagged = rows.filter(r => r.suspected_aggregate_lot).length;
     const area = sumField(rows, 'area');
     const total = sumField(rows, 'total');
     const weighted = total.sum && area.sum ? total.sum / area.sum : null;
-    return prefix + `Лотов: ${rows.length} · Зданий (уникальных): ${buildings} · Площадь лотов (сумма): ${fmtNum(area.sum)} м² · `
-      + `Стоимость (сумма): ${fmtNum(total.sum)} · Ср.взв. цена: ${fmtNum(weighted)}`;
+    const golden = goldenReferenceCache[currentQuarterId];
+    const goldenNote = golden && golden.sale
+      ? ` · Golden File (контрольно): ${fmtNum(golden.sale.available_area_sqm)} м², ${fmtNum(golden.sale.weighted_price_rub_per_sqm)} руб/м²`
+      : '';
+    return prefix + `Лотов: ${rows.length}${flagged ? ` (из них ${flagged} флаг ⚠ подозрение на агрегат)` : ''} · Зданий (уникальных): ${buildings} · `
+      + `Площадь лотов по данным (сумма, без исключений): ${fmtNum(area.sum)} м² · `
+      + `Стоимость (сумма): ${fmtNum(total.sum)} · Ср.взв. цена по данным: ${fmtNum(weighted)}${goldenNote}`;
   }
   if (view === 'rent_buildings') {
     const gla = sumField(rows, 'reg_gla');
@@ -1133,6 +1229,9 @@ function computeTotals(view, rows) {
   if (view === 'compare_segments') {
     return `Сегментов: ${rows.length} · сравнение агрегатов/KPI, без детальных строк лотов/зданий`;
   }
+  if (view === 'golden_report') {
+    return `Строк-показателей: ${rows.length} — контрольный отчёт, не расчёт по нашим данным`;
+  }
   return '';
 }
 
@@ -1147,6 +1246,7 @@ const VIEW_SOURCE_LABEL = {
   flex_operators: () => `data/coworking_${currentQuarterId}.json (агрегат по операторам)`,
   flex_lots: () => `data/coworking_${currentQuarterId}.json`,
   compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
+  golden_report: () => 'data/qa/golden_report_full.json (лист "отчет деление А и прайм" из Golden File)',
 };
 
 // Виды, где строка соответствует ровно одной записи общего кодификатора
@@ -1600,6 +1700,7 @@ const VIEW_EXPORT_LABEL = {
   rent_buildings: 'Аренда_Объекты', rent_landlords: 'Аренда_Арендодатели', rent_lots: 'Аренда_Предложения',
   flex_operators: 'Гибкие_Операторы', flex_lots: 'Гибкие_Предложения',
   compare_segments: 'Сравнение_сегментов',
+  golden_report: 'Golden_File_отчет',
 };
 
 document.getElementById('btnExportCsv').onclick = () => {
@@ -1857,6 +1958,7 @@ function loadCurrentView() {
     case 'flex_operators': return loadFlexOperators(currentQuarterId);
     case 'flex_lots': return loadFlexLots(currentQuarterId);
     case 'compare_segments': return loadCompareSegments(currentQuarterId);
+    case 'golden_report': return loadGoldenReport();
     default: render(); return Promise.resolve();
   }
 }
@@ -1883,6 +1985,7 @@ async function renderSegmentCards() {
       <div class="seg-row">Объектов: <b>${fmtNum(k.objects)}</b></div>
       <div class="seg-row">${escapeHtml(k.volumeLabel)}: <b>${fmtNum(k.volume)}</b></div>
       <div class="seg-row">Срез: <b>${escapeHtml(k.updated)}</b></div>
+      ${k.sourceNote ? `<div class="seg-row" style="color:#888;font-size:11px;">${escapeHtml(k.sourceNote)}</div>` : ''}
       <button type="button" class="btn" data-goto-view="${gotoView}">Перейти в раздел →</button>
     </div>`).join('');
   wrap.querySelectorAll('[data-goto-view]').forEach(btn => {
@@ -1895,7 +1998,7 @@ function switchToView(viewId) {
   currentSection = VIEWS[viewId].section;
   syncSectionTabsActive();
   renderSubtabs();
-  document.getElementById('quarterSelect').style.display = currentSection !== 'codifier' ? '' : 'none';
+  document.getElementById('quarterSelect').style.display = (currentSection !== 'codifier' && currentSection !== 'golden') ? '' : 'none';
   document.getElementById('compareSelect').style.display = currentView === 'sale_buildings' ? '' : 'none';
   document.getElementById('globalSearch').value = state[currentView].globalSearch || '';
   quarterSelect.value = currentQuarterId;
@@ -1927,7 +2030,7 @@ quarterSelect.onchange = (e) => {
     render();
     renderSegmentCards();
   } else {
-    document.getElementById('quarterSelect').style.display = currentSection !== 'codifier' ? '' : 'none';
+    document.getElementById('quarterSelect').style.display = (currentSection !== 'codifier' && currentSection !== 'golden') ? '' : 'none';
     document.getElementById('compareSelect').style.display = currentView === 'sale_buildings' ? '' : 'none';
     quarterSelect.value = currentQuarterId;
     compareSelect.value = compareQuarterId;
