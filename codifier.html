@@ -60,6 +60,7 @@
   td.flagged { position:relative; }
   td.flagged::after { content:''; position:absolute; top:0; right:0; border-width:0 7px 7px 0; border-style:solid; border-color:transparent #d9822b transparent transparent; }
   .status-row { padding:6px 16px; font-size:11px; color:#666; background:#fff; }
+  tr.section-start td { border-top:2px solid #c9d3d8; }
   .qa-conflict { background:#fff3f0 !important; }
   .qa-quarantine { background:#fff8e1 !important; }
   .no-results-row td { text-align:center; padding:28px 16px; color:#888; font-size:13px; }
@@ -314,6 +315,7 @@ const CODIFIER_COLUMNS = [
 
 // --- Продажа офисов ---
 const SALE_BUILDINGS_COLUMNS = [
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'name', label:'Здание', type:'text', visible:true},
   {key:'name_orig', label:'Прежнее название', type:'text', visible:false},
   {key:'address', label:'Адрес', type:'text', visible:true, format: STRIP_MOSCOW_PREFIX},
@@ -339,7 +341,6 @@ const SALE_BUILDINGS_COLUMNS = [
   {key:'reg_bizFormed', label:'Дел. район (сформ., реестр)', type:'text', visible:false},
   {key:'reg_bizForming', label:'Дел. район (форм., реестр)', type:'text', visible:false},
   {key:'on_sale', label:'В продаже', type:'text', visible:true},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_market_channel', label:'Сегменты рынка проекта (справочно)', type:'list', visible:false, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
   {key:'reg_confidence', label:'Доверие (реестр)', type:'text', visible:true},
@@ -356,6 +357,7 @@ const SALE_DEVELOPERS_COLUMNS = [
   {key:'classes', label:'Классы', type:'text', visible:true},
 ];
 const SALE_LOTS_COLUMNS = [
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
@@ -365,7 +367,6 @@ const SALE_LOTS_COLUMNS = [
   {key:'total', label:'Итого, руб', type:'number', visible:true},
   {key:'scheme', label:'Планировка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -376,6 +377,7 @@ const SALE_LOTS_COLUMNS = [
 // уже раньше на клиенте считались "Девелоперы квартала" по продаже —
 // исходные файлы не меняются, чисел не выдумываем.
 const RENT_BUILDINGS_COLUMNS = [
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'building', label:'Объект', type:'text', visible:true},
   {key:'developer', label:'Девелопер (реестр)', type:'text', visible:true},
   {key:'cls', label:'Класс (реестр)', type:'text', visible:true},
@@ -388,7 +390,6 @@ const RENT_BUILDINGS_COLUMNS = [
   {key:'lotsCount', label:'Предложений аренды', type:'number', visible:true},
   {key:'areaSum', label:'Площадь предложений аренды (сумма), м²', type:'number', visible:true},
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:true},
 ];
 const RENT_LANDLORDS_COLUMNS = [
@@ -399,6 +400,7 @@ const RENT_LANDLORDS_COLUMNS = [
   {key:'weightedRate', label:'Ср. взвешенная ставка', type:'number', visible:true},
 ];
 const RENT_LOTS_COLUMNS = [
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
@@ -409,7 +411,6 @@ const RENT_LOTS_COLUMNS = [
   {key:'nds', label:'НДС', type:'text', visible:false},
   {key:'finish', label:'Отделка', type:'text', visible:true},
   {key:'block', label:'Корпус', type:'text', visible:false},
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -587,8 +588,22 @@ function registryByNameMap() {
   }
   return byName;
 }
-function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
-  const match = byName.get(row[nameKey]) || (nameOrigKey ? byName.get(row[nameOrigKey]) : null);
+// Только canonical_name (без raw_name) — для гибких офисов. raw_name у
+// сетевых операторов (Space 1, CODE, Speace Jet...) — это просто бренд,
+// ОДИН И ТОТ ЖЕ у нескольких физически разных зданий в разных концах
+// Москвы (registryByNameMap() выше в этом случае схлопывает их в одну
+// запись реестра — последнюю добавленную — отсюда баг "ID проекта 130
+// у Space 1 на Композиторской/Балчуге/Меркурии/итд", это разные здания,
+// не корпуса одного). Проект — это здание/несколько башен ОДНОГО адреса,
+// не сеть точек одного оператора по всему городу.
+function registryByCanonicalNameMap() {
+  const byName = new Map();
+  for (const r of allProjectsLayer) {
+    if (r.canonical_name) byName.set(r.canonical_name, r);
+  }
+  return byName;
+}
+function applyRegistryMatch(row, match) {
   row.canonical_project_id = match ? match.canonical_project_id : null;
   row.reg_project_status = match ? match.project_status : null;
   row.reg_offer_status = match ? match.offer_status : null;
@@ -609,6 +624,22 @@ function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
   // так же, как в общем кодификаторе, а не только там (см. rowClass в render()).
   row.reg_qa_status = match ? match.qa_status : null;
   return match;
+}
+function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
+  const match = byName.get(row[nameKey]) || (nameOrigKey ? byName.get(row[nameOrigKey]) : null);
+  return applyRegistryMatch(row, match);
+}
+// Гибкие офисы: имя строки (row.name) у сетевых операторов — это бренд, не
+// адрес (см. комментарий у registryByCanonicalNameMap). Сопоставляем по
+// "оператор (объект)" — совпадает с тем, как реестр называет сайты вида
+// "Space 1 (Балчуг)" — один физический адрес = один проект, а не вся сеть
+// оператора. Без совпадения — canonical_project_id остаётся пустым
+// (честно "не сопоставлено"), а не подставляется первый попавшийся с тем
+// же брендом.
+function joinFlexRegistryFields(row, byCanonicalName) {
+  const siteKey = row.network && row.bc ? `${row.network} (${row.bc})` : null;
+  const match = siteKey ? byCanonicalName.get(siteKey) : null;
+  return applyRegistryMatch(row, match);
 }
 
 // data/building_dates.json — старт строительства/продаж/ввода по зданию,
@@ -855,8 +886,8 @@ async function loadFlexOperators(quarterId) {
 
 async function loadFlexLots(quarterId) {
   const rows = await fetchFlexRowsRaw(quarterId);
-  const byName = registryByNameMap();
-  for (const row of rows) joinRegistryFields(row, byName, 'name', null);
+  const byCanonicalName = registryByCanonicalNameMap();
+  for (const row of rows) joinFlexRegistryFields(row, byCanonicalName);
   state.flex_lots.rows = rows;
   if (!suppressURLSync) { state.flex_lots.filters = {}; state.flex_lots.sort = {key:null, dir:1}; state.flex_lots.page = 1; }
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
@@ -976,6 +1007,13 @@ async function loadGoldenReport() {
     }
     goldenReportColumnsAdded = true;
   }
+  // Вакантность в источнике хранится долей (0.095), не процентом — иначе
+  // читать неудобно/легко перепутать с площадью. Флаг только для отображения
+  // (см. render()), число под ним не меняется — сортировка/фильтр по-прежнему
+  // видят исходную долю.
+  for (const row of data.rows) {
+    row.is_percent = /вакант/i.test(row.metric || '') || /вакант/i.test(row.section || '');
+  }
   state.golden_report.rows = data.rows;
   if (!suppressURLSync) state.golden_report.page = 1;
   dataMeta.golden_report = {updated: `лист "${data.sheet}"`, count: data.rows.length};
@@ -1031,6 +1069,18 @@ function cellValue(row, col) {
   // значит одинаково и в ячейке, и в сортировке, и в фильтре, и в экспорте.
   if (col.format && v != null && v !== '') v = col.format(v);
   return v;
+}
+
+// Только для ТЕКСТА в ячейке таблицы (не для сортировки/фильтра/экспорта —
+// те продолжают работать с "сырым" числом через cellValue). Сейчас нужно
+// только для Golden File: доля вакантности как "9.5%" вместо "0.095",
+// большие числа — с разделителем разрядов, чтобы не считать нули на глаз.
+function formatDisplayValue(row, col, v) {
+  if (col.type === 'number' && typeof v === 'number') {
+    if (row.is_percent) return (v * 100).toLocaleString('ru-RU', {minimumFractionDigits: 1, maximumFractionDigits: 1}) + '%';
+    if (currentView === 'golden_report') return Math.round(v).toLocaleString('ru-RU');
+  }
+  return String(v);
 }
 
 function passesCondition(row, col, cond) {
@@ -1298,13 +1348,23 @@ function render() {
       + (filteredRows.length === 0 && ts.rows.length > 0 ? ' <button type="button" class="btn" id="btnResetInline">Сбросить фильтры</button>' : '')
       + `</td></tr>`;
   } else {
+    let prevSection = null;
     tbody.innerHTML = pageRows.map((row, i) => {
       const effectiveQaStatus = row.qa_status || row.reg_qa_status;
-      const rowClass = effectiveQaStatus === 'conflict' ? 'qa-conflict' : (effectiveQaStatus === 'quarantine' ? 'qa-quarantine' : '');
+      let rowClass = effectiveQaStatus === 'conflict' ? 'qa-conflict' : (effectiveQaStatus === 'quarantine' ? 'qa-quarantine' : '');
+      // Golden File: визуально отделяем группы строк одного "Раздела" —
+      // иначе одинаковый текст в первой колонке на каждой строке сливается
+      // в нечитаемую простыню (это и была жалоба на "неудобный вид").
+      if (currentView === 'golden_report' && ts.sort.key === null) {
+        if (row.section !== prevSection) rowClass = (rowClass + ' section-start').trim();
+        prevSection = row.section;
+      }
       const cardCell = showCard ? `<td><button type="button" class="card-btn" data-row-idx="${i}" title="Источник и проверка">ℹ</button></td>` : '';
       return `<tr class="${rowClass}">` + cardCell + cols.map(col => {
         const v = cellValue(row, col);
-        const display = (v == null || v === '') ? '<span class="empty-cell">—</span>' : escapeHtml(String(v));
+        const display = (v == null || v === '')
+          ? '<span class="empty-cell">—</span>'
+          : escapeHtml(formatDisplayValue(row, col, v));
         const flag = cellFlag(row, col);
         return flag
           ? `<td class="flagged" title="${escapeHtml(flag)}">${display}</td>`
