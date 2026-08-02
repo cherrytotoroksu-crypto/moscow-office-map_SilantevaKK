@@ -429,6 +429,13 @@ const FLEX_OPERATORS_COLUMNS = [
 ];
 const FLEX_LOTS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  // id/prev_id — id объекта в самом coworking_{quarter}.json. Часть строк
+  // была переномерована в аудите координат (см. scripts/fix_coworking_
+  // 202606_geocoding.py, current_state_audit.md): у них id новый
+  // (9001+), а prev_id хранит старый — чтобы не путать со старой,
+  // геокодированной неверно записью под прежним id.
+  {key:'id', label:'ID объекта', type:'number', visible:true},
+  {key:'prev_id', label:'Старый ID (если переномерован)', type:'number', visible:false},
   {key:'name', label:'Объект', type:'text', visible:true},
   {key:'network', label:'Оператор', type:'text', visible:true},
   {key:'flex_type', label:'Тип', type:'text', visible:true},
@@ -1007,6 +1014,9 @@ function cellFlag(row, col) {
   if (col.key === 'offer_not_started_reason' && row.offer_not_started_reason) return 'Причина отсутствия предложения указана — проверить актуальность.';
   if (col.key === 'area' && row.suspected_aggregate_lot) {
     return `Подозрительно большой лот (>${MEGA_LOT_AREA_THRESHOLD} м²) — похоже на остаток продаж по зданию/блоку целиком, а не отдельный лот. Не исключён из данных, только флаг — не учтён в итоговой площади сегмента (см. карточку "Продажа офисов" / сравнение сегментов, там цифра из Golden File).`;
+  }
+  if (col.key === 'id' && row.prev_id != null) {
+    return `Переномеровано при исправлении геокодирования (был id=${row.prev_id}) — координата/адрес заменены на независимо подтверждённые. ${row.geocoding_fix_source || ''}`;
   }
   return null;
 }
