@@ -1,0 +1,2849 @@
+{
+  "note": "Read-only аудит. data/coworking_*.json НЕ менялись. Пороги: conflict>100м, quarantine>300м, hard_error>1000м (см. заголовок скрипта).",
+  "quarters_checked": [
+    "202403",
+    "202407",
+    "202410",
+    "202412",
+    "202503",
+    "202506",
+    "202509",
+    "202512",
+    "202603",
+    "202606",
+    "geocode_cache"
+  ],
+  "findings": [
+    {
+      "type": "duplicate_id_within_quarter",
+      "quarter": "202509",
+      "id": 256,
+      "count": 4,
+      "names": [
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity"
+      ],
+      "addresses": [
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2"
+      ],
+      "coords": [
+        [
+          55.713228,
+          37.64736
+        ],
+        [
+          55.713228,
+          37.64736
+        ],
+        [
+          55.713228,
+          37.64736
+        ],
+        [
+          55.713228,
+          37.64736
+        ]
+      ]
+    },
+    {
+      "type": "duplicate_id_within_quarter",
+      "quarter": "202512",
+      "id": 84,
+      "count": 3,
+      "names": [
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка"
+      ],
+      "addresses": [
+        "",
+        "",
+        ""
+      ],
+      "coords": [
+        [
+          55.755819,
+          37.617644
+        ],
+        [
+          55.755819,
+          37.617644
+        ],
+        [
+          55.755819,
+          37.617644
+        ]
+      ]
+    },
+    {
+      "type": "duplicate_id_within_quarter",
+      "quarter": "202512",
+      "id": 256,
+      "count": 4,
+      "names": [
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity"
+      ],
+      "addresses": [
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2"
+      ],
+      "coords": [
+        [
+          55.713228,
+          37.64736
+        ],
+        [
+          55.713228,
+          37.64736
+        ],
+        [
+          55.713228,
+          37.64736
+        ],
+        [
+          55.713228,
+          37.64736
+        ]
+      ]
+    },
+    {
+      "type": "duplicate_id_within_quarter",
+      "quarter": "202603",
+      "id": 84,
+      "count": 2,
+      "names": [
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка"
+      ],
+      "addresses": [
+        "",
+        ""
+      ],
+      "coords": [
+        [
+          55.755819,
+          37.617644
+        ],
+        [
+          55.755819,
+          37.617644
+        ]
+      ]
+    },
+    {
+      "type": "duplicate_id_within_quarter",
+      "quarter": "202603",
+      "id": 256,
+      "count": 4,
+      "names": [
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity"
+      ],
+      "addresses": [
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2"
+      ],
+      "coords": [
+        [
+          55.730426,
+          37.634793
+        ],
+        [
+          55.730426,
+          37.634793
+        ],
+        [
+          55.730426,
+          37.634793
+        ],
+        [
+          55.730426,
+          37.634793
+        ]
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202403",
+      "coord": [
+        55.74963,
+        37.53743
+      ],
+      "ids": [
+        51,
+        183,
+        202,
+        228
+      ],
+      "names": [
+        "F2 - Федерация",
+        "SOK",
+        "Apollax Space",
+        "Workki Сити"
+      ],
+      "networks": [
+        "F2",
+        "SOK",
+        "Apollax Space",
+        "Workki"
+      ],
+      "addresses": [
+        "Пресненская набережная, 12",
+        "Пресненская наб., 12",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская наб. 12, башня Федерация, 18 этаж"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202403",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        16,
+        74
+      ],
+      "names": [
+        "Балчуг Плаза - KW",
+        "Space 1"
+      ],
+      "networks": [
+        "Know Where",
+        "Space 1"
+      ],
+      "addresses": [
+        "Садовническая наб., 9",
+        "Садовническая, 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202403",
+      "coord": [
+        55.78174,
+        37.59238
+      ],
+      "ids": [
+        187,
+        191
+      ],
+      "names": [
+        "Apollax Space",
+        "Apollax Space"
+      ],
+      "networks": [
+        "Apollax Space",
+        "Apollax Space"
+      ],
+      "addresses": [
+        "Цветной бульвар, 30с1",
+        "Новолесная, 2"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202407",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        3,
+        4,
+        83,
+        107,
+        183,
+        202,
+        203,
+        206,
+        228
+      ],
+      "names": [
+        "WeWork Белая площадь",
+        "WeWork Аркус",
+        "F2 - Федерация",
+        "Ключ Арма",
+        "Apollax Space",
+        "Workki ФОК",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Manufaqtury Поклонка"
+      ],
+      "networks": [
+        "WeWork",
+        "WeWork",
+        "F2",
+        "Ключ",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "Manufaqtury"
+      ],
+      "addresses": [
+        "Лесная улица,5,стр. а-в",
+        "Ленинградский проспект 37Ас4",
+        "Пресненская набережная, 12",
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Новорязанская, д.8А",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202407",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        52,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202407",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        16,
+        74
+      ],
+      "names": [
+        "Балчуг Плаза - KW",
+        "Space 1"
+      ],
+      "networks": [
+        "Know Where",
+        "Space 1"
+      ],
+      "addresses": [
+        "Садовническая наб., 9",
+        "Садовническая, 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202410",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        28,
+        29,
+        83,
+        107,
+        183,
+        202,
+        203,
+        206,
+        228
+      ],
+      "names": [
+        "Speace Jet Белая площадь",
+        "Speace Jet Аркус",
+        "F2 - Федерация",
+        "Ключ Арма",
+        "Apollax Space",
+        "Workki ФОК",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Manufaqtury Поклонка"
+      ],
+      "networks": [
+        "Space 1",
+        "Space 1",
+        "F2",
+        "Ключ",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "Manufaqtury"
+      ],
+      "addresses": [
+        "Лесная улица,5,стр. а-в",
+        "Ленинградский проспект 37Ас4",
+        "Пресненская набережная, 12",
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Новорязанская, д.8А",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202410",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        52,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202410",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        16,
+        74
+      ],
+      "names": [
+        "Балчуг Плаза - KW",
+        "Space 1"
+      ],
+      "networks": [
+        "Know Where",
+        "Space 1"
+      ],
+      "addresses": [
+        "Садовническая наб., 9",
+        "Садовническая, 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202412",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        28,
+        29,
+        83,
+        107,
+        183,
+        202,
+        203,
+        206,
+        228
+      ],
+      "names": [
+        "Speace Jet Белая площадь",
+        "Speace Jet Аркус",
+        "F2 - Федерация",
+        "Ключ Арма",
+        "Apollax Space",
+        "Workki ФОК",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Manufaqtury Поклонка"
+      ],
+      "networks": [
+        "Space 1",
+        "Space 1",
+        "F2",
+        "Ключ",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "Manufaqtury"
+      ],
+      "addresses": [
+        "Лесная улица,5,стр. а-в",
+        "Ленинградский проспект 37Ас4",
+        "Пресненская набережная, 12",
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Новорязанская, д.8А",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202412",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        52,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202412",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        16,
+        74
+      ],
+      "names": [
+        "Балчуг Плаза - KW",
+        "Space 1"
+      ],
+      "networks": [
+        "Know Where",
+        "Space 1"
+      ],
+      "addresses": [
+        "Садовническая наб., 9",
+        "Садовническая, 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202503",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        28,
+        29,
+        83,
+        107,
+        183,
+        202,
+        203,
+        206,
+        228
+      ],
+      "names": [
+        "Speace Jet Белая площадь",
+        "Speace Jet Аркус",
+        "F2 - Федерация",
+        "Ключ Арма",
+        "Apollax Space",
+        "Workki ФОК",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Manufaqtury Поклонка"
+      ],
+      "networks": [
+        "Space 1",
+        "Space 1",
+        "F2",
+        "Ключ",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "Manufaqtury"
+      ],
+      "addresses": [
+        "Лесная улица,5,стр. а-в",
+        "Ленинградский проспект 37Ас4",
+        "Пресненская набережная, 12",
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Новорязанская, д.8А",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202503",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        52,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202503",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        74,
+        233
+      ],
+      "names": [
+        "KW Балчуг",
+        "Space 1"
+      ],
+      "networks": [
+        "Know Where",
+        "Space 1"
+      ],
+      "addresses": [
+        "Садовническая наб., 9",
+        "Садовническая, 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202506",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        65,
+        83,
+        107,
+        131,
+        183,
+        202,
+        203,
+        206,
+        228
+      ],
+      "names": [
+        "Speace  Jet Белая площадь",
+        "Speace  Jet Аркус",
+        "F2 - Федерация",
+        "Ключ Арма",
+        "Apollax Space",
+        "Workki ФОК",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Manufaqtury Поклонка"
+      ],
+      "networks": [
+        "Space 1",
+        "Space 1",
+        "F2",
+        "Ключ",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "Manufaqtury"
+      ],
+      "addresses": [
+        "Лесная улица,5,стр. а-в",
+        "Ленинградский проспект 37Ас4",
+        "Пресненская набережная, 12",
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Новорязанская, д.8А",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202506",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        52,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202506",
+      "coord": [
+        55.77568,
+        37.58119
+      ],
+      "ids": [
+        39,
+        40
+      ],
+      "names": [
+        "AFI Gallery 4 эт",
+        "AFI Gallery 7 эт"
+      ],
+      "networks": [
+        "AFI",
+        "AFI"
+      ],
+      "addresses": [
+        "г. Москва, Тверская Застава пл, д. 3",
+        "г. Москва, Тверская Застава пл, д. 3"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202506",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        74,
+        233
+      ],
+      "names": [
+        "KW Балчуг",
+        "Space 1"
+      ],
+      "networks": [
+        "Know Where",
+        "Space 1"
+      ],
+      "addresses": [
+        "Садовническая наб., 9",
+        "Садовническая, 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202506",
+      "coord": [
+        55.71323,
+        37.64736
+      ],
+      "ids": [
+        48,
+        49
+      ],
+      "names": [
+        "Flexity",
+        "Flexity Solo"
+      ],
+      "networks": [
+        "Flexity",
+        "Flexity"
+      ],
+      "addresses": [
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202509",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        74,
+        233
+      ],
+      "names": [
+        "Space 1",
+        "KW Балчуг"
+      ],
+      "networks": [
+        "Space 1",
+        "Know Where"
+      ],
+      "addresses": [
+        "Садовническая, 9",
+        "Садовническая наб., 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202509",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        65,
+        83,
+        131,
+        183,
+        202,
+        203,
+        206,
+        228
+      ],
+      "names": [
+        "Speace  Jet Аркус",
+        "Speace  Jet Белая площадь",
+        "Manufaqtury Поклонка",
+        "Apollax Space",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Workki ФОК",
+        "F2 - Федерация"
+      ],
+      "networks": [
+        "Space 1",
+        "Space 1",
+        "Manufaqtury",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "F2"
+      ],
+      "addresses": [
+        "Ленинградский проспект 37Ас4",
+        "Лесная улица,5,стр. а-в",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "Новорязанская, д.8А",
+        "Пресненская набережная, 12"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202509",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        82,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK Арена Парк (Рыбаков Тауэр)"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202512",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        65,
+        83,
+        84,
+        107,
+        131,
+        183,
+        202,
+        203,
+        206,
+        228,
+        238
+      ],
+      "names": [
+        "Ключ Арма",
+        "Speace  Jet Аркус",
+        "Speace  Jet Белая площадь",
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка",
+        "Apollax Space",
+        "Workki Сити",
+        "Workki Нео Гео",
+        "Workki ФОК",
+        "F2 - Федерация",
+        "KW Симонов"
+      ],
+      "networks": [
+        "Ключ",
+        "Space 1",
+        "Space 1",
+        "Manufaqtury",
+        "Manufaqtury",
+        "Manufaqtury",
+        "Manufaqtury",
+        "Apollax Space",
+        "Workki",
+        "Workki",
+        "Workki",
+        "F2",
+        "Know Where"
+      ],
+      "addresses": [
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Ленинградский проспект 37Ас4",
+        "Лесная улица,5,стр. а-в",
+        "",
+        "",
+        "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+        "",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "ул. Бутлерова 17",
+        "Новорязанская, д.8А",
+        "Пресненская набережная, 12",
+        ""
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202512",
+      "coord": [
+        55.74761,
+        37.62573
+      ],
+      "ids": [
+        74,
+        75,
+        233
+      ],
+      "names": [
+        "Space 1",
+        "Space Балчуг",
+        "KW Балчуг"
+      ],
+      "networks": [
+        "Space 1",
+        "Space1",
+        "Know Where"
+      ],
+      "addresses": [
+        "Садовническая, 9",
+        "",
+        "Садовническая наб., 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202512",
+      "coord": [
+        55.72863,
+        37.6448
+      ],
+      "ids": [
+        94,
+        140
+      ],
+      "names": [
+        "Space Вивальди",
+        "Регус (Вивальди)"
+      ],
+      "networks": [
+        "Space 1",
+        "Регус"
+      ],
+      "addresses": [
+        "",
+        "ул. Летниковская, д. 2, стр 1"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202512",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        82,
+        154
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK Арена Парк (Рыбаков Тауэр)"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 стр. 11"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.76021,
+        37.66389
+      ],
+      "ids": [
+        107,
+        110
+      ],
+      "names": [
+        "Ключ Арма",
+        "Ключ Сретенка"
+      ],
+      "networks": [
+        "Ключ",
+        "Ключ"
+      ],
+      "addresses": [
+        "Сусальный Нижний пер., 5 стр. 4",
+        "Сусальный Нижний пер., 5 стр. 4"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.74644,
+        37.62905
+      ],
+      "ids": [
+        74,
+        233
+      ],
+      "names": [
+        "Space 1",
+        "KW Балчуг"
+      ],
+      "networks": [
+        "Space 1",
+        "Know Where"
+      ],
+      "addresses": [
+        "Садовническая, 9",
+        "Садовническая наб., 9"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.72863,
+        37.6448
+      ],
+      "ids": [
+        94,
+        140
+      ],
+      "names": [
+        "Space Вивальди",
+        "Регус (Вивальди)"
+      ],
+      "networks": [
+        "Space 1",
+        "Регус"
+      ],
+      "addresses": [
+        "",
+        "ул. Летниковская, д. 2, стр 1"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.77493,
+        37.59958
+      ],
+      "ids": [
+        78,
+        149
+      ],
+      "names": [
+        "СODE Novo",
+        "СODE Delegat"
+      ],
+      "networks": [
+        "СODE",
+        "СODE"
+      ],
+      "addresses": [
+        "Долгоруковская 21",
+        "Долгоруковская 21"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.79114,
+        37.55935
+      ],
+      "ids": [
+        154,
+        156
+      ],
+      "names": [
+        "Multispace Динамо",
+        "Multispace Павелецкая"
+      ],
+      "networks": [
+        "Multispace",
+        "Multispace"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский проспект,36,корп. 8"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.74963,
+        37.53743
+      ],
+      "ids": [
+        172,
+        183,
+        202,
+        228
+      ],
+      "names": [
+        "SOK Сити (3 и 4 этаж)",
+        "Apollax Space",
+        "Workki Сити",
+        "F2 - Федерация"
+      ],
+      "networks": [
+        "SOK",
+        "Apollax Space",
+        "Workki",
+        "F2"
+      ],
+      "addresses": [
+        "Пресненская наб., 12",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская набережная, 12"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202603",
+      "coord": [
+        55.75582,
+        37.61764
+      ],
+      "ids": [
+        84,
+        238
+      ],
+      "names": [
+        "Manufaqtury Поклонка",
+        "Manufaqtury Поклонка",
+        "KW Симонов"
+      ],
+      "networks": [
+        "Manufaqtury",
+        "Manufaqtury",
+        "Know Where"
+      ],
+      "addresses": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202606",
+      "coord": [
+        55.78945,
+        37.56834
+      ],
+      "ids": [
+        154,
+        163
+      ],
+      "names": [
+        "Multispace Динамо",
+        "SOK Арена Парк 2"
+      ],
+      "networks": [
+        "Multispace",
+        "SOK"
+      ],
+      "addresses": [
+        "Ленинградский проспект,36,корп. 8",
+        "Ленинградский пр-т, вл. 36 ср.10"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202606",
+      "coord": [
+        55.74963,
+        37.53743
+      ],
+      "ids": [
+        172,
+        183,
+        202,
+        228
+      ],
+      "names": [
+        "SOK Сити (3 и 4 этаж)",
+        "Apollax Space",
+        "Workki Сити",
+        "F2 - Федерация"
+      ],
+      "networks": [
+        "SOK",
+        "Apollax Space",
+        "Workki",
+        "F2"
+      ],
+      "addresses": [
+        "Пресненская наб., 12",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская наб. 12, башня Федерация, 18 этаж",
+        "Пресненская набережная, 12"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202606",
+      "coord": [
+        55.71323,
+        37.64736
+      ],
+      "ids": [
+        249,
+        250,
+        251,
+        255
+      ],
+      "names": [
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity"
+      ],
+      "networks": [
+        "Flexity",
+        "Flexity",
+        "Flexity",
+        "Flexity"
+      ],
+      "addresses": [
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2",
+        "Павелецкая площадь, 2"
+      ]
+    },
+    {
+      "type": "same_coord_different_ids",
+      "quarter": "202606",
+      "coord": [
+        55.74659,
+        37.53738
+      ],
+      "ids": [
+        252,
+        257
+      ],
+      "names": [
+        "Flexity SOLO/Flexity",
+        "Flexity SOLO/Flexity"
+      ],
+      "networks": [
+        "Flexity",
+        "Flexity"
+      ],
+      "addresses": [
+        "Пресненская наб., 10",
+        "Пресненская наб., 10"
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 2,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 137.7,
+      "severity": "conflict",
+      "name_from": "WeWork Роза",
+      "name_to": "WeWork Роза",
+      "address_from": "Тимура Фрунзе, 11с33",
+      "address_to": "Тимура Фрунзе, 11с33",
+      "same_address": true,
+      "coord_from": [
+        55.735398,
+        37.586976
+      ],
+      "coord_to": [
+        55.734233,
+        37.587721
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 3,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 3205.5,
+      "severity": "hard_error",
+      "name_from": "WeWork Белая площадь",
+      "name_to": "WeWork Белая площадь",
+      "address_from": "Лесная улица,5,стр. а-в",
+      "address_to": "Лесная улица,5,стр. а-в",
+      "same_address": true,
+      "coord_from": [
+        55.778461,
+        37.585925
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 4,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 6174.0,
+      "severity": "hard_error",
+      "name_from": "WeWork Аркус",
+      "name_to": "WeWork Аркус",
+      "address_from": "Ленинградский проспект 37Ас4",
+      "address_to": "Ленинградский проспект 37Ас4",
+      "same_address": true,
+      "coord_from": [
+        55.791714,
+        37.542329
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 154,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 120.6,
+      "severity": "conflict",
+      "name_from": "Multispace Динамо",
+      "name_to": "Multispace Динамо",
+      "address_from": "Ленинградский проспект,36,корп. 8",
+      "address_to": "Ленинградский проспект,36,корп. 8",
+      "same_address": true,
+      "coord_from": [
+        55.789947,
+        37.570051
+      ],
+      "coord_to": [
+        55.789451,
+        37.568336
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 154,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 592.1,
+      "severity": "quarantine",
+      "name_from": "Multispace Динамо",
+      "name_to": "Multispace Динамо",
+      "address_from": "Ленинградский проспект,36,корп. 8",
+      "address_to": "Ленинградский проспект,36,корп. 8",
+      "same_address": true,
+      "coord_from": [
+        55.789451,
+        37.568336
+      ],
+      "coord_to": [
+        55.791137,
+        37.559353
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 154,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 592.1,
+      "severity": "quarantine",
+      "name_from": "Multispace Динамо",
+      "name_to": "Multispace Динамо",
+      "address_from": "Ленинградский проспект,36,корп. 8",
+      "address_to": "Ленинградский проспект,36,корп. 8",
+      "same_address": true,
+      "coord_from": [
+        55.791137,
+        37.559353
+      ],
+      "coord_to": [
+        55.789451,
+        37.568336
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 148,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 143.3,
+      "severity": "conflict",
+      "name_from": "СODE Савеловская",
+      "name_to": "СODE Савеловская",
+      "address_from": "Новодмитровская улица,2,корп. 2",
+      "address_to": "Новодмитровская улица,2,корп. 2",
+      "same_address": true,
+      "coord_from": [
+        55.804936,
+        37.589922
+      ],
+      "coord_to": [
+        55.803788,
+        37.590964
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 149,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 225.4,
+      "severity": "conflict",
+      "name_from": "СODE Novo",
+      "name_to": "СODE Novo",
+      "address_from": "Долгоруковская 21",
+      "address_to": "Долгоруковская 21",
+      "same_address": true,
+      "coord_from": [
+        55.775535,
+        37.60302
+      ],
+      "coord_to": [
+        55.774932,
+        37.599579
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 211,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 7790.4,
+      "severity": "hard_error",
+      "name_from": "F2",
+      "name_to": "F2",
+      "address_from": "Новоданиловская наб. 10",
+      "address_to": "Новоданиловская наб. 10",
+      "same_address": true,
+      "coord_from": [
+        55.759912,
+        37.574516
+      ],
+      "coord_to": [
+        55.696007,
+        37.625513
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 228,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 5066.5,
+      "severity": "hard_error",
+      "name_from": "F2 - Федерация",
+      "name_to": "F2 - Федерация",
+      "address_from": "Пресненская набережная, 12",
+      "address_to": "Пресненская набережная, 12",
+      "same_address": true,
+      "coord_from": [
+        55.74963,
+        37.53743
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 228,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 5066.2,
+      "severity": "hard_error",
+      "name_from": "F2 - Федерация",
+      "name_to": "F2 - Федерация",
+      "address_from": "Пресненская набережная, 12",
+      "address_to": "Пресненская набережная, 12",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.749633,
+        37.537434
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 213,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 2226.4,
+      "severity": "hard_error",
+      "name_from": "Рабочая Станция (Парк Горького)",
+      "name_to": "Рабочая Станция (Парк Горького)",
+      "address_from": "Ленинский пр-т 30А",
+      "address_to": "Ленинский пр-т 30А",
+      "same_address": true,
+      "coord_from": [
+        55.729219,
+        37.600891
+      ],
+      "coord_to": [
+        55.711184,
+        37.585449
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 222,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 1387.2,
+      "severity": "hard_error",
+      "name_from": "Регус (Капитолий)",
+      "name_to": "Регус (Капитолий)",
+      "address_from": "Вернадского проспект,6",
+      "address_to": "Вернадского проспект,6",
+      "same_address": true,
+      "coord_from": [
+        55.681701,
+        37.51538
+      ],
+      "coord_to": [
+        55.691963,
+        37.527965
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 215,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 273.3,
+      "severity": "conflict",
+      "name_from": "Регус (Гринвуд)",
+      "name_to": "Регус (Гринвуд)",
+      "address_from": "72 км МКАД, п/о Путилково, строение 19",
+      "address_to": "72 км МКАД, п/о Путилково, строение 19",
+      "same_address": true,
+      "coord_from": [
+        55.868617,
+        37.403261
+      ],
+      "coord_to": [
+        55.866278,
+        37.404609
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 215,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 273.3,
+      "severity": "conflict",
+      "name_from": "Регус (Гринвуд)",
+      "name_to": "Регус (Гринвуд)",
+      "address_from": "72 км МКАД, п/о Путилково, строение 19",
+      "address_to": "72 км МКАД, п/о Путилково, строение 19",
+      "same_address": true,
+      "coord_from": [
+        55.866278,
+        37.404609
+      ],
+      "coord_to": [
+        55.868617,
+        37.403261
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 218,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 1303.8,
+      "severity": "hard_error",
+      "name_from": "Smart Yard (на Басманной)",
+      "name_to": "Smart Yard (на Басманной)",
+      "address_from": "Бауманская ул. 15",
+      "address_to": "Бауманская ул. 15",
+      "same_address": true,
+      "coord_from": [
+        55.769717,
+        37.659802
+      ],
+      "coord_to": [
+        55.775722,
+        37.677706
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 243,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 9982.6,
+      "severity": "hard_error",
+      "name_from": "Flexity",
+      "name_to": "Flexity",
+      "address_from": "Космадамианская наб., 52",
+      "address_to": "Космадамианская наб., 52",
+      "same_address": true,
+      "coord_from": [
+        55.709033,
+        37.493183
+      ],
+      "coord_to": [
+        55.732063,
+        37.647244
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 246,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 9263.1,
+      "severity": "hard_error",
+      "name_from": "Flexity",
+      "name_to": "Flexity",
+      "address_from": "Долгоруковская ул. 7",
+      "address_to": "Долгоруковская ул. 7",
+      "same_address": true,
+      "coord_from": [
+        55.840689,
+        37.515066
+      ],
+      "coord_to": [
+        55.773849,
+        37.603541
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 248,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 168.2,
+      "severity": "conflict",
+      "name_from": "Flexity",
+      "name_to": "Flexity",
+      "address_from": "Овчинниковская наб., 18",
+      "address_to": "Овчинниковская наб., 18",
+      "same_address": true,
+      "coord_from": [
+        55.743578,
+        37.62996
+      ],
+      "coord_to": [
+        55.743857,
+        37.632601
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 248,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 168.2,
+      "severity": "conflict",
+      "name_from": "Flexity",
+      "name_to": "Flexity",
+      "address_from": "Овчинниковская наб., 18",
+      "address_to": "Овчинниковская наб., 18",
+      "same_address": true,
+      "coord_from": [
+        55.743857,
+        37.632601
+      ],
+      "coord_to": [
+        55.743578,
+        37.62996
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 105,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 2963.8,
+      "severity": "hard_error",
+      "name_from": "Ключ Остоженка",
+      "name_to": "Ключ Остоженка",
+      "address_from": "Остоженка, д. 25, стр. 1",
+      "address_to": "Остоженка, д. 25, стр. 1",
+      "same_address": true,
+      "coord_from": [
+        55.762449,
+        37.625855
+      ],
+      "coord_to": [
+        55.740867,
+        37.598061
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 114,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 2392.1,
+      "severity": "hard_error",
+      "name_from": "Ключ на Кузнецком мосту",
+      "name_to": "Ключ на Кузнецком мосту",
+      "address_from": "Кузнецкий Мост ул., 19",
+      "address_to": "Кузнецкий Мост ул., 19",
+      "same_address": true,
+      "coord_from": [
+        55.760201,
+        37.663889
+      ],
+      "coord_to": [
+        55.762308,
+        37.625837
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 107,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 2934.4,
+      "severity": "hard_error",
+      "name_from": "Ключ Арма",
+      "name_to": "Ключ Арма",
+      "address_from": "Сусальный Нижний пер., 5 стр. 4",
+      "address_to": "Сусальный Нижний пер., 5 стр. 4",
+      "same_address": true,
+      "coord_from": [
+        55.76021,
+        37.66389
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 107,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 2934.3,
+      "severity": "hard_error",
+      "name_from": "Ключ Арма",
+      "name_to": "Ключ Арма",
+      "address_from": "Сусальный Нижний пер., 5 стр. 4",
+      "address_to": "Сусальный Нижний пер., 5 стр. 4",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.760206,
+        37.663889
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 52,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 119.3,
+      "severity": "conflict",
+      "name_from": "SOK",
+      "name_to": "SOK",
+      "address_from": "Ленинградский пр-т, вл. 36 стр. 11",
+      "address_to": "Ленинградский пр-т, вл. 36 стр. 11",
+      "same_address": true,
+      "coord_from": [
+        55.788505,
+        37.567437
+      ],
+      "coord_to": [
+        55.789451,
+        37.568336
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 116,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 2656.4,
+      "severity": "hard_error",
+      "name_from": "Space 1",
+      "name_to": "Space 1",
+      "address_from": "Композиторская, 17",
+      "address_to": "Композиторская, 17",
+      "same_address": true,
+      "coord_from": [
+        55.748118,
+        37.628604
+      ],
+      "coord_to": [
+        55.751447,
+        37.586571
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 74,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 245.1,
+      "severity": "conflict",
+      "name_from": "Space 1",
+      "name_to": "Space 1",
+      "address_from": "Садовническая, 9",
+      "address_to": "Садовническая, 9",
+      "same_address": true,
+      "coord_from": [
+        55.747606,
+        37.625729
+      ],
+      "coord_to": [
+        55.746441,
+        37.629053
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 130,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 385.1,
+      "severity": "quarantine",
+      "name_from": "Space 1",
+      "name_to": "Space 1",
+      "address_from": "Арбат ул., 10",
+      "address_to": "Арбат ул., 10",
+      "same_address": true,
+      "coord_from": [
+        55.751381,
+        37.596669
+      ],
+      "coord_to": [
+        55.749491,
+        37.591512
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 130,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 384.5,
+      "severity": "quarantine",
+      "name_from": "Space 1",
+      "name_to": "Space 1",
+      "address_from": "Арбат ул., 10",
+      "address_to": "Арбат ул., 10",
+      "same_address": true,
+      "coord_from": [
+        55.749491,
+        37.591512
+      ],
+      "coord_to": [
+        55.751432,
+        37.596597
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 130,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 384.5,
+      "severity": "quarantine",
+      "name_from": "Space 1",
+      "name_to": "Space 1",
+      "address_from": "Арбат ул., 10",
+      "address_to": "Арбат ул., 10",
+      "same_address": true,
+      "coord_from": [
+        55.751432,
+        37.596597
+      ],
+      "coord_to": [
+        55.749491,
+        37.591512
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 118,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 1261.6,
+      "severity": "hard_error",
+      "name_from": "Meeting point",
+      "name_to": "Meeting point",
+      "address_from": "Варшавское шоссе, 9",
+      "address_to": "Варшавское шоссе, 9",
+      "same_address": true,
+      "coord_from": [
+        55.708668,
+        37.635628
+      ],
+      "coord_to": [
+        55.700486,
+        37.621678
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 119,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 8655.3,
+      "severity": "hard_error",
+      "name_from": "Meeting point",
+      "name_to": "Meeting point",
+      "address_from": "Ул. Охотный ряд, д.2",
+      "address_to": "Ул. Охотный ряд, д.2",
+      "same_address": true,
+      "coord_from": [
+        55.833769,
+        37.592887
+      ],
+      "coord_to": [
+        55.757131,
+        37.617114
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 121,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 138.8,
+      "severity": "conflict",
+      "name_from": "Officeless",
+      "name_to": "Officeless",
+      "address_from": "Милютинский 13с1",
+      "address_to": "Милютинский 13с1",
+      "same_address": true,
+      "coord_from": [
+        55.763645,
+        37.632044
+      ],
+      "coord_to": [
+        55.764891,
+        37.631909
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 121,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 138.8,
+      "severity": "conflict",
+      "name_from": "Officeless",
+      "name_to": "Officeless",
+      "address_from": "Милютинский 13с1",
+      "address_to": "Милютинский 13с1",
+      "same_address": true,
+      "coord_from": [
+        55.764891,
+        37.631909
+      ],
+      "coord_to": [
+        55.763645,
+        37.632044
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 123,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 121.4,
+      "severity": "conflict",
+      "name_from": "Officeless",
+      "name_to": "Officeless",
+      "address_from": "Малая Полянка, 3",
+      "address_to": "Малая Полянка, 3",
+      "same_address": true,
+      "coord_from": [
+        55.736194,
+        37.619405
+      ],
+      "coord_to": [
+        55.73587,
+        37.617554
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 123,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 121.4,
+      "severity": "conflict",
+      "name_from": "Officeless",
+      "name_to": "Officeless",
+      "address_from": "Малая Полянка, 3",
+      "address_to": "Малая Полянка, 3",
+      "same_address": true,
+      "coord_from": [
+        55.73587,
+        37.617554
+      ],
+      "coord_to": [
+        55.736194,
+        37.619405
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 187,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 2247.0,
+      "severity": "hard_error",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Цветной бульвар, 30с1",
+      "address_to": "Цветной бульвар, 30с1",
+      "same_address": true,
+      "coord_from": [
+        55.781737,
+        37.592384
+      ],
+      "coord_to": [
+        55.770476,
+        37.622217
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 187,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 193.2,
+      "severity": "conflict",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Цветной бульвар, 30с1",
+      "address_to": "Цветной бульвар, 30с1",
+      "same_address": true,
+      "coord_from": [
+        55.770476,
+        37.622217
+      ],
+      "coord_to": [
+        55.772178,
+        37.622836
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 187,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 193.2,
+      "severity": "conflict",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Цветной бульвар, 30с1",
+      "address_to": "Цветной бульвар, 30с1",
+      "same_address": true,
+      "coord_from": [
+        55.772178,
+        37.622836
+      ],
+      "coord_to": [
+        55.770476,
+        37.622217
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 182,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 231.6,
+      "severity": "conflict",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Ветошный пер. 13",
+      "address_to": "Ветошный пер. 13",
+      "same_address": true,
+      "coord_from": [
+        55.757192,
+        37.622522
+      ],
+      "coord_to": [
+        55.75511,
+        37.622396
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 182,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 231.6,
+      "severity": "conflict",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Ветошный пер. 13",
+      "address_to": "Ветошный пер. 13",
+      "same_address": true,
+      "coord_from": [
+        55.75511,
+        37.622396
+      ],
+      "coord_to": [
+        55.757192,
+        37.622522
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 183,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 5066.5,
+      "severity": "hard_error",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "address_to": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "same_address": true,
+      "coord_from": [
+        55.74963,
+        37.53743
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 183,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 5066.2,
+      "severity": "hard_error",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "address_to": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.749633,
+        37.537434
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 210,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 268.8,
+      "severity": "conflict",
+      "name_from": "Workki Тульский",
+      "name_to": "Workki Тульский",
+      "address_from": "Б. Тульская стр.19",
+      "address_to": "Б. Тульская стр.19",
+      "same_address": true,
+      "coord_from": [
+        55.706457,
+        37.617581
+      ],
+      "coord_to": [
+        55.706792,
+        37.62183
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 210,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 268.8,
+      "severity": "conflict",
+      "name_from": "Workki Тульский",
+      "name_to": "Workki Тульский",
+      "address_from": "Б. Тульская стр.19",
+      "address_to": "Б. Тульская стр.19",
+      "same_address": true,
+      "coord_from": [
+        55.706792,
+        37.62183
+      ],
+      "coord_to": [
+        55.706457,
+        37.617581
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 206,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 3016.2,
+      "severity": "hard_error",
+      "name_from": "Workki ФОК",
+      "name_to": "Workki ФОК",
+      "address_from": "Новорязанская, д.8А",
+      "address_to": "Новорязанская, д.8А",
+      "same_address": true,
+      "coord_from": [
+        55.77163,
+        37.65682
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 206,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 3016.3,
+      "severity": "hard_error",
+      "name_from": "Workki ФОК",
+      "name_to": "Workki ФОК",
+      "address_from": "Новорязанская, д.8А",
+      "address_to": "Новорязанская, д.8А",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.771631,
+        37.65682
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 202,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 5066.5,
+      "severity": "hard_error",
+      "name_from": "Workki Сити",
+      "name_to": "Workki Сити",
+      "address_from": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "address_to": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "same_address": true,
+      "coord_from": [
+        55.74963,
+        37.53743
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 202,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 5066.2,
+      "severity": "hard_error",
+      "name_from": "Workki Сити",
+      "name_to": "Workki Сити",
+      "address_from": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "address_to": "Пресненская наб. 12, башня Федерация, 18 этаж",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.749633,
+        37.537434
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 203,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 12743.9,
+      "severity": "hard_error",
+      "name_from": "Workki Нео Гео",
+      "name_to": "Workki Нео Гео",
+      "address_from": "ул. Бутлерова 17",
+      "address_to": "ул. Бутлерова 17",
+      "same_address": true,
+      "coord_from": [
+        55.64999,
+        37.53957
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 203,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 12743.7,
+      "severity": "hard_error",
+      "name_from": "Workki Нео Гео",
+      "name_to": "Workki Нео Гео",
+      "address_from": "ул. Бутлерова 17",
+      "address_to": "ул. Бутлерова 17",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.649992,
+        37.539572
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 83,
+      "quarter_from": "202403",
+      "quarter_to": "202407",
+      "distance_m": 5597.4,
+      "severity": "hard_error",
+      "name_from": "Manufaqtury Поклонка",
+      "name_to": "Manufaqtury Поклонка",
+      "address_from": "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+      "address_to": "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+      "same_address": true,
+      "coord_from": [
+        55.73726,
+        37.53451
+      ],
+      "coord_to": [
+        55.755819,
+        37.617644
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 83,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 5597.2,
+      "severity": "hard_error",
+      "name_from": "Manufaqtury Поклонка",
+      "name_to": "Manufaqtury Поклонка",
+      "address_from": "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+      "address_to": "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.737258,
+        37.534514
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 235,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 9476.8,
+      "severity": "hard_error",
+      "name_from": "KW Павелецкая",
+      "name_to": "KW Павелецкая",
+      "address_from": "Кожевническая ул. 14",
+      "address_to": "Кожевническая ул. 14",
+      "same_address": true,
+      "coord_from": [
+        55.64542,
+        37.608149
+      ],
+      "coord_to": [
+        55.728023,
+        37.645375
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 233,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 245.1,
+      "severity": "conflict",
+      "name_from": "KW Балчуг",
+      "name_to": "KW Балчуг",
+      "address_from": "Садовническая наб., 9",
+      "address_to": "Садовническая наб., 9",
+      "same_address": true,
+      "coord_from": [
+        55.747606,
+        37.625729
+      ],
+      "coord_to": [
+        55.746441,
+        37.629053
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 110,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 2239.8,
+      "severity": "hard_error",
+      "name_from": "Ключ Сретенка",
+      "name_to": "Ключ Сретенка",
+      "address_from": "Сусальный Нижний пер., 5 стр. 4",
+      "address_to": "Сусальный Нижний пер., 5 стр. 4",
+      "same_address": true,
+      "coord_from": [
+        55.769656,
+        37.632269
+      ],
+      "coord_to": [
+        55.760206,
+        37.663889
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 110,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 2038.7,
+      "severity": "hard_error",
+      "name_from": "Ключ Сретенка",
+      "name_to": "Ключ Сретенка",
+      "address_from": "Сусальный Нижний пер., 5 стр. 4",
+      "address_to": "Сретенский бульвар, 5",
+      "same_address": false,
+      "coord_from": [
+        55.760206,
+        37.663889
+      ],
+      "coord_to": [
+        55.766866,
+        37.633526
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 76,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 112.3,
+      "severity": "conflict",
+      "name_from": "Speace  Jet Тимура Фрунзе",
+      "name_to": "Speace  Jet Тимура Фрунзе",
+      "address_from": "Тимура Фрунзе, 11с33",
+      "address_to": "Тимура Фрунзе, 11с33",
+      "same_address": true,
+      "coord_from": [
+        55.734233,
+        37.587721
+      ],
+      "coord_to": [
+        55.735241,
+        37.587623
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 131,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 5728.8,
+      "severity": "hard_error",
+      "name_from": "Speace  Jet Аркус",
+      "name_to": "Speace  Jet Аркус",
+      "address_from": "Ленинградский проспект 37Ас4",
+      "address_to": "Ленинградский проспект 37Ас4",
+      "same_address": true,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.790838,
+        37.550459
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 78,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 663.8,
+      "severity": "quarantine",
+      "name_from": "СODE Delegat",
+      "name_to": "СODE Delegat",
+      "address_from": "Долгоруковская 21",
+      "address_to": "Долгоруковская 21",
+      "same_address": true,
+      "coord_from": [
+        55.779089,
+        37.607197
+      ],
+      "coord_to": [
+        55.774932,
+        37.599579
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 160,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 1672.1,
+      "severity": "hard_error",
+      "name_from": "Multispace Актер",
+      "name_to": "Multispace Актер",
+      "address_from": "",
+      "address_to": "Тверская ул., 16, стр. 1",
+      "same_address": false,
+      "coord_from": [
+        55.7762,
+        37.5895
+      ],
+      "coord_to": [
+        55.764551,
+        37.606406
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 82,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 124.7,
+      "severity": "conflict",
+      "name_from": "SOK Арена Парк (Рыбаков Тауэр)",
+      "name_to": "SOK Арена Парк (Рыбаков Тауэр)",
+      "address_from": "Ленинградский пр-т, вл. 36 стр. 11",
+      "address_to": "Ленинградский пр-т, вл. 36 стр. 11",
+      "same_address": true,
+      "coord_from": [
+        55.789451,
+        37.568336
+      ],
+      "coord_to": [
+        55.788353,
+        37.567931
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 167,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 984.4,
+      "severity": "quarantine",
+      "name_from": "SOK Земляной Вал",
+      "name_to": "SOK Земляной Вал",
+      "address_from": "Земляной Вал ул., 8",
+      "address_to": "Земляной Вал ул., 8",
+      "same_address": true,
+      "coord_from": [
+        55.753301,
+        37.656272
+      ],
+      "coord_to": [
+        55.762151,
+        37.656703
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 167,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 984.4,
+      "severity": "quarantine",
+      "name_from": "SOK Земляной Вал",
+      "name_to": "SOK Земляной Вал",
+      "address_from": "Земляной Вал ул., 8",
+      "address_to": "Земляной Вал ул., 8",
+      "same_address": true,
+      "coord_from": [
+        55.762151,
+        37.656703
+      ],
+      "coord_to": [
+        55.753301,
+        37.656272
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 256,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 2067.9,
+      "severity": "hard_error",
+      "name_from": "Flexity SOLO/Flexity",
+      "name_to": "Flexity SOLO/Flexity",
+      "address_from": "Павелецкая площадь, 2",
+      "address_to": "Павелецкая площадь, 2",
+      "same_address": true,
+      "coord_from": [
+        55.713228,
+        37.64736
+      ],
+      "coord_to": [
+        55.730426,
+        37.634793
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 156,
+      "quarter_from": "202512",
+      "quarter_to": "202603",
+      "distance_m": 8875.4,
+      "severity": "hard_error",
+      "name_from": "Multispace Павелецкая",
+      "name_to": "Multispace Павелецкая",
+      "address_from": "Ленинградский проспект,36,корп. 8",
+      "address_to": "Ленинградский проспект,36,корп. 8",
+      "same_address": true,
+      "coord_from": [
+        55.722593,
+        37.632035
+      ],
+      "coord_to": [
+        55.791137,
+        37.559353
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 156,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 8875.4,
+      "severity": "hard_error",
+      "name_from": "Multispace Павелецкая",
+      "name_to": "Multispace Павелецкая",
+      "address_from": "Ленинградский проспект,36,корп. 8",
+      "address_to": "Ленинградский проспект,36,корп. 8",
+      "same_address": true,
+      "coord_from": [
+        55.791137,
+        37.559353
+      ],
+      "coord_to": [
+        55.722593,
+        37.632035
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 238,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 5415.3,
+      "severity": "hard_error",
+      "name_from": "KW Симонов",
+      "name_to": "KW Симонов",
+      "address_from": "",
+      "address_to": "улица Ленинская Слобода, 26с5",
+      "same_address": false,
+      "coord_from": [
+        55.755819,
+        37.617644
+      ],
+      "coord_to": [
+        55.711316,
+        37.652777
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 135,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 212.6,
+      "severity": "conflict",
+      "name_from": "Speace  Jet Белая площадь",
+      "name_to": "Speace  Jet Белая площадь",
+      "address_from": "Лесная улица,5,стр. а-в",
+      "address_to": "Лесная улица,5,стр. а-в",
+      "same_address": true,
+      "coord_from": [
+        55.7762,
+        37.5854
+      ],
+      "coord_to": [
+        55.777942,
+        37.586801
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 186,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 332.0,
+      "severity": "quarantine",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Сущевский вал 18",
+      "address_to": "Сущевский вал 18",
+      "same_address": true,
+      "coord_from": [
+        55.791977,
+        37.603244
+      ],
+      "coord_to": [
+        55.789851,
+        37.606972
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 195,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 532.7,
+      "severity": "quarantine",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Новослободская улица 16",
+      "address_to": "Новослободская улица 16",
+      "same_address": true,
+      "coord_from": [
+        55.781701,
+        37.599364
+      ],
+      "coord_to": [
+        55.785787,
+        37.594917
+      ]
+    },
+    {
+      "type": "coordinate_drift_same_id",
+      "id": 198,
+      "quarter_from": "202603",
+      "quarter_to": "202606",
+      "distance_m": 109.3,
+      "severity": "conflict",
+      "name_from": "Apollax Space",
+      "name_to": "Apollax Space",
+      "address_from": "Кузнецкий мост 13",
+      "address_to": "Кузнецкий мост 13",
+      "same_address": true,
+      "coord_from": [
+        55.762409,
+        37.623016
+      ],
+      "coord_to": [
+        55.761913,
+        37.621507
+      ]
+    }
+  ]
+}
