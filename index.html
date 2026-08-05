@@ -431,6 +431,7 @@
     <button class="mode-btn active" id="modeSale" onclick="setMode('sale')">Продажа</button>
     <button class="mode-btn" id="modeRent" onclick="setMode('rent')">Аренда</button>
     <button class="mode-btn" id="modeCoworking" onclick="setMode('coworking')">Коворкинги</button>
+    <button class="mode-btn" id="modeProjects" onclick="setMode('projects')">Все проекты</button>
   </div>
   <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: <span id="rentQuarterLabel">—</span> · <span id="rentBldgCount">0</span> зданий</div>
   <button class="upload-btn" id="copyLinkBtn" style="margin-top:4px; background:#555; display:flex; align-items:center; justify-content:center; gap:6px;">
@@ -537,12 +538,12 @@
     <div id="cwFilterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
   </div>
 
-  <hr>
-  <h3>Все офисные проекты — свод</h3>
-  <div id="fpStatus" style="font-size:11px;color:#888;">Не загружен</div>
-  <label class="check-row" style="margin-top:6px;"><input type="checkbox" id="ovFuture"> Показать слой</label>
-  <div id="fpControls" style="display:none;">
+  <div id="projectsControls" style="display:none;">
+    <hr>
+    <h3>Все офисные проекты — свод</h3>
+    <div id="fpStatus" style="font-size:11px;color:#888;">Загрузка…</div>
     <div id="fpStats" style="font-size:11px;color:#888;margin:4px 0 6px;"></div>
+    <div style="font-size:10px;color:#999;margin-bottom:4px;">Справочник проектов — не зависит от выбранного квартала</div>
 
     <h3 style="margin-top:6px;">Быстрый выбор</h3>
     <div id="fpQuickBtns" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;">
@@ -589,6 +590,7 @@
     <button class="upload-btn" id="fpNoCoordsBtn" style="margin-top:8px;background:#6b7280;">Объекты без координат</button>
   </div>
 
+  <div id="choroplethControls">
   <hr>
   <h3>Деление для расчёта</h3>
   <label class="radio-row"><input type="radio" name="activeLayer" value="mo" checked> Адм. границы Москвы</label>
@@ -606,6 +608,7 @@
     <option value="volume">Объём предложения (кв.м)</option>
     <option value="count">Кол-во объектов (шт.)</option>
   </select>
+  </div>
 
   <hr>
   <h3>Рисование и выгрузка</h3>
@@ -854,6 +857,7 @@ let currentQuarter = QUARTERS[0];
 let lotsData = {};   // { "Название здания": [ {block,floor,area,price,scheme,size}, ... ] }
 let rentLotsData = {};  // { "Название здания": [ {block,floor,area,rate,opex,nds,size}, ... ] }
 let rentMode = false;   // true = режим аренды
+let projectsMode = false; // true = режим «Все проекты» (справочник, вне квартальных срезов)
 
 // ============================================================
 //  КОНФИГ СЛОЁВ
@@ -2096,6 +2100,14 @@ async function init() {
   applyStateFromURL();
   await preloadAll();
   await loadBuildings();
+  if (projectsMode) {
+    await loadFutureProjects();
+    renderFuture();
+    renderFutureLegend();
+    await renderOverlays();
+    syncURL();
+    return;
+  }
   if (coworkingMode) {
     renderCoworking();
     renderCoworkingLegend();
@@ -2120,7 +2132,7 @@ async function init() {
 function syncURL() {
   const p = new URLSearchParams();
   p.set('q', currentQuarter.id);
-  p.set('mode', coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale'));
+  p.set('mode', projectsMode ? 'projects' : (coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale')));
   p.set('layer', activeLayerKey);
   p.set('metric', currentMetric);
   const basemap = document.querySelector('input[name="basemap"]:checked');
@@ -2150,7 +2162,15 @@ function applyStateFromURL() {
     document.getElementById('quarterSelect').value = q;
   }
   const mode = p.get('mode');
-  if (mode === 'sale' || mode === 'rent' || mode === 'coworking') {
+  if (mode === 'projects') {
+    // режим-справочник: остальные панели скрываются, слой грузится в init()
+    projectsMode = true;
+    document.getElementById('modeSale').classList.remove('active');
+    document.getElementById('modeProjects').classList.add('active');
+    document.getElementById('salerentControls').style.display = 'none';
+    document.getElementById('projectsControls').style.display = 'block';
+    document.getElementById('choroplethControls').style.display = 'none';
+  } else if (mode === 'sale' || mode === 'rent' || mode === 'coworking') {
     rentMode = (mode === 'rent');
     coworkingMode = (mode === 'coworking');
     document.getElementById('modeSale').classList.toggle('active', mode === 'sale');
@@ -2240,6 +2260,12 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
   document.getElementById('fileStatus').textContent = 'Загрузка…';
   await loadBuildings(); // обновляем buildingsData/rentLotsData в любом режиме, чтобы не было рассинхрона
   if (document.getElementById('ovChanges').checked) await loadChanges();
+  if (projectsMode) {
+    // справочник проектов не привязан к кварталу — перерисовывать слой не нужно,
+    // но данные квартала выше уже обновлены, чтобы не было рассинхрона при возврате
+    syncURL();
+    return;
+  }
   if (coworkingMode) {
     await loadCoworking();
     renderCoworking();
@@ -2766,9 +2792,7 @@ function fpPopupHtml(p) {
 
 function renderFuture() {
   if (futureLayer) { map.removeLayer(futureLayer); futureLayer = null; }
-  const on = document.getElementById('ovFuture').checked;
-  document.getElementById('fpControls').style.display = on ? 'block' : 'none';
-  if (!on || !futureData) { document.getElementById('fpStats').textContent = ''; return; }
+  if (!projectsMode || !futureData) { document.getElementById('fpStats').textContent = ''; return; }
 
   const rows = getFilteredFuture();
   futureLayer = L.layerGroup();
@@ -2794,10 +2818,16 @@ function renderFuture() {
     `<br>Требуют проверки (низкое доверие): ${lowCount}`;
 }
 
-document.getElementById('ovFuture').addEventListener('change', async function() {
-  if (this.checked) await loadFutureProjects();
-  renderFuture();
-});
+function renderFutureLegend() {
+  const el = document.getElementById('buildingsLegend');
+  const items = Object.entries(FP_STATUS_COLOR)
+    .map(([label, c]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${label}</span></div>`)
+    .join('');
+  el.innerHTML = `<h4>Проекты — статус</h4>${items}<div style="font-size:10px;color:#888;margin-top:4px;">Размер точки — по GLA</div>`;
+  el.style.display = 'block';
+  repositionSignature();
+}
+
 document.querySelectorAll('.flt-fp-status, .flt-fp-conf').forEach(cb => cb.addEventListener('change', renderFuture));
 ['fpDeveloper', 'fpClass', 'fpQuarter'].forEach(id => document.getElementById(id).addEventListener('change', renderFuture));
 ['fpYearMin', 'fpYearMax'].forEach(id => document.getElementById(id).addEventListener('input', renderFuture));
@@ -2871,12 +2901,40 @@ const METRIC_OPTIONS_COWORKING =
 window.setMode = async function(mode) {
   coworkingMode = (mode === 'coworking');
   rentMode = (mode === 'rent');
+  projectsMode = (mode === 'projects');
   document.getElementById('modeSale').classList.toggle('active', mode === 'sale');
   document.getElementById('modeRent').classList.toggle('active', mode === 'rent');
   document.getElementById('modeCoworking').classList.toggle('active', mode === 'coworking');
+  document.getElementById('modeProjects').classList.toggle('active', mode === 'projects');
   document.getElementById('rentNote').style.display = mode === 'rent' ? 'block' : 'none';
-  document.getElementById('salerentControls').style.display = coworkingMode ? 'none' : 'block';
+  document.getElementById('salerentControls').style.display = (coworkingMode || projectsMode) ? 'none' : 'block';
   document.getElementById('coworkingControls').style.display = coworkingMode ? 'block' : 'none';
+  document.getElementById('projectsControls').style.display = projectsMode ? 'block' : 'none';
+  // картограмма и её метрики считаются по квартальному срезу предложения —
+  // к справочнику проектов неприменимы, поэтому в этом режиме блок скрыт
+  document.getElementById('choroplethControls').style.display = projectsMode ? 'none' : 'block';
+  // слой проектов живёт только в своём режиме: без явного снятия он оставался
+  // видимым поверх продажи/аренды/коворкингов при переключении обратно
+  if (!projectsMode && futureLayer && map.hasLayer(futureLayer)) {
+    map.removeLayer(futureLayer);
+    futureLayer = null;
+  }
+
+  if (projectsMode) {
+    if (buildingsLayer && map.hasLayer(buildingsLayer)) map.removeLayer(buildingsLayer);
+    if (coworkingLayer && map.hasLayer(coworkingLayer)) map.removeLayer(coworkingLayer);
+    if (choroplethLayer && map.hasLayer(choroplethLayer)) map.removeLayer(choroplethLayer);
+    const ms0 = document.getElementById('mapSearch');
+    ms0.placeholder = 'Поиск проекта — карта приблизится…';
+    ms0.value = '';
+    const msr0 = document.getElementById('mapSearchResults');
+    msr0.classList.remove('open'); msr0.innerHTML = '';
+    await loadFutureProjects();
+    renderFuture();
+    renderFutureLegend();
+    syncURL();
+    return;
+  }
   document.getElementById('saleRentFilterTitle').textContent = rentMode ? 'Фильтр по аренде' : 'Фильтр по продаже';
   document.getElementById('saleFilterWrap').style.display = rentMode ? 'none' : 'block';
   document.getElementById('rentFilterWrap').style.display = rentMode ? 'block' : 'none';
