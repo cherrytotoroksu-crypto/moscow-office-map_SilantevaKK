@@ -106,6 +106,12 @@
       border: 1px solid #ddd; border-radius: 4px;
       font-size: 12px; color: #333; background: #fff;
     }
+    .fp-quick {
+      padding: 3px 7px; font-size: 10px; cursor: pointer;
+      border: 1px solid #ddd; border-radius: 10px;
+      background: #fafafa; color: #444;
+    }
+    .fp-quick:hover { background: #f0f0f0; border-color: #bbb; }
 
     /* Кнопка загрузки */
     .upload-btn {
@@ -529,6 +535,58 @@
     <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="да" checked> Со ставкой</label>
     <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="нет" checked> Без ставки</label>
     <div id="cwFilterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+  </div>
+
+  <hr>
+  <h3>Все офисные проекты — свод</h3>
+  <div id="fpStatus" style="font-size:11px;color:#888;">Не загружен</div>
+  <label class="check-row" style="margin-top:6px;"><input type="checkbox" id="ovFuture"> Показать слой</label>
+  <div id="fpControls" style="display:none;">
+    <div id="fpStats" style="font-size:11px;color:#888;margin:4px 0 6px;"></div>
+
+    <h3 style="margin-top:6px;">Быстрый выбор</h3>
+    <div id="fpQuickBtns" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;">
+      <button class="fp-quick" data-status="Строящийся">Строящиеся</button>
+      <button class="fp-quick" data-status="Сданный">Сданные</button>
+      <button class="fp-quick" data-status="Проектный">Проектные</button>
+      <button class="fp-quick" data-status="Анонсированный">Анонсированные</button>
+      <button class="fp-quick" data-status="Замороженный">Замороженные</button>
+      <button class="fp-quick" data-status="Не определён">Не определён</button>
+      <button class="fp-quick" data-status="__all__">Все</button>
+    </div>
+
+    <h3 style="margin-top:6px;">Статус</h3>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Анонсированный" checked> Анонсированный</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Проектный" checked> Проектный</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Замороженный" checked> Замороженный</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Строящийся" checked> Строящийся</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Сданный" checked> Сданный</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Не определён" checked> Не определён</label>
+
+    <h3 style="margin-top:6px;">Уровень доверия</h3>
+    <label class="check-row"><input type="checkbox" class="flt-fp-conf" value="Высокий" checked> Высокий</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-conf" value="Средний" checked> Средний</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-conf" value="Низкий"> Низкий — требуют проверки</label>
+
+    <h3 style="margin-top:6px;">Девелопер</h3>
+    <select id="fpDeveloper" style="width:100%;font-size:11px;padding:3px;"><option value="">Все</option></select>
+
+    <h3 style="margin-top:6px;">Класс</h3>
+    <select id="fpClass" style="width:100%;font-size:11px;padding:3px;"><option value="">Все</option></select>
+
+    <h3 style="margin-top:6px;">Квартал ввода</h3>
+    <select id="fpQuarter" style="width:100%;font-size:11px;padding:3px;">
+      <option value="">Все</option><option value="1">Q1</option><option value="2">Q2</option>
+      <option value="3">Q3</option><option value="4">Q4</option>
+    </select>
+
+    <h3 style="margin-top:6px;">Год ввода</h3>
+    <div class="range-row">
+      <input type="number" id="fpYearMin" class="range-input" placeholder="от">
+      <input type="number" id="fpYearMax" class="range-input" placeholder="до">
+    </div>
+
+    <button class="upload-btn" id="fpNoCoordsBtn" style="margin-top:8px;background:#6b7280;">Объекты без координат</button>
   </div>
 
   <hr>
@@ -2606,6 +2664,194 @@ function renderCoworkingLegend() {
 }
 
 document.getElementById('ovCoworking').addEventListener('change', renderCoworking);
+
+// ============================================================
+//  СЛОЙ «ВСЕ ОФИСНЫЕ ПРОЕКТЫ — СВОД» (data/future_projects.json)
+//  Источник: Будущие_проекты_очищено_с_памятью.xlsx, лист «Все объекты (чистый)».
+//  Слой независим от режима продажа/аренда/коворкинги и от выбранного квартала:
+//  это справочник проектов, а не квартальный срез предложения.
+// ============================================================
+const FP_STATUS_COLOR = {
+  'Сданный': '#16a34a',
+  'Строящийся': '#f97316',
+  'Проектный': '#2563eb',
+  'Замороженный': '#dc2626',
+  'Анонсированный': '#7c3aed',
+  'Не определён': '#9ca3af',
+};
+
+let futureData = null;
+let futureLayer = null;
+let futureLoaded = false;
+
+function fpStatusColor(s) {
+  return FP_STATUS_COLOR[s] || FP_STATUS_COLOR['Не определён'];
+}
+
+// Радиус по GLA. Без GLA — минимальный стандартный размер (не додумываем площадь).
+function fpRadius(gla) {
+  if (!isFinite(gla) || gla == null || gla <= 0) return 4;
+  return Math.max(4, Math.min(16, 4 + Math.sqrt(gla) / 30));
+}
+
+async function loadFutureProjects() {
+  if (futureLoaded) return;
+  const st = document.getElementById('fpStatus');
+  try {
+    futureData = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => r.json());
+    futureLoaded = true;
+    st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат)`;
+    st.style.color = '#16a34a';
+    fpFillSelects();
+  } catch (e) {
+    st.textContent = '✗ Не удалось загрузить свод проектов';
+    st.style.color = '#dc2626';
+  }
+}
+
+function fpFillSelects() {
+  const all = futureData.projects.concat(futureData.no_coords);
+  const devs = [...new Set(all.map(p => p.developer).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru'));
+  const cls = [...new Set(all.map(p => p.cls).filter(Boolean))].sort();
+  const devSel = document.getElementById('fpDeveloper');
+  const clsSel = document.getElementById('fpClass');
+  devs.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; devSel.appendChild(o); });
+  cls.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; clsSel.appendChild(o); });
+}
+
+function getFilteredFuture() {
+  if (!futureData) return [];
+  const statuses = new Set([...document.querySelectorAll('.flt-fp-status:checked')].map(c => c.value));
+  const confs = new Set([...document.querySelectorAll('.flt-fp-conf:checked')].map(c => c.value));
+  const dev = document.getElementById('fpDeveloper').value;
+  const cls = document.getElementById('fpClass').value;
+  const q = document.getElementById('fpQuarter').value;
+  const yMin = parseFloat(document.getElementById('fpYearMin').value);
+  const yMax = parseFloat(document.getElementById('fpYearMax').value);
+
+  return futureData.projects.filter(p => {
+    if (!statuses.has(p.status || 'Не определён')) return false;
+    if (!confs.has(p.confidence || 'Низкий')) return false;
+    if (dev && p.developer !== dev) return false;
+    if (cls && p.cls !== cls) return false;
+    if (q && String(p.commission_quarter) !== q) return false;
+    if (isFinite(yMin) && (p.commission_year == null || p.commission_year < yMin)) return false;
+    if (isFinite(yMax) && (p.commission_year == null || p.commission_year > yMax)) return false;
+    return true;
+  });
+}
+
+function fpPopupHtml(p) {
+  const src = (p.sources || []).map(u =>
+    `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#931F2B;">${escapeHtml(u.replace(/^https?:\/\//, '').slice(0, 42))}</a>`
+  ).join('<br>');
+  const rows = [
+    ['ID', p.id],
+    ['Адрес', p.address],
+    ['Девелопер', p.developer],
+    ['Общая площадь', p.gba != null ? fmt(Math.round(p.gba)) : null],
+    ['GLA', p.gla != null ? fmt(Math.round(p.gla)) : null],
+    ['Класс', p.cls],
+    ['Ввод', [p.commission_quarter ? 'Q' + p.commission_quarter : null, p.commission_year].filter(Boolean).join(' ') || null],
+    ['Статус', p.status],
+    ['Статус проверки', p.verification_status],
+    ['Уровень доверия', p.confidence],
+  ];
+  return `<b>${escapeHtml(p.name || 'Проект')}</b>` +
+    rows.map(([l, v]) =>
+      `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v == null || v === '' ? '—' : escapeHtml(String(v))}</span></div>`
+    ).join('') +
+    (src ? `<div class="prow" style="display:block;"><span class="plabel">Источники</span><div style="margin-top:2px;font-size:10px;word-break:break-all;">${src}</div></div>` : '');
+}
+
+function renderFuture() {
+  if (futureLayer) { map.removeLayer(futureLayer); futureLayer = null; }
+  const on = document.getElementById('ovFuture').checked;
+  document.getElementById('fpControls').style.display = on ? 'block' : 'none';
+  if (!on || !futureData) { document.getElementById('fpStats').textContent = ''; return; }
+
+  const rows = getFilteredFuture();
+  futureLayer = L.layerGroup();
+  rows.forEach(p => {
+    const marker = L.circleMarker([p.lat, p.lng], {
+      radius: fpRadius(p.gla),
+      fillColor: fpStatusColor(p.status),
+      color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.85,
+    });
+    marker.bindPopup(fpPopupHtml(p), { maxWidth: 340, minWidth: 280 });
+    marker.bindTooltip(p.name || '', { direction: 'top' });
+    futureLayer.addLayer(marker);
+  });
+  futureLayer.addTo(map);
+
+  const byStatus = {};
+  rows.forEach(p => { const s = p.status || 'Не определён'; byStatus[s] = (byStatus[s] || 0) + 1; });
+  const lowCount = futureData.projects.concat(futureData.no_coords)
+    .filter(p => (p.confidence || 'Низкий') === 'Низкий').length;
+  document.getElementById('fpStats').innerHTML =
+    `Показано: <b>${rows.length}</b> из ${futureData.with_coords} с координатами<br>` +
+    Object.entries(byStatus).sort((a, b) => b[1] - a[1]).map(([s, n]) => `${s}: ${n}`).join(', ') +
+    `<br>Требуют проверки (низкое доверие): ${lowCount}`;
+}
+
+document.getElementById('ovFuture').addEventListener('change', async function() {
+  if (this.checked) await loadFutureProjects();
+  renderFuture();
+});
+document.querySelectorAll('.flt-fp-status, .flt-fp-conf').forEach(cb => cb.addEventListener('change', renderFuture));
+['fpDeveloper', 'fpClass', 'fpQuarter'].forEach(id => document.getElementById(id).addEventListener('change', renderFuture));
+['fpYearMin', 'fpYearMax'].forEach(id => document.getElementById(id).addEventListener('input', renderFuture));
+
+document.querySelectorAll('.fp-quick').forEach(btn => btn.addEventListener('click', function() {
+  const target = this.dataset.status;
+  document.querySelectorAll('.flt-fp-status').forEach(cb => {
+    cb.checked = (target === '__all__') || (cb.value === target);
+  });
+  renderFuture();
+}));
+
+document.getElementById('fpNoCoordsBtn').addEventListener('click', function() {
+  if (!futureData) return;
+  const rows = futureData.no_coords;
+  const html = `<table style="width:100%;border-collapse:collapse;font-size:12px;">
+    <thead><tr style="background:#f5f5f5;">
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">ID</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Объект</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Адрес</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Девелопер</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Статус</th>
+    </tr></thead><tbody>` +
+    rows.map(p => `<tr>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.id || '')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.name || '')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.address || '—')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.developer || '—')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.status || '—')}</td>
+    </tr>`).join('') + '</tbody></table>';
+  openFutureNoCoordsModal(rows.length, html);
+});
+
+function openFutureNoCoordsModal(count, tableHtml) {
+  let el = document.getElementById('fpNoCoordsModal');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'fpNoCoordsModal';
+    el.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:10000;display:flex;align-items:center;justify-content:center;';
+    el.innerHTML = `<div style="background:#fff;border-radius:8px;max-width:900px;width:92%;max-height:82vh;display:flex;flex-direction:column;">
+      <div style="padding:12px 16px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
+        <b id="fpNcTitle"></b>
+        <button id="fpNcClose" style="border:none;background:none;font-size:20px;cursor:pointer;line-height:1;">×</button>
+      </div>
+      <div id="fpNcBody" style="padding:12px 16px;overflow:auto;"></div>
+    </div>`;
+    document.body.appendChild(el);
+    el.addEventListener('click', e => { if (e.target === el) el.style.display = 'none'; });
+    document.getElementById('fpNcClose').addEventListener('click', () => { el.style.display = 'none'; });
+  }
+  document.getElementById('fpNcTitle').textContent = `Без подтверждённых координат — ${count} объектов (на карту не выводятся)`;
+  document.getElementById('fpNcBody').innerHTML = tableHtml;
+  el.style.display = 'flex';
+}
 
 // ============================================================
 //  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА / КОВОРКИНГИ
