@@ -21,6 +21,7 @@ ALLOWED_STATUSES = {
     "Строящийся", "Сданный", "Не определён",
 }
 ALLOWED_CONFIDENCE = {"Высокий", "Средний", "Низкий"}
+ALLOWED_GEOMETRY_QUALITY = {None, "exact", "centroid", "approximate"}
 
 # Санити-рамка Москвы с областью — не точная граница, а защита от мусорной
 # координаты (0,0 / перепутанные lat-lng / чужой город).
@@ -230,6 +231,70 @@ class FutureProjectsLayerTest(unittest.TestCase):
         self.assertTrue(rec["needs_review"])
         self.assertIn("ОТКЛОНЕНО", rec["review_notes"])
         self.assertNotIn("OBJ-0564", {r["id"] for r in self.duplicates})
+
+    def test_geometry_quality_is_from_reference(self):
+        seen = {r.get("geometry_quality") for r in self.projects + self.no_coords}
+        unknown = seen - ALLOWED_GEOMETRY_QUALITY
+        self.assertEqual(unknown, set(), f"Неизвестные значения geometry_quality: {unknown}")
+
+    def test_partia_2026_08_09_confirmed_coordinate_fixes(self):
+        """6 координат, исправленных по exact-совпадению Яндекс-геокодера
+        (outputs/yandex_duplicate_coordinate_audit_2026-08-09.json), с
+        сохранением источника и пометкой geometry_quality=exact."""
+        by_id = {r["id"]: r for r in self.projects}
+        expected = {
+            "OBJ-0111": (55.778785, 37.584164),
+            "OBJ-0665": (55.7844, 37.58464),
+            "OBJ-0706": (55.784779, 37.585853),
+            "OBJ-0493": (55.761173, 37.528271),
+            "OBJ-0534": (55.829911, 37.431873),
+            "OBJ-0719": (55.657377, 37.530139),
+        }
+        for object_id, point in expected.items():
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+            self.assertTrue(rec.get("coordinates_source"), object_id)
+            self.assertTrue(rec["needs_review"], object_id)
+
+    def test_partia_2026_08_09_rejected_mismatches_keep_old_coordinates(self):
+        """Кандидаты Яндекса с несовпадающим корпусом/типом улицы отклонены —
+        координата не должна была измениться."""
+        by_id = {r["id"]: r for r in self.projects}
+        unchanged = {
+            "OBJ-0648": (55.7816602, 37.5840668),
+            "OBJ-0653": (55.7816602, 37.5840668),
+            "OBJ-0492": (55.759279, 37.529016),
+            "OBJ-0737": (55.6565173, 37.5341981),
+        }
+        for object_id, point in unchanged.items():
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertTrue(rec["needs_review"], object_id)
+            self.assertIn("ОТКЛОНЕНО", rec["review_notes"], object_id)
+
+    def test_partia_2026_08_09_obj0056_premise_checked_not_assumed(self):
+        """Задачей утверждалось, что OBJ-0056 «вне Москвы» — проверка не
+        подтвердила это: точка внутри санити-рамки, координата не менялась
+        без независимого подтверждения нового адреса."""
+        rec = next(r for r in self.projects if r["id"] == "OBJ-0056")
+        self.assertEqual((rec["lat"], rec["lng"]), (55.72671, 37.453783))
+        self.assertIn("НЕ подтверждена", rec["review_notes"])
+
+    def test_multi_corpus_complexes_are_tagged_not_merged(self):
+        """СберСити/Останкино/Сколково/STONE/Парк Легенд: общие точки помечены
+        centroid, ID остаются раздельными — ни одна запись не пропала."""
+        by_id = {r["id"]: r for r in self.projects}
+        centroid_ids = [
+            "OBJ-0070", "OBJ-0071", "OBJ-0072", "OBJ-0098", "OBJ-0171", "OBJ-0172", "OBJ-0337",  # СберСити
+            "OBJ-0029", "OBJ-0055", "OBJ-0568", "OBJ-0582", "OBJ-0610", "OBJ-0612", "OBJ-0620",  # Останкино
+            "OBJ-0695", "OBJ-0711", "OBJ-0748", "OBJ-0778",  # Парк Легенд
+        ]
+        self.assertEqual(len(centroid_ids), len(set(centroid_ids)), "ID не должны повторяться")
+        for object_id in centroid_ids:
+            self.assertIn(object_id, by_id, object_id)
+            self.assertEqual(by_id[object_id]["geometry_quality"], "centroid", object_id)
+            self.assertTrue(by_id[object_id]["needs_review"], object_id)
 
     def test_varshavskaya_does_not_claim_ostankino_commissioning(self):
         """Отклонённое ложное совпадение: ввод корпуса в сентябре 2025 относится

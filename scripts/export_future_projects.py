@@ -127,6 +127,11 @@ def main():
         rec['commission_quarter'] = to_int(rec['commission_quarter'])
         rec['merged_rows'] = to_int(rec['merged_rows'])
         rec['sources'] = split_sources(rec['sources'])
+        # Точность геометрии: exact (адрес/контур конкретного здания), centroid
+        # (точка многокорпусного комплекса, не строения), approximate (номер/улица,
+        # либо совпадение с чужим плейсхолдером). Проставляется только overrides —
+        # без override geometry_quality остаётся null, а не "exact" по умолчанию.
+        rec['geometry_quality'] = None
 
         rec = apply_override(rec, overrides.get(rec['id']))
 

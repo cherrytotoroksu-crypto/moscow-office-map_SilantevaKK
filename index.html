@@ -2714,6 +2714,12 @@ const FP_STATUS_COLOR = {
   'Не определён': '#9ca3af',
 };
 
+const GEOMETRY_QUALITY_LABEL = {
+  'exact': 'Точная (адрес/контур здания)',
+  'centroid': 'Центроид комплекса (не строения)',
+  'approximate': 'Приблизительная',
+};
+
 let futureData = null;
 let futureLayer = null;
 let futureLoaded = false;
@@ -2785,6 +2791,7 @@ function fpPopupHtml(p) {
     ['Каноническое название', p.canonical_name],
     ['Адрес', p.address],
     ['Координаты', coordsCell(p)],
+    ['Точность геометрии', GEOMETRY_QUALITY_LABEL[p.geometry_quality] || (p.geometry_quality ? p.geometry_quality : null)],
     ['Источник координат', p.coordinates_source || p.coord_fix_source],
     ['Совпавшая запись', [p.matched_existing_id, p.matched_existing_name].filter(Boolean).join(' — ') || null],
     ['Девелопер', p.developer],
@@ -2817,10 +2824,18 @@ function renderFuture() {
   const rows = getFilteredFuture();
   futureLayer = L.layerGroup();
   rows.forEach(p => {
+    // Точность геометрии и уверенность — не просто текст в карточке, а видимая
+    // на карте разница: у centroid/approximate — пунктирная обводка (точка
+    // комплекса или улицы, не здания), у низкого доверия — приглушённая заливка.
+    const approx = p.geometry_quality === 'centroid' || p.geometry_quality === 'approximate';
+    const fillOpacity = p.confidence === 'Высокий' ? 0.9 : (p.confidence === 'Средний' ? 0.75 : 0.45);
     const marker = L.circleMarker([p.lat, p.lng], {
       radius: fpRadius(p.gla),
       fillColor: fpStatusColor(p.status),
-      color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.85,
+      color: approx ? '#374151' : '#fff',
+      weight: approx ? 1.5 : 1,
+      dashArray: approx ? '2,3' : null,
+      opacity: 1, fillOpacity,
     });
     marker.bindPopup(fpPopupHtml(p), { maxWidth: 340, minWidth: 280 });
     marker.bindTooltip(p.name || '', { direction: 'top' });
@@ -2846,7 +2861,10 @@ function renderFutureLegend() {
   const items = Object.entries(FP_STATUS_COLOR)
     .map(([label, c]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${label}</span></div>`)
     .join('');
-  el.innerHTML = `<h4>Проекты — статус</h4>${items}<div style="font-size:10px;color:#888;margin-top:4px;">Размер точки — по GLA</div>`;
+  el.innerHTML = `<h4>Проекты — статус</h4>${items}` +
+    `<div style="font-size:10px;color:#888;margin-top:4px;">Размер точки — по GLA</div>` +
+    `<div style="font-size:10px;color:#888;margin-top:2px;">Бледная заливка — низкое доверие</div>` +
+    `<div style="font-size:10px;color:#888;margin-top:2px;">Пунктирная обводка — точка комплекса/улицы, не здания</div>`;
   el.style.display = 'block';
   repositionSignature();
 }
