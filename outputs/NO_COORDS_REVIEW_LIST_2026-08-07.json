@@ -1,0 +1,822 @@
+[
+ {
+  "id": "OBJ-0143",
+  "name": "Деловой комплекс на территории грузового двора \"Москва-Товарная-рязанская\"",
+  "address": "г. Москва, Спартаковская площадь, 1/7с16",
+  "developer": "Новая эра",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0146",
+  "name": "Офисно-складской комплекс на 60-летия Октября",
+  "address": "г. Москва, проспект 60-летия Октября, 11Ас5",
+  "developer": "Хоумсклад",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0240",
+  "name": "БЦ Artel",
+  "address": null,
+  "developer": "Artel",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0241",
+  "name": "БЦ MR 1",
+  "address": null,
+  "developer": null,
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0242",
+  "name": "БЦ MR 2",
+  "address": null,
+  "developer": null,
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0244",
+  "name": "БЦ Springs",
+  "address": "Москва, ул. Малая Филёвская, 46",
+  "developer": "ООО СЗ «Спрингс» / UNIQ Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "Проверить исходную строку: вероятно, жилой проект ошибочно классифицирован как БЦ"
+ },
+ {
+  "id": "OBJ-0245",
+  "name": "БЦ Unikey",
+  "address": null,
+  "developer": null,
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0246",
+  "name": "БЦ А101",
+  "address": null,
+  "developer": null,
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0255",
+  "name": "БЦ Крост",
+  "address": null,
+  "developer": null,
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0256",
+  "name": "БЦ ЛСР",
+  "address": null,
+  "developer": "ЛСР",
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0264",
+  "name": "БЦ на Текстильщиков",
+  "address": "г. Москва, 8-я Текстильщиков ул.,",
+  "developer": "Aurix",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0271",
+  "name": "БЦ Самолет",
+  "address": null,
+  "developer": null,
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0272",
+  "name": "БЦ Старт",
+  "address": null,
+  "developer": null,
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0296",
+  "name": "Крост АДЦ Коммунарка",
+  "address": null,
+  "developer": "Крост",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0297",
+  "name": "КРТ Теплый стан",
+  "address": null,
+  "developer": "Аквилон",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0397",
+  "name": "Донстрой в Раменках",
+  "address": null,
+  "developer": "Донстрой",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0469",
+  "name": "Кунцево, 59 км МКАД",
+  "address": "Кунцево, 59 км МКАД",
+  "developer": null,
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0564",
+  "name": "сколково",
+  "address": null,
+  "developer": null,
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "ОТКЛОНЕНО ложное совпадение с БЦ «Сколково» (score 97): единственный признак — общий топоним. Наносить нельзя; кандидат на исключение строки из слоя как неидентифицируемой"
+ },
+ {
+  "id": "OBJ-0579",
+  "name": "Lucky, bldg 2",
+  "address": "2nd Zvenigorodskaya, 28",
+  "developer": "Vesper",
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0598",
+  "name": "4-ая Магистральная, вл. 7",
+  "address": "4-ая Магистральная, вл. 7",
+  "developer": "Аркс",
+  "status": "Анонсированный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0599",
+  "name": "2-ая Магистральная, вл. 3, 16",
+  "address": "2-ая Магистральная, вл. 3, 16",
+  "developer": "АО Проспект",
+  "status": "Анонсированный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0605",
+  "name": "1-я Магистральная, вл. 29",
+  "address": "1-я Магистральная, вл. 29",
+  "developer": null,
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0625",
+  "name": "Южный Речной Порт",
+  "address": "Проспект Андропова,д.11 корп. 4,5,6,7",
+  "developer": "Regions Development",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0627",
+  "name": "Национальный космический центр",
+  "address": "г. Москва, ул. Большая Филевская, 20",
+  "developer": "Мосинжпроект",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0628",
+  "name": "Общественно-деловой комплекс",
+  "address": "Кавказский б-р, вл. 54",
+  "developer": "УК Бёрдз",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0629",
+  "name": "Деловой Центр м. Университет",
+  "address": "пр-кт Вернадского, вл6-Вс1",
+  "developer": "Инвестиционная Группа АБСОЛЮТ",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0631",
+  "name": "ТПУ Минская",
+  "address": "м. Минская",
+  "developer": "BMS Development Group",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0635",
+  "name": "Башня в Сити",
+  "address": "Краснопресненская наб., вл. 16/1",
+  "developer": "ГАЛС-Девелопмент",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0636",
+  "name": "Многофункциональный комплекс ЗИЛ",
+  "address": "ул. Автозаводская, 23к15, стр. 85, стр. 310",
+  "developer": "ИТЭЛМА ДЕВЕЛОПМЕНТ",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0637",
+  "name": "БЦ на Войковской",
+  "address": "Старопетровский пр-д, 7А",
+  "developer": "ГАЛС-Девелопмент",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0638",
+  "name": "БЦ на Шмитовском пр-д, вл. 32, 32А",
+  "address": "Шмитовский пр-д, вл. 32, 32А",
+  "developer": null,
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0639",
+  "name": "БЦ на Ленинградском пр-кте, 37",
+  "address": "Ленинградский пр-кт, 37",
+  "developer": "Dar",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0640",
+  "name": "ЗИЛАРТ GRAND (Дом 18)",
+  "address": "ул Автозаводская, вл. 23/2",
+  "developer": "ЛСР",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0645",
+  "name": "Авиапарк Офисы",
+  "address": "Ходынский б-р, 4",
+  "developer": null,
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0649",
+  "name": "iCITY (Башня Time)",
+  "address": "Шмитовский пр-д, 37",
+  "developer": "MR Group",
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0651",
+  "name": "Многофункциональный офисный центр",
+  "address": "Ленинградское ш., уч. 63А/1А",
+  "developer": "Мангазея",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0652",
+  "name": "Rublevo Business Park",
+  "address": "МКАД, 64-й километр, 1",
+  "developer": "ПИОНЕР-М",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0655",
+  "name": "iCITY (Башня Space)",
+  "address": "Шмитовский пр-д, 37",
+  "developer": "MR Group",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0657",
+  "name": "Технопарк ЗИЛ А",
+  "address": "Автозаводская ул., 23с85",
+  "developer": "ИТЭЛМА ДЕВЕЛОПМЕНТ",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0660",
+  "name": "Медиацентр НТВ",
+  "address": "Новомосковская ул., вл. 18-22",
+  "developer": "SVARGO group",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0668",
+  "name": "Sydney City",
+  "address": "улица Шеногина, вл2/11",
+  "developer": "ГК ФСК",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0670",
+  "name": "Деловой комплекс Шмитовский 34",
+  "address": "Шмитовский пр-д, вл. 34",
+  "developer": null,
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0672",
+  "name": "БЦ на Нагатинской набережной",
+  "address": "Варшавское ш., 37Гс7",
+  "developer": "Prime Life Development",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0673",
+  "name": "Офисный комплекс Кожуховский",
+  "address": "2-й Кожуховский пр-д, д.29, к2с16",
+  "developer": "Гута Девелопмент",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0681",
+  "name": "Деловое пространство в Савеловском районе (по программе КРТ)",
+  "address": "Вятская ул., вл. 41А",
+  "developer": null,
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0691",
+  "name": "Бизнес-квартал Прокшино (Башня 2) (2-я оч.)",
+  "address": "пос. Сосенское, БК Прокшино",
+  "developer": "А101",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0693",
+  "name": "БЦ Жуков пр-д, 19",
+  "address": "Жуков пр-д, 19",
+  "developer": "Гута Девелопмент",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0694",
+  "name": "Бизнес-квартал Прокшино (Башня 1) (1-я оч.)",
+  "address": "пос. Сосенское, БК Прокшино",
+  "developer": "А101",
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0696",
+  "name": "STONE Ходынка 1 (Башня H1)",
+  "address": "Москва, Ходынский бульвар, з/у 6/2",
+  "developer": "STONE",
+  "status": "Строящийся",
+  "confidence": "Средний",
+  "needs_review": true,
+  "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала"
+ },
+ {
+  "id": "OBJ-0703",
+  "name": "Upside Kuntsevo",
+  "address": "Западный административный округ, район Кунцево, 48-й квартал",
+  "developer": "Upside development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0710",
+  "name": "Бизнес-квартал Прокшино (Башня 3) (3-я оч.)",
+  "address": "БК Прокшино, пос. Сосенское, 5",
+  "developer": "А101",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0712",
+  "name": "Технопарк ЗИЛ Б",
+  "address": "пр-кт Лихачёва, 5",
+  "developer": "ИТЭЛМА ДЕВЕЛОПМЕНТ",
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0713",
+  "name": "Ривер Парк Коломенское (корпус 14, секция 1)",
+  "address": "ул. Речников, зу 7/7",
+  "developer": "Речников Инвест",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0714",
+  "name": "Ривер Парк Коломенское (корпус 14, секция 2)",
+  "address": "ул. Речников, зу 7/7",
+  "developer": "Речников Инвест",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0722",
+  "name": "STONE Ходынка 1 (Башня H2)",
+  "address": "Москва, Ходынский бульвар, з/у 6/2",
+  "developer": "STONE",
+  "status": "Строящийся",
+  "confidence": "Средний",
+  "needs_review": true,
+  "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала"
+ },
+ {
+  "id": "OBJ-0723",
+  "name": "Ривер Парк Коломенское (корпус 7, секция 2)",
+  "address": "ул. Речников, зу 7/8",
+  "developer": "Речников Инвест",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0724",
+  "name": "Ривер Парк Коломенское (корпус 7, секция 1)",
+  "address": "ул. Речников, зу 7/8",
+  "developer": "Речников Инвест",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0725",
+  "name": "МФК Электролитный",
+  "address": "Электролитный пр-д, вл. 3",
+  "developer": "ГК Ташир",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0728",
+  "name": "Капитолий (фаза II)",
+  "address": "пр-кт Вернадского, 6В",
+  "developer": "ENKA",
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "ОТКЛОНЕНО ложное совпадение с OBJ-0137 «БЦ Капитолий» (score 89, совпал только девелопер и корень адреса). Координата не подтверждена: точка фазы I наносится запрещено, отдельного контура для дома 6В не найдено. Также не подтверждены год ввода и статус"
+ },
+ {
+  "id": "OBJ-0735",
+  "name": "STONE Ходынка 1 (Башня H3)",
+  "address": "Москва, Ходынский бульвар, з/у 6/2",
+  "developer": "STONE",
+  "status": "Строящийся",
+  "confidence": "Средний",
+  "needs_review": true,
+  "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала"
+ },
+ {
+  "id": "OBJ-0738",
+  "name": "Актион на 1905 года",
+  "address": "Ходынская ул., з/у 2/9",
+  "developer": "Актион Девелопмент",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0747",
+  "name": "Gate 1",
+  "address": "пр-кт 60-летия Октября, 5А",
+  "developer": "Insolver",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0750",
+  "name": "Лофт Квартал Сколково (корпус 2)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0751",
+  "name": "Лофт Квартал Сколково (корпус 9)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0753",
+  "name": "Ривер Парк Коломенское (корпус 12, секции 1, 2)",
+  "address": "ул. Речников, зу 7/3",
+  "developer": "Речников Инвест",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0754",
+  "name": "Лофт Квартал Сколково (корпус 5)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0755",
+  "name": "Лофт Квартал Сколково (корпус 1)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0760",
+  "name": "Лофт Квартал Сколково (корпус 3)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0761",
+  "name": "Лофт Квартал Сколково (корпус 6)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0764",
+  "name": "Лофт Квартал Сколково (корпус 8)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0765",
+  "name": "Лофт Квартал Сколково (корпус 4)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Не определён",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0767",
+  "name": "Лофт Квартал Сколково (корпус 10)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ },
+ {
+  "id": "OBJ-0768",
+  "name": "БЦ на Ленинградском пр-кте, 37А",
+  "address": "Ленинградский пр-кт, 37А",
+  "developer": "Терра Нова",
+  "status": "Проектный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0769",
+  "name": "Большевик 2",
+  "address": "Ленинградский пр-кт, 15с21",
+  "developer": "О1 Property",
+  "status": "Замороженный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0770",
+  "name": "Деловой квартал ЮПорт (корпус 7)",
+  "address": "пр-кт Андропова, 11к7",
+  "developer": "Regions Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0771",
+  "name": "Деловой квартал ЮПорт (корпус 5)",
+  "address": "пр-кт Андропова, 11к5",
+  "developer": "Regions Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0772",
+  "name": "Деловой квартал ЮПорт (корпус 1)",
+  "address": "пр-кт Андропова, 11к1",
+  "developer": "Regions Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0774",
+  "name": "Деловой квартал ЮПорт (корпус 6)",
+  "address": "пр-кт Андропова, 11к6",
+  "developer": "Regions Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0775",
+  "name": "Деловой квартал ЮПорт (корпус 2)",
+  "address": "пр-кт Андропова, 11к2",
+  "developer": "Regions Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0776",
+  "name": "Деловой квартал ЮПорт (корпус 4)",
+  "address": "пр-кт Андропова, 11к4",
+  "developer": "Regions Development",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0777",
+  "name": "БЦ на ул. Гончарная д.20/1c2",
+  "address": "ул. Гончарная, 20/1c2",
+  "developer": "НИИ Экран",
+  "status": "Сданный",
+  "confidence": "Низкий",
+  "needs_review": null,
+  "review_notes": null
+ },
+ {
+  "id": "OBJ-0779",
+  "name": "Лофт Квартал Сколково (корпус 7)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "developer": "ГК Монолитхолдинг",
+  "status": "Строящийся",
+  "confidence": "Низкий",
+  "needs_review": true,
+  "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+ }
+]

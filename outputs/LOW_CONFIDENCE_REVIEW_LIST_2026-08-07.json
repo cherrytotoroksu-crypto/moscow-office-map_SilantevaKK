@@ -1,0 +1,4914 @@
+[
+ {
+  "id": "OBJ-0001",
+  "name": "Парк Легенд, А",
+  "address": "Лихачева пр-т., 15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0002",
+  "name": "TESLA (Нагатино i-Land)",
+  "address": "Андропова пр-т, 18к9, стр.2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0003",
+  "name": "DM Tower",
+  "address": "Новоданиловская наб., 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0006",
+  "name": "Кластер \"Ломоносов\"",
+  "address": "Вернадского пр-т., 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0008",
+  "name": "МГУ, Кластер \"Образовательный\"",
+  "address": "Раменский б-р., 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0009",
+  "name": "Геолог",
+  "address": "Обручева улица,23",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0010",
+  "name": "МФК Lucky, стр. 1",
+  "address": "2-ая Звенигородская ул., д. 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0011",
+  "name": "Б. Тульская ул., 19",
+  "address": "Б. Тульская ул., 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0012",
+  "name": "Алкон III",
+  "address": "Ленинградский пр-т., 34",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0013",
+  "name": "Пангея",
+  "address": "Сергея Радонежского ул., 15-17, стр., 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0014",
+  "name": "Capital Towers",
+  "address": "Краснопресненская наб., 14, стр., 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0015",
+  "name": "Земледельческий пер., 20А",
+  "address": "Земледельческий пер., 20А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0017",
+  "name": "Астория II",
+  "address": "Химки, Транспортный пр-д., 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0018",
+  "name": "Династия Plaza",
+  "address": "Хорошевское ш., 25Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0019",
+  "name": "D-Stantion",
+  "address": "Земляной Вал ул., 9А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0021",
+  "name": "Moscow Towers",
+  "address": "Красногвардейский 1-й проезд, 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0022",
+  "name": "Парк Легенд В",
+  "address": "Автозаводская улица,23,корп. 15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0024",
+  "name": "Stone Towers B, С",
+  "address": "проезд Бумажный, д. 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0025",
+  "name": "Ботаника",
+  "address": "ул. Леонова 1-я, д. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0026",
+  "name": "Сколково парк (фаза 1), 1 и 2 корпус",
+  "address": "Поселок Заречье, ул. Весенняя, 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0029",
+  "name": "Останкино фаза 3 (6 корпус)",
+  "address": "Огородный пр-д, вл.16",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0030",
+  "name": "Ньютон Плаза 2",
+  "address": "Нагатинский 1-й проезд, д. 10, стр. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0031",
+  "name": "Lunar модуль В",
+  "address": "Ленинский пр-кт, 38",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0033",
+  "name": "Лофт-квартал в Сколково, 1 к",
+  "address": "Сколково б-р Большой, д. 42",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0034",
+  "name": "White Sea",
+  "address": "Ленинградское ш., 61с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0035",
+  "name": "ГБУ Мосгоргеотрест",
+  "address": "Ленинградский проспект 11, стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0036",
+  "name": "Роскосмос",
+  "address": "Новозаводская улица, 18с255",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0037",
+  "name": "Slava (4 очередь)",
+  "address": "1-я улица Ямского поля, вл. 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0038",
+  "name": "Штаб-квартира Яндекса",
+  "address": "Академика Зельдовича ул., 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0039",
+  "name": "Stone Савеловская",
+  "address": "ул. Двинцев, влд 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0040",
+  "name": "iCity Space",
+  "address": "проезд Шмитовский, д. 37, стр 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0041",
+  "name": "Рублево БП",
+  "address": "Липовой Рощи ул., д. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0042",
+  "name": "Dubinin'SKY",
+  "address": "Ул. Дубининская вл.39-41",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0043",
+  "name": "МФК Сидней Сити",
+  "address": "Шеногина ул., земельный участок 2/11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0044",
+  "name": "PORTA Workplace",
+  "address": "Заречная ул., вл. 2/1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0045",
+  "name": "Здание УК ФРТ",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0046",
+  "name": "Taller",
+  "address": "Жуков проезд, 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0047",
+  "name": "БП Переделкино",
+  "address": "Боровское шоссе, 29 км",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0048",
+  "name": "Север",
+  "address": "Ленинградский проспект, д . 36, к. 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0050",
+  "name": "Upside Кунцево",
+  "address": "Молдавская ул., 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0051",
+  "name": "Fili Center",
+  "address": "Промышленный пр-д, вл. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0052",
+  "name": "Лофт-квартал Сколково, 3-10 к",
+  "address": "Сколково б-р Большой, д. 42",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0053",
+  "name": "Деловой Дуэт",
+  "address": "Шумкина ул., 14с13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0054",
+  "name": "Lakes",
+  "address": "ул. Озёрная вл.42",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0055",
+  "name": "Останкино, Фаза IV (1 корпус)",
+  "address": "Огородный пр-д, вл.16",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0056",
+  "name": "QOOB",
+  "address": "Свиридова ул., 9/3 и 17",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0057",
+  "name": "Технопарк ЗИЛ, (А1 и А2)",
+  "address": "Автозаводская улица, 23с84",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0058",
+  "name": "БЦ Серебряный Фонтан",
+  "address": "ул. Новоалексеевская, 16, корпус 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0059",
+  "name": "Невский Плаза",
+  "address": "Выборгская ул., 18",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0060",
+  "name": "Stone Курская",
+  "address": "Костомаровский пер, д. 11, стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0061",
+  "name": "Ahead",
+  "address": "Василисы Кожиной, 25/1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0062",
+  "name": "Obsidian",
+  "address": "Авиаконструктора Микояна, 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0063",
+  "name": "На Полесском",
+  "address": "проезд Полесский, д. 16, стр 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0064",
+  "name": "Эйлер",
+  "address": "Береговой проезд, 18",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0066",
+  "name": "БЦ Сколковский",
+  "address": "Сколково",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0067",
+  "name": "Сколково парк, Фаза II",
+  "address": "Поселок Заречье, ул. Весенняя, 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0068",
+  "name": "Рябушинский",
+  "address": "ул. Тимура Фрунзе, д. 11, стр. 44",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0069",
+  "name": "Сколково парк, Фаза III",
+  "address": "Поселок Заречье, ул. Весенняя, 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0070",
+  "name": "СберСити (А24)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0071",
+  "name": "СберСити (А22)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А22",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0072",
+  "name": "СберСити (А23)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А23",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0073",
+  "name": "STONE Ленинский",
+  "address": "ул. Вавилова, вл. 11, 13а",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0074",
+  "name": "Бизнес-центр Клевер парк",
+  "address": "Москва, п. Сосенское, уч.46, в районе дер. Мамыри",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0075",
+  "name": "Берников",
+  "address": "Николоямская ул., 12 стр. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0078",
+  "name": "Центральный Телеграф",
+  "address": "Тверская, 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0079",
+  "name": "Stone Towers D",
+  "address": "проезд Бумажный, д. 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0080",
+  "name": "Технопарк Густав",
+  "address": "Москва, Складочная ул., 6с36",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0081",
+  "name": "N'ICE TOWER",
+  "address": "Скотопрогонная ул. 31Ас1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0082",
+  "name": "OPUS",
+  "address": "Дербеневская набережная, 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0083",
+  "name": "Level Воронцовская",
+  "address": "Академика Семенихина ул., 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0084",
+  "name": "Инград Лужники",
+  "address": "Лужнецкий проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0086",
+  "name": "Геолог 2",
+  "address": "Обручева улица,23",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0088",
+  "name": "Twist",
+  "address": "Бутырская ул., 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0089",
+  "name": "Рассвет к.1",
+  "address": "Столярный пер., д. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0090",
+  "name": "Башня Власов",
+  "address": "Холодильный пер.,д.3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0091",
+  "name": "БЦ Ходынский",
+  "address": "Ходынская ул., 2С9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0094",
+  "name": "NOON",
+  "address": "Окская ул., вл. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0097",
+  "name": "Гагаринский",
+  "address": "Орджоникидзе ул., д. 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0098",
+  "name": "СберСити (А25)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А25",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0099",
+  "name": "Light City",
+  "address": "2-я Магистральная ул., д. 3, стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0102",
+  "name": "МФК Сатирикон",
+  "address": "Шереметьевская ул., д. 8а",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0103",
+  "name": "FRAME WORKPLACE",
+  "address": "Ул. Пресненский Вал, 27",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0104",
+  "name": "Orbital-2",
+  "address": "1-й Магистральный проезд, 12.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0105",
+  "name": "Stone Дмитровский",
+  "address": "Дмитровский проезд, вл. 1г",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0106",
+  "name": "МФК Мануфактура",
+  "address": "Строгино, пересечение МКАД (64-й км) и проезда №607",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0108",
+  "name": "МФК Тушинская",
+  "address": "ул. Тушинская, д. 22, д. 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0111",
+  "name": "МФК Slava (5 очередь)",
+  "address": "улица Бутырский Вал, 5с2, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0112",
+  "name": "МФК Ямского Поля",
+  "address": "ул. 1-я ул. Ямского Поля, вл.12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0114",
+  "name": "Stone Калужская",
+  "address": "Старокалужское шоссе, 64",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0118",
+  "name": "Stone Мневники",
+  "address": "ул. Нижние Мневники, уч.45",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0120",
+  "name": "Строгино Сити",
+  "address": "улица Маршала Прошлякова, 21",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0121",
+  "name": "Avium",
+  "address": "3-я Хорошёвская улица, 18/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0122",
+  "name": "Родина Парк",
+  "address": "г. Москва, ул. Верейская, вл. 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0125",
+  "name": "Парк Победы",
+  "address": "г. Москва, улица Барклая, вл. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0126",
+  "name": "Stone Ходынка 3",
+  "address": "Москва, Ходынский бульвар, 20а/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0127",
+  "name": "One Tower",
+  "address": "1-й Красногвардейский проезд, 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0129",
+  "name": "FLY",
+  "address": "Ленинградский проспект, 37 корп. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0130",
+  "name": "Штаб-квартира Мосинжпроекта",
+  "address": "ТПУ Карамышевская (Народное Ополчение)",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0131",
+  "name": "Бережковская",
+  "address": "Бережковская набережная",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0132",
+  "name": "БЦ Ермакова Роща",
+  "address": "ул. Ермакова Роща, 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0135",
+  "name": "Южный2 речной вокзал",
+  "address": "г. Москва, проспект Андропова, 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0136",
+  "name": "Stone Белорусская",
+  "address": "1-я улица Ямского Поля, вл. 30",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0137",
+  "name": "БЦ Капитолий",
+  "address": "Москва, Вернадского пр-т, 6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0140",
+  "name": "Сити-2",
+  "address": "г. Москва, 2-й Красногвардейский проезд, 6Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0141",
+  "name": "Офис на ул. Менжинского",
+  "address": "г. Москва, Менжинского ул.,",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0142",
+  "name": "iCity-2",
+  "address": "г. Москва, Шмитовский проезд д. 37",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0144",
+  "name": "Технопарк \"Алкон Север\"",
+  "address": "г. Москва, 3-й Балтийский пер., вл. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0145",
+  "name": "Сколково Технопарк от Upside Development",
+  "address": "г. Москва, Нобеля ул.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0147",
+  "name": "БЦ на Варшавском шоссе",
+  "address": "г. Москва, Варшавское шоссе, вл. 36.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0148",
+  "name": "Офисный комплекс на Даниловской наб.",
+  "address": "г. Москва, Даниловская набережная, вл. 8, стр. 14.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0149",
+  "name": "Bell",
+  "address": "1-я ул. Ямского поля, вл. 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0151",
+  "name": "Mind",
+  "address": "г. Москва, ул. Серегина вл.5-7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0152",
+  "name": "MYPRIORITY Пресня",
+  "address": "г. Москва, 1-й Силикатный пр-д, вл. 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0153",
+  "name": "MYPRIORITY Мневники",
+  "address": "г. Москва, ул. Народного Ополчения, 34",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0154",
+  "name": "MYPRIORITY Дубровка",
+  "address": "г. Москва, Шарикоподшипниковская ул., вл. 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0155",
+  "name": "г. Москва, Тюменская ул., вл. 5",
+  "address": "г. Москва, Тюменская ул., вл. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0156",
+  "name": "Офисный комплекс в Мневниковской пойме",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0157",
+  "name": "Поклонная, 5",
+  "address": "г. Москва, ул. Поклонная, 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0158",
+  "name": "Бумажный пр-д, 2/2",
+  "address": "г. Москва, Бумажный пр-д, 2/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0159",
+  "name": "Нижняя Масловка, 3",
+  "address": "г. Москва,ул. Нижняя Масловка, 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0160",
+  "name": "Наметкина, 14",
+  "address": "г. Москва, ул. Наметкина, 14",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0161",
+  "name": "Станколит",
+  "address": "г. Москва, ул. Складочная, 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0162",
+  "name": "Мангазея на Речном",
+  "address": "г. Москва, шоссе Ленинградское, ЗУ 63А/1А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0163",
+  "name": "Valtri",
+  "address": "г. Моква, ул. Грузинский Вал, 3с9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0165",
+  "name": "Бадаевский Восточная лента",
+  "address": "г. Москва, Кутузовский проспект, 12с3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0167",
+  "name": "А101 Прокшино Бизнес-центр 3-я очередь",
+  "address": "поселение Сосенское, квартал № 35",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0168",
+  "name": "Rail.A",
+  "address": "г. Москва, Переведеновский пер., вл. 13с11, 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0169",
+  "name": "Технопарк ПАО Сбербанк",
+  "address": "г. Москва, ул. Нобеля, 1, 73",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0170",
+  "name": "Штаб-квартира Сбера и компаний-партнеров (А27)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А27",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0171",
+  "name": "СберСити (А31)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А31",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0172",
+  "name": "СберСити (А26)",
+  "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А26",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0173",
+  "name": "МФК Сити 20",
+  "address": "г. Москва, 1-й Красногвардейский пр-д, 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0174",
+  "name": "Sezar Group, уч. 4",
+  "address": "г. Москва, Краснопресненская наб., уч. 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0175",
+  "name": "Ре:Порт",
+  "address": "г. Москва, шоссе Ленинградское, ЗУ 63А/3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0176",
+  "name": "Легенда. Береговые кварталы",
+  "address": "г. Москва, Ленинградское шоссе, вл. 63Г",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0177",
+  "name": "Level Южнопортовая",
+  "address": "ЖК Левел Южнопортовая, 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0178",
+  "name": "Неверовского, вл. 10",
+  "address": "г. Москва, ул. Неверовского, вл. 10",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0180",
+  "name": "улица Лобачевского, 138",
+  "address": "г. Москва, ул. Лобачевского, 138",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0181",
+  "name": "1-й Силикатный проезд, 13",
+  "address": "1-й Силикатный проезд, 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0182",
+  "name": "2-ой Силикатный проезд",
+  "address": "Москва, 2-ой Силикатный проезд, 34с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0183",
+  "name": "2-я Ямская, вл. 2",
+  "address": "ул. 2-я Ямская, вл. 2, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0184",
+  "name": "3-й Силикатный 1к1",
+  "address": "3-й Силикатный пр-д, 1к1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0185",
+  "name": "AFI Воронцовский Park",
+  "address": "ул. Академика Челомея, 1А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0186",
+  "name": "AFI Нагатинская",
+  "address": "ул. Нагатинская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0188",
+  "name": "ASPACE Кузнецкий мост",
+  "address": "г. Москва, Кузнецкий мост 13/9с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0189",
+  "name": "Aspace Хорошевская",
+  "address": "Хорошевское ш., 39",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0190",
+  "name": "Chalet",
+  "address": "Пятницкая улица, 40с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0191",
+  "name": "Coldy на ул. Нижняя Красносельская",
+  "address": "ул. Нижняя Красносельская, 35",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0193",
+  "name": "Edel",
+  "address": "17-й проезд Марьиной рощи, 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0194",
+  "name": "Emotion",
+  "address": "2-й Силикатный проезд, влд. 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0195",
+  "name": "Ferrum",
+  "address": "г. Москва, Шарикоподшипниковская ул., д. 11 стр. 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0196",
+  "name": "Fili residence",
+  "address": "Кастанаевская улица, 34 с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0199",
+  "name": "Insolver на Проспекте 60-летия Октября",
+  "address": "проспект 60-летия Октября, 5А, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0200",
+  "name": "Jenga",
+  "address": "Поллеский проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0201",
+  "name": "KORP. Молодежная",
+  "address": "г. Москва, ул. Ярцевская, ЗУ 21/1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0205",
+  "name": "Level Стрелецкая",
+  "address": "Стрелецкая улица, 2с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0210",
+  "name": "Regions development на ул. Краснобогатырская",
+  "address": "ул. Краснобогатырская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0213",
+  "name": "Sezar Tower",
+  "address": "г. Москва, Краснопресненская наб., уч. 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0215",
+  "name": "Sound",
+  "address": "г. Москва, ул. Радио, 16",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0216",
+  "name": "STONE Вернадского",
+  "address": "пр-кт Вернадского, 10",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0217",
+  "name": "STONE Кутузовская",
+  "address": "просп. Кутузовский, уч. 16",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0218",
+  "name": "Stone Мневники 2",
+  "address": "ул. Нижние Мнёвники , з/у 39",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0221",
+  "name": "STONE Москва-Сити",
+  "address": "Шмидтовский проезд, 32",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0222",
+  "name": "STONE Пионерская",
+  "address": "ул. Малая Филевская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0224",
+  "name": "Stone Ходынка 4",
+  "address": "Москва, Ходынский бульвар",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0225",
+  "name": "Stories на Мосфильмовской",
+  "address": "Мосфильмовская ул., 100, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0227",
+  "name": "Touch АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 151",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0228",
+  "name": "Upside на Ленинградском",
+  "address": "Ленинградский проспект, вл. 37, корп. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0229",
+  "name": "Upside Останкино",
+  "address": "проезд Огородный, 20А/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0230",
+  "name": "А101 на улице Эдварда Грига",
+  "address": "ул. Александры Монаховой, 39Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0231",
+  "name": "Адмирал",
+  "address": "Шоссейная ул., вл. 4А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0232",
+  "name": "Академика Опарина, 2",
+  "address": "ул. Академика Опарина, 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0233",
+  "name": "Академика Пилюгина, д. 24",
+  "address": "улица Академика Пилюгина, д. 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0234",
+  "name": "Академика Янгеля, 12",
+  "address": "Академика Янгеля, 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0235",
+  "name": "АФИ2B Тагильская",
+  "address": "Тагильская улица, 4с15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0236",
+  "name": "Бевард",
+  "address": "Садовая улица, 86, деревня Румянцево, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0237",
+  "name": "Белорусский жилой и деловой кварталы",
+  "address": "Москва-Товарная-Смоленская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0238",
+  "name": "Бизнес-хаб «Потапово»",
+  "address": "проспект Куприна, 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0239",
+  "name": "Бульвар Генерала Карбышева",
+  "address": "ул. Маршала Тухачевского, 22-44",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0243",
+  "name": "БЦ Riva",
+  "address": "Проспект Андропова",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0247",
+  "name": "БЦ в Beside",
+  "address": "Рязанский просп.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0248",
+  "name": "БЦ в Крылатском",
+  "address": "ул. Крылатская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0249",
+  "name": "БЦ в Лужниках",
+  "address": "ул. Лужники, ЗУ 24/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0250",
+  "name": "БЦ в Марьиной Роще",
+  "address": "ул. Веткина, вл. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0251",
+  "name": "БЦ в Очаково-Матвеевском",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0252",
+  "name": "БЦ в Филях",
+  "address": "Береговой проезд, 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0253",
+  "name": "БЦ в Южном порту",
+  "address": "Южнопортовый пр., вл. 12В",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0254",
+  "name": "БЦ Жуков проезд, 19",
+  "address": "Жуков проезд, 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0259",
+  "name": "БЦ на Авиамоторной",
+  "address": "ул. Авиамоторная, 19А/9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0260",
+  "name": "БЦ на Дубиниской",
+  "address": "ул. Дубиниская,вл. 77-83",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0261",
+  "name": "БЦ на Духовской",
+  "address": "пр-зд Духовской, 17/4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0263",
+  "name": "БЦ на Курской",
+  "address": "ул. Верхняя Сыромятническая, 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0265",
+  "name": "БЦ на Трифоновской улице",
+  "address": "Трифоновская улица, 24с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0266",
+  "name": "БЦ на ул. Гашека",
+  "address": "улица Гашека, 12с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0267",
+  "name": "БЦ на ул. Малахитовой",
+  "address": "Малахитовая улица, 20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0268",
+  "name": "БЦ на ул. Нижегородская",
+  "address": "г. Москва, Нижегородская улица, д. 94, корп. 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0269",
+  "name": "БЦ на ул. Угличская",
+  "address": "ул. Угличская, 16",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0270",
+  "name": "БЦ по КРТ в Марьиной Роще",
+  "address": "ул. 2-я Ямская, вл. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0273",
+  "name": "БЦ у ВДНХ",
+  "address": "проезд Серебрякова",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0274",
+  "name": "БЦ у Океании",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0276",
+  "name": "Варшавское, 37",
+  "address": "Варшавское, 37, ул. Нагатинская 3А6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0277",
+  "name": "Веткина",
+  "address": "г. Москва, ул. Веткина, владение 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0278",
+  "name": "Вперед",
+  "address": "1-я ул. Ямского поля, вл. 17",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0279",
+  "name": "Галс Багратион (РВБ)",
+  "address": "Краснопресненская набережная, 16с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0280",
+  "name": "Георгиевский, 3/2",
+  "address": "Георгиевский, 3/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0281",
+  "name": "ГК Север на Савеловской",
+  "address": "Бутырская улица, вл1-1, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0283",
+  "name": "Гончарная ул., д.20/1, стр.2",
+  "address": "Гончарная ул., д.20/1, стр.2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0284",
+  "name": "Грузовой порт у Рижского вокзала",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0285",
+  "name": "Гульден",
+  "address": "Складочная ул., 1, стр. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0286",
+  "name": "Деловой квартал у Курского вокзала",
+  "address": "Курский грузовой двор",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0288",
+  "name": "Дом Солнца БЦ в Коммунарке",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0289",
+  "name": "Дом Чкалов",
+  "address": "площадь Курского Вокзала, 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0290",
+  "name": "Донстрой в Сити",
+  "address": "Москва, Эрисмана, 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0291",
+  "name": "Донстрой ул. Лобачевского 138",
+  "address": "г. Москва, ул. Лобачевского, 138",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0292",
+  "name": "Зорге, вл. 21–23",
+  "address": "ул. Зорге, вл. 21–23",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0293",
+  "name": "Кватра инвест АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 150",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0294",
+  "name": "Киевский грузовой двор",
+  "address": "Киевский грузовой двор",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0295",
+  "name": "Красносельский жилой и деловой квартал",
+  "address": "грузовой двор «Москва-товарная-Рязанская»",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0298",
+  "name": "Крутицкая, 1",
+  "address": "Крутицкая наб., 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0300",
+  "name": "Ленинградское, 63А/1А",
+  "address": "Ленинградское, 63А/1А, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0301",
+  "name": "Ликова",
+  "address": "г. Москва, ул. Омская, земельный участок 14/4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0302",
+  "name": "Лобачевского, 118/6",
+  "address": "Лобачевского, 118/6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0303",
+  "name": "Ломоносов-2",
+  "address": "Раменский бульвар, 1с1, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0304",
+  "name": "Мангазея на Вятской улице",
+  "address": "Вятская ул., вл. 41",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0305",
+  "name": "Международная, 11",
+  "address": "Москва, Международная ул., 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0306",
+  "name": "Митьково грузовой двор",
+  "address": "Митьково грузовой двор",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0307",
+  "name": "МФК в Гольяново",
+  "address": "Амурская ул., вл. 15/1, ул. Бирюсинка, вл. 5,9, Иркутская ул., вл. 5/6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0308",
+  "name": "МФК в Люблино",
+  "address": "Люблинская ул., Егорьевский проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0309",
+  "name": "МФК в Марьино",
+  "address": "ул. Нижнее Поле",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0310",
+  "name": "МФК в Отрадном",
+  "address": "Алтуфьевское ш., пересеч. ул. Декабристов",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0312",
+  "name": "МФК на Тушинской улице",
+  "address": "Тушинская, вл. 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0313",
+  "name": "МФК на ул. Удальцова",
+  "address": "Москва, ул. Удальцова, 75А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0317",
+  "name": "Неверовского, вл. 9",
+  "address": "Неверовского, вл. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0318",
+  "name": "Нижние Мневники, 20",
+  "address": "Нижние Мневники, 20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0319",
+  "name": "Новослободская, 55, стр. 1",
+  "address": "Новослободская, 55 стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0320",
+  "name": "Новоясеневский, 5-13",
+  "address": "Новоясеневский, 5-13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0322",
+  "name": "Огородный проезд",
+  "address": "Огородный проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0323",
+  "name": "Ольховая SKY",
+  "address": "район Коммунарка, квартал 150",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0324",
+  "name": "Основа АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 150",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0325",
+  "name": "Очаковское, 40",
+  "address": "г. Москва, Очаковское, 40",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0326",
+  "name": "Павелецкий грузовой двор",
+  "address": "Грузовой двор Москва-Товарная-Павелецкая",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0327",
+  "name": "пер. Вознесенский,6/3",
+  "address": "пер. Вознесенский,6/3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0329",
+  "name": "Пролетарский проспект, вл. 20",
+  "address": "Пролетарский проспект, вл. 20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0330",
+  "name": "Промышленный проезд, вл. 7",
+  "address": "Промышленный проезд, вл. 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0331",
+  "name": "Раздельная, 10С1",
+  "address": "Раздельная, 10С1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0332",
+  "name": "Расцветай АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 150",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0333",
+  "name": "Рижский грузовой двор",
+  "address": "г. Москва, улица Сущёвский Вал",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0334",
+  "name": "Савеловский грузовой двор",
+  "address": "грузовой двор Москва-Бутырская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0335",
+  "name": "Сакко и Ванцетти",
+  "address": "Кутузовский проспект, вл. 12, 14а",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0336",
+  "name": "Самолет АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 151",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0339",
+  "name": "Север.Сити",
+  "address": "улица Антонова-Овсеенко, вл. 13-15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0340",
+  "name": "СЗ Вавилова",
+  "address": "г. Москва, ул. Вавилова, вл. 9А, стр. 3, 11, 19, 20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0342",
+  "name": "Спелое солнце АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 150",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0343",
+  "name": "Старые Сосёнки, квартал 30",
+  "address": "Старые Сосёнки, квартал 30",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0344",
+  "name": "Страна Заречная",
+  "address": "Иловайская, 3А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0346",
+  "name": "Сумма Элементов ул. Лобачевского 138",
+  "address": "г. Москва, ул. Лобачевского, 138",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0348",
+  "name": "Территория регбийного стадиона «Фили»",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0349",
+  "name": "Техногород",
+  "address": "Москва, Волгоградский проспект, 42к8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0351",
+  "name": "Технопарк Ижорский",
+  "address": "Ижорская ул., вл. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0352",
+  "name": "Технопарк НТВ",
+  "address": "г. Москва, Новомосковская ул., д.12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0354",
+  "name": "Технополис Москва (корп. 13)",
+  "address": "пр-кт Волгоградский, 42к13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0355",
+  "name": "Технополис Москва (штаб-квартира Трансмашхолдинг)",
+  "address": "г. Москва, Волгоградский проспект, 42, корп. 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0356",
+  "name": "ТПУ «Суворовская»",
+  "address": "ул. Дурова, 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0357",
+  "name": "Тюменская ул., вл. 5.",
+  "address": "г. Москва, Тюменская ул., вл. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0358",
+  "name": "улица Бутырский Вал, 5с2",
+  "address": "улица Бутырский Вал, 5с2, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0360",
+  "name": "Цетлин",
+  "address": "г. Москва, улица Неверовского, 10с3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0361",
+  "name": "Шант билдинг",
+  "address": "1-й Щемиловский переулок, 16с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0362",
+  "name": "Шмитовский проезд, влад. 32, 32А",
+  "address": "Шмитовский проезд, влад. 32, 32А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0363",
+  "name": "Электролитный",
+  "address": "Электролитный пр-д, 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0364",
+  "name": "Энтузиастов, 12",
+  "address": "Москва, шоссе Энтузиастов, 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0365",
+  "name": "Юпорт",
+  "address": "г. Москва, проспект Андропова, 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0366",
+  "name": "Магистральная 12",
+  "address": "г. Москва, 5-я Магистральная ул., 4, стр. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0370",
+  "name": "Upside Ямская",
+  "address": "2-я Ямская ул., вл. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0373",
+  "name": "Air",
+  "address": "Ходынское поле",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0374",
+  "name": "Aurus",
+  "address": "улица Антонова-Овсеенко, вл. 13-15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0376",
+  "name": "Техногород (оставшиеся корпуса)",
+  "address": "Москва, Волгоградский проспект, 42к8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0378",
+  "name": "MR в Сокольниках",
+  "address": "ул. Маленковская, вл. 30",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0379",
+  "name": "Акценты на Дубиниской",
+  "address": "ул. Дубиниская,вл. 77-83",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0381",
+  "name": "STONE Towers E",
+  "address": "г. Москва,ул. Нижняя Масловка, 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0382",
+  "name": "пр-д Духовской, 17/4",
+  "address": "пр-д Духовской, 17/4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0383",
+  "name": "Сумма элементов Вавилова",
+  "address": "г. Москва, ул. Вавилова, вл. 9А, стр. 3, 11, 19, 20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0385",
+  "name": "Сумма элементов Академика Пилюгина, д. 24",
+  "address": "улица Академика Пилюгина, д. 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0386",
+  "name": "Мангазея Северный порт",
+  "address": "Ленинградское, 63А/1А, Москва",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0388",
+  "name": "Upside на Ленинградском (бывш. FLY)",
+  "address": "Ленинградский проспект, вл. 37, корп. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0390",
+  "name": "Вернадского плаза",
+  "address": "Москва, Вернадского пр-т, 6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0391",
+  "name": "Малахитовая улица, 20",
+  "address": "Малахитовая улица, 20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0392",
+  "name": "Белорусский грузовой двор",
+  "address": "Москва-Товарная-Смоленская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0393",
+  "name": "Триумфальная арка",
+  "address": "улица Гашека, 12с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0394",
+  "name": "Жуков проезд, 19",
+  "address": "Жуков проезд, 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0395",
+  "name": "Береговой Эмуна развитие",
+  "address": "Береговой проезд, 4/6, 4/3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0396",
+  "name": "Техногород (один корпус)",
+  "address": "Москва, Волгоградский проспект, 42к8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0398",
+  "name": "MR Марьина Роща",
+  "address": "в районе улиц Складочная и Анненская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0399",
+  "name": "Кристалл",
+  "address": "Самокатная, 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0400",
+  "name": "пр-т Волгоградский, 32",
+  "address": "пр-т Волгоградский, 32",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0401",
+  "name": "ул. Складочная, 5",
+  "address": "ул. Складочная, 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0402",
+  "name": "Мангазея Крылатское",
+  "address": "рылатская улица, вл.14.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0403",
+  "name": "Мичуринский проспект, вл. 45",
+  "address": "Мичуринский проспект, вл. 45",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0404",
+  "name": "Родина Серебрякова, вл. 2",
+  "address": "Серебрякова, вл. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0406",
+  "name": "БЦ на месте экспоцентра в Сити",
+  "address": "1-й Красногвардейский проезд, 1с7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0407",
+  "name": "Талалихина, 41",
+  "address": "Талалихина, 41",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0408",
+  "name": "5-й Донской, 21Б",
+  "address": "5-й Донской, 21Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0409",
+  "name": "пр-кт Мира, 82-92",
+  "address": "пр-кт Мира, 82-92",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0410",
+  "name": "Фабрициуса, 19А",
+  "address": "Фабрициуса, 19А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0411",
+  "name": "КРТ Федосьино",
+  "address": "ул. Федосьино",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0412",
+  "name": "Сущевский Вал, 31",
+  "address": "Сущевский Вал, 31",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0413",
+  "name": "Cityzen",
+  "address": "Вишневая, 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0414",
+  "name": "БЦ на Приречной ул.",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0415",
+  "name": "Диапазон",
+  "address": "1-й Волоколамский проезд, 10с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0416",
+  "name": "Стекло",
+  "address": "Душинская улица, 7с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0417",
+  "name": "1-й Троицкий переулок, вл. 12/2с",
+  "address": "1-й Троицкий переулок, вл. 12/2с",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0418",
+  "name": "Большая Садовая улица, 3с10",
+  "address": "Большая Садовая улица, 3с10",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0419",
+  "name": "Волгоградский проспект, 177",
+  "address": "Волгоградский проспект, 177",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0423",
+  "name": "Сити-2 лот 5 Центринвест",
+  "address": "ул. Антонова-Овсеенко, вл.13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0425",
+  "name": "Крт Серп и Молот",
+  "address": "Перовский проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0426",
+  "name": "Феномен города",
+  "address": "ул. Минская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0427",
+  "name": "МЦК Ростокино",
+  "address": "проспект Мира, вл. 220А, улица Бажова, вл. 17, 28-30 и в Будайском проезде, вл. 11.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0428",
+  "name": "МФК у метро Университет",
+  "address": "Ломоносовский проспект, 23Ас1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0429",
+  "name": "2-я Магистральная, 18",
+  "address": "2-я Магистральная, 18",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0430",
+  "name": "Симоновский",
+  "address": "улица Ленинская Слобода, 26с35",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0431",
+  "name": "проезд Добролюбова, 13",
+  "address": "проезд Добролюбова, 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0432",
+  "name": "БЦ у авиапарка",
+  "address": "парковка у ТЦ Авиапарк",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0433",
+  "name": "КРТ Дербеневская набережная",
+  "address": "ул. Дербеневская",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0434",
+  "name": "Мневники Центр Инвест",
+  "address": "улица Нижние Мнёвники, соор1Ас1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0435",
+  "name": "Сельскохозяйственная, 30/1",
+  "address": "Сельскохозяйственная, 30/1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0436",
+  "name": "Академика Комарова, 1Д",
+  "address": "Академика Комарова, 1Д",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0438",
+  "name": "Дженга Сити-2",
+  "address": "ул. Антонова-Овсеенко, вл.7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0439",
+  "name": "улица Кульнева, 6",
+  "address": "улица Кульнева, 6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0440",
+  "name": "пр-кт Ленинградский, 47",
+  "address": "пр-кт Ленинградский, 47",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0441",
+  "name": "Avium 2 очередь",
+  "address": "3-я Хорошёвская улица, 18/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0442",
+  "name": "4-я Магистральная, 4 стр. 11",
+  "address": "4-я Магистральная ул., 4 стр. 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0443",
+  "name": "Кинотеатр \"Октябрь\"",
+  "address": "Новый Арбат, 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0444",
+  "name": "Шипиловский пр-д, вл. 55",
+  "address": "Шипиловский пр-д, вл. 55",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0445",
+  "name": "Электролитный проезд, вл. 1, к. 5",
+  "address": "Электролитный проезд, вл. 1, к. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0446",
+  "name": "Солнце",
+  "address": "Старопетровский проезд, 7А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0447",
+  "name": "Нижний Журавлёв переулок, вл8",
+  "address": "Нижний Журавлёв переулок, вл8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0448",
+  "name": "офисный центр в Мневниковской пойме",
+  "address": "Мневниковская пойма",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0449",
+  "name": "ул. Лобачевского",
+  "address": "ул. Лобачевского",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0450",
+  "name": "А101 АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 150",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0451",
+  "name": "Порт Савеловск",
+  "address": "ул. Сущевский Вал, 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0452",
+  "name": "Полбина 21",
+  "address": "улица Полбина, вл21",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0453",
+  "name": "БЦ в промзоне Южное Медведково",
+  "address": "Вилюйская ул.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0454",
+  "name": "MR Group на Верейской",
+  "address": "Верейская ул.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0456",
+  "name": "Нагатинская ул., вл. 34 стр. 2",
+  "address": "Нагатинская ул., вл. 34 стр. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0457",
+  "name": "Новаторов ул., вл. 15",
+  "address": "Новаторов ул., вл. 15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0458",
+  "name": "Рябиновая ул., вл. 38А",
+  "address": "Рябиновая ул., вл. 38А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0459",
+  "name": "Текстильщиков 8-я ул., вл. 8",
+  "address": "Текстильщиков 8-я ул., вл. 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0460",
+  "name": "Дениса Давыдова ул., вл. 4",
+  "address": "Дениса Давыдова ул., вл. 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0461",
+  "name": "пр-т Вернадского, 97",
+  "address": "пр-т Вернадского, 97",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0462",
+  "name": "ТПУ Ильинское",
+  "address": "Г. МОСКВА, НОВОРИЖСКОЕ ШОССЕ 22КМ",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0463",
+  "name": "ТПУ Народное Ополчение",
+  "address": "пр-т Маршала Жукова, 24А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0464",
+  "name": "ТПУ Остров Мечты",
+  "address": "пр-т Андропова",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0465",
+  "name": "ТПУ Кленовый бульвар",
+  "address": "бульвар Кленовый",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0466",
+  "name": "Расцветай Магистральная 9ас4",
+  "address": "ул. Магистральная 9Ас4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0467",
+  "name": "Огородный проезд, 6-12",
+  "address": "Огородный проезд, 6-12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0468",
+  "name": "Профсоюзная, 4-12",
+  "address": "Профсоюзная, 4-12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0470",
+  "name": "Хорошевское ш., 38",
+  "address": "Хорошевское ш., 38",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0471",
+  "name": "Электроника на Пресне",
+  "address": "ул. Большая Декабрьская, вл. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0472",
+  "name": "КРТ Троекурово Пионер",
+  "address": "МКАД, 51 км",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0473",
+  "name": "Сити девелопмент АДЦ Коммунарка",
+  "address": "Коммунарка, квартал 151, ул. Сосенский Стан,10/18К",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0474",
+  "name": "А101 на Эдварда Грига",
+  "address": "Эдварда Грига ул., з/у 18А/1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0476",
+  "name": "Riva",
+  "address": "Проспект Андропова, 11Г",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0477",
+  "name": "Тверская, 24",
+  "address": "Тверская, 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0478",
+  "name": "МФК в мещанском районе",
+  "address": "1-й Троицкий переулок, вл. 12/2с",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0479",
+  "name": "Сокольники БЦ",
+  "address": "1-я Рыбинская ул., вл. 1а",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0480",
+  "name": "Технопарк Октябрьское поле",
+  "address": "ул. Берзарина, 32с4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0481",
+  "name": "ул. Академика Ильюшина, вл. 21",
+  "address": "ул. Академика Ильюшина, вл. 21",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0482",
+  "name": "БЦ на Ходынке",
+  "address": "Ходынский бульвар, 4/1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0483",
+  "name": "ФизтехСити",
+  "address": "Москва, ул. Новодачная",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0484",
+  "name": "Смирновская, 10",
+  "address": "Смирновская ул., 10, стр. 2,",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0485",
+  "name": "17-й проезд Марьиной Рощи, 9",
+  "address": "17-й проезд Марьиной Рощи, 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0486",
+  "name": "1-й Магистральный проезд, 12",
+  "address": "1-й Магистральный проезд, 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0487",
+  "name": "з/у Силикатный проезд, 13",
+  "address": "1-ый Силикатный проезд, 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0488",
+  "name": "1-я ул. Ямского Поля, вл. 17",
+  "address": "1-я ул. Ямского Поля, вл. 17",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0489",
+  "name": "2-й Силикатный пр-д, вл.13",
+  "address": "2-й Силикатный пр-д, вл.13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0490",
+  "name": "2-й Силикатный проезд, вл. 9.",
+  "address": "2-й Силикатный проезд, вл. 9.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0491",
+  "name": "Технопарк Плеханово",
+  "address": "2-ой проезд Перова Поля, вл. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0492",
+  "name": "2-я Магистральная, 7А",
+  "address": "2-я Магистральная, 7А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0493",
+  "name": "2-я Магистральной улица, вл. 7а.",
+  "address": "2-я Магистральной улица, вл. 7а.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0494",
+  "name": "2-я Ямская ул., вл. 9",
+  "address": "2-я Ямская ул., вл. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0495",
+  "name": "Алкон Север, Алкон 4",
+  "address": "3-й Балтийский пер., вл.5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0496",
+  "name": "3-й Добрынинский пер., земельный участок 4/2,",
+  "address": "3-й Добрынинский пер., земельный участок 4/2,",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0497",
+  "name": "Офис Газпромабанка",
+  "address": "3-й Добрынинский, 4/2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0498",
+  "name": "ДЦ в Большом Сити",
+  "address": "4-я Магистральная ул., вл. 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0499",
+  "name": "Беломорская, 40",
+  "address": "Беломорская улица, 40",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0500",
+  "name": "Большой Якиманке, вл. 2",
+  "address": "Большой Якиманке, вл. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0501",
+  "name": "Варшавское шоссе, 36",
+  "address": "Варшавское шоссе, 36",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0502",
+  "name": "Верейская улица, вл. 5/1",
+  "address": "Верейская улица, вл. 5/1.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0503",
+  "name": "Вернадского, 6В",
+  "address": "Вернадского, 6В",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0504",
+  "name": "проспект Вернадского",
+  "address": "Вернадского, вл. 6В.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0505",
+  "name": "Верхняя Сыромятническая ул., вл.7, стр.1",
+  "address": "Верхняя Сыромятническая ул., вл.7, стр.1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0506",
+  "name": "КРТ Волоколамское шоссе",
+  "address": "Волоколамское шоссе, вл.32, Авиационная ул., вл.17-22",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0507",
+  "name": "Гаврикова улица, 11с3",
+  "address": "Гаврикова улица, 11с3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0508",
+  "name": "БЦ на Делегацкой",
+  "address": "Делегатская улица, 25",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0509",
+  "name": "Павелецкая Сити",
+  "address": "Дубининская, 55",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0510",
+  "name": "Круглый БЦ на Павелецкой",
+  "address": "Жуков проезд, 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0511",
+  "name": "ЗУ \"Ермакова Роща, 7АС1\"",
+  "address": "ЗУ \"Ермакова Роща, 7АС1\"",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0512",
+  "name": "ЗУ \"Лобачевского, 110 к1\"",
+  "address": "ЗУ \"Лобачевского, 110 к1\"",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0513",
+  "name": "Калошин пер., вл.6-8, стр.17.",
+  "address": "Калошин пер., вл.6-8, стр.17.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0514",
+  "name": "Комсомольский проспект, вл. 1",
+  "address": "Комсомольский проспект, вл. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0515",
+  "name": "Ленинградский проспект, 37Б",
+  "address": "Ленинградский проспект, 37Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0516",
+  "name": "БЦ на месте \"Старт\" (МПТ)",
+  "address": "Ленинградский проспект, 37Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0517",
+  "name": "Ленинградское шоссе, 63Ас3",
+  "address": "Ленинградское шоссе, 63Ас3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0518",
+  "name": "Северный порт. Береговые кварталы",
+  "address": "Ленинградское шоссе, 63с6",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0519",
+  "name": "Лужнецкая наб., вл. 6, стр. 1",
+  "address": "Лужнецкая наб., вл. 6, стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0520",
+  "name": "Панорама-Центр",
+  "address": "Лужнецкая наб., вл. 6, стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0521",
+  "name": "Luzhniki Collection",
+  "address": "Лужнецкая набережная, вл. 2/4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0522",
+  "name": "Малая Сухаревская площадь, дом 5",
+  "address": "Малая Сухаревская площадь, дом 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0523",
+  "name": "ТПУ Рязанский",
+  "address": "Москва, Нижегородский район, Рязанский пр-т",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0524",
+  "name": "Павловская, 18с2",
+  "address": "Павловская, 18с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0525",
+  "name": "Переведеновский переулок, 13, строения 11, 12",
+  "address": "Переведеновский переулок, 13, строения 11, 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0526",
+  "name": "деревня Пыхтино",
+  "address": "поселение Внуковское, квартал 9, земельный участок № 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0527",
+  "name": "деревня Ликова",
+  "address": "поселение Внуковское, ул Омская 14/4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0528",
+  "name": "Прокшино",
+  "address": "поселении Сосенское",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0529",
+  "name": "КРТ на проезде Черепановых",
+  "address": "проезд Черепановых, вл 64",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0530",
+  "name": "Северный речной порт",
+  "address": "Ленинградское ш., 63Ас3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0531",
+  "name": "Синельниковская улица",
+  "address": "Синельниковская улица",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0532",
+  "name": "Складочная улица, 6к2",
+  "address": "Складочная улица, 6к2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0533",
+  "name": "Сходненский тупик, вл.16-20",
+  "address": "Сходненский тупик, вл.16-20",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0534",
+  "name": "Сходненский тупик. вл. 1.",
+  "address": "Сходненский тупик. вл. 1.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0535",
+  "name": "Сиреневый Парк (МФЦ)",
+  "address": "Тагильская улица, 4с15",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0536",
+  "name": "Скайбург",
+  "address": "Территория инновационного центра Сколково",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0537",
+  "name": "Территория спортивного комплекса \"Лужники\"",
+  "address": "Территория спортивного комплекса \"Лужники\"",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0538",
+  "name": "МФК на Тушинской",
+  "address": "Тушинская улица, 24с12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0539",
+  "name": "ул. Молдавская, участок 1",
+  "address": "ул. Молдавская, участок 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0540",
+  "name": "ул. Перовская, вл. 66Е",
+  "address": "ул. Перовская, вл. 66Е",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0541",
+  "name": "Level Work Воронцовская",
+  "address": "улица Академика Семенихина, земельный участок 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0542",
+  "name": "AFI Park «Воронцовский»",
+  "address": "улица Академика Челомея, 7Ас2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0543",
+  "name": "з/у Алексея Свиридова, 5А",
+  "address": "улица Алексея Свиридова, 9с3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0544",
+  "name": "улица Вавилова, 21",
+  "address": "улица Вавилова, 21",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0545",
+  "name": "Crosswall Park Pobedy",
+  "address": "улица Неверовского, 10с3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0546",
+  "name": "Нижние Мневники",
+  "address": "улица Нижние Мнёвники, 36с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0547",
+  "name": "улица Подольская, владение 22",
+  "address": "улица Подольская, владение 22",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0548",
+  "name": "БЦ Frame Workplace",
+  "address": "улица Пресненский Вал, 27",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0549",
+  "name": "улица Радио",
+  "address": "улица Радио",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0550",
+  "name": "КРТ Огродный проезд",
+  "address": "улица Руставели, 14",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0551",
+  "name": "улица Серёгина, 5",
+  "address": "улица Серёгина, 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0552",
+  "name": "улица Улофа Пальме, вл. 5",
+  "address": "улица Улофа Пальме, вл. 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0553",
+  "name": "Дом-самолет",
+  "address": "Фрунзенская набережная, 50",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0554",
+  "name": "Ходынская улица, вл. 2, стр. 9",
+  "address": "Ходынская улица, вл. 2, стр. 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0555",
+  "name": "Застройка завода Медведково",
+  "address": "Чермянский проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0556",
+  "name": "з/у Энтузиастов, 12",
+  "address": "ш. Энтузиастов,д. 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0557",
+  "name": "шоссе Энтузиастов, вл. 12",
+  "address": "шоссе Энтузиастов, вл. 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0558",
+  "name": "Квартал Адмирал",
+  "address": "Шоссейная улица, вл. 4А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0559",
+  "name": "Пятницкая ул., вл. 40",
+  "address": "Пятницкая ул., вл. 40",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0560",
+  "name": "КРТ на магистральных улицах",
+  "address": "Хорошёвское шоссе, 39Бс1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0561",
+  "name": "Технопарк Ростех",
+  "address": "Старопетровский проезд",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0562",
+  "name": "БЦ на Космонавта Волкова",
+  "address": "улица Космонавта Волкова, 2с4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0563",
+  "name": "кржижановского",
+  "address": "улица Кржижановского, Академический район, Москва, Центральный федеральный округ, 117218, Россия",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0565",
+  "name": "корабельная",
+  "address": "Корабельная улица, Жилой комплекс «Ривер Парк», Коломенка, район Нагатинский Затон, Москва, Центральный федеральный округ, 115142, Россия",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0567",
+  "name": "Лофт-квартал в Сколково",
+  "address": "ул. Зворыкина, д. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0575",
+  "name": "ЗИЛ В",
+  "address": "Автозаводская улица,23,стр. 24",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0576",
+  "name": "STONE Towers (Tower C)",
+  "address": "проезд Бумажный, д. 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0577",
+  "name": "Сатирикон",
+  "address": "Шереметьевская ул., д. 8а",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0578",
+  "name": "Astoriya II",
+  "address": "Khimki, Transportny Pr, 19",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0588",
+  "name": "Новорязанская ул., 8A, стр. 2",
+  "address": "Новорязанская ул., 8A, стр. 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0600",
+  "name": "Орбитал",
+  "address": "3-я Магистральная ул., 10",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0602",
+  "name": "KR Properties",
+  "address": "Магистральный пер., 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0603",
+  "name": "2-й Силикатный, 8",
+  "address": "2-й Силикатный проезд, район Хорошёво-Мнёвники, Москва, Центральный федеральный округ, 123290, Россия",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0604",
+  "name": "iCity",
+  "address": "проезд Шмитовский, д. 37, стр 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0607",
+  "name": "Red Town",
+  "address": "ул. 2-я Звенигородская, д. 13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0613",
+  "name": "Абсолют Союз",
+  "address": "Лужнецкая наб, д. 2/4, стр. 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0619",
+  "name": "Алексея Свиридова, 9/3",
+  "address": "Алексея Свиридова ул., д. 9, стр. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0621",
+  "name": "Klever Park",
+  "address": "Новая Москва, Мамыри, 46",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0626",
+  "name": "Slava (5 очередь)",
+  "address": "1-я улица Ямского поля, вл. 8",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0630",
+  "name": "Офисный центр Новая Ипатовка",
+  "address": "ул. Новая Ипатовка, вл. 23А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0632",
+  "name": "Ростех-Сити (2-я оч.)",
+  "address": "ул. Летная, 95Б",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0633",
+  "name": "МФК Парк Победы",
+  "address": "ул. Барклая, 1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0634",
+  "name": "Capital Towers (Park Tower)",
+  "address": "Краснопресненская наб., 14Ак2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0641",
+  "name": "МФК на Малой Юшуньской",
+  "address": "Малая Юшуньская ул., 1к2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0642",
+  "name": "ул. Ермакова Роща, 7",
+  "address": "ул. Ермакова Роща, 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0643",
+  "name": "ТПУ Петрово-Разумовская",
+  "address": "Валаамская ул.",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0644",
+  "name": "Офисно-спортивный комплекс",
+  "address": "ул. Нижние Мнёвники",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0646",
+  "name": "Деловой Квартал Light City",
+  "address": "2-я Магистральная ул., 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0647",
+  "name": "Фили",
+  "address": "Промышленный пр-д, 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0648",
+  "name": "SLAVA (4-я оч.)",
+  "address": "1-я ул. Ямского Поля, 8с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0653",
+  "name": "SLAVA (5-я оч.)",
+  "address": "1-я ул. Ямского Поля, 8с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0654",
+  "name": "STONE Савёловская (Башня 1 и Башня 2)",
+  "address": "ул. Двинцев, вл. 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0658",
+  "name": "Общественно-деловой комплекс на Молдавской",
+  "address": "Молдавская ул., вл. 3-5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0659",
+  "name": "БЦ на Дубнинской",
+  "address": "ул. Дубнинская, 83с5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0661",
+  "name": "БЦ Смольный (II очередь)",
+  "address": "Смольная ул., 14с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0663",
+  "name": "Link (Башня NEO и Башня RUNE)",
+  "address": "ул. Рябиновая, 44",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0664",
+  "name": "МФК Веткина",
+  "address": "ул. Веткина, вл.2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0665",
+  "name": "БЦ на 1-ой ул. Ямского Поля, вл. 17",
+  "address": "1-я ул. Ямского Поля, вл. 17",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0669",
+  "name": "STONE Ленинский (Башня L и Башня S)",
+  "address": "ул. Вавилова, вл. 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0671",
+  "name": "МФК Центральный Телеграф",
+  "address": "Тверская ул., 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0674",
+  "name": "Мангазея на Тульской",
+  "address": "Большая Тульская ул., 10с5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0676",
+  "name": "ТПУ Рязанская",
+  "address": "Нижегородский район",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0677",
+  "name": "МФК АРМА (фаза II)",
+  "address": "Нижний Сусальный пер., 5Ас2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0679",
+  "name": "Деловой Центр Ликова",
+  "address": "Внуково, квартал 30",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0680",
+  "name": "GloraX Business Римская",
+  "address": "Перовский пр-д, вл. 54",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0684",
+  "name": "МФК Миклухо-Маклая",
+  "address": "ул. Миклухо-Маклая, 16/10",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0686",
+  "name": "Мануфактура Строгино",
+  "address": "ул. Маршала Прошлякова, 26с2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0688",
+  "name": "Многофункциональный офисный комплекс",
+  "address": "ш. Энтузиастов. вл. 12",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0689",
+  "name": "PORTA",
+  "address": "Заречная ул., 2/1с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0692",
+  "name": "Kobzon City (K-City) (II очередь)",
+  "address": "ул. Бауманская, 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0695",
+  "name": "Парк Легенд (корпус 3)",
+  "address": "Автозаводская ул., 23Ак2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0699",
+  "name": "КРТ на Дубининской",
+  "address": "ул. Дубининская, вл. 71",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0700",
+  "name": "Офисный комплекс на Зацепа 21",
+  "address": "ул. Зацепа, 21",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0701",
+  "name": "БЦ Мещерский",
+  "address": "Боровское ш., 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0702",
+  "name": "Botanica Plaza",
+  "address": "1-я ул. Леонова, 18",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0704",
+  "name": "N’ICE TOWER",
+  "address": "Автомобильный пр-д, 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0705",
+  "name": "БЦ Valtri",
+  "address": "ул. Грузинский Вал, 3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0706",
+  "name": "GRANARD Белорусская",
+  "address": "1-я ул. Ямского Поля, вл. 30",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0707",
+  "name": "ООО Марьина роща",
+  "address": "2-я Ямская ул., 9",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0708",
+  "name": "Родина Переделкино",
+  "address": "Боровское ш., вл. 51",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0709",
+  "name": "МФК Юг",
+  "address": "2-й Хорошевский проезд, вл. 7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0711",
+  "name": "Парк Легенд (корпус 1)",
+  "address": "Автозаводская ул., 23Ак2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0717",
+  "name": "NEVSKY PLAZA",
+  "address": "Выборгская ул., 18с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0718",
+  "name": "БЦ на 2-ой Магистральной, 7А",
+  "address": "2-я Магистральная ул., 7А",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0719",
+  "name": "GEOLOG 2",
+  "address": "ул. Обручева, вл. 23",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0720",
+  "name": "Деловой центр от West Wind Group",
+  "address": "ул. Неверовского",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0721",
+  "name": "Корпоративный центр Сибур",
+  "address": "ул. Большая Якиманка, 2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0726",
+  "name": "Северный порт",
+  "address": "Ленинградское шоссе, 63с7",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0727",
+  "name": "Башня Рябов (Рябовская Мануфактура)",
+  "address": "Холодильный пер., 3к1с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0729",
+  "name": "Fili Centre",
+  "address": "Промышленный пр-д, 5",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0731",
+  "name": "Башня Власов (Рябовская Мануфактура)",
+  "address": "Холодильный пер., 3с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0733",
+  "name": "АФИ Галерея",
+  "address": "Тверская Застава пл., 4",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0734",
+  "name": "Фактория",
+  "address": "Вятская ул., 27с11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0736",
+  "name": "Kobzon City (K-City) (I очередь)",
+  "address": "ул. Бауманская, 11",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0737",
+  "name": "GEOLOG",
+  "address": "ул. Обручева, 23к2с3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0739",
+  "name": "БЦ на 2-м Силикатном пр-д, вл.13",
+  "address": "2-й Силикатный пр-д, вл.13",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0740",
+  "name": "Деловой Квартал Сколково Парк 5",
+  "address": "Сколковское ш., вл. 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0741",
+  "name": "Деловой Квартал Сколково Парк 1",
+  "address": "Сколковское ш., вл. 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0742",
+  "name": "Деловой Квартал Сколково Парк 3",
+  "address": "Сколковское ш., вл. 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0743",
+  "name": "Деловой Квартал Сколково Парк 2",
+  "address": "Сколковское ш., вл. 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0744",
+  "name": "Деловой Квартал Сколково Парк 4",
+  "address": "Сколковское ш., вл. 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0746",
+  "name": "Деловой Квартал Сколково Парк 6",
+  "address": "Сколковское ш., вл. 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0748",
+  "name": "Парк Легенд (корпус 2)",
+  "address": "Автозаводская ул., 23Ак2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0749",
+  "name": "БЦ на Сущевском валу",
+  "address": "ул. Сущевский Вал, 43",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0752",
+  "name": "QOOB (Корпус B)",
+  "address": "ул. Алексея Свиридова, вл. 17",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0756",
+  "name": "QOOB (Корпус Q)",
+  "address": "ул. Алексея Свиридова, вл. 17",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0757",
+  "name": "БЦ на Колпачном пер., 9Ас1",
+  "address": "Колпачный пер., 9Ас1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0766",
+  "name": "БЦ на Кржижановского",
+  "address": "ул. Кржижановского, 13к3",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0773",
+  "name": "Нега",
+  "address": "Хохловский пер., 13с1",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0778",
+  "name": "Парк Легенд (корпус 4)",
+  "address": "Автозаводская ул., 23Ак2",
+  "confidence": "Низкий",
+  "on_map": true,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0143",
+  "name": "Деловой комплекс на территории грузового двора \"Москва-Товарная-рязанская\"",
+  "address": "г. Москва, Спартаковская площадь, 1/7с16",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0146",
+  "name": "Офисно-складской комплекс на 60-летия Октября",
+  "address": "г. Москва, проспект 60-летия Октября, 11Ас5",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0240",
+  "name": "БЦ Artel",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0241",
+  "name": "БЦ MR 1",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0242",
+  "name": "БЦ MR 2",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0244",
+  "name": "БЦ Springs",
+  "address": "Москва, ул. Малая Филёвская, 46",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0245",
+  "name": "БЦ Unikey",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0246",
+  "name": "БЦ А101",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0255",
+  "name": "БЦ Крост",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0256",
+  "name": "БЦ ЛСР",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0264",
+  "name": "БЦ на Текстильщиков",
+  "address": "г. Москва, 8-я Текстильщиков ул.,",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0271",
+  "name": "БЦ Самолет",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0272",
+  "name": "БЦ Старт",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0296",
+  "name": "Крост АДЦ Коммунарка",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0297",
+  "name": "КРТ Теплый стан",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0397",
+  "name": "Донстрой в Раменках",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0469",
+  "name": "Кунцево, 59 км МКАД",
+  "address": "Кунцево, 59 км МКАД",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0564",
+  "name": "сколково",
+  "address": null,
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0579",
+  "name": "Lucky, bldg 2",
+  "address": "2nd Zvenigorodskaya, 28",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0598",
+  "name": "4-ая Магистральная, вл. 7",
+  "address": "4-ая Магистральная, вл. 7",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0599",
+  "name": "2-ая Магистральная, вл. 3, 16",
+  "address": "2-ая Магистральная, вл. 3, 16",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0605",
+  "name": "1-я Магистральная, вл. 29",
+  "address": "1-я Магистральная, вл. 29",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0625",
+  "name": "Южный Речной Порт",
+  "address": "Проспект Андропова,д.11 корп. 4,5,6,7",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0627",
+  "name": "Национальный космический центр",
+  "address": "г. Москва, ул. Большая Филевская, 20",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0628",
+  "name": "Общественно-деловой комплекс",
+  "address": "Кавказский б-р, вл. 54",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0629",
+  "name": "Деловой Центр м. Университет",
+  "address": "пр-кт Вернадского, вл6-Вс1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0631",
+  "name": "ТПУ Минская",
+  "address": "м. Минская",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0635",
+  "name": "Башня в Сити",
+  "address": "Краснопресненская наб., вл. 16/1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0636",
+  "name": "Многофункциональный комплекс ЗИЛ",
+  "address": "ул. Автозаводская, 23к15, стр. 85, стр. 310",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0637",
+  "name": "БЦ на Войковской",
+  "address": "Старопетровский пр-д, 7А",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0638",
+  "name": "БЦ на Шмитовском пр-д, вл. 32, 32А",
+  "address": "Шмитовский пр-д, вл. 32, 32А",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0639",
+  "name": "БЦ на Ленинградском пр-кте, 37",
+  "address": "Ленинградский пр-кт, 37",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0640",
+  "name": "ЗИЛАРТ GRAND (Дом 18)",
+  "address": "ул Автозаводская, вл. 23/2",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0645",
+  "name": "Авиапарк Офисы",
+  "address": "Ходынский б-р, 4",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0649",
+  "name": "iCITY (Башня Time)",
+  "address": "Шмитовский пр-д, 37",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0651",
+  "name": "Многофункциональный офисный центр",
+  "address": "Ленинградское ш., уч. 63А/1А",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0652",
+  "name": "Rublevo Business Park",
+  "address": "МКАД, 64-й километр, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0655",
+  "name": "iCITY (Башня Space)",
+  "address": "Шмитовский пр-д, 37",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0657",
+  "name": "Технопарк ЗИЛ А",
+  "address": "Автозаводская ул., 23с85",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0660",
+  "name": "Медиацентр НТВ",
+  "address": "Новомосковская ул., вл. 18-22",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0668",
+  "name": "Sydney City",
+  "address": "улица Шеногина, вл2/11",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0670",
+  "name": "Деловой комплекс Шмитовский 34",
+  "address": "Шмитовский пр-д, вл. 34",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0672",
+  "name": "БЦ на Нагатинской набережной",
+  "address": "Варшавское ш., 37Гс7",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0673",
+  "name": "Офисный комплекс Кожуховский",
+  "address": "2-й Кожуховский пр-д, д.29, к2с16",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0681",
+  "name": "Деловое пространство в Савеловском районе (по программе КРТ)",
+  "address": "Вятская ул., вл. 41А",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0691",
+  "name": "Бизнес-квартал Прокшино (Башня 2) (2-я оч.)",
+  "address": "пос. Сосенское, БК Прокшино",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0693",
+  "name": "БЦ Жуков пр-д, 19",
+  "address": "Жуков пр-д, 19",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0694",
+  "name": "Бизнес-квартал Прокшино (Башня 1) (1-я оч.)",
+  "address": "пос. Сосенское, БК Прокшино",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0703",
+  "name": "Upside Kuntsevo",
+  "address": "Западный административный округ, район Кунцево, 48-й квартал",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0710",
+  "name": "Бизнес-квартал Прокшино (Башня 3) (3-я оч.)",
+  "address": "БК Прокшино, пос. Сосенское, 5",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0712",
+  "name": "Технопарк ЗИЛ Б",
+  "address": "пр-кт Лихачёва, 5",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0713",
+  "name": "Ривер Парк Коломенское (корпус 14, секция 1)",
+  "address": "ул. Речников, зу 7/7",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0714",
+  "name": "Ривер Парк Коломенское (корпус 14, секция 2)",
+  "address": "ул. Речников, зу 7/7",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0723",
+  "name": "Ривер Парк Коломенское (корпус 7, секция 2)",
+  "address": "ул. Речников, зу 7/8",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0724",
+  "name": "Ривер Парк Коломенское (корпус 7, секция 1)",
+  "address": "ул. Речников, зу 7/8",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0725",
+  "name": "МФК Электролитный",
+  "address": "Электролитный пр-д, вл. 3",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0728",
+  "name": "Капитолий (фаза II)",
+  "address": "пр-кт Вернадского, 6В",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0738",
+  "name": "Актион на 1905 года",
+  "address": "Ходынская ул., з/у 2/9",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0747",
+  "name": "Gate 1",
+  "address": "пр-кт 60-летия Октября, 5А",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0750",
+  "name": "Лофт Квартал Сколково (корпус 2)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0751",
+  "name": "Лофт Квартал Сколково (корпус 9)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0753",
+  "name": "Ривер Парк Коломенское (корпус 12, секции 1, 2)",
+  "address": "ул. Речников, зу 7/3",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0754",
+  "name": "Лофт Квартал Сколково (корпус 5)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0755",
+  "name": "Лофт Квартал Сколково (корпус 1)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0760",
+  "name": "Лофт Квартал Сколково (корпус 3)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0761",
+  "name": "Лофт Квартал Сколково (корпус 6)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0764",
+  "name": "Лофт Квартал Сколково (корпус 8)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0765",
+  "name": "Лофт Квартал Сколково (корпус 4)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0767",
+  "name": "Лофт Квартал Сколково (корпус 10)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ },
+ {
+  "id": "OBJ-0768",
+  "name": "БЦ на Ленинградском пр-кте, 37А",
+  "address": "Ленинградский пр-кт, 37А",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0769",
+  "name": "Большевик 2",
+  "address": "Ленинградский пр-кт, 15с21",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0770",
+  "name": "Деловой квартал ЮПорт (корпус 7)",
+  "address": "пр-кт Андропова, 11к7",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0771",
+  "name": "Деловой квартал ЮПорт (корпус 5)",
+  "address": "пр-кт Андропова, 11к5",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0772",
+  "name": "Деловой квартал ЮПорт (корпус 1)",
+  "address": "пр-кт Андропова, 11к1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0774",
+  "name": "Деловой квартал ЮПорт (корпус 6)",
+  "address": "пр-кт Андропова, 11к6",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0775",
+  "name": "Деловой квартал ЮПорт (корпус 2)",
+  "address": "пр-кт Андропова, 11к2",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0776",
+  "name": "Деловой квартал ЮПорт (корпус 4)",
+  "address": "пр-кт Андропова, 11к4",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0777",
+  "name": "БЦ на ул. Гончарная д.20/1c2",
+  "address": "ул. Гончарная, 20/1c2",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": null
+ },
+ {
+  "id": "OBJ-0779",
+  "name": "Лофт Квартал Сколково (корпус 7)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "confidence": "Низкий",
+  "on_map": false,
+  "needs_review": true
+ }
+]

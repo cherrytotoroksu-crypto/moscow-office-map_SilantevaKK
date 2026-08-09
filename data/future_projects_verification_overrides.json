@@ -1,0 +1,697 @@
+{
+  "OBJ-0244": {
+    "address": "Москва, ул. Малая Филёвская, 46",
+    "developer": "ООО СЗ «Спрингс» / UNIQ Development",
+    "append_sources": [
+      "https://springs.house/",
+      "https://springs.house/contacts"
+    ],
+    "verification_status": "Кандидат на исключение из офисного слоя: официальный сайт описывает Springs как жилой клубный дом на 150 резиденций, а не бизнес-центр",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "Проверить исходную строку: вероятно, жилой проект ошибочно классифицирован как БЦ"
+  },
+  "OBJ-0574": {
+    "address": "Москва, Раменский бульвар, 1",
+    "commission_year": 2023,
+    "status": "Сданный",
+    "append_sources": [
+      "https://stroi.mos.ru/nauchnaia-dolina-dlia-mgu",
+      "https://transport.mos.ru/mostrans/all_news/113404",
+      "https://msu.ru/press/smiaboutmsu/v-nauchno-tekhnologicheskoy-doline-mgu-otkrylsya-novyy-klaster-obrazovatelnyy.html",
+      "https://2gis.ru/moscow/firm/70000001069439855",
+      "https://www.m24.ru/news/gorod/29092022/506268"
+    ],
+    "verification_status": "Адрес и ввод в 2023 году подтверждены официальными источниками; координата здания подтверждена двумя независимыми картографическими источниками (OSM-контур и 2ГИС)",
+    "confidence": "Средний",
+    "needs_review": false,
+    "review_notes": "Исходный адрес «Vernadskogo Pr, 8» заменён на официальный адрес кластера «Ломоносов». Здание 10-этажное, ~65 тыс. м²; отдельная проверка площади не проводилась",
+    "lat": 55.692084,
+    "lng": 37.516467,
+    "coordinates_source": "Центр контура здания OSM «Кластер Ломоносов», Раменский бульвар, 1 (Nominatim, category=building); независимо сверено с карточкой 2ГИС того же объекта (55.691967, 37.515632) — расхождение ~54 м, в пределах одного здания"
+  },
+  "OBJ-0601": {
+    "address": "Москва, Промышленный проезд, вл. 5",
+    "developer": "ОПТ Фили Центр",
+    "lat": 55.741059,
+    "lng": 37.509505,
+    "commission_year": 2024,
+    "status": "Сданный",
+    "append_sources": [
+      "https://filicentr.ru/"
+    ],
+    "verification_status": "Адрес подтверждён сайтом объекта; координаты и характеристики сверены с принятым объектом Fili Centre в реестре продаж Q2 2026",
+    "confidence": "Средний",
+    "coordinates_source": "data/buildings_202606.json:Fili Centre",
+    "needs_review": false,
+    "review_notes": "Сопоставление по уникальному адресу и названию"
+  },
+  "OBJ-0016": {
+    "address": "Москва, 2-я Звенигородская ул., 12А",
+    "developer": "Vesper",
+    "gba": 5731,
+    "gla": 3942,
+    "commission_year": 2023,
+    "status": "Сданный",
+    "append_sources": [
+      "https://www.vespermoscow.com/news/ofisnoe_zdanie_na_territorii_kvartala_lucky_vvedeno_v_ekspluatatsiyu/",
+      "https://lucky.ru/contacts/"
+    ],
+    "verification_status": "Каноническая карточка Lucky, корпус 6; адрес, ввод и площади подтверждены источниками Vesper/Lucky",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "OBJ-0624 исключён как англоязычный дубль этой карточки"
+  },
+  "OBJ-0405": {
+    "name": "БЦ «Шелепиха»",
+    "address": "Москва, ул. 2-я Магистральная, земельный участок 7А/1",
+    "developer": "ООО «ЭКТО»",
+    "gba": 17974.73,
+    "lat": 55.759587,
+    "lng": 37.525738,
+    "append_sources": [
+      "https://mosarchawards.ru/nominees/luchshee_arhitekturnogradostroitelnoe_reshenie_administrativnoofisnogo_obekta_2025/biznescentr_shelepiha_931/",
+      "https://www.mos.ru/upload/documents/files/1550/Aktsprilojeniyami_2-yaMagistralnaya.pdf",
+      "https://archi.ru/projects/russia/19201/biznes-centr-shelepikha"
+    ],
+    "verification_status": "Адрес, заказчик и площадь подтверждены материалами Москомархитектуры; исходная точка исправлена по координате карточки проекта",
+    "confidence": "Средний",
+    "coordinates_source": "archi.ru/projects/russia/19201; адрес подтверждён mos.ru",
+    "needs_review": true,
+    "review_notes": "Старая точка 55.761173, 37.528271 была смещена примерно на 250 м; желательно финально сверить контур участка 77:01:0004044:3272"
+  },
+  "OBJ-0624": {
+    "duplicate_of": "OBJ-0016",
+    "matched_existing_name": "Lucky (корпус 6)",
+    "verification_status": "Точный дубль по корпусу, году, девелоперу и площади; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://www.vespermoscow.com/news/ofisnoe_zdanie_na_territorii_kvartala_lucky_vvedeno_v_ekspluatatsiyu/"
+    ]
+  },
+  "OBJ-0597": {
+    "duplicate_of": "OBJ-0405",
+    "matched_existing_name": "БЦ «Шелепиха»",
+    "verification_status": "Дубль по уникальному адресу земельного участка; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://www.mos.ru/upload/documents/files/1550/Aktsprilojeniyami_2-yaMagistralnaya.pdf"
+    ]
+  },
+  "OBJ-0682": {
+    "duplicate_of": "OBJ-0063",
+    "matched_existing_name": "На Полесском",
+    "verification_status": "Дубль по нормализованному названию и адресу Полесский проезд, 16 стр. 2; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://krt.mos.ru/news/obshchestvenno_delovoy_kompleks_poyavitsya_okolo_stantsii_metro_shchukinskaya/"
+    ],
+    "review_notes": "В исходных строках расходятся статус и площади; значения не переносились автоматически в каноническую карточку"
+  },
+  "OBJ-0685": {
+    "duplicate_of": "OBJ-0249",
+    "matched_existing_name": "БЦ в Лужниках",
+    "verification_status": "Дубль по точному адресу участка и названию; исключён из слоя",
+    "confidence": "Высокий"
+  },
+  "OBJ-0762": {
+    "duplicate_of": "OBJ-0166",
+    "matched_existing_name": "БЦ WEST PIER",
+    "verification_status": "Дубль по адресу, названию и GLA; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://westpier.ru/"
+    ]
+  },
+  "OBJ-0675": {
+    "canonical_name": "AFI2B Тагильская (Сиреневый парк)",
+    "lat": 55.818103,
+    "lng": 37.752868,
+    "commission_year": 2026,
+    "status": "Строящийся",
+    "matched_existing_id": "108",
+    "matched_existing_name": "AFI2B Tagilskaya",
+    "coordinates_source": "data/all_projects_layer.json:108",
+    "append_sources": [
+      "https://afi2b.ru/",
+      "https://afi-development.com/project/afi2b-tagilskaya"
+    ],
+    "verification_status": "Идентифицирован как офисная часть проекта «Сиреневый парк»; координаты восстановлены из принятого реестра",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0678": {
+    "lat": 55.753945,
+    "lng": 37.456699,
+    "status": "Строящийся",
+    "matched_existing_id": "189",
+    "matched_existing_name": "STONE Мневники III",
+    "coordinates_source": "data/all_projects_layer.json:189",
+    "append_sources": [
+      "https://stone.ru/commercial/mnevniki3"
+    ],
+    "verification_status": "Совпадение по уникальному названию проекта; координаты восстановлены из принятого реестра",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0683": {
+    "lat": 55.808399,
+    "lng": 37.575947,
+    "status": "Строящийся",
+    "matched_existing_id": "177",
+    "matched_existing_name": "STONE Дмитровская",
+    "coordinates_source": "data/all_projects_layer.json:177; подтверждено квартальными реестрами",
+    "append_sources": [
+      "https://stone.ru/commercial/dmitrovskaya"
+    ],
+    "verification_status": "Точное совпадение по названию; расхождение исторических точек менее 10 м",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0690": {
+    "lat": 55.628458,
+    "lng": 37.307163,
+    "commission_year": 2025,
+    "status": "Сданный",
+    "matched_existing_id": "221",
+    "matched_existing_name": "Бизнес-парк Переделкино",
+    "coordinates_source": "data/all_projects_layer.json:221",
+    "append_sources": [
+      "https://peredelkino-park.ru/",
+      "https://peredelkino-park.ru/novosti/polucheno-razreshenie-na-vvod-v-ekspluatatsiyu-biznes-parka-peredelkino"
+    ],
+    "verification_status": "Точное совпадение; официальный сайт подтверждает ввод в эксплуатацию в декабре 2025 года",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0697": {
+    "lat": 55.793075,
+    "lng": 37.541796,
+    "status": "Замороженный",
+    "matched_existing_id": "13",
+    "matched_existing_name": "Fly Tower",
+    "coordinates_source": "data/all_projects_layer.json:13; квартальные реестры 2023–2024",
+    "append_sources": [
+      "https://ibcrealestate.ru/upload/iblock/04e/enarpmtych8mv9uecycs89x1m8ybaxol/IBC_Prezentatsiya_Leningradskiy-koridor_versiya-dlya-sayta_-08.12.2023.pdf"
+    ],
+    "verification_status": "Координаты восстановлены по устойчивому совпадению в реестрах; статус «Замороженный» сохранён по отраслевому отчёту",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Нужен более свежий официальный источник о возобновлении или окончательной остановке проекта"
+  },
+  "OBJ-0698": {
+    "lat": 55.79053,
+    "lng": 37.585665,
+    "commission_year": 2026,
+    "status": "Строящийся",
+    "matched_existing_id": "89",
+    "matched_existing_name": "STONE Towers. Tower D",
+    "coordinates_source": "data/all_projects_layer.json:89",
+    "append_sources": [
+      "https://stone.ru/catalog/offices/towerdcopy/d808",
+      "https://stone.ru/presscenter/stone-towers-pobeditel-premii-best-office-awards-2025"
+    ],
+    "verification_status": "Башня D сопоставлена отдельно от других башен комплекса; срок и стройка подтверждены STONE",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0715": {
+    "lat": 55.753594,
+    "lng": 37.455796,
+    "status": "Строящийся",
+    "matched_existing_id": "185",
+    "matched_existing_name": "STONE Мневники I",
+    "coordinates_source": "data/all_projects_layer.json:185",
+    "append_sources": [
+      "https://stone.ru/commercial/mnevniki"
+    ],
+    "verification_status": "Корпус I сопоставлен отдельно от III; координаты восстановлены из принятого реестра",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0716": {
+    "lat": 55.788834,
+    "lng": 37.381783,
+    "status": "Строящийся",
+    "matched_existing_id": "236",
+    "matched_existing_name": "МФК Строгино",
+    "coordinates_source": "data/all_projects_layer.json:236",
+    "append_sources": [
+      "https://stroginopro.ru/"
+    ],
+    "verification_status": "Strogino by PARADE.Pro сопоставлен с МФК «Строгино» по проекту и локации",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0745": {
+    "lat": 55.704423,
+    "lng": 37.572207,
+    "status": "Сданный",
+    "matched_existing_id": "14",
+    "matched_existing_name": "Lunar",
+    "coordinates_source": "data/all_projects_layer.json:14",
+    "append_sources": [
+      "https://hutton.ru/mobile/offices/lunar"
+    ],
+    "verification_status": "Module B подтверждён как офисный корпус LUNAR; координаты восстановлены из принятого реестра",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0763": {
+    "lat": 55.749324,
+    "lng": 37.5588,
+    "commission_year": 2026,
+    "status": "Строящийся",
+    "matched_existing_id": "271",
+    "matched_existing_name": "Бадаевский Западная лента",
+    "coordinates_source": "data/all_projects_layer.json:271",
+    "append_sources": [
+      "https://badaevsky.com/project/news/stroitelnaya-gotovnost-zapadnoj-lenty-zhilogo-kompleksa-badaevskij-na-naberezhnoj-tarasa-shevchenko-sostavlyaet-85/",
+      "https://www.capitalgroup.ru/ru/objects/136"
+    ],
+    "verification_status": "Точное совпадение; текущая стройка и срок 2026 подтверждены официальными страницами проекта",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0113": {
+    "developer": "MR Office",
+    "lat": 55.774558,
+    "lng": 37.507519,
+    "commission_year": 2028,
+    "status": "Строящийся",
+    "coordinates_source": "официальная ссылка «Перейти в карты» на jois.moscow/contacts",
+    "append_sources": [
+      "https://jois.moscow/contacts",
+      "https://yandex.ru/maps/213/moscow/house/3_y_silikatny_proyezd_10/"
+    ],
+    "verification_status": "Каноническая карточка JOIS; адрес и точка подтверждены официальным сайтом проекта, офисные башни CREDO и MAST относятся к этому комплексу",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "OBJ-0650 исключён как более подробное повторное описание того же проекта"
+  },
+  "OBJ-0650": {
+    "duplicate_of": "OBJ-0113",
+    "matched_existing_name": "JOIS",
+    "verification_status": "Дубль по уникальному адресу, девелоперу, площадям и составу башен CREDO/MAST; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://jois.moscow/contacts"
+    ]
+  },
+  "OBJ-0115": {
+    "name": "STONE Ходынка 2",
+    "developer": "STONE",
+    "gba": 87000,
+    "lat": 55.789255,
+    "lng": 37.524964,
+    "commission_year": 2028,
+    "status": "Строящийся",
+    "coordinates_source": "Archi.ru: карточка проекта с координатами; идентичность и срок подтверждены официальным сайтом STONE",
+    "append_sources": [
+      "https://stone.ru/commercial/hodinka2",
+      "https://archi.ru/projects/russia/19108/stone-hodynka"
+    ],
+    "verification_status": "Каноническая карточка трёх башен G1–G3; объект активно строится, готовность заявлена на 2028 год",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Координата исправлена на точку карточки проекта; старая точка была смещена внутри квартала"
+  },
+  "OBJ-0656": {
+    "duplicate_of": "OBJ-0115",
+    "matched_existing_name": "STONE Ходынка 2",
+    "verification_status": "Точный дубль по адресу, девелоперу и составу башен G1–G3; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://stone.ru/commercial/hodinka2"
+    ]
+  },
+  "OBJ-0262": {
+    "name": "БЦ «Варшавская»",
+    "developer": "PIONEER",
+    "status": "Строящийся",
+    "matched_existing_name": "БЦ Варшавская",
+    "coordinates_source": "data/all_projects_layer.json:224; адрес подтверждён карточкой объекта",
+    "append_sources": [
+      "https://bc-varshavskaya.ru/",
+      "https://fortexgroup.ru/sPDF/bc/16437/",
+      "https://office-news.ru/OFFICE_NEWS/gk-pioner/"
+    ],
+    "verification_status": "Каноническая карточка объекта по адресу Каширский проезд, 25/2; повторная строка OBJ-0662 исключена",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Официальный сайт bc-varshavskaya.ru отдаёт 403 автоматической проверке, страница проекта на pioneer.ru — 404. Отдельно ОТКЛОНЕНО ложное совпадение: сообщение «PIONEER начал передачу офисов в корпусе, сданном в сентябре 2025» относится к бизнес-парку OSTANKINO у метро «Бутырская», а не к «Варшавской» (проверено по office-news.ru, публикация 24.02.2026). Разрешительной документации по Каширскому проезду, 25/2 не найдено — статус «Строящийся» и срок 2028 остаются непроверенными"
+  },
+  "OBJ-0662": {
+    "duplicate_of": "OBJ-0262",
+    "matched_existing_name": "БЦ «Варшавская»",
+    "verification_status": "Дубль по точному адресу Каширский проезд, 25/2 и характеристикам проекта; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://bc-varshavskaya.ru/",
+      "https://fortexgroup.ru/sPDF/bc/16437/"
+    ]
+  },
+  "OBJ-0116": {
+    "name": "STONE Римская",
+    "address": "Москва, ул. Золоторожский Вал, вл. 11А/1",
+    "developer": "STONE",
+    "gba": 72100,
+    "lat": 55.748916,
+    "lng": 37.68313,
+    "commission_year": 2028,
+    "status": "Строящийся",
+    "coordinates_source": "официальная ссылка «Маршрут» на странице STONE Римская: 55.748916, 37.683130",
+    "append_sources": [
+      "https://stone.ru/commercial/rimskaya",
+      "https://stone.ru/presscenter/mos-ru-vydano-razreshenie-na-stroitelstvo-biznes-czentra-s-dvuhurovnevym-stilobatom-v-rajone-lefortovo",
+      "https://yandex.ru/maps/?rtext=~55.748916,37.683130&rtt=auto"
+    ],
+    "verification_status": "Каноническая карточка двух башен R1/R2; стройка и готовность 2028 подтверждены STONE, координата исправлена по официальному маршруту",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Прежние точки 55.748331,37.684039 и 55.747358,37.685494 заменены официальной точкой проекта"
+  },
+  "OBJ-0667": {
+    "duplicate_of": "OBJ-0116",
+    "matched_existing_name": "STONE Римская",
+    "verification_status": "Точный дубль канонической карточки двух башен R1/R2; исключён из слоя",
+    "confidence": "Высокий",
+    "append_sources": [
+      "https://stone.ru/commercial/rimskaya"
+    ]
+  },
+  "OBJ-0730": {
+    "lat": 55.815745,
+    "lng": 37.601727,
+    "status": "Сданный",
+    "matched_existing_id": "2gis:70030076642416234",
+    "matched_existing_name": "Огородный проезд, 16/1 ст6",
+    "coordinates_source": "2ГИС, карточка конкретного строения 6",
+    "append_sources": [
+      "https://2gis.ru/moscow/geo/70030076642416234",
+      "https://ostankino-bp.ru/news/ostankino-business-park-zavershena-peredacha-ofisov-v-korpuse-6"
+    ],
+    "verification_status": "Корпус 6 нанесён отдельно по карточке конкретного строения; завершение и передача офисов подтверждены PIONEER",
+    "confidence": "Высокий",
+    "needs_review": false
+  },
+  "OBJ-0732": {
+    "lat": 55.814955,
+    "lng": 37.602988,
+    "commission_year": 2025,
+    "status": "Сданный",
+    "matched_existing_id": "2gis:70030076675518949",
+    "matched_existing_name": "Огородный проезд, 16/1 ст1",
+    "coordinates_source": "2ГИС, карточка конкретного строения 1",
+    "append_sources": [
+      "https://2gis.ru/moscow/geo/70030076675518949",
+      "https://t.me/s/pioneergroupofcompanies?before=3010"
+    ],
+    "verification_status": "Корпус 1 нанесён отдельно; PIONEER сообщил о получении разрешения на ввод, после чего весь OSTANKINO BUSINESS PARK завершён",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Год 2025 подтверждается датировкой сообщения PIONEER и актуальными карточками продаж; передача помещений могла продолжаться в 2026 году"
+  },
+  "OBJ-0759": {
+    "name": "БЦ «Обсидиан»",
+    "address": "Москва, Хорошёвское шоссе, вл. 38А / ул. Авиаконструктора Микояна, 1",
+    "developer": "Business Club",
+    "gba": 10734,
+    "lat": 55.78124,
+    "lng": 37.53913,
+    "commission_year": 2026,
+    "status": "Сданный",
+    "coordinates_source": "официальный реестр адресных объектов mos.ru; дополнительная адресная сверка Nominatim в пределах 40 м",
+    "append_sources": [
+      "https://www.obsidian.moscow/",
+      "https://bncb.ru/company/news/v-rayone-khodynskogo-polya-zaversheno-stroitelstvo-bts-obsidian-pervogo-ofisnogo-tsentra-v-novom-del",
+      "https://bncb.ru/company/news/biznes-tsentr-obsidian-poluchil-razreshenie-na-vvod-v-ekspluatatsiyu",
+      "https://www.mos.ru/upload/documents/files/9349/1_Prilojenie2_ReestrMNO.pdf"
+    ],
+    "verification_status": "Отдельный проект Business Club: строительство завершено в 2025 году, разрешение на ввод получено в январе 2026 года; ошибочный матч с объектом Capital Group отклонён",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Не объединять с записью «Обсидиан (бывший BusinessClass Ходынка)» по координатам 55.788409,37.544117; это другая сущность. В источниках встречаются две площади 9 873 и 10 734 м², принято более позднее официальное значение Business Club"
+  },
+  "OBJ-0687": {
+    "append_sources": [
+      "https://stone.ru/presscenter/ria-novosti-kompaniya-abs-elektro-priobrela-dva-etazha-v-biznes-czentre-tower-b-v-sostave-stone-towers-1",
+      "https://2gis.ru/moscow/geo/70030076264881168/tab/reviews",
+      "https://of.ru/bc/11036"
+    ],
+    "verification_status": "Дубль башни B комплекса STONE Towers: совпадают уникальное имя башни, адрес (Бумажный пр-д, 19с2 / д. 19) и площадь 33 300 м² (в этой строке это GLA, в OBJ-0570 та же величина записана как общая площадь — расхождение колонок источника)",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Каноническая карточка — OBJ-0570; башни B и C оставлены раздельными, не сливать",
+    "duplicate_of": "OBJ-0570",
+    "matched_existing_name": "Stone Towers B"
+  },
+  "OBJ-0758": {
+    "append_sources": [
+      "https://stone.ru/presscenter/cre-zaversheny-prodazhi-ofisov-vo-vtoroj-ocheredi-kvartala-stone-towers",
+      "https://2gis.ru/moscow/geo/70030076264881168/tab/reviews"
+    ],
+    "verification_status": "Дубль башни C комплекса STONE Towers: совпадают уникальное имя башни и общая площадь 10 000 м²; открытые источники описывают Tower C как отдельный клубный БЦ площадью 10 тыс. м², введённый в 2024 году",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Каноническая карточка — OBJ-0576; башня C остаётся отдельной от башни B",
+    "duplicate_of": "OBJ-0576",
+    "matched_existing_name": "Stone Towers С"
+  },
+  "OBJ-0570": {
+    "name": "STONE Towers (Tower B)",
+    "address": "Москва, Бумажный проезд, 19с2",
+    "developer": "STONE",
+    "gba": 44200,
+    "gla": 33300,
+    "commission_year": 2024,
+    "status": "Сданный",
+    "lat": 55.789858,
+    "lng": 37.585881,
+    "matched_existing_name": "STONE Towers. Towers BC",
+    "coordinates_source": "data/buildings_202509.json…202603.json: «STONE Towers. Towers BC», адрес Бумажный проезд, 19c2 — тот же номер строения, что у башни B",
+    "append_sources": [
+      "https://of.ru/bc/11036"
+    ],
+    "verification_status": "Башня B: 23 этажа, класс A, ввод 2024 подтверждён открытыми источниками и квартальным реестром; координата привязана к строению 19с2, а не к кварталу целиком",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Реестровая запись объединяет B и C в «Towers BC» (GBA 65 500, GLA 40 500) по одному адресу 19с2, тогда как источник remain разводит их на 19с2 и 19с3. Точка взята для 19с2; при появлении контура отдельного строения уточнить"
+  },
+  "OBJ-0576": {
+    "name": "STONE Towers (Tower C)",
+    "developer": "STONE",
+    "gba": 10000,
+    "gla": 8775,
+    "commission_year": 2024,
+    "status": "Сданный",
+    "append_sources": [
+      "https://stone.ru/presscenter/cre-zaversheny-prodazhi-ofisov-vo-vtoroj-ocheredi-kvartala-stone-towers"
+    ],
+    "verification_status": "Башня C: отдельный клубный БЦ 10 000 м², ввод 2024 подтверждён открытыми источниками; GLA 8 775 м² взят из строки remain вместо явно ошибочных 19 040 м² (больше общей площади здания)",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСА, точка не уточнена: remain относит башню C к строению 19с3, квартальный реестр — к 19с2 в составе «Towers BC». Отдельного контура строения 19с3 в OSM нет. Текущая координата — исходная точка квартала STONE Towers (~40 м от точки 19с2), не точка конкретного здания; не считать подтверждённой"
+  },
+  "OBJ-0024": {
+    "needs_review": true,
+    "verification_status": "Агрегированная карточка двух башен B и C (совпадает с реестровой «STONE Towers. Towers BC»: GBA 65 300 против 65 500, GLA 40 455 против 40 500). Отдельные карточки тех же башен — OBJ-0570 и OBJ-0576",
+    "confidence": "Низкий",
+    "review_notes": "Двойной учёт: те же площади присутствуют и в агрегате, и в двух отдельных карточках башен. Требуется решение о том, какая гранулярность каноническая; до решения записи не объединять и не удалять"
+  },
+  "OBJ-0608": {
+    "duplicate_of": "OBJ-0052",
+    "matched_existing_name": "Лофт-квартал Сколково, 3-10 к",
+    "verification_status": "Дубль: совпадают название («Лофт-квартал в Сколково 3-10 к» против «Лофт-квартал Сколково, 3-10 к»), точный адрес «Сколково б-р Большой, д. 42», девелопер «Монолитпроект», общая площадь 84 000 м² и GLA 25 000 м² — четыре совпавших идентификатора при одинаковой группе корпусов",
+    "confidence": "Высокий",
+    "needs_review": false,
+    "review_notes": "Каноническая карточка OBJ-0052 собрана из 4 исходных строк против 1 у этой. Конфликт года ввода (2024 против 2026) в каноническую запись не переносится"
+  },
+  "OBJ-0052": {
+    "needs_review": true,
+    "review_notes": "Год ввода противоречив: 2026 в этой карточке против 2024 в дубле OBJ-0608, официального подтверждения нет. GBA 84 000 м² — площадь всего квартала, проставленная каждой группе корпусов, а не площадь корпусов 3–10"
+  },
+  "OBJ-0567": {
+    "needs_review": true,
+    "verification_status": "Агрегированная карточка всего Лофт-квартала: GLA 52 331 м² практически равна сумме частей — OBJ-0033 (7 219) + OBJ-0618 (20 250) + OBJ-0052 (25 000) = 52 469 м²",
+    "confidence": "Низкий",
+    "review_notes": "Двойной учёт: те же площади присутствуют и в агрегате, и в карточках групп корпусов. Требуется решение о канонической гранулярности; до решения не объединять и не удалять"
+  },
+  "OBJ-0755": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 1 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0750": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 2 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0760": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 3 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0765": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 4 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0754": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 5 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0761": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 6 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0779": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 7 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0764": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 8 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0751": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 9 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0767": {
+    "developer": "ГК Монолитхолдинг",
+    "append_sources": [
+      "https://2gis.ru/moscow/firm/70000001068276416"
+    ],
+    "verification_status": "Корпус 10 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов"
+  },
+  "OBJ-0696": {
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "commission_year": 2027,
+    "status": "Строящийся",
+    "append_sources": [
+      "https://stone.ru/commercial/hodinka",
+      "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+    ],
+    "verification_status": "Башня H1 подтверждена официально как отдельное здание квартала STONE Ходынка 1: высотная доминанта ~100 м, 43 000 м² общей площади и 36 000 м² офисов по archi.ru против 41 600 / 34 700 м² в этой строке (расхождение ~3%). Готовность квартала — 2027",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала"
+  },
+  "OBJ-0722": {
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "commission_year": 2027,
+    "status": "Строящийся",
+    "append_sources": [
+      "https://stone.ru/commercial/hodinka",
+      "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+    ],
+    "verification_status": "Башня H2 подтверждена официально как отдельное здание: 18 этажей, 27 000 м² общей площади и 18 500 м² офисов по archi.ru против 26 400 / 18 400 м² в этой строке. Готовность квартала — 2027",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала"
+  },
+  "OBJ-0735": {
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "commission_year": 2027,
+    "status": "Строящийся",
+    "append_sources": [
+      "https://stone.ru/commercial/hodinka",
+      "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+    ],
+    "verification_status": "Башня H3 подтверждена официально как отдельное здание: 13 этажей, 19 000 м² общей площади по archi.ru против 17 800 м² в этой строке. Готовность квартала — 2027",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала"
+  },
+  "OBJ-0100": {
+    "name": "STONE Ходынка 1 (квартал целиком)",
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "commission_year": 2027,
+    "status": "Строящийся",
+    "append_sources": [
+      "https://stone.ru/commercial/hodinka",
+      "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+    ],
+    "verification_status": "Агрегированная карточка квартала из трёх башен: GLA 65 100 м² в точности равна сумме башен H1+H2+H3 (34 700 + 18 400 + 12 000). Отдельные карточки башен — OBJ-0696, OBJ-0722, OBJ-0735; это НЕ дубли, а другая гранулярность",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Двойной учёт площадей: те же 65 100 м² GLA присутствуют и в этой карточке, и в трёх карточках башен. Требуется решение о канонической гранулярности; до решения не объединять и не удалять. Адрес уточнён с «Микрорайон Ходынское Поле» до «Ходынский бульвар, з/у 6/2» по официальному сайту STONE"
+  },
+  "OBJ-0666": {
+    "duplicate_of": "OBJ-0262",
+    "matched_existing_name": "БЦ «Варшавская»",
+    "append_sources": [
+      "https://bc-varshavskaya.ru/"
+    ],
+    "verification_status": "Дубль БЦ «Варшавская» под рабочим именем по соседнему жилому кварталу LIFE Варшавская: совпадают девелопер PIONEER, улица (Каширский проезд) и общая площадь 72 800 против 71 700 м² (расхождение 1,5%). Открытые источники описывают у метро «Варшавская» один офисный проект PIONEER класса A",
+    "confidence": "Средний",
+    "needs_review": true,
+    "review_notes": "Остаточный риск: в этой строке адрес без номера дома («Каширский пр-д»), поэтому совпадение опирается на девелопера, улицу и близкие площади, а не на точный адрес. При появлении данных о втором офисном объекте PIONEER на Каширском проезде решение пересмотреть"
+  },
+  "OBJ-0564": {
+    "verification_status": "Строка непригодна для идентификации: название состоит из одного слова «сколково» (это название инновационного центра и района, а не объекта), адрес, девелопер, площади и год отсутствуют. Машинный аудит даёт «точное совпадение имени» с БЦ «Сколково», но это совпадение по общему топониму",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "ОТКЛОНЕНО ложное совпадение с БЦ «Сколково» (score 97): единственный признак — общий топоним. Наносить нельзя; кандидат на исключение строки из слоя как неидентифицируемой"
+  },
+  "OBJ-0728": {
+    "append_sources": [],
+    "verification_status": "Отдельная фаза II комплекса «Капитолий» (ENKA): адрес пр-т Вернадского, 6В против 6 у фазы I, площади различаются (23 670 / 22 256 м² против 22 000 / 17 028 м²). Не дубль OBJ-0137 — другая очередь того же комплекса",
+    "confidence": "Низкий",
+    "needs_review": true,
+    "review_notes": "ОТКЛОНЕНО ложное совпадение с OBJ-0137 «БЦ Капитолий» (score 89, совпал только девелопер и корень адреса). Координата не подтверждена: точка фазы I наносится запрещено, отдельного контура для дома 6В не найдено. Также не подтверждены год ввода и статус"
+  }
+}

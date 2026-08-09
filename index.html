@@ -2070,13 +2070,17 @@ async function loadBuildings() {
 // Назначение зоны/субрынка/делового района по геолокации (point-in-polygon).
 // Приоритет — попадание в полигон, а не атрибут из таблицы.
 function assignGeo() {
+  assignGeoToRows(buildingsData);
+}
+
+function assignGeoToRows(rows) {
   const cfgs = [
     ['geoZone',       'zones',      'name'],
     ['geoSubmarket',  'submarkets', 'name'],
     ['geoBizFormed',  'bizFormed',  'name'],
     ['geoBizForming', 'bizForming', 'district'],
   ];
-  for (const b of buildingsData) {
+  for (const b of rows) {
     for (const [prop, key, field] of cfgs) {
       b[prop] = '';
       const fc = geojsonCache[key];
@@ -2131,15 +2135,19 @@ async function init() {
 // ============================================================
 function syncURL() {
   const p = new URLSearchParams();
-  p.set('q', currentQuarter.id);
   p.set('mode', projectsMode ? 'projects' : (coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale')));
-  p.set('layer', activeLayerKey);
-  p.set('metric', currentMetric);
+  if (!projectsMode) {
+    p.set('q', currentQuarter.id);
+    p.set('layer', activeLayerKey);
+    p.set('metric', currentMetric);
+  }
   const basemap = document.querySelector('input[name="basemap"]:checked');
   if (basemap) p.set('basemap', basemap.value);
-  p.set('cluster', document.getElementById('ovCluster').checked ? '1' : '0');
-  p.set('bld', document.getElementById('ovBuildings').checked ? '1' : '0');
-  if (!coworkingMode) {
+  if (!projectsMode) {
+    p.set('cluster', document.getElementById('ovCluster').checked ? '1' : '0');
+    p.set('bld', document.getElementById('ovBuildings').checked ? '1' : '0');
+  }
+  if (!coworkingMode && !projectsMode) {
     p.set('status', [...filterStatus].join(','));
     if (rentMode) p.set('rentf', [...filterOnRent].join(','));
     else p.set('salef', [...filterOnSale].join(','));
@@ -2725,6 +2733,7 @@ async function loadFutureProjects() {
   const st = document.getElementById('fpStatus');
   try {
     futureData = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => r.json());
+    assignGeoToRows(futureData.projects);
     futureLoaded = true;
     st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат)`;
     st.style.color = '#16a34a';
@@ -2773,21 +2782,32 @@ function fpPopupHtml(p) {
   ).join('<br>');
   const rows = [
     ['ID', p.id],
+    ['Каноническое название', p.canonical_name],
     ['Адрес', p.address],
+    ['Координаты', coordsCell(p)],
+    ['Источник координат', p.coordinates_source || p.coord_fix_source],
+    ['Совпавшая запись', [p.matched_existing_id, p.matched_existing_name].filter(Boolean).join(' — ') || null],
     ['Девелопер', p.developer],
-    ['Общая площадь', p.gba != null ? fmt(Math.round(p.gba)) : null],
-    ['GLA', p.gla != null ? fmt(Math.round(p.gla)) : null],
+    ['Общая площадь, кв.м', p.gba != null ? fmt(Math.round(p.gba)) : null],
+    ['GLA, кв.м', p.gla != null ? fmt(Math.round(p.gla)) : null],
     ['Класс', p.cls],
     ['Ввод', [p.commission_quarter ? 'Q' + p.commission_quarter : null, p.commission_year].filter(Boolean).join(' ') || null],
     ['Статус', p.status],
+    ['Зона', p.geoZone ? displayName('zones', p.geoZone) : null],
+    ['Субрынок', p.geoSubmarket],
+    ['Деловой р-н (сформир.)', p.geoBizFormed],
+    ['Деловой р-н (формир.)', p.geoBizForming],
     ['Статус проверки', p.verification_status],
     ['Уровень доверия', p.confidence],
+    ['Требует ручной проверки', p.needs_review === true ? 'Да' : (p.needs_review === false ? 'Нет' : null)],
+    ['Примечание проверки', p.review_notes],
+    ['Конфликты', p.conflicts],
   ];
   return `<b>${escapeHtml(p.name || 'Проект')}</b>` +
     rows.map(([l, v]) =>
-      `<div class="prow"><span class="plabel">${l}</span><span class="pval">${v == null || v === '' ? '—' : escapeHtml(String(v))}</span></div>`
+      `<div class="prow"><span class="plabel">${l}</span><span class="pval">${l === 'Координаты' ? v : (v == null || v === '' ? '—' : escapeHtml(String(v)))}</span></div>`
     ).join('') +
-    (src ? `<div class="prow" style="display:block;"><span class="plabel">Источники</span><div style="margin-top:2px;font-size:10px;word-break:break-all;">${src}</div></div>` : '');
+    `<div class="prow" style="display:block;"><span class="plabel">Источники</span><div style="margin-top:2px;font-size:10px;word-break:break-all;">${src || 'Нет подтверждённых источников'}</div></div>`;
 }
 
 function renderFuture() {
@@ -2815,10 +2835,13 @@ function renderFuture() {
   document.getElementById('fpStats').innerHTML =
     `Показано: <b>${rows.length}</b> из ${futureData.with_coords} с координатами<br>` +
     Object.entries(byStatus).sort((a, b) => b[1] - a[1]).map(([s, n]) => `${s}: ${n}`).join(', ') +
-    `<br>Требуют проверки (низкое доверие): ${lowCount}`;
+    `<br>Требуют проверки (низкое доверие): ${lowCount}` +
+    `<br>Исключено подтверждённых дублей: ${futureData.duplicate_count || 0}`;
 }
 
 function renderFutureLegend() {
+  document.getElementById('legend').style.display = 'none';
+  hideStatsTable();
   const el = document.getElementById('buildingsLegend');
   const items = Object.entries(FP_STATUS_COLOR)
     .map(([label, c]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${label}</span></div>`)
@@ -2842,7 +2865,7 @@ document.querySelectorAll('.fp-quick').forEach(btn => btn.addEventListener('clic
 
 document.getElementById('fpNoCoordsBtn').addEventListener('click', function() {
   if (!futureData) return;
-  const rows = futureData.no_coords;
+  const rows = [...futureData.no_coords].sort((a, b) => fpPriorityRank(a) - fpPriorityRank(b));
   const html = `<table style="width:100%;border-collapse:collapse;font-size:12px;">
     <thead><tr style="background:#f5f5f5;">
       <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">ID</th>
@@ -2850,6 +2873,10 @@ document.getElementById('fpNoCoordsBtn').addEventListener('click', function() {
       <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Адрес</th>
       <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Девелопер</th>
       <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Статус</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Приоритет</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Доверие</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Причина проверки</th>
+      <th style="text-align:left;padding:4px;border-bottom:1px solid #ddd;">Источники</th>
     </tr></thead><tbody>` +
     rows.map(p => `<tr>
       <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.id || '')}</td>
@@ -2857,9 +2884,30 @@ document.getElementById('fpNoCoordsBtn').addEventListener('click', function() {
       <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.address || '—')}</td>
       <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.developer || '—')}</td>
       <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.status || '—')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;font-weight:700;">${fpPriority(p)}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml(p.confidence || '—')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${escapeHtml([p.verification_status, p.conflicts].filter(Boolean).join('; ') || 'Нет подтверждённых координат')}</td>
+      <td style="padding:4px;border-bottom:1px solid #eee;">${fpSourceLinks(p)}</td>
     </tr>`).join('') + '</tbody></table>';
   openFutureNoCoordsModal(rows.length, html);
 });
+
+function fpPriority(p) {
+  if (['Строящийся', 'Сданный', 'Не определён'].includes(p.status)) return 'P0';
+  if (p.status === 'Проектный' || p.conflicts) return 'P1';
+  return 'P2';
+}
+
+function fpPriorityRank(p) {
+  return { P0: 0, P1: 1, P2: 2 }[fpPriority(p)];
+}
+
+function fpSourceLinks(p) {
+  const links = (p.sources || []).map((u, i) =>
+    `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#931F2B;">${i + 1}</a>`
+  ).join(', ');
+  return links || '—';
+}
 
 function openFutureNoCoordsModal(count, tableHtml) {
   let el = document.getElementById('fpNoCoordsModal');

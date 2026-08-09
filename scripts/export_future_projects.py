@@ -16,6 +16,7 @@ import openpyxl
 SRC = Path(r'C:\Users\zapas\Documents\Codex\2026-08-05\final-2-xlsx\outputs\Будущие_проекты_очищено_с_памятью.xlsx')
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / 'data' / 'future_projects.json'
+OVERRIDES = REPO / 'data' / 'future_projects_verification_overrides.json'
 
 SHEET = 'Все объекты (чистый)'
 
@@ -80,7 +81,27 @@ def split_sources(v):
     return [u.strip() for u in re.split(r'[;\n]+', str(v)) if u.strip()]
 
 
+def load_overrides():
+    if not OVERRIDES.exists():
+        return {}
+    with OVERRIDES.open(encoding='utf-8') as f:
+        return json.load(f)
+
+
+def apply_override(rec, override):
+    if not override:
+        return rec
+    append_sources = override.get('append_sources', [])
+    for key, value in override.items():
+        if key != 'append_sources':
+            rec[key] = value
+    rec['sources'] = list(dict.fromkeys([*rec.get('sources', []), *append_sources]))
+    rec['verified_at'] = '2026-08-06'
+    return rec
+
+
 def main():
+    overrides = load_overrides()
     wb = openpyxl.load_workbook(SRC, data_only=True, read_only=True)
     ws = wb[SHEET]
     rows = ws.iter_rows(values_only=True)
@@ -89,6 +110,7 @@ def main():
 
     records = []
     no_coords = []
+    duplicates = []
     for row in rows:
         if not row or not row[idx['ID']]:
             continue
@@ -105,6 +127,12 @@ def main():
         rec['commission_quarter'] = to_int(rec['commission_quarter'])
         rec['merged_rows'] = to_int(rec['merged_rows'])
         rec['sources'] = split_sources(rec['sources'])
+
+        rec = apply_override(rec, overrides.get(rec['id']))
+
+        if rec.get('duplicate_of'):
+            duplicates.append(rec)
+            continue
 
         fix = COORD_FIXES.get(rec['id'])
         if fix:
@@ -126,8 +154,10 @@ def main():
         'total': len(records) + len(no_coords),
         'with_coords': len(records),
         'without_coords': len(no_coords),
+        'duplicate_count': len(duplicates),
         'projects': records,
         'no_coords': no_coords,
+        'duplicates': duplicates,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open('w', encoding='utf-8') as f:
