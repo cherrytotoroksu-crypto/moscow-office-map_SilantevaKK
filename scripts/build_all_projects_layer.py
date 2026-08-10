@@ -80,19 +80,36 @@ def load_classifier():
 
 def load_quarter_presence():
     """Для каждого имени здания — список кварталов (YYYYMM), где оно
-    реально встречается в data/buildings_{quarter}.json. Мехническая сверка,
-    не догадка."""
+    реально встречается в data/buildings_{quarter}.json ИЛИ
+    data/coworking_{quarter}.json. Механическая сверка, не догадка.
+
+    ⚠️ 2026-08-12: исправлен пропуск coworking-каналов — раньше сканировались
+    только buildings_*.json, поэтому у ВСЕХ строк RAW_DATA с
+    market_channel=coworking (напр. СODE Novo) quarter_offer_refs оставался
+    пустым и quarter_offer_exists=false, даже если запись реально
+    присутствует в coworking_{quarter}.json. Обнаружено при разборе
+    подтверждённого пропуска Q2 2026 для СODE Novo (data/coworking_202606.json
+    id=149)."""
     presence = {}
     data_dir = os.path.join(REPO_ROOT, "data")
     for fname in sorted(os.listdir(data_dir)):
         m = re.match(r"^buildings_(\d{6})\.json$", fname)
-        if not m:
+        if m:
+            quarter = m.group(1)
+            with open(os.path.join(data_dir, fname), encoding="utf-8-sig") as f:
+                rows = json.load(f)
+            for row in rows:
+                for key in (row.get("name"), row.get("name_orig")):
+                    if key:
+                        presence.setdefault(key, set()).add(quarter)
             continue
-        quarter = m.group(1)
-        with open(os.path.join(data_dir, fname), encoding="utf-8-sig") as f:
-            rows = json.load(f)
-        for row in rows:
-            for key in (row.get("name"), row.get("name_orig")):
+        m = re.match(r"^coworking_(\d{6})\.json$", fname)
+        if m:
+            quarter = m.group(1)
+            with open(os.path.join(data_dir, fname), encoding="utf-8-sig") as f:
+                rows = json.load(f)
+            for row in rows:
+                key = row.get("name")
                 if key:
                     presence.setdefault(key, set()).add(quarter)
     return presence

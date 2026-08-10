@@ -7049,11 +7049,13 @@
   },
   {
     "canonical_project_id": "proj-149",
-    "canonical_building_id": null,
+    "canonical_building_id": "code-novo-dolgorukovskaya-21",
     "entity_grain": "project",
     "raw_name": "СODE Novo",
     "canonical_name": "СODE Novo (Долгоруковская 21)",
     "aliases": [
+      "CODE Novo",
+      "Долгоруковская 21",
       "СODE Novo"
     ],
     "developer": "СODE",
@@ -7080,17 +7082,28 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202403",
+      "202407",
+      "202410",
+      "202412",
+      "202503",
+      "202506",
+      "202509",
+      "202512",
+      "202603",
+      "202606"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Подтверждённый пропуск Q2 2026 закрыт 2026-08-12: запись присутствует в data/coworking_202606.json (id=149, адрес «Долгоруковская 21», координаты 55.774932, 37.599579) и во всех предыдущих квартальных coworking-файлах (202403, 202407, 202410, 202412, 202503, 202506, 202509, 202512, 202603, 202606) — механическая сверка по имени, не догадка. Не объединять с СODE Novo 2 (proj-32, 1-й Щемиловский 16с2) — другой адрес/координаты.",
     "public_visibility": "public",
-    "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
+    "first_seen_at": "202403",
+    "last_verified_at": "2026-08-12",
     "source_count": 1
   },
   {
