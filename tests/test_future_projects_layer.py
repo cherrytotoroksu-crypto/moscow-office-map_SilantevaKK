@@ -479,5 +479,71 @@ class Regeocode20260811BatchTest(unittest.TestCase):
             self.assertEqual((by_id[object_id]["lat"], by_id[object_id]["lng"]), point, object_id)
 
 
+class LowConfidenceDefaultVisibilityTest(unittest.TestCase):
+    """Регрессия на баг «Botanica Plaza / NEVSKY PLAZA пропадают с карты»:
+    объект с координатами и confidence=Низкий не должен исключаться из
+    default-выборки слоя «Все проекты». Раньше чекбокс «Низкий» был выключен
+    по умолчанию — низкая уверенность в данных молча превращалась в
+    отсутствие объекта на карте."""
+
+    INDEX_HTML = REPO_ROOT / "index.html"
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists() or not cls.INDEX_HTML.exists():
+            raise unittest.SkipTest("data/future_projects.json или index.html отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.html = cls.INDEX_HTML.read_text(encoding="utf-8")
+
+    def test_known_low_confidence_objects_have_coordinates_and_reviewable_status(self):
+        """Данные сами по себе корректны: у этих объектов есть координаты —
+        баг был исключительно в UI-фильтре, не в данных."""
+        by_id = {r["id"]: r for r in self.projects}
+        for object_id, expected_name in {
+            "OBJ-0702": "Botanica Plaza",
+            "OBJ-0717": "NEVSKY PLAZA",
+        }.items():
+            self.assertIn(object_id, by_id, object_id)
+            rec = by_id[object_id]
+            self.assertEqual(rec["name"], expected_name)
+            self.assertIsNotNone(rec["lat"], object_id)
+            self.assertIsNotNone(rec["lng"], object_id)
+            self.assertEqual(rec["confidence"], "Низкий", object_id)
+
+    def test_default_confidence_filter_mode_is_all_not_verified_only(self):
+        """Источник index.html: радиокнопка fpConfMode со значением "all"
+        обязана быть checked по умолчанию — если кто-то вернёт checked на
+        "verified" (или на старый чекбокс "Низкий" без checked), это молча
+        уберёт с карты все объекты с confidence=Низкий, включая реальные."""
+        m = re.search(
+            r'<input type="radio" name="fpConfMode" value="all"([^>]*)>',
+            self.html,
+        )
+        self.assertIsNotNone(m, "радиокнопка fpConfMode value=all не найдена в index.html")
+        self.assertIn("checked", m.group(1), "fpConfMode=all должен быть checked по умолчанию")
+
+        # ни "verified", ни "review" не должны быть checked одновременно с "all"
+        for value in ("verified", "review"):
+            m2 = re.search(
+                rf'<input type="radio" name="fpConfMode" value="{value}"([^>]*)>',
+                self.html,
+            )
+            self.assertIsNotNone(m2, f"радиокнопка fpConfMode value={value} не найдена")
+            self.assertNotIn("checked", m2.group(1), f"fpConfMode={value} не должен быть checked по умолчанию")
+
+    def test_get_filtered_future_default_does_not_drop_low_confidence(self):
+        """Функция getFilteredFuture не должна содержать старую логику
+        `confs.has(...)` на чекбоксах .flt-fp-conf — она давала default-выключенный
+        фильтр по низкой уверенности. Новая логика — режим 'verified' явно
+        исключает Низкий, режимы 'all'/'review' — нет."""
+        self.assertNotIn(".flt-fp-conf", self.html)
+        m = re.search(r"function getFilteredFuture\(\)\s*\{.*?\n\}", self.html, re.S)
+        self.assertIsNotNone(m, "функция getFilteredFuture не найдена")
+        body = m.group(0)
+        self.assertIn("mode === 'verified'", body)
+
+
 if __name__ == "__main__":
     unittest.main()

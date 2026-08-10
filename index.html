@@ -565,9 +565,10 @@
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Не определён" checked> Не определён</label>
 
     <h3 style="margin-top:6px;">Уровень доверия</h3>
-    <label class="check-row"><input type="checkbox" class="flt-fp-conf" value="Высокий" checked> Высокий</label>
-    <label class="check-row"><input type="checkbox" class="flt-fp-conf" value="Средний" checked> Средний</label>
-    <label class="check-row"><input type="checkbox" class="flt-fp-conf" value="Низкий"> Низкий — требуют проверки</label>
+    <div style="font-size:10px;color:#999;margin-bottom:4px;">По умолчанию показаны все объекты; низкая уверенность означает необходимость дополнительной проверки, а не отсутствие объекта</div>
+    <label class="radio-row"><input type="radio" name="fpConfMode" value="all" checked> Все объекты</label>
+    <label class="radio-row"><input type="radio" name="fpConfMode" value="verified"> Только высокий и средний</label>
+    <label class="radio-row"><input type="radio" name="fpConfMode" value="review"> Только требуют проверки (низкий)</label>
 
     <h3 style="margin-top:6px;">Девелопер</h3>
     <select id="fpDeveloper" style="width:100%;font-size:11px;padding:3px;"><option value="">Все</option></select>
@@ -2760,10 +2761,19 @@ function fpFillSelects() {
   cls.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; clsSel.appendChild(o); });
 }
 
+function fpConfMode() {
+  const el = document.querySelector('input[name="fpConfMode"]:checked');
+  return el ? el.value : 'all';
+}
+
+// Низкая уверенность = "надо проверить", а не "не существует". Дефолт "all"
+// показывает вообще всё, что имеет координаты — раньше чекбокс "Низкий" был
+// выключен по умолчанию и реальные объекты (Botanica Plaza, NEVSKY PLAZA и
+// другие) молча пропадали с карты.
 function getFilteredFuture() {
   if (!futureData) return [];
   const statuses = new Set([...document.querySelectorAll('.flt-fp-status:checked')].map(c => c.value));
-  const confs = new Set([...document.querySelectorAll('.flt-fp-conf:checked')].map(c => c.value));
+  const mode = fpConfMode();
   const dev = document.getElementById('fpDeveloper').value;
   const cls = document.getElementById('fpClass').value;
   const q = document.getElementById('fpQuarter').value;
@@ -2772,7 +2782,9 @@ function getFilteredFuture() {
 
   return futureData.projects.filter(p => {
     if (!statuses.has(p.status || 'Не определён')) return false;
-    if (!confs.has(p.confidence || 'Низкий')) return false;
+    const conf = p.confidence || 'Низкий';
+    if (mode === 'verified' && conf === 'Низкий') return false;
+    if (mode === 'review' && conf !== 'Низкий') return false;
     if (dev && p.developer !== dev) return false;
     if (cls && p.cls !== cls) return false;
     if (q && String(p.commission_quarter) !== q) return false;
@@ -2786,6 +2798,10 @@ function fpPopupHtml(p) {
   const src = (p.sources || []).map(u =>
     `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#931F2B;">${escapeHtml(u.replace(/^https?:\/\//, '').slice(0, 42))}</a>`
   ).join('<br>');
+  const lowConfidence = (p.confidence || 'Низкий') === 'Низкий';
+  const warningBadge = lowConfidence
+    ? `<div style="margin:4px 0 6px;padding:3px 6px;background:#fff4e5;border-left:3px solid #f97316;font-size:10px;color:#7c2d12;">⚠ Требует проверки — низкий уровень доверия к данным, объект не исключён из выборки</div>`
+    : '';
   const rows = [
     ['ID', p.id],
     ['Каноническое название', p.canonical_name],
@@ -2810,7 +2826,7 @@ function fpPopupHtml(p) {
     ['Примечание проверки', p.review_notes],
     ['Конфликты', p.conflicts],
   ];
-  return `<b>${escapeHtml(p.name || 'Проект')}</b>` +
+  return `<b>${escapeHtml(p.name || 'Проект')}</b>` + warningBadge +
     rows.map(([l, v]) =>
       `<div class="prow"><span class="plabel">${l}</span><span class="pval">${l === 'Координаты' ? v : (v == null || v === '' ? '—' : escapeHtml(String(v)))}</span></div>`
     ).join('') +
@@ -2825,9 +2841,12 @@ function renderFuture() {
   futureLayer = L.layerGroup();
   rows.forEach(p => {
     // Точность геометрии и уверенность — не просто текст в карточке, а видимая
-    // на карте разница: у centroid/approximate — пунктирная обводка (точка
-    // комплекса или улицы, не здания), у низкого доверия — приглушённая заливка.
-    const approx = p.geometry_quality === 'centroid' || p.geometry_quality === 'approximate';
+    // на карте разница: у centroid/approximate ИЛИ низкого доверия —
+    // пунктирная обводка (точка комплекса/улицы, не здания, либо
+    // непроверенные данные), плюс приглушённая заливка по уровню доверия.
+    // Объект НЕ скрывается — только помечается, координаты не трогаются.
+    const lowConfidence = (p.confidence || 'Низкий') === 'Низкий';
+    const approx = p.geometry_quality === 'centroid' || p.geometry_quality === 'approximate' || lowConfidence;
     const fillOpacity = p.confidence === 'Высокий' ? 0.9 : (p.confidence === 'Средний' ? 0.75 : 0.45);
     const marker = L.circleMarker([p.lat, p.lng], {
       radius: fpRadius(p.gla),
@@ -2838,19 +2857,21 @@ function renderFuture() {
       opacity: 1, fillOpacity,
     });
     marker.bindPopup(fpPopupHtml(p), { maxWidth: 340, minWidth: 280 });
-    marker.bindTooltip(p.name || '', { direction: 'top' });
+    const tooltipText = (p.name || '') + (lowConfidence ? ' ⚠ требует проверки' : '');
+    marker.bindTooltip(tooltipText, { direction: 'top' });
     futureLayer.addLayer(marker);
   });
   futureLayer.addTo(map);
 
   const byStatus = {};
   rows.forEach(p => { const s = p.status || 'Не определён'; byStatus[s] = (byStatus[s] || 0) + 1; });
-  const lowCount = futureData.projects.concat(futureData.no_coords)
-    .filter(p => (p.confidence || 'Низкий') === 'Низкий').length;
+  const reviewShown = rows.filter(p => (p.confidence || 'Низкий') === 'Низкий').length;
   document.getElementById('fpStats').innerHTML =
-    `Показано: <b>${rows.length}</b> из ${futureData.with_coords} с координатами<br>` +
+    `Всего с координатами: <b>${futureData.with_coords}</b><br>` +
+    `Показано: <b>${rows.length}</b><br>` +
+    `Требуют проверки (в показанных): <b>${reviewShown}</b><br>` +
+    `Без координат: <b>${futureData.without_coords}</b><br>` +
     Object.entries(byStatus).sort((a, b) => b[1] - a[1]).map(([s, n]) => `${s}: ${n}`).join(', ') +
-    `<br>Требуют проверки (низкое доверие): ${lowCount}` +
     `<br>Исключено подтверждённых дублей: ${futureData.duplicate_count || 0}`;
 }
 
@@ -2869,7 +2890,8 @@ function renderFutureLegend() {
   repositionSignature();
 }
 
-document.querySelectorAll('.flt-fp-status, .flt-fp-conf').forEach(cb => cb.addEventListener('change', renderFuture));
+document.querySelectorAll('.flt-fp-status').forEach(cb => cb.addEventListener('change', renderFuture));
+document.querySelectorAll('input[name="fpConfMode"]').forEach(cb => cb.addEventListener('change', renderFuture));
 ['fpDeveloper', 'fpClass', 'fpQuarter'].forEach(id => document.getElementById(id).addEventListener('change', renderFuture));
 ['fpYearMin', 'fpYearMax'].forEach(id => document.getElementById(id).addEventListener('input', renderFuture));
 
