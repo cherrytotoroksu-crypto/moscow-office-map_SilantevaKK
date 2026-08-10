@@ -3,8 +3,8 @@
  "source_sheet": "Все объекты (чистый)",
  "generated_by": "scripts/export_future_projects.py",
  "total": 758,
- "with_coords": 676,
- "without_coords": 82,
+ "with_coords": 696,
+ "without_coords": 62,
  "duplicate_count": 13,
  "projects": [
   {
@@ -392,7 +392,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие; будущие (old); сданы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Химки, Транспортный пр-д., 19\"): ОТКЛОНЕНО — 'Транспортный проезд, 19': регион не Москва (Химки, Московская область, Россия); 'Москва': kind=locality (запрещённый тип); 'Транспортный проезд, 19': регион не Москва (СНТ Балтиец, Калининград, Россия). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0018",
@@ -882,7 +885,10 @@
    "conflicts": "developer: 2 знач.; total: 3 знач.; gla: 3 знач.; year: 3 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); сданы; База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Двинцев, влд 3\"): ОТКЛОНЕНО — 'улица Двинцев, 3с1': номер дома не совпадает ('3' != 'влд3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0040",
@@ -1141,7 +1147,10 @@
    "conflicts": "address: 2 знач.; developer: 2 знач.; total: 2 знач.; gla: 2 знач.; year: 2 знач.; lat: 2 знач.; lon: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Промышленный пр-д, вл. 5\"): ОТКЛОНЕНО — 'Промышленный проезд, 5': номер дома не совпадает ('5' != 'владение5'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0052",
@@ -1339,7 +1348,10 @@
    "conflicts": "address: 2 знач.; developer: 2 знач.; total: 2 знач.; gla: 3 знач.; year: 2 знач.; status: Сданный / Строящийся / Проектный",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); сданы; База; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Костомаровский пер, д. 11, стр. 1\"): ОТКЛОНЕНО — 'Костомаровский переулок, 5': улица не совпадает ('костомаровский переулок' != 'костомаровский переулок дом 11'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0061",
@@ -1465,7 +1477,10 @@
    "conflicts": "lat: 2 знач.; lon: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Сколково\"): ОТКЛОНЕНО — 'Инновационный центр Сколково': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0067",
@@ -1627,7 +1642,10 @@
    "conflicts": "developer: 2 знач.; total: 2 знач.; gla: 2 знач.; year: 2 знач.",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке; База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Вавилова, вл. 11, 13а\"): ОТКЛОНЕНО — 'улица Вавилова, 11': улица не совпадает ('улица вавилова' != 'улица вавилова владение 11'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0074",
@@ -1886,7 +1904,10 @@
    "conflicts": null,
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); в рынке; сданы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, поселение Сосенское, квартал № 35\"): ОТКЛОНЕНО — 'квартал № 35': kind=district (запрещённый тип); '35-й квартал': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0086",
@@ -1962,15 +1983,18 @@
    "commission_quarter": null,
    "commission_year": 2026,
    "status": "Проектный",
-   "lat": 55.763204,
-   "lng": 37.567653,
-   "verification_status": "Сверить конфликты",
+   "lat": 55.762946,
+   "lng": 37.569405,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
    "confidence": "Низкий",
    "sources": [],
    "conflicts": "year: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие; будущие (old); База",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Столярный пер., д. 3\" -> \"Россия, Москва, Столярный переулок, 3к4\", precision=number, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0090",
@@ -2014,7 +2038,10 @@
    "conflicts": "address: 2 знач.; developer: 2 знач.; lat: 2 знач.; lon: 2 знач.; status: Проектный / Анонсированный",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке; Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ходынская ул., 2С9\"): ОТКЛОНЕНО — 'Ходынская улица, 2с1': корпус/строение не совпадает ('с1' != 'с9'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0092",
@@ -2098,7 +2125,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, 4-я Магистральная ул., вл. 4\"): ОТКЛОНЕНО — '4-я Магистральная улица, 4Ас9': улица не совпадает ('4-я магистральная улица' != 'г москва 4-я магистральная улица'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0096",
@@ -2274,13 +2304,16 @@
    "status": "Проектный",
    "lat": 55.772613,
    "lng": 37.56909,
-   "verification_status": "Сверить конфликты",
-   "confidence": "Низкий",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
    "sources": [],
    "conflicts": "total: 2 знач.; gla: 2 знач.; year: 2 знач.",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке; remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Ул. Пресненский Вал, 27\" -> \"Россия, Москва, улица Пресненский Вал, 27с1\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0104",
@@ -2324,7 +2357,10 @@
    "conflicts": "developer: 2 знач.",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке; База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Дмитровский проезд, вл. 1г\"): ОТКЛОНЕНО — 'Дмитровский проезд, вл1Г': номер дома не совпадает ('вл1г' != 'владение1г'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0106",
@@ -2536,7 +2572,10 @@
    "conflicts": "address: 2 знач.",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Старокалужское шоссе, 64\"): ОТКЛОНЕНО — 'Старокалужское шоссе, 64Ас2': номер дома не совпадает ('64а' != '64'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0115",
@@ -2637,7 +2676,10 @@
    "conflicts": "year: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Нижние Мневники, уч.45\"): ОТКЛОНЕНО — 'улица Нижние Мнёвники, 45': номер дома не совпадает ('45' != 'уч45'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0119",
@@ -2671,17 +2713,20 @@
    "commission_quarter": null,
    "commission_year": 2028,
    "status": "Строящийся",
-   "lat": 55.788834,
-   "lng": 37.381783,
-   "verification_status": "Сверить конфликты",
-   "confidence": "Низкий",
+   "lat": 55.788889,
+   "lng": 37.382106,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
    "sources": [
     "https://t.me/stroi_news/103"
    ],
    "conflicts": "developer: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие; Анонсы; Удаленные",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, улица Маршала Прошлякова, 21\" -> \"Россия, Москва, улица Маршала Прошлякова, 21\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0121",
@@ -2809,7 +2854,10 @@
    "conflicts": "address: 3 знач.; developer: 2 знач.; total: 3 знач.; gla: 3 знач.; lat: 3 знач.; lon: 3 знач.; status: Проектный / Анонсированный",
    "merged_rows": 6,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке; Анонсы; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Москва, Ходынский бульвар, 20а/2\"): ОТКЛОНЕНО — 'Ходынский бульвар, 20А/2': улица не совпадает ('ходынский бульвар' != 'москва ходынский бульвар'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0127",
@@ -2874,7 +2922,10 @@
    "conflicts": "total: 2 знач.; gla: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие; будущие (old); База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградский проспект, 37 корп. 3\"): ОТКЛОНЕНО — 'Ленинградский проспект, 37к3': номер дома не совпадает ('37' != '37корпус3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0130",
@@ -2949,7 +3000,10 @@
    "conflicts": null,
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Ермакова Роща, 7\"): ОТКЛОНЕНО — 'улица Ермакова Роща, 7Ас2': номер дома не совпадает ('7а' != '7'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0133",
@@ -2970,7 +3024,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Шоссейная ул., вл. 4А\"): ОТКЛОНЕНО — 'Шоссейная улица, 4А': номер дома не совпадает ('4а' != 'владение4а'); 'улица Николая Сироткина, 4А': улица не совпадает ('улица николая сироткина' != 'шоссейная улица'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0134",
@@ -3037,7 +3094,10 @@
    "conflicts": "developer: 2 знач.; gla: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 1-я улица Ямского Поля, вл. 30\"): ОТКЛОНЕНО — '1-я улица Ямского Поля, вл30': номер дома не совпадает ('вл30' != 'владение30'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0137",
@@ -3213,7 +3273,10 @@
    "conflicts": "lat: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие; будущие (old); в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Нобеля ул.\"): ОТКЛОНЕНО — 'улица Нобеля': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0147",
@@ -3236,7 +3299,10 @@
    "conflicts": "address: 4 знач.; developer: 3 знач.; total: 3 знач.; gla: 3 знач.; year: 2 знач.; lat: 3 знач.; lon: 3 знач.",
    "merged_rows": 7,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные; в рынке; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Варшавское шоссе, вл. 36.\"): ОТКЛОНЕНО — 'Варшавское шоссе, 36': улица не совпадает ('варшавское шоссе' != 'г москва варшавское шоссе'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0148",
@@ -3708,7 +3774,10 @@
    "conflicts": "developer: 2 знач.; lat: 2 знач.; lon: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, поселение Сосенское, квартал № 35\"): ОТКЛОНЕНО — 'квартал № 35': kind=district (запрещённый тип); '35-й квартал': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0168",
@@ -4076,7 +4145,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. 2-я Ямская, вл. 2, Москва\"): ОТКЛОНЕНО — '2-я Ямская улица, 2': улица не совпадает ('2-я ямская улица' != 'улица 2-я ямская владение 2'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0184",
@@ -4303,15 +4375,18 @@
    "status": "Проектный",
    "lat": 55.808579,
    "lng": 37.60885,
-   "verification_status": "Сверить конфликты",
-   "confidence": "Низкий",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
    "sources": [
     "https://t.me/startyprodazh/12983"
    ],
    "conflicts": "total: 2 знач.; gla: 2 знач.; lat: 2 знач.; lon: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие (old); ОСНОВНАЯ; в рынке; remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, 17-й проезд Марьиной рощи, 9\" -> \"Россия, Москва, 17-й проезд Марьиной Рощи, 9\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0194",
@@ -4845,7 +4920,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Вернадского, 10\"): ОТКЛОНЕНО — 'проспект Вернадского, 10': улица не совпадает ('проспект вернадского' != 'пр-кт вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0217",
@@ -4866,7 +4944,10 @@
    "conflicts": "total: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, просп. Кутузовский, уч. 16\"): ОТКЛОНЕНО — 'Кутузовский проспект, 16': улица не совпадает ('кутузовский проспект' != 'проспект кутузовский'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0218",
@@ -4887,7 +4968,10 @@
    "conflicts": "address: 2 знач.; total: 2 знач.; gla: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие (old); ОСНОВНАЯ; в рынке; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Нижние Мнёвники , з/у 39\"): ОТКЛОНЕНО — 'улица Нижние Мнёвники, 37Ас3': номер дома не совпадает ('37а' != 'з/у39'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0219",
@@ -4908,7 +4992,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Нижние Мнёвники, зу 192\"): ОТКЛОНЕНО — 'улица Нижние Мнёвники, 192/1': номер дома не совпадает ('192/1' != 'зу192'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0220",
@@ -4929,7 +5016,10 @@
    "conflicts": null,
    "merged_rows": 4,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Нижние Мнёвники\"): ОТКЛОНЕНО — 'улица Нижние Мнёвники': kind=street (запрещённый тип); 'улица Нижние Мнёвники (дублёр)': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0221",
@@ -4955,7 +5045,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Шмидтовский проезд, 32\"): ОТКЛОНЕНО — 'Шмитовский проезд, 32': улица не совпадает ('шмитовский проезд' != 'шмидтовский проезд'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0222",
@@ -4981,7 +5074,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Малая Филевская\"): ОТКЛОНЕНО — 'Малая Филёвская улица': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0223",
@@ -4996,15 +5092,16 @@
    "status": "Проектный",
    "lat": 55.793541,
    "lng": 37.604143,
-   "verification_status": "Проверено",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
    "confidence": "Средний",
    "sources": [],
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": "approximate",
+   "geometry_quality": "exact",
    "review_notes": "ВНИМАНИЕ: координата совпадает с другим не связанным проектом (см. ниже) — похоже на технический плейсхолдер, а не на подтверждённый общий адрес. Разбор не проводился, координата не изменена Пара: STONE Сущевский Вал / Сущевский Вал, 31",
    "needs_review": true,
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Сущевский Вал, 31\" -> \"Россия, Москва, улица Сущёвский Вал, 31с1\", precision=exact, kind=house",
    "verified_at": "2026-08-06"
   },
   {
@@ -5026,7 +5123,10 @@
    "conflicts": "gla: 2 знач.; year: 2 знач.; lat: 2 знач.; lon: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Москва, Ходынский бульвар\"): ОТКЛОНЕНО — 'Ходынский бульвар': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0225",
@@ -5128,7 +5228,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградский проспект, вл. 37, корп. 3\"): ОТКЛОНЕНО — 'Ленинградский проспект, 37к3': улица не совпадает ('ленинградский проспект' != 'ленинградский проспект владение 37'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0229",
@@ -5198,7 +5301,10 @@
    "conflicts": "address: 2 знач.; total: 3 знач.; gla: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Шоссейная ул., вл. 4А\"): ОТКЛОНЕНО — 'Шоссейная улица, 4А': номер дома не совпадает ('4а' != 'владение4а'); 'улица Николая Сироткина, 4А': улица не совпадает ('улица николая сироткина' != 'шоссейная улица'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0232",
@@ -5523,7 +5629,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Веткина, вл. 2\"): ОТКЛОНЕНО — 'Веткина улица, 2': улица не совпадает ('веткина улица' != 'улица веткина'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0251",
@@ -5744,7 +5853,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-зд Духовской, 17/4\"): ОТКЛОНЕНО — 'Духовской переулок, 17с4': улица не совпадает ('духовской переулок' != 'пр-зд духовской'); 'Москва': kind=locality (запрещённый тип); 'деревня Москва, 10': регион не Москва (Пеновский муниципальный округ, Тверская область, Россия); 'деревня Москва, 15': регион не Москва (Верхошижемское городское по. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0262",
@@ -5800,7 +5912,10 @@
    "conflicts": "total: 2 знач.; gla: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Верхняя Сыромятническая, 7\"): ОТКЛОНЕНО — 'Верхняя Сыромятническая улица, 7с1': улица не совпадает ('верхняя сыромятническая улица' != 'улица верхняя сыромятническая'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0265",
@@ -5951,7 +6066,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. 2-я Ямская, вл. 2\"): ОТКЛОНЕНО — '2-я Ямская улица, 2': улица не совпадает ('2-я ямская улица' != 'улица 2-я ямская'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0273",
@@ -6079,7 +6197,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, ул. Веткина, владение 2\"): ОТКЛОНЕНО — 'Веткина улица, 2': улица не совпадает ('веткина улица' != 'г москва улица веткина'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0278",
@@ -6574,7 +6695,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградское, 63А/1А, Москва\"): ОТКЛОНЕНО — 'Ленинградское шоссе, 63': улица не совпадает ('ленинградское шоссе' != 'ленинградское 63а/1а'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0301",
@@ -6823,7 +6947,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "будущие (old); перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Москва, проспект Вернадского, вл. 6В\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'москва проспект вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0312",
@@ -8254,7 +8381,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "ОСНОВНАЯ",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Москва, проспект Вернадского, вл. 6В\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'москва проспект вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0376",
@@ -8414,7 +8544,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-д Духовской, 17/4\"): ОТКЛОНЕНО — 'Духовской переулок, 17с4': улица не совпадает ('духовской переулок' != 'проезд духовской'); 'Москва': kind=locality (запрещённый тип); 'деревня Москва, 10': регион не Москва (Пеновский муниципальный округ, Тверская область, Россия); 'деревня Москва, 15': регион не Москва (Верхошижемское городское п. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0383",
@@ -8460,7 +8593,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Варшавское шоссе, вл. 36.\"): ОТКЛОНЕНО — 'Варшавское шоссе, 36': улица не совпадает ('варшавское шоссе' != 'г москва варшавское шоссе'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0385",
@@ -8506,7 +8642,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградское, 63А/1А, Москва\"): ОТКЛОНЕНО — 'Ленинградское шоссе, 63': улица не совпадает ('ленинградское шоссе' != 'ленинградское 63а/1а'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0387",
@@ -8552,7 +8691,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградский проспект, вл. 37, корп. 3\"): ОТКЛОНЕНО — 'Ленинградский проспект, 37к3': улица не совпадает ('ленинградский проспект' != 'ленинградский проспект владение 37'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0389",
@@ -10669,15 +10811,18 @@
    "status": "Анонсированный",
    "lat": 55.808579,
    "lng": 37.60885,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-   "confidence": "Низкий",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
    "sources": [
     "https://t.me/stroi_news/4276"
    ],
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, 17-й проезд Марьиной Рощи, 9\" -> \"Россия, Москва, 17-й проезд Марьиной Рощи, 9\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0486",
@@ -10983,7 +11128,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 4-я Магистральная ул., вл. 4\"): ОТКЛОНЕНО — '4-я Магистральная улица, 4Ас9': номер дома не совпадает ('4а' != 'владение4'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0499",
@@ -11042,17 +11190,20 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Анонсированный",
-   "lat": 55.679057,
+   "lat": 55.679052,
    "lng": 37.624004,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-   "confidence": "Низкий",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
    "sources": [
     "https://t.me/propertyinsider/25917"
    ],
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Варшавское шоссе, 36\" -> \"Россия, Москва, Варшавское шоссе, 36\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0502",
@@ -11098,7 +11249,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, 6В\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0504",
@@ -11121,7 +11275,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, вл. 6В.\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0505",
@@ -11144,7 +11301,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Верхняя Сыромятническая ул., вл.7, стр.1\"): ОТКЛОНЕНО — 'Верхняя Сыромятническая улица, 7с1': улица не совпадает ('верхняя сыромятническая улица' != 'верхняя сыромятническая улица владение 7'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0506",
@@ -11282,7 +11442,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ЗУ \"Ермакова Роща, 7АС1\"\"): ОТКЛОНЕНО — 'Москва': kind=locality (запрещённый тип); 'деревня Москва, 7': регион не Москва (Верхошижемское городское поселение, Кировская область, Россия); 'деревня Москва, 8': регион не Москва (Пеновский муниципальный округ, Тверская область, Россия); 'садовое товарищество Москва, 7': регион не Москва (Серги. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0512",
@@ -11420,7 +11583,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградское шоссе, 63Ас3\"): ОТКЛОНЕНО — 'Ленинградское шоссе, 63': номер дома не совпадает ('63' != '63а'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0518",
@@ -11673,7 +11839,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, поселении Сосенское\"): ОТКЛОНЕНО — 'поселение Сосенское': kind=other (запрещённый тип); 'квартал № 6': kind=district (запрещённый тип); 'квартал № 4': kind=district (запрещённый тип); 'квартал № 3': kind=district (запрещённый тип); 'квартал № 28': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0529",
@@ -12129,15 +12298,18 @@
    "status": "Анонсированный",
    "lat": 55.772613,
    "lng": 37.56909,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-   "confidence": "Низкий",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
    "sources": [
     "https://t.me/propertyinsider/22914"
    ],
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, улица Пресненский Вал, 27\" -> \"Россия, Москва, улица Пресненский Вал, 27с1\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0549",
@@ -12275,7 +12447,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ходынская улица, вл. 2, стр. 9\"): ОТКЛОНЕНО — 'Ходынская улица, 2с1': улица не совпадает ('ходынская улица' != 'ходынская улица владение 2'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0555",
@@ -12367,7 +12542,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Анонсы",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Шоссейная улица, вл. 4А\"): ОТКЛОНЕНО — 'Шоссейная улица, 4А': номер дома не совпадает ('4а' != 'владение4а'); 'улица Николая Сироткина, 4А': улица не совпадает ('улица николая сироткина' != 'шоссейная улица'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0559",
@@ -12541,15 +12719,16 @@
    "status": "Строящийся",
    "lat": 55.693779,
    "lng": 37.351581,
-   "verification_status": "Агрегированная карточка всего Лофт-квартала: GLA 52 331 м² практически равна сумме частей — OBJ-0033 (7 219) + OBJ-0618 (20 250) + OBJ-0052 (25 000) = 52 469 м²",
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
    "confidence": "Низкий",
    "sources": [],
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Жилые, коммерческие",
-   "geometry_quality": "centroid",
+   "geometry_quality": "exact",
    "needs_review": true,
    "review_notes": "Комплекс «Лофт-квартал Сколково (агрегаты)»: Точка общая для нескольких записей комплекса — отдельные координаты корпусов не подтверждены независимым источником. project_id/building_id (ID записи) остаются раздельными, слияние не производилось. Координата — центроид/точка комплекса, не координата конкретного строения",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, д. 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\", precision=number, kind=house",
    "verified_at": "2026-08-06"
   },
   {
@@ -12809,7 +12988,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "Жилые, коммерческие; База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Khimki, Transportny Pr, 19\"): ОТКЛОНЕНО — 'Транспортный проезд, 19': регион не Москва (Химки, Московская область, Россия); 'Химки': kind=locality (запрещённый тип); 'СНТ Химки, 19': регион не Москва (городской округ Клин, Московская область, Россия); 'садовое товарищество Химки, 19': регион не Москва (городской округ Солнечногорск, Московск. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0580",
@@ -12972,17 +13154,18 @@
    "commission_quarter": 3,
    "commission_year": 2022,
    "status": "Сданный",
-   "lat": 55.789537,
-   "lng": 37.585547,
-   "verification_status": "Проверено",
+   "lat": 55.789973,
+   "lng": 37.585727,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
    "confidence": "Средний",
    "sources": [],
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "Жилые, коммерческие; База",
-   "geometry_quality": "centroid",
+   "geometry_quality": "exact",
    "review_notes": "Комплекс «STONE Towers (A/B-агрегат/C/D-дубль)»: Точка общая для нескольких записей комплекса — отдельные координаты корпусов не подтверждены независимым источником. project_id/building_id (ID записи) остаются раздельными, слияние не производилось. Координата — центроид/точка комплекса, не координата конкретного строения",
    "needs_review": true,
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Бумажный пр-д, 19\" -> \"Россия, Москва, Бумажный проезд, 19\", precision=exact, kind=house",
    "verified_at": "2026-08-06"
   },
   {
@@ -13415,7 +13598,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Алексея Свиридова ул., д. 9, стр. 3\"): ОТКЛОНЕНО — 'улица Алексея Свиридова, 9с2': улица не совпадает ('улица алексея свиридова' != 'алексея свиридова улица дом 9'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0620",
@@ -13481,7 +13667,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ходынская ул., вл. 2, стр. 9\"): ОТКЛОНЕНО — 'Ходынская улица, 2с1': улица не совпадает ('ходынская улица' != 'ходынская улица владение 2'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0623",
@@ -13502,7 +13691,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Столярный , 3\"): ОТКЛОНЕНО — 'Столярный переулок, 3к4': улица не совпадает ('столярный переулок' != 'столярный'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0626",
@@ -13622,6 +13814,30 @@
    "geometry_quality": null
   },
   {
+   "id": "OBJ-0637",
+   "name": "БЦ на Войковской",
+   "address": "Старопетровский пр-д, 7А",
+   "developer": "ГАЛС-Девелопмент",
+   "gba": 200000.0,
+   "gla": null,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Проектный",
+   "lat": 55.824637,
+   "lng": 37.500773,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Старопетровский пр-д, 7А\" -> \"Россия, Москва, Старопетровский проезд, 7Ас7\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0641",
    "name": "МФК на Малой Юшуньской",
    "address": "Малая Юшуньская ул., 1к2",
@@ -13714,6 +13930,30 @@
    "geometry_quality": null
   },
   {
+   "id": "OBJ-0645",
+   "name": "Авиапарк Офисы",
+   "address": "Ходынский б-р, 4",
+   "developer": null,
+   "gba": 160000.0,
+   "gla": null,
+   "cls": null,
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Проектный",
+   "lat": 55.790231,
+   "lng": 37.531289,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Ходынский б-р, 4\" -> \"Россия, Москва, Ходынский бульвар, 4\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0646",
    "name": "Деловой Квартал Light City",
    "address": "2-я Магистральная ул., 3",
@@ -13786,6 +14026,54 @@
    "verified_at": "2026-08-06"
   },
   {
+   "id": "OBJ-0649",
+   "name": "iCITY (Башня Time)",
+   "address": "Шмитовский пр-д, 37",
+   "developer": "MR Group",
+   "gba": 119429.0,
+   "gla": 46467.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Сданный",
+   "lat": 55.754578,
+   "lng": 37.53058,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (iCITY (общий адрес Шмитовский пр-д 37, без разбивки Time/Space)),",
+   "confidence": "Низкий",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Шмитовский пр-д, 37\" -> \"Россия, Москва, Шмитовский проезд, 37с1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0652",
+   "name": "Rublevo Business Park",
+   "address": "МКАД, 64-й километр, 1",
+   "developer": "ПИОНЕР-М",
+   "gba": 105355.0,
+   "gla": 62000.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.800797,
+   "lng": 37.381693,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, МКАД, 64-й километр, 1\" -> \"Россия, Москва, МКАД, 64-й километр, 1\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0653",
    "name": "SLAVA (5-я оч.)",
    "address": "1-я ул. Ямского Поля, 8с2",
@@ -13832,7 +14120,34 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Двинцев, вл. 3\"): ОТКЛОНЕНО — 'улица Двинцев, 3с1': номер дома не совпадает ('3' != 'владение3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0655",
+   "name": "iCITY (Башня Space)",
+   "address": "Шмитовский пр-д, 37",
+   "developer": "MR Group",
+   "gba": 91397.0,
+   "gla": 89416.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.754578,
+   "lng": 37.53058,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (iCITY (общий адрес Шмитовский пр-д 37, без разбивки Time/Space)),",
+   "confidence": "Низкий",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Шмитовский пр-д, 37\" -> \"Россия, Москва, Шмитовский проезд, 37с1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0658",
@@ -13997,7 +14312,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Вавилова, вл. 11\"): ОТКЛОНЕНО — 'улица Вавилова, 11': номер дома не совпадает ('11' != 'владение11'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0671",
@@ -14022,6 +14340,30 @@
    "merged_rows": 1,
    "source_sheets": "remain",
    "geometry_quality": null
+  },
+  {
+   "id": "OBJ-0672",
+   "name": "БЦ на Нагатинской набережной",
+   "address": "Варшавское ш., 37Гс7",
+   "developer": "Prime Life Development",
+   "gba": 64000.0,
+   "gla": 30000.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Проектный",
+   "lat": 55.687964,
+   "lng": 37.625783,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Варшавское ш., 37Гс7\" -> \"Россия, Москва, Варшавское шоссе, 37Гс7\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0674",
@@ -14147,7 +14489,8 @@
    "matched_existing_id": "189",
    "matched_existing_name": "STONE Мневники III",
    "coordinates_source": "data/all_projects_layer.json:189",
-   "needs_review": false,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Нижние Мнёвники, з/у 192\"): ОТКЛОНЕНО — 'улица Нижние Мнёвники, 192/1': номер дома не совпадает ('192/1' != 'з/у192'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -14221,7 +14564,8 @@
    "matched_existing_id": "177",
    "matched_existing_name": "STONE Дмитровская",
    "coordinates_source": "data/all_projects_layer.json:177; подтверждено квартальными реестрами",
-   "needs_review": false,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Дмитровский пр-д, вл. 1Г\"): ОТКЛОНЕНО — 'Дмитровский проезд, вл1Г': номер дома не совпадает ('вл1г' != 'владение1г'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -14369,6 +14713,30 @@
    "geometry_quality": null
   },
   {
+   "id": "OBJ-0693",
+   "name": "БЦ Жуков пр-д, 19",
+   "address": "Жуков пр-д, 19",
+   "developer": "Гута Девелопмент",
+   "gba": 42000.0,
+   "gla": 25000.0,
+   "cls": null,
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Проектный",
+   "lat": 55.722821,
+   "lng": 37.641521,
+   "verification_status": "Координата подтверждена геокодированием 2026-08-11: улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house",
+   "confidence": "Средний",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "exact",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Жуков пр-д, 19\" -> \"Россия, Москва, Жуков проезд, 19\", precision=exact, kind=house",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0695",
    "name": "Парк Легенд (корпус 3)",
    "address": "Автозаводская ул., 23Ак2",
@@ -14392,6 +14760,34 @@
    "geometry_quality": "centroid",
    "review_notes": "Комплекс «Парк Легенд»: Точка общая для нескольких записей комплекса — отдельные координаты корпусов не подтверждены независимым источником. project_id/building_id (ID записи) остаются раздельными, слияние не производилось. Координата — центроид/точка комплекса, не координата конкретного строения",
    "needs_review": true,
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0696",
+   "name": "STONE Ходынка 1 (Башня H1)",
+   "address": "Москва, Ходынский бульвар, з/у 6/2",
+   "developer": "STONE",
+   "gba": 41600.0,
+   "gla": 34700.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": 2027,
+   "status": "Строящийся",
+   "lat": 55.788059,
+   "lng": 37.534236,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не башни): улица и номер дома совпадают после нормализации префикса \"з/у\" (земельный участок) в исходном адресе; kind=house, регион Москва. Адрес общий для 3 башен H1-H3 — применяется как centroid",
+   "confidence": "Средний",
+   "sources": [
+    "https://stone.ru/commercial/hodinka",
+    "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Ходынский бульвар, з/у 6/2\" -> \"Россия, Москва, Ходынский бульвар, 6/2\" (адрес общий для 3 башен H1-H3 — не координата конкретной башни)",
    "verified_at": "2026-08-06"
   },
   {
@@ -14449,7 +14845,8 @@
    "matched_existing_id": "89",
    "matched_existing_name": "STONE Towers. Tower D",
    "coordinates_source": "data/all_projects_layer.json:89",
-   "needs_review": false,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Бумажный пр-д, вл. 19, стр. 4,5\"): ОТКЛОНЕНО — 'Бумажный проезд, 19с1': улица не совпадает ('бумажный проезд' != 'бумажный проезд владение 19 строение 4'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -14737,7 +15134,8 @@
    "matched_existing_id": "185",
    "matched_existing_name": "STONE Мневники I",
    "coordinates_source": "data/all_projects_layer.json:185",
-   "needs_review": false,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Нижние Мнёвники , з/у 41\"): ОТКЛОНЕНО — 'улица Нижние Мнёвники, 41': номер дома не совпадает ('41' != 'з/у41'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -14766,7 +15164,8 @@
    "matched_existing_id": "236",
    "matched_existing_name": "МФК Строгино",
    "coordinates_source": "data/all_projects_layer.json:236",
-   "needs_review": false,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Строгино, пр-д №607, влд. 21\"): ОТКЛОНЕНО — 'улица Маршала Прошлякова, 21': улица не совпадает ('улица маршала прошлякова' != 'строгино проезд №607'); 'район Строгино': kind=district (запрещённый тип); 'ЖК Строгино 360': kind=district (запрещённый тип); 'метро Строгино': kind=metro (запрещённый тип); 'причал Строгино': kind=other (запрещённый. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -14889,6 +15288,34 @@
    "merged_rows": 1,
    "source_sheets": "remain",
    "geometry_quality": null
+  },
+  {
+   "id": "OBJ-0722",
+   "name": "STONE Ходынка 1 (Башня H2)",
+   "address": "Москва, Ходынский бульвар, з/у 6/2",
+   "developer": "STONE",
+   "gba": 26400.0,
+   "gla": 18400.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": 2027,
+   "status": "Строящийся",
+   "lat": 55.788059,
+   "lng": 37.534236,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не башни): улица и номер дома совпадают после нормализации префикса \"з/у\" (земельный участок) в исходном адресе; kind=house, регион Москва. Адрес общий для 3 башен H1-H3 — применяется как centroid",
+   "confidence": "Средний",
+   "sources": [
+    "https://stone.ru/commercial/hodinka",
+    "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Ходынский бульвар, з/у 6/2\" -> \"Россия, Москва, Ходынский бульвар, 6/2\" (адрес общий для 3 башен H1-H3 — не координата конкретной башни)",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0726",
@@ -15091,6 +15518,34 @@
    "merged_rows": 1,
    "source_sheets": "remain",
    "geometry_quality": null
+  },
+  {
+   "id": "OBJ-0735",
+   "name": "STONE Ходынка 1 (Башня H3)",
+   "address": "Москва, Ходынский бульвар, з/у 6/2",
+   "developer": "STONE",
+   "gba": 17800.0,
+   "gla": 12000.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": 2027,
+   "status": "Строящийся",
+   "lat": 55.788059,
+   "lng": 37.534236,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не башни): улица и номер дома совпадают после нормализации префикса \"з/у\" (земельный участок) в исходном адресе; kind=house, регион Москва. Адрес общий для 3 башен H1-H3 — применяется как centroid",
+   "confidence": "Средний",
+   "sources": [
+    "https://stone.ru/commercial/hodinka",
+    "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, Ходынский бульвар, з/у 6/2\" -> \"Россия, Москва, Ходынский бульвар, 6/2\" (адрес общий для 3 башен H1-H3 — не координата конкретной башни)",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0736",
@@ -15398,6 +15853,60 @@
    "geometry_quality": null
   },
   {
+   "id": "OBJ-0750",
+   "name": "Лофт Квартал Сколково (корпус 2)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 11300.0,
+   "gla": 7800.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0751",
+   "name": "Лофт Квартал Сколково (корпус 9)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 11100.0,
+   "gla": 7000.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0752",
    "name": "QOOB (Корпус B)",
    "address": "ул. Алексея Свиридова, вл. 17",
@@ -15419,6 +15928,60 @@
    "merged_rows": 1,
    "source_sheets": "remain",
    "geometry_quality": null
+  },
+  {
+   "id": "OBJ-0754",
+   "name": "Лофт Квартал Сколково (корпус 5)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 10800.0,
+   "gla": 7500.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Сданный",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0755",
+   "name": "Лофт Квартал Сколково (корпус 1)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 10800.0,
+   "gla": 7800.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0756",
@@ -15497,6 +16060,60 @@
    "verified_at": "2026-08-06"
   },
   {
+   "id": "OBJ-0760",
+   "name": "Лофт Квартал Сколково (корпус 3)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 9700.0,
+   "gla": 4650.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0761",
+   "name": "Лофт Квартал Сколково (корпус 6)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 8600.0,
+   "gla": 7000.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0763",
    "name": "Бадаевский Западная лента",
    "address": "Кутузовский пр-кт, вл. 12",
@@ -15526,6 +16143,60 @@
    "verified_at": "2026-08-06"
   },
   {
+   "id": "OBJ-0764",
+   "name": "Лофт Квартал Сколково (корпус 8)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 7700.0,
+   "gla": 4900.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0765",
+   "name": "Лофт Квартал Сколково (корпус 4)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 6700.0,
+   "gla": 3600.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Не определён",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0766",
    "name": "БЦ на Кржижановского",
    "address": "ул. Кржижановского, 13к3",
@@ -15547,6 +16218,33 @@
    "merged_rows": 1,
    "source_sheets": "remain",
    "geometry_quality": null
+  },
+  {
+   "id": "OBJ-0767",
+   "name": "Лофт Квартал Сколково (корпус 10)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 5600.0,
+   "gla": 3700.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0773",
@@ -15596,6 +16294,33 @@
    "review_notes": "Комплекс «Парк Легенд»: Точка общая для нескольких записей комплекса — отдельные координаты корпусов не подтверждены независимым источником. project_id/building_id (ID записи) остаются раздельными, слияние не производилось. Координата — центроид/точка комплекса, не координата конкретного строения",
    "needs_review": true,
    "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0779",
+   "name": "Лофт Квартал Сколково (корпус 7)",
+   "address": "ИЦ Сколково, ул. Зворыкина, 1",
+   "developer": "ГК Монолитхолдинг",
+   "gba": 1400.0,
+   "gla": 1100.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.693779,
+   "lng": 37.351581,
+   "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица/дом/корпус совпадают, регион Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (Лофт-квартал Сколково (общий адрес квартала, 10 корпусов)), координата не может отличать ко",
+   "confidence": "Низкий",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001068276416"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": "centroid",
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "coordinates_source": "Yandex Geocoder API, 2026-08-11: query=\"Москва, Россия, ул. Зворыкина, 1\" -> \"Россия, Москва, Инновационный центр Сколково, улица Зворыкина, 1к1\" (адрес общий для группы корпусов/башен — не координата конкретного здания)",
+   "verified_at": "2026-08-06"
   }
  ],
  "no_coords": [
@@ -15621,7 +16346,10 @@
    "conflicts": "developer: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Спартаковская площадь, 1/7с16\"): ОТКЛОНЕНО — 'Спартаковская площадь, 1/7с16': улица не совпадает ('спартаковская площадь' != 'г москва спартаковская площадь'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0146",
@@ -15646,7 +16374,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "будущие; будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, проспект 60-летия Октября, 11Ас5\"): ОТКЛОНЕНО — 'проспект 60-летия Октября, 11Ас5': улица не совпадает ('проспект 60-летия октября' != 'г москва проспект 60-летия октября'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0240",
@@ -15671,7 +16402,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0241",
@@ -15697,7 +16431,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0242",
@@ -15722,7 +16459,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0244",
@@ -15777,7 +16517,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0246",
@@ -15802,7 +16545,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0255",
@@ -15827,7 +16573,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0256",
@@ -15852,7 +16601,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0264",
@@ -15878,7 +16630,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, 8-я Текстильщиков ул.,\"): ОТКЛОНЕНО — '8-я улица Текстильщиков': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0271",
@@ -15903,7 +16658,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0272",
@@ -15928,7 +16686,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "будущие (old)",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0296",
@@ -15951,7 +16712,10 @@
    "conflicts": null,
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0297",
@@ -15974,7 +16738,10 @@
    "conflicts": "developer: 2 знач.",
    "merged_rows": 3,
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0397",
@@ -15997,7 +16764,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "ОСНОВНАЯ; перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, \"): ОТКЛОНЕНО — адрес отсутствует, геокодировать нечего. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0469",
@@ -16018,7 +16788,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "перспективные",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Кунцево, 59 км МКАД\"): ОТКЛОНЕНО — 'МКАД, 59-й километр': kind=street (запрещённый тип); 'МКАД, 59-й километр, внешняя сторона': kind=street (запрещённый тип); 'МКАД, 59-й километр, внутренняя сторона': kind=street (запрещённый тип); 'район Кунцево': kind=district (запрещённый тип); 'ЖК Кунцево': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0564",
@@ -16065,7 +16838,10 @@
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "Жилые, коммерческие; База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 2nd Zvenigorodskaya, 28\"): ОТКЛОНЕНО — '2-я Звенигородская улица, 28': улица не совпадает ('2-я звенигородская улица' != '2nd zvenigorodskaya'); 'Москва': kind=locality (запрещённый тип); 'СНТ Москва, 28': регион не Москва (Орехово-Зуевский городской округ, Московская область, Россия); 'деревня Москва, 27': регион не Москва (Верхошижемск. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0598",
@@ -16088,7 +16864,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Большой Сити, проекты",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 4-ая Магистральная, вл. 7\"): ОТКЛОНЕНО — '4-я Магистральная улица, 7с1': улица не совпадает ('4-я магистральная улица' != '4-ая магистральная'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0599",
@@ -16111,7 +16890,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "Большой Сити, проекты",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 2-ая Магистральная, вл. 3, 16\"): ОТКЛОНЕНО — '2-й Магистральный тупик, 5Ас4': улица не совпадает ('2-й магистральный тупик' != '2-ая магистральная владение 3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0605",
@@ -16132,7 +16914,10 @@
    "conflicts": "address: 2 знач.; total: 2 знач.",
    "merged_rows": 2,
    "source_sheets": "Большой Сити, проекты; База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 1-я Магистральная, вл. 29\"): ОТКЛОНЕНО — '1-й Магистральный тупик': kind=street (запрещённый тип); '1-й Магистральный проезд': kind=street (запрещённый тип); 'садовое товарищество Москва, 29': регион не Москва (Сергиево-Посадский городской округ, Московская область, Россия); 'СНТ Москва, 29': регион не Москва (Орехово-Зуевский городской ок. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0625",
@@ -16153,7 +16938,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "База",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Проспект Андропова,д.11 корп. 4,5,6,7\"): ОТКЛОНЕНО — 'проспект Андропова, 11к2с2': улица не совпадает ('проспект андропова' != 'проспект андропова дом 11 корпус 4 5 6'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0627",
@@ -16174,7 +16962,10 @@
    "conflicts": "address: 2 знач.",
    "merged_rows": 2,
    "source_sheets": "2025+; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, ул. Большая Филевская, 20\"): ОТКЛОНЕНО — 'Большая Филёвская улица, 20': улица не совпадает ('большая филевская улица' != 'г москва улица большая филевская'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0628",
@@ -16195,7 +16986,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Кавказский б-р, вл. 54\"): ОТКЛОНЕНО — 'Кавказский бульвар, 54': номер дома не совпадает ('54' != 'владение54'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0629",
@@ -16216,7 +17010,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Вернадского, вл6-Вс1\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-Вс1': улица не совпадает ('проспект вернадского' != 'пр-кт вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0631",
@@ -16237,7 +17034,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, м. Минская\"): ОТКЛОНЕНО — 'метро Минская': kind=metro (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0635",
@@ -16258,7 +17058,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Краснопресненская наб., вл. 16/1\"): ОТКЛОНЕНО — 'Краснопресненская набережная, 16с1': номер дома не совпадает ('16' != 'владение16/1'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0636",
@@ -16279,28 +17082,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0637",
-   "name": "БЦ на Войковской",
-   "address": "Старопетровский пр-д, 7А",
-   "developer": "ГАЛС-Девелопмент",
-   "gba": 200000.0,
-   "gla": null,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Проектный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: GLA, год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Автозаводская, 23к15, стр. 85, стр. 310\"): ОТКЛОНЕНО — 'Москва': kind=locality (запрещённый тип); 'деревня Москва, 15': регион не Москва (Верхошижемское городское поселение, Кировская область, Россия); 'деревня Москва, 10': регион не Москва (Пеновский муниципальный округ, Тверская область, Россия); 'садовое товарищество Москва, 15': регион не Москва (Се. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0638",
@@ -16321,7 +17106,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Шмитовский пр-д, вл. 32, 32А\"): ОТКЛОНЕНО — 'Шмитовский проезд, 32': улица не совпадает ('шмитовский проезд' != 'шмитовский проезд владение 32'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0639",
@@ -16342,7 +17130,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградский пр-кт, 37\"): ОТКЛОНЕНО — 'Ленинградский проспект, 37': улица не совпадает ('ленинградский проспект' != 'ленинградский пр-кт'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0640",
@@ -16363,49 +17154,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0645",
-   "name": "Авиапарк Офисы",
-   "address": "Ходынский б-р, 4",
-   "developer": null,
-   "gba": 160000.0,
-   "gla": null,
-   "cls": null,
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Проектный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: девелопер, GLA, год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0649",
-   "name": "iCITY (Башня Time)",
-   "address": "Шмитовский пр-д, 37",
-   "developer": "MR Group",
-   "gba": 119429.0,
-   "gla": 46467.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Сданный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул Автозаводская, вл. 23/2\"): ОТКЛОНЕНО — 'Автозаводская улица, 23с2': улица не совпадает ('автозаводская улица' != 'улица автозаводская'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0651",
@@ -16426,49 +17178,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0652",
-   "name": "Rublevo Business Park",
-   "address": "МКАД, 64-й километр, 1",
-   "developer": "ПИОНЕР-М",
-   "gba": 105355.0,
-   "gla": 62000.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0655",
-   "name": "iCITY (Башня Space)",
-   "address": "Шмитовский пр-д, 37",
-   "developer": "MR Group",
-   "gba": 91397.0,
-   "gla": 89416.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградское ш., уч. 63А/1А\"): ОТКЛОНЕНО — 'Ленинградское шоссе, 63': номер дома не совпадает ('63' != 'уч63а/1а'); 'посёлок Горки-2, 63': регион не Москва (Одинцовский городской округ, Московская область, Россия); 'участок 8': kind=district (запрещённый тип); 'ДПК Загорье, 63': регион не Москва (посёлок Горки-2, Одинцовский городской округ,. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0657",
@@ -16489,7 +17202,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Автозаводская ул., 23с85\"): ОТКЛОНЕНО — 'Автозаводская улица, 23с71': корпус/строение не совпадает ('с71' != 'с85'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0660",
@@ -16510,7 +17226,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Новомосковская ул., вл. 18-22\"): ОТКЛОНЕНО — 'Новомосковская улица, 24': номер дома не совпадает ('24' != 'владение18-22'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0668",
@@ -16531,7 +17250,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, улица Шеногина, вл2/11\"): ОТКЛОНЕНО — 'улица Шеногина, 2': номер дома не совпадает ('2' != 'вл2/11'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0670",
@@ -16552,28 +17274,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0672",
-   "name": "БЦ на Нагатинской набережной",
-   "address": "Варшавское ш., 37Гс7",
-   "developer": "Prime Life Development",
-   "gba": 64000.0,
-   "gla": 30000.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Проектный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Шмитовский пр-д, вл. 34\"): ОТКЛОНЕНО — 'Шмитовский проезд, 34': номер дома не совпадает ('34' != 'владение34'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0673",
@@ -16594,7 +17298,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 2-й Кожуховский пр-д, д.29, к2с16\"): ОТКЛОНЕНО — '2-й Кожуховский проезд, 29к2с16': улица не совпадает ('2-й кожуховский проезд' != '2-й кожуховский проезд дом 29'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0681",
@@ -16615,7 +17322,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вятская ул., вл. 41А\"): ОТКЛОНЕНО — 'Вятская улица, 41А': номер дома не совпадает ('41а' != 'владение41а'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0691",
@@ -16636,28 +17346,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0693",
-   "name": "БЦ Жуков пр-д, 19",
-   "address": "Жуков пр-д, 19",
-   "developer": "Гута Девелопмент",
-   "gba": 42000.0,
-   "gla": 25000.0,
-   "cls": null,
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Проектный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пос. Сосенское, БК Прокшино\"): ОТКЛОНЕНО — 'БК Прокшино': kind=district (запрещённый тип); 'поселение Сосенское': kind=other (запрещённый тип); 'квартал № 6': kind=district (запрещённый тип); 'квартал № 4': kind=district (запрещённый тип); 'квартал № 3': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0694",
@@ -16678,33 +17370,9 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0696",
-   "name": "STONE Ходынка 1 (Башня H1)",
-   "address": "Москва, Ходынский бульвар, з/у 6/2",
-   "developer": "STONE",
-   "gba": 41600.0,
-   "gla": 34700.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": 2027,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Башня H1 подтверждена официально как отдельное здание квартала STONE Ходынка 1: высотная доминанта ~100 м, 43 000 м² общей площади и 36 000 м² офисов по archi.ru против 41 600 / 34 700 м² в этой строке (расхождение ~3%). Готовность квартала — 2027",
-   "confidence": "Средний",
-   "sources": [
-    "https://stone.ru/commercial/hodinka",
-    "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пос. Сосенское, БК Прокшино\"): ОТКЛОНЕНО — 'БК Прокшино': kind=district (запрещённый тип); 'поселение Сосенское': kind=other (запрещённый тип); 'квартал № 6': kind=district (запрещённый тип); 'квартал № 4': kind=district (запрещённый тип); 'квартал № 3': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -16726,7 +17394,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Западный административный округ, район Кунцево, 48-й квартал\"): ОТКЛОНЕНО — '48-й квартал': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0710",
@@ -16747,7 +17418,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, БК Прокшино, пос. Сосенское, 5\"): ОТКЛОНЕНО — 'БК Прокшино, 3': улица не совпадает ('бк прокшино' != 'бк прокшино пос сосенское'); 'поселение Сосенское': kind=other (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0712",
@@ -16768,7 +17442,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Лихачёва, 5\"): ОТКЛОНЕНО — 'проспект Лихачёва, 5': улица не совпадает ('проспект лихачева' != 'пр-кт лихачева'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0713",
@@ -16789,7 +17466,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Речников, зу 7/7\"): ОТКЛОНЕНО — 'улица Речников, 7': номер дома не совпадает ('7' != 'зу7/7'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0714",
@@ -16810,33 +17490,9 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0722",
-   "name": "STONE Ходынка 1 (Башня H2)",
-   "address": "Москва, Ходынский бульвар, з/у 6/2",
-   "developer": "STONE",
-   "gba": 26400.0,
-   "gla": 18400.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": 2027,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Башня H2 подтверждена официально как отдельное здание: 18 этажей, 27 000 м² общей площади и 18 500 м² офисов по archi.ru против 26 400 / 18 400 м² в этой строке. Готовность квартала — 2027",
-   "confidence": "Средний",
-   "sources": [
-    "https://stone.ru/commercial/hodinka",
-    "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Речников, зу 7/7\"): ОТКЛОНЕНО — 'улица Речников, 7': номер дома не совпадает ('7' != 'зу7/7'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -16858,7 +17514,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Речников, зу 7/8\"): ОТКЛОНЕНО — 'улица Речников, 7': номер дома не совпадает ('7' != 'зу7/8'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0724",
@@ -16879,7 +17538,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Речников, зу 7/8\"): ОТКЛОНЕНО — 'улица Речников, 7': номер дома не совпадает ('7' != 'зу7/8'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0725",
@@ -16900,7 +17562,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Электролитный пр-д, вл. 3\"): ОТКЛОНЕНО — 'Электролитный проезд, вл3Бс8': номер дома не совпадает ('вл3бс8' != 'владение3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0728",
@@ -16927,33 +17592,6 @@
    "verified_at": "2026-08-06"
   },
   {
-   "id": "OBJ-0735",
-   "name": "STONE Ходынка 1 (Башня H3)",
-   "address": "Москва, Ходынский бульвар, з/у 6/2",
-   "developer": "STONE",
-   "gba": 17800.0,
-   "gla": 12000.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": 2027,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Башня H3 подтверждена официально как отдельное здание: 13 этажей, 19 000 м² общей площади по archi.ru против 17 800 м² в этой строке. Готовность квартала — 2027",
-   "confidence": "Средний",
-   "sources": [
-    "https://stone.ru/commercial/hodinka",
-    "https://archi.ru/projects/russia/19344/bc-stone-hodynka"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "Координата отдельной башни не подтверждена: официальный сайт STONE не публикует адреса и точки башен по отдельности, в OSM есть только контуры без номеров строений. Общую точку квартала (OBJ-0100, 55.787938/37.535628) наносить запрещено — башни стоят разнесённо. ВНИМАНИЕ на двойной учёт: OBJ-0100 — агрегат всего квартала",
-   "verified_at": "2026-08-06"
-  },
-  {
    "id": "OBJ-0738",
    "name": "Актион на 1905 года",
    "address": "Ходынская ул., з/у 2/9",
@@ -16972,7 +17610,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ходынская ул., з/у 2/9\"): ОТКЛОНЕНО — 'Ходынская улица, 2': номер дома не совпадает ('2' != 'з/у2/9'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0747",
@@ -16995,58 +17636,9 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0750",
-   "name": "Лофт Квартал Сколково (корпус 2)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 11300.0,
-   "gla": 7800.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 2 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0751",
-   "name": "Лофт Квартал Сколково (корпус 9)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 11100.0,
-   "gla": 7000.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 9 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт 60-летия Октября, 5А\"): ОТКЛОНЕНО — 'проспект 60-летия Октября, 5А': улица не совпадает ('проспект 60-летия октября' != 'пр-кт 60-летия октября'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -17068,188 +17660,9 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0754",
-   "name": "Лофт Квартал Сколково (корпус 5)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 10800.0,
-   "gla": 7500.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Сданный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 5 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0755",
-   "name": "Лофт Квартал Сколково (корпус 1)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 10800.0,
-   "gla": 7800.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 1 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0760",
-   "name": "Лофт Квартал Сколково (корпус 3)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 9700.0,
-   "gla": 4650.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 3 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0761",
-   "name": "Лофт Квартал Сколково (корпус 6)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 8600.0,
-   "gla": 7000.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 6 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0764",
-   "name": "Лофт Квартал Сколково (корпус 8)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 7700.0,
-   "gla": 4900.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 8 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0765",
-   "name": "Лофт Квартал Сколково (корпус 4)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 6700.0,
-   "gla": 3600.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Не определён",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 4 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0767",
-   "name": "Лофт Квартал Сколково (корпус 10)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 5600.0,
-   "gla": 3700.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 10 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Речников, зу 7/3\"): ОТКЛОНЕНО — 'улица Речников, 7': номер дома не совпадает ('7' != 'зу7/3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   },
   {
@@ -17271,7 +17684,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградский пр-кт, 37А\"): ОТКЛОНЕНО — 'Ленинградский проспект, 37А': улица не совпадает ('ленинградский проспект' != 'ленинградский пр-кт'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0769",
@@ -17292,7 +17708,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградский пр-кт, 15с21\"): ОТКЛОНЕНО — 'Ленинградский проспект, 15с21': улица не совпадает ('ленинградский проспект' != 'ленинградский пр-кт'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0770",
@@ -17313,7 +17732,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Андропова, 11к7\"): ОТКЛОНЕНО — 'проспект Андропова, 11к7': улица не совпадает ('проспект андропова' != 'пр-кт андропова'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0771",
@@ -17334,7 +17756,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Андропова, 11к5\"): ОТКЛОНЕНО — 'проспект Андропова, 11к7': улица не совпадает ('проспект андропова' != 'пр-кт андропова'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0772",
@@ -17355,7 +17780,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Андропова, 11к1\"): ОТКЛОНЕНО — 'проспект Андропова, 11вл1': улица не совпадает ('проспект андропова' != 'пр-кт андропова'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0774",
@@ -17376,7 +17804,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Андропова, 11к6\"): ОТКЛОНЕНО — 'проспект Андропова, 11к7': улица не совпадает ('проспект андропова' != 'пр-кт андропова'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0775",
@@ -17397,7 +17828,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Андропова, 11к2\"): ОТКЛОНЕНО — 'проспект Андропова, 11к2': улица не совпадает ('проспект андропова' != 'пр-кт андропова'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0776",
@@ -17418,7 +17852,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, пр-кт Андропова, 11к4\"): ОТКЛОНЕНО — 'проспект Андропова, 11к2с2': улица не совпадает ('проспект андропова' != 'пр-кт андропова'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0777",
@@ -17439,32 +17876,9 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0779",
-   "name": "Лофт Квартал Сколково (корпус 7)",
-   "address": "ИЦ Сколково, ул. Зворыкина, 1",
-   "developer": "ГК Монолитхолдинг",
-   "gba": 1400.0,
-   "gla": 1100.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Корпус 7 Лофт-квартала в ИЦ «Сколково» (10 корпусов, ~84 тыс. м²) — существование подтверждено, точка конкретного корпуса не подтверждена",
-   "confidence": "Низкий",
-   "sources": [
-    "https://2gis.ru/moscow/firm/70000001068276416"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "КОНФЛИКТ АДРЕСОВ, точка не подтверждена: строка remain даёт «ИЦ Сколково, ул. Зворыкина, 1», другие строки того же квартала — «Большой бульвар, 42», карточка 2ГИС комплекса — «Большой бульвар, 49к2» (55.695583, 37.350054). Отдельных контуров или адресов корпусов 1–10 в OSM и 2ГИС нет, есть только точка квартала целиком. Наносить корпус по общей точке запрещено — нужен генплан застройщика с нумерацией корпусов",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Гончарная, 20/1c2\"): ОТКЛОНЕНО — 'Гончарная улица, 20/1с1': улица не совпадает ('гончарная улица' != 'улица гончарная'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
    "verified_at": "2026-08-06"
   }
  ],

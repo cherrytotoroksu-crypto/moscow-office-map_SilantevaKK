@@ -189,23 +189,29 @@ class FutureProjectsLayerTest(unittest.TestCase):
         )
         self.assertTrue(tower_c["needs_review"])
 
-    def test_loft_skolkovo_corpuses_are_not_placed_on_quarter_point(self):
-        """10 корпусов Лофт-квартала остаются без координат: адреса корпусов
-        конфликтуют между источниками, а общую точку квартала наносить нельзя."""
+    def test_loft_skolkovo_corpuses_use_confirmed_quarter_point_as_centroid(self):
+        """Партия 2026-08-11: адрес квартала («ИЦ Сколково, ул. Зворыкина, 1к1»)
+        подтверждён геокодером (kind=house, регион Москва), но не различает 10
+        корпусов — точка нанесена как centroid, НЕ exact, каждый ID отдельный."""
+        by_id = {r["id"]: r for r in self.projects}
         corpus_ids = {
             "OBJ-0750", "OBJ-0751", "OBJ-0754", "OBJ-0755", "OBJ-0760",
             "OBJ-0761", "OBJ-0764", "OBJ-0765", "OBJ-0767", "OBJ-0779",
         }
-        no_coord_ids = {r["id"] for r in self.no_coords}
-        self.assertTrue(corpus_ids.issubset(no_coord_ids))
-        for rec in (r for r in self.no_coords if r["id"] in corpus_ids):
-            self.assertTrue(rec["needs_review"], rec["id"])
-            self.assertIn("КОНФЛИКТ АДРЕСОВ", rec["review_notes"], rec["id"])
+        self.assertEqual(len(corpus_ids), len(set(corpus_ids)))
+        for object_id in corpus_ids:
+            self.assertIn(object_id, by_id, object_id)
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), (55.693779, 37.351581), object_id)
+            self.assertEqual(rec["geometry_quality"], "centroid", object_id)
+            self.assertTrue(rec["needs_review"], object_id)
 
     def test_stone_hodynka1_towers_are_not_merged_into_the_quarter(self):
         """H1/H2/H3 — отдельные здания (подтверждено archi.ru и STONE), а OBJ-0100 —
         агрегат квартала: их GLA совпадает в сумме, поэтому карточки нельзя
-        объединять и нельзя ставить башни в точку квартала."""
+        объединять. Партия 2026-08-11: адрес квартала подтверждён геокодером
+        (kind=house, регион Москва), точка нанесена как centroid — три записи
+        не различимы по зданию, но остаются раздельными ID."""
         by_id = {r["id"]: r for r in self.projects + self.no_coords}
         duplicate_ids = {r["id"] for r in self.duplicates}
         towers = ["OBJ-0696", "OBJ-0722", "OBJ-0735"]
@@ -213,8 +219,8 @@ class FutureProjectsLayerTest(unittest.TestCase):
         for tower_id in towers:
             self.assertNotIn(tower_id, duplicate_ids, f"{tower_id} не дубль агрегата")
             rec = by_id[tower_id]
-            self.assertIsNone(rec.get("lat"), tower_id)
-            self.assertIsNone(rec.get("lng"), tower_id)
+            self.assertEqual((rec["lat"], rec["lng"]), (55.788059, 37.534236), tower_id)
+            self.assertEqual(rec["geometry_quality"], "centroid", tower_id)
             self.assertEqual(rec["status"], "Строящийся", tower_id)
             self.assertEqual(rec["commission_year"], 2027, tower_id)
             self.assertTrue(rec["needs_review"], tower_id)
@@ -346,6 +352,7 @@ class MojibakeRegressionTest(unittest.TestCase):
         REPO_ROOT / "outputs" / "yandex_no_coords_candidates_2026-08-09.json",
         REPO_ROOT / "outputs" / "yandex_duplicate_coordinate_audit_2026-08-09.json",
         REPO_ROOT / "outputs" / "yandex_priority_recheck_2026-08-10.json",
+        REPO_ROOT / "outputs" / "yandex_full_recheck_2026-08-11.json",
     ]
 
     def test_no_mojibake_in_geocoding_related_files(self):
@@ -355,6 +362,121 @@ class MojibakeRegressionTest(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             matches = MOJIBAKE_RE.findall(text)
             self.assertEqual(matches, [], f"mojibake найден в {path.name}: {matches[:10]}")
+
+    def test_query_files_are_valid_utf8(self):
+        """Явная проверка декодируемости как UTF-8 (а не только отсутствия
+        конкретных mojibake-паттернов) — файлы аудита геокодера обязаны быть
+        читаемым UTF-8 без ошибок."""
+        for path in self.FILES_TO_SCAN:
+            if not path.exists():
+                continue
+            raw = path.read_bytes()
+            try:
+                raw.decode("utf-8", errors="strict")
+            except UnicodeDecodeError as e:
+                self.fail(f"{path.name} не валидный UTF-8: {e}")
+
+
+class Regeocode20260811BatchTest(unittest.TestCase):
+    """Партия 2026-08-11: полный повтор геокодирования 210 объектов (82
+    no_coords + 76 из аудита дублей-координат + доп. многокорпусные семьи)
+    после исправления mojibake. 15 координат приняты как exact, 12 — как
+    centroid (общий адрес квартала/корпуса, не различает здания), 183
+    отклонены строгими критериями (регион/улица/дом/корпус/kind)."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.no_coords = cls.payload["no_coords"]
+
+    def test_exact_fixes_are_not_shared_between_siblings(self):
+        """geometry_quality=exact допустим только когда координата уникальна
+        для здания — ни один exact-объект не должен делить точку с другим
+        exact-объектом того же прогона (иначе это centroid, а не exact)."""
+        by_id = {r["id"]: r for r in self.projects}
+        exact_ids = [
+            "OBJ-0089", "OBJ-0103", "OBJ-0120", "OBJ-0193", "OBJ-0223",
+            "OBJ-0485", "OBJ-0501", "OBJ-0548", "OBJ-0567", "OBJ-0587",
+            "OBJ-0637", "OBJ-0645", "OBJ-0652", "OBJ-0672", "OBJ-0693",
+        ]
+        points = []
+        for object_id in exact_ids:
+            self.assertIn(object_id, by_id, object_id)
+            rec = by_id[object_id]
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+            points.append((round(rec["lat"], 6), round(rec["lng"], 6)))
+        # FRAME WORKPLACE (OBJ-0103) и его дубль-запись (OBJ-0548) — одно
+        # реальное здание под двумя строками исходника, законно совпадают;
+        # "17-й проезд Марьиной Рощи, 9" (OBJ-0193/OBJ-0485) — то же самое.
+        allowed_shared = {points[1], points[3]}  # FRAME WORKPLACE / Edel пары
+        dupes = {p for p in points if points.count(p) > 1}
+        self.assertTrue(dupes.issubset(allowed_shared), f"неожиданные общие точки: {dupes - allowed_shared}")
+
+    def test_centroid_fixes_are_not_marked_exact(self):
+        """12 записей, где адрес общий на несколько корпусов/башен, обязаны
+        иметь geometry_quality=centroid, а не exact — иначе карта соврёт, что
+        координата относится к конкретному зданию."""
+        by_id = {r["id"]: r for r in self.projects}
+        centroid_ids = [
+            "OBJ-0649", "OBJ-0655",
+            "OBJ-0750", "OBJ-0751", "OBJ-0754", "OBJ-0755", "OBJ-0760",
+            "OBJ-0761", "OBJ-0764", "OBJ-0765", "OBJ-0767", "OBJ-0779",
+        ]
+        for object_id in centroid_ids:
+            self.assertIn(object_id, by_id, object_id)
+            self.assertEqual(by_id[object_id]["geometry_quality"], "centroid", object_id)
+            self.assertNotEqual(by_id[object_id]["geometry_quality"], "exact", object_id)
+
+    def test_icity_towers_share_point_but_keep_separate_ids(self):
+        by_id = {r["id"]: r for r in self.projects}
+        time_tower = by_id["OBJ-0649"]
+        space_tower = by_id["OBJ-0655"]
+        self.assertEqual((time_tower["lat"], time_tower["lng"]), (space_tower["lat"], space_tower["lng"]))
+        self.assertEqual(time_tower["geometry_quality"], "centroid")
+        self.assertEqual(space_tower["geometry_quality"], "centroid")
+        self.assertNotEqual(time_tower["id"], space_tower["id"])
+
+    def test_sbercity_prokshino_riverpark_stay_unresolved(self):
+        """СберСити (kind=district у всех кандидатов), Прокшино БК (адрес без
+        улицы/дома) и Ривер Парк (формат «зу N/M» не сопоставим с домом) не
+        прошли строгие критерии в этой партии — координаты не присвоены/не
+        изменены по догадке. СберСити уже был на centroid с прошлой сессии
+        (data/future_projects.json), поэтому остаётся в projects без
+        изменений; Прокшино БК и Ривер Парк никогда не имели координаты и
+        остаются в no_coords."""
+        no_coords_ids = {r["id"] for r in self.no_coords}
+        must_stay_no_coords = [
+            "OBJ-0691", "OBJ-0694", "OBJ-0710",
+            "OBJ-0713", "OBJ-0714", "OBJ-0723", "OBJ-0724", "OBJ-0753",
+        ]
+        for object_id in must_stay_no_coords:
+            self.assertIn(object_id, no_coords_ids, f"{object_id} должен остаться в no_coords")
+
+        projects_by_id = {r["id"]: r for r in self.projects}
+        sbercity_ids = ["OBJ-0070", "OBJ-0071", "OBJ-0072", "OBJ-0098", "OBJ-0171", "OBJ-0172", "OBJ-0337"]
+        for object_id in sbercity_ids:
+            self.assertIn(object_id, projects_by_id, object_id)
+            rec = projects_by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), (55.790337, 37.327399), object_id)
+            self.assertEqual(rec["geometry_quality"], "centroid", object_id)
+
+    def test_priority_seven_stayed_rejected_after_utf8_requery(self):
+        """7 приоритетных ID из задачи 2026-08-10/11 — все отклонены заново
+        живым запросом с чистым UTF-8, без изменения координат."""
+        by_id = {r["id"]: r for r in self.projects}
+        unchanged = {
+            "OBJ-0056": (55.72671, 37.453783),
+            "OBJ-0648": (55.7816602, 37.5840668),
+            "OBJ-0653": (55.7816602, 37.5840668),
+            "OBJ-0737": (55.6565173, 37.5341981),
+            "OBJ-0492": (55.759279, 37.529016),
+        }
+        for object_id, point in unchanged.items():
+            self.assertEqual((by_id[object_id]["lat"], by_id[object_id]["lng"]), point, object_id)
 
 
 if __name__ == "__main__":
