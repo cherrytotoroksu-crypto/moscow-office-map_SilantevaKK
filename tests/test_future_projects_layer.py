@@ -10,11 +10,21 @@
   4. Счётчики в шапке файла совпадают с фактической длиной массивов.
 """
 import json
+import re
 import unittest
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA = REPO_ROOT / "data" / "future_projects.json"
+
+# Признаки mojibake, найденные в аудите Yandex Geocoder 2026-08-09/10:
+#   - "??????," — "Москва," было потеряно при неверной кодировке и заменено
+#     плейсхолдером из вопросительных знаков (ровно по числу букв "Москва");
+#   - буквы сербского/македонского расширения кириллицы (Њњ Ѕѕ Јј Љљ Ѓѓ Ќќ) —
+#     в русском тексте не встречаются никогда; их появление означает, что
+#     UTF-8-байты кириллицы были один раз прочитаны как cp1251 и пересохранены
+#     в UTF-8 (классический двойной mojibake, напр. "РњРѕСЃРєРІР°" = "Москва").
+MOJIBAKE_RE = re.compile(r"\?{4,},|[ЊњЅѕЈјЉљЃѓЌќ]")
 
 ALLOWED_STATUSES = {
     "Анонсированный", "Проектный", "Замороженный",
@@ -308,6 +318,43 @@ class FutureProjectsLayerTest(unittest.TestCase):
         rec = next(r for r in self.no_coords if r["id"] == "OBJ-0244")
         self.assertTrue(rec["needs_review"])
         self.assertIn("исключение из офисного слоя", rec["verification_status"])
+
+    def test_partia_2026_08_10_aurus_confirmed_by_reverse_geocode(self):
+        """OBJ-0345/OBJ-0374 (Aurus/Страна.Сити): по прямому требованию задачи
+        совпадение с квартальным реестром само по себе не бралось за
+        доказательство — координата подтверждена отдельно, обратным
+        геокодированием (precision=exact) плюс независимым веб-источником."""
+        by_id = {r["id"]: r for r in self.projects}
+        for object_id in ("OBJ-0345", "OBJ-0374"):
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), (55.756883, 37.535549), object_id)
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+            self.assertIn("обратн", rec["coordinates_source"].lower(), object_id)
+            self.assertIn("2026-08-10", rec["review_notes"], object_id)
+
+
+class MojibakeRegressionTest(unittest.TestCase):
+    """Партия 2026-08-09 обнаружила, что query-строки в файлах аудита
+    Yandex Geocoder были испорчены mojibake ("Москва," → "??????,"), из-за
+    чего геокодер не был ограничен регионом. Партия 2026-08-10 это исправила
+    текстово и перепроверила 7 приоритетных ID напрямую через API. Этот тест
+    не даёт проблеме вернуться незамеченной при следующей генерации файлов."""
+
+    FILES_TO_SCAN = [
+        REPO_ROOT / "data" / "future_projects.json",
+        REPO_ROOT / "data" / "future_projects_verification_overrides.json",
+        REPO_ROOT / "outputs" / "yandex_no_coords_candidates_2026-08-09.json",
+        REPO_ROOT / "outputs" / "yandex_duplicate_coordinate_audit_2026-08-09.json",
+        REPO_ROOT / "outputs" / "yandex_priority_recheck_2026-08-10.json",
+    ]
+
+    def test_no_mojibake_in_geocoding_related_files(self):
+        for path in self.FILES_TO_SCAN:
+            if not path.exists():
+                continue
+            text = path.read_text(encoding="utf-8")
+            matches = MOJIBAKE_RE.findall(text)
+            self.assertEqual(matches, [], f"mojibake найден в {path.name}: {matches[:10]}")
 
 
 if __name__ == "__main__":
