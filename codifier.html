@@ -596,12 +596,25 @@ function registryByNameMap() {
 // у Space 1 на Композиторской/Балчуге/Меркурии/итд", это разные здания,
 // не корпуса одного). Проект — это здание/несколько башен ОДНОГО адреса,
 // не сеть точек одного оператора по всему городу.
-function registryByCanonicalNameMap() {
-  const byName = new Map();
+// Нормализация для сопоставления по bc/flex_site_label: регистр, ё/е,
+// повторные пробелы — не смысловые различия названия площадки.
+function normSiteKey(s) {
+  if (!s) return '';
+  return String(s).toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ').trim();
+}
+// Ключ для гибких офисов — flex_site_label (см. scripts/build_all_projects_layer.py:
+// derive_flex_site_label), а НЕ `${network} (${bc})`. Раньше сопоставление шло по
+// network+bc, но у сетевых операторов canonical_name собран из ПОЛНОГО названия
+// площадки ("WeWork Роза"), не бренда ("WeWork") — 429 из 739 квартальных
+// coworking-строк (58%) не находили пару. flex_site_label хранит именно ту часть
+// в скобках, что нужна для сопоставления по row.bc напрямую (обнаружено при
+// разборе подтверждённого пропуска СODE Novo, 2026-08-12).
+function registryByFlexSiteLabelMap() {
+  const byLabel = new Map();
   for (const r of allProjectsLayer) {
-    if (r.canonical_name) byName.set(r.canonical_name, r);
+    if (r.flex_site_label) byLabel.set(normSiteKey(r.flex_site_label), r);
   }
-  return byName;
+  return byLabel;
 }
 function applyRegistryMatch(row, match) {
   row.canonical_project_id = match ? match.canonical_project_id : null;
@@ -630,15 +643,15 @@ function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
   return applyRegistryMatch(row, match);
 }
 // Гибкие офисы: имя строки (row.name) у сетевых операторов — это бренд, не
-// адрес (см. комментарий у registryByCanonicalNameMap). Сопоставляем по
-// "оператор (объект)" — совпадает с тем, как реестр называет сайты вида
-// "Space 1 (Балчуг)" — один физический адрес = один проект, а не вся сеть
-// оператора. Без совпадения — canonical_project_id остаётся пустым
-// (честно "не сопоставлено"), а не подставляется первый попавшийся с тем
-// же брендом.
-function joinFlexRegistryFields(row, byCanonicalName) {
-  const siteKey = row.network && row.bc ? `${row.network} (${row.bc})` : null;
-  const match = siteKey ? byCanonicalName.get(siteKey) : null;
+// адрес (см. комментарий у registryByNameMap). Сопоставляем по
+// row.bc напрямую (нормализовано) против flex_site_label реестра — bc уже
+// является уникальным описанием конкретной площадки ("Балчуг", "Долгоруковская
+// 21"), а не сети оператора целиком. Без совпадения — canonical_project_id
+// остаётся пустым (честно "не сопоставлено"), а не подставляется первый
+// попавшийся с тем же брендом.
+function joinFlexRegistryFields(row, byFlexSiteLabel) {
+  const key = row.bc ? normSiteKey(row.bc) : null;
+  const match = key ? byFlexSiteLabel.get(key) : null;
   return applyRegistryMatch(row, match);
 }
 
@@ -886,8 +899,8 @@ async function loadFlexOperators(quarterId) {
 
 async function loadFlexLots(quarterId) {
   const rows = await fetchFlexRowsRaw(quarterId);
-  const byCanonicalName = registryByCanonicalNameMap();
-  for (const row of rows) joinFlexRegistryFields(row, byCanonicalName);
+  const byFlexSiteLabel = registryByFlexSiteLabelMap();
+  for (const row of rows) joinFlexRegistryFields(row, byFlexSiteLabel);
   state.flex_lots.rows = rows;
   if (!suppressURLSync) { state.flex_lots.filters = {}; state.flex_lots.sort = {key:null, dir:1}; state.flex_lots.page = 1; }
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;

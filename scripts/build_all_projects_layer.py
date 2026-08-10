@@ -182,6 +182,23 @@ def derive_confidence_and_status(name, colormap):
     return "medium", "accepted"  # давно существующая, не флагованная запись — не 'unverified' (это не новый внешний кандидат)
 
 
+def derive_flex_site_label(name, name_orig):
+    """Для гибких офисов имя строится как "<бренд/название площадки> (<site>)"
+    — извлекаем именно <site> механически (по префиксу name_orig), а не
+    регэкспом от конца строки. Регэксп на конце строки ломается, когда сам
+    <site> тоже содержит скобки (напр. name_orig="SOK", name="SOK (SOK Сити
+    (3 и 4 этаж))" — site="SOK Сити (3 и 4 этаж)"), поэтому раньше это поле
+    не считалось вовсе. См. scripts/_tmp_join_key_audit_2026-08-12 (был найден
+    как причина, почему codifier.html не сопоставлял ~58% coworking-строк с
+    реестром — ключ строился как f"{network} ({bc})", а не по site-label)."""
+    if not name or not name_orig:
+        return None
+    prefix = name_orig + " ("
+    if name.startswith(prefix) and name.endswith(")"):
+        return name[len(prefix):-1]
+    return None
+
+
 BADAEVSKY_IDS = {
     "Бадаевский Западная лента": ("badaevsky", "badaevsky-west", "building"),
     "Бадаевский Восточная лента": ("badaevsky", "badaevsky-east", "building"),
@@ -229,6 +246,7 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "entity_grain": entity_grain,
         "raw_name": name_orig,
         "canonical_name": name,
+        "flex_site_label": derive_flex_site_label(name, name_orig),
         "aliases": [] if name == name_orig else [name_orig],
         "developer": row.get("developer"),
         "address": row.get("address"),

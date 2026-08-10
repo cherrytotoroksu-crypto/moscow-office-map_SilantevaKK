@@ -43,7 +43,8 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-2",
@@ -78,7 +79,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -88,8 +89,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-3",
@@ -124,7 +126,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -134,8 +136,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Белая Площадь"
   },
   {
     "canonical_project_id": "proj-4",
@@ -170,7 +173,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -180,8 +183,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Аркус 3"
   },
   {
     "canonical_project_id": "proj-5",
@@ -216,7 +220,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -226,8 +230,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Большая Якиманка 26"
   },
   {
     "canonical_project_id": "proj-6",
@@ -262,7 +267,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -272,8 +277,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Смоленский Пассаж 1"
   },
   {
     "canonical_project_id": "proj-7",
@@ -308,7 +314,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -318,8 +324,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Сириус Парк"
   },
   {
     "canonical_project_id": "proj-8",
@@ -354,7 +361,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -364,8 +371,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-9",
@@ -400,7 +408,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -410,8 +418,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-10",
@@ -446,7 +455,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -456,8 +465,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Газетный"
   },
   {
     "canonical_project_id": "proj-11",
@@ -492,7 +502,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -502,8 +512,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Порта"
   },
   {
     "canonical_project_id": "proj-12",
@@ -538,7 +549,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -548,8 +559,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Ходынка"
   },
   {
     "canonical_project_id": "proj-13",
@@ -601,7 +613,8 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-14",
@@ -656,7 +669,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-15",
@@ -691,7 +705,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -701,8 +715,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Black&White"
   },
   {
     "canonical_project_id": "proj-16",
@@ -737,7 +752,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -747,8 +762,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-17",
@@ -783,7 +799,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -793,8 +809,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Signature Столешников, 11"
   },
   {
     "canonical_project_id": "proj-18",
@@ -829,7 +846,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -839,8 +856,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Пр. Мира , 40"
   },
   {
     "canonical_project_id": "proj-19",
@@ -893,7 +911,8 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-20",
@@ -946,7 +965,8 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-21",
@@ -981,7 +1001,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -991,8 +1011,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Сретенский б-р, 5"
   },
   {
     "canonical_project_id": "proj-22",
@@ -1048,7 +1069,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-23",
@@ -1083,7 +1105,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1093,8 +1115,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Сокольники"
   },
   {
     "canonical_project_id": "proj-24",
@@ -1129,7 +1152,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1139,8 +1162,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Газетный"
   },
   {
     "canonical_project_id": "proj-25",
@@ -1175,7 +1199,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1185,8 +1209,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Порта"
   },
   {
     "canonical_project_id": "proj-26",
@@ -1221,7 +1246,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1231,8 +1256,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Ходынка"
   },
   {
     "canonical_project_id": "proj-27",
@@ -1267,7 +1293,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1277,8 +1303,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-28",
@@ -1313,7 +1340,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1323,8 +1350,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Белая Площадь"
   },
   {
     "canonical_project_id": "proj-29",
@@ -1359,7 +1387,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1369,8 +1397,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Аркус 3"
   },
   {
     "canonical_project_id": "proj-30",
@@ -1405,7 +1434,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1415,8 +1444,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Большая Якиманка 26"
   },
   {
     "canonical_project_id": "proj-31",
@@ -1460,7 +1490,8 @@
     "public_visibility": "public",
     "first_seen_at": null,
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-32",
@@ -1495,7 +1526,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1505,8 +1536,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "1-й Щемиловский 16с2"
   },
   {
     "canonical_project_id": "proj-33",
@@ -1564,7 +1596,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-34",
@@ -1599,7 +1632,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1609,8 +1642,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "РТС Волгоградский"
   },
   {
     "canonical_project_id": "proj-35",
@@ -1645,7 +1679,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1655,8 +1689,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Заречная 2/1"
   },
   {
     "canonical_project_id": "proj-36",
@@ -1691,7 +1726,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1701,8 +1736,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Коммуны, 87"
   },
   {
     "canonical_project_id": "proj-39",
@@ -1746,7 +1782,8 @@
     "public_visibility": "public",
     "first_seen_at": null,
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-40",
@@ -1790,7 +1827,8 @@
     "public_visibility": "public",
     "first_seen_at": null,
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-41",
@@ -1834,7 +1872,8 @@
     "public_visibility": "public",
     "first_seen_at": null,
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-42",
@@ -1869,7 +1908,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1879,8 +1918,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "БЦ Известия"
   },
   {
     "canonical_project_id": "proj-43",
@@ -1915,7 +1955,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1925,8 +1965,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "ТЦ РИО на Ленинском"
   },
   {
     "canonical_project_id": "proj-44",
@@ -1961,7 +2002,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -1971,8 +2012,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Квартал Вэст"
   },
   {
     "canonical_project_id": "proj-45",
@@ -2007,7 +2049,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2017,8 +2059,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Signature Столешников, 11"
   },
   {
     "canonical_project_id": "proj-46",
@@ -2053,7 +2096,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2063,8 +2106,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Проспект Мира, 40"
   },
   {
     "canonical_project_id": "proj-47",
@@ -2099,7 +2143,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2109,8 +2153,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "РТС Волгоградский"
   },
   {
     "canonical_project_id": "proj-48",
@@ -2145,7 +2190,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2155,8 +2200,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Павелецкая Плаза (А)"
   },
   {
     "canonical_project_id": "proj-49",
@@ -2191,7 +2237,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2201,8 +2247,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Павелецкая Плаза (А)"
   },
   {
     "canonical_project_id": "proj-50",
@@ -2237,7 +2284,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -2247,8 +2294,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Сретенка"
   },
   {
     "canonical_project_id": "proj-51",
@@ -2283,7 +2331,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2293,8 +2341,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Сити (3 и 4 этаж)"
   },
   {
     "canonical_project_id": "proj-52",
@@ -2329,7 +2378,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2339,8 +2388,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Арена Парк (Рыбаков Тауэр)"
   },
   {
     "canonical_project_id": "proj-53",
@@ -2375,7 +2425,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2385,8 +2435,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Арена Парк 2"
   },
   {
     "canonical_project_id": "proj-54",
@@ -2421,7 +2472,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2431,8 +2482,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Сады Пекина"
   },
   {
     "canonical_project_id": "proj-55",
@@ -2467,7 +2519,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2477,8 +2529,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Земляной Вал"
   },
   {
     "canonical_project_id": "proj-56",
@@ -2513,7 +2566,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2523,8 +2576,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Лужники"
   },
   {
     "canonical_project_id": "proj-57",
@@ -2576,7 +2630,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-58",
@@ -2611,7 +2666,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2621,8 +2676,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-59",
@@ -2657,7 +2713,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2667,8 +2723,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Останкино"
   },
   {
     "canonical_project_id": "proj-60",
@@ -2703,7 +2760,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2713,8 +2770,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-61",
@@ -2749,7 +2807,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2759,8 +2817,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новослободская"
   },
   {
     "canonical_project_id": "proj-62",
@@ -2795,7 +2854,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2805,8 +2864,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "GrowUp на Павелецкой"
   },
   {
     "canonical_project_id": "proj-63",
@@ -2841,7 +2901,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2851,8 +2911,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Газетный 17"
   },
   {
     "canonical_project_id": "proj-64",
@@ -2887,7 +2948,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2897,8 +2958,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Авиаконструктора Микояна"
   },
   {
     "canonical_project_id": "proj-65",
@@ -2933,7 +2995,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2943,8 +3005,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Белая Площадь"
   },
   {
     "canonical_project_id": "proj-66",
@@ -2979,7 +3042,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -2989,8 +3052,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Авиаконструктора Микояна"
   },
   {
     "canonical_project_id": "proj-67",
@@ -3025,7 +3089,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3035,8 +3099,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Останкино"
   },
   {
     "canonical_project_id": "proj-68",
@@ -3071,7 +3136,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3081,8 +3146,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Кузнецкий Мост"
   },
   {
     "canonical_project_id": "proj-69",
@@ -3117,7 +3183,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3127,8 +3193,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-70",
@@ -3163,7 +3230,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3173,8 +3240,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-71",
@@ -3209,7 +3277,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3219,8 +3287,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новослободская"
   },
   {
     "canonical_project_id": "proj-72",
@@ -3267,7 +3336,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-73",
@@ -3315,7 +3385,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-74",
@@ -3350,7 +3421,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3360,8 +3431,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-75",
@@ -3396,7 +3468,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -3406,8 +3478,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-76",
@@ -3442,7 +3515,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3452,8 +3525,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-77",
@@ -3507,7 +3581,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-78",
@@ -3542,7 +3617,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3552,8 +3627,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "1-й Щемиловский 16с2"
   },
   {
     "canonical_project_id": "proj-79",
@@ -3588,7 +3664,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3598,8 +3674,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Porta"
   },
   {
     "canonical_project_id": "proj-80",
@@ -3650,7 +3727,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-81",
@@ -3685,7 +3763,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3695,8 +3773,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Арена Парк 2"
   },
   {
     "canonical_project_id": "proj-82",
@@ -3731,7 +3810,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3741,8 +3820,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Арена Парк (Рыбаков Тауэр)"
   },
   {
     "canonical_project_id": "proj-83",
@@ -3777,7 +3857,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3787,8 +3867,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Poklonka Place"
   },
   {
     "canonical_project_id": "proj-84",
@@ -3823,7 +3904,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -3833,8 +3914,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Poklonka Place"
   },
   {
     "canonical_project_id": "proj-85",
@@ -3893,7 +3975,8 @@
     "public_visibility": "public",
     "first_seen_at": "202112",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-86",
@@ -3947,7 +4030,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-87",
@@ -3999,7 +4083,8 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-88",
@@ -4047,7 +4132,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-89",
@@ -4095,7 +4181,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-90",
@@ -4143,7 +4230,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-91",
@@ -4196,7 +4284,8 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-92",
@@ -4231,7 +4320,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -4241,8 +4330,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Онегин"
   },
   {
     "canonical_project_id": "proj-93",
@@ -4277,7 +4367,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -4287,8 +4377,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Домников"
   },
   {
     "canonical_project_id": "proj-94",
@@ -4323,7 +4414,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -4333,8 +4424,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Вивальди Плаза"
   },
   {
     "canonical_project_id": "proj-95",
@@ -4391,7 +4483,8 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-96",
@@ -4445,7 +4538,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-97",
@@ -4492,7 +4586,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-98",
@@ -4544,7 +4639,8 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-99",
@@ -4579,7 +4675,7 @@
       "sale"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -4595,8 +4691,9 @@
     "qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": "202503",
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "бывший — Магистральная ул., 12"
   },
   {
     "canonical_project_id": "proj-100",
@@ -4632,7 +4729,7 @@
       "rent"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -4651,8 +4748,9 @@
     "qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": "202407",
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "бывший — BusinessClass Ходынка"
   },
   {
     "canonical_project_id": "proj-101",
@@ -4709,7 +4807,8 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-102",
@@ -4770,7 +4869,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-103",
@@ -4830,7 +4930,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-104",
@@ -4890,7 +4991,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-105",
@@ -4925,7 +5027,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -4935,8 +5037,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Остоженка"
   },
   {
     "canonical_project_id": "proj-106",
@@ -4988,7 +5091,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-107",
@@ -5023,7 +5127,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5033,8 +5137,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Арма"
   },
   {
     "canonical_project_id": "proj-108",
@@ -5086,7 +5191,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-109",
@@ -5145,7 +5251,8 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-110",
@@ -5180,7 +5287,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -5190,8 +5297,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Сретенка"
   },
   {
     "canonical_project_id": "proj-111",
@@ -5226,7 +5334,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5236,8 +5344,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "ул. Воронцовская, д. 49/28"
   },
   {
     "canonical_project_id": "proj-112",
@@ -5288,7 +5397,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-113",
@@ -5336,7 +5446,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-114",
@@ -5371,7 +5482,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5381,8 +5492,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "КМ19"
   },
   {
     "canonical_project_id": "proj-115",
@@ -5432,7 +5544,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-116",
@@ -5467,7 +5580,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5477,8 +5590,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Композиторская"
   },
   {
     "canonical_project_id": "proj-117",
@@ -5528,7 +5642,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-118",
@@ -5563,7 +5678,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5573,8 +5688,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Даниловская Мануфактура"
   },
   {
     "canonical_project_id": "proj-119",
@@ -5609,7 +5725,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5619,8 +5735,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Гостиница Москва"
   },
   {
     "canonical_project_id": "proj-120",
@@ -5668,7 +5785,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-121",
@@ -5703,7 +5821,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5713,8 +5831,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Милютинский"
   },
   {
     "canonical_project_id": "proj-122",
@@ -5769,7 +5888,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-123",
@@ -5804,7 +5924,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5814,8 +5934,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Полянка"
   },
   {
     "canonical_project_id": "proj-124",
@@ -5866,7 +5987,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-125",
@@ -5901,7 +6023,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -5911,8 +6033,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Меркурий"
   },
   {
     "canonical_project_id": "proj-126",
@@ -5965,7 +6088,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-127",
@@ -6000,7 +6124,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6010,8 +6134,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Фабрика Станиславского"
   },
   {
     "canonical_project_id": "proj-128",
@@ -6065,7 +6190,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-129",
@@ -6128,7 +6254,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-130",
@@ -6163,7 +6290,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6173,8 +6300,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Арбат"
   },
   {
     "canonical_project_id": "proj-131",
@@ -6209,7 +6337,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6219,8 +6347,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Аркус 3"
   },
   {
     "canonical_project_id": "proj-132",
@@ -6269,7 +6398,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-133",
@@ -6304,7 +6434,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6314,8 +6444,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Большая Якиманка 26"
   },
   {
     "canonical_project_id": "proj-134",
@@ -6365,7 +6496,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-135",
@@ -6400,7 +6532,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6410,8 +6542,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Белая Площадь площадка закрыта"
   },
   {
     "canonical_project_id": "proj-136",
@@ -6462,7 +6595,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-137",
@@ -6497,7 +6631,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -6507,8 +6641,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-138",
@@ -6563,7 +6698,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-139",
@@ -6612,7 +6748,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-140",
@@ -6647,7 +6784,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6657,8 +6794,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Вивальди"
   },
   {
     "canonical_project_id": "proj-141",
@@ -6707,7 +6845,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-142",
@@ -6742,7 +6881,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6752,8 +6891,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-143",
@@ -6788,7 +6928,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6798,8 +6938,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Refolio Достоевский"
   },
   {
     "canonical_project_id": "proj-144",
@@ -6853,7 +6994,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-145",
@@ -6888,7 +7030,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -6898,8 +7040,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Кадашевская наб., 6"
   },
   {
     "canonical_project_id": "proj-146",
@@ -6947,7 +7090,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-147",
@@ -6999,7 +7143,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-148",
@@ -7034,7 +7179,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7044,8 +7189,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "МФК Савеловский сити"
   },
   {
     "canonical_project_id": "proj-149",
@@ -7104,7 +7250,8 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-08-12",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": "Долгоруковская 21"
   },
   {
     "canonical_project_id": "proj-150",
@@ -7154,7 +7301,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-151",
@@ -7189,7 +7337,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7199,8 +7347,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "1-й Щемиловский 16с2"
   },
   {
     "canonical_project_id": "proj-152",
@@ -7250,7 +7399,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-153",
@@ -7299,7 +7449,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-154",
@@ -7334,7 +7485,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7344,8 +7495,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "ВТБ Арена стр 8"
   },
   {
     "canonical_project_id": "proj-155",
@@ -7399,7 +7551,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-156",
@@ -7434,7 +7587,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7444,8 +7597,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "1 шипковский пер. 5"
   },
   {
     "canonical_project_id": "proj-157",
@@ -7480,7 +7634,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7490,8 +7644,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Дубинин Скай"
   },
   {
     "canonical_project_id": "proj-158",
@@ -7545,7 +7700,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-159",
@@ -7596,7 +7752,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-160",
@@ -7631,7 +7788,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -7641,8 +7798,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Галерея Актер"
   },
   {
     "canonical_project_id": "proj-161",
@@ -7690,7 +7848,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-162",
@@ -7725,7 +7884,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7735,8 +7894,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Газетный 17"
   },
   {
     "canonical_project_id": "proj-163",
@@ -7771,7 +7931,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7781,8 +7941,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Арена Парк"
   },
   {
     "canonical_project_id": "proj-164",
@@ -7832,7 +7993,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-165",
@@ -7891,7 +8053,8 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-166",
@@ -7926,7 +8089,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7936,8 +8099,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Рыбаков Тауэр"
   },
   {
     "canonical_project_id": "proj-167",
@@ -7972,7 +8136,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -7982,8 +8146,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Земляной Вал"
   },
   {
     "canonical_project_id": "proj-168",
@@ -8033,7 +8198,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-169",
@@ -8068,7 +8234,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8078,8 +8244,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Сады Пекина"
   },
   {
     "canonical_project_id": "proj-170",
@@ -8141,7 +8308,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-171",
@@ -8195,7 +8363,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-172",
@@ -8230,7 +8399,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8240,8 +8409,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "SOK Сити (3 и 4 этаж)"
   },
   {
     "canonical_project_id": "proj-173",
@@ -8291,7 +8461,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-174",
@@ -8326,7 +8497,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8336,8 +8507,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Poklonka Place"
   },
   {
     "canonical_project_id": "proj-175",
@@ -8385,7 +8557,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-176",
@@ -8429,7 +8602,8 @@
     "public_visibility": "public",
     "first_seen_at": null,
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-177",
@@ -8488,7 +8662,8 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-178",
@@ -8523,7 +8698,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8533,8 +8708,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Deworkacy Савинский"
   },
   {
     "canonical_project_id": "proj-179",
@@ -8569,7 +8745,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8579,8 +8755,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Империя"
   },
   {
     "canonical_project_id": "proj-180",
@@ -8635,7 +8812,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-181",
@@ -8698,7 +8876,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-182",
@@ -8733,7 +8912,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8743,8 +8922,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Никольская"
   },
   {
     "canonical_project_id": "proj-183",
@@ -8779,7 +8959,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8789,8 +8969,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Федерация (Сити)"
   },
   {
     "canonical_project_id": "proj-184",
@@ -8852,7 +9033,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-185",
@@ -8901,7 +9083,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-186",
@@ -8936,7 +9119,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8946,8 +9129,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-187",
@@ -8982,7 +9166,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -8992,8 +9176,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Цветной бульвар"
   },
   {
     "canonical_project_id": "proj-188",
@@ -9044,7 +9229,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-189",
@@ -9092,7 +9278,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-190",
@@ -9127,7 +9314,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9137,8 +9324,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Останкино"
   },
   {
     "canonical_project_id": "proj-191",
@@ -9173,7 +9361,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9183,8 +9371,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Бригантина"
   },
   {
     "canonical_project_id": "proj-192",
@@ -9236,7 +9425,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-193",
@@ -9271,7 +9461,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9281,8 +9471,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-194",
@@ -9345,7 +9536,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-195",
@@ -9380,7 +9572,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9390,8 +9582,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Новослободская"
   },
   {
     "canonical_project_id": "proj-196",
@@ -9449,7 +9642,8 @@
     "public_visibility": "public",
     "first_seen_at": "202308",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-197",
@@ -9503,7 +9697,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-198",
@@ -9538,7 +9733,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9548,8 +9743,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Кузнецкий Мост"
   },
   {
     "canonical_project_id": "proj-199",
@@ -9584,7 +9780,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9594,8 +9790,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Зубовский 17"
   },
   {
     "canonical_project_id": "proj-200",
@@ -9645,7 +9842,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-201",
@@ -9707,7 +9905,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-202",
@@ -9742,7 +9941,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9752,8 +9951,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Федерация (Сити)"
   },
   {
     "canonical_project_id": "proj-203",
@@ -9788,7 +9988,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9798,8 +9998,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Нео Гео"
   },
   {
     "canonical_project_id": "proj-204",
@@ -9847,7 +10048,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-205",
@@ -9901,7 +10103,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-206",
@@ -9936,7 +10139,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9946,8 +10149,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "ФОК"
   },
   {
     "canonical_project_id": "proj-207",
@@ -9982,7 +10186,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -9992,8 +10196,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Workki Комсомольская"
   },
   {
     "canonical_project_id": "proj-208",
@@ -10041,7 +10246,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-209",
@@ -10092,7 +10298,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-210",
@@ -10127,7 +10334,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10137,8 +10344,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "На Тульской"
   },
   {
     "canonical_project_id": "proj-211",
@@ -10173,7 +10381,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10183,8 +10391,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "DM Tower"
   },
   {
     "canonical_project_id": "proj-212",
@@ -10235,7 +10444,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-213",
@@ -10270,7 +10480,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10280,8 +10490,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Парк Горького"
   },
   {
     "canonical_project_id": "proj-214",
@@ -10329,7 +10540,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-215",
@@ -10364,7 +10576,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10374,8 +10586,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Гринвуд"
   },
   {
     "canonical_project_id": "proj-216",
@@ -10436,7 +10649,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "badaevsky",
@@ -10489,7 +10703,8 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-218",
@@ -10524,7 +10739,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10534,8 +10749,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "на Басманной"
   },
   {
     "canonical_project_id": "proj-219",
@@ -10570,7 +10786,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10580,8 +10796,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Проспект Мира, 40"
   },
   {
     "canonical_project_id": "proj-220",
@@ -10635,7 +10852,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-221",
@@ -10685,7 +10903,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-222",
@@ -10720,7 +10939,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10730,8 +10949,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Капитолий Вернадского"
   },
   {
     "canonical_project_id": "proj-223",
@@ -10766,7 +10986,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10776,8 +10996,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Citydel"
   },
   {
     "canonical_project_id": "proj-224",
@@ -10826,7 +11047,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-225",
@@ -10861,7 +11083,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -10871,8 +11093,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Авион"
   },
   {
     "canonical_project_id": "proj-226",
@@ -10920,7 +11143,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-227",
@@ -10973,7 +11197,8 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-228",
@@ -11008,7 +11233,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11018,8 +11243,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Федерация (Сити)"
   },
   {
     "canonical_project_id": "proj-229",
@@ -11054,7 +11280,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11064,8 +11290,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "White Stone"
   },
   {
     "canonical_project_id": "proj-230",
@@ -11113,7 +11340,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-231",
@@ -11162,7 +11390,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-232",
@@ -11197,7 +11426,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11207,8 +11436,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Ролл Холл"
   },
   {
     "canonical_project_id": "proj-233",
@@ -11243,7 +11473,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
@@ -11253,8 +11483,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-234",
@@ -11303,7 +11534,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-235",
@@ -11338,7 +11570,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11348,8 +11580,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Black&White"
   },
   {
     "canonical_project_id": "proj-236",
@@ -11400,7 +11633,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-237",
@@ -11449,7 +11683,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-238",
@@ -11484,7 +11719,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11494,8 +11729,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Симонов"
   },
   {
     "canonical_project_id": "proj-239",
@@ -11530,7 +11766,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11540,8 +11776,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Фили Град"
   },
   {
     "canonical_project_id": "proj-240",
@@ -11590,7 +11827,8 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-241",
@@ -11641,7 +11879,8 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-242",
@@ -11676,7 +11915,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11686,8 +11925,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Signature Столешников, 11"
   },
   {
     "canonical_project_id": "proj-243",
@@ -11722,7 +11962,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11732,8 +11972,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Риверсайд Тауэрс"
   },
   {
     "canonical_project_id": "proj-244",
@@ -11796,7 +12037,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-245",
@@ -11844,7 +12086,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-246",
@@ -11879,7 +12122,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11889,8 +12132,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Садовая Плаза"
   },
   {
     "canonical_project_id": "proj-247",
@@ -11940,7 +12184,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-248",
@@ -11975,7 +12220,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -11985,8 +12230,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Овчинниковский"
   },
   {
     "canonical_project_id": "proj-249",
@@ -12034,7 +12280,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-250",
@@ -12093,7 +12340,8 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-251",
@@ -12140,7 +12388,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-252",
@@ -12188,7 +12437,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-253",
@@ -12235,7 +12485,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-254",
@@ -12282,7 +12533,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-255",
@@ -12317,7 +12569,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -12327,8 +12579,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Павелецкая Плаза (В)"
   },
   {
     "canonical_project_id": "proj-256",
@@ -12363,7 +12616,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -12373,8 +12626,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Павелецкая Плаза (А)"
   },
   {
     "canonical_project_id": "proj-257",
@@ -12409,7 +12663,7 @@
       "coworking"
     ],
     "source": "classifier.html",
-    "source_date": "2026-07-31",
+    "source_date": "2026-08-12",
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
@@ -12419,8 +12673,9 @@
     "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
     "public_visibility": "public",
     "first_seen_at": null,
-    "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "last_verified_at": "2026-08-12",
+    "source_count": 1,
+    "flex_site_label": "Башня на набережной (В)"
   },
   {
     "canonical_project_id": "proj-258",
@@ -12467,7 +12722,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-259",
@@ -12514,7 +12770,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-260",
@@ -12562,7 +12819,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-261",
@@ -12609,7 +12867,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-262",
@@ -12656,7 +12915,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-263",
@@ -12702,7 +12962,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-264",
@@ -12749,7 +13010,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-265",
@@ -12796,7 +13058,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-266",
@@ -12843,7 +13106,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-267",
@@ -12889,7 +13153,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-268",
@@ -12935,7 +13200,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-269",
@@ -12981,7 +13247,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-270",
@@ -13027,7 +13294,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "badaevsky",
@@ -13080,7 +13348,8 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-272",
@@ -13126,7 +13395,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-273",
@@ -13174,7 +13444,8 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-274",
@@ -13238,7 +13509,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-275",
@@ -13300,7 +13572,8 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-276",
@@ -13351,7 +13624,8 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-277",
@@ -13406,7 +13680,8 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-278",
@@ -13453,7 +13728,8 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   },
   {
     "canonical_project_id": "proj-279",
@@ -13499,6 +13775,7 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "flex_site_label": null
   }
 ]
