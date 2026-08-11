@@ -3,8 +3,8 @@
  "source_sheet": "Все объекты (чистый)",
  "generated_by": "scripts/export_future_projects.py",
  "total": 756,
- "with_coords": 694,
- "without_coords": 62,
+ "with_coords": 698,
+ "without_coords": 58,
  "duplicate_count": 15,
  "projects": [
   {
@@ -3235,6 +3235,34 @@
    "verified_at": "2026-08-06"
   },
   {
+   "id": "OBJ-0143",
+   "name": "Деловой комплекс на территории грузового двора \"Москва-Товарная-рязанская\"",
+   "address": "г. Москва, Спартаковская площадь, 1/7с16",
+   "developer": "Новая эра",
+   "gba": 113760.0,
+   "gla": 92100.096,
+   "cls": null,
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Проектный",
+   "lat": 55.77954,
+   "lng": 37.676304,
+   "verification_status": "Координата принята 2026-08-13: exact-совпадение по адресу, подтверждено независимым источником",
+   "confidence": "Средний",
+   "sources": [
+    "https://yandex.ru/maps/org/moskva_tovarnaya_ryazanskaya/1092763483/",
+    "https://t.me/stroi_news/5877"
+   ],
+   "conflicts": "developer: 2 знач.",
+   "merged_rows": 4,
+   "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные",
+   "geometry_quality": "exact",
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Спартаковская площадь, 1/7с16\"): ОТКЛОНЕНО — 'Спартаковская площадь, 1/7с16': улица не совпадает ('спартаковская площадь' != 'г москва спартаковская площадь'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "coordinates_source": "Yandex Geocoder (2026-08-13), kind=house, precision=exact, адрес «Спартаковская площадь, 1/7с16»; независимо подтверждено 2ГИС (55.779588, 37.676411, ~10 м)",
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0144",
    "name": "Технопарк \"Алкон Север\"",
    "address": "г. Москва, 3-й Балтийский пер., вл. 5",
@@ -3277,6 +3305,35 @@
    "geometry_quality": null,
    "needs_review": true,
    "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Нобеля ул.\"): ОТКЛОНЕНО — 'улица Нобеля': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0146",
+   "name": "Офисно-складской комплекс на 60-летия Октября",
+   "address": "г. Москва, проспект 60-летия Октября, 11Ас5",
+   "developer": "Хоумсклад",
+   "gba": null,
+   "gla": null,
+   "cls": null,
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Проектный",
+   "lat": 55.695606,
+   "lng": 37.581262,
+   "verification_status": "Координата принята 2026-08-13: exact-совпадение по адресу, подтверждено независимым источником",
+   "confidence": "Средний",
+   "sources": [
+    "https://m2data.net/ru/buildings/prospekt-60-letiya-oktyabrya-11as14",
+    "https://yandex.ru/maps/213/moscow/geo/prospekt_60_letiya_oktyabrya/8060754/",
+    "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82_60-%D0%BB%D0%B5%D1%82%D0%B8%D1%8F_%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)"
+   ],
+   "conflicts": null,
+   "merged_rows": 2,
+   "source_sheets": "будущие; будущие (old)",
+   "geometry_quality": "exact",
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, проспект 60-летия Октября, 11Ас5\"): ОТКЛОНЕНО — 'проспект 60-летия Октября, 11Ас5': улица не совпадает ('проспект 60-летия октября' != 'г москва проспект 60-летия октября'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "coordinates_source": "Yandex Geocoder (2026-08-13), kind=house, precision=exact, адрес «проспект 60-летия Октября, 11Ас5»; независимо сверено с координатой дома 11А (55.696022, 37.580589, ~55 м — соседнее строение того же комплекса)",
    "verified_at": "2026-08-06"
   },
   {
@@ -12981,6 +13038,31 @@
    "verified_at": "2026-08-06"
   },
   {
+   "id": "OBJ-0579",
+   "name": "Lucky, bldg 2",
+   "address": "2nd Zvenigorodskaya, 28",
+   "developer": "Vesper",
+   "gba": 4469.6,
+   "gla": 3477.0,
+   "cls": "A",
+   "commission_quarter": 1,
+   "commission_year": 2023,
+   "status": "Сданный",
+   "lat": 55.762885,
+   "lng": 37.557026,
+   "verification_status": "Координата принята 2026-08-13: exact-совпадение по адресу, подтверждено независимым источником с точностью до 2 м",
+   "confidence": "Высокий",
+   "sources": [],
+   "conflicts": null,
+   "merged_rows": 2,
+   "source_sheets": "Жилые, коммерческие; База",
+   "geometry_quality": "exact",
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 2nd Zvenigorodskaya, 28\"): ОТКЛОНЕНО — '2-я Звенигородская улица, 28': улица не совпадает ('2-я звенигородская улица' != '2nd zvenigorodskaya'); 'Москва': kind=locality (запрещённый тип); 'СНТ Москва, 28': регион не Москва (Орехово-Зуевский городской округ, Московская область, Россия); 'деревня Москва, 27': регион не Москва (Верхошижемск. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "coordinates_source": "Yandex Geocoder (2026-08-13), kind=house, precision=exact, адрес «2-я Звенигородская улица, 28»; независимо подтверждено 2ГИС (55.762876, 37.557003, ~2 м — практически точное совпадение)",
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0580",
    "name": "AFI square",
    "address": "Грузинский Вал ул., 7",
@@ -13175,6 +13257,33 @@
    "merged_rows": 2,
    "source_sheets": "Жилые, коммерческие; База",
    "geometry_quality": null
+  },
+  {
+   "id": "OBJ-0598",
+   "name": "4-ая Магистральная, вл. 7",
+   "address": "4-ая Магистральная, вл. 7",
+   "developer": "Аркс",
+   "gba": 115000.0,
+   "gla": null,
+   "cls": null,
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Анонсированный",
+   "lat": 55.773413,
+   "lng": 37.520303,
+   "verification_status": "Координата принята 2026-08-13: exact-совпадение по адресу, подтверждено независимым источником с точностью до 1 м",
+   "confidence": "Высокий",
+   "sources": [
+    "https://t.me/stroi_news/814"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "Большой Сити, проекты",
+   "geometry_quality": "exact",
+   "needs_review": true,
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 4-ая Магистральная, вл. 7\"): ОТКЛОНЕНО — '4-я Магистральная улица, 7с1': улица не совпадает ('4-я магистральная улица' != '4-ая магистральная'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "coordinates_source": "Yandex Geocoder (2026-08-13), kind=house, precision=exact, адрес «4-я Магистральная улица, вл. 7»; независимо подтверждено (55.773408, 37.520294, ~1 м — практически точное совпадение)",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0600",
@@ -16301,61 +16410,6 @@
  ],
  "no_coords": [
   {
-   "id": "OBJ-0143",
-   "name": "Деловой комплекс на территории грузового двора \"Москва-Товарная-рязанская\"",
-   "address": "г. Москва, Спартаковская площадь, 1/7с16",
-   "developer": "Новая эра",
-   "gba": 113760.0,
-   "gla": 92100.096,
-   "cls": null,
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Проектный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода, координаты; Сверить конфликты",
-   "confidence": "Низкий",
-   "sources": [
-    "https://yandex.ru/maps/org/moskva_tovarnaya_ryazanskaya/1092763483/",
-    "https://t.me/stroi_news/5877"
-   ],
-   "conflicts": "developer: 2 знач.",
-   "merged_rows": 4,
-   "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, Спартаковская площадь, 1/7с16\"): ОТКЛОНЕНО — 'Спартаковская площадь, 1/7с16': улица не совпадает ('спартаковская площадь' != 'г москва спартаковская площадь'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0146",
-   "name": "Офисно-складской комплекс на 60-летия Октября",
-   "address": "г. Москва, проспект 60-летия Октября, 11Ас5",
-   "developer": "Хоумсклад",
-   "gba": null,
-   "gla": null,
-   "cls": null,
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Проектный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: общая площадь, GLA, год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [
-    "https://m2data.net/ru/buildings/prospekt-60-letiya-oktyabrya-11as14",
-    "https://yandex.ru/maps/213/moscow/geo/prospekt_60_letiya_oktyabrya/8060754/",
-    "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82_60-%D0%BB%D0%B5%D1%82%D0%B8%D1%8F_%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)"
-   ],
-   "conflicts": null,
-   "merged_rows": 2,
-   "source_sheets": "будущие; будущие (old)",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, проспект 60-летия Октября, 11Ас5\"): ОТКЛОНЕНО — 'проспект 60-летия Октября, 11Ас5': улица не совпадает ('проспект 60-летия октября' != 'г москва проспект 60-летия октября'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
-   "verified_at": "2026-08-06"
-  },
-  {
    "id": "OBJ-0240",
    "name": "БЦ Artel",
    "address": null,
@@ -16467,7 +16521,7 @@
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "Проверить исходную строку: вероятно, жилой проект ошибочно классифицирован как БЦ",
+   "review_notes": "Проверить исходную строку: вероятно, жилой проект ошибочно классифицирован как БЦ. ПЕРЕПРОВЕРЕНО 2026-08-13: кандидат геокодера ведёт на дом 44 (ул. Малая Филёвская), а не на запрошенный 46 — координата не добавлена",
    "verified_at": "2026-08-06"
   },
   {
@@ -16608,7 +16662,7 @@
    "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, г. Москва, 8-я Текстильщиков ул.,\"): ОТКЛОНЕНО — '8-я улица Текстильщиков': kind=street (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-13: единственный кандидат Yandex Geocoder ведёт на дом 44, а не на запрошенный (в отсутствие номера дома в исходном адресе геокодер вернул street-level результат) — координата не добавлена",
    "verified_at": "2026-08-06"
   },
   {
@@ -16766,7 +16820,7 @@
    "source_sheets": "перспективные",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Кунцево, 59 км МКАД\"): ОТКЛОНЕНО — 'МКАД, 59-й километр': kind=street (запрещённый тип); 'МКАД, 59-й километр, внешняя сторона': kind=street (запрещённый тип); 'МКАД, 59-й километр, внутренняя сторона': kind=street (запрещённый тип); 'район Кунцево': kind=district (запрещённый тип); 'ЖК Кунцево': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-13: все кандидаты — участок МКАД (kind=street/district), центр трассы или административного района, не здания — координата не добавлена",
    "verified_at": "2026-08-06"
   },
   {
@@ -16796,56 +16850,6 @@
    "verified_at": "2026-08-06"
   },
   {
-   "id": "OBJ-0579",
-   "name": "Lucky, bldg 2",
-   "address": "2nd Zvenigorodskaya, 28",
-   "developer": "Vesper",
-   "gba": 4469.6,
-   "gla": 3477.0,
-   "cls": "A",
-   "commission_quarter": 1,
-   "commission_year": 2023,
-   "status": "Сданный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Нужно найти: координаты",
-   "confidence": "Низкий",
-   "sources": [],
-   "conflicts": null,
-   "merged_rows": 2,
-   "source_sheets": "Жилые, коммерческие; База",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 2nd Zvenigorodskaya, 28\"): ОТКЛОНЕНО — '2-я Звенигородская улица, 28': улица не совпадает ('2-я звенигородская улица' != '2nd zvenigorodskaya'); 'Москва': kind=locality (запрещённый тип); 'СНТ Москва, 28': регион не Москва (Орехово-Зуевский городской округ, Московская область, Россия); 'деревня Москва, 27': регион не Москва (Верхошижемск. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
-   "verified_at": "2026-08-06"
-  },
-  {
-   "id": "OBJ-0598",
-   "name": "4-ая Магистральная, вл. 7",
-   "address": "4-ая Магистральная, вл. 7",
-   "developer": "Аркс",
-   "gba": 115000.0,
-   "gla": null,
-   "cls": null,
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Анонсированный",
-   "lat": null,
-   "lng": null,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода, координаты",
-   "confidence": "Низкий",
-   "sources": [
-    "https://t.me/stroi_news/814"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "Большой Сити, проекты",
-   "geometry_quality": null,
-   "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 4-ая Магистральная, вл. 7\"): ОТКЛОНЕНО — '4-я Магистральная улица, 7с1': улица не совпадает ('4-я магистральная улица' != '4-ая магистральная'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
-   "verified_at": "2026-08-06"
-  },
-  {
    "id": "OBJ-0599",
    "name": "2-ая Магистральная, вл. 3, 16",
    "address": "2-ая Магистральная, вл. 3, 16",
@@ -16868,7 +16872,7 @@
    "source_sheets": "Большой Сити, проекты",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 2-ая Магистральная, вл. 3, 16\"): ОТКЛОНЕНО — '2-й Магистральный тупик, 5Ас4': улица не совпадает ('2-й магистральный тупик' != '2-ая магистральная владение 3'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-13: кандидат ведёт на «2-й Магистральный тупик, 5Ас4» — другой адрес (тип проезда и номер строения не совпадают с запрошенным «2-ая Магистральная, вл. 3, 16») — координата не добавлена",
    "verified_at": "2026-08-06"
   },
   {
@@ -16892,7 +16896,7 @@
    "source_sheets": "Большой Сити, проекты; База",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, 1-я Магистральная, вл. 29\"): ОТКЛОНЕНО — '1-й Магистральный тупик': kind=street (запрещённый тип); '1-й Магистральный проезд': kind=street (запрещённый тип); 'садовое товарищество Москва, 29': регион не Москва (Сергиево-Посадский городской округ, Московская область, Россия); 'СНТ Москва, 29': регион не Москва (Орехово-Зуевский городской ок. Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-13: exact-кандидата нет — только street-level результаты (1-й Магистральный тупик/проезд) и совпадения в другом регионе (Московская область) — координата не добавлена",
    "verified_at": "2026-08-06"
   },
   {
@@ -16916,7 +16920,7 @@
    "source_sheets": "База",
    "geometry_quality": null,
    "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Проспект Андропова,д.11 корп. 4,5,6,7\"): ОТКЛОНЕНО — 'проспект Андропова, 11к2с2': улица не совпадает ('проспект андропова' != 'проспект андропова дом 11 корпус 4 5 6'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "review_notes": "BLOCKED_BY_EVIDENCE (2026-08-13): составной многокорпусный адрес «Проспект Андропова, д.11 корп. 4,5,6,7» — Yandex Geocoder резолвит только один корпус (11к2с2) из четырёх запрошенных. Ставить одну точку вместо 4 корпусов без отдельного источника, различающего их, нельзя — координата умышленно не добавлена, требуется генплан или адресный реестр по каждому корпусу отдельно",
    "verified_at": "2026-08-06"
   },
   {

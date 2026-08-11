@@ -653,5 +653,63 @@ class Batch20260812CoordinateFixesTest(unittest.TestCase):
             self.assertIn(object_id, proj_ids, object_id)
 
 
+class Batch20260813NoCoordsAuditTest(unittest.TestCase):
+    """Продолжение аудита no_coords после e03ffa5: 4 адреса подтверждены
+    независимо (2ГИС/веб, расхождение 1-55 м) и перенесены в projects; 6
+    отклонены — координата НЕ добавлена без доказательства."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.no_coords = cls.payload["no_coords"]
+
+    def test_four_confirmed_addresses_moved_to_projects_as_exact(self):
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        expected = {
+            "OBJ-0143": (55.779540, 37.676304),
+            "OBJ-0146": (55.695606, 37.581262),
+            "OBJ-0579": (55.762885, 37.557026),
+            "OBJ-0598": (55.773413, 37.520303),
+        }
+        for object_id, point in expected.items():
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+            self.assertTrue(rec.get("coordinates_source"), object_id)
+            self.assertIn("Yandex Geocoder", rec["coordinates_source"], object_id)
+            self.assertTrue(rec["needs_review"], object_id)
+
+    def test_six_rejected_addresses_stay_in_no_coords_without_coordinates(self):
+        """Отклонённые адреса остаются в no_coords с полной парой null —
+        никакой центр улицы/района/МКАД/чужой корпус не подставлен."""
+        by_id = {r["id"]: r for r in self.no_coords}
+        rejected = ["OBJ-0264", "OBJ-0469", "OBJ-0599", "OBJ-0605", "OBJ-0625"]
+        for object_id in rejected:
+            self.assertIn(object_id, by_id, object_id)
+            rec = by_id[object_id]
+            self.assertIsNone(rec["lat"], object_id)
+            self.assertIsNone(rec["lng"], object_id)
+            self.assertTrue(rec["needs_review"], object_id)
+
+    def test_obj0625_blocked_by_evidence_not_single_point_for_four_buildings(self):
+        """Составной адрес «корп. 4,5,6,7» — координата умышленно не
+        поставлена вместо четырёх корпусов без источника, различающего их."""
+        rec = next(r for r in self.no_coords if r["id"] == "OBJ-0625")
+        self.assertIsNone(rec["lat"])
+        self.assertIsNone(rec["lng"])
+        self.assertIn("BLOCKED_BY_EVIDENCE", rec["review_notes"])
+        self.assertIn("4", rec["review_notes"])
+
+    def test_ids_remain_unique_after_batch(self):
+        all_ids = [r["id"] for r in self.projects + self.no_coords + self.payload["duplicates"]]
+        self.assertEqual(len(all_ids), len(set(all_ids)))
+
+
 if __name__ == "__main__":
     unittest.main()
