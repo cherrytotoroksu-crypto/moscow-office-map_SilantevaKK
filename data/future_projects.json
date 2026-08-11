@@ -2,10 +2,10 @@
  "source_file": "Будущие_проекты_очищено_с_памятью.xlsx",
  "source_sheet": "Все объекты (чистый)",
  "generated_by": "scripts/export_future_projects.py",
- "total": 758,
- "with_coords": 696,
+ "total": 756,
+ "with_coords": 694,
  "without_coords": 62,
- "duplicate_count": 13,
+ "duplicate_count": 15,
  "projects": [
   {
    "id": "OBJ-0001",
@@ -1141,15 +1141,16 @@
    "status": "Проектный",
    "lat": 55.741059,
    "lng": 37.509505,
-   "verification_status": "Сверить конфликты",
+   "verification_status": "Подтверждено 2026-08-12 по квартальному реестру Q2 2026 (buildings_202606.json)",
    "confidence": "Низкий",
    "sources": [],
    "conflicts": "address: 2 знач.; developer: 2 знач.; total: 2 знач.; gla: 2 знач.; year: 2 знач.; lat: 2 знач.; lon: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; в рынке",
-   "geometry_quality": null,
+   "geometry_quality": "exact",
    "needs_review": true,
-   "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Промышленный пр-д, вл. 5\"): ОТКЛОНЕНО — 'Промышленный проезд, 5': номер дома не совпадает ('5' != 'владение5'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
+   "review_notes": "OBJ-0729 присоединён как дубль (та же координата/адрес/девелопер, была явная ошибка геокодинга)",
+   "coordinates_source": "data/buildings_202606.json: \"Fili Centre\", id=122, адрес «Промышленный проезд, вл. 5»",
    "verified_at": "2026-08-06"
   },
   {
@@ -3394,29 +3395,6 @@
    "geometry_quality": null
   },
   {
-   "id": "OBJ-0152",
-   "name": "MYPRIORITY Пресня",
-   "address": "г. Москва, 1-й Силикатный пр-д, вл. 13",
-   "developer": "Гранель",
-   "gba": 100700.0,
-   "gla": 65000.0,
-   "cls": "A",
-   "commission_quarter": 4,
-   "commission_year": 2028,
-   "status": "Проектный",
-   "lat": 55.789537,
-   "lng": 37.677036,
-   "verification_status": "Сверить конфликты",
-   "confidence": "Низкий",
-   "sources": [
-    "https://t.me/stroi_news/6446"
-   ],
-   "conflicts": "address: 2 знач.; total: 3 знач.; gla: 4 знач.; lat: 2 знач.",
-   "merged_rows": 5,
-   "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные; remain",
-   "geometry_quality": null
-  },
-  {
    "id": "OBJ-0153",
    "name": "MYPRIORITY Мневники",
    "address": "г. Москва, ул. Народного Ополчения, 34",
@@ -4455,7 +4433,10 @@
    "conflicts": "address: 2 знач.; developer: 2 знач.; status: Сданный / Строящийся",
    "merged_rows": 3,
    "source_sheets": "будущие (old); сданы; remain",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "needs_review": true,
+   "review_notes": "КОНФЛИКТ АДРЕСА, не разрешён 2026-08-12: эта запись — «Кастанаевская улица, 34 с2» (координата 55.736691, 37.482852, источник — remain/старый свод). Квартальный реестр data/buildings_202606.json (id=124, тот же девелопер «ООО СЗ ФИЛИ ГАРДЕН», идентичные GBA 11041/GLA 7118) и data/all_projects_layer.json (proj-124) независимо друг от друга дают «Кастанаевская улица, 16с1», координата 55.739569, 37.494252 (~1 км от текущей). Совпадение GBA/GLA указывает на тот же физический объект, но адрес не подтверждён официальным источником напрямую — до подтверждения адрес/координаты этой записи НЕ изменены. Не объединять с Fili Centre/Fili Center — разные проекты разных застройщиков",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0197",
@@ -8663,12 +8644,18 @@
    "verification_status": "Проверено",
    "confidence": "Высокий",
    "sources": [
-    "https://t.me/stroi_news/6086"
+    "https://t.me/stroi_news/6086",
+    "https://t.me/stroi_news/6446"
    ],
    "conflicts": null,
    "merged_rows": 2,
    "source_sheets": "ОСНОВНАЯ; в рынке",
-   "geometry_quality": null
+   "geometry_quality": null,
+   "aliases": [
+    "MYPRIORITY Пресня"
+   ],
+   "review_notes": "2026-08-12: присоединена дублирующая запись OBJ-0152 «MYPRIORITY Пресня» — тот же проект под другим названием (совпадение адреса/девелопера/GLA). Источник старого названия сохранён в sources, само название — в aliases",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0388",
@@ -14527,17 +14514,21 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Проектный",
-   "lat": 55.5754113,
-   "lng": 38.2408209,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-   "confidence": "Низкий",
+   "lat": 55.743183,
+   "lng": 37.709784,
+   "verification_status": "Координата исправлена 2026-08-12: старая точка была в Люберецком районе (~30 км от реального адреса), явная ошибка геокодинга/переноса данных",
+   "confidence": "Средний",
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%9F%D0%B5%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80-%D0%B4%2C%20%D0%B2%D0%BB.%2054%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
    ],
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": "approximate",
+   "coordinates_source": "Yandex Geocoder + независимая проверка 2ГИС (2026-08-12): маршрутная точка «Бизнес на Римской», Перовский проезд, вл54 — 55.743059/37.708683, ~90 м от принятой точки. Подтверждено также официальным сайтом застройщика (glorax.com/projects/glorax-business-rimskaia)",
+   "needs_review": true,
+   "review_notes": "precision=number — точный корпус не подтверждён, geometry_quality=approximate до отдельной проверки",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0683",
@@ -15328,9 +15319,9 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Строящийся",
-   "lat": 55.9442441,
-   "lng": 37.359633,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+   "lat": 55.862237,
+   "lng": 37.463386,
+   "verification_status": "Координата исправлена 2026-08-12: старая точка была в 10+ км от реального адреса",
    "confidence": "Низкий",
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%2063%D1%817%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
@@ -15338,7 +15329,11 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": "approximate",
+   "coordinates_source": "Yandex Geocoder по адресу Ленинградское шоссе, 63 (2026-08-12); независимо подтверждено веб-источниками (legenda-dom.ru, novostroy.ru) — проект «Северный порт» LEGENDA у канала им. Москвы, м. Беломорская/Речной вокзал",
+   "needs_review": true,
+   "review_notes": "НЕ считать exact для конкретного строения 63с7 — координата по адресу целиком (Ленинградское шоссе, 63), точка корпуса не подтверждена",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0727",
@@ -15358,29 +15353,6 @@
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80.%2C%203%D0%BA1%D1%811%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
     "https://www.press-release.ru/branches/realestate/__29_06_2026_13_59/"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
-   "id": "OBJ-0729",
-   "name": "Fili Centre",
-   "address": "Промышленный пр-д, 5",
-   "developer": null,
-   "gba": 23602.0,
-   "gla": 19453.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": 55.7784623,
-   "lng": 38.4705669,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода",
-   "confidence": "Низкий",
-   "sources": [
-    "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%9F%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80-%D0%B4%2C%205%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
    ],
    "conflicts": null,
    "merged_rows": 1,
@@ -15607,9 +15579,9 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Проектный",
-   "lat": 55.9364602,
-   "lng": 37.7783543,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+   "lat": 55.772158,
+   "lng": 37.498276,
+   "verification_status": "Координата исправлена 2026-08-12: старая точка была в районе Химок (~18 км от реального адреса), явная ошибка",
    "confidence": "Низкий",
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=2-%D0%B9%20%D0%A1%D0%B8%D0%BB%D0%B8%D0%BA%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80-%D0%B4%2C%20%D0%B2%D0%BB.13%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
@@ -15617,7 +15589,11 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": "approximate",
+   "coordinates_source": "Скорректировано 2026-08-12 по кластеру записей того же адреса «2-й Силикатный пр-д, вл.13»: OBJ-0208 (North Wind, 55.772122/37.498737), OBJ-0367 (Silica, 55.772097/37.498696), OBJ-0489 (55.772158/37.498276) — три независимые записи сходятся в одной точке с точностью до ~50 м",
+   "needs_review": true,
+   "review_notes": "НЕ объединять автоматически с OBJ-0208/OBJ-0367/OBJ-0489 — только координата выровнена по кластеру, проектная идентичность (один объект или соседние корпуса) не проверялась",
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0740",
@@ -17884,6 +17860,34 @@
  ],
  "duplicates": [
   {
+   "id": "OBJ-0152",
+   "name": "MYPRIORITY Пресня",
+   "address": "г. Москва, 1-й Силикатный пр-д, вл. 13",
+   "developer": "Гранель",
+   "gba": 100700.0,
+   "gla": 65000.0,
+   "cls": "A",
+   "commission_quarter": 4,
+   "commission_year": 2028,
+   "status": "Проектный",
+   "lat": 55.789537,
+   "lng": 37.677036,
+   "verification_status": "Объединено 2026-08-12: тот же адрес (1-й Силикатный пр-д, 13), тот же девелопер (Гранель), идентичный GLA (65000 м², совпадение точное) — MYPRIORITY Пресня, судя по всему, более раннее маркетинговое название проекта, позже переименованного в «Звенигородская от Гранель»",
+   "confidence": "Средний",
+   "sources": [
+    "https://t.me/stroi_news/6446"
+   ],
+   "conflicts": "address: 2 знач.; total: 3 знач.; gla: 4 знач.; lat: 2 знач.",
+   "merged_rows": 5,
+   "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные; remain",
+   "geometry_quality": null,
+   "duplicate_of": "OBJ-0387",
+   "matched_existing_name": "Звенигородская от Гранель",
+   "needs_review": true,
+   "review_notes": "Источник этой строки (t.me/stroi_news/6446) сохранён в aliases-записи канонической карточки OBJ-0387",
+   "verified_at": "2026-08-06"
+  },
+  {
    "id": "OBJ-0597",
    "name": "БЦ Шелепиха",
    "address": "2-я Магистральная ул., вл. 7А/1",
@@ -18174,6 +18178,33 @@
    "review_notes": "Каноническая карточка — OBJ-0570; башни B и C оставлены раздельными, не сливать",
    "duplicate_of": "OBJ-0570",
    "matched_existing_name": "Stone Towers B",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0729",
+   "name": "Fili Centre",
+   "address": "Промышленный пр-д, 5",
+   "developer": null,
+   "gba": 23602.0,
+   "gla": 19453.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.7784623,
+   "lng": 38.4705669,
+   "verification_status": "Объединено 2026-08-12: тот же адрес (Промышленный проезд, 5) и девелопер, старая координата (55.7784623, 38.4705669) была явно ошибочной (за пределами Московской области)",
+   "confidence": "Средний",
+   "sources": [
+    "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%9F%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80-%D0%B4%2C%205%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": null,
+   "duplicate_of": "OBJ-0051",
+   "matched_existing_name": "Fili Center",
+   "needs_review": true,
    "verified_at": "2026-08-06"
   },
   {

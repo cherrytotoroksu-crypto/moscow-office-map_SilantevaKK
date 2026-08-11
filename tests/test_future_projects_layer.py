@@ -97,6 +97,8 @@ class FutureProjectsLayerTest(unittest.TestCase):
                 "OBJ-0667", "OBJ-0682", "OBJ-0685", "OBJ-0762",
                 # партия 2026-08-07
                 "OBJ-0687", "OBJ-0758", "OBJ-0608", "OBJ-0666",
+                # партия 2026-08-12
+                "OBJ-0152", "OBJ-0729",
             },
         )
         canonical_ids = active_ids
@@ -543,6 +545,112 @@ class LowConfidenceDefaultVisibilityTest(unittest.TestCase):
         self.assertIsNotNone(m, "функция getFilteredFuture не найдена")
         body = m.group(0)
         self.assertIn("mode === 'verified'", body)
+
+
+class Batch20260812CoordinateFixesTest(unittest.TestCase):
+    """Партия 2026-08-12: 4 координаты были грубо неверными (объект уезжал
+    на 10-30 км от реального адреса — Люберцы, Химки, Куркино, другой
+    регион), плюс дубль Fili Centre под двумя ID. Регрессия фиксирует
+    исправленные точки и не даёт им откатиться на старый мусор."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.duplicates = cls.payload["duplicates"]
+        cls.no_coords = cls.payload["no_coords"]
+
+    def test_grossly_wrong_coordinates_are_fixed_and_not_exact(self):
+        by_id = {r["id"]: r for r in self.projects}
+        expected = {
+            "OBJ-0680": (55.743183, 37.709784),  # GloraX Business Римская
+            "OBJ-0739": (55.772158, 37.498276),  # БЦ на 2-м Силикатном пр-д, вл.13
+            "OBJ-0726": (55.862237, 37.463386),  # Северный порт
+        }
+        for object_id, point in expected.items():
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertEqual(rec["geometry_quality"], "approximate", object_id)
+            self.assertTrue(rec["needs_review"], object_id)
+            self.assertTrue(rec.get("coordinates_source"), object_id)
+
+    def test_silikatny_cluster_not_auto_merged(self):
+        """OBJ-0739 получил координату кластера, но остаётся отдельной
+        записью — OBJ-0208/OBJ-0367/OBJ-0489 не тронуты и не помечены
+        дублями."""
+        by_id = {r["id"]: r for r in self.projects}
+        duplicate_ids = {r["id"] for r in self.duplicates}
+        for object_id in ("OBJ-0208", "OBJ-0367", "OBJ-0489", "OBJ-0739"):
+            self.assertNotIn(object_id, duplicate_ids, object_id)
+        self.assertIn("не объединять", by_id["OBJ-0739"]["review_notes"].lower())
+
+    def test_myprioritet_presnya_merged_into_zvenigorodskaya(self):
+        """MYPRIORITY Пресня — тот же проект, что «Звенигородская от
+        Гранель» (совпадение адреса/девелопера/GLA) — объединено через
+        duplicate_of, старое название сохранено в aliases канонической
+        записи, источник не потерян."""
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        proj_by_id = {r["id"]: r for r in self.projects}
+
+        obj152 = dup_by_id["OBJ-0152"]
+        self.assertEqual(obj152["duplicate_of"], "OBJ-0387")
+
+        canonical = proj_by_id["OBJ-0387"]
+        self.assertEqual(canonical["name"], "Звенигородская от Гранель")
+        self.assertIn("MYPRIORITY Пресня", canonical["aliases"])
+        self.assertIn("https://t.me/stroi_news/6446", canonical["sources"])
+        self.assertEqual((canonical["lat"], canonical["lng"]), (55.767798, 37.510502))
+
+    def test_fili_centre_duplicate_merged_not_deleted(self):
+        """OBJ-0729 (координата уезжала за пределы Московской области)
+        объединён с OBJ-0051 (совпадает с data/buildings_202606.json,
+        id=122) — источники не потеряны, запись не удалена, а помечена
+        duplicate_of."""
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        proj_by_id = {r["id"]: r for r in self.projects}
+
+        obj729 = dup_by_id["OBJ-0729"]
+        self.assertEqual(obj729["duplicate_of"], "OBJ-0051")
+
+        canonical = proj_by_id["OBJ-0051"]
+        self.assertEqual((canonical["lat"], canonical["lng"]), (55.741059, 37.509505))
+        self.assertEqual(canonical["geometry_quality"], "exact")
+        self.assertIn("buildings_202606.json", canonical["coordinates_source"])
+
+    def test_fili_centre_not_merged_with_fili_residence(self):
+        """Fili Centre (OBJ-0051) и Fili residence (OBJ-0196) — разные
+        проекты разных застройщиков, не объединять."""
+        proj_by_id = {r["id"]: r for r in self.projects}
+        fili_centre = proj_by_id["OBJ-0051"]
+        fili_residence = proj_by_id["OBJ-0196"]
+        self.assertIsNone(fili_residence.get("duplicate_of"))
+        self.assertNotEqual(
+            (fili_centre["lat"], fili_centre["lng"]),
+            (fili_residence["lat"], fili_residence["lng"]),
+        )
+
+    def test_fili_residence_address_conflict_documented_not_silently_resolved(self):
+        """Fili residence: конфликт адреса (Кастанаевская 16с1 в квартальном
+        реестре vs 34 с2 в этой записи) задокументирован в review_notes,
+        адрес/координаты НЕ изменены без подтверждения."""
+        by_id = {r["id"]: r for r in self.projects}
+        rec = by_id["OBJ-0196"]
+        self.assertEqual(rec["address"], "Кастанаевская улица, 34 с2")
+        self.assertEqual((rec["lat"], rec["lng"]), (55.736691, 37.482852))
+        self.assertTrue(rec["needs_review"])
+        self.assertIn("КОНФЛИКТ АДРЕСА", rec["review_notes"])
+        self.assertIn("16с1", rec["review_notes"])
+
+    def test_batch_objects_visible_under_low_confidence_filter(self):
+        """Объекты с confidence=Низкий из этой партии остаются в projects
+        (не в no_coords, не в duplicates без основания) — «review»-фильтр
+        интерфейса их найдёт, а не потеряет."""
+        proj_ids = {r["id"] for r in self.projects}
+        for object_id in ("OBJ-0739", "OBJ-0726", "OBJ-0051"):
+            self.assertIn(object_id, proj_ids, object_id)
 
 
 if __name__ == "__main__":
