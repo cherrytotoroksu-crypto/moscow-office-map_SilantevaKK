@@ -711,5 +711,78 @@ class Batch20260813NoCoordsAuditTest(unittest.TestCase):
         self.assertEqual(len(all_ids), len(set(all_ids)))
 
 
+class Batch20260813RegistryAuditTest(unittest.TestCase):
+    """Аудит после 840973b: структурная целостность future_projects.json
+    и отдельная проверка проектов, где похожее название/близкий адрес
+    мог бы спровоцировать ошибочное слияние (Lakes/Lakes 2, Link/Link
+    NEO-RUNE), но не должен, так как это разные физические объекты."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.no_coords = cls.payload["no_coords"]
+        cls.duplicates = cls.payload["duplicates"]
+
+    def test_total_equals_projects_plus_no_coords(self):
+        self.assertEqual(
+            self.payload["total"], len(self.projects) + len(self.no_coords)
+        )
+
+    def test_duplicate_count_matches_duplicates_length(self):
+        self.assertEqual(self.payload["duplicate_count"], len(self.duplicates))
+
+    def test_with_coords_and_without_coords_counters_match(self):
+        self.assertEqual(self.payload["with_coords"], len(self.projects))
+        self.assertEqual(self.payload["without_coords"], len(self.no_coords))
+
+    def test_ids_globally_unique_across_all_three_lists(self):
+        all_ids = [r["id"] for r in self.projects + self.no_coords + self.duplicates]
+        self.assertEqual(len(all_ids), len(set(all_ids)))
+
+    def test_no_coords_records_have_no_lat_lng(self):
+        for r in self.no_coords:
+            self.assertIsNone(r.get("lat"), r["id"])
+            self.assertIsNone(r.get("lng"), r["id"])
+
+    def test_confirmed_duplicates_absent_from_active_projects_layer(self):
+        proj_ids = {r["id"] for r in self.projects}
+        dup_ids = {r["id"] for r in self.duplicates}
+        self.assertEqual(proj_ids & dup_ids, set())
+
+    def test_project_coordinates_within_moscow_region_bounds(self):
+        for r in self.projects:
+            lat, lng = r["lat"], r["lng"]
+            self.assertTrue(55.0 <= lat <= 56.1, f"{r['id']}: lat {lat} outside Moscow region")
+            self.assertTrue(36.5 <= lng <= 38.5, f"{r['id']}: lng {lng} outside Moscow region")
+
+    def test_lakes_and_lakes2_remain_separate_projects(self):
+        """Lakes (OBJ-0054) и Lakes 2 (OBJ-0202) — разные корпуса на
+        ул. Озёрная, не сливаются в один объект по совпадению префикса
+        названия."""
+        proj_by_id = {r["id"]: r for r in self.projects}
+        lakes = proj_by_id["OBJ-0054"]
+        lakes2 = proj_by_id["OBJ-0202"]
+        self.assertIsNone(lakes.get("duplicate_of"))
+        self.assertIsNone(lakes2.get("duplicate_of"))
+        self.assertNotEqual((lakes["lat"], lakes["lng"]), (lakes2["lat"], lakes2["lng"]))
+
+    def test_link_and_link_neo_rune_remain_separate_projects(self):
+        """Link (OBJ-0150) и Link (Башня NEO и Башня RUNE) (OBJ-0663) —
+        разные башни одного девелопера MR Office, не сливаются по
+        совпадению общего названия «Link»."""
+        proj_by_id = {r["id"]: r for r in self.projects}
+        link = proj_by_id["OBJ-0150"]
+        link_neo_rune = proj_by_id["OBJ-0663"]
+        self.assertIsNone(link.get("duplicate_of"))
+        self.assertIsNone(link_neo_rune.get("duplicate_of"))
+        self.assertNotEqual(
+            (link["lat"], link["lng"]), (link_neo_rune["lat"], link_neo_rune["lng"])
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

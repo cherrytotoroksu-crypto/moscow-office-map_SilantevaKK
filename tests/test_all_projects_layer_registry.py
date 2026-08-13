@@ -56,6 +56,29 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
         self.assertEqual(east["canonical_project_id"], "badaevsky")
         self.assertNotEqual(west["canonical_building_id"], east["canonical_building_id"])
 
+    def test_shared_canonical_project_id_always_has_distinct_building_ids(self):
+        """Общее правило (аудит после 840973b): canonical_project_id может
+        повторяться только когда это разные здания/корпуса одного проекта
+        — и тогда canonical_building_id обязан различаться. Единственная
+        существующая пара — Бадаевский (West/East), проверена отдельно
+        выше; этот тест ловит любую БУДУЩУЮ регрессию по всему реестру."""
+        from collections import defaultdict
+
+        by_project = defaultdict(list)
+        for r in self.records:
+            by_project[r["canonical_project_id"]].append(r)
+
+        for project_id, rows in by_project.items():
+            if len(rows) < 2:
+                continue
+            building_ids = [r.get("canonical_building_id") for r in rows]
+            self.assertEqual(
+                len(building_ids), len(set(building_ids)),
+                f"canonical_project_id={project_id!r}: {len(rows)} rows share it but "
+                f"canonical_building_id is not all-distinct ({building_ids}) — either a "
+                f"duplicate or an erroneous merge"
+            )
+
     def test_known_name_collisions_are_not_silently_merged(self):
         for name in KNOWN_COLLISION_NAMES:
             matches = [r for r in self.records if r["canonical_name"] == name]
