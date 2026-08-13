@@ -442,19 +442,18 @@ class Regeocode20260811BatchTest(unittest.TestCase):
         self.assertEqual(space_tower["geometry_quality"], "centroid")
         self.assertNotEqual(time_tower["id"], space_tower["id"])
 
-    def test_sbercity_prokshino_riverpark_stay_unresolved(self):
-        """СберСити (kind=district у всех кандидатов), Прокшино БК (адрес без
-        улицы/дома) и Ривер Парк (формат «зу N/M» не сопоставим с домом) не
-        прошли строгие критерии в этой партии — координаты не присвоены/не
-        изменены по догадке. СберСити уже был на centroid с прошлой сессии
-        (data/future_projects.json), поэтому остаётся в projects без
-        изменений; Прокшино БК и Ривер Парк никогда не имели координаты и
-        остаются в no_coords."""
+    def test_sbercity_prokshino_stay_unresolved(self):
+        """СберСити (kind=district у всех кандидатов) и Прокшино БК (адрес
+        без улицы/дома, ни один из 3 корпусов не найден живым запросом по
+        отдельности 2026-08-14) не прошли строгие критерии — координаты не
+        присвоены/не изменены по догадке. СберСити уже был на centroid с
+        прошлой сессии (data/future_projects.json), поэтому остаётся в
+        projects без изменений; Прокшино БК никогда не имел координаты и
+        остаётся в no_coords. Ривер Парк проверен отдельно (см.
+        Batch20260814FullGeoCoverageAuditTest) — в отличие от Прокшино, для
+        него нашлась общая точка дома на ул. Речников."""
         no_coords_ids = {r["id"] for r in self.no_coords}
-        must_stay_no_coords = [
-            "OBJ-0691", "OBJ-0694", "OBJ-0710",
-            "OBJ-0713", "OBJ-0714", "OBJ-0723", "OBJ-0724", "OBJ-0753",
-        ]
+        must_stay_no_coords = ["OBJ-0691", "OBJ-0694", "OBJ-0710"]
         for object_id in must_stay_no_coords:
             self.assertIn(object_id, no_coords_ids, f"{object_id} должен остаться в no_coords")
 
@@ -689,7 +688,7 @@ class Batch20260813NoCoordsAuditTest(unittest.TestCase):
         """Отклонённые адреса остаются в no_coords с полной парой null —
         никакой центр улицы/района/МКАД/чужой корпус не подставлен."""
         by_id = {r["id"]: r for r in self.no_coords}
-        rejected = ["OBJ-0264", "OBJ-0469", "OBJ-0599", "OBJ-0605", "OBJ-0625"]
+        rejected = ["OBJ-0469", "OBJ-0599", "OBJ-0605", "OBJ-0625"]
         for object_id in rejected:
             self.assertIn(object_id, by_id, object_id)
             rec = by_id[object_id]
@@ -782,6 +781,143 @@ class Batch20260813RegistryAuditTest(unittest.TestCase):
         self.assertNotEqual(
             (link["lat"], link["lng"]), (link_neo_rune["lat"], link_neo_rune["lng"])
         )
+
+
+class Batch20260814FullGeoCoverageAuditTest(unittest.TestCase):
+    """Задача «чтобы зданий без геопривязки на карте не осталось»: полный
+    повторный проход по всем 58 no_coords после feb1792. 27 закрыты честными
+    координатами (12 — баг сравнения адресов в предыдущем аудите отклонял
+    exact-совпадения только из-за порядка слов/аббревиатур/префикса «вл.»;
+    3 — уточнены веб-поиском и подтверждены независимо; 3 — живой геокодинг
+    по отдельному корпусу ЮПорт; 5 — Ривер Парк, общая точка дома на
+    ул. Речников с пояснением; 3 — адрес найден в вебе по запросу пользователя;
+    1 — восстановлен номер дома из собственных источников записи). 31 остаётся
+    без координат — доказательств недостаточно."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.no_coords = cls.payload["no_coords"]
+
+    def test_normalization_bug_fixed_exact_matches_moved_to_projects(self):
+        """12 записей были ошибочно отклонены багом сравнения строк адреса
+        (порядок слов, аббревиатуры «пр-кт»/«б-р»/«пр-д», префикс «вл.»/
+        «владение» перед номером дома) — Yandex Geocoder на самом деле уже
+        возвращал kind=house precision=exact для запрошенного адреса."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        expected = {
+            "OBJ-0627": (55.748599, 37.497701),
+            "OBJ-0628": (55.629028, 37.640120),
+            "OBJ-0629": (55.692495, 37.533095),
+            "OBJ-0639": (55.792108, 37.540757),
+            "OBJ-0670": (55.756639, 37.528109),
+            "OBJ-0673": (55.698391, 37.658248),
+            "OBJ-0681": (55.800494, 37.581424),
+            "OBJ-0712": (55.701298, 37.633976),
+            "OBJ-0747": (55.704007, 37.580849),
+            "OBJ-0768": (55.787427, 37.545896),
+            "OBJ-0769": (55.779646, 37.571246),
+            "OBJ-0728": (55.691917, 37.532232),
+        }
+        for object_id, point in expected.items():
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+
+    def test_web_verified_candidates_moved_to_projects(self):
+        """3 записи (Башня в Сити, ЗИЛАРТ GRAND, БЦ на Шмитовском 32)
+        уточнены независимым веб-поиском (сайт девелопера/ЦИАН/справочники
+        БЦ), затем сверены с Yandex Geocoder."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        for object_id in ("OBJ-0635", "OBJ-0638", "OBJ-0640"):
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            self.assertIn(object_id, by_id, object_id)
+        self.assertEqual(by_id["OBJ-0638"]["geometry_quality"], "approximate")
+        self.assertEqual(by_id["OBJ-0635"]["geometry_quality"], "exact")
+        self.assertEqual(by_id["OBJ-0640"]["geometry_quality"], "exact")
+
+    def test_yuport_per_corpus_geocoding_partial_success(self):
+        """ЮПорт (пр-кт Андропова, 11): раздельный запрос по каждому
+        корпусу вместо одного общего — 3 из 6 корпусов (1, 2, 7) имеют
+        собственную запись в базе геокодера и приняты; 3 (4, 5, 6) не
+        имеют — остаются без координат, не подставлена соседняя точка."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        for object_id in ("OBJ-0770", "OBJ-0772", "OBJ-0775"):
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            self.assertEqual(by_id[object_id]["geometry_quality"], "exact", object_id)
+        for object_id in ("OBJ-0771", "OBJ-0774", "OBJ-0776"):
+            self.assertIn(object_id, no_coord_ids, object_id)
+
+    def test_river_park_kolomenskoye_shares_explained_centroid(self):
+        """Ривер Парк Коломенское: 5 секций/корпусов (зу 7/3, 7/7, 7/8) не
+        различаются геокодером — им присвоена ОБЩАЯ точка дома 7 на
+        ул. Речников с explicit geometry_quality=centroid (не exact),
+        по аналогии с ранее принятым решением для СберСити."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        river_park_ids = ["OBJ-0713", "OBJ-0714", "OBJ-0723", "OBJ-0724", "OBJ-0753"]
+        centroid = (55.681712, 37.693848)
+        for object_id in river_park_ids:
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), centroid, object_id)
+            self.assertEqual(rec["geometry_quality"], "centroid", object_id)
+
+    def test_addresses_found_via_websearch_then_geocoded(self):
+        """3 записи вообще не имели адреса в исходных данных — реальный
+        адрес найден веб-поиском (официальные источники: mos.ru, сайт
+        застройщика/БЦ) и затем геокодирован."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        expected = {
+            "OBJ-0397": (55.691318, 37.476519),
+            "OBJ-0703": (55.729777, 37.442446),
+            "OBJ-0296": (55.569169, 37.479717),
+        }
+        for object_id, point in expected.items():
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+
+    def test_obj0264_house_number_recovered_from_own_sources(self):
+        """OBJ-0264 (БЦ на Текстильщиков): в исходном адресе не было номера
+        дома, но в поле sources этой же записи уже было 4 источника
+        (включая URL CIAN), однозначно указывающих дом 8 — номер
+        восстановлен из собственных данных записи, не угадан."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        self.assertNotIn("OBJ-0264", no_coord_ids)
+        rec = by_id["OBJ-0264"]
+        self.assertEqual((rec["lat"], rec["lng"]), (55.704052, 37.740498))
+        self.assertEqual(rec["geometry_quality"], "exact")
+
+    def test_remaining_no_coords_are_evidence_blocked_not_arbitrary(self):
+        """31 запись остаётся без координат после полного аудита — у каждой
+        нет ни адреса, ни exact/near-совпадения в границах Москвы. Ни одна
+        не содержит lat/lng — сокращение no_coords не сделано ценой точности."""
+        by_id = {r["id"]: r for r in self.no_coords}
+        self.assertEqual(len(self.no_coords), 31)
+        for r in self.no_coords:
+            self.assertIsNone(r.get("lat"), r["id"])
+            self.assertIsNone(r.get("lng"), r["id"])
+
+    def test_yandex_api_key_not_leaked_into_data_files(self):
+        """API-ключ использовался только в памяти процесса геокодинга —
+        убеждаемся, что он не осел ни в overrides, ни в future_projects.json."""
+        text = json.dumps(self.payload, ensure_ascii=False)
+        self.assertNotIn("bec42ad9", text)
+        ovr_path = REPO_ROOT / "data" / "future_projects_verification_overrides.json"
+        ovr_text = ovr_path.read_text(encoding="utf-8")
+        self.assertNotIn("bec42ad9", ovr_text)
 
 
 if __name__ == "__main__":
