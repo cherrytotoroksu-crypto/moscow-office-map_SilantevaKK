@@ -116,6 +116,8 @@ class FutureProjectsLayerTest(unittest.TestCase):
                 "OBJ-0611", "OBJ-0619", "OBJ-0617", "OBJ-0498", "OBJ-0511",
                 "OBJ-0139", "OBJ-0363", "OBJ-0357", "OBJ-0578", "OBJ-0392",
                 "OBJ-0391", "OBJ-0665", "OBJ-0283",
+                # партия 2026-08-14, живой повторный геокодинг ~700 адресов
+                "OBJ-0689",
             },
         )
         canonical_ids = active_ids
@@ -1089,6 +1091,49 @@ class Batch20260814InternalDuplicateMergeTest(unittest.TestCase):
             rec = next(r for r in self.projects if r["id"] == object_id)
             self.assertIsNone(rec.get("duplicate_of"), object_id)
             self.assertIn("НЕ объединено", rec.get("review_notes") or "", object_id)
+
+
+class Batch20260814LiveRegeocodeAuditTest(unittest.TestCase):
+    """Продолжение аудита «проверяй адреса»: живой повторный геокодинг
+    ~700 адресов projects против уже проставленных точек нашёл 6 записей,
+    унаследованных из исходного xlsx с координатой за много км от
+    реального адреса — все подтверждены независимо (2ГИС/ЦИАН/официальные
+    сайты/госреестр), не только геокодером."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.duplicates = cls.payload["duplicates"]
+
+    def test_fili_and_nice_tower_and_meshchersky_coordinates_corrected(self):
+        by_id = {r["id"]: r for r in self.projects}
+        expected = {
+            "OBJ-0647": (55.741059, 37.509505),   # Фили — та же уехавшая точка, что OBJ-0729
+            "OBJ-0704": (55.728271, 37.701637),   # N'ICE TOWER — была на 21+ км севернее
+            "OBJ-0701": (55.663212, 37.428073),   # БЦ Мещерский — была на ~16.6 км юго-западнее
+            "OBJ-0035": (55.780608, 37.574309),   # ГБУ Мосгоргеотрест — была на ~11.9 км
+            "OBJ-0154": (55.720545, 37.67528),    # MYPRIORITY Дубровка — была на ~8.8 км севернее
+        }
+        for object_id, point in expected.items():
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), point, object_id)
+            self.assertEqual(rec["geometry_quality"], "exact", object_id)
+            self.assertTrue(rec.get("coordinates_source"), object_id)
+
+    def test_porta_obj0689_merged_into_confirmed_obj0044(self):
+        """PORTA (OBJ-0689) и PORTA Workplace (OBJ-0044) — один и тот же
+        БЦ у метро Фили; OBJ-0689 нёс неподтверждённую координату
+        (~30 км от Филёвского парка) — объединён, не координата слита."""
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        proj_by_id = {r["id"]: r for r in self.projects}
+        self.assertEqual(dup_by_id["OBJ-0689"]["duplicate_of"], "OBJ-0044")
+        canonical = proj_by_id["OBJ-0044"]
+        self.assertEqual((canonical["lat"], canonical["lng"]), (55.751624, 37.514733))
+        self.assertIn("PORTA", canonical.get("aliases") or [])
 
 
 if __name__ == "__main__":

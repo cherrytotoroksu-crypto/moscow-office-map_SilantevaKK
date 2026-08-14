@@ -2,10 +2,10 @@
  "source_file": "Будущие_проекты_очищено_с_памятью.xlsx",
  "source_sheet": "Все объекты (чистый)",
  "generated_by": "scripts/export_future_projects.py",
- "total": 706,
- "with_coords": 681,
+ "total": 705,
+ "with_coords": 680,
  "without_coords": 25,
- "duplicate_count": 65,
+ "duplicate_count": 66,
  "projects": [
   {
    "id": "OBJ-0001",
@@ -750,15 +750,18 @@
    "commission_quarter": 3,
    "commission_year": 2024,
    "status": "Сданный",
-   "lat": 55.819171,
-   "lng": 37.751188,
-   "verification_status": "Сверить конфликты",
+   "lat": 55.780608,
+   "lng": 37.574309,
+   "verification_status": "Координата исправлена 2026-08-14: прежняя точка была смещена на ~11.9 км",
    "confidence": "Низкий",
    "sources": [],
    "conflicts": "address: 2 знач.",
    "merged_rows": 4,
    "source_sheets": "будущие; будущие (old); сданы; remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Живой повторный геокодинг 2026-08-14: Yandex Geocoder, kind=house, precision=exact, адрес «Ленинградский проспект, 11с1»; независимо подтверждено (rusprofile.ru, mggt.ru/kontakty — официальный адрес ГБУ «Мосгоргеотрест»). Прежняя точка (55.819171, 37.751188) была на ~11.9 км северо-восточнее",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0036",
@@ -934,9 +937,10 @@
    "geometry_quality": null,
    "needs_review": true,
    "aliases": [
+    "PORTA",
     "Западный Порт (ПИК Заречная)"
    ],
-   "review_notes": "ОБЪЕДИНЕНО 2026-08-14: OBJ-0611 — идентичный адрес и GBA с точностью до 11 знаков после запятой (43231.225...) — практически исключает совпадение случайно; девелопер «ПИК?» в дубле помечен вопросом как неуверенная догадка, «Forma» — уверенное значение",
+   "review_notes": "ОБЪЕДИНЕНО 2026-08-14: OBJ-0611 — идентичный адрес и GBA с точностью до 11 знаков после запятой (43231.225...) — практически исключает совпадение случайно; девелопер «ПИК?» в дубле помечен вопросом как неуверенная догадка, «Forma» — уверенное значение ОБЪЕДИНЕНО 2026-08-14: OBJ-0689 (PORTA, та же запись с неверной координатой) слито через duplicate_of. Координата OBJ-0044 (55.751624, 37.514733) независимо подтверждена: 2ГИС, ЦИАН (cian.ru/biznes-centr-porta-workplace-moskva-283975), официальный сайт portaworkplace.ru, arendator.ru — Филёвский парк, рядом с метро Фили, одна остановка от Москва-Сити.",
    "verified_at": "2026-08-06"
   },
   {
@@ -3364,9 +3368,9 @@
    "commission_quarter": 1,
    "commission_year": 2028,
    "status": "Проектный",
-   "lat": 55.799628,
-   "lng": 37.677036,
-   "verification_status": "Сверить конфликты",
+   "lat": 55.720545,
+   "lng": 37.67528,
+   "verification_status": "Координата исправлена 2026-08-14: прежняя точка была смещена на ~8.8 км к северу от реального района (метро Дубровка)",
    "confidence": "Низкий",
    "sources": [
     "https://t.me/stroi_news/6446"
@@ -3374,7 +3378,10 @@
    "conflicts": "address: 2 знач.; gla: 2 знач.; lat: 2 знач.",
    "merged_rows": 5,
    "source_sheets": "будущие; будущие (old); ОСНОВНАЯ; перспективные; remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Живой повторный геокодинг 2026-08-14: Yandex Geocoder, kind=house, precision=exact, адрес «Шарикоподшипниковская улица, 11с8»; независимо подтверждено (2ГИС: «Mypriority Dubrovka, Шарикоподшипниковская улица, к1», рядом с метро Дубровка). Прежняя точка (55.799628, 37.677036) была на ~8.8 км севернее, у метро Дубровка не находится",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0155",
@@ -13486,9 +13493,9 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Проектный",
-   "lat": 55.7784623,
-   "lng": 38.4705669,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода",
+   "lat": 55.741059,
+   "lng": 37.509505,
+   "verification_status": "Координата исправлена 2026-08-14: явная ошибка (уехала на 90+ км), не merge, GBA расходится",
    "confidence": "Низкий",
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%9F%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80-%D0%B4%2C%205%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
@@ -13496,7 +13503,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Живой повторный геокодинг 2026-08-14: адрес «Промышленный пр-д, 5» — та же уехавшая координата (55.7784623, 38.4705669), что была у OBJ-0729 (исправлено в 93e0fa1); исправлена на подтверждённую точку Fili Center/OBJ-0051. GBA (151010) существенно больше, чем у OBJ-0051 (20554.8) — не объединено как дубль без отдельного подтверждения, только координата исправлена",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0648",
@@ -14214,29 +14224,6 @@
    "geometry_quality": null
   },
   {
-   "id": "OBJ-0689",
-   "name": "PORTA",
-   "address": "Заречная ул., 2/1с1",
-   "developer": "FORMA",
-   "gba": 43337.0,
-   "gla": 27127.0,
-   "cls": "A",
-   "commission_quarter": null,
-   "commission_year": null,
-   "status": "Строящийся",
-   "lat": 55.5263387,
-   "lng": 37.4986113,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-   "confidence": "Низкий",
-   "sources": [
-    "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%97%D0%B0%D1%80%D0%B5%D1%87%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%202%2F1%D1%811%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
-   ],
-   "conflicts": null,
-   "merged_rows": 1,
-   "source_sheets": "remain",
-   "geometry_quality": null
-  },
-  {
    "id": "OBJ-0690",
    "name": "Бизнес-парк Переделкино",
    "address": "пос. Внуковское, кв-л 9, з/у 1",
@@ -14482,9 +14469,9 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Строящийся",
-   "lat": 55.5842517,
-   "lng": 37.1795288,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+   "lat": 55.663212,
+   "lng": 37.428073,
+   "verification_status": "Координата исправлена 2026-08-14: прежняя точка была смещена на ~16.6 км к юго-западу от реального адреса",
    "confidence": "Низкий",
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88.%2C%202%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
@@ -14492,7 +14479,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Живой повторный геокодинг 2026-08-14: Yandex Geocoder, kind=house, precision=exact, адрес «Боровское шоссе, 2А»; независимо подтверждено (of.ru/bc/zk-meshherskii-les, fortexgroup.ru/bc/mescherskiy) — рядом с метро Говорово. Прежняя точка (55.5842517, 37.1795288) была на ~16.6 км юго-западнее, ближе к Троицку",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0702",
@@ -14545,7 +14535,7 @@
   {
    "id": "OBJ-0704",
    "name": "N’ICE TOWER",
-   "address": "Автомобильный пр-д, 4",
+   "address": "Скотопрогонная улица, вл1",
    "developer": "Coldy",
    "gba": 35400.0,
    "gla": 21500.0,
@@ -14553,9 +14543,9 @@
    "commission_quarter": null,
    "commission_year": null,
    "status": "Строящийся",
-   "lat": 55.9163098,
-   "lng": 37.5886139,
-   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+   "lat": 55.728271,
+   "lng": 37.701637,
+   "verification_status": "Координата и адрес исправлены 2026-08-14: прежняя точка была на 21+ км севернее реального района проекта",
    "confidence": "Низкий",
    "sources": [
     "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80-%D0%B4%2C%204%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
@@ -14563,7 +14553,10 @@
    "conflicts": null,
    "merged_rows": 1,
    "source_sheets": "remain",
-   "geometry_quality": null
+   "geometry_quality": "exact",
+   "coordinates_source": "Живой повторный геокодинг 2026-08-14: прежний адрес «Автомобильный пр-д, 4» дал кандидата на 21+ км от прежней точки; независимо найден и подтверждён реальный адрес (ЦИАН, 2ГИС, Яндекс Карты, Коммерсантъ, nicetower.moscow) — Скотопрогонная улица, вл1, Нижегородский район, рядом с метро Волгоградский проспект. Yandex Geocoder: kind=house, precision=number, «Скотопрогонная улица, вл1»",
+   "needs_review": true,
+   "verified_at": "2026-08-06"
   },
   {
    "id": "OBJ-0705",
@@ -18590,6 +18583,33 @@
    "review_notes": "Каноническая карточка — OBJ-0570; башни B и C оставлены раздельными, не сливать",
    "duplicate_of": "OBJ-0570",
    "matched_existing_name": "Stone Towers B",
+   "verified_at": "2026-08-06"
+  },
+  {
+   "id": "OBJ-0689",
+   "name": "PORTA",
+   "address": "Заречная ул., 2/1с1",
+   "developer": "FORMA",
+   "gba": 43337.0,
+   "gla": 27127.0,
+   "cls": "A",
+   "commission_quarter": null,
+   "commission_year": null,
+   "status": "Строящийся",
+   "lat": 55.5263387,
+   "lng": 37.4986113,
+   "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+   "confidence": "Низкий",
+   "sources": [
+    "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%97%D0%B0%D1%80%D0%B5%D1%87%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%202%2F1%D1%811%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
+   ],
+   "conflicts": null,
+   "merged_rows": 1,
+   "source_sheets": "remain",
+   "geometry_quality": null,
+   "duplicate_of": "OBJ-0044",
+   "needs_review": true,
+   "review_notes": "ОБЪЕДИНЕНО 2026-08-14: та же запись, что OBJ-0044 (PORTA Workplace) — адрес практически идентичен («Заречная ул., 2/1с1» vs «вл. 2/1»), девелопер FORMA/Forma. Координата этой записи (55.5263387, 37.4986113) не подтверждена независимо и заметно отличается от подтверждённой (2ГИС, ЦИАН, официальный сайт portaworkplace.ru: Филёвский парк, рядом с метро Фили) точки OBJ-0044.",
    "verified_at": "2026-08-06"
   },
   {
