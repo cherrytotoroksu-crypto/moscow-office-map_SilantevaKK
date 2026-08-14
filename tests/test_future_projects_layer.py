@@ -785,14 +785,19 @@ class Batch20260813RegistryAuditTest(unittest.TestCase):
 
 class Batch20260814FullGeoCoverageAuditTest(unittest.TestCase):
     """Задача «чтобы зданий без геопривязки на карте не осталось»: полный
-    повторный проход по всем 58 no_coords после feb1792. 27 закрыты честными
-    координатами (12 — баг сравнения адресов в предыдущем аудите отклонял
-    exact-совпадения только из-за порядка слов/аббревиатур/префикса «вл.»;
-    3 — уточнены веб-поиском и подтверждены независимо; 3 — живой геокодинг
-    по отдельному корпусу ЮПорт; 5 — Ривер Парк, общая точка дома на
-    ул. Речников с пояснением; 3 — адрес найден в вебе по запросу пользователя;
-    1 — восстановлен номер дома из собственных источников записи). 31 остаётся
-    без координат — доказательств недостаточно."""
+    повторный проход по всем 58 no_coords после feb1792, затем ещё один
+    проход поиском по названию внутри самой базы (7caac88). Всего закрыто
+    33 из 58 честными координатами (12 — баг сравнения адресов в
+    предыдущем аудите отклонял exact-совпадения только из-за порядка слов/
+    аббревиатур/префикса «вл.»; 3 — уточнены веб-поиском и подтверждены
+    независимо; 3 — живой геокодинг по отдельному корпусу ЮПорт; 5 — Ривер
+    Парк, общая точка дома на ул. Речников с пояснением; 3 — адрес найден
+    в вебе; 1 — восстановлен номер дома из собственных источников записи;
+    6 — та же запись под другим именем уже была в базе с координатой:
+    МФК Электролитный, БЦ на Гончарной, Технопарк ЗИЛ А, 3 корпуса ЮПорта
+    через project-уровневый centroid). 25 остаётся без координат —
+    доказательств недостаточно, включая случаи с отброшенными кандидатами
+    из-за резкого расхождения GBA (Крост/Самолет АДЦ Коммунарка)."""
 
     @classmethod
     def setUpClass(cls):
@@ -846,14 +851,56 @@ class Batch20260814FullGeoCoverageAuditTest(unittest.TestCase):
     def test_yuport_per_corpus_geocoding_partial_success(self):
         """ЮПорт (пр-кт Андропова, 11): раздельный запрос по каждому
         корпусу вместо одного общего — 3 из 6 корпусов (1, 2, 7) имеют
-        собственную запись в базе геокодера и приняты; 3 (4, 5, 6) не
-        имеют — остаются без координат, не подставлена соседняя точка."""
+        собственную запись в базе геокодера и приняты как exact; ещё 3
+        (4, 5, 6) не имеют собственной записи, но в этой же базе уже есть
+        project-уровневая запись «Юпорт» (OBJ-0365) с координатой в том же
+        кластере — присвоена им как centroid, а не подставлена наугад."""
         by_id = {r["id"]: r for r in self.projects}
         no_coord_ids = {r["id"] for r in self.no_coords}
         for object_id in ("OBJ-0770", "OBJ-0772", "OBJ-0775"):
             self.assertNotIn(object_id, no_coord_ids, object_id)
             self.assertEqual(by_id[object_id]["geometry_quality"], "exact", object_id)
+        centroid = (55.690336, 37.678141)
         for object_id in ("OBJ-0771", "OBJ-0774", "OBJ-0776"):
+            self.assertNotIn(object_id, no_coord_ids, object_id)
+            rec = by_id[object_id]
+            self.assertEqual((rec["lat"], rec["lng"]), centroid, object_id)
+            self.assertEqual(rec["geometry_quality"], "centroid", object_id)
+
+    def test_cross_database_name_match_recovers_coordinates(self):
+        """Поиск по названию внутри самой базы (та же запись под другим
+        именем/из другого листа уже с координатой) нашёл 3 честных
+        exact/approximate совпадения без единого нового запроса к геокодеру:
+        МФК Электролитный (= OBJ-0139/OBJ-0363, GBA расходится на 0.2%),
+        БЦ на Гончарной 20/1с2 (= OBJ-0283, GBA расходится на 0.01%),
+        Технопарк ЗИЛ А (= OBJ-0057, тот же девелопер, соседний корпус —
+        approximate, не exact)."""
+        by_id = {r["id"]: r for r in self.projects}
+        no_coord_ids = {r["id"] for r in self.no_coords}
+
+        self.assertNotIn("OBJ-0725", no_coord_ids)
+        rec = by_id["OBJ-0725"]
+        self.assertEqual((rec["lat"], rec["lng"]), (55.673641, 37.617204))
+        self.assertEqual(rec["geometry_quality"], "exact")
+
+        self.assertNotIn("OBJ-0777", no_coord_ids)
+        rec = by_id["OBJ-0777"]
+        self.assertEqual((rec["lat"], rec["lng"]), (55.744075, 37.647899))
+        self.assertEqual(rec["geometry_quality"], "exact")
+
+        self.assertNotIn("OBJ-0657", no_coord_ids)
+        rec = by_id["OBJ-0657"]
+        self.assertEqual((rec["lat"], rec["lng"]), (55.702688, 37.634389))
+        self.assertEqual(rec["geometry_quality"], "approximate")
+
+    def test_cross_database_search_does_not_force_mismatched_gba_candidates(self):
+        """Кандидаты с тем же именем-топонимом, но резко отличающейся GBA
+        (Крост АДЦ Коммунарка 190000 vs БЦ Крост 24000 — в 8 раз; Самолет
+        АДЦ Коммунарка 299000 vs БЦ Самолет 25400 — в 11 раз) — НЕ приняты
+        как совпадение, остаются в no_coords: разная GBA означает разные
+        физические объекты одного девелопера, не один и тот же."""
+        no_coord_ids = {r["id"] for r in self.no_coords}
+        for object_id in ("OBJ-0255", "OBJ-0271", "OBJ-0246"):
             self.assertIn(object_id, no_coord_ids, object_id)
 
     def test_river_park_kolomenskoye_shares_explained_centroid(self):
@@ -905,7 +952,7 @@ class Batch20260814FullGeoCoverageAuditTest(unittest.TestCase):
         нет ни адреса, ни exact/near-совпадения в границах Москвы. Ни одна
         не содержит lat/lng — сокращение no_coords не сделано ценой точности."""
         by_id = {r["id"]: r for r in self.no_coords}
-        self.assertEqual(len(self.no_coords), 31)
+        self.assertEqual(len(self.no_coords), 25)
         for r in self.no_coords:
             self.assertIsNone(r.get("lat"), r["id"])
             self.assertIsNone(r.get("lng"), r["id"])
