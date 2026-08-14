@@ -99,6 +99,23 @@ class FutureProjectsLayerTest(unittest.TestCase):
                 "OBJ-0687", "OBJ-0758", "OBJ-0608", "OBJ-0666",
                 # партия 2026-08-12
                 "OBJ-0152", "OBJ-0729",
+                # партия 2026-08-14: внутрибазовые дубли (совпадение
+                # девелопера и GBA с точностью до 3%, та же запись под
+                # другим именем из другого исходного листа)
+                "OBJ-0020", "OBJ-0031", "OBJ-0032", "OBJ-0040", "OBJ-0065",
+                "OBJ-0067", "OBJ-0069", "OBJ-0107", "OBJ-0138", "OBJ-0179",
+                "OBJ-0187", "OBJ-0226", "OBJ-0235", "OBJ-0291", "OBJ-0314",
+                "OBJ-0340", "OBJ-0347", "OBJ-0350", "OBJ-0371", "OBJ-0372",
+                "OBJ-0377", "OBJ-0379", "OBJ-0384", "OBJ-0390", "OBJ-0478",
+                "OBJ-0485", "OBJ-0520", "OBJ-0535", "OBJ-0548", "OBJ-0572",
+                "OBJ-0573", "OBJ-0577", "OBJ-0604", "OBJ-0614", "OBJ-0615",
+                "OBJ-0616", "OBJ-0756",
+                # партия 2026-08-14, вторая волна (слабый сигнал: GBA
+                # совпадает, но развёрнутое имя девелопера отличается от
+                # сокращения/уверенности той же компании — проверено вручную)
+                "OBJ-0611", "OBJ-0619", "OBJ-0617", "OBJ-0498", "OBJ-0511",
+                "OBJ-0139", "OBJ-0363", "OBJ-0357", "OBJ-0578", "OBJ-0392",
+                "OBJ-0391", "OBJ-0665", "OBJ-0283",
             },
         )
         canonical_ids = active_ids
@@ -262,7 +279,6 @@ class FutureProjectsLayerTest(unittest.TestCase):
         by_id = {r["id"]: r for r in self.projects}
         expected = {
             "OBJ-0111": (55.778785, 37.584164),
-            "OBJ-0665": (55.7844, 37.58464),
             "OBJ-0706": (55.784779, 37.585853),
             "OBJ-0493": (55.761173, 37.528271),
             "OBJ-0534": (55.829911, 37.431873),
@@ -274,6 +290,13 @@ class FutureProjectsLayerTest(unittest.TestCase):
             self.assertEqual(rec["geometry_quality"], "exact", object_id)
             self.assertTrue(rec.get("coordinates_source"), object_id)
             self.assertTrue(rec["needs_review"], object_id)
+
+        # OBJ-0665 объединён 2026-08-14 в OBJ-0278 «Вперед» (тот же адрес,
+        # GBA расходится на 0.001%) — координата сохранена на канонической записи.
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        self.assertEqual(dup_by_id["OBJ-0665"]["duplicate_of"], "OBJ-0278")
+        canonical = by_id["OBJ-0278"]
+        self.assertEqual((canonical["lat"], canonical["lng"]), (55.7844, 37.58464))
 
     def test_partia_2026_08_09_rejected_mismatches_keep_old_coordinates(self):
         """Кандидаты Яндекса с несовпадающим корпусом/типом улицы отклонены —
@@ -402,21 +425,21 @@ class Regeocode20260811BatchTest(unittest.TestCase):
         by_id = {r["id"]: r for r in self.projects}
         exact_ids = [
             "OBJ-0089", "OBJ-0103", "OBJ-0120", "OBJ-0193", "OBJ-0223",
-            "OBJ-0485", "OBJ-0501", "OBJ-0548", "OBJ-0567", "OBJ-0587",
+            "OBJ-0501", "OBJ-0567", "OBJ-0587",
             "OBJ-0637", "OBJ-0645", "OBJ-0652", "OBJ-0672", "OBJ-0693",
         ]
+        # FRAME WORKPLACE (OBJ-0548) и "17-й проезд Марьиной Рощи, 9"
+        # (OBJ-0485) — те же здания, что OBJ-0103/OBJ-0193 — объединены
+        # через duplicate_of (см. Batch20260814InternalDuplicateMergeTest),
+        # больше не отдельные активные записи, делить с ними точку не с кем.
         points = []
         for object_id in exact_ids:
             self.assertIn(object_id, by_id, object_id)
             rec = by_id[object_id]
             self.assertEqual(rec["geometry_quality"], "exact", object_id)
             points.append((round(rec["lat"], 6), round(rec["lng"], 6)))
-        # FRAME WORKPLACE (OBJ-0103) и его дубль-запись (OBJ-0548) — одно
-        # реальное здание под двумя строками исходника, законно совпадают;
-        # "17-й проезд Марьиной Рощи, 9" (OBJ-0193/OBJ-0485) — то же самое.
-        allowed_shared = {points[1], points[3]}  # FRAME WORKPLACE / Edel пары
         dupes = {p for p in points if points.count(p) > 1}
-        self.assertTrue(dupes.issubset(allowed_shared), f"неожиданные общие точки: {dupes - allowed_shared}")
+        self.assertEqual(dupes, set(), f"неожиданные общие точки: {dupes}")
 
     def test_centroid_fixes_are_not_marked_exact(self):
         """12 записей, где адрес общий на несколько корпусов/башен, обязаны
@@ -965,6 +988,107 @@ class Batch20260814FullGeoCoverageAuditTest(unittest.TestCase):
         ovr_path = REPO_ROOT / "data" / "future_projects_verification_overrides.json"
         ovr_text = ovr_path.read_text(encoding="utf-8")
         self.assertNotIn("bec42ad9", ovr_text)
+
+
+class Batch20260814InternalDuplicateMergeTest(unittest.TestCase):
+    """По запросу «проверяй всё»: поиск по всей базе projects (731 записей)
+    выявил 31 группу (68 записей), где один физический объект был записан
+    несколько раз под разными именами из разных исходных листов
+    (будущие/будущие (old)/сданы/remain/Анонсы) — с точным совпадением
+    девелопера и GBA (расхождение <=3%), но БЕЗ duplicate_of. Объединено
+    через duplicate_of; исходные записи не удалены, источники/алиасы
+    перенесены на канонический объект."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not DATA.exists():
+            raise unittest.SkipTest("data/future_projects.json отсутствует")
+        with DATA.open(encoding="utf-8") as f:
+            cls.payload = json.load(f)
+        cls.projects = cls.payload["projects"]
+        cls.duplicates = cls.payload["duplicates"]
+
+    def test_lucky_corpus1_merged_into_lucky_bldg2(self):
+        """Lucky (корпус 1) и Lucky, bldg 2 — один и тот же дом (2-я
+        Звенигородская, 28; VESPER; GBA 4470 vs 4469.6) — не два разных
+        корпуса одного комплекса, а одна и та же запись дважды."""
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        proj_by_id = {r["id"]: r for r in self.projects}
+        self.assertEqual(dup_by_id["OBJ-0020"]["duplicate_of"], "OBJ-0579")
+        canonical = proj_by_id["OBJ-0579"]
+        self.assertIn("Lucky (корпус 1)", canonical.get("aliases") or [])
+
+    def test_skolkovo_park_four_phase_rows_merged_to_one(self):
+        """Сколково парк, фазы I/II/III + корп. 2/4/6 + корп. 3/5 — все
+        пять строк несут идентичный дублированный GBA (70666.67, целый
+        проект поделённый на фазы с одинаковым числом) — артефакт исходной
+        выгрузки, не пять разных зданий. Объединены в OBJ-0026."""
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        proj_by_id = {r["id"]: r for r in self.projects}
+        for object_id in ("OBJ-0067", "OBJ-0069", "OBJ-0614", "OBJ-0615"):
+            self.assertEqual(dup_by_id[object_id]["duplicate_of"], "OBJ-0026", object_id)
+        self.assertIn("OBJ-0026", proj_by_id)
+
+    def test_merged_records_kept_not_deleted_with_sources_preserved(self):
+        """Ни одна объединённая запись не удалена — все 37 присутствуют в
+        duplicates с непустым duplicate_of, указывающим на запись в
+        активном слое projects."""
+        proj_ids = {r["id"] for r in self.projects}
+        merged_ids = {
+            "OBJ-0020", "OBJ-0031", "OBJ-0032", "OBJ-0040", "OBJ-0065",
+            "OBJ-0067", "OBJ-0069", "OBJ-0107", "OBJ-0138", "OBJ-0179",
+            "OBJ-0187", "OBJ-0226", "OBJ-0235", "OBJ-0291", "OBJ-0314",
+            "OBJ-0340", "OBJ-0347", "OBJ-0350", "OBJ-0371", "OBJ-0372",
+            "OBJ-0377", "OBJ-0379", "OBJ-0384", "OBJ-0390", "OBJ-0478",
+            "OBJ-0485", "OBJ-0520", "OBJ-0535", "OBJ-0548", "OBJ-0572",
+            "OBJ-0573", "OBJ-0577", "OBJ-0604", "OBJ-0614", "OBJ-0615",
+            "OBJ-0616", "OBJ-0756",
+        }
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        self.assertEqual(merged_ids, merged_ids & dup_by_id.keys())
+        for object_id in merged_ids:
+            rec = dup_by_id[object_id]
+            self.assertIn(rec["duplicate_of"], proj_ids, object_id)
+
+    def test_weak_signal_pairs_not_auto_merged(self):
+        """Пары, где совпадает только GBA, а девелопер различается/не
+        указан (14 пар, включая Aurus/Страна.Сити), НЕ объединены
+        автоматически — разбираются вручную по одной, не по формальному
+        совпадению площади."""
+        proj_ids = {r["id"] for r in self.projects}
+        for object_id in ("OBJ-0345", "OBJ-0374"):
+            self.assertIn(object_id, proj_ids, object_id)
+            rec = next(r for r in self.projects if r["id"] == object_id)
+            self.assertIsNone(rec.get("duplicate_of"), object_id)
+
+    def test_weak_signal_pairs_manually_confirmed_and_merged(self):
+        """Вторая волна: 12 пар/групп, где совпадал только GBA, а строка
+        девелопера отличалась — проверены вручную (аббревиатура/неуверенная
+        пометка «?»/транслитерация одной и той же компании, не разные
+        компании) и объединены через duplicate_of."""
+        dup_by_id = {r["id"]: r for r in self.duplicates}
+        proj_ids = {r["id"] for r in self.projects}
+        expected = {
+            "OBJ-0611": "OBJ-0044", "OBJ-0619": "OBJ-0056", "OBJ-0617": "OBJ-0082",
+            "OBJ-0498": "OBJ-0095", "OBJ-0511": "OBJ-0132", "OBJ-0139": "OBJ-0725",
+            "OBJ-0363": "OBJ-0725", "OBJ-0357": "OBJ-0155", "OBJ-0578": "OBJ-0017",
+            "OBJ-0392": "OBJ-0237", "OBJ-0391": "OBJ-0267", "OBJ-0283": "OBJ-0777",
+        }
+        for dup_id, canonical_id in expected.items():
+            self.assertEqual(dup_by_id[dup_id]["duplicate_of"], canonical_id, dup_id)
+            self.assertIn(canonical_id, proj_ids, canonical_id)
+
+    def test_genuinely_different_developer_pairs_stay_unmerged(self):
+        """October Group vs MR Group (OBJ-0266/OBJ-0393) — реальные разные
+        компании, не варианты написания одной; совпадение адреса и GBA
+        одно, без независимого источника, недостаточно — НЕ объединено,
+        только задокументировано в review_notes."""
+        proj_ids = {r["id"] for r in self.projects}
+        for object_id in ("OBJ-0266", "OBJ-0393"):
+            self.assertIn(object_id, proj_ids, object_id)
+            rec = next(r for r in self.projects if r["id"] == object_id)
+            self.assertIsNone(rec.get("duplicate_of"), object_id)
+            self.assertIn("НЕ объединено", rec.get("review_notes") or "", object_id)
 
 
 if __name__ == "__main__":
