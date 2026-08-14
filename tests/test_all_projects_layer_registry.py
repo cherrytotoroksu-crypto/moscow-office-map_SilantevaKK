@@ -92,6 +92,29 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
                 f"{name!r}: rows were merged into a shared canonical_project_id ({ids}) — not allowed without an explicit rule"
             )
 
+    def test_code_delegat_address_matches_its_own_shchemilovsky_name(self):
+        """Аудит 2026-08-14: одна из двух строк «СODE Delegat (1-й
+        Щемиловский 16с2)» в classifier.html несла адрес/координату СODE
+        Novo (Долгоруковская 21) — баг копирования, подтверждённый внешними
+        источниками (kf.expert, CRE.ru: CODE Delegat всегда на Щемиловском).
+        Обе строки этого имени обязаны указывать на Щемиловский, не на
+        Долгоруковскую."""
+        matches = [r for r in self.records if r["canonical_name"] == "СODE Delegat (1-й Щемиловский 16с2)"]
+        self.assertGreaterEqual(len(matches), 2)
+        for r in matches:
+            self.assertEqual(r["address"], "1-й Щемиловский 16с2", r["canonical_project_id"])
+            self.assertEqual((r["latitude"], r["longitude"]), (55.779089, 37.607197), r["canonical_project_id"])
+
+    def test_code_novo_manual_patch_survives_regenerate(self):
+        """canonical_building_id и расширенные aliases для СODE Novo
+        (proj-149) раньше применялись разовым патчом JSON и терялись при
+        каждом build_all_projects_layer.py — теперь заданы в самом скрипте
+        (EXTRA_BUILDING_ID/EXTRA_ALIASES) и должны переживать regenerate."""
+        novo = next(r for r in self.records if r["canonical_project_id"] == "proj-149")
+        self.assertEqual(novo["canonical_building_id"], "code-novo-dolgorukovskaya-21")
+        for alias in ("CODE Novo", "Долгоруковская 21", "СODE Novo"):
+            self.assertIn(alias, novo["aliases"], alias)
+
 
 if __name__ == "__main__":
     unittest.main()

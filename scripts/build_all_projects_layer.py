@@ -204,6 +204,18 @@ BADAEVSKY_IDS = {
     "Бадаевский Восточная лента": ("badaevsky", "badaevsky-east", "building"),
 }
 
+# Ручные уточнения по конкретному canonical_project_id (proj-{old_id}),
+# переживающие regenerate — раньше applied как разовый патч JSON и
+# терялись при каждом build_all_projects_layer.py (найдено в аудите
+# 2026-08-14). canonical_project_id стабилен (= proj-{old_id}), поэтому
+# ключ здесь — именно он, не raw_name (несколько строк могут делить имя).
+EXTRA_BUILDING_ID = {
+    "proj-149": "code-novo-dolgorukovskaya-21",  # СODE Novo, Долгоруковская 21
+}
+EXTRA_ALIASES = {
+    "proj-149": ["CODE Novo", "Долгоруковская 21"],
+}
+
 
 def convert_row(row, colormap, quarter_presence, warnings):
     name = row.get("name")
@@ -215,7 +227,7 @@ def convert_row(row, colormap, quarter_presence, warnings):
         area_scope = "building"
     else:
         canonical_project_id = f"proj-{old_id}"
-        canonical_building_id = None
+        canonical_building_id = EXTRA_BUILDING_ID.get(canonical_project_id)
         entity_grain = "project"
         area_scope = "project"
 
@@ -247,7 +259,10 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "raw_name": name_orig,
         "canonical_name": name,
         "flex_site_label": derive_flex_site_label(name, name_orig),
-        "aliases": [] if name == name_orig else [name_orig],
+        "aliases": sorted(set(
+            ([] if name == name_orig else [name_orig])
+            + EXTRA_ALIASES.get(canonical_project_id, [])
+        )),
         "developer": row.get("developer"),
         "address": row.get("address"),
         "latitude": row.get("lat"),
