@@ -101,13 +101,36 @@ class RemainOnlyRemainWebVerificationTests(unittest.TestCase):
         # web-проверка подтверждает, что лоты реально существуют, но это не
         # заменяет NF-подтверждение — public_visibility/verification_status
         # не должны стать public/accepted только от web-сигнала.
-        for pid in ("remain-only-0002", "remain-only-0003"):
+        for pid in ("remain-only-0002",):
             r = self.by_id[pid]
             self.assertEqual(r["public_visibility"], "internal_only")
             self.assertEqual(r["verification_status"], "under_review")
             self.assertFalse(r["quarter_offer_exists"])
             self.assertEqual(r["quarter_offer_refs"], [])
             self.assertEqual(r["market_channel"], [])
+
+    def test_sydney_city_reclassified_as_cross_registry_duplicate(self):
+        """2026-08-19: remain-only-0003 (Sydney City) подтверждён как дубль
+        data/future_projects.json OBJ-0668 — тот же адрес (ул. Шеногина, 2),
+        тот же девелопер (ГК ФСК), GBA 70000 совпадает точно и с OBJ-0668, и
+        с независимым источником (stroi.mos.ru)."""
+        r = self.by_id["remain-only-0003"]
+        self.assertEqual(r["verification_status"], "blocked")
+        self.assertEqual(r["qa_status"], "duplicate_suspect")
+        self.assertIn("OBJ-0668", r["qa_notes"])
+        self.assertFalse(r["quarter_offer_exists"])
+        self.assertEqual(r["public_visibility"], "internal_only")
+
+    def test_zilart_grand_flagged_not_merged_insufficient_evidence(self):
+        """2026-08-19: remain-only-0002 (ЗИЛАРТ GRAND) совпадает по имени/
+        девелоперу с future_projects.json OBJ-0640, но GBA расходится почти
+        в 5 раз (187706 жилая башня целиком vs заявленных Remain 35600) —
+        вероятно другое здание того же квартала. НЕ объединено и НЕ
+        отклонено — недостаточно доказательств, остаётся under_review."""
+        r = self.by_id["remain-only-0002"]
+        self.assertEqual(r["verification_status"], "under_review")
+        self.assertIn("OBJ-0640", r["qa_notes"])
+        self.assertIn("НЕ объединено", r["qa_notes"])
 
     def test_moscow_towers_reclassified_as_cross_registry_duplicate(self):
         """2026-08-19: remain-only-0004 (Moscow Towers) подтверждён как дубль
