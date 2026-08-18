@@ -493,6 +493,13 @@
   </div>
   <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
 
+  <h3 style="margin-top:5px;">Класс</h3>
+  <label class="check-row"><input type="checkbox" class="flt-cls" value="Prime" checked> Prime</label>
+  <label class="check-row"><input type="checkbox" class="flt-cls" value="A" checked> A</label>
+  <label class="check-row"><input type="checkbox" class="flt-cls" value="B+" checked> B+</label>
+  <label class="check-row"><input type="checkbox" class="flt-cls" value="B" checked> B</label>
+  <label class="check-row"><input type="checkbox" class="flt-cls" value="" checked> Не указан</label>
+
   <h3 id="rangeFilterTitle" style="margin-top:5px;">Диапазон: цена, руб/кв.м</h3>
   <div class="range-row">
     <input type="number" id="fltPriceMin" class="range-input" placeholder="от">
@@ -536,6 +543,14 @@
     <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="да" checked> Со ставкой</label>
     <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="нет" checked> Без ставки</label>
     <div id="cwFilterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+
+    <h3 style="margin-top:8px;">Класс (по зданию площадки)</h3>
+    <div style="font-size:10px;color:#999;margin-bottom:4px;">Класс берётся у ближайшего здания в радиусе 80 м; площадки без такого здания — «Без здания».</div>
+    <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="Prime" checked> Prime</label>
+    <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="A" checked> A</label>
+    <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="B+" checked> B+</label>
+    <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="B" checked> B</label>
+    <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="" checked> Без здания</label>
   </div>
 
   <div id="projectsControls" style="display:none;">
@@ -574,7 +589,7 @@
     <select id="fpDeveloper" style="width:100%;font-size:11px;padding:3px;"><option value="">Все</option></select>
 
     <h3 style="margin-top:6px;">Класс</h3>
-    <select id="fpClass" style="width:100%;font-size:11px;padding:3px;"><option value="">Все</option></select>
+    <div id="fpClassWrap"></div>
 
     <h3 style="margin-top:6px;">Квартал ввода</h3>
     <select id="fpQuarter" style="width:100%;font-size:11px;padding:3px;">
@@ -936,6 +951,7 @@ let dataLoaded = false;
 let filterStatus = new Set(['Строится', 'Построен']);
 let filterOnSale  = new Set(['да']);
 let filterOnRent  = new Set(['да']);
+let filterClass   = new Set(['Prime', 'A', 'B+', 'B', '']);
 let priceRange = { min: null, max: null }; // фильтр «Диапазон: цена/ставка»
 let areaRange  = { min: null, max: null }; // фильтр «Диапазон: площадь»
 
@@ -975,6 +991,7 @@ function getFilteredBuildings() {
                  : (b.on_sale || '').trim().toLowerCase() === 'нет' ? 'нет' : '';
       if (!filterOnSale.has(sale)) return false;
     }
+    if (!filterClass.has(b.cls || '')) return false;
     if (priceRange.min != null || priceRange.max != null || areaRange.min != null || areaRange.max != null) {
       const { price, area } = bldMetricValue(b);
       if (priceRange.min != null && (price == null || price < priceRange.min)) return false;
@@ -1281,8 +1298,17 @@ async function recomputeAll() {
 
 // Фильтр по наличию ставки. Если ставка не указана — считаем, что данных нет.
 let filterCwRate = new Set(['да', 'нет']);
+// Класс — у площадки его нет, берём у ближайшего здания (buildingIndexForCoworking,
+// радиус 80 м); '' = площадка без такого здания в радиусе.
+let filterCwClass = new Set(['Prime', 'A', 'B+', 'B', '']);
 function getFilteredCoworking() {
-  return coworkingData.filter(c => filterCwRate.has(c.rate != null && isFinite(c.rate) ? 'да' : 'нет'));
+  return coworkingData.filter(c => {
+    if (!filterCwRate.has(c.rate != null && isFinite(c.rate) ? 'да' : 'нет')) return false;
+    const bIdx = buildingIndexForCoworking(c);
+    const cls = bIdx >= 0 ? (buildingsData[bIdx].cls || '') : '';
+    if (!filterCwClass.has(cls)) return false;
+    return true;
+  });
 }
 
 // ── Статистика коворкингов по геослоям (point-in-polygon) ──
@@ -2153,6 +2179,7 @@ function syncURL() {
     p.set('status', [...filterStatus].join(','));
     if (rentMode) p.set('rentf', [...filterOnRent].join(','));
     else p.set('salef', [...filterOnSale].join(','));
+    p.set('cls', [...filterClass].join(','));
     if (priceRange.min != null) p.set('pmin', priceRange.min);
     if (priceRange.max != null) p.set('pmax', priceRange.max);
     if (areaRange.min != null) p.set('amin', areaRange.min);
@@ -2226,6 +2253,10 @@ function applyStateFromURL() {
   } else if (p.has('salef')) {
     filterOnSale = new Set(p.get('salef').split(',').filter(Boolean));
     document.querySelectorAll('.flt-sale').forEach(cb => cb.checked = filterOnSale.has(cb.value));
+  }
+  if (p.has('cls')) {
+    filterClass = new Set(p.get('cls').split(','));
+    document.querySelectorAll('.flt-cls').forEach(cb => cb.checked = filterClass.has(cb.value));
   }
   if (p.has('pmin')) { priceRange.min = Number(p.get('pmin')); document.getElementById('fltPriceMin').value = priceRange.min; }
   if (p.has('pmax')) { priceRange.max = Number(p.get('pmax')); document.getElementById('fltPriceMax').value = priceRange.max; }
@@ -2362,6 +2393,13 @@ document.querySelectorAll('.flt-sale').forEach(cb => {
 document.querySelectorAll('.flt-rent').forEach(cb => {
   cb.addEventListener('change', function() {
     if (this.checked) filterOnRent.add(this.value); else filterOnRent.delete(this.value);
+    applyFilters();
+    syncURL();
+  });
+});
+document.querySelectorAll('.flt-cls').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) filterClass.add(this.value); else filterClass.delete(this.value);
     applyFilters();
     syncURL();
   });
@@ -2646,6 +2684,12 @@ document.querySelectorAll('.flt-cw-rate').forEach(cb => {
     applyCoworkingFilters();
   });
 });
+document.querySelectorAll('.flt-cw-cls').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) filterCwClass.add(this.value); else filterCwClass.delete(this.value);
+    applyCoworkingFilters();
+  });
+});
 
 function renderCoworking() {
   if (coworkingLayer) map.removeLayer(coworkingLayer);
@@ -2752,14 +2796,28 @@ async function loadFutureProjects() {
   }
 }
 
+// Кириллические омографы класса ("А"/"В"/"В+" вместо латинских A/B/B+) встречаются
+// в исходном своде — без нормализации это выглядело бы как два разных класса.
+function normalizeCls(v) {
+  if (!v) return '';
+  const map = { 'А': 'A', 'В': 'B', 'В+': 'B+' };
+  return map[v] || v;
+}
 function fpFillSelects() {
   const all = futureData.projects.concat(futureData.no_coords);
   const devs = [...new Set(all.map(p => p.developer).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'ru'));
-  const cls = [...new Set(all.map(p => p.cls).filter(Boolean))].sort();
   const devSel = document.getElementById('fpDeveloper');
-  const clsSel = document.getElementById('fpClass');
   devs.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; devSel.appendChild(o); });
-  cls.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; clsSel.appendChild(o); });
+
+  const clsOrder = ['Prime', 'A', 'B+', 'B'];
+  const clsPresent = new Set(all.map(p => normalizeCls(p.cls)));
+  const clsWrap = document.getElementById('fpClassWrap');
+  const clsList = clsOrder.filter(c => clsPresent.has(c));
+  if (clsPresent.has('')) clsList.push('');
+  clsWrap.innerHTML = clsList.map(c =>
+    `<label class="check-row"><input type="checkbox" class="flt-fp-cls" value="${c}" checked> ${c || 'Не указан'}</label>`
+  ).join('');
+  clsWrap.querySelectorAll('.flt-fp-cls').forEach(cb => cb.addEventListener('change', renderFuture));
 }
 
 function fpConfMode() {
@@ -2776,7 +2834,7 @@ function getFilteredFuture() {
   const statuses = new Set([...document.querySelectorAll('.flt-fp-status:checked')].map(c => c.value));
   const mode = fpConfMode();
   const dev = document.getElementById('fpDeveloper').value;
-  const cls = document.getElementById('fpClass').value;
+  const clsSet = new Set([...document.querySelectorAll('.flt-fp-cls:checked')].map(c => c.value));
   const q = document.getElementById('fpQuarter').value;
   const yMin = parseFloat(document.getElementById('fpYearMin').value);
   const yMax = parseFloat(document.getElementById('fpYearMax').value);
@@ -2787,7 +2845,7 @@ function getFilteredFuture() {
     if (mode === 'verified' && conf === 'Низкий') return false;
     if (mode === 'review' && conf !== 'Низкий') return false;
     if (dev && p.developer !== dev) return false;
-    if (cls && p.cls !== cls) return false;
+    if (!clsSet.has(normalizeCls(p.cls))) return false;
     if (q && String(p.commission_quarter) !== q) return false;
     if (isFinite(yMin) && (p.commission_year == null || p.commission_year < yMin)) return false;
     if (isFinite(yMax) && (p.commission_year == null || p.commission_year > yMax)) return false;
@@ -2893,7 +2951,7 @@ function renderFutureLegend() {
 
 document.querySelectorAll('.flt-fp-status').forEach(cb => cb.addEventListener('change', renderFuture));
 document.querySelectorAll('input[name="fpConfMode"]').forEach(cb => cb.addEventListener('change', renderFuture));
-['fpDeveloper', 'fpClass', 'fpQuarter'].forEach(id => document.getElementById(id).addEventListener('change', renderFuture));
+['fpDeveloper', 'fpQuarter'].forEach(id => document.getElementById(id).addEventListener('change', renderFuture));
 ['fpYearMin', 'fpYearMax'].forEach(id => document.getElementById(id).addEventListener('input', renderFuture));
 
 document.querySelectorAll('.fp-quick').forEach(btn => btn.addEventListener('click', function() {
