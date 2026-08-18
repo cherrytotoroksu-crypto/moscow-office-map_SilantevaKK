@@ -258,6 +258,18 @@ class SaleCandidateLinkingTest(unittest.TestCase):
         self.assertIn("Бадаевский Западная", badaevsky_rows["badaevsky-west"]["aliases"])
         self.assertIn("Бадаевский Восточная", badaevsky_rows["badaevsky-east"]["aliases"])
 
+    def test_workplace_republic_forma_linked_to_porta_forma(self):
+        """Дополнение к аудиту: Workplace REPUBLIC Forma подтверждён по
+        исходным Excel-файлам как историческое название Porta Forma —
+        alias на proj-86, новый project ID не создан."""
+        by_id = {r["canonical_project_id"]: r for r in self.records}
+        proj86 = by_id["proj-86"]
+        self.assertEqual(proj86["canonical_name"], "Porta Forma")
+        self.assertIn("Workplace REPUBLIC Forma", proj86["aliases"])
+        self.assertIsNone(proj86["duplicate_of"])
+        ids = {r["canonical_project_id"] for r in self.records}
+        self.assertNotIn("Workplace REPUBLIC Forma", ids)
+
     def test_nizhnyaya_maslovka_not_linked_unconfirmed(self):
         """proj-99 — «Магистральная 12», другой адрес, чем предложенная
         связка «Нижняя Масловка, 12»; строка не найдена ни в одном файле

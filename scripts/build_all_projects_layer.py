@@ -219,6 +219,10 @@ EXTRA_ALIASES = {
     # разных кварталов — тот же объект, не новый проект.
     "proj-205": ["БЦ Twist"],
     "proj-216": ["БЦ А101 Прокшино"],
+    # outputs/sale_coverage_candidate_classification_2026-08-18.md,
+    # дополнение: подтверждено по исходным Excel-файлам как историческое
+    # название Porta Forma.
+    "proj-86": ["Workplace REPUBLIC Forma"],
 }
 
 # Аналог EXTRA_ALIASES, но ключ — canonical_building_id (нужен для

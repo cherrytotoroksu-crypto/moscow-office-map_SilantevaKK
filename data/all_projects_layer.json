@@ -4616,7 +4616,9 @@
     "raw_name": "Porta Forma",
     "canonical_name": "Porta Forma",
     "flex_site_label": null,
-    "aliases": [],
+    "aliases": [
+      "Workplace REPUBLIC Forma"
+    ],
     "developer": "Forma (ПИК)",
     "address": "Заречная ул, 2/1",
     "latitude": 55.747221,
