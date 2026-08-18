@@ -41,6 +41,43 @@ class RemainClassificationTests(unittest.TestCase):
         self.assertEqual(enum_errors, [])
 
 
+class RemainConflictResolutionTests(unittest.TestCase):
+    """2026-08-18: Botanica Plaza / Rail.A conflicts closed by re-verifying
+    against developer official sites and correcting the local geocode.
+    А101 Прокшино stays a documented scope-difference, GBA/GLA must not move."""
+
+    def setUp(self):
+        if not LAYER_PATH.exists():
+            self.skipTest("all_projects_layer.json not present")
+        self.layer = json.loads(LAYER_PATH.read_text(encoding="utf-8-sig"))
+        self.by_id = {r["canonical_project_id"]: r for r in self.layer}
+
+    def test_botanica_plaza_coordinates_match_official_address(self):
+        r = self.by_id["proj-170"]
+        self.assertAlmostEqual(r["latitude"], 55.839861, places=3)
+        self.assertAlmostEqual(r["longitude"], 37.6365, places=3)
+        self.assertIn("Вильгельма Пика", r["address"])
+        self.assertIn("remain_conflict_resolved", r["qa_notes"])
+
+    def test_rail_a_coordinates_tightened_to_official_source(self):
+        r = self.by_id["proj-173"]
+        self.assertAlmostEqual(r["latitude"], 55.779406, places=3)
+        self.assertAlmostEqual(r["longitude"], 37.687831, places=3)
+        self.assertIn("remain_conflict_resolved", r["qa_notes"])
+
+    def test_prokshino_gba_gla_untouched_by_scope_conflict(self):
+        r = self.by_id["proj-216"]
+        # единственный корпус из 5 в квартале — площадь всего комплекса (Remain
+        # сумма 113029 / офиц. >177 тыс. кв.м) НЕ подставляется вместо площади
+        # одного здания без разбивки по building.
+        self.assertEqual(r["gba"], 42000)
+        self.assertEqual(r["gla"], 22700)
+        self.assertIn("resolved_scope_difference", r["qa_notes"])
+
+    def test_layer_still_passes_validator_after_conflict_fixes(self):
+        self.assertEqual(validate_layer(self.layer), [])
+
+
 class RemainRegressionOnCurrentLayerTests(unittest.TestCase):
     """Guards against silently losing external_only Remain records on rebuild."""
 

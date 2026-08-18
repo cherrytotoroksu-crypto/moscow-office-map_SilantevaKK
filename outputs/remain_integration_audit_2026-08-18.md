@@ -8,23 +8,30 @@
 не эквивалент полного сопоставления). `only_local` не оценён — требует
 полного дампа Remain, иначе счётчик будет ложно занижен.
 
-## Счётчики
+## Счётчики (обновлено 2026-08-18, после разбора конфликтов)
 
 | Категория | Кол-во |
 |---|---|
-| exact_match | 7 |
-| probable_match | 6 |
-| only_remain (добавлены) | 4 |
+| exact_match | 9 |
+| probable_match | 4 |
+| only_remain (в слое) | 4 |
 | only_local | n/a — недоступно без полного дампа Remain |
-| conflict | 3 |
+| conflict | 1 (resolved_scope_difference, не ошибка данных) |
 
-## Конфликты (требуют разбора вручную)
+## Конфликты — разобраны вручную (без полного дампа, точечно по 3 объектам)
 
-| Remain | Наш объект | Проблема |
-|---|---|---|
-| Botanica Plaza | Plaza Botanica | координаты расходятся на 0.65 км |
-| Rail.A | Rail.A | координаты расходятся на 0.34 км |
-| Бизнес-квартал Прокшино Башни 1/2/3 | А101 Прокшино | наши GBA 42000 vs сумма Remain 113029 — вероятно, у нас учтена только одна башня |
+Полного табличного дампа Remain (координаты/GLA/GBA по всем 336 объектам) на
+момент разбора нет — см. переписку 2026-08-18. Эти 3 конфликта из аудита
+`24fc171` перепроверены индивидуально через официальные сайты застройщиков
+(WebSearch/WebFetch), не через Remain-датасет:
+
+| Remain | Наш объект | Было | Стало |
+|---|---|---|---|
+| Botanica Plaza | Plaza Botanica (proj-170) | адрес "1-я ул. Леонова, д. 1" (не существует), координаты 55.842236/37.646247 | **exact_match**: адрес исправлен на офиц. "ул. Вильгельма Пика, д. 11" (botanicaplaza.moscow, м. Ботанический сад), координаты 55.839861/37.6365. GBA/GLA не менялись. |
+| Rail.A | Rail.A (proj-173) | координаты 55.778947/37.686671 (~0.34 км от Remain) | **exact_match**: координаты уточнены по rail-a.ru — 55.779406/37.687831. Адрес и девелопер (ORTIGA Development) совпадали изначально. |
+| Бизнес-квартал Прокшино Башни 1/2/3 | А101 Прокшино (proj-216) | GBA 42000 vs Remain-сумма 113029 | **conflict, resolved_scope_difference**: официальные материалы А101 (commercial.a101.ru/bk-prokshino) подтверждают весь квартал — 5 корпусов, >177 тыс. кв. м совокупно; наша запись — один корпус (квартал №35). Это разница масштаба, не ошибка. GBA/GLA **не менялись** — нужна разбивка по building, вне рамок этой задачи. |
+
+Источники: [botanicaplaza.moscow](https://botanicaplaza.moscow/), [rail-a.ru](https://rail-a.ru/), [commercial.a101.ru/bk-prokshino](https://commercial.a101.ru/bk-prokshino/).
 
 ## Добавленные only_remain записи (external_only=true)
 
@@ -53,9 +60,10 @@ Sydney City, Moscow Towers. Все — `public_visibility=internal_only`,
 ## Тесты
 
 `tests/test_audit_remain_integration.py` — классификация, флаги
-external_only/quarter_offer_exists=false, regression на потерю Remain-записей
-при пересборке слоя. `python -m unittest tests.test_audit_remain_integration
-tests.test_validate_remain_layer` — 10/10 OK.
+external_only/quarter_offer_exists=false, разрешённые конфликты
+(координаты Botanica Plaza/Rail.A, неизменность GBA/GLA Прокшино),
+regression на потерю Remain-записей при пересборке слоя. Полный набор:
+`python -m unittest discover -s tests -p "test_*.py"` — 164/164 OK.
 
 `python scripts/validate_all_projects_layer.py data/all_projects_layer.json` — PASS: 281 record(s).
 

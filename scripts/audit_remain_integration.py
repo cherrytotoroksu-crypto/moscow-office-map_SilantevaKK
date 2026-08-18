@@ -43,11 +43,18 @@ REMAIN_RECORDS = [
     {"external_name": "БЦ на 2-м Силикатном пр-д, вл.13", "category": "exact_match", "local_match": "Бизнес-центр SEZAR", "note": "GBA 15862 / GLA 11246 совпадают точно"},
     {"external_name": "Лофт Квартал Сколково", "category": "exact_match", "local_match": "БЦ Сколково (частично)"},
     # --- B: probable_match — под другим именем, координаты/GBA почти сходятся
-    {"external_name": "Botanica Plaza", "category": "probable_match", "local_match": "Plaza Botanica", "conflict_note": "координаты расходятся на 0.65 км"},
-    {"external_name": "Rail.A", "category": "probable_match", "local_match": "Rail.A", "conflict_note": "координаты расходятся на 0.34 км"},
+    # 2026-08-18: Botanica Plaza и Rail.A перепроверены (developer + офиц. адрес
+    # через commercial-сайты застройщиков) и переведены в exact_match — расхождение
+    # координат было ошибкой геокодирования на нашей стороне, исправлено в
+    # data/all_projects_layer.json (proj-170, proj-173). Не только_remain.
+    {"external_name": "Botanica Plaza", "category": "exact_match", "local_match": "Plaza Botanica", "resolution_note": "координаты/адрес исправлены на офиц. ул. Вильгельма Пика, д. 11 (proj-170)"},
+    {"external_name": "Rail.A", "category": "exact_match", "local_match": "Rail.A", "resolution_note": "координаты уточнены по rail-a.ru (proj-173), адрес и девелопер совпадали изначально"},
     {"external_name": "Kobzon City (K-City) I+II оч.", "category": "probable_match", "local_match": "K-city", "note": "GBA 17700+42139=59839 ~= наши 59800"},
     {"external_name": "Деловой Центр Ликова", "category": "probable_match", "local_match": "LIKOVA", "note": "GBA 53500 vs 53293"},
-    {"external_name": "Бизнес-квартал Прокшино Башни 1/2/3", "category": "probable_match", "local_match": "А101 Прокшино", "conflict_note": "наши GBA 42000 vs сумма Remain 113029 — вероятно только одна башня учтена"},
+    # 2026-08-18: остаётся conflict — не ошибка, а разница масштаба (у нас 1 корпус
+    # из 5, у Remain сумма по кварталу); см. qa_notes proj-216. GBA/GLA не менять
+    # без разбивки по building.
+    {"external_name": "Бизнес-квартал Прокшино Башни 1/2/3", "category": "probable_match", "local_match": "А101 Прокшино", "conflict_note": "наши GBA 42000 покрывают один корпус из 5; сумма Remain 113029 — весь квартал (>177 тыс. кв.м по офиц. данным А101) — resolved_scope_difference, не пробел данных"},
     {"external_name": "МАУНТ", "category": "probable_match", "local_match": "Mount"},
     # --- C: only_remain — введены, должны попасть в Q2 2026 если есть лоты (высокая уверенность по вводу)
     {"external_name": "МФК Центральный Телеграф", "category": "only_remain", "developer": "VOS'HOD", "completion": "2026-Q2", "gba": 64824, "office_area": 28121, "confidence": "low", "note": "requires lot verification before public sale offer"},
