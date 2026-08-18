@@ -47,7 +47,42 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
 
     def test_record_count_matches_active_raw_data(self):
         # 279 RAW_DATA rows - 2 out_of_scope (Новосибирск/Астана) = 277.
-        self.assertEqual(len(self.records), 277)
+        # Считаем только classifier-производные записи: внешние источники
+        # (remain_datalens и т.п.) добавляются ПОВЕРХ, а не через
+        # build_all_projects_layer.py, и не должны сдвигать этот счётчик.
+        classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
+        self.assertEqual(len(classifier_records), 277)
+
+    def test_external_only_records_are_additive_not_mixed_into_classifier_base(self):
+        external_records = [r for r in self.records if r.get("external_only")]
+        for r in external_records:
+            self.assertNotEqual(r["source"], "classifier.html")
+            self.assertEqual(r["quarter_offer_refs"], [],
+                              f"{r['canonical_project_id']}: external record must not carry quarterly offer refs")
+            self.assertFalse(r["quarter_offer_exists"])
+            self.assertEqual(r["market_channel"], [],
+                              f"{r['canonical_project_id']}: external record must not be mixed into sale/rent/coworking channels")
+
+    def test_remain_only_records_are_valid_and_not_duplicates_of_local_projects(self):
+        remain_records = [r for r in self.records if r.get("source") == "remain_datalens"]
+        self.assertGreater(len(remain_records), 0, "expected at least the confirmed only_remain candidates")
+        self.assertEqual(validate(remain_records), [])
+
+        # не дубль по имени: ни один remain-only canonical_name не совпадает
+        # (без учёта регистра) с classifier-производной записью.
+        classifier_names = {
+            r["canonical_name"].strip().lower()
+            for r in self.records if r["source"] == "classifier.html"
+        }
+        for r in remain_records:
+            self.assertNotIn(r["canonical_name"].strip().lower(), classifier_names,
+                              f"{r['canonical_name']} looks like a duplicate of an existing classifier record")
+
+        # уникальные canonical_project_id, не пересекаются с proj-* пространством
+        ids = [r["canonical_project_id"] for r in remain_records]
+        self.assertEqual(len(ids), len(set(ids)), "duplicate canonical_project_id among remain-only records")
+        for cid in ids:
+            self.assertFalse(cid.startswith("proj-"), f"{cid} collides with the classifier proj-* id space")
 
     def test_badaevsky_shares_project_id_but_not_building_id(self):
         west = next(r for r in self.records if r["canonical_building_id"] == "badaevsky-west")
@@ -182,9 +217,11 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         cls.by_id = {r["canonical_project_id"]: r for r in cls.records}
 
     def test_record_count_unchanged_nothing_deleted(self):
-        """Слияние — это разметка полей, не удаление строк: 277 записей
-        до и после."""
-        self.assertEqual(len(self.records), 277)
+        """Слияние — это разметка полей, не удаление строк: 277 classifier-
+        производных записей до и после (внешние source добавляются поверх,
+        см. AllProjectsLayerRegistryTests.test_record_count_matches_active_raw_data)."""
+        classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
+        self.assertEqual(len(classifier_records), 277)
 
     def test_canonical_project_ids_are_globally_unique(self):
         """canonical_project_id не должен повторяться — кроме badaevsky

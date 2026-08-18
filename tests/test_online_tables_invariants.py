@@ -30,6 +30,19 @@ from validate_all_projects_layer import MARKET_CHANNELS
 REGISTRY_PATH = REPO_ROOT / "data" / "all_projects_layer.json"
 
 
+def _extract_function_body(html: str, open_brace_idx: int) -> str:
+    """Return the source text between a `{` at open_brace_idx and its matching `}`."""
+    depth = 0
+    for i in range(open_brace_idx, len(html)):
+        if html[i] == "{":
+            depth += 1
+        elif html[i] == "}":
+            depth -= 1
+            if depth == 0:
+                return html[open_brace_idx:i + 1]
+    raise AssertionError("unbalanced braces while extracting function body")
+
+
 @unittest.skipUnless(REGISTRY_PATH.exists(), "data/all_projects_layer.json not generated yet")
 class OnlineTablesInvariantTests(unittest.TestCase):
     @classmethod
@@ -119,14 +132,42 @@ class OnlineTablesInvariantTests(unittest.TestCase):
             self.assertIsInstance(r["quarter_offer_refs"], list)
 
     # ---- 4. quarterly map cannot show offer-less projects ----------------
-    def test_index_html_never_fetches_the_general_registry(self):
-        # index.html (квартальная карта) должен строиться ТОЛЬКО из
-        # data/buildings_{quarter}.json — если бы он когда-нибудь тоже читал
-        # data/all_projects_layer.json напрямую, на карте могли бы всплыть
-        # проекты без предложения в выбранном квартале. Пока такого fetch нет —
-        # разделение слоёв держится структурно, а не только по соглашению.
+    def test_index_html_never_fetches_the_general_registry_from_quarterly_loaders(self):
+        # Квартальные загрузчики предложения (продажа/аренда/коворкинги) должны
+        # строиться ТОЛЬКО из data/buildings_{quarter}.json и т.п. — если бы
+        # они тоже читали data/all_projects_layer.json напрямую, на квартальной
+        # карте могли бы всплыть проекты без предложения в выбранном квартале.
+        # Общий реестр разрешён ТОЛЬКО в режиме «Конструктор аналитики»
+        # (domain === 'projects'), см. test_general_registry_fetch_is_confined_to_analytics_projects_domain.
         html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertNotIn("all_projects_layer.json", html)
+        quarterly_loader_names = [
+            "loadBuildings", "loadCoworking", "loadFutureProjects", "precomputeAll",
+        ]
+        for name in quarterly_loader_names:
+            match = re.search(r"async function " + name + r"\s*\([^)]*\)\s*\{", html)
+            self.assertIsNotNone(match, f"loader {name} not found in index.html")
+            body = _extract_function_body(html, match.end() - 1)
+            self.assertNotIn("all_projects_layer.json", body,
+                              f"{name} must not fetch the general registry directly")
+
+    def test_general_registry_fetch_is_confined_to_analytics_projects_domain(self):
+        # Единственный допустимый fetch общего реестра — внутри аналитического
+        # конструктора, гарантированно под веткой domain === 'projects'
+        # (режим общей карты/аналитики), а не квартальных таблиц.
+        html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
+        # только реальные вызовы fetch, а не комментарии/объявления переменных
+        occurrences = [m.start() for m in re.finditer(r"fetchJSON\([^)]*all_projects_layer\.json", html)]
+        self.assertGreater(len(occurrences), 0, "expected the general registry to be fetched in analytics mode")
+        for idx in occurrences:
+            window = html[max(0, idx - 400):idx]
+            # допускаем как явную ветку `domain === 'projects'`, так и
+            # `else` после `if (domain === 'quarterly')` — оба означают
+            # «не квартальный домен», т.е. режим общей карты/аналитики.
+            guarded = "domain === 'projects'" in window or (
+                "domain === 'quarterly'" in window and "} else {" in window
+            )
+            self.assertTrue(guarded,
+                             "general registry fetch must be guarded by the analytics 'projects' domain branch")
 
     # ---- 5. the general layer keeps offer-less projects ------------------
     def test_general_registry_keeps_projects_without_current_offer(self):
