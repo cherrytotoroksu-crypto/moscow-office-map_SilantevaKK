@@ -59,6 +59,7 @@ DATA_ALLOW_PATTERNS = [
 ROOT_ALLOW_PATTERNS = [
     re.compile(r"^classifier\.html$"),
     re.compile(r"^codifier\.html$"),
+    re.compile(r"^analytics\.html$"),
     re.compile(r"^.+\.md$"),
     re.compile(r"^qa_.+\.json$"),
     re.compile(r"^classifier_audit_baseline.*\.json$"),

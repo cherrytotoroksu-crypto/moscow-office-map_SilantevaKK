@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Конструктор аналитики — Офисный рынок Москвы</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:#1a1a1a; background:#f4f5f7; }
+  header { background:#2F4858; color:#fff; padding:10px 16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  header h1 { font-size:15px; font-weight:600; }
+  header a.back { color:#c9d3d8; text-decoration:none; font-size:12px; display:flex; align-items:center; gap:4px; }
+  header a.back:hover { color:#fff; }
+
+  .layout { display:flex; height:calc(100vh - 46px); }
+  aside.controls {
+    width:260px; flex-shrink:0; background:#fff; border-right:1px solid #dde;
+    padding:12px; overflow-y:auto; font-size:12px;
+  }
+  aside.controls h3 {
+    font-size:10px; font-weight:700; color:#666; text-transform:uppercase;
+    letter-spacing:.4px; margin:10px 0 3px;
+  }
+  aside.controls h3:first-child { margin-top:0; }
+  aside.controls hr { border:none; border-top:1px solid #eee; margin:8px 0; }
+  .radio-row, .check-row {
+    display:flex; align-items:center; gap:6px; margin:2px 0; cursor:pointer; color:#333; line-height:1.3;
+  }
+  .radio-row input, .check-row input { cursor:pointer; flex-shrink:0; }
+  select {
+    width:100%; padding:5px 6px; border:1px solid #ccc; border-radius:4px;
+    font-size:12px; margin-top:2px; cursor:pointer; background:#fff;
+  }
+  .hint { font-size:10px; color:#999; margin-bottom:4px; line-height:1.35; }
+  button.btn {
+    display:block; width:100%; margin-top:6px; padding:7px;
+    background:#931F2B; color:#fff; border:none; border-radius:5px;
+    font-size:12px; cursor:pointer; text-align:center;
+  }
+  button.btn:hover { background:#6E1620; }
+  #anaStatus { font-size:11px; color:#888; min-height:14px; }
+
+  main.content { flex:1; padding:20px; overflow:auto; display:flex; flex-direction:column; gap:12px; min-width:0; }
+  #anaCaption {
+    font-size:12px; color:#555; background:#fff; border-radius:8px;
+    padding:10px 14px; box-shadow:0 1px 6px rgba(0,0,0,.08); flex-shrink:0;
+  }
+  #anaCaption b { color:#1a1a1a; }
+  #anaChartWrap, #anaTableWrap {
+    background:#fff; border-radius:8px; padding:18px;
+    box-shadow:0 1px 6px rgba(0,0,0,.08); flex:1; min-height:0; position:relative;
+  }
+  #anaTableWrap { overflow:auto; }
+  #analyticsTable { width:100%; border-collapse:collapse; font-size:12px; }
+  #analyticsTable th, #analyticsTable td { text-align:left; padding:7px 12px; border-bottom:1px solid #eee; }
+  #analyticsTable th { color:#666; text-transform:uppercase; font-size:10px; letter-spacing:.4px; position:sticky; top:0; background:#fff; }
+  #analyticsTable td.num, #analyticsTable th.num { text-align:right; font-variant-numeric:tabular-nums; }
+
+  @media (max-width: 800px) {
+    .layout { flex-direction:column; height:auto; }
+    aside.controls { width:100%; border-right:none; border-bottom:1px solid #dde; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">&larr; Карта</a>
+  <h1>Конструктор аналитики</h1>
+</header>
+
+<div class="layout">
+  <aside class="controls">
+    <h3>Источник</h3>
+    <label class="radio-row"><input type="radio" name="anaDomain" value="quarterly" checked> Предложение по кварталам</label>
+    <label class="radio-row"><input type="radio" name="anaDomain" value="projects"> Реестр проектов (снимок)</label>
+    <div id="anaStatus"></div>
+
+    <div id="anaQuarterlyControls">
+      <h3>Канал</h3>
+      <select id="anaChannel">
+        <option value="sale">Продажа</option>
+        <option value="rent">Аренда</option>
+        <option value="coworking">Коворкинги</option>
+      </select>
+
+      <h3>Период</h3>
+      <div style="display:flex;gap:6px;align-items:center;">
+        <select id="anaQuarterFrom" style="flex:1;"></select>
+        <span style="font-size:11px;color:#888;">—</span>
+        <select id="anaQuarterTo" style="flex:1;"></select>
+      </div>
+    </div>
+
+    <h3>Метрика</h3>
+    <select id="anaMetric"></select>
+
+    <h3>Группировка (ось X)</h3>
+    <select id="anaGroupBy"></select>
+
+    <h3>Тип графика</h3>
+    <select id="anaChartType">
+      <option value="bar">Столбцы</option>
+      <option value="stacked">Столбцы с накоплением</option>
+      <option value="line">Линия (по периодам)</option>
+      <option value="doughnut">Кольцевая</option>
+      <option value="table">Таблица</option>
+    </select>
+
+    <div id="anaProjectsFilterControls" style="display:none;">
+      <h3>Статус проекта</h3>
+      <label class="check-row"><input type="checkbox" class="flt-ana-status" value="Строится" checked> Строится</label>
+      <label class="check-row"><input type="checkbox" class="flt-ana-status" value="Введён" checked> Введён</label>
+      <label class="check-row"><input type="checkbox" class="flt-ana-status" value="Не установлен" checked> Не установлен</label>
+    </div>
+
+    <h3 id="anaDeveloperLabel">Девелопер</h3>
+    <select id="anaDeveloper"><option value="">Все</option></select>
+
+    <button class="btn" id="anaExport">Выгрузить Excel</button>
+
+    <hr>
+    <div class="hint">Правило источника: домен «Предложение по кварталам» — метрики sale/rent считаются по зданиям из data/buildings_{квартал}.json, коворкинги — напрямую по data/coworking_{квартал}.json (там нет класса/девелопера — только оператор и площадка). Домен «Реестр проектов» — снимок data/all_projects_layer.json, без привязки к кварталу. Записи без значения по оси группировки показаны как «Не определено», не отбрасываются и не считаются нулём.</div>
+  </aside>
+
+  <main class="content">
+    <div id="anaCaption">Загрузка…</div>
+    <div id="anaChartWrap"><canvas id="analyticsChart"></canvas></div>
+    <div id="anaTableWrap" style="display:none;"><table id="analyticsTable"></table></div>
+  </main>
+</div>
+
+<script>
+// ============================================================
+//  Общие утилиты (порт из index.html — тот же список кварталов и helpers)
+// ============================================================
+const QUARTERS = [
+  { id: '202606', label: 'Q2 2026', file: 'data/buildings_202606.json', rent: 'data/rent_lots_202606.json', coworking: 'data/coworking_202606.json' },
+  { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', rent: 'data/rent_lots_202603.json', coworking: 'data/coworking_202603.json' },
+  { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', rent: 'data/rent_lots_202512.json', coworking: 'data/coworking_202512.json' },
+  { id: '202509', label: 'Q3 2025', file: 'data/buildings_202509.json', rent: 'data/rent_lots_202509.json', coworking: 'data/coworking_202509.json' },
+  { id: '202506', label: 'Q2 2025', file: 'data/buildings_202506.json', rent: 'data/rent_lots_202506.json', coworking: 'data/coworking_202506.json' },
+  { id: '202503', label: 'Q1 2025', file: 'data/buildings_202503.json', rent: 'data/rent_lots_202503.json', coworking: 'data/coworking_202503.json' },
+  { id: '202412', label: 'Q4 2024', file: 'data/buildings_202412.json', rent: 'data/rent_lots_202412.json', coworking: 'data/coworking_202412.json' },
+  { id: '202410', label: 'Q3 2024', file: 'data/buildings_202410.json', coworking: 'data/coworking_202410.json' },
+  { id: '202407', label: 'Q2 2024', file: 'data/buildings_202407.json', rent: 'data/rent_lots_202407.json', coworking: 'data/coworking_202407.json' },
+  { id: '202403', label: 'Q1 2024', file: 'data/buildings_202403.json', rent: 'data/rent_lots_202403.json', coworking: 'data/coworking_202403.json' },
+  { id: '202311', label: 'Q4 2023', file: 'data/buildings_202311.json', rent: 'data/rent_lots_202311.json' },
+  { id: '202308', label: 'Q3 2023', file: 'data/buildings_202308.json', rent: 'data/rent_lots_202308.json' },
+  { id: '202305', label: 'Q2 2023', file: 'data/buildings_202305.json', rent: 'data/rent_lots_202305.json' },
+  { id: '202212', label: 'Q4 2022', file: 'data/buildings_202212.json', rent: 'data/rent_lots_202212.json' },
+  { id: '202207', label: 'Q2 2022', file: 'data/buildings_202207.json', rent: 'data/rent_lots_202207.json' },
+  { id: '202112', label: 'Q4 2021', file: 'data/buildings_202112.json', rent: 'data/rent_lots_202112.json' },
+  { id: '202105', label: 'Q2 2021', file: 'data/buildings_202105.json', rent: 'data/rent_lots_202105.json' },
+];
+function quartersChrono() { return [...QUARTERS].slice().reverse(); } // старые -> новые
+
+function fetchJSON(url, fallback) {
+  return fetch(url, { cache: 'no-cache' }).then(r => r.json()).catch(() => fallback);
+}
+
+let _scriptCache = {};
+function loadScript(src) {
+  if (_scriptCache[src]) return _scriptCache[src];
+  _scriptCache[src] = new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
+  });
+  return _scriptCache[src];
+}
+function ensureXLSX() {
+  return window.XLSX ? Promise.resolve() : loadScript('https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js');
+}
+function ensureChart() {
+  return window.Chart ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js');
+}
+
+// Метрика здания-продажи из карточки data/buildings_{q}.json: цена/объём —
+// уже посчитанные поля на самом здании (0/null = нет данных/не в продаже).
+function bldVal(b, metric) {
+  if (!b) return null;
+  if (metric === 'volume') return b.volume || null;
+  if (metric === 'lots') return b.lots || null;
+  if (metric === 'count') return 1;
+  return b.price || null;
+}
+// Метрика аренды по зданию — из фактических лотов аренды за квартал qid.
+function bldRentVal(b, qid, metric) {
+  if (!b) return null;
+  const rentData = allRentLots[qid] || {};
+  const lots = rentData[b.name] || rentData[b.name_orig] || [];
+  if (metric === 'lots') return lots.length || null;
+  if (!lots.length) return null;
+  if (metric === 'volume') return lots.reduce((s,l)=>s+(l.area||0),0) || null;
+  const withRate = lots.filter(l=>l.rate);
+  if (!withRate.length) return null;
+  const totalArea = withRate.reduce((s,l)=>s+(l.area||0),0) || 1;
+  return withRate.reduce((s,l)=>s+l.rate*(l.area||0),0) / totalArea;
+}
+
+const CHART_COLORS = ['#7c3aed','#2563eb','#0891b2','#16a34a','#ca8a04','#dc2626','#db2777',
+  '#0d9488','#65a30d','#9333ea','#ea580c','#0284c7','#4d7c0f','#be123c','#7c2d12','#1e3a8a','#831843'];
+
+// ============================================================
+//  Загрузка данных всех кварталов (без геослоёв — конструктору нужны
+//  только сами здания/лоты аренды/коворкинги, группировка не геозональная)
+// ============================================================
+let allBuildings = {}, allRentLots = {}, allCoworking = {};
+let dataLoaded = false;
+async function loadAllQuarters() {
+  if (dataLoaded) return;
+  const fetched = await Promise.all(QUARTERS.map(async q => {
+    const [blds, rent, coworking] = await Promise.all([
+      fetchJSON(q.file, []),
+      q.rent ? fetchJSON(q.rent, {}) : Promise.resolve({}),
+      q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]),
+    ]);
+    return { q, blds, rent, coworking };
+  }));
+  for (const { q, blds, rent, coworking } of fetched) {
+    allBuildings[q.id] = blds;
+    allRentLots[q.id] = rent;
+    allCoworking[q.id] = coworking;
+  }
+  dataLoaded = true;
+}
+
+// ============================================================
+//  КОНСТРУКТОР АНАЛИТИКИ — свободный выбор метрики/группировки/типа графика
+//  (та же логика, что была в index.html — вынесена на отдельную страницу,
+//  т.к. поверх карты интерфейс конструктора визуально конфликтовал с
+//  легендой картограммы/зум-контролами/подписью автора)
+// ============================================================
+let analyticsChart = null;
+let analyticsProjectsData = null; // кэш data/all_projects_layer.json — снимок, не зависит от квартала
+
+const ANA_METRICS = {
+  sale: [['count','Кол-во объектов, шт.'],['volume','Объём предложения, кв.м'],
+    ['avg','Ср. цена, руб/кв.м'],['wavg','Ср. взвешенная цена, руб/кв.м']],
+  rent: [['count','Кол-во объектов, шт.'],['volume','Объём предложения, кв.м'],
+    ['avg','Ср. ставка, руб/кв.м/год'],['wavg','Ср. взвешенная ставка, руб/кв.м/год']],
+  coworking: [['count','Кол-во площадок, шт.'],['seats','Мест всего, шт.'],
+    ['vacancy','Вакантно, мест'],['avgRate','Ср. ставка, руб/мес'],['wavgRate','Ср. взв. ставка, руб/мес']],
+};
+const ANA_GROUPBY_QUARTERLY_SALE_RENT = [['cls','Класс'],['developer','Девелопер'],
+  ['submarket','Субрынок'],['zone','Зона (кольцо)'],['status','Статус здания']];
+const ANA_GROUPBY_QUARTERLY_COWORKING = [['network','Оператор (сеть)'],['bc','Площадка']];
+function anaGroupByOptions(domain, channel) {
+  if (domain !== 'quarterly') return ANA_GROUPBY_PROJECTS;
+  return channel === 'coworking' ? ANA_GROUPBY_QUARTERLY_COWORKING : ANA_GROUPBY_QUARTERLY_SALE_RENT;
+}
+const ANA_METRICS_PROJECTS = [['count','Кол-во проектов, шт.'],
+  ['gba','Суммарная площадь GBA, кв.м'],['gla','Суммарная площадь GLA, кв.м']];
+const ANA_GROUPBY_PROJECTS = [['developer','Девелопер'],['submarket','Субрынок'],
+  ['zone','Зона (кольцо)'],['project_status','Статус проекта'],['cls','Класс'],
+  ['input_year','Год ввода'],['confidence','Уверенность данных']];
+const ANA_NA_LABEL = 'Не определено';
+
+function anaDomain() { return document.querySelector('input[name="anaDomain"]:checked').value; }
+
+function fillSelect(sel, options, keepValue) {
+  const prev = keepValue != null ? keepValue : sel.value;
+  sel.innerHTML = options.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
+  const values = options.map(([v])=>v);
+  sel.value = values.includes(prev) ? prev : values[0];
+}
+
+let analyticsInited = false;
+async function initAnalyticsConstructor() {
+  await ensureChart();
+  if (!analyticsInited) {
+    const qs = quartersChrono();
+    const fromSel = document.getElementById('anaQuarterFrom');
+    const toSel = document.getElementById('anaQuarterTo');
+    const qOpts = qs.map(q => [q.id, q.label]);
+    fillSelect(fromSel, qOpts, qs[0].id);
+    fillSelect(toSel, qOpts, qs[qs.length-1].id);
+    document.querySelectorAll('input[name="anaDomain"]').forEach(r => r.addEventListener('change', onAnaDomainChange));
+    document.getElementById('anaChannel').addEventListener('change', onAnaDomainChange);
+    ['anaQuarterFrom','anaQuarterTo','anaMetric','anaGroupBy','anaChartType','anaDeveloper']
+      .forEach(id => document.getElementById(id).addEventListener('change', renderAnalytics));
+    document.querySelectorAll('.flt-ana-status').forEach(cb => cb.addEventListener('change', renderAnalytics));
+    document.getElementById('anaExport').addEventListener('click', exportAnalytics);
+    analyticsInited = true;
+  }
+  await onAnaDomainChange();
+}
+
+function anaDeveloperFieldFor(domain, channel) {
+  return (domain === 'quarterly' && channel === 'coworking') ? 'network' : 'developer';
+}
+function anaDeveloperRowsFor(domain, channel, qid) {
+  if (domain !== 'quarterly') return analyticsProjectsData || [];
+  return channel === 'coworking' ? (allCoworking[qid] || []) : (allBuildings[qid] || []);
+}
+
+async function onAnaDomainChange() {
+  const domain = anaDomain();
+  document.getElementById('anaQuarterlyControls').style.display = domain === 'quarterly' ? 'block' : 'none';
+  document.getElementById('anaProjectsFilterControls').style.display = domain === 'projects' ? 'block' : 'none';
+  const channel = document.getElementById('anaChannel').value || 'sale';
+  fillSelect(document.getElementById('anaMetric'), domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS);
+  fillSelect(document.getElementById('anaGroupBy'), anaGroupByOptions(domain, channel));
+  document.getElementById('anaStatus').textContent = 'Загрузка…';
+  if (domain === 'quarterly') {
+    await loadAllQuarters();
+  } else {
+    if (!analyticsProjectsData) analyticsProjectsData = await fetchJSON('data/all_projects_layer.json', []);
+  }
+  fillAnaDeveloperOptions(anaDeveloperRowsFor(domain, channel, document.getElementById('anaQuarterTo').value), anaDeveloperFieldFor(domain, channel));
+  document.getElementById('anaDeveloperLabel').textContent = (domain === 'quarterly' && channel === 'coworking') ? 'Оператор (сеть)' : 'Девелопер';
+  document.getElementById('anaStatus').textContent = '';
+  renderAnalytics();
+}
+
+function fillAnaDeveloperOptions(rows, field) {
+  const sel = document.getElementById('anaDeveloper');
+  const prev = sel.value;
+  const devs = [...new Set(rows.map(r => r[field]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru'));
+  sel.innerHTML = '<option value="">Все</option>' + devs.map(d=>`<option value="${d}">${d}</option>`).join('');
+  if (devs.includes(prev)) sel.value = prev;
+}
+
+function anaHasData(b, qid, channel) {
+  if (channel === 'rent') return bldRentVal(b, qid, 'volume') != null;
+  return bldVal(b, 'volume') != null || (b.price || null) != null;
+}
+function anaMetricValue(b, qid, channel, metric) {
+  if (metric === 'count') return anaHasData(b, qid, channel) ? 1 : null;
+  if (channel === 'rent') return bldRentVal(b, qid, metric);
+  return bldVal(b, metric);
+}
+function anaGroupKey(row, groupBy) {
+  const v = row[groupBy];
+  return (v === undefined || v === null || v === '') ? null : String(v);
+}
+// count — сумма; volume/seats/vacancy/gba/gla — сумма; avg/wavg/*Rate — среднее/средневзвешенное
+const ANA_METRIC_KIND = {
+  count: 'sum', volume: 'sum', seats: 'sum', vacancy: 'sum', gba: 'sum', gla: 'sum',
+  avg: 'avg', wavg: 'wavg', avgRate: 'avg', wavgRate: 'wavg',
+};
+function anaWeightMetric() { return 'volume'; }
+
+// Коворкинги считаются напрямую по площадкам data/coworking_{q}.json —
+// geo-привязка площадки к отслеживаемому зданию есть не у всех (часть
+// коворкингов стоят в домах, которых нет в data/buildings_{q}.json), поэтому
+// агрегация "по зданиям" занижала бы охват.
+function aggregateCoworkingDirect(qid, metric, groupBy, developerFilter) {
+  const sites = (allCoworking[qid] || []).filter(s => !developerFilter || s.network === developerFilter);
+  const kind = ANA_METRIC_KIND[metric] || 'sum';
+  const acc = {};
+  for (const s of sites) {
+    let val;
+    if (metric === 'count') val = 1;
+    else if (metric === 'seats') val = s.seats || null;
+    else if (metric === 'vacancy') val = (s.vacancy != null ? s.vacancy : null);
+    else val = s.rate || null; // avgRate/wavgRate
+    if (val == null) continue;
+    const key = anaGroupKey(s, groupBy) || ANA_NA_LABEL;
+    const w = kind === 'wavg' ? (s.seats || 0) : 1;
+    const a = (acc[key] ||= { sum: 0, weight: 0, n: 0 });
+    if (kind === 'wavg') { a.sum += val * w; a.weight += w; } else { a.sum += val; }
+    a.n++;
+  }
+  const out = {};
+  for (const [key, a] of Object.entries(acc)) {
+    if (kind === 'sum') out[key] = a.sum;
+    else if (kind === 'wavg') out[key] = a.weight > 0 ? a.sum / a.weight : null;
+    else out[key] = a.n > 0 ? a.sum / a.n : null;
+  }
+  return out;
+}
+
+function aggregateQuarterly(qid, channel, metric, groupBy, statusFilter, developerFilter) {
+  if (channel === 'coworking') return aggregateCoworkingDirect(qid, metric, groupBy, developerFilter);
+  const blds = (allBuildings[qid] || []).filter(b => {
+    if (developerFilter && b.developer !== developerFilter) return false;
+    if (statusFilter && statusFilter.length && !statusFilter.includes(b.status)) return false;
+    return true;
+  });
+  const kind = ANA_METRIC_KIND[metric] || 'sum';
+  const weightMetric = anaWeightMetric(channel);
+  const acc = {};
+  for (const b of blds) {
+    const val = anaMetricValue(b, qid, channel, metric);
+    if (val == null) continue;
+    const key = anaGroupKey(b, groupBy) || ANA_NA_LABEL;
+    const w = kind === 'wavg' ? (anaMetricValue(b, qid, channel, weightMetric) || 0) : 1;
+    const a = (acc[key] ||= { sum: 0, weight: 0, n: 0 });
+    if (kind === 'wavg') { a.sum += val * w; a.weight += w; }
+    else { a.sum += val; }
+    a.n++;
+  }
+  const out = {};
+  for (const [key, a] of Object.entries(acc)) {
+    if (kind === 'sum') out[key] = a.sum;
+    else if (kind === 'wavg') out[key] = a.weight > 0 ? a.sum / a.weight : null;
+    else out[key] = a.n > 0 ? a.sum / a.n : null;
+  }
+  return out;
+}
+
+function aggregateProjects(metric, groupBy, statusFilter, developerFilter) {
+  const rows = (analyticsProjectsData || []).filter(r => {
+    if (developerFilter && r.developer !== developerFilter) return false;
+    if (statusFilter && statusFilter.length && !statusFilter.includes(r.project_status)) return false;
+    return true;
+  });
+  const acc = {};
+  for (const r of rows) {
+    const key = anaGroupKey(r, groupBy) || ANA_NA_LABEL;
+    const a = (acc[key] ||= { sum: 0, n: 0 });
+    if (metric === 'count') { a.n++; a.sum++; }
+    else { const v = r[metric]; if (v != null) { a.sum += v; a.n++; } }
+  }
+  const out = {};
+  for (const [key, a] of Object.entries(acc)) out[key] = a.sum;
+  return out;
+}
+
+function anaCaptionText(domain, channel, metric, groupBy, chartType, fromQ, toQ) {
+  const domainLabel = domain === 'quarterly' ? 'Предложение по кварталам' : 'Реестр проектов (снимок all_projects_layer)';
+  const metricLabel = (domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric;
+  const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
+  const kind = ANA_METRIC_KIND[metric] || 'sum';
+  const ruleLabel = kind === 'sum' ? 'сумма' : kind === 'wavg' ? 'средневзвешенное' : 'среднее';
+  let periodText = domain === 'quarterly'
+    ? (chartType === 'line' ? `тренд ${fromQ} — ${toQ}` : `срез на ${toQ}`)
+    : `снимок реестра на ${analyticsProjectsData?.[0]?.last_verified_at || 'текущую дату'}`;
+  return `<b>${domainLabel}</b>${domain==='quarterly' ? ' · канал: ' + ({sale:'продажа',rent:'аренда',coworking:'коворкинги'}[channel]||channel) : ''}`
+    + ` · метрика: ${metricLabel} (правило: ${ruleLabel}) · группировка: ${groupLabel} · ${periodText}.`
+    + ` «${ANA_NA_LABEL}» — записи без значения по оси группировки, не отбрасываются и не считаются нулём.`;
+}
+
+async function renderAnalytics() {
+  await ensureChart();
+  const domain = anaDomain();
+  const channel = document.getElementById('anaChannel').value || 'sale';
+  const metric = document.getElementById('anaMetric').value;
+  const groupBy = document.getElementById('anaGroupBy').value;
+  const chartType = document.getElementById('anaChartType').value;
+  const developerFilter = document.getElementById('anaDeveloper').value || null;
+  const statusFilter = domain === 'projects'
+    ? [...document.querySelectorAll('.flt-ana-status:checked')].map(cb=>cb.value)
+    : null;
+  const fromQ = document.getElementById('anaQuarterFrom').value;
+  const toQ = document.getElementById('anaQuarterTo').value;
+
+  document.getElementById('anaCaption').innerHTML = anaCaptionText(domain, channel, metric, groupBy, chartType, fromQ, toQ);
+
+  let labels, datasets, tableRows;
+  if (domain === 'quarterly' && chartType === 'line') {
+    const qs = quartersChrono().filter(q => q.id >= fromQ && q.id <= toQ);
+    labels = qs.map(q => q.label);
+    const keySet = new Set();
+    const perQuarter = qs.map(q => aggregateQuarterly(q.id, channel, metric, groupBy, null, developerFilter));
+    perQuarter.forEach(m => Object.keys(m).forEach(k => keySet.add(k)));
+    datasets = [...keySet].sort().map((key, i) => ({
+      label: key,
+      data: perQuarter.map(m => m[key] != null ? Math.round(m[key]) : null),
+      borderColor: CHART_COLORS[i % CHART_COLORS.length], backgroundColor: 'transparent', tension: 0.2, spanGaps: true,
+    }));
+    tableRows = null;
+  } else {
+    const agg = domain === 'quarterly'
+      ? aggregateQuarterly(toQ, channel, metric, groupBy, null, developerFilter)
+      : aggregateProjects(metric, groupBy, statusFilter, developerFilter);
+    const entries = Object.entries(agg).filter(([,v]) => v != null).sort((a,b) => b[1]-a[1]);
+    labels = entries.map(([k]) => k);
+    const data = entries.map(([,v]) => Math.round(v * 100) / 100);
+    datasets = [{ label: (domain==='quarterly'?ANA_METRICS[channel]:ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric,
+      data, backgroundColor: labels.map((_,i)=>CHART_COLORS[i % CHART_COLORS.length]) }];
+    tableRows = entries;
+  }
+
+  const showTable = chartType === 'table';
+  document.getElementById('anaChartWrap').style.display = showTable ? 'none' : 'block';
+  document.getElementById('anaTableWrap').style.display = showTable ? 'block' : 'none';
+
+  if (showTable) {
+    const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
+    const metricLabel = (domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric;
+    const rows = tableRows || [];
+    document.getElementById('analyticsTable').innerHTML =
+      `<thead><tr><th>${groupLabel}</th><th class="num">${metricLabel}</th></tr></thead><tbody>`
+      + rows.map(([k,v]) => `<tr><td>${k}</td><td class="num">${Math.round(v*100)/100}</td></tr>`).join('')
+      + `</tbody>`;
+    if (analyticsChart) { analyticsChart.destroy(); analyticsChart = null; }
+    return;
+  }
+
+  if (analyticsChart) analyticsChart.destroy();
+  const isDoughnut = chartType === 'doughnut';
+  const isStacked = chartType === 'stacked';
+  const type = isDoughnut ? 'doughnut' : (chartType === 'line' ? 'line' : 'bar');
+  analyticsChart = new Chart(document.getElementById('analyticsChart'), {
+    type, data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      layout: { padding: { top: 8, right: 14 } },
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } }, display: datasets.length > 1 || isDoughnut },
+        tooltip: { callbacks: { label: c => `${c.dataset.label ?? c.label}: ${(c.parsed.y ?? c.parsed)?.toLocaleString?.('ru-RU') ?? c.formattedValue}` } },
+      },
+      scales: isDoughnut ? undefined : {
+        x: { stacked: isStacked },
+        y: { stacked: isStacked, beginAtZero: true, grace: '8%' },
+      },
+    },
+  });
+}
+
+async function exportAnalytics() {
+  await ensureXLSX();
+  const domain = anaDomain();
+  const channel = document.getElementById('anaChannel').value || 'sale';
+  const metric = document.getElementById('anaMetric').value;
+  const groupBy = document.getElementById('anaGroupBy').value;
+  const developerFilter = document.getElementById('anaDeveloper').value || null;
+  const statusFilter = domain === 'projects'
+    ? [...document.querySelectorAll('.flt-ana-status:checked')].map(cb=>cb.value)
+    : null;
+  const toQ = document.getElementById('anaQuarterTo').value;
+  const agg = domain === 'quarterly'
+    ? aggregateQuarterly(toQ, channel, metric, groupBy, null, developerFilter)
+    : aggregateProjects(metric, groupBy, statusFilter, developerFilter);
+  const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
+  const metricLabel = (domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric;
+  const rows = Object.entries(agg).filter(([,v])=>v!=null).sort((a,b)=>b[1]-a[1])
+    .map(([k,v]) => ({ [groupLabel]: k, [metricLabel]: Math.round(v*100)/100 }));
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Конструктор');
+  XLSX.writeFile(wb, `analytics_${domain}_${metric}_${groupBy}.xlsx`);
+}
+
+initAnalyticsConstructor();
+</script>
+</body>
+</html>

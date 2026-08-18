@@ -151,18 +151,25 @@ class OnlineTablesInvariantTests(unittest.TestCase):
                               f"{name} must not fetch the general registry directly")
 
     def test_general_registry_fetch_is_confined_to_analytics_projects_domain(self):
-        # Единственный допустимый fetch общего реестра — внутри аналитического
-        # конструктора, гарантированно под веткой domain === 'projects'
-        # (режим общей карты/аналитики), а не квартальных таблиц.
-        html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
+        # Единственный допустимый fetch общего реестра — внутри конструктора
+        # аналитики, гарантированно под веткой domain === 'projects' (режим
+        # «Реестр проектов»), а не квартальных таблиц. Конструктор — это
+        # analytics.html, отдельная страница (не вкладка внутри index.html —
+        # оверлей поверх карты визуально конфликтовал с легендой картограммы/
+        # зум-контролами/подписью автора, вынесен на отдельный URL).
+        html = (REPO_ROOT / "analytics.html").read_text(encoding="utf-8")
+        # index.html вообще не должен трогать общий реестр — только квартальные файлы.
+        index_html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("all_projects_layer.json", index_html,
+                          "index.html must not fetch the general registry — moved to analytics.html")
         # только реальные вызовы fetch, а не комментарии/объявления переменных
         occurrences = [m.start() for m in re.finditer(r"fetchJSON\([^)]*all_projects_layer\.json", html)]
-        self.assertGreater(len(occurrences), 0, "expected the general registry to be fetched in analytics mode")
+        self.assertGreater(len(occurrences), 0, "expected the general registry to be fetched in analytics.html")
         for idx in occurrences:
             window = html[max(0, idx - 400):idx]
             # допускаем как явную ветку `domain === 'projects'`, так и
             # `else` после `if (domain === 'quarterly')` — оба означают
-            # «не квартальный домен», т.е. режим общей карты/аналитики.
+            # «не квартальный домен», т.е. режим реестра проектов.
             guarded = "domain === 'projects'" in window or (
                 "domain === 'quarterly'" in window and "} else {" in window
             )
