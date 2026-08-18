@@ -115,6 +115,28 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
         for alias in ("CODE Novo", "Долгоруковская 21", "СODE Novo"):
             self.assertIn(alias, novo["aliases"], alias)
 
+    def test_live_regeocode_batch_20260818_coordinates_corrected(self):
+        """Живой повторный геокодинг 256 адресов all_projects_layer.json
+        нашёл 10 записей с координатой за много км от собственного адреса
+        (унаследовано из classifier.html) — все подтверждены независимо
+        (2ГИС/ЦИАН/официальные сайты БЦ), не только геокодером."""
+        by_id = {r["canonical_project_id"]: r for r in self.records}
+        expected = {
+            "proj-15": (55.728023, 37.645375),   # Рабочая Станция KW Black&White — Кожевническая 14
+            "proj-235": (55.728023, 37.645375),  # KW Павелецкая — тот же адрес
+            "proj-48": (55.730426, 37.634793),   # Flexity Павелецкая Плаза А
+            "proj-49": (55.730426, 37.634793),
+            "proj-255": (55.730426, 37.634793),
+            "proj-256": (55.730426, 37.634793),
+            "proj-222": (55.691963, 37.527965),  # Регус Капитолий Вернадского — тот же дом, что БЦ Капитолий
+            "proj-119": (55.757131, 37.617114),  # Meeting point (Гостиница Москва) — Охотный ряд
+            "proj-166": (55.788353, 37.567931),  # SOK Рыбаков Тауэр — Ленинградский пр-т у Динамо
+            "proj-211": (55.696007, 37.625513),  # F2 (DM Tower) — Новоданиловская наб.
+        }
+        for project_id, point in expected.items():
+            r = by_id[project_id]
+            self.assertEqual((r["latitude"], r["longitude"]), point, project_id)
+
 
 if __name__ == "__main__":
     unittest.main()
