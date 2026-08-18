@@ -214,6 +214,19 @@ EXTRA_BUILDING_ID = {
 }
 EXTRA_ALIASES = {
     "proj-149": ["CODE Novo", "Долгоруковская 21"],
+    # outputs/sale_coverage_candidate_classification_2026-08-18.md, "Высокая
+    # уверенность": исторические/укороченные варианты имени из lots_*.json
+    # разных кварталов — тот же объект, не новый проект.
+    "proj-205": ["БЦ Twist"],
+    "proj-216": ["БЦ А101 Прокшино"],
+}
+
+# Аналог EXTRA_ALIASES, но ключ — canonical_building_id (нужен для
+# Бадаевского: обе ленты делят один canonical_project_id="badaevsky",
+# EXTRA_ALIASES по project_id их не различил бы).
+BUILDING_EXTRA_ALIASES = {
+    "badaevsky-west": ["Бадаевский Западная"],
+    "badaevsky-east": ["Бадаевский Восточная"],
 }
 
 # Технические дубли (аудит outputs/unified_codifier_review_decisions_2026-08-18.md,
@@ -286,6 +299,7 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "aliases": sorted(set(
             ([] if name == name_orig else [name_orig])
             + EXTRA_ALIASES.get(canonical_project_id, [])
+            + BUILDING_EXTRA_ALIASES.get(canonical_building_id, [])
         )),
         "developer": row.get("developer"),
         "address": row.get("address"),

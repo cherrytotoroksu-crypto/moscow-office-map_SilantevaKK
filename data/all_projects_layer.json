@@ -11371,7 +11371,9 @@
     "raw_name": "Twist",
     "canonical_name": "Twist",
     "flex_site_label": null,
-    "aliases": [],
+    "aliases": [
+      "БЦ Twist"
+    ],
     "developer": "Sminex-Интеко",
     "address": "Бутырская ул,, уч1, Москва",
     "latitude": 55.793278,
@@ -11998,7 +12000,9 @@
     "raw_name": "А101 Прокшино",
     "canonical_name": "А101 Прокшино",
     "flex_site_label": null,
-    "aliases": [],
+    "aliases": [
+      "БЦ А101 Прокшино"
+    ],
     "developer": "A101",
     "address": "поселение Сосенское, квартал № 35",
     "latitude": 55.586603,
@@ -12062,7 +12066,9 @@
     "raw_name": "Бадаевский Восточная лента",
     "canonical_name": "Бадаевский Восточная лента",
     "flex_site_label": null,
-    "aliases": [],
+    "aliases": [
+      "Бадаевский Восточная"
+    ],
     "developer": "Capital Group",
     "address": "г. Москва, пр-кт Кутузовский, д. 12/1, корпус 12/2",
     "latitude": 55.749324,
@@ -14987,7 +14993,9 @@
     "raw_name": "Бадаевский Западная лента",
     "canonical_name": "Бадаевский Западная лента",
     "flex_site_label": null,
-    "aliases": [],
+    "aliases": [
+      "Бадаевский Западная"
+    ],
     "developer": "Capital Group",
     "address": "пр-кт Кутузовский, д. 12/1, корпус 12/2",
     "latitude": 55.749324,

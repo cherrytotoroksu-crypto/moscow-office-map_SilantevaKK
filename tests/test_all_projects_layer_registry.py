@@ -232,5 +232,67 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
                 self.assertIsNone(r["duplicate_of"], project_id)
                 self.assertEqual(r["legacy_ids"], [], project_id)
 
+
+class SaleCandidateLinkingTest(unittest.TestCase):
+    """outputs/sale_coverage_candidate_classification_2026-08-18.md: 3
+    подтверждённых по адресу/данным связки получили alias на существующий
+    canonical_project_id/canonical_building_id; ничего не добавлено как
+    новый проект. Нижняя Масловка/proj-99 не подтвердилась текстовым
+    поиском — оставлена в review_queue, alias не добавлен."""
+
+    CLASS_LABELS = {"A", "A+", "B", "B+"}
+
+    @classmethod
+    def setUpClass(cls):
+        if not REGISTRY_PATH.exists():
+            raise unittest.SkipTest("data/all_projects_layer.json not generated yet")
+        cls.records = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+
+    def test_twist_and_a101_prokshino_aliases_linked(self):
+        by_id = {r["canonical_project_id"]: r for r in self.records}
+        self.assertIn("БЦ Twist", by_id["proj-205"]["aliases"])
+        self.assertIn("БЦ А101 Прокшино", by_id["proj-216"]["aliases"])
+
+    def test_badaevsky_lента_variants_linked_to_correct_building(self):
+        badaevsky_rows = {r["canonical_building_id"]: r for r in self.records if r["canonical_project_id"] == "badaevsky"}
+        self.assertIn("Бадаевский Западная", badaevsky_rows["badaevsky-west"]["aliases"])
+        self.assertIn("Бадаевский Восточная", badaevsky_rows["badaevsky-east"]["aliases"])
+
+    def test_nizhnyaya_maslovka_not_linked_unconfirmed(self):
+        """proj-99 — «Магистральная 12», другой адрес, чем предложенная
+        связка «Нижняя Масловка, 12»; строка не найдена ни в одном файле
+        data/ — alias НЕ добавлен без текстового подтверждения."""
+        by_id = {r["canonical_project_id"]: r for r in self.records}
+        proj99 = by_id["proj-99"]
+        self.assertNotIn("Нижняя Масловка, 12", proj99["aliases"])
+        self.assertNotIn("Нижняя Масловка", proj99["address"])
+
+
+class ClassLabelsNotProjectsTest(unittest.TestCase):
+    """Классы объектов (A/A+/B/B+ из lots_202305/202308/202311.json) — не
+    проекты; никогда не должны порождать canonical_project_id или
+    попадать в canonical_name/raw_name/aliases как самостоятельный проект."""
+
+    CLASS_LABELS = {"A", "A+", "B", "B+"}
+
+    @classmethod
+    def setUpClass(cls):
+        if not REGISTRY_PATH.exists():
+            raise unittest.SkipTest("data/all_projects_layer.json not generated yet")
+        cls.records = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+
+    def test_class_labels_are_not_canonical_project_ids(self):
+        ids = {r["canonical_project_id"] for r in self.records}
+        self.assertEqual(ids & self.CLASS_LABELS, set())
+
+    def test_class_labels_are_not_canonical_or_raw_names(self):
+        names = {r["canonical_name"] for r in self.records} | {r["raw_name"] for r in self.records}
+        self.assertEqual(names & self.CLASS_LABELS, set())
+
+    def test_class_labels_are_not_standalone_aliases(self):
+        for r in self.records:
+            self.assertEqual(set(r.get("aliases") or []) & self.CLASS_LABELS, set(), r["canonical_project_id"])
+
+
 if __name__ == "__main__":
     unittest.main()
