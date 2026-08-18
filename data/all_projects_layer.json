@@ -44,7 +44,9 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-2",
@@ -94,7 +96,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-3",
@@ -144,7 +148,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-4",
@@ -194,7 +200,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-5",
@@ -244,7 +252,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-6",
@@ -294,7 +304,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-7",
@@ -344,7 +356,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-8",
@@ -394,7 +408,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-9",
@@ -448,11 +464,17 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-186, proj-60, proj-70 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-60",
+      "proj-70",
+      "proj-186"
+    ]
   },
   {
     "canonical_project_id": "proj-10",
@@ -501,7 +523,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-11",
@@ -550,7 +574,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-12",
@@ -599,7 +625,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-13",
@@ -652,7 +680,9 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-14",
@@ -708,7 +738,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-15",
@@ -760,7 +792,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-16",
@@ -812,7 +846,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-17",
@@ -866,11 +902,16 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-242, proj-45 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-45",
+      "proj-242"
+    ]
   },
   {
     "canonical_project_id": "proj-18",
@@ -922,7 +963,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-19",
@@ -976,7 +1019,9 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-20",
@@ -1030,7 +1075,9 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-21",
@@ -1087,7 +1134,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-22",
@@ -1144,7 +1193,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-23",
@@ -1202,7 +1253,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-24",
@@ -1251,7 +1304,9 @@
     "public_visibility": "public",
     "first_seen_at": "202412",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-25",
@@ -1300,7 +1355,9 @@
     "public_visibility": "public",
     "first_seen_at": "202412",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-26",
@@ -1349,7 +1406,9 @@
     "public_visibility": "public",
     "first_seen_at": "202412",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-27",
@@ -1400,7 +1459,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-28",
@@ -1410,6 +1471,8 @@
     "canonical_name": "Speace Jet Белая площадь (Белая Площадь)",
     "flex_site_label": "Белая Площадь",
     "aliases": [
+      "Speace  Jet Белая площадь",
+      "Speace  Jet Белая площадь (Белая Площадь)",
       "Speace Jet Белая площадь"
     ],
     "developer": "Space 1",
@@ -1447,11 +1510,15 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-65 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-65"
+    ]
   },
   {
     "canonical_project_id": "proj-29",
@@ -1461,6 +1528,8 @@
     "canonical_name": "Speace Jet Аркус (Аркус 3)",
     "flex_site_label": "Аркус 3",
     "aliases": [
+      "Speace  Jet Аркус",
+      "Speace  Jet Аркус (Аркус 3)",
       "Speace Jet Аркус"
     ],
     "developer": "Space 1",
@@ -1498,11 +1567,15 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-131 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-131"
+    ]
   },
   {
     "canonical_project_id": "proj-30",
@@ -1512,6 +1585,8 @@
     "canonical_name": "Speace Jet Якиманка (Большая Якиманка 26)",
     "flex_site_label": "Большая Якиманка 26",
     "aliases": [
+      "Speace  Jet Якиманка",
+      "Speace  Jet Якиманка (Большая Якиманка 26)",
       "Speace Jet Якиманка"
     ],
     "developer": "Space 1",
@@ -1549,11 +1624,15 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-133 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-133"
+    ]
   },
   {
     "canonical_project_id": "proj-31",
@@ -1597,11 +1676,15 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-41 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-41"
+    ]
   },
   {
     "canonical_project_id": "proj-32",
@@ -1650,7 +1733,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-33",
@@ -1709,7 +1794,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-34",
@@ -1755,11 +1842,13 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-47, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-47",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-35",
@@ -1808,7 +1897,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-36",
@@ -1857,7 +1948,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-39",
@@ -1904,7 +1997,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-40",
@@ -1951,7 +2046,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-41",
@@ -1995,11 +2092,13 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-31, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-31",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-42",
@@ -2053,7 +2152,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-43",
@@ -2107,7 +2208,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-44",
@@ -2161,7 +2264,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-45",
@@ -2215,11 +2320,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-17, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-17",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-46",
@@ -2269,11 +2376,15 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-219 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-219"
+    ]
   },
   {
     "canonical_project_id": "proj-47",
@@ -2319,11 +2430,15 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-34 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-34"
+    ]
   },
   {
     "canonical_project_id": "proj-48",
@@ -2381,7 +2496,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-49",
@@ -2430,7 +2547,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-50",
@@ -2483,11 +2602,15 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-110 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-110"
+    ]
   },
   {
     "canonical_project_id": "proj-51",
@@ -2541,7 +2664,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-52",
@@ -2595,7 +2720,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-53",
@@ -2649,7 +2776,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-54",
@@ -2703,7 +2832,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-55",
@@ -2757,7 +2888,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-56",
@@ -2815,7 +2948,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-57",
@@ -2868,7 +3003,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-58",
@@ -2926,7 +3063,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-59",
@@ -2984,7 +3123,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-60",
@@ -3038,11 +3179,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-9, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-9",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-61",
@@ -3100,7 +3243,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-62",
@@ -3154,7 +3299,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-63",
@@ -3204,11 +3351,15 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-162 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-162"
+    ]
   },
   {
     "canonical_project_id": "proj-64",
@@ -3256,11 +3407,15 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-66 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-66"
+    ]
   },
   {
     "canonical_project_id": "proj-65",
@@ -3309,11 +3464,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-28, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-28",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-66",
@@ -3361,11 +3518,13 @@
     ],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-64, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-64",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-67",
@@ -3423,7 +3582,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-68",
@@ -3477,11 +3638,15 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-198 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-198"
+    ]
   },
   {
     "canonical_project_id": "proj-69",
@@ -3539,7 +3704,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-70",
@@ -3593,11 +3760,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-9, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-9",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-71",
@@ -3655,7 +3824,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-72",
@@ -3703,7 +3874,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-73",
@@ -3752,7 +3925,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-74",
@@ -3810,7 +3985,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-75",
@@ -3857,11 +4034,15 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-137 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-137"
+    ]
   },
   {
     "canonical_project_id": "proj-76",
@@ -3913,7 +4094,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-77",
@@ -3968,7 +4151,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-78",
@@ -4017,11 +4202,15 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): proj-151 — тот же канал/девелопер/координата, расхождение только в адресе/пунктуации/диапазоне кварталов.",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [
+      "proj-151"
+    ]
   },
   {
     "canonical_project_id": "proj-79",
@@ -4072,7 +4261,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-80",
@@ -4124,7 +4315,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-81",
@@ -4176,7 +4369,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-82",
@@ -4228,7 +4423,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-83",
@@ -4286,7 +4483,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-84",
@@ -4344,7 +4543,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-85",
@@ -4404,7 +4605,9 @@
     "public_visibility": "public",
     "first_seen_at": "202112",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-86",
@@ -4459,7 +4662,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-87",
@@ -4512,7 +4717,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-88",
@@ -4561,7 +4768,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-89",
@@ -4610,7 +4819,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-90",
@@ -4659,7 +4870,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-91",
@@ -4713,7 +4926,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-92",
@@ -4762,7 +4977,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-93",
@@ -4818,7 +5035,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-94",
@@ -4875,7 +5094,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-95",
@@ -4933,7 +5154,9 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-96",
@@ -4988,7 +5211,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-97",
@@ -5036,7 +5261,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-98",
@@ -5089,7 +5316,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-99",
@@ -5142,7 +5371,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-100",
@@ -5199,7 +5430,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-101",
@@ -5257,7 +5490,9 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-102",
@@ -5319,7 +5554,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-103",
@@ -5380,7 +5617,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-104",
@@ -5441,7 +5680,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-105",
@@ -5498,7 +5739,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-106",
@@ -5551,7 +5794,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-107",
@@ -5608,7 +5853,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-108",
@@ -5661,7 +5908,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-109",
@@ -5721,7 +5970,9 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-110",
@@ -5774,11 +6025,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-50, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-50",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-111",
@@ -5835,7 +6088,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-112",
@@ -5887,7 +6142,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-113",
@@ -5936,7 +6193,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-114",
@@ -5993,7 +6252,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-115",
@@ -6044,7 +6305,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-116",
@@ -6102,7 +6365,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-117",
@@ -6153,7 +6418,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-118",
@@ -6211,7 +6478,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-119",
@@ -6269,7 +6538,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-120",
@@ -6318,7 +6589,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-121",
@@ -6376,7 +6649,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-122",
@@ -6432,7 +6707,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-123",
@@ -6490,7 +6767,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-124",
@@ -6542,7 +6821,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-125",
@@ -6600,7 +6881,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-126",
@@ -6654,7 +6937,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-127",
@@ -6712,7 +6997,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-128",
@@ -6767,7 +7054,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-129",
@@ -6831,7 +7120,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-130",
@@ -6889,7 +7180,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-131",
@@ -6938,11 +7231,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-29, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-29",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-132",
@@ -6992,7 +7287,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-133",
@@ -7041,11 +7338,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-30, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-30",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-134",
@@ -7096,7 +7395,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-135",
@@ -7149,7 +7450,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-136",
@@ -7201,7 +7504,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-137",
@@ -7248,11 +7553,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-75, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-75",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-138",
@@ -7308,7 +7615,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-139",
@@ -7358,7 +7667,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-140",
@@ -7409,7 +7720,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-141",
@@ -7459,7 +7772,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-142",
@@ -7508,7 +7823,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-143",
@@ -7557,7 +7874,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-144",
@@ -7612,7 +7931,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-145",
@@ -7670,7 +7991,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-146",
@@ -7719,7 +8042,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-147",
@@ -7772,7 +8097,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-148",
@@ -7830,7 +8157,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-149",
@@ -7890,7 +8219,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-150",
@@ -7941,7 +8272,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-151",
@@ -7990,11 +8323,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-78, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-78",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-152",
@@ -8045,7 +8380,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-153",
@@ -8095,7 +8432,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-154",
@@ -8153,7 +8492,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-155",
@@ -8208,7 +8549,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-156",
@@ -8259,7 +8602,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-157",
@@ -8311,7 +8656,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-158",
@@ -8366,7 +8713,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-159",
@@ -8418,7 +8767,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-160",
@@ -8470,7 +8821,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-161",
@@ -8519,7 +8872,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-162",
@@ -8569,11 +8924,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-63, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-63",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-163",
@@ -8625,7 +8982,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-164",
@@ -8676,7 +9035,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-165",
@@ -8736,7 +9097,9 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-166",
@@ -8788,7 +9151,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-167",
@@ -8840,7 +9205,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-168",
@@ -8891,7 +9258,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-169",
@@ -8943,7 +9312,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-170",
@@ -9006,7 +9377,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-171",
@@ -9061,7 +9434,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-172",
@@ -9113,7 +9488,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-173",
@@ -9164,7 +9541,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-174",
@@ -9222,7 +9601,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-175",
@@ -9271,7 +9652,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-176",
@@ -9321,7 +9704,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-177",
@@ -9381,7 +9766,9 @@
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-178",
@@ -9439,7 +9826,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-179",
@@ -9497,7 +9886,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-180",
@@ -9553,7 +9944,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-181",
@@ -9617,7 +10010,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-182",
@@ -9675,7 +10070,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-183",
@@ -9733,7 +10130,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-184",
@@ -9796,7 +10195,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-185",
@@ -9846,7 +10247,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-186",
@@ -9900,11 +10303,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-9, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-9",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-187",
@@ -9962,7 +10367,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-188",
@@ -10014,7 +10421,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-189",
@@ -10063,7 +10472,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-190",
@@ -10121,7 +10532,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-191",
@@ -10179,7 +10592,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-192",
@@ -10232,7 +10647,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-193",
@@ -10290,7 +10707,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-194",
@@ -10354,7 +10773,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-195",
@@ -10412,7 +10833,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-196",
@@ -10471,7 +10894,9 @@
     "public_visibility": "public",
     "first_seen_at": "202308",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-197",
@@ -10526,7 +10951,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-198",
@@ -10580,11 +11007,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-68, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-68",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-199",
@@ -10642,7 +11071,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-200",
@@ -10693,7 +11124,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-201",
@@ -10756,7 +11189,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-202",
@@ -10814,7 +11249,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-203",
@@ -10872,7 +11309,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-204",
@@ -10921,7 +11360,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-205",
@@ -10976,7 +11417,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-206",
@@ -11034,7 +11477,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-207",
@@ -11092,7 +11537,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-208",
@@ -11141,7 +11588,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-209",
@@ -11193,7 +11642,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-210",
@@ -11251,7 +11702,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-211",
@@ -11309,7 +11762,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-212",
@@ -11361,7 +11816,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-213",
@@ -11419,7 +11876,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-214",
@@ -11468,7 +11927,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-215",
@@ -11526,7 +11987,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-216",
@@ -11588,7 +12051,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "badaevsky",
@@ -11642,7 +12107,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-218",
@@ -11700,7 +12167,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-219",
@@ -11750,11 +12219,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-46, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-46",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-220",
@@ -11809,7 +12280,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-221",
@@ -11860,7 +12333,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-222",
@@ -11918,7 +12393,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-223",
@@ -11976,7 +12453,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-224",
@@ -12026,7 +12505,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-225",
@@ -12084,7 +12565,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-226",
@@ -12133,7 +12616,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-227",
@@ -12187,7 +12672,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-228",
@@ -12245,7 +12732,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-229",
@@ -12303,7 +12792,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-230",
@@ -12352,7 +12843,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-231",
@@ -12402,7 +12895,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-232",
@@ -12460,7 +12955,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-233",
@@ -12514,7 +13011,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-234",
@@ -12564,7 +13063,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-235",
@@ -12618,7 +13119,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-236",
@@ -12670,7 +13173,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-237",
@@ -12720,7 +13225,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-238",
@@ -12771,7 +13278,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-239",
@@ -12829,7 +13338,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-240",
@@ -12879,7 +13390,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-241",
@@ -12931,7 +13444,9 @@
     "public_visibility": "public",
     "first_seen_at": "202503",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-242",
@@ -12985,11 +13500,13 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. ОБЪЕДИНЕНО 2026-08-18: технический дубль proj-17, см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, не удалена.",
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": "proj-17",
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-243",
@@ -13047,7 +13564,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-244",
@@ -13111,7 +13630,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-245",
@@ -13160,7 +13681,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-246",
@@ -13218,7 +13741,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-247",
@@ -13269,7 +13794,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-248",
@@ -13327,7 +13854,9 @@
     "public_visibility": "public",
     "first_seen_at": "202403",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-249",
@@ -13376,7 +13905,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-250",
@@ -13436,7 +13967,9 @@
     "public_visibility": "public",
     "first_seen_at": "202305",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-251",
@@ -13484,7 +14017,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-252",
@@ -13533,7 +14068,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-253",
@@ -13581,7 +14118,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-254",
@@ -13629,7 +14168,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-255",
@@ -13681,7 +14222,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-256",
@@ -13733,7 +14276,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-257",
@@ -13785,7 +14330,9 @@
     "public_visibility": "public",
     "first_seen_at": "202509",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-258",
@@ -13833,7 +14380,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-259",
@@ -13881,7 +14430,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-260",
@@ -13930,7 +14481,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-261",
@@ -13978,7 +14531,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-262",
@@ -14026,7 +14581,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-263",
@@ -14073,7 +14630,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-264",
@@ -14121,7 +14680,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-265",
@@ -14169,7 +14730,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-266",
@@ -14217,7 +14780,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-267",
@@ -14264,7 +14829,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-268",
@@ -14311,7 +14878,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-269",
@@ -14358,7 +14927,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-270",
@@ -14405,7 +14976,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "badaevsky",
@@ -14459,7 +15032,9 @@
     "public_visibility": "public",
     "first_seen_at": "202410",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-272",
@@ -14506,7 +15081,9 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-273",
@@ -14555,7 +15132,9 @@
     "public_visibility": "public",
     "first_seen_at": "202512",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-274",
@@ -14620,7 +15199,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-275",
@@ -14683,7 +15264,9 @@
     "public_visibility": "public",
     "first_seen_at": "202105",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-276",
@@ -14735,7 +15318,9 @@
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-277",
@@ -14791,7 +15376,9 @@
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-278",
@@ -14839,7 +15426,9 @@
     "public_visibility": "public",
     "first_seen_at": "202603",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   },
   {
     "canonical_project_id": "proj-279",
@@ -14886,6 +15475,8 @@
     "public_visibility": "public",
     "first_seen_at": "202606",
     "last_verified_at": "2026-07-31",
-    "source_count": 1
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": []
   }
 ]

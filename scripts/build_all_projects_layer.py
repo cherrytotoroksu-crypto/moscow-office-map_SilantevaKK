@@ -216,6 +216,30 @@ EXTRA_ALIASES = {
     "proj-149": ["CODE Novo", "Долгоруковская 21"],
 }
 
+# Технические дубли (аудит outputs/unified_codifier_review_decisions_2026-08-18.md,
+# раздел "Уверенные технические дубли"): совпадают канал, девелопер и
+# координата внутри группы — расхождения только в пунктуации/пробелах/
+# пустом адресе или в диапазоне кварталов одного и того же места. Канонический
+# ID в каждой группе — с наиболее полным адресом, при равенстве наименьший
+# old_id. Легаси-строки НЕ удаляются: остаются в реестре с duplicate_of,
+# их raw_name уходит в aliases канонической записи.
+DUPLICATE_GROUPS = {
+    "proj-9": ["proj-186", "proj-60", "proj-70"],
+    "proj-17": ["proj-242", "proj-45"],
+    "proj-28": ["proj-65"],
+    "proj-29": ["proj-131"],
+    "proj-30": ["proj-133"],
+    "proj-31": ["proj-41"],
+    "proj-47": ["proj-34"],
+    "proj-46": ["proj-219"],
+    "proj-50": ["proj-110"],
+    "proj-63": ["proj-162"],
+    "proj-64": ["proj-66"],
+    "proj-68": ["proj-198"],
+    "proj-75": ["proj-137"],
+    "proj-78": ["proj-151"],
+}
+
 
 def convert_row(row, colormap, quarter_presence, warnings):
     name = row.get("name")
@@ -297,7 +321,51 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "first_seen_at": min(refs) if refs else None,
         "last_verified_at": TODAY,
         "source_count": 1,
+        "duplicate_of": None,
+        "legacy_ids": [],
     }
+
+
+def apply_duplicate_groups(records):
+    """Проставляет duplicate_of/legacy_ids по DUPLICATE_GROUPS. Легаси-строки
+    НЕ удаляются из records — остаются с duplicate_of, указывающим на
+    каноническую запись; их raw_name уходит в aliases канонической записи."""
+    by_id = {r["canonical_project_id"]: r for r in records}
+    legacy_to_canonical = {
+        legacy_id: canonical_id
+        for canonical_id, legacy_ids in DUPLICATE_GROUPS.items()
+        for legacy_id in legacy_ids
+    }
+
+    for canonical_id, legacy_ids in DUPLICATE_GROUPS.items():
+        canonical = by_id[canonical_id]
+        canonical["legacy_ids"] = sorted(legacy_ids, key=lambda x: int(x.split("-")[1]))
+        extra_aliases = []
+        for legacy_id in legacy_ids:
+            legacy = by_id[legacy_id]
+            for name in (legacy["raw_name"], legacy["canonical_name"]):
+                if name and name != canonical["raw_name"] and name != canonical["canonical_name"]:
+                    extra_aliases.append(name)
+        if extra_aliases:
+            canonical["aliases"] = sorted(set((canonical.get("aliases") or []) + extra_aliases))
+        canonical["qa_notes"] = (
+            canonical["qa_notes"]
+            + f" Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): "
+            f"{', '.join(legacy_ids)} — тот же канал/девелопер/координата, "
+            f"расхождение только в адресе/пунктуации/диапазоне кварталов."
+        ).strip()
+
+    for legacy_id, canonical_id in legacy_to_canonical.items():
+        legacy = by_id[legacy_id]
+        legacy["duplicate_of"] = canonical_id
+        legacy["qa_notes"] = (
+            legacy["qa_notes"]
+            + f" ОБЪЕДИНЕНО 2026-08-18: технический дубль {canonical_id}, "
+            f"см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, "
+            f"не удалена."
+        ).strip()
+
+    return records
 
 
 def main():
@@ -312,6 +380,8 @@ def main():
             excluded_out_of_scope += 1
             continue
         records.append(convert_row(row, colormap, quarter_presence, warnings))
+
+    apply_duplicate_groups(records)
 
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
@@ -332,6 +402,7 @@ def main():
     print(f"offer_status (статус предложения) breakdown: {offer_counts}")
     print(f"confidence breakdown: {conf_counts}")
     print(f"Бадаевский: {sum(1 for r in records if r['canonical_project_id']=='badaevsky')} записи под общим canonical_project_id")
+    print(f"Технические дубли: {len(DUPLICATE_GROUPS)} канонических записей, {sum(1 for r in records if r['duplicate_of'])} legacy-строк с duplicate_of")
 
 
 if __name__ == "__main__":

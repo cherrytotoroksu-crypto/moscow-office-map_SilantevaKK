@@ -138,5 +138,99 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
             self.assertEqual((r["latitude"], r["longitude"]), point, project_id)
 
 
+class TechnicalDuplicateMergeTest(unittest.TestCase):
+    """outputs/unified_codifier_review_decisions_2026-08-18.md: 14 уверенных
+    технических дублей (совпадают канал/девелопер/координата, расхождение
+    только в пунктуации/пустом адресе) объединены через duplicate_of/
+    legacy_ids — записи НЕ удалены. 5 групп из раздела «объединять только
+    после проверки корпуса/площадки» намеренно НЕ трогали."""
+
+    # (canonical_id, [legacy_ids])
+    GROUPS = [
+        ("proj-9", ["proj-60", "proj-70", "proj-186"]),
+        ("proj-17", ["proj-45", "proj-242"]),
+        ("proj-28", ["proj-65"]),
+        ("proj-29", ["proj-131"]),
+        ("proj-30", ["proj-133"]),
+        ("proj-31", ["proj-41"]),
+        ("proj-47", ["proj-34"]),
+        ("proj-46", ["proj-219"]),
+        ("proj-50", ["proj-110"]),
+        ("proj-63", ["proj-162"]),
+        ("proj-64", ["proj-66"]),
+        ("proj-68", ["proj-198"]),
+        ("proj-75", ["proj-137"]),
+        ("proj-78", ["proj-151"]),
+    ]
+
+    # Группы из раздела "Уточнение после сопоставления с историческими
+    # файлами коворкингов" — координаты расходятся на 110-160м или нужна
+    # проверка building/площадки; НЕ объединять до отдельного подтверждения.
+    NOT_MERGED_GROUPS = [
+        ["proj-27", "proj-76"],
+        ["proj-174", "proj-83", "proj-84"],
+        ["proj-193", "proj-69"],
+        ["proj-190", "proj-59", "proj-67"],
+        ["proj-195", "proj-61", "proj-71"],
+    ]
+
+    @classmethod
+    def setUpClass(cls):
+        if not REGISTRY_PATH.exists():
+            raise unittest.SkipTest("data/all_projects_layer.json not generated yet")
+        cls.records = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+        cls.by_id = {r["canonical_project_id"]: r for r in cls.records}
+
+    def test_record_count_unchanged_nothing_deleted(self):
+        """Слияние — это разметка полей, не удаление строк: 277 записей
+        до и после."""
+        self.assertEqual(len(self.records), 277)
+
+    def test_canonical_project_ids_are_globally_unique(self):
+        """canonical_project_id не должен повторяться — кроме badaevsky
+        (два corpus'а с разными canonical_building_id, отдельное правило)."""
+        ids = [r["canonical_project_id"] for r in self.records]
+        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky"}
+        self.assertEqual(dupes, set(), f"canonical_project_id повторяется: {sorted(dupes)}")
+
+    def test_each_group_canonical_has_duplicate_of_none_and_legacy_ids(self):
+        for canonical_id, legacy_ids in self.GROUPS:
+            canonical = self.by_id[canonical_id]
+            self.assertIsNone(canonical["duplicate_of"], canonical_id)
+            self.assertEqual(
+                sorted(canonical["legacy_ids"], key=lambda x: int(x.split("-")[1])),
+                sorted(legacy_ids, key=lambda x: int(x.split("-")[1])),
+                canonical_id,
+            )
+
+    def test_each_legacy_row_points_to_its_canonical_and_still_exists(self):
+        for canonical_id, legacy_ids in self.GROUPS:
+            for legacy_id in legacy_ids:
+                self.assertIn(legacy_id, self.by_id, legacy_id)
+                legacy = self.by_id[legacy_id]
+                self.assertEqual(legacy["duplicate_of"], canonical_id, legacy_id)
+                # raw_name/источники не потеряны
+                self.assertTrue(legacy["raw_name"], legacy_id)
+                self.assertEqual(legacy["source"], "classifier.html", legacy_id)
+
+    def test_no_duplicate_of_points_to_another_duplicate_of_row(self):
+        """duplicate_of должен указывать на каноническую (не-легаси) запись,
+        а не на другую legacy-строку — цепочек дублей быть не должно."""
+        canonical_ids = {cid for cid, _ in self.GROUPS}
+        for r in self.records:
+            if r["duplicate_of"]:
+                self.assertIn(r["duplicate_of"], canonical_ids, r["canonical_project_id"])
+
+    def test_five_uncertain_groups_left_unmerged(self):
+        """Координаты внутри этих групп расходятся на 110-160м или требуют
+        проверки building/площадки — duplicate_of должен остаться None,
+        legacy_ids пустым у всех участников."""
+        for group in self.NOT_MERGED_GROUPS:
+            for project_id in group:
+                self.assertIn(project_id, self.by_id, project_id)
+                r = self.by_id[project_id]
+                self.assertIsNone(r["duplicate_of"], project_id)
+                self.assertEqual(r["legacy_ids"], [], project_id)
+
 if __name__ == "__main__":
     unittest.main()
