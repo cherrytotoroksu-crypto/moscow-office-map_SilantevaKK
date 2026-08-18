@@ -87,10 +87,11 @@
         <option value="coworking">Коворкинги</option>
       </select>
 
-      <h3>Период</h3>
+      <h3 id="anaPeriodLabel">Квартал</h3>
+      <div id="anaPeriodHint" class="hint" style="display:none;">Диапазон учитывается только для типа графика «Линия» — для остальных берётся срез на конечный квартал.</div>
       <div style="display:flex;gap:6px;align-items:center;">
-        <select id="anaQuarterFrom" style="flex:1;"></select>
-        <span style="font-size:11px;color:#888;">—</span>
+        <select id="anaQuarterFrom" style="flex:1;display:none;"></select>
+        <span id="anaPeriodDash" style="font-size:11px;color:#888;display:none;">—</span>
         <select id="anaQuarterTo" style="flex:1;"></select>
       </div>
     </div>
@@ -428,16 +429,30 @@ function anaCaptionText(domain, channel, metric, groupBy, chartType, fromQ, toQ)
   const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
   const kind = ANA_METRIC_KIND[metric] || 'sum';
   const ruleLabel = kind === 'sum' ? 'сумма' : kind === 'wavg' ? 'средневзвешенное' : 'среднее';
+  const qLabel = id => QUARTERS.find(q => q.id === id)?.label || id;
   let periodText = domain === 'quarterly'
-    ? (chartType === 'line' ? `тренд ${fromQ} — ${toQ}` : `срез на ${toQ}`)
+    ? (chartType === 'line' ? `тренд ${qLabel(fromQ)} — ${qLabel(toQ)}` : `срез на ${qLabel(toQ)}`)
     : `снимок реестра на ${analyticsProjectsData?.[0]?.last_verified_at || 'текущую дату'}`;
   return `<b>${domainLabel}</b>${domain==='quarterly' ? ' · канал: ' + ({sale:'продажа',rent:'аренда',coworking:'коворкинги'}[channel]||channel) : ''}`
     + ` · метрика: ${metricLabel} (правило: ${ruleLabel}) · группировка: ${groupLabel} · ${periodText}.`
     + ` «${ANA_NA_LABEL}» — записи без значения по оси группировки, не отбрасываются и не считаются нулём.`;
 }
 
+// Диапазон периода реально используется только линейным графиком (тренд
+// по кварталам) — для столбцов/кольцевой/таблицы всегда берётся срез на
+// один конечный квартал, "от" молча игнорировался. Явно прячем "от" вне
+// линии, чтобы это не выглядело как нерабочий контрол.
+function syncPeriodUI() {
+  const isLine = document.getElementById('anaChartType').value === 'line';
+  document.getElementById('anaQuarterFrom').style.display = isLine ? '' : 'none';
+  document.getElementById('anaPeriodDash').style.display = isLine ? '' : 'none';
+  document.getElementById('anaPeriodHint').style.display = isLine ? '' : 'none';
+  document.getElementById('anaPeriodLabel').textContent = isLine ? 'Период' : 'Квартал';
+}
+
 async function renderAnalytics() {
   await ensureChart();
+  syncPeriodUI();
   const domain = anaDomain();
   const channel = document.getElementById('anaChannel').value || 'sale';
   const metric = document.getElementById('anaMetric').value;
