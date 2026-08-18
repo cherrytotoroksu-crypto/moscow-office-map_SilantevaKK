@@ -15511,9 +15511,9 @@
     "geometry_quality": "unknown",
     "entity_grain": "project",
     "area_scope": "project",
-    "project_status": "Введён",
-    "offer_status": "Ещё не вышел в продажу",
-    "offer_not_started_reason": "Нет подтверждённых лотов",
+    "project_status": "Заморожен",
+    "offer_status": "Не применяется",
+    "offer_not_started_reason": "Продажи не раскрыты",
     "quarter_offer_exists": false,
     "quarter_offer_refs": [],
     "market_channel": [],
@@ -15527,7 +15527,7 @@
     "source_count": 1,
     "external_only": true,
     "confidence": "low",
-    "verification_status": "under_review",
+    "verification_status": "blocked",
     "public_visibility": "internal_only",
     "duplicate_of": null,
     "legacy_ids": [],
@@ -15537,7 +15537,7 @@
     "bizForming": null,
     "flex_site_label": null,
     "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду."
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: здание в феврале 2025 целиком куплено Т-Банком под корпоративный университет (voshodmoscow.ru/projects/tsentralnyy-telegraf), первоначальный план 22 лотов в продаже отменён. НЕ добавлять в квартальные продажи ни при каких условиях, кандидат отклонён."
   },
   {
     "canonical_project_id": "remain-only-0002",
@@ -15571,7 +15571,7 @@
     "source_date": "2026-07-29",
     "source_count": 1,
     "external_only": true,
-    "confidence": "low",
+    "confidence": "medium",
     "verification_status": "under_review",
     "public_visibility": "internal_only",
     "duplicate_of": null,
@@ -15582,7 +15582,7 @@
     "bizForming": null,
     "flex_site_label": null,
     "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду."
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт ЛСР (lsr.ru/msk/kommercheskaya-nedvizhimost/zilart) подтверждает коммерческие помещения в продаже. Реальный сигнал есть, но остаётся internal_only до подтверждения через NF-процесс (веб-проверка — не то же самое, что подтверждённый лот в срезе)."
   },
   {
     "canonical_project_id": "remain-only-0003",
@@ -15616,7 +15616,7 @@
     "source_date": "2026-07-29",
     "source_count": 1,
     "external_only": true,
-    "confidence": "low",
+    "confidence": "medium",
     "verification_status": "under_review",
     "public_visibility": "internal_only",
     "duplicate_of": null,
@@ -15627,7 +15627,7 @@
     "bizForming": null,
     "flex_site_label": null,
     "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду."
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт ФСК (fsk.ru/kommercheskaya-nedvizhimost/sydney-city/sale) подтверждает офисы в продаже (~44 400 кв.м, этажи 3 и 6-24); есть и отдельная попытка продать здание целиком за 20 млрд руб (delovpodhod.ru) — canonical GBA/офисная площадь пока не сверены построчно. Остаётся internal_only до подтверждения через NF-процесс."
   },
   {
     "canonical_project_id": "remain-only-0004",
@@ -15661,7 +15661,7 @@
     "source_date": "2026-07-29",
     "source_count": 1,
     "external_only": true,
-    "confidence": "low",
+    "confidence": "medium",
     "verification_status": "under_review",
     "public_visibility": "internal_only",
     "duplicate_of": null,
@@ -15672,6 +15672,6 @@
     "bizForming": null,
     "flex_site_label": null,
     "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2024-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду."
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2024-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт (moscow-city-towers.ru/sale) подтверждает активную продажу офисов в Москва-Сити, от 30 млн руб. Остаётся internal_only до подтверждения через NF-процесс (веб-проверка не эквивалентна подтверждённому лоту в квартальном срезе)."
   }
 ]

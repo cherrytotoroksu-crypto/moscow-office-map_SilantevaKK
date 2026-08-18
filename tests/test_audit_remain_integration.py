@@ -78,6 +78,38 @@ class RemainConflictResolutionTests(unittest.TestCase):
         self.assertEqual(validate_layer(self.layer), [])
 
 
+class RemainOnlyRemainWebVerificationTests(unittest.TestCase):
+    """2026-08-18: web-проверка 4 only_remain кандидатов через офиц. сайты
+    девелоперов (не NF-подтверждение самих лотов в квартальном срезе)."""
+
+    def setUp(self):
+        if not LAYER_PATH.exists():
+            self.skipTest("all_projects_layer.json not present")
+        self.layer = json.loads(LAYER_PATH.read_text(encoding="utf-8-sig"))
+        self.by_id = {r["canonical_project_id"]: r for r in self.layer}
+
+    def test_central_telegraph_rejected_after_building_sold_to_third_party(self):
+        # Т-Банк выкупил здание целиком под корп. университет — лотов не будет.
+        r = self.by_id["remain-only-0001"]
+        self.assertEqual(r["verification_status"], "blocked")
+        self.assertEqual(r["offer_status"], "Не применяется")
+        self.assertFalse(r["quarter_offer_exists"])
+        self.assertEqual(r["quarter_offer_refs"], [])
+        self.assertEqual(r["public_visibility"], "internal_only")
+
+    def test_confirmed_lot_candidates_stay_internal_only_pending_nf_process(self):
+        # web-проверка подтверждает, что лоты реально существуют, но это не
+        # заменяет NF-подтверждение — public_visibility/verification_status
+        # не должны стать public/accepted только от web-сигнала.
+        for pid in ("remain-only-0002", "remain-only-0003", "remain-only-0004"):
+            r = self.by_id[pid]
+            self.assertEqual(r["public_visibility"], "internal_only")
+            self.assertEqual(r["verification_status"], "under_review")
+            self.assertFalse(r["quarter_offer_exists"])
+            self.assertEqual(r["quarter_offer_refs"], [])
+            self.assertEqual(r["market_channel"], [])
+
+
 class RemainRegressionOnCurrentLayerTests(unittest.TestCase):
     """Guards against silently losing external_only Remain records on rebuild."""
 

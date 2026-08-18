@@ -57,10 +57,12 @@ REMAIN_RECORDS = [
     {"external_name": "Бизнес-квартал Прокшино Башни 1/2/3", "category": "probable_match", "local_match": "А101 Прокшино", "conflict_note": "наши GBA 42000 покрывают один корпус из 5; сумма Remain 113029 — весь квартал (>177 тыс. кв.м по офиц. данным А101) — resolved_scope_difference, не пробел данных"},
     {"external_name": "МАУНТ", "category": "probable_match", "local_match": "Mount"},
     # --- C: only_remain — введены, должны попасть в Q2 2026 если есть лоты (высокая уверенность по вводу)
-    {"external_name": "МФК Центральный Телеграф", "category": "only_remain", "developer": "VOS'HOD", "completion": "2026-Q2", "gba": 64824, "office_area": 28121, "confidence": "low", "note": "requires lot verification before public sale offer"},
-    {"external_name": "ЗИЛАРТ GRAND (Дом 18)", "category": "only_remain", "developer": "ЛСР", "completion": "2026-Q2", "gba": 35600, "office_area": 18950, "confidence": "low"},
-    {"external_name": "Sydney City", "category": "only_remain", "developer": "ГК ФСК", "completion": "2026-Q2", "gba": 75105, "office_area": 27840, "confidence": "low"},
-    {"external_name": "Moscow Towers", "category": "only_remain", "developer": "ООО «Гранд Сити»", "completion": "2024-Q2", "gba": 411147, "office_area": 262800, "confidence": "low"},
+    # 2026-08-18 web-проверка по офиц. сайтам девелоперов (не NF-подтверждение,
+    # только сигнал "лоты реально существуют"):
+    {"external_name": "МФК Центральный Телеграф", "category": "only_remain", "developer": "VOS'HOD", "completion": "2026-Q2", "gba": 64824, "office_area": 28121, "confidence": "low", "note": "REJECTED 2026-08-18: здание целиком куплено Т-Банком под корп. университет (voshodmoscow.ru), продажи лотов отменены — не добавлять в квартальные срезы"},
+    {"external_name": "ЗИЛАРТ GRAND (Дом 18)", "category": "only_remain", "developer": "ЛСР", "completion": "2026-Q2", "gba": 35600, "office_area": 18950, "confidence": "medium", "note": "лоты подтверждены на lsr.ru, остаётся internal_only до NF-подтверждения"},
+    {"external_name": "Sydney City", "category": "only_remain", "developer": "ГК ФСК", "completion": "2026-Q2", "gba": 75105, "office_area": 27840, "confidence": "medium", "note": "лоты подтверждены на fsk.ru, остаётся internal_only до NF-подтверждения"},
+    {"external_name": "Moscow Towers", "category": "only_remain", "developer": "ООО «Гранд Сити»", "completion": "2024-Q2", "gba": 411147, "office_area": 262800, "confidence": "medium", "note": "лоты подтверждены на moscow-city-towers.ru, остаётся internal_only до NF-подтверждения"},
 ]
 
 

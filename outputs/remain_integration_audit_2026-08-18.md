@@ -33,14 +33,23 @@
 
 Источники: [botanicaplaza.moscow](https://botanicaplaza.moscow/), [rail-a.ru](https://rail-a.ru/), [commercial.a101.ru/bk-prokshino](https://commercial.a101.ru/bk-prokshino/).
 
-## Добавленные only_remain записи (external_only=true)
+## Добавленные only_remain записи (external_only=true) — web-проверка 2026-08-18
 
-`remain-only-0001..0004`: МФК Центральный Телеграф, ЗИЛАРТ GRAND (Дом 18),
-Sydney City, Moscow Towers. Все — `public_visibility=internal_only`,
-`qa_status=quarantine`, `verification_status=under_review`,
-`quarter_offer_exists=false`, `quarter_offer_refs=[]`, `market_channel=[]`.
-Лоты на продажу/аренду не подтверждены вживую — решение пользователя: не
-выводить публично и не включать в квартальные объёмы до проверки.
+`remain-only-0001..0004`. Проверены по офиц. сайтам девелоперов (WebSearch/
+WebFetch) — это НЕ NF-подтверждение лотов, только сигнал "объект/лоты
+реально существуют или нет":
+
+| ID | Объект | Итог web-проверки | verification_status |
+|---|---|---|---|
+| remain-only-0001 | МФК Центральный Телеграф | **REJECTED**: здание целиком куплено Т-Банком под корп. университет (voshodmoscow.ru/projects/tsentralnyy-telegraf), план 22 лотов отменён | `blocked`, `offer_status=Не применяется`, `project_status=Заморожен` |
+| remain-only-0002 | ЗИЛАРТ GRAND (Дом 18) | лоты подтверждены (lsr.ru/msk/kommercheskaya-nedvizhimost/zilart) | `under_review`, confidence medium |
+| remain-only-0003 | Sydney City | лоты подтверждены (fsk.ru/kommercheskaya-nedvizhimost/sydney-city/sale) | `under_review`, confidence medium |
+| remain-only-0004 | Moscow Towers | лоты подтверждены (moscow-city-towers.ru/sale) | `under_review`, confidence medium |
+
+Все 4 остаются `public_visibility=internal_only`, `quarter_offer_exists=false`,
+`quarter_offer_refs=[]`, `market_channel=[]` — web-подтверждение не заменяет
+NF-подтверждение конкретного лота в квартальном срезе, поэтому public/accepted
+не проставлял.
 
 ## PRJ-* реестр
 
