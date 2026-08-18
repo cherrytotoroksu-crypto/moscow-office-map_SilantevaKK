@@ -15582,7 +15582,7 @@
     "bizForming": null,
     "flex_site_label": null,
     "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт ЛСР (lsr.ru/msk/kommercheskaya-nedvizhimost/zilart) подтверждает коммерческие помещения в продаже. Реальный сигнал есть, но остаётся internal_only до подтверждения через NF-процесс (веб-проверка — не то же самое, что подтверждённый лот в срезе)."
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт ЛСР (lsr.ru/msk/kommercheskaya-nedvizhimost/zilart) подтверждает коммерческие помещения в продаже. Реальный сигнал есть, но остаётся internal_only до подтверждения через NF-процесс (веб-проверка — не то же самое, что подтверждённый лот в срезе). ПРОВЕРЕНО 2026-08-19: в future_projects.json есть OBJ-0640 \"ЗИЛАРТ GRAND (Дом 18)\" (ЛСР) — совпадает застройщик, но GBA 187706 (жилая башня целиком) почти в 5 раз больше заявленных Remain 35600/офис 18950 — вероятно другое здание в том же квартале, а не тот же объект. НЕ объединено и НЕ отклонено — недостаточно доказательств; нужна разбивка по зданиям квартала ЗИЛАРТ, чтобы подтвердить или опровергнуть."
   },
   {
     "canonical_project_id": "remain-only-0003",
@@ -15617,7 +15617,7 @@
     "source_count": 1,
     "external_only": true,
     "confidence": "medium",
-    "verification_status": "under_review",
+    "verification_status": "blocked",
     "public_visibility": "internal_only",
     "duplicate_of": null,
     "legacy_ids": [],
@@ -15626,8 +15626,8 @@
     "bizFormed": null,
     "bizForming": null,
     "flex_site_label": null,
-    "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт ФСК (fsk.ru/kommercheskaya-nedvizhimost/sydney-city/sale) подтверждает офисы в продаже (~44 400 кв.м, этажи 3 и 6-24); есть и отдельная попытка продать здание целиком за 20 млрд руб (delovpodhod.ru) — canonical GBA/офисная площадь пока не сверены построчно. Остаётся internal_only до подтверждения через NF-процесс."
+    "qa_status": "duplicate_suspect",
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2026-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт ФСК (fsk.ru/kommercheskaya-nedvizhimost/sydney-city/sale) подтверждает офисы в продаже (~44 400 кв.м, этажи 3 и 6-24); есть и отдельная попытка продать здание целиком за 20 млрд руб (delovpodhod.ru) — canonical GBA/офисная площадь пока не сверены построчно. Остаётся internal_only до подтверждения через NF-процесс. ПЕРЕКЛАССИФИЦИРОВАНО 2026-08-19: подтверждён дубль data/future_projects.json OBJ-0668 \"Sydney City\" (тот же адрес — ул. Шеногина, 2 — и девелопер ГК ФСК; GBA 70000 совпадает точно как с OBJ-0668, так и с независимым подтверждением stroi.mos.ru/brightrich.moscow/delovpodhod.ru). НЕ пробел покрытия — не должен считаться only_remain/новым объектом. Оставлен в реестре (не удалён), помечен как duplicate_suspect."
   },
   {
     "canonical_project_id": "remain-only-0004",
@@ -15662,6 +15662,51 @@
     "source_count": 1,
     "external_only": true,
     "confidence": "medium",
+    "verification_status": "blocked",
+    "public_visibility": "internal_only",
+    "duplicate_of": null,
+    "legacy_ids": [],
+    "aliases": [],
+    "canonical_building_id": null,
+    "bizFormed": null,
+    "bizForming": null,
+    "flex_site_label": null,
+    "qa_status": "duplicate_suspect",
+    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2024-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт (moscow-city-towers.ru/sale) подтверждает активную продажу офисов в Москва-Сити, от 30 млн руб. Остаётся internal_only до подтверждения через NF-процесс (веб-проверка не эквивалентна подтверждённому лоту в квартальном срезе). ПЕРЕКЛАССИФИЦИРОВАНО 2026-08-19: подтверждён дубль data/future_projects.json OBJ-0021 \"Moscow Towers\" (девелопер Гранд Сити совпадает точно; GLA 262800 совпадает точно; GBA 400000 vs 411147 — расхождение 2.7%; source_sheets OBJ-0021 уже включает \"remain\" — значит Remain-данные по этому объекту уже интегрированы в другой реестр раньше). НЕ пробел покрытия — не должен считаться only_remain/новым объектом. Оставлен в реестре (не удалён), помечен как duplicate_suspect для QA."
+  },
+  {
+    "canonical_project_id": "remain-only-0005",
+    "canonical_name": "Офисно-торговый центр Нагатинская",
+    "raw_name": "Офисно-торговый центр Нагатинская",
+    "address": null,
+    "developer": "Трэйд Инвестментс",
+    "gba": 228742,
+    "gla": null,
+    "office_area": 45000,
+    "cls": null,
+    "zone": null,
+    "submarket": null,
+    "latitude": null,
+    "longitude": null,
+    "geometry_quality": "unknown",
+    "entity_grain": "project",
+    "area_scope": "project",
+    "project_status": "Не установлен",
+    "offer_status": "Ещё не вышел в продажу",
+    "offer_not_started_reason": "Проектная стадия",
+    "quarter_offer_exists": false,
+    "quarter_offer_refs": [],
+    "market_channel": [],
+    "input_quarter": 3,
+    "input_year": 2028,
+    "input_date_kind": "planned",
+    "first_seen_at": "2026-08-19",
+    "last_verified_at": "2026-08-19",
+    "source": "remain_datalens",
+    "source_date": "2026-07-29",
+    "source_count": 1,
+    "external_only": true,
+    "confidence": "low",
     "verification_status": "under_review",
     "public_visibility": "internal_only",
     "duplicate_of": null,
@@ -15672,6 +15717,6 @@
     "bizForming": null,
     "flex_site_label": null,
     "qa_status": "quarantine",
-    "qa_notes": "only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, 2024-Q2); перед public_visibility нужна проверка реальных лотов на продажу/аренду. | web_verified 2026-08-18: офиц. сайт (moscow-city-towers.ru/sale) подтверждает активную продажу офисов в Москва-Сити, от 30 млн руб. Остаётся internal_only до подтверждения через NF-процесс (веб-проверка не эквивалентна подтверждённому лоту в квартальном срезе)."
+    "qa_notes": "only_remain кандидат из REMAIN_REVIEW_QUEUE.md (раздел 1, \"Строятся\"). Независимо подтверждено 2026-08-19 официальным источником (stroi.mos.ru/news/item/...ofisno-torghovyi-tsientr-s-kinozalami-i-bassieinom): часть ТПУ «Нагатинская», строится за счёт инвестора в районе Нагорный у метро «Нагатинская». Не найден ни в all_projects_layer.json, ни в future_projects.json — реальный пробел, не дубль. GBA 228742 — весь смешанный комплекс (офис+ритейл+кинозалы+бассейн), office_area 45000 — офисная часть; area_scope=project намеренно не сужен без разбивки по зданию. Перед public_visibility нужна проверка реальных лотов на продажу/аренду — заявленный ввод 3 кв. 2028, слишком рано для лотов в текущих кварталах."
   }
 ]

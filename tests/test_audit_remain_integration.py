@@ -101,13 +101,44 @@ class RemainOnlyRemainWebVerificationTests(unittest.TestCase):
         # web-проверка подтверждает, что лоты реально существуют, но это не
         # заменяет NF-подтверждение — public_visibility/verification_status
         # не должны стать public/accepted только от web-сигнала.
-        for pid in ("remain-only-0002", "remain-only-0003", "remain-only-0004"):
+        for pid in ("remain-only-0002", "remain-only-0003"):
             r = self.by_id[pid]
             self.assertEqual(r["public_visibility"], "internal_only")
             self.assertEqual(r["verification_status"], "under_review")
             self.assertFalse(r["quarter_offer_exists"])
             self.assertEqual(r["quarter_offer_refs"], [])
             self.assertEqual(r["market_channel"], [])
+
+    def test_moscow_towers_reclassified_as_cross_registry_duplicate(self):
+        """2026-08-19: remain-only-0004 (Moscow Towers) подтверждён как дубль
+        data/future_projects.json OBJ-0021 (Гранд Сити, GLA 262800 совпадает
+        точно) — не пробел покрытия. audit_remain_integration.py сверял
+        только против all_projects_layer.json/classifier.html и не видел
+        future_projects.json (отдельный xlsx-производный реестр) — отсюда
+        ложный only_remain. Запись НЕ удалена, помечена duplicate_suspect."""
+        r = self.by_id["remain-only-0004"]
+        self.assertEqual(r["verification_status"], "blocked")
+        self.assertEqual(r["qa_status"], "duplicate_suspect")
+        self.assertIn("OBJ-0021", r["qa_notes"])
+        self.assertFalse(r["quarter_offer_exists"])
+        self.assertEqual(r["public_visibility"], "internal_only")
+
+    def test_nagatinskaya_added_as_genuine_gap_not_duplicate(self):
+        """2026-08-19: «Офисно-торговый центр Нагатинская» независимо
+        подтверждён (stroi.mos.ru, часть ТПУ «Нагатинская») и не найден ни
+        в all_projects_layer.json, ни в future_projects.json — реальный
+        пробел, добавлен как remain-only-0005. Ввод заявлен на 2028-Q3—
+        слишком рано для лотов в текущих кварталах, остаётся internal_only."""
+        r = self.by_id["remain-only-0005"]
+        self.assertEqual(r["canonical_name"], "Офисно-торговый центр Нагатинская")
+        self.assertEqual(r["developer"], "Трэйд Инвестментс")
+        self.assertTrue(r["external_only"])
+        self.assertEqual(r["source"], "remain_datalens")
+        self.assertEqual(r["public_visibility"], "internal_only")
+        self.assertEqual(r["verification_status"], "under_review")
+        self.assertFalse(r["quarter_offer_exists"])
+        self.assertEqual(r["quarter_offer_refs"], [])
+        self.assertEqual(r["market_channel"], [])
 
 
 class RemainRegressionOnCurrentLayerTests(unittest.TestCase):

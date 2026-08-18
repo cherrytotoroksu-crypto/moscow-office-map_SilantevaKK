@@ -116,14 +116,25 @@ class OnlineTablesInvariantTests(unittest.TestCase):
 
     # ---- 3. empty values are not turned into 0 ---------------------------
     def test_missing_area_stays_null_not_zero(self):
-        # Записи без известной площади (коворкинг-операторы без gba/gla)
-        # должны хранить null, а не 0 — 0 означало бы "площадь равна нулю",
-        # что неверно (это "неизвестно").
-        no_area_records = [r for r in self.registry if r["project_status"] == "Не установлен"]
-        self.assertTrue(no_area_records, "expected at least one coworking-operator-style record")
-        for r in no_area_records:
+        # Локальные (classifier.html) записи без известной площади
+        # (коворкинг-операторы без gba/gla) должны хранить null, а не 0 —
+        # 0 означало бы "площадь равна нулю", что неверно (это "неизвестно").
+        # Для внешних (external_only) записей project_status="Не установлен"
+        # означает "официальный статус стройки не подтверждён", а не
+        # "площадь неизвестна" — у Remain-кандидата площадь может быть
+        # известна из источника при неподтверждённом статусе, это не то же
+        # самое поле неопределённости; 0 там всё равно запрещён.
+        local_no_area_records = [
+            r for r in self.registry
+            if r["project_status"] == "Не установлен" and not r.get("external_only")
+        ]
+        self.assertTrue(local_no_area_records, "expected at least one coworking-operator-style record")
+        for r in local_no_area_records:
             self.assertIsNone(r["gba"])
             self.assertNotEqual(r["gba"], 0)
+
+        for r in self.registry:
+            self.assertNotEqual(r["gba"], 0, f"{r['canonical_project_id']}: gba must be null, not 0, when unknown")
 
     def test_empty_quarter_offer_refs_is_empty_list_not_falsy_sentinel(self):
         no_offer = [r for r in self.registry if not r["quarter_offer_exists"]]
