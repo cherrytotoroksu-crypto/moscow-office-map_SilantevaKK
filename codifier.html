@@ -118,6 +118,12 @@
   <label class="qa-toggle" title="Показывает технические/служебные поля (ID, raw-названия, QA-заметки и т.п.) — только для внутренней проверки">
     <input type="checkbox" id="qaModeToggle"> Режим QA (технические поля)
   </label>
+  <span id="sourceModeGroup" class="qa-toggle" style="display:none;" title="Источник данных: локальные объекты (classifier.html) и/или объекты, найденные только через Remain (internal_only, ещё не подтверждены NF)">
+    Источник:
+    <label><input type="radio" name="sourceMode" value="local" checked> Локальные данные</label>
+    <label><input type="radio" name="sourceMode" value="remain"> Remain</label>
+    <label><input type="radio" name="sourceMode" value="both"> Оба источника</label>
+  </span>
   <button class="btn" id="btnCopyLink">Скопировать ссылку на вид</button>
   <button class="btn" id="btnExportCsv">Экспорт CSV</button>
   <button class="btn primary" id="btnExportXlsx">Экспорт XLSX</button>
@@ -531,6 +537,10 @@ let suppressURLSync = false; // true пока восстанавливаем с�
 // видимости, так что режимы не могут "смешаться" (в internal-режиме всё то же,
 // что в обычном, плюс дополнительные колонки).
 let qaMode = false;
+// Источник данных для раздела "Общий кодификатор": по умолчанию 'local' —
+// объекты с public_visibility='internal_only' (пока только remain_datalens,
+// не подтверждённые NF) скрыты, пока их не выберут явно ('remain'/'both').
+let sourceMode = 'local';
 function isColumnShown(col) {
   return col.visible && (qaMode || !col.internal);
 }
@@ -1146,6 +1156,14 @@ function passesFilter(row, col, filter) {
 
 function getFilteredSortedRows(ts) {
   let rows = ts.rows.filter(row => {
+    // Фильтр источника — только для сырых записей общего реестра (codifier);
+    // квартальные разделы (продажа/аренда/флекс) строятся из отдельных
+    // файлов и никогда не содержат remain_datalens записей (п.4 задачи).
+    if (currentView === 'codifier' && sourceMode !== 'both') {
+      const isRemain = row.public_visibility === 'internal_only';
+      if (sourceMode === 'local' && isRemain) return false;
+      if (sourceMode === 'remain' && !isRemain) return false;
+    }
     for (const col of ts.columns) {
       const f = ts.filters[col.key];
       if (f && !passesFilter(row, col, f)) return false;
@@ -1770,6 +1788,15 @@ document.getElementById('qaModeToggle').onchange = (e) => {
   render();
   if (!suppressURLSync) syncURL();
 };
+document.querySelectorAll('input[name="sourceMode"]').forEach(radio => {
+  radio.onchange = (e) => {
+    if (!e.target.checked) return;
+    sourceMode = e.target.value;
+    state.codifier.page = 1;
+    render();
+    if (!suppressURLSync) syncURL();
+  };
+});
 
 function currentExportRows() {
   const ts = state[currentView];
@@ -1910,6 +1937,7 @@ function syncURL() {
   const p = new URLSearchParams();
   p.set('view', currentView);
   if (qaMode) p.set('qa', '1');
+  if (currentView === 'codifier' && sourceMode !== 'local') p.set('src', sourceMode);
   if (VIEWS[currentView].section !== 'codifier') p.set('q', currentQuarterId);
   if (currentView === 'sale_buildings' && compareQuarterId) p.set('cmp', compareQuarterId);
   if (ts.globalSearch) p.set('search', ts.globalSearch);
@@ -1945,6 +1973,8 @@ function restoreFromURL() {
     currentSection = VIEWS[view].section;
   }
   qaMode = p.get('qa') === '1';
+  const src = p.get('src');
+  if (src && ['local', 'remain', 'both'].includes(src)) sourceMode = src;
   const q = p.get('q');
   if (q && QUARTERS.some(x => x.id === q)) currentQuarterId = q;
   const cmp = p.get('cmp');
@@ -2083,6 +2113,7 @@ function switchToView(viewId) {
   renderSubtabs();
   document.getElementById('quarterSelect').style.display = (currentSection !== 'codifier' && currentSection !== 'golden') ? '' : 'none';
   document.getElementById('compareSelect').style.display = currentView === 'sale_buildings' ? '' : 'none';
+  document.getElementById('sourceModeGroup').style.display = currentView === 'codifier' ? '' : 'none';
   document.getElementById('globalSearch').value = state[currentView].globalSearch || '';
   quarterSelect.value = currentQuarterId;
   compareSelect.value = compareQuarterId;
@@ -2106,6 +2137,9 @@ quarterSelect.onchange = (e) => {
   restoreFromURL();
   document.getElementById('pageSizeSelect').value = String(pageSize);
   document.getElementById('qaModeToggle').checked = qaMode;
+  const sourceModeRadio = document.querySelector(`input[name="sourceMode"][value="${sourceMode}"]`);
+  if (sourceModeRadio) sourceModeRadio.checked = true;
+  document.getElementById('sourceModeGroup').style.display = currentView === 'codifier' ? '' : 'none';
   await loadCodifier();
   syncSectionTabsActive();
   renderSubtabs();
