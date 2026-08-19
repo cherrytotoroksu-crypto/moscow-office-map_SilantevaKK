@@ -74,12 +74,31 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         self.assertEqual(r["developer"], "Пожарная охрана")
 
     def test_orbital_2_address_and_status_conflict_still_unresolved(self):
-        # "Orbital" (без -2) на 3-я Магистральная 10 уже сдан в 2023/2024 —
-        # наша запись "Orbital-2" на вл.12 в статусе "Строится" им противоречит.
-        # Пин на нынешнее состояние — ручной разбор (PRJ-вопрос) вне этого QA.
+        # 2026-08-19 (второй заход): проверены 3 кандидата по адресу/названию
+        # (Orbital вл.10 GBA~27к, вл.12-здание класса B GBA 17.9к, ФСК
+        # "Магистральная 12" на 5-й Магистральной GBA 18.7к) — ни один не
+        # совпал с нашими GBA 57967. Осознанно НЕ правил (нет подтверждения),
+        # Orbital и Orbital-2 не объединены. Пин на нынешнее состояние.
         r = self.by_id["proj-168"]
         self.assertEqual(r["address"], "Москва, 3-я Магистральная ул., вл. 12")
         self.assertEqual(r["project_status"], "Строится")
+        self.assertEqual(r["gba"], 57967)
+
+    def test_fly_tower_status_and_year_fixed_with_cited_source(self):
+        # fortexgroup.ru/bc/fly-tower: "Год постройки: 2025", объект готов.
+        r = self.by_id["proj-13"]
+        self.assertEqual(r["project_status"], "Введён")
+        self.assertEqual(r["input_year"], 2025)
+        self.assertIsNone(r["input_quarter"])
+        self.assertEqual(r["input_date_kind"], "confirmed")
+        self.assertIn("fortexgroup.ru", r["qa_notes"])
+
+    def test_fly_tower_offer_status_left_untouched_as_derived_field(self):
+        # offer_status/quarter_offer_refs — производные поля от
+        # build_all_projects_layer.py + data/lots_*.json, не правились
+        # вручную вместе со статусом/датой (см. review-файл).
+        r = self.by_id["proj-13"]
+        self.assertEqual(r["offer_status"], "Ещё не вышел в продажу")
 
     def test_stone_khodynka_4_class_mismatch_still_unresolved(self):
         # stone.ru/commercial/hodinka4: класс Прайм — наша запись хранит A.
