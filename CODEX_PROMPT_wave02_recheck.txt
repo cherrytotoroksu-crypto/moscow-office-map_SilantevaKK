@@ -1,0 +1,14 @@
+Проверь коммит dd15a4f..10ffab8 в moscow-office-map (AUDIT-011, волна 02, Claude Code, 2026-08-22).
+
+Что сделано:
+1. STONE Пресня (proj-1): data/building_dates.json ключ "stone пресня", commission_q=202703 (Q1 2027, план). Источники: IBC Real Estate + Of.ru — оба независимо. Проверь: действительно ли обе страницы (не сниппеты) дают Q1 2027, и не устарели ли они с 2026-08-22.
+2. Plaza Technopark (proj-85): не менялся, commission_q=202112 подтверждён ранее (2026-07-16) — просто перепроверь, что не протух.
+3. PORTA (proj-86): commission_q=202509 применён с confidence=low и явным конфликтом в data/qa/codifier_gap_wave_02_dates_20260822.json — единственный источник даты (cre.ru/news/95248) даёт ПЛАНОВЫЙ срок при ~50% готовности, а не факт ввода; 2ГИС на дату проверки называл здание «строящийся»; заявленный Multispace внутри здания не подтверждён. Нужна отдельная проверка реестра Мосгосстройнадзора по адресу Заречная ул., вл. 2/1 (ввод в эксплуатацию) — это может как подтвердить, так и опровергнуть срок.
+
+Отдельно проверь техническую часть:
+- data/all_projects_layer.json: убедиться, что все 374 записи целы (external_only/remain_datalens/coworking_host_lookup/entity_role не пострадали) — при подготовке волны build_all_projects_layer.py был случайно запущен поверх живого слоя и чуть не стёр ~8000 строк; откат сделан через git checkout ДО коммита, но перепроверь diff dd15a4f относительно 35c9ba2 на предмет непреднамеренных потерь.
+- python -m unittest discover -s tests -p "test_*.py" — должен быть 267/267 (плюс что у тебя уже накопилось после 10ffab8).
+- scripts/validate_all_projects_layer.py data/all_projects_layer.json — PASS.
+- data/building_dates.json — правки только по 3 ключам (stone пресня/plaza technopark/porta forma), больше ничего не тронуто.
+
+Итог нужен в формате QA_COORDINATION.md/CODEX_AUDIT_REQUEST_2026-08-22.md: CLAIMED → FIXED/RECHECKED по каждому из трёх пунктов, статус AUDIT-011 не трогать без явного решения (там ещё открыт вопрос волны 03 — GBA/GLA для 93 office_project без площади, не начинался).
