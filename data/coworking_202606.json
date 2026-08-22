@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "name": "Ключ Остоженка",
     "network": "Ключ",
@@ -333,13 +333,14 @@
     "network": "Multispace",
     "district": "",
     "bc": "1 шипковский пер. 5",
-    "address": "Ленинградский проспект,36,корп. 8",
+    "address": "1-й Щипковский переулок, 5",
     "vacancy": 78.0,
     "seats": 1244.0,
     "rate": 79300.0,
     "lat": 55.722593,
     "lng": 37.632035,
-    "id": 156
+    "id": 156,
+    "address_fix_source": "AUDIT-005 2026-08-22: адрес был скопирован с Multispace Динамо (Ленинградский просп.,36,корп.8); подтверждён 1-й Щипковский пер., 5 по yandex.ru/maps (55.722593, 37.632035) — https://yandex.ru/maps/213/moscow/house/1_y_shchipkovskiy_pereulok_5/37.631990,55.722532 . См. CODEX_AUDIT_REQUEST_2026-08-22.md AUDIT-005, outputs/coworking_missing_class_qa_2026-08-19.md."
   },
   {
     "name": "Multispace Дубинин",
