@@ -174,11 +174,12 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
 
 
 class TechnicalDuplicateMergeTest(unittest.TestCase):
-    """outputs/unified_codifier_review_decisions_2026-08-18.md: 14 уверенных
-    технических дублей (совпадают канал/девелопер/координата, расхождение
-    только в пунктуации/пустом адресе) объединены через duplicate_of/
-    legacy_ids — записи НЕ удалены. 5 групп из раздела «объединять только
-    после проверки корпуса/площадки» намеренно НЕ трогали."""
+    """Разметка duplicate_of/legacy_ids из решения 2026-08-18.
+
+    Четырнадцать уверенных технических групп имеют одинаковые координаты.
+    AUDIT-008 дополнительно применил мягкую project-связь Manufaqtury:
+    строки и две разные координаты сохранены как building-кандидаты.
+    """
 
     # (canonical_id, [legacy_ids])
     GROUPS = [
@@ -196,6 +197,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         ("proj-68", ["proj-198"]),
         ("proj-75", ["proj-137"]),
         ("proj-78", ["proj-151"]),
+        ("proj-83", ["proj-84", "proj-174"]),
     ]
 
     # Группы из раздела "Уточнение после сопоставления с историческими
@@ -203,7 +205,6 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
     # проверка building/площадки; НЕ объединять до отдельного подтверждения.
     NOT_MERGED_GROUPS = [
         ["proj-27", "proj-76"],
-        ["proj-174", "proj-83", "proj-84"],
         ["proj-193", "proj-69"],
         ["proj-190", "proj-59", "proj-67"],
         ["proj-195", "proj-61", "proj-71"],
@@ -258,7 +259,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
             if r["duplicate_of"]:
                 self.assertIn(r["duplicate_of"], canonical_ids, r["canonical_project_id"])
 
-    def test_five_uncertain_groups_left_unmerged(self):
+    def test_four_remaining_uncertain_groups_left_unmerged(self):
         """Координаты внутри этих групп расходятся на 110-160м или требуют
         проверки building/площадки — duplicate_of должен остаться None,
         legacy_ids пустым у всех участников."""

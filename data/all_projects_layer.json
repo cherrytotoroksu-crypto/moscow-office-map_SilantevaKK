@@ -4479,13 +4479,16 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. AUDIT-008, проверено 2026-08-22: proj-83/proj-84/proj-174 — один flex-проект Manufaqtury в МФК Poklonka Place по адресу Поклонная ул., 3; независимые подтверждения: https://cntez.ru/manufaqtury и https://poklonka-place.com/. Координатные building-кандидаты (55.737258, 37.534514) и (55.736179, 37.533194) сохранены; точки/корпуса не схлопывать без отдельной верификации.",
     "public_visibility": "public",
     "first_seen_at": "202403",
-    "last_verified_at": "2026-07-31",
+    "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [
+      "proj-84",
+      "proj-174"
+    ]
   },
   {
     "canonical_project_id": "proj-84",
@@ -4539,12 +4542,12 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. AUDIT-008, проверено 2026-08-22: один flex-проект с proj-83; независимые подтверждения: https://cntez.ru/manufaqtury и https://poklonka-place.com/. Legacy-ID и исходная координата сохранены как building-кандидат; точки/корпуса не схлопывать без отдельной верификации.",
     "public_visibility": "public",
     "first_seen_at": "202403",
-    "last_verified_at": "2026-07-31",
+    "last_verified_at": "2026-08-22",
     "source_count": 1,
-    "duplicate_of": null,
+    "duplicate_of": "proj-83",
     "legacy_ids": []
   },
   {
@@ -9602,12 +9605,12 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.",
+    "qa_notes": "Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально. offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. AUDIT-008, проверено 2026-08-22: один flex-проект с proj-83; независимые подтверждения: https://cntez.ru/manufaqtury и https://poklonka-place.com/. Legacy-ID и исходная координата сохранены как building-кандидат; точки/корпуса не схлопывать без отдельной верификации.",
     "public_visibility": "public",
     "first_seen_at": "202403",
-    "last_verified_at": "2026-07-31",
+    "last_verified_at": "2026-08-22",
     "source_count": 1,
-    "duplicate_of": null,
+    "duplicate_of": "proj-83",
     "legacy_ids": []
   },
   {

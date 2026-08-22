@@ -272,7 +272,12 @@ DUPLICATE_GROUPS = {
     "proj-68": ["proj-198"],
     "proj-75": ["proj-137"],
     "proj-78": ["proj-151"],
+    # AUDIT-008: один flex-проект в много-корпусном Poklonka Place, но
+    # координатные кандидаты не схлопываются и legacy-строки сохраняются.
+    "proj-83": ["proj-84", "proj-174"],
 }
+
+STRUCTURED_DUPLICATE_GROUPS = {"proj-83"}
 
 
 def convert_row(row, colormap, quarter_presence, warnings):
@@ -383,22 +388,44 @@ def apply_duplicate_groups(records):
                     extra_aliases.append(name)
         if extra_aliases:
             canonical["aliases"] = sorted(set((canonical.get("aliases") or []) + extra_aliases))
-        canonical["qa_notes"] = (
-            canonical["qa_notes"]
-            + f" Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): "
-            f"{', '.join(legacy_ids)} — тот же канал/девелопер/координата, "
-            f"расхождение только в адресе/пунктуации/диапазоне кварталов."
-        ).strip()
+        if canonical_id in STRUCTURED_DUPLICATE_GROUPS:
+            canonical["qa_notes"] = (
+                canonical["qa_notes"]
+                + " AUDIT-008, проверено 2026-08-22: proj-83/proj-84/proj-174 — "
+                "один flex-проект Manufaqtury в МФК Poklonka Place по адресу "
+                "Поклонная ул., 3; независимые подтверждения: "
+                "https://cntez.ru/manufaqtury и https://poklonka-place.com/. "
+                "Координатные building-кандидаты (55.737258, 37.534514) и "
+                "(55.736179, 37.533194) сохранены; точки/корпуса не схлопывать "
+                "без отдельной верификации."
+            ).strip()
+        else:
+            canonical["qa_notes"] = (
+                canonical["qa_notes"]
+                + f" Технический дубль объединён 2026-08-18 (unified_codifier_review_decisions): "
+                f"{', '.join(legacy_ids)} — тот же канал/девелопер/координата, "
+                f"расхождение только в адресе/пунктуации/диапазоне кварталов."
+            ).strip()
 
     for legacy_id, canonical_id in legacy_to_canonical.items():
         legacy = by_id[legacy_id]
         legacy["duplicate_of"] = canonical_id
-        legacy["qa_notes"] = (
-            legacy["qa_notes"]
-            + f" ОБЪЕДИНЕНО 2026-08-18: технический дубль {canonical_id}, "
-            f"см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, "
-            f"не удалена."
-        ).strip()
+        if canonical_id in STRUCTURED_DUPLICATE_GROUPS:
+            legacy["qa_notes"] = (
+                legacy["qa_notes"]
+                + f" AUDIT-008, проверено 2026-08-22: один flex-проект с {canonical_id}; "
+                "независимые подтверждения: https://cntez.ru/manufaqtury и "
+                "https://poklonka-place.com/. Legacy-ID и исходная координата "
+                "сохранены как building-кандидат; точки/корпуса не схлопывать "
+                "без отдельной верификации."
+            ).strip()
+        else:
+            legacy["qa_notes"] = (
+                legacy["qa_notes"]
+                + f" ОБЪЕДИНЕНО 2026-08-18: технический дубль {canonical_id}, "
+                f"см. unified_codifier_review_decisions_2026-08-18.md — запись сохранена, "
+                f"не удалена."
+            ).strip()
 
     return records
 

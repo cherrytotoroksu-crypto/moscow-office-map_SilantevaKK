@@ -172,7 +172,7 @@ RECHECKED`). Все пункты ниже — находки Claude Code за с
 
 ## AUDIT-008 — Manufaqtury Poklonka Place, решение об объединении не применено
 
-- Статус: `OPEN`
+- Статус: `FIXED` (Codex, 2026-08-22)
 - Приоритет: низкий
 - `proj-83` (55.737258, 37.534514), `proj-84`/`proj-174` (оба
   55.736179, 37.533194, ~160 м от `proj-83`). Решение
@@ -185,6 +185,21 @@ RECHECKED`). Все пункты ниже — находки Claude Code за с
 - Просьба к Codex: применить решение (пометить связь между 3 записями
   building-кандидатами, не сливая координаты) или явно задокументировать,
   почему решение не применяется.
+- Применено: `data/all_projects_layer.json` — `proj-84` и `proj-174`
+  помечены `duplicate_of="proj-83"`, у `proj-83` заполнен `legacy_ids`;
+  все три строки и обе исходные координатные точки сохранены.
+- Устойчивость при регенерации: связь добавлена в
+  `scripts/build_all_projects_layer.py::DUPLICATE_GROUPS` с отдельной
+  пометкой structured-группы, чтобы не применять к ней правило
+  «одинаковая координата» обычных технических дублей.
+- Независимые подтверждения, проверены 2026-08-22 и записаны в `qa_notes`:
+  `https://cntez.ru/manufaqtury` (Manufaqtury, БЦ Poklonka Place,
+  Поклонная ул., 3) и `https://poklonka-place.com/` (единый комплекс по
+  адресу Поклонная ул., 3, несколько башен/корпусов).
+- Regression: `tests/test_manufaqtury_poklonka_audit_008.py`; обновлён
+  общий инвариант в `tests/test_all_projects_layer_registry.py`.
+  Полный набор: 221/221 тест зелёный; `git diff --check` — без ошибок.
+- `data/building_dates.json` не менялся.
 
 ## AUDIT-009 — Speace Jet Красная Роза, дедуп не завершён
 
