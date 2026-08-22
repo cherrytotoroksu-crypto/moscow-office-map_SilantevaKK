@@ -84,6 +84,19 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         self.assertEqual(r["project_status"], "Строится")
         self.assertEqual(r["gba"], 57967)
 
+    def test_orbital_and_orbital_2_stay_separate_projects(self):
+        # 2026-08-22: явное требование заказчика — не объединять Orbital
+        # (proj-101, 3-я Магистральная ул., 10, GBA 27271) и Orbital-2
+        # (proj-168, вл. 12, GBA 57967) автоматически. Разные адреса,
+        # разные GBA — оба остаются отдельными записями без duplicate_of
+        # друг на друга.
+        orbital = self.by_id["proj-101"]
+        orbital_2 = self.by_id["proj-168"]
+        self.assertNotEqual(orbital["canonical_project_id"], orbital_2["canonical_project_id"])
+        self.assertNotEqual(orbital["address"], orbital_2["address"])
+        self.assertIsNone(orbital["duplicate_of"])
+        self.assertIsNone(orbital_2["duplicate_of"])
+
     def test_fly_tower_status_and_year_fixed_with_cited_source(self):
         # fortexgroup.ru/bc/fly-tower: "Год постройки: 2025", объект готов.
         r = self.by_id["proj-13"]
