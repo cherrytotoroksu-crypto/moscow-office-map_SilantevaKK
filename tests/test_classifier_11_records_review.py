@@ -1,11 +1,16 @@
 """Regression pins for outputs/classifier_11_records_review_2026-08-19.md.
 
-Separate QA track, not Remain. Data was NOT changed by this review — these
-tests snapshot the current state of the 11 records plus the specific facts
-found during web verification, so a silent edit (e.g. someone "fixing" the
-Пожарная охрана developer without going through the review) shows up as a
-test failure instead of disappearing quietly. Does not touch PRJ
-architecture and does not touch data/building_dates.json.
+Separate QA track, not Remain. Most of the 11 records were NOT changed by
+this review — these tests snapshot their current state plus the specific
+facts found during web verification, so a silent edit (e.g. someone
+"fixing" the Пожарная охрана developer without going through the review)
+shows up as a test failure instead of disappearing quietly. Does not touch
+PRJ architecture (canonical_project_id, merges).
+
+2026-08-22 (second pass): input_year was fixed for 3 of the 11 records
+(proj-72, proj-200, proj-258) with cited sources, and data/building_dates.json
+was updated accordingly — see the "Обновление 2026-08-22 (второй заход)"
+section of the review doc for full evidence.
 """
 import json
 import sys
@@ -54,6 +59,49 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         r = self.by_id["proj-240"]
         self.assertEqual(r["input_year"], 2027)
         self.assertEqual(r["input_quarter"], 4)
+
+    def test_sezar_completion_year_fixed_with_cited_source(self):
+        # 2026-08-22: rusdevelopers.ru ("Срок реализации проекта 2027 год"),
+        # silikatny-13.ru, sezar-group.pvt.ru, novostroy-m.ru — квартал не
+        # уточнён ни одним источником, input_quarter остаётся None.
+        r = self.by_id["proj-72"]
+        self.assertEqual(r["input_year"], 2027)
+        self.assertIsNone(r["input_quarter"])
+        self.assertEqual(r["input_date_kind"], "confirmed")
+        self.assertIn("rusdevelopers.ru", r["qa_notes"])
+
+    def test_stone_khodynka_3_completion_year_conflict_resolved(self):
+        # 2026-08-22: поисковый сниппет stone.ru показывал устаревшее
+        # "2028" в заголовке; прямой WebFetch живой страницы + stonebrokers.ru
+        # + kommersant.ru/doc/8228995 сходятся на 2029. Конфликт разрешён
+        # прямой проверкой содержимого, не сниппета.
+        r = self.by_id["proj-200"]
+        self.assertEqual(r["input_year"], 2029)
+        self.assertIsNone(r["input_quarter"])
+        self.assertEqual(r["input_date_kind"], "confirmed")
+        self.assertIn("kommersant.ru", r["qa_notes"])
+
+    def test_stone_khodynka_4_completion_year_fixed_with_cited_source(self):
+        # 2026-08-22: stone.ru (живой fetch "Готовность 2032 г."),
+        # stonebrokers.ru, anwin.ru — квартал не уточнён, input_quarter
+        # остаётся None.
+        r = self.by_id["proj-258"]
+        self.assertEqual(r["input_year"], 2032)
+        self.assertIsNone(r["input_quarter"])
+        self.assertEqual(r["input_date_kind"], "confirmed")
+        self.assertIn("stone.ru", r["qa_notes"])
+
+    def test_new_date_fixes_did_not_fabricate_a_quarter(self):
+        # Общий инвариант этого захода: там, где источники называют только
+        # год, commission_q в building_dates.json должен остаться None —
+        # scripts/build_all_projects_layer.py:commission_to_input требует
+        # полный YYYYMM, фабриковать месяц/квартал нельзя.
+        bd_path = REPO_ROOT / "data" / "building_dates.json"
+        bd = json.loads(bd_path.read_text(encoding="utf-8-sig"))
+        for key in ("бизнес-центр sezar", "stone ходынка iii", "stone ходынка iv"):
+            self.assertIn(key, bd)
+            self.assertIsNone(bd[key]["commission_q"])
+            self.assertTrue(bd[key]["source"])
 
     def test_stone_khodynka_3_class_matches_official_source(self):
         # stone.ru/commercial/hodinka3: класс Prime
