@@ -2,7 +2,7 @@
   {
     "name": "Ключ Остоженка",
     "network": "Ключ",
-    "district": "",
+    "district": "Центр",
     "bc": "Остоженка",
     "address": "Остоженка, д. 25, стр. 1",
     "vacancy": 200.0,
@@ -15,7 +15,7 @@
   {
     "name": "Ключ Арма",
     "network": "Ключ",
-    "district": "",
+    "district": "Центр",
     "bc": "Арма",
     "address": "Сусальный Нижний пер., 5 стр. 4",
     "vacancy": 218.0,
@@ -28,7 +28,7 @@
   {
     "name": "Ключ Сретенка",
     "network": "Ключ",
-    "district": "",
+    "district": "Центр",
     "bc": "Сретенка",
     "address": "Сретенский бульвар, 5",
     "vacancy": 93.0,
@@ -41,7 +41,7 @@
   {
     "name": "Практик на Пролетарской",
     "network": "Практик",
-    "district": "",
+    "district": "Другое",
     "bc": "ул. Воронцовская, д. 49/28",
     "address": "ул. Воронцовская, д. 49/28",
     "vacancy": 236.0,
@@ -54,7 +54,7 @@
   {
     "name": "Ключ на Кузнецком мосту",
     "network": "Ключ",
-    "district": "",
+    "district": "Центр",
     "bc": "КМ19",
     "address": "Кузнецкий Мост ул., 19",
     "vacancy": 0.0,
@@ -67,7 +67,7 @@
   {
     "name": "Space 1",
     "network": "Space 1",
-    "district": "",
+    "district": "Центр",
     "bc": "Композиторская",
     "address": "Композиторская, 17",
     "vacancy": 119.0,
@@ -80,7 +80,7 @@
   {
     "name": "Meeting point",
     "network": "Meeting point",
-    "district": "",
+    "district": "Другое",
     "bc": "Даниловская Мануфактура",
     "address": "Варшавское шоссе, 9",
     "vacancy": 773.0,
@@ -95,7 +95,7 @@
   {
     "name": "Meeting point",
     "network": "Meeting point",
-    "district": "",
+    "district": "Центр",
     "bc": "Гостиница Москва",
     "address": "Ул. Охотный ряд, д.2",
     "vacancy": 180.0,
@@ -110,7 +110,7 @@
   {
     "name": "Officeless",
     "network": "Officeless",
-    "district": "",
+    "district": "Центр",
     "bc": "Милютинский",
     "address": "Милютинский 13с1",
     "vacancy": 71.0,
@@ -123,7 +123,7 @@
   {
     "name": "Officeless",
     "network": "Officeless",
-    "district": "",
+    "district": "Центр",
     "bc": "Полянка",
     "address": "Малая Полянка, 3",
     "vacancy": 608.0,
@@ -136,7 +136,7 @@
   {
     "name": "Space 1",
     "network": "Space 1",
-    "district": "",
+    "district": "Сити",
     "bc": "Меркурий",
     "address": "1-й Красногвардейский пр-д, 15",
     "vacancy": 0.0,
@@ -149,7 +149,7 @@
   {
     "name": "Space 1",
     "network": "Space 1",
-    "district": "",
+    "district": "Другое",
     "bc": "Фабрика Станиславского",
     "address": "Станиславского 21",
     "vacancy": 230.0,
@@ -162,7 +162,7 @@
   {
     "name": "Space 1",
     "network": "Space 1",
-    "district": "",
+    "district": "Центр",
     "bc": "Арбат",
     "address": "Арбат ул., 10",
     "vacancy": 495.0,
@@ -175,7 +175,7 @@
   {
     "name": "Speace  Jet Аркус",
     "network": "Space 1",
-    "district": "",
+    "district": "Ленинградский",
     "bc": "Аркус 3",
     "address": "Ленинградский проспект 37Ас4",
     "vacancy": 160.0,
@@ -188,7 +188,7 @@
   {
     "name": "Speace  Jet Якиманка",
     "network": "Space 1",
-    "district": "",
+    "district": "Центр",
     "bc": "Большая Якиманка 26",
     "address": "Большая Якиманка 26",
     "vacancy": 0.0,
@@ -201,7 +201,7 @@
   {
     "name": "Speace  Jet Белая площадь",
     "network": "Space 1",
-    "district": "",
+    "district": "Белорусский",
     "bc": "Белая Площадь площадка закрыта",
     "address": "Лесная улица,5,стр. а-в",
     "vacancy": 0.0,
@@ -214,11 +214,11 @@
   {
     "name": "Space Балчуг",
     "network": "Space1",
-    "district": "",
+    "district": "Центр",
     "bc": "Балчуг",
     "address": "Садовническая ул., 9А",
     "vacancy": 50.0,
-    "seats": null,
+    "seats": 1647,
     "rate": 79000.0,
     "lat": 55.747637,
     "lng": 37.6289,
@@ -227,9 +227,9 @@
   {
     "name": "Space Вивальди",
     "network": "Space 1",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Вивальди",
-    "address": "",
+    "address": "ул. Летниковская, 2",
     "vacancy": 41.0,
     "seats": 235.0,
     "rate": 64000.0,
@@ -240,7 +240,7 @@
   {
     "name": "Space  Jet Тимура Фрунзе",
     "network": "Space 1",
-    "district": "",
+    "district": "Центр",
     "bc": "Красная Роза",
     "address": "Тимура Фрунзе, 11с33",
     "vacancy": 181.0,
@@ -253,7 +253,7 @@
   {
     "name": "Refolio Достоевский",
     "network": "Refolio",
-    "district": "",
+    "district": "Другое",
     "bc": "Refolio Достоевский",
     "address": "Институтский пер., 2",
     "vacancy": 600.0,
@@ -266,7 +266,7 @@
   {
     "name": "СODE Якиманка",
     "network": "СODE",
-    "district": "",
+    "district": "Центр",
     "bc": "Кадашевская наб., 6",
     "address": "Кадашевская наб 8",
     "vacancy": 0.0,
@@ -279,7 +279,7 @@
   {
     "name": "СODE Савеловская",
     "network": "СODE",
-    "district": "",
+    "district": "Другое",
     "bc": "МФК Савеловский сити",
     "address": "Новодмитровская улица,2,корп. 2",
     "vacancy": 0.0,
@@ -292,7 +292,7 @@
   {
     "name": "СODE Novo",
     "network": "СODE",
-    "district": "",
+    "district": "Другое",
     "bc": "Долгоруковская 21",
     "address": "Долгоруковская 21",
     "vacancy": 0.0,
@@ -305,7 +305,7 @@
   {
     "name": "СODE Delegat",
     "network": "СODE",
-    "district": "",
+    "district": "Другое",
     "bc": "1-й Щемиловский 16с2",
     "address": "1-й Щемиловский 16с2",
     "vacancy": 600.0,
@@ -318,7 +318,7 @@
   {
     "name": "Multispace Динамо",
     "network": "Multispace",
-    "district": "",
+    "district": "Ленинградский",
     "bc": "ВТБ Арена стр 8",
     "address": "Ленинградский проспект,36,корп. 8",
     "vacancy": 310.0,
@@ -331,7 +331,7 @@
   {
     "name": "Multispace Павелецкая",
     "network": "Multispace",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "1 шипковский пер. 5",
     "address": "1-й Щипковский переулок, 5",
     "vacancy": 78.0,
@@ -345,11 +345,11 @@
   {
     "name": "Multispace Дубинин",
     "network": "Multispace",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Дубинин Скай",
-    "address": "",
+    "address": "ул. Дубининская, вл. 39–41",
     "vacancy": 650.0,
-    "seats": null,
+    "seats": 600,
     "rate": null,
     "lat": 55.759684,
     "lng": 37.575073,
@@ -358,11 +358,11 @@
   {
     "name": "Multispace Актер",
     "network": "Multispace",
-    "district": "",
+    "district": "Центр",
     "bc": "Галерея Актер",
     "address": "Тверская ул., 16, стр. 1",
     "vacancy": 420.0,
-    "seats": null,
+    "seats": 360,
     "rate": 75000.0,
     "lat": 55.764551,
     "lng": 37.606406,
@@ -371,9 +371,9 @@
   {
     "name": "Газетный",
     "network": "BusinessClub",
-    "district": "",
+    "district": "Центр",
     "bc": "Газетный 17",
-    "address": "",
+    "address": "Газетный пер., 17",
     "vacancy": 124.0,
     "seats": 1067.0,
     "rate": 62220.0,
@@ -384,7 +384,7 @@
   {
     "name": "SOK Арена Парк 2",
     "network": "SOK",
-    "district": "",
+    "district": "Ленинградский",
     "bc": "SOK Арена Парк",
     "address": "Ленинградский пр-т, вл. 36 ср.10",
     "vacancy": 926.0,
@@ -397,7 +397,7 @@
   {
     "name": "SOK Арена Парк (Рыбаков Тауэр)",
     "network": "SOK",
-    "district": "",
+    "district": "Ленинградский",
     "bc": "SOK Рыбаков Тауэр",
     "address": "Ленинградский пр-т, вл. 36 стр. 11",
     "vacancy": 53.0,
@@ -410,7 +410,7 @@
   {
     "name": "SOK Земляной Вал",
     "network": "SOK",
-    "district": "",
+    "district": "Центр",
     "bc": "SOK Земляной Вал",
     "address": "Земляной Вал ул., 8",
     "vacancy": 186.5,
@@ -423,7 +423,7 @@
   {
     "name": "SOK Сады Пекина",
     "network": "SOK",
-    "district": "",
+    "district": "Центр",
     "bc": "SOK Сады Пекина",
     "address": "Садовая Большая ул., 5 корп. 1-2",
     "vacancy": 289.0,
@@ -436,7 +436,7 @@
   {
     "name": "SOK Сити (3 и 4 этаж)",
     "network": "SOK",
-    "district": "",
+    "district": "Сити",
     "bc": "SOK Сити (3 и 4 этаж)",
     "address": "Пресненская наб., 12",
     "vacancy": 506.0,
@@ -449,7 +449,7 @@
   {
     "name": "Manufaqtury Поклонка",
     "network": "Manufaqtury",
-    "district": "",
+    "district": "Другое",
     "bc": "Poklonka Place",
     "address": "г. Москва, ул. Поклонная, д. 3, корп.",
     "vacancy": 350.0,
@@ -462,9 +462,9 @@
   {
     "name": "AFI GAllery",
     "network": "AFI",
-    "district": "",
-    "bc": "",
-    "address": "",
+    "district": "Белорусский",
+    "bc": "AFI Gallery",
+    "address": "пл. Тверская Застава, 3",
     "vacancy": 92.0,
     "seats": 1200.0,
     "rate": 87840.0,
@@ -475,7 +475,7 @@
   {
     "name": "Deworkacy Савинский",
     "network": "Deworkacy",
-    "district": "",
+    "district": "Другое",
     "bc": "Deworkacy Савинский",
     "address": "Саввинский 8 стр.1",
     "vacancy": 0.0,
@@ -488,7 +488,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Сити",
     "bc": "Империя",
     "address": "Пресненская набережная, 6с2",
     "vacancy": 68.0,
@@ -501,7 +501,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Центр",
     "bc": "Никольская",
     "address": "Ветошный пер. 13",
     "vacancy": 185.0,
@@ -514,7 +514,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Сити",
     "bc": "Федерация (Сити)",
     "address": "Пресненская наб. 12, башня Федерация, 18 этаж",
     "vacancy": 0.0,
@@ -527,7 +527,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Другое",
     "bc": "Новосущевский",
     "address": "Сущевский вал 18",
     "vacancy": 115.0,
@@ -540,7 +540,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Центр",
     "bc": "Цветной бульвар",
     "address": "Цветной бульвар, 30с1",
     "vacancy": 0.0,
@@ -553,7 +553,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Другое",
     "bc": "Останкино",
     "address": "Огородный проезд, вл 16 стр.4",
     "vacancy": 35.0,
@@ -566,7 +566,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Белорусский",
     "bc": "Бригантина",
     "address": "Новолесная, 2",
     "vacancy": 0.0,
@@ -579,7 +579,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Другое",
     "bc": "Технопарк",
     "address": "Проспект Андровпова 10",
     "vacancy": 80.0,
@@ -592,7 +592,7 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Белорусский",
     "bc": "Новослободская",
     "address": "Новослободская улица 16",
     "vacancy": 124.0,
@@ -605,12 +605,12 @@
   {
     "name": "Apollax Space",
     "network": "Apollax Space",
-    "district": "",
+    "district": "Центр",
     "bc": "Кузнецкий Мост",
     "address": "Кузнецкий мост 13",
-    "vacancy": null,
-    "seats": null,
-    "rate": null,
+    "vacancy": 557,
+    "seats": 557,
+    "rate": 72500,
     "lat": 55.761913,
     "lng": 37.621507,
     "id": 198
@@ -618,7 +618,7 @@
   {
     "name": "Workki Зубовский",
     "network": "Workki",
-    "district": "",
+    "district": "Центр",
     "bc": "Зубовский 17",
     "address": "Зубовский б-р 17 стр.1",
     "vacancy": 329.0,
@@ -631,7 +631,7 @@
   {
     "name": "Workki Сити",
     "network": "Workki",
-    "district": "",
+    "district": "Сити",
     "bc": "Федерация (Сити)",
     "address": "Пресненская наб. 12, башня Федерация, 18 этаж",
     "vacancy": 371.0,
@@ -644,7 +644,7 @@
   {
     "name": "Workki Нео Гео",
     "network": "Workki",
-    "district": "",
+    "district": "Другое",
     "bc": "Нео Гео",
     "address": "ул. Бутлерова 17",
     "vacancy": 415.0,
@@ -657,7 +657,7 @@
   {
     "name": "Workki ФОК",
     "network": "Workki",
-    "district": "",
+    "district": "Другое",
     "bc": "ФОК",
     "address": "Новорязанская, д.8А",
     "vacancy": 0.0,
@@ -670,7 +670,7 @@
   {
     "name": "Workki Комсомольская",
     "network": "Workki",
-    "district": "",
+    "district": "Другое",
     "bc": "Workki Комсомольская",
     "address": "Новорязанская, д.8",
     "vacancy": 164.0,
@@ -683,7 +683,7 @@
   {
     "name": "Workki Тульский",
     "network": "Workki",
-    "district": "",
+    "district": "Другое",
     "bc": "На Тульской",
     "address": "Б. Тульская стр.19",
     "vacancy": 396.0,
@@ -696,7 +696,7 @@
   {
     "name": "F2",
     "network": "F2",
-    "district": "",
+    "district": "Другое",
     "bc": "DM Tower",
     "address": "Новоданиловская наб. 10",
     "vacancy": 0.0,
@@ -711,7 +711,7 @@
   {
     "name": "Рабочая Станция (Парк Горького)",
     "network": "Рабочая Станция",
-    "district": "",
+    "district": "Другое",
     "bc": "Парк Горького",
     "address": "Ленинский пр-т 30А",
     "vacancy": 0.0,
@@ -726,7 +726,7 @@
   {
     "name": "Регус (Гринвуд)",
     "network": "Регус",
-    "district": "",
+    "district": "Другое",
     "bc": "Гринвуд",
     "address": "72 км МКАД, п/о Путилково, строение 19",
     "vacancy": 0.0,
@@ -739,7 +739,7 @@
   {
     "name": "Smart Yard (на Басманной)",
     "network": "Smart Yard",
-    "district": "",
+    "district": "Другое",
     "bc": "на Басманной",
     "address": "Спартаковская площадь, 16/15с6",
     "vacancy": 177.0,
@@ -754,9 +754,9 @@
   {
     "name": "Регус (Пр. Мира, 40)",
     "network": "Регус",
-    "district": "",
+    "district": "Другое",
     "bc": "Проспект Мира, 40",
-    "address": "",
+    "address": "Мира пр-т, 40",
     "vacancy": 22.0,
     "seats": 200.0,
     "rate": 54800.0,
@@ -767,7 +767,7 @@
   {
     "name": "Регус (Капитолий)",
     "network": "Регус",
-    "district": "",
+    "district": "Другое",
     "bc": "Капитолий Вернадского",
     "address": "Вернадского проспект,6",
     "vacancy": 22.0,
@@ -782,7 +782,7 @@
   {
     "name": "Регус (Ситидел)",
     "network": "Регус",
-    "district": "",
+    "district": "Центр",
     "bc": "Citydel",
     "address": "ул. Земляной Вал, 9",
     "vacancy": 65.0,
@@ -795,7 +795,7 @@
   {
     "name": "Регус (Авион)",
     "network": "Регус",
-    "district": "",
+    "district": "Ленинградский",
     "bc": "Авион",
     "address": "Ленинградский проспект,47",
     "vacancy": 56.0,
@@ -808,7 +808,7 @@
   {
     "name": "F2 - Федерация",
     "network": "F2",
-    "district": "",
+    "district": "Сити",
     "bc": "Федерация (Сити)",
     "address": "Пресненская набережная, 12",
     "vacancy": 175.0,
@@ -821,7 +821,7 @@
   {
     "name": "Регус (Лесная Плаза)",
     "network": "Регус",
-    "district": "",
+    "district": "Белорусский",
     "bc": "White Stone",
     "address": "4-й Лесной пер., 4",
     "vacancy": 103.0,
@@ -834,7 +834,7 @@
   {
     "name": "Коворкинг СОЛЬ",
     "network": "СОЛЬ",
-    "district": "",
+    "district": "Другое",
     "bc": "Ролл Холл",
     "address": "Холодильный пер. 3",
     "vacancy": 140.0,
@@ -847,7 +847,7 @@
   {
     "name": "KW Балчуг",
     "network": "Know Where",
-    "district": "",
+    "district": "Центр",
     "bc": "Балчуг",
     "address": "Садовническая наб., 9",
     "vacancy": 188.0,
@@ -860,7 +860,7 @@
   {
     "name": "KW Павелецкая",
     "network": "Know Where",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Black&White",
     "address": "Кожевническая ул. 14",
     "vacancy": 0.0,
@@ -875,7 +875,7 @@
   {
     "name": "KW Симонов",
     "network": "Know Where",
-    "district": "",
+    "district": "Другое",
     "bc": "Симонов",
     "address": "улица Ленинская Слобода, 26с5",
     "vacancy": 360.0,
@@ -888,7 +888,7 @@
   {
     "name": "F2",
     "network": "F2",
-    "district": "",
+    "district": "Другое",
     "bc": "Фили Град",
     "address": "Береговой проезд, 5Ак1",
     "vacancy": 240.0,
@@ -901,9 +901,9 @@
   {
     "name": "Signature Столешников",
     "network": "Signature (Регус)",
-    "district": "",
+    "district": "Центр",
     "bc": "Signature Столешников, 11",
-    "address": "",
+    "address": "Столешников пер., 11",
     "vacancy": 249.0,
     "seats": 400.0,
     "rate": 95000.0,
@@ -914,12 +914,12 @@
   {
     "name": "Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Риверсайд Тауэрс",
     "address": "Космадамианская наб., 52",
     "vacancy": 0.0,
     "seats": 0.0,
-    "rate": null,
+    "rate": 54000,
     "lat": 55.732063,
     "lng": 37.647244,
     "id": 243
@@ -927,12 +927,12 @@
   {
     "name": "Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Центр",
     "bc": "Садовая Плаза",
     "address": "Долгоруковская ул. 7",
     "vacancy": 0.0,
     "seats": 950.0,
-    "rate": null,
+    "rate": 58800,
     "lat": 55.773849,
     "lng": 37.603541,
     "id": 246
@@ -940,7 +940,7 @@
   {
     "name": "Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Центр",
     "bc": "Овчинниковский",
     "address": "Овчинниковская наб., 18",
     "vacancy": 0.0,
@@ -953,7 +953,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Павелецкая Плаза (А)",
     "address": "Павелецкая площадь, 2с1",
     "vacancy": 241.0,
@@ -968,7 +968,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Павелецкая Плаза (В)",
     "address": "Павелецкая площадь, 2",
     "vacancy": 111.0,
@@ -981,7 +981,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Павелецкая Плаза (В)",
     "address": "Павелецкая площадь, 2",
     "vacancy": 83.0,
@@ -994,7 +994,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Павелецкая Плаза (В)",
     "address": "Павелецкая площадь, 2",
     "vacancy": 66.0,
@@ -1007,7 +1007,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Павелецкий",
     "bc": "Павелецкая Плаза (В)",
     "address": "Павелецкая площадь, 2",
     "vacancy": 197.0,
@@ -1020,7 +1020,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Сити",
     "bc": "Башня на набережной (В)",
     "address": "Пресненская наб., 10",
     "vacancy": 166.0,
@@ -1033,7 +1033,7 @@
   {
     "name": "Flexity SOLO/Flexity",
     "network": "Flexity",
-    "district": "",
+    "district": "Сити",
     "bc": "Башня на набережной (В)",
     "address": "Пресненская наб., 10",
     "vacancy": 82.0,
