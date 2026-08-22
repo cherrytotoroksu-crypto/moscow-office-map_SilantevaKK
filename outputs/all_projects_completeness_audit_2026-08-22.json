@@ -14085,18 +14085,17 @@
     "gla": {
       "applicable": 222,
       "not_applicable": 116,
-      "present": 113,
-      "missing": 109,
-      "coverage_pct": 50.9,
+      "present": 114,
+      "missing": 108,
+      "coverage_pct": 51.4,
       "missing_by_source": {
-        "classifier.html": 16,
+        "classifier.html": 15,
         "coworking_host_lookup": 93
       },
       "missing_by_channel": {
-        "coworking": 1,
         "no_market_channel": 93,
         "rent": 6,
-        "sale": 16
+        "sale": 15
       }
     },
     "construction_start_year": {
@@ -14364,7 +14363,6 @@
         "canonical_name": "Plaza Technopark",
         "entity_role": "office_project",
         "issues": [
-          "gla is required for entity_role=office_project",
           "construction_start_year is required for entity_role=office_project",
           "sales_start_year is required for entity_role=office_project"
         ]

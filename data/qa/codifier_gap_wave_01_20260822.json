@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-08-22",
+  "wave": 1,
+  "applied": [
+    {
+      "canonical_project_id": "proj-1",
+      "canonical_name": "STONE Пресня",
+      "address": "г. Москва, Ходынская ул., вл. 2, стр. 9",
+      "before": {
+        "gba": 15000,
+        "gla": 15000
+      },
+      "after": {
+        "gba": 16277,
+        "gla": 13338
+      },
+      "sources": [
+        "https://ibcrealestate.ru/catalog/T96_13282/",
+        "https://of.ru/bc/12524"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-85",
+      "canonical_name": "Plaza Technopark",
+      "address": "г. Москва, Даниловский р-н, Андропова пр-кт, влд 10",
+      "before": {
+        "gba": 24700,
+        "gla": null
+      },
+      "after": {
+        "gba": 32138,
+        "gla": 23358
+      },
+      "sources": [
+        "https://www.plazatechnopark.ru/",
+        "https://morrowgroup.ru/biznescentr/plaza-technopark/"
+      ]
+    }
+  ],
+  "deferred_conflicts": [
+    {
+      "canonical_project_id": "proj-1/proj-85/proj-86",
+      "canonical_name": "STONE Пресня / Plaza Technopark / Porta Forma lifecycle dates",
+      "reason": "Verified date changes are prepared but data/building_dates.json requires separate explicit permission."
+    },
+    {
+      "canonical_project_id": "proj-13",
+      "canonical_name": "Fly Tower",
+      "reason": "Sources describe incompatible historical/current concepts and areas (30000, 52200, 74000 m2)."
+    },
+    {
+      "canonical_project_id": "proj-87",
+      "canonical_name": "Slava",
+      "reason": "Sources mix residential phases, SLAVA 4 office cluster and a separate marketed office building."
+    },
+    {
+      "canonical_project_id": "proj-95",
+      "canonical_name": "Алкон 3",
+      "reason": "Exact-address sources conflict on GBA (24321, 35865 and existing 53104 m2)."
+    }
+  ]
+}
