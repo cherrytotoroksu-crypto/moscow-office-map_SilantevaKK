@@ -1,0 +1,5770 @@
+{
+  "generated_at": "2026-08-18",
+  "read_only": true,
+  "source_file_count": 60,
+  "source_name_counts": {
+    "buildings_202105.json": 15,
+    "buildings_202112.json": 13,
+    "buildings_202207.json": 14,
+    "buildings_202212.json": 22,
+    "buildings_202305.json": 25,
+    "buildings_202308.json": 26,
+    "buildings_202311.json": 26,
+    "buildings_202403.json": 26,
+    "buildings_202407.json": 37,
+    "buildings_202410.json": 50,
+    "buildings_202412.json": 50,
+    "buildings_202503.json": 61,
+    "buildings_202506.json": 71,
+    "buildings_202509.json": 85,
+    "buildings_202512.json": 101,
+    "buildings_202603.json": 112,
+    "buildings_202606.json": 101,
+    "coworking_202403.json": 70,
+    "coworking_202407.json": 70,
+    "coworking_202410.json": 71,
+    "coworking_202412.json": 71,
+    "coworking_202503.json": 77,
+    "coworking_202506.json": 78,
+    "coworking_202509.json": 69,
+    "coworking_202512.json": 83,
+    "coworking_202603.json": 82,
+    "coworking_202606.json": 79,
+    "lots_202105.json": 14,
+    "lots_202112.json": 13,
+    "lots_202207.json": 16,
+    "lots_202212.json": 23,
+    "lots_202305.json": 25,
+    "lots_202308.json": 26,
+    "lots_202311.json": 26,
+    "lots_202403.json": 35,
+    "lots_202407.json": 0,
+    "lots_202410.json": 39,
+    "lots_202412.json": 39,
+    "lots_202503.json": 50,
+    "lots_202506.json": 60,
+    "lots_202509.json": 64,
+    "lots_202512.json": 79,
+    "lots_202603.json": 92,
+    "lots_202606.json": 98,
+    "rent_lots_202105.json": 5,
+    "rent_lots_202112.json": 8,
+    "rent_lots_202207.json": 7,
+    "rent_lots_202212.json": 8,
+    "rent_lots_202305.json": 8,
+    "rent_lots_202308.json": 7,
+    "rent_lots_202311.json": 5,
+    "rent_lots_202403.json": 6,
+    "rent_lots_202407.json": 8,
+    "rent_lots_202412.json": 13,
+    "rent_lots_202503.json": 12,
+    "rent_lots_202506.json": 13,
+    "rent_lots_202509.json": 11,
+    "rent_lots_202512.json": 13,
+    "rent_lots_202603.json": 10,
+    "rent_lots_202606.json": 21
+  },
+  "exact_cross_source_matches": [
+    {
+      "normalized": "a",
+      "names": [
+        "A"
+      ],
+      "sources": [
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json"
+      ]
+    },
+    {
+      "normalized": "afi gallery",
+      "names": [
+        "AFI GAllery"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "afi парк воронцовский",
+      "names": [
+        "AFI Парк Воронцовский"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "afi2b tagilskaya",
+      "names": [
+        "AFI2B Tagilskaya"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202512.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "ahead",
+      "names": [
+        "Ahead"
+      ],
+      "sources": [
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "air",
+      "names": [
+        "Air"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "apollax space",
+      "names": [
+        "Apollax Space"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "apollax технопарк",
+      "names": [
+        "Apollax Технопарк"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "aspace хорошевская",
+      "names": [
+        "ASPACE Хорошевская"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "aurus",
+      "names": [
+        "Aurus"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "avium",
+      "names": [
+        "Avium"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "b",
+      "names": [
+        "B",
+        "B+"
+      ],
+      "sources": [
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json"
+      ]
+    },
+    {
+      "normalized": "bell",
+      "names": [
+        "Bell"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "chalet пятницкая 40",
+      "names": [
+        "CHALET Пятницкая 40"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "cityzen",
+      "names": [
+        "Cityzen"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "deworkacy савинский",
+      "names": [
+        "Deworkacy Савинский"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "dius",
+      "names": [
+        "DIUS"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "dream riva",
+      "names": [
+        "Dream Riva"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "rent_lots_202506.json",
+        "rent_lots_202512.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "edel",
+      "names": [
+        "Edel"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "emotion",
+      "names": [
+        "Emotion"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "f2",
+      "names": [
+        "F2"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "f2 федерация",
+      "names": [
+        "F2 - Федерация"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "fili centre",
+      "names": [
+        "Fili Centre"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "fili residence",
+      "names": [
+        "Fili residence"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "flexity",
+      "names": [
+        "Flexity"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "flexity solo flexity",
+      "names": [
+        "Flexity SOLO/Flexity"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "fly tower",
+      "names": [
+        "Fly Tower"
+      ],
+      "sources": [
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "lots_202207.json"
+      ]
+    },
+    {
+      "normalized": "frame",
+      "names": [
+        "Frame"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "geolog 2",
+      "names": [
+        "Geolog 2"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "grow up",
+      "names": [
+        "Grow up"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "icity space",
+      "names": [
+        "iCITY (Space)"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202105.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json",
+        "rent_lots_202311.json",
+        "rent_lots_202403.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "jenga",
+      "names": [
+        "Jenga"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "jois",
+      "names": [
+        "Jois"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "k city",
+      "names": [
+        "K-city"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "korp молодежная",
+      "names": [
+        "KORP. Молодежная"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "kw балчуг",
+      "names": [
+        "KW Балчуг"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "kw павелецкая",
+      "names": [
+        "KW Павелецкая"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "kw симонов",
+      "names": [
+        "KW Симонов"
+      ],
+      "sources": [
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "lakes",
+      "names": [
+        "Lakes"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json"
+      ]
+    },
+    {
+      "normalized": "lakes 2",
+      "names": [
+        "Lakes 2"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "lavin",
+      "names": [
+        "Lavin"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "level воронцовская",
+      "names": [
+        "Level Воронцовская"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "level нижегородская",
+      "names": [
+        "Level Нижегородская"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "level южнопортовая",
+      "names": [
+        "Level Южнопортовая"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "light city",
+      "names": [
+        "Light City"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "likova",
+      "names": [
+        "LIKOVA"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "link",
+      "names": [
+        "Link"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "lunar",
+      "names": [
+        "Lunar"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json"
+      ]
+    },
+    {
+      "normalized": "lunar модуль в",
+      "names": [
+        "Lunar модуль В"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json"
+      ]
+    },
+    {
+      "normalized": "manufaqtury поклонка",
+      "names": [
+        "Manufaqtury Поклонка"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "meeting point",
+      "names": [
+        "Meeting point"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "mind",
+      "names": [
+        "Mind"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "mount",
+      "names": [
+        "Mount"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "multispace porta",
+      "names": [
+        "Multispace Porta"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json"
+      ]
+    },
+    {
+      "normalized": "multispace актер",
+      "names": [
+        "Multispace Актер"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "multispace галерея актер",
+      "names": [
+        "Multispace Галерея Актер"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "multispace динамо",
+      "names": [
+        "Multispace Динамо"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "multispace дубинин",
+      "names": [
+        "Multispace Дубинин"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "multispace павелецкая",
+      "names": [
+        "Multispace Павелецкая"
+      ],
+      "sources": [
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "nevsky plaza",
+      "names": [
+        "Nevsky Plaza"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "noon",
+      "names": [
+        "NOON"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "officeless",
+      "names": [
+        "Officeless"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "omni tower",
+      "names": [
+        "Omni Tower"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "one tower",
+      "names": [
+        "One Tower"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "opus",
+      "names": [
+        "Opus"
+      ],
+      "sources": [
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "orbital",
+      "names": [
+        "Orbital"
+      ],
+      "sources": [
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202305.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json"
+      ]
+    },
+    {
+      "normalized": "orbital 2",
+      "names": [
+        "Orbital-2"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "plaza botanica",
+      "names": [
+        "Plaza Botanica"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "plaza technopark",
+      "names": [
+        "Plaza Technopark"
+      ],
+      "sources": [
+        "buildings_202112.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202112.json",
+        "lots_202212.json"
+      ]
+    },
+    {
+      "normalized": "porta forma",
+      "names": [
+        "Porta Forma"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202308.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json"
+      ]
+    },
+    {
+      "normalized": "qoob",
+      "names": [
+        "QOOB"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "rail a",
+      "names": [
+        "Rail.A"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "river park коломенское",
+      "names": [
+        "River Park Коломенское"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "set",
+      "names": [
+        "Set"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "sezar tower",
+      "names": [
+        "SEZAR TOWER"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "signature столешников",
+      "names": [
+        "Signature Столешников"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "slava",
+      "names": [
+        "Slava"
+      ],
+      "sources": [
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json"
+      ]
+    },
+    {
+      "normalized": "smart yard на басманной",
+      "names": [
+        "Smart Yard (на Басманной)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "smart yard на волгоградском",
+      "names": [
+        "Smart Yard (на Волгоградском)"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "sok",
+      "names": [
+        "SOK"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "sok арена парк 2",
+      "names": [
+        "SOK Арена Парк 2"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "sok арена парк рыбаков тауэр",
+      "names": [
+        "SOK Арена Парк (Рыбаков Тауэр)"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "sok земляной вал",
+      "names": [
+        "SOK Земляной Вал"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "sok сады пекина",
+      "names": [
+        "SOK Сады Пекина"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "sok сити 3 и 4 этаж",
+      "names": [
+        "SOK Сити (3 и 4 этаж)"
+      ],
+      "sources": [
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "solo",
+      "names": [
+        "Solo"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "space 1",
+      "names": [
+        "Space 1"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "space балчуг",
+      "names": [
+        "Space Балчуг"
+      ],
+      "sources": [
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "space вивальди",
+      "names": [
+        "Space Вивальди"
+      ],
+      "sources": [
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "speace jet аркус",
+      "names": [
+        "Speace  Jet Аркус",
+        "Speace Jet Аркус"
+      ],
+      "sources": [
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "speace jet белая площадь",
+      "names": [
+        "Speace  Jet Белая площадь",
+        "Speace Jet Белая площадь"
+      ],
+      "sources": [
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "speace jet тимура фрунзе",
+      "names": [
+        "Speace  Jet Тимура Фрунзе",
+        "Speace Jet Тимура Фрунзе"
+      ],
+      "sources": [
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json"
+      ]
+    },
+    {
+      "normalized": "speace jet якиманка",
+      "names": [
+        "Speace  Jet Якиманка",
+        "Speace Jet Якиманка"
+      ],
+      "sources": [
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone towers",
+      "names": [
+        "STONE Towers"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "rent_lots_202105.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json",
+        "rent_lots_202311.json",
+        "rent_lots_202403.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json"
+      ]
+    },
+    {
+      "normalized": "stone towers tower a",
+      "names": [
+        "STONE Towers. Tower A"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json"
+      ]
+    },
+    {
+      "normalized": "stone towers tower d",
+      "names": [
+        "STONE Towers. Tower D"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json"
+      ]
+    },
+    {
+      "normalized": "stone towers towers bc",
+      "names": [
+        "STONE Towers. Towers BC"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json"
+      ]
+    },
+    {
+      "normalized": "stone белорусская",
+      "names": [
+        "STONE Белорусская"
+      ],
+      "sources": [
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202311.json",
+        "rent_lots_202503.json"
+      ]
+    },
+    {
+      "normalized": "stone дмитровская",
+      "names": [
+        "STONE Дмитровская"
+      ],
+      "sources": [
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone калужская",
+      "names": [
+        "STONE Калужская"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone курская",
+      "names": [
+        "STONE Курская"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone ленинский",
+      "names": [
+        "STONE Ленинский"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202403.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone мневники i",
+      "names": [
+        "STONE Мневники I"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone мневники ii",
+      "names": [
+        "STONE Мневники II"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone мневники iii",
+      "names": [
+        "STONE Мневники III"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone пресня",
+      "names": [
+        "STONE Пресня"
+      ],
+      "sources": [
+        "buildings_202212.json",
+        "lots_202207.json"
+      ]
+    },
+    {
+      "normalized": "stone римская",
+      "names": [
+        "STONE Римская"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone савеловская",
+      "names": [
+        "STONE Савеловская"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json",
+        "rent_lots_202311.json",
+        "rent_lots_202403.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone ходынка i",
+      "names": [
+        "STONE Ходынка I"
+      ],
+      "sources": [
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone ходынка ii",
+      "names": [
+        "STONE Ходынка II"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone ходынка iii",
+      "names": [
+        "STONE Ходынка III"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "stone ходынка iv",
+      "names": [
+        "STONE Ходынка IV"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "taller",
+      "names": [
+        "Taller"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "top tower",
+      "names": [
+        "Top Tower"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "twist",
+      "names": [
+        "Twist"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "upside tech сколково",
+      "names": [
+        "Upside Tech Сколково"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "upside кунцево",
+      "names": [
+        "Upside Кунцево"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "upside останкино",
+      "names": [
+        "Upside Останкино"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "upside ямская",
+      "names": [
+        "Upside Ямская"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "valtri",
+      "names": [
+        "Valtri"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "west pier",
+      "names": [
+        "West Pier"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "wework аркус",
+      "names": [
+        "WeWork Аркус"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "wework белая площадь",
+      "names": [
+        "WeWork Белая площадь"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "wework роза",
+      "names": [
+        "WeWork Роза"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "wework якиманка",
+      "names": [
+        "WeWork Якиманка"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "workki зубовский",
+      "names": [
+        "Workki Зубовский"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "workki комсомольская",
+      "names": [
+        "Workki Комсомольская"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "workki нео гео",
+      "names": [
+        "Workki Нео Гео"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "workki сити",
+      "names": [
+        "Workki Сити"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "workki тульский",
+      "names": [
+        "Workki Тульский"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "workki фок",
+      "names": [
+        "Workki ФОК"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "а101 прокшино",
+      "names": [
+        "А101 Прокшино"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "алкон 3",
+      "names": [
+        "Алкон 3"
+      ],
+      "sources": [
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202212.json"
+      ]
+    },
+    {
+      "normalized": "атмосфера известия",
+      "names": [
+        "Атмосфера (Известия)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "атмосфера квартал вэст",
+      "names": [
+        "Атмосфера (Квартал Вэст)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "атмосфера рио на ленинском",
+      "names": [
+        "Атмосфера (РИО на Ленинском)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json"
+      ]
+    },
+    {
+      "normalized": "бадаевский восточная",
+      "names": [
+        "Бадаевский Восточная"
+      ],
+      "sources": [
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json"
+      ]
+    },
+    {
+      "normalized": "бадаевский восточная лента",
+      "names": [
+        "Бадаевский Восточная лента"
+      ],
+      "sources": [
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "бадаевский западная",
+      "names": [
+        "Бадаевский Западная"
+      ],
+      "sources": [
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json"
+      ]
+    },
+    {
+      "normalized": "бадаевский западная лента",
+      "names": [
+        "Бадаевский Западная лента"
+      ],
+      "sources": [
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "балчуг плаза kw",
+      "names": [
+        "Балчуг Плаза - KW"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json"
+      ]
+    },
+    {
+      "normalized": "башня власов",
+      "names": [
+        "Башня Власов"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json"
+      ]
+    },
+    {
+      "normalized": "башня рябов",
+      "names": [
+        "Башня Рябов"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "берников",
+      "names": [
+        "Берников"
+      ],
+      "sources": [
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "rent_lots_202412.json"
+      ]
+    },
+    {
+      "normalized": "бизнес парк переделкино",
+      "names": [
+        "Бизнес-парк Переделкино"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "бизнес парк раменки бывший огни",
+      "names": [
+        "Бизнес-парк Раменки (бывший — Огни)"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "бизнес хаб потапово",
+      "names": [
+        "Бизнес-хаб Потапово"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "бизнес центр sezar",
+      "names": [
+        "Бизнес-центр SEZAR"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "lots_202509.json",
+        "lots_202512.json"
+      ]
+    },
+    {
+      "normalized": "бц twist",
+      "names": [
+        "БЦ Twist"
+      ],
+      "sources": [
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json"
+      ]
+    },
+    {
+      "normalized": "бц варшавская",
+      "names": [
+        "БЦ Варшавская"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "бц мещерский",
+      "names": [
+        "БЦ Мещерский"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "lots_202506.json"
+      ]
+    },
+    {
+      "normalized": "бц на ул эдварда грига",
+      "names": [
+        "БЦ на ул. Эдварда Грига"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "бц серебряный фонтан",
+      "names": [
+        "БЦ Серебряный Фонтан"
+      ],
+      "sources": [
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202410.json",
+        "lots_202412.json"
+      ]
+    },
+    {
+      "normalized": "бц сколково",
+      "names": [
+        "БЦ Сколково"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "lots_202403.json"
+      ]
+    },
+    {
+      "normalized": "бц сколковский",
+      "names": [
+        "БЦ Сколковский"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "варст",
+      "names": [
+        "ВАРСТ"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "газетный",
+      "names": [
+        "Газетный"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "деловой дуэт",
+      "names": [
+        "Деловой дуэт"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202606.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "дом правды",
+      "names": [
+        "Дом Правды"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "звенигородская от гранель",
+      "names": [
+        "Звенигородская от Гранель"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "квартал lucky",
+      "names": [
+        "Квартал Lucky"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "rent_lots_202105.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "ключ арма",
+      "names": [
+        "Ключ Арма"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "ключ на кузнецком мосту",
+      "names": [
+        "Ключ на Кузнецком мосту"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "ключ остоженка",
+      "names": [
+        "Ключ Остоженка"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "ключ сретенка",
+      "names": [
+        "Ключ Сретенка"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "коворкинг соль",
+      "names": [
+        "Коворкинг СОЛЬ"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "королев рассвет",
+      "names": [
+        "Королев (Рассвет)"
+      ],
+      "sources": [
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json"
+      ]
+    },
+    {
+      "normalized": "магистральная 12 бывший магистральная ул 12",
+      "names": [
+        "Магистральная 12 (бывший — Магистральная ул., 12)"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202506.json"
+      ]
+    },
+    {
+      "normalized": "мануфактура xix",
+      "names": [
+        "Мануфактура XIX"
+      ],
+      "sources": [
+        "buildings_202606.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "минто бывший workplace волоколамское",
+      "names": [
+        "Минто (бывший — Workplace Волоколамское)"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "мой кабинет",
+      "names": [
+        "Мой Кабинет"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "мфк строгино",
+      "names": [
+        "МФК Строгино"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "мфк юг",
+      "names": [
+        "МФК Юг"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "на берзарина",
+      "names": [
+        "На Берзарина",
+        "На берзарина"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json"
+      ]
+    },
+    {
+      "normalized": "обсидиан бывший businessclass ходынка",
+      "names": [
+        "Обсидиан (бывший — BusinessClass Ходынка)"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json"
+      ]
+    },
+    {
+      "normalized": "общий итог",
+      "names": [
+        "Общий итог"
+      ],
+      "sources": [
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json"
+      ]
+    },
+    {
+      "normalized": "октябрьское поле бывший общественно деловой центр октябрьское поле",
+      "names": [
+        "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "ольховая sky",
+      "names": [
+        "Ольховая SKY"
+      ],
+      "sources": [
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "останкино",
+      "names": [
+        "Останкино"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "rent_lots_202105.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json",
+        "rent_lots_202311.json",
+        "rent_lots_202403.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "парк легенд класс а",
+      "names": [
+        "Парк Легенд класс А"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json"
+      ]
+    },
+    {
+      "normalized": "парк легенд класс в",
+      "names": [
+        "Парк Легенд класс В+"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202207.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json"
+      ]
+    },
+    {
+      "normalized": "плэйн бывший workplace авиационная",
+      "names": [
+        "Плэйн (бывший — Workplace Авиационная)"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "прайм тайм",
+      "names": [
+        "Прайм Тайм"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "lots_202105.json",
+        "lots_202112.json",
+        "lots_202212.json",
+        "rent_lots_202112.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json"
+      ]
+    },
+    {
+      "normalized": "практик на пролетарской",
+      "names": [
+        "Практик на Пролетарской"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "рабочая станция black white kw",
+      "names": [
+        "Рабочая Станция (Black&White) - KW"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json"
+      ]
+    },
+    {
+      "normalized": "рабочая станция парк горького",
+      "names": [
+        "Рабочая Станция (Парк Горького)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус авион",
+      "names": [
+        "Регус (Авион)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус вивальди",
+      "names": [
+        "Регус (Вивальди)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json"
+      ]
+    },
+    {
+      "normalized": "регус гринвуд",
+      "names": [
+        "Регус (Гринвуд)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус домников",
+      "names": [
+        "Регус (Домников)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202512.json",
+        "coworking_202603.json"
+      ]
+    },
+    {
+      "normalized": "регус капитолий",
+      "names": [
+        "Регус (Капитолий)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус лесная плаза",
+      "names": [
+        "Регус (Лесная Плаза)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус пр мира 40",
+      "names": [
+        "Регус (Пр. Мира, 40)"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус проспект мира",
+      "names": [
+        "Регус Проспект Мира"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json"
+      ]
+    },
+    {
+      "normalized": "регус ситидел",
+      "names": [
+        "Регус (Ситидел)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "регус смоленский пассаж",
+      "names": [
+        "Регус (Смоленский Пассаж)"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json"
+      ]
+    },
+    {
+      "normalized": "родина парк",
+      "names": [
+        "Родина Парк"
+      ],
+      "sources": [
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "рублево бизнес парк",
+      "names": [
+        "Рублево Бизнес-Парк"
+      ],
+      "sources": [
+        "buildings_202105.json",
+        "buildings_202112.json",
+        "buildings_202207.json",
+        "buildings_202212.json",
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202112.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202105.json",
+        "rent_lots_202112.json",
+        "rent_lots_202207.json",
+        "rent_lots_202212.json",
+        "rent_lots_202305.json",
+        "rent_lots_202308.json",
+        "rent_lots_202311.json",
+        "rent_lots_202403.json",
+        "rent_lots_202407.json",
+        "rent_lots_202412.json",
+        "rent_lots_202503.json",
+        "rent_lots_202506.json",
+        "rent_lots_202509.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json"
+      ]
+    },
+    {
+      "normalized": "руновский 14",
+      "names": [
+        "Руновский 14"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "сode delegat",
+      "names": [
+        "СODE Delegat"
+      ],
+      "sources": [
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "сode novo",
+      "names": [
+        "СODE Novo"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "сode савеловская",
+      "names": [
+        "СODE Савеловская"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "сode якиманка",
+      "names": [
+        "СODE Якиманка"
+      ],
+      "sources": [
+        "coworking_202403.json",
+        "coworking_202407.json",
+        "coworking_202410.json",
+        "coworking_202412.json",
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json",
+        "coworking_202603.json",
+        "coworking_202606.json"
+      ]
+    },
+    {
+      "normalized": "север сити",
+      "names": [
+        "Север.Сити"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "сити 4",
+      "names": [
+        "Сити-4"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "солид бывший nice tower",
+      "names": [
+        "Солид (бывший — Nice Tower)"
+      ],
+      "sources": [
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "технопарк густав",
+      "names": [
+        "Технопарк Густав"
+      ],
+      "sources": [
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "ходынка",
+      "names": [
+        "Ходынка"
+      ],
+      "sources": [
+        "coworking_202503.json",
+        "coworking_202506.json",
+        "coworking_202509.json",
+        "coworking_202512.json"
+      ]
+    },
+    {
+      "normalized": "цетлин",
+      "names": [
+        "Цетлин"
+      ],
+      "sources": [
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "эйлер",
+      "names": [
+        "Эйлер"
+      ],
+      "sources": [
+        "buildings_202305.json",
+        "buildings_202308.json",
+        "buildings_202311.json",
+        "buildings_202403.json",
+        "buildings_202407.json",
+        "buildings_202410.json",
+        "buildings_202412.json",
+        "buildings_202503.json",
+        "buildings_202506.json",
+        "buildings_202509.json",
+        "buildings_202512.json",
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202212.json",
+        "lots_202305.json",
+        "lots_202308.json",
+        "lots_202311.json",
+        "lots_202403.json",
+        "lots_202410.json",
+        "lots_202412.json",
+        "lots_202503.json",
+        "lots_202506.json",
+        "lots_202509.json",
+        "lots_202512.json",
+        "lots_202603.json",
+        "lots_202606.json",
+        "rent_lots_202512.json",
+        "rent_lots_202603.json",
+        "rent_lots_202606.json"
+      ]
+    },
+    {
+      "normalized": "энтузиаст",
+      "names": [
+        "Энтузиаст"
+      ],
+      "sources": [
+        "buildings_202603.json",
+        "buildings_202606.json",
+        "lots_202603.json",
+        "lots_202606.json"
+      ]
+    }
+  ],
+  "name_collisions": [
+    {
+      "normalized": "b",
+      "names": [
+        "B",
+        "B+"
+      ],
+      "rows": [
+        {
+          "source": "lots_202305.json",
+          "name": "B+"
+        },
+        {
+          "source": "lots_202308.json",
+          "name": "B"
+        },
+        {
+          "source": "lots_202311.json",
+          "name": "B+"
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet аркус",
+      "names": [
+        "Speace  Jet Аркус",
+        "Speace Jet Аркус"
+      ],
+      "rows": [
+        {
+          "source": "coworking_202410.json",
+          "name": "Speace Jet Аркус"
+        },
+        {
+          "source": "coworking_202412.json",
+          "name": "Speace Jet Аркус"
+        },
+        {
+          "source": "coworking_202503.json",
+          "name": "Speace Jet Аркус"
+        },
+        {
+          "source": "coworking_202506.json",
+          "name": "Speace  Jet Аркус"
+        },
+        {
+          "source": "coworking_202509.json",
+          "name": "Speace  Jet Аркус"
+        },
+        {
+          "source": "coworking_202512.json",
+          "name": "Speace  Jet Аркус"
+        },
+        {
+          "source": "coworking_202603.json",
+          "name": "Speace  Jet Аркус"
+        },
+        {
+          "source": "coworking_202606.json",
+          "name": "Speace  Jet Аркус"
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet белая площадь",
+      "names": [
+        "Speace  Jet Белая площадь",
+        "Speace Jet Белая площадь"
+      ],
+      "rows": [
+        {
+          "source": "coworking_202410.json",
+          "name": "Speace Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202412.json",
+          "name": "Speace Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202503.json",
+          "name": "Speace Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202506.json",
+          "name": "Speace  Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202509.json",
+          "name": "Speace  Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202512.json",
+          "name": "Speace  Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202603.json",
+          "name": "Speace  Jet Белая площадь"
+        },
+        {
+          "source": "coworking_202606.json",
+          "name": "Speace  Jet Белая площадь"
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet тимура фрунзе",
+      "names": [
+        "Speace  Jet Тимура Фрунзе",
+        "Speace Jet Тимура Фрунзе"
+      ],
+      "rows": [
+        {
+          "source": "coworking_202410.json",
+          "name": "Speace Jet Тимура Фрунзе"
+        },
+        {
+          "source": "coworking_202412.json",
+          "name": "Speace Jet Тимура Фрунзе"
+        },
+        {
+          "source": "coworking_202503.json",
+          "name": "Speace Jet Тимура Фрунзе"
+        },
+        {
+          "source": "coworking_202506.json",
+          "name": "Speace  Jet Тимура Фрунзе"
+        },
+        {
+          "source": "coworking_202509.json",
+          "name": "Speace  Jet Тимура Фрунзе"
+        },
+        {
+          "source": "coworking_202512.json",
+          "name": "Speace  Jet Тимура Фрунзе"
+        },
+        {
+          "source": "coworking_202603.json",
+          "name": "Speace  Jet Тимура Фрунзе"
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet якиманка",
+      "names": [
+        "Speace  Jet Якиманка",
+        "Speace Jet Якиманка"
+      ],
+      "rows": [
+        {
+          "source": "coworking_202410.json",
+          "name": "Speace Jet Якиманка"
+        },
+        {
+          "source": "coworking_202412.json",
+          "name": "Speace Jet Якиманка"
+        },
+        {
+          "source": "coworking_202503.json",
+          "name": "Speace Jet Якиманка"
+        },
+        {
+          "source": "coworking_202506.json",
+          "name": "Speace  Jet Якиманка"
+        },
+        {
+          "source": "coworking_202509.json",
+          "name": "Speace  Jet Якиманка"
+        },
+        {
+          "source": "coworking_202512.json",
+          "name": "Speace  Jet Якиманка"
+        },
+        {
+          "source": "coworking_202603.json",
+          "name": "Speace  Jet Якиманка"
+        },
+        {
+          "source": "coworking_202606.json",
+          "name": "Speace  Jet Якиманка"
+        }
+      ]
+    },
+    {
+      "normalized": "на берзарина",
+      "names": [
+        "На Берзарина",
+        "На берзарина"
+      ],
+      "rows": [
+        {
+          "source": "buildings_202407.json",
+          "name": "На берзарина"
+        },
+        {
+          "source": "buildings_202410.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "buildings_202412.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "buildings_202503.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "buildings_202506.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "lots_202403.json",
+          "name": "На берзарина"
+        },
+        {
+          "source": "lots_202410.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "lots_202412.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "lots_202503.json",
+          "name": "На Берзарина"
+        },
+        {
+          "source": "lots_202506.json",
+          "name": "На Берзарина"
+        }
+      ]
+    }
+  ],
+  "all_projects_layer_duplicate_names": [
+    {
+      "normalized": "apollax space новосущевский",
+      "ids": [
+        "proj-186",
+        "proj-60",
+        "proj-70",
+        "proj-9"
+      ],
+      "names": [
+        "Apollax Space (Новосущевский)"
+      ]
+    },
+    {
+      "normalized": "signature столешников signature столешников 11",
+      "ids": [
+        "proj-17",
+        "proj-242",
+        "proj-45"
+      ],
+      "names": [
+        "Signature Столешников (Signature Столешников, 11)"
+      ]
+    },
+    {
+      "normalized": "speace jet тимура фрунзе красная роза",
+      "ids": [
+        "proj-27",
+        "proj-76"
+      ],
+      "names": [
+        "Speace  Jet Тимура Фрунзе (Красная Роза)",
+        "Speace Jet Тимура Фрунзе (Красная Роза)"
+      ]
+    },
+    {
+      "normalized": "speace jet белая площадь белая площадь",
+      "ids": [
+        "proj-28",
+        "proj-65"
+      ],
+      "names": [
+        "Speace  Jet Белая площадь (Белая Площадь)",
+        "Speace Jet Белая площадь (Белая Площадь)"
+      ]
+    },
+    {
+      "normalized": "speace jet аркус аркус 3",
+      "ids": [
+        "proj-131",
+        "proj-29"
+      ],
+      "names": [
+        "Speace  Jet Аркус (Аркус 3)",
+        "Speace Jet Аркус (Аркус 3)"
+      ]
+    },
+    {
+      "normalized": "speace jet якиманка большая якиманка 26",
+      "ids": [
+        "proj-133",
+        "proj-30"
+      ],
+      "names": [
+        "Speace  Jet Якиманка (Большая Якиманка 26)",
+        "Speace Jet Якиманка (Большая Якиманка 26)"
+      ]
+    },
+    {
+      "normalized": "multispace галерея актер",
+      "ids": [
+        "proj-31",
+        "proj-41"
+      ],
+      "names": [
+        "Multispace Галерея Актер"
+      ]
+    },
+    {
+      "normalized": "smart yard на волгоградском ртс волгоградский",
+      "ids": [
+        "proj-34",
+        "proj-47"
+      ],
+      "names": [
+        "Smart Yard (на Волгоградском) (РТС Волгоградский)"
+      ]
+    },
+    {
+      "normalized": "регус пр мира 40 проспект мира 40",
+      "ids": [
+        "proj-219",
+        "proj-46"
+      ],
+      "names": [
+        "Регус (Пр. Мира, 40) (Проспект Мира, 40)"
+      ]
+    },
+    {
+      "normalized": "ключ сретенка сретенка",
+      "ids": [
+        "proj-110",
+        "proj-50"
+      ],
+      "names": [
+        "Ключ Сретенка (Сретенка)"
+      ]
+    },
+    {
+      "normalized": "apollax space технопарк",
+      "ids": [
+        "proj-193",
+        "proj-58",
+        "proj-69"
+      ],
+      "names": [
+        "Apollax Space (Технопарк)"
+      ]
+    },
+    {
+      "normalized": "apollax space останкино",
+      "ids": [
+        "proj-190",
+        "proj-59",
+        "proj-67"
+      ],
+      "names": [
+        "Apollax Space (Останкино)"
+      ]
+    },
+    {
+      "normalized": "apollax space новослободская",
+      "ids": [
+        "proj-195",
+        "proj-61",
+        "proj-71"
+      ],
+      "names": [
+        "Apollax Space (Новослободская)"
+      ]
+    },
+    {
+      "normalized": "газетный газетный 17",
+      "ids": [
+        "proj-162",
+        "proj-63"
+      ],
+      "names": [
+        "Газетный (Газетный 17)"
+      ]
+    },
+    {
+      "normalized": "ходынка авиаконструктора микояна",
+      "ids": [
+        "proj-64",
+        "proj-66"
+      ],
+      "names": [
+        "Ходынка (Авиаконструктора Микояна)"
+      ]
+    },
+    {
+      "normalized": "apollax space кузнецкий мост",
+      "ids": [
+        "proj-198",
+        "proj-68"
+      ],
+      "names": [
+        "Apollax Space (Кузнецкий Мост)"
+      ]
+    },
+    {
+      "normalized": "space балчуг балчуг",
+      "ids": [
+        "proj-137",
+        "proj-75"
+      ],
+      "names": [
+        "Space Балчуг (Балчуг)"
+      ]
+    },
+    {
+      "normalized": "сode delegat 1 й щемиловский 16с2",
+      "ids": [
+        "proj-151",
+        "proj-78"
+      ],
+      "names": [
+        "СODE Delegat (1-й Щемиловский 16с2)"
+      ]
+    },
+    {
+      "normalized": "manufaqtury поклонка poklonka place",
+      "ids": [
+        "proj-174",
+        "proj-83",
+        "proj-84"
+      ],
+      "names": [
+        "Manufaqtury Поклонка (Poklonka Place)"
+      ]
+    }
+  ],
+  "all_projects_layer_duplicate_details": [
+    {
+      "normalized": "apollax space новосущевский",
+      "ids": [
+        "proj-186",
+        "proj-60",
+        "proj-70",
+        "proj-9"
+      ],
+      "names": [
+        "Apollax Space (Новосущевский)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-9",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новосущевский)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Сущевский Вал, 18",
+          "latitude": 55.789851,
+          "longitude": 37.606972,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-60",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новосущевский)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "ул. Сущёвский Вал, 18",
+          "latitude": 55.789851,
+          "longitude": 37.606972,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-9",
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-70",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новосущевский)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "",
+          "latitude": 55.789851,
+          "longitude": 37.606972,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-9",
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-186",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новосущевский)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Сущевский вал 18",
+          "latitude": 55.789851,
+          "longitude": 37.606972,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-9",
+          "aliases": [
+            "Apollax Space"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "signature столешников signature столешников 11",
+      "ids": [
+        "proj-17",
+        "proj-242",
+        "proj-45"
+      ],
+      "names": [
+        "Signature Столешников (Signature Столешников, 11)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-17",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Signature Столешников (Signature Столешников, 11)",
+          "raw_name": "Signature Столешников",
+          "developer": "Signature (Регус)",
+          "address": "Столешников, 11",
+          "latitude": 55.763432,
+          "longitude": 37.615857,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Signature Столешников"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-45",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Signature Столешников (Signature Столешников, 11)",
+          "raw_name": "Signature Столешников",
+          "developer": "Signature (Регус)",
+          "address": "Столешников пер., 11",
+          "latitude": 55.763432,
+          "longitude": 37.615857,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-17",
+          "aliases": [
+            "Signature Столешников"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-242",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Signature Столешников (Signature Столешников, 11)",
+          "raw_name": "Signature Столешников",
+          "developer": "Signature (Регус)",
+          "address": "",
+          "latitude": 55.763432,
+          "longitude": 37.615857,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-17",
+          "aliases": [
+            "Signature Столешников"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet тимура фрунзе красная роза",
+      "ids": [
+        "proj-27",
+        "proj-76"
+      ],
+      "names": [
+        "Speace  Jet Тимура Фрунзе (Красная Роза)",
+        "Speace Jet Тимура Фрунзе (Красная Роза)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-27",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace Jet Тимура Фрунзе (Красная Роза)",
+          "raw_name": "Speace Jet Тимура Фрунзе",
+          "developer": "Space 1",
+          "address": "Тимура Фрунзе, 11с33",
+          "latitude": 55.734233,
+          "longitude": 37.587721,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Speace Jet Тимура Фрунзе"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-76",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace  Jet Тимура Фрунзе (Красная Роза)",
+          "raw_name": "Speace  Jet Тимура Фрунзе",
+          "developer": "Space 1",
+          "address": "Тимура Фрунзе, 11с33",
+          "latitude": 55.735241,
+          "longitude": 37.587623,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Speace  Jet Тимура Фрунзе"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet белая площадь белая площадь",
+      "ids": [
+        "proj-28",
+        "proj-65"
+      ],
+      "names": [
+        "Speace  Jet Белая площадь (Белая Площадь)",
+        "Speace Jet Белая площадь (Белая Площадь)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-28",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace Jet Белая площадь (Белая Площадь)",
+          "raw_name": "Speace Jet Белая площадь",
+          "developer": "Space 1",
+          "address": "Лесная улица,5,стр. а-в",
+          "latitude": 55.777942,
+          "longitude": 37.586801,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Speace  Jet Белая площадь",
+            "Speace  Jet Белая площадь (Белая Площадь)",
+            "Speace Jet Белая площадь"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-65",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace  Jet Белая площадь (Белая Площадь)",
+          "raw_name": "Speace  Jet Белая площадь",
+          "developer": "Space 1",
+          "address": "Лесная улица,5,стр. а-в",
+          "latitude": 55.777942,
+          "longitude": 37.586801,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-28",
+          "aliases": [
+            "Speace  Jet Белая площадь"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet аркус аркус 3",
+      "ids": [
+        "proj-131",
+        "proj-29"
+      ],
+      "names": [
+        "Speace  Jet Аркус (Аркус 3)",
+        "Speace Jet Аркус (Аркус 3)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-29",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace Jet Аркус (Аркус 3)",
+          "raw_name": "Speace Jet Аркус",
+          "developer": "Space 1",
+          "address": "Ленинградский проспект 37Ас4",
+          "latitude": 55.790838,
+          "longitude": 37.550459,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Speace  Jet Аркус",
+            "Speace  Jet Аркус (Аркус 3)",
+            "Speace Jet Аркус"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-131",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace  Jet Аркус (Аркус 3)",
+          "raw_name": "Speace  Jet Аркус",
+          "developer": "Space 1",
+          "address": "Ленинградский проспект 37Ас4",
+          "latitude": 55.790838,
+          "longitude": 37.550459,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-29",
+          "aliases": [
+            "Speace  Jet Аркус"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "speace jet якиманка большая якиманка 26",
+      "ids": [
+        "proj-133",
+        "proj-30"
+      ],
+      "names": [
+        "Speace  Jet Якиманка (Большая Якиманка 26)",
+        "Speace Jet Якиманка (Большая Якиманка 26)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-30",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace Jet Якиманка (Большая Якиманка 26)",
+          "raw_name": "Speace Jet Якиманка",
+          "developer": "Space 1",
+          "address": "Большая Якиманка 26",
+          "latitude": 55.735961,
+          "longitude": 37.612057,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Speace  Jet Якиманка",
+            "Speace  Jet Якиманка (Большая Якиманка 26)",
+            "Speace Jet Якиманка"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-133",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Speace  Jet Якиманка (Большая Якиманка 26)",
+          "raw_name": "Speace  Jet Якиманка",
+          "developer": "Space 1",
+          "address": "Большая Якиманка 26",
+          "latitude": 55.735961,
+          "longitude": 37.612057,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-30",
+          "aliases": [
+            "Speace  Jet Якиманка"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "multispace галерея актер",
+      "ids": [
+        "proj-31",
+        "proj-41"
+      ],
+      "names": [
+        "Multispace Галерея Актер"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-31",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Multispace Галерея Актер",
+          "raw_name": "Multispace Галерея Актер",
+          "developer": "Multispace",
+          "address": "Тверская ул., 16, стр. 1",
+          "latitude": 55.764551,
+          "longitude": 37.606406,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "high",
+          "duplicate_of": null,
+          "aliases": []
+        },
+        {
+          "canonical_project_id": "proj-41",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Multispace Галерея Актер",
+          "raw_name": "Multispace Галерея Актер",
+          "developer": "Multispace",
+          "address": "Тверская ул., 16, стр. 1",
+          "latitude": 55.764551,
+          "longitude": 37.606406,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "high",
+          "duplicate_of": "proj-31",
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "normalized": "smart yard на волгоградском ртс волгоградский",
+      "ids": [
+        "proj-34",
+        "proj-47"
+      ],
+      "names": [
+        "Smart Yard (на Волгоградском) (РТС Волгоградский)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-34",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Smart Yard (на Волгоградском) (РТС Волгоградский)",
+          "raw_name": "Smart Yard (на Волгоградском)",
+          "developer": "Smart Yard",
+          "address": "",
+          "latitude": 55.707674,
+          "longitude": 37.749283,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-47",
+          "aliases": [
+            "Smart Yard (на Волгоградском)"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-47",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Smart Yard (на Волгоградском) (РТС Волгоградский)",
+          "raw_name": "Smart Yard (на Волгоградском)",
+          "developer": "Smart Yard",
+          "address": "Волгоградский проспект, 32к31",
+          "latitude": 55.707674,
+          "longitude": 37.749283,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Smart Yard (на Волгоградском)"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "регус пр мира 40 проспект мира 40",
+      "ids": [
+        "proj-219",
+        "proj-46"
+      ],
+      "names": [
+        "Регус (Пр. Мира, 40) (Проспект Мира, 40)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-46",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Регус (Пр. Мира, 40) (Проспект Мира, 40)",
+          "raw_name": "Регус (Пр. Мира, 40)",
+          "developer": "Регус",
+          "address": "Мира пр-т, 40",
+          "latitude": 55.780233,
+          "longitude": 37.63376,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Регус (Пр. Мира, 40)"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-219",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Регус (Пр. Мира, 40) (Проспект Мира, 40)",
+          "raw_name": "Регус (Пр. Мира, 40)",
+          "developer": "Регус",
+          "address": "",
+          "latitude": 55.780233,
+          "longitude": 37.63376,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-46",
+          "aliases": [
+            "Регус (Пр. Мира, 40)"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "ключ сретенка сретенка",
+      "ids": [
+        "proj-110",
+        "proj-50"
+      ],
+      "names": [
+        "Ключ Сретенка (Сретенка)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-50",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Ключ Сретенка (Сретенка)",
+          "raw_name": "Ключ Сретенка",
+          "developer": "Ключ",
+          "address": "Сретенский бульвар, 5",
+          "latitude": 55.766866,
+          "longitude": 37.633526,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "high",
+          "duplicate_of": null,
+          "aliases": [
+            "Ключ Сретенка"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-110",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Ключ Сретенка (Сретенка)",
+          "raw_name": "Ключ Сретенка",
+          "developer": "Ключ",
+          "address": "Сретенский бульвар, 5",
+          "latitude": 55.766866,
+          "longitude": 37.633526,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "high",
+          "duplicate_of": "proj-50",
+          "aliases": [
+            "Ключ Сретенка"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "apollax space технопарк",
+      "ids": [
+        "proj-193",
+        "proj-58",
+        "proj-69"
+      ],
+      "names": [
+        "Apollax Space (Технопарк)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-58",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Технопарк)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Проспект Андропова, 10",
+          "latitude": 55.693931,
+          "longitude": 37.664428,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-69",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Технопарк)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "",
+          "latitude": 55.693931,
+          "longitude": 37.664428,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-193",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Технопарк)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Проспект Андровпова 10",
+          "latitude": 55.693931,
+          "longitude": 37.664428,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "apollax space останкино",
+      "ids": [
+        "proj-190",
+        "proj-59",
+        "proj-67"
+      ],
+      "names": [
+        "Apollax Space (Останкино)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-59",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Останкино)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Огородный пр., 16/1с2",
+          "latitude": 55.814897,
+          "longitude": 37.60098,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-67",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Останкино)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "",
+          "latitude": 55.814897,
+          "longitude": 37.60098,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-190",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Останкино)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Огородный проезд, вл 16 стр.4",
+          "latitude": 55.814897,
+          "longitude": 37.60098,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "apollax space новослободская",
+      "ids": [
+        "proj-195",
+        "proj-61",
+        "proj-71"
+      ],
+      "names": [
+        "Apollax Space (Новослободская)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-61",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новослободская)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Новослободская ул., 16",
+          "latitude": 55.785787,
+          "longitude": 37.594917,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-71",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новослободская)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "",
+          "latitude": 55.785787,
+          "longitude": 37.594917,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-195",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Новослободская)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Новослободская улица 16",
+          "latitude": 55.785787,
+          "longitude": 37.594917,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "газетный газетный 17",
+      "ids": [
+        "proj-162",
+        "proj-63"
+      ],
+      "names": [
+        "Газетный (Газетный 17)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-63",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Газетный (Газетный 17)",
+          "raw_name": "Газетный",
+          "developer": "BusinessClub",
+          "address": "Газетный пер., 17",
+          "latitude": 55.758965,
+          "longitude": 37.610619,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Газетный"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-162",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Газетный (Газетный 17)",
+          "raw_name": "Газетный",
+          "developer": "BusinessClub",
+          "address": "",
+          "latitude": 55.758965,
+          "longitude": 37.610619,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-63",
+          "aliases": [
+            "Газетный"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "ходынка авиаконструктора микояна",
+      "ids": [
+        "proj-64",
+        "proj-66"
+      ],
+      "names": [
+        "Ходынка (Авиаконструктора Микояна)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-64",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Ходынка (Авиаконструктора Микояна)",
+          "raw_name": "Ходынка",
+          "developer": "BusinessClub",
+          "address": "ул. Авиакоструктора Микояна, д. 1",
+          "latitude": 55.791268,
+          "longitude": 37.534397,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Ходынка"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-66",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Ходынка (Авиаконструктора Микояна)",
+          "raw_name": "Ходынка",
+          "developer": "BusinessClub",
+          "address": "",
+          "latitude": 55.791268,
+          "longitude": 37.534397,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-64",
+          "aliases": [
+            "Ходынка"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "apollax space кузнецкий мост",
+      "ids": [
+        "proj-198",
+        "proj-68"
+      ],
+      "names": [
+        "Apollax Space (Кузнецкий Мост)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-68",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Кузнецкий Мост)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "",
+          "latitude": 55.761913,
+          "longitude": 37.621507,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Apollax Space"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-198",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Apollax Space (Кузнецкий Мост)",
+          "raw_name": "Apollax Space",
+          "developer": "Apollax Space",
+          "address": "Кузнецкий мост 13",
+          "latitude": 55.761913,
+          "longitude": 37.621507,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-68",
+          "aliases": [
+            "Apollax Space"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "space балчуг балчуг",
+      "ids": [
+        "proj-137",
+        "proj-75"
+      ],
+      "names": [
+        "Space Балчуг (Балчуг)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-75",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Space Балчуг (Балчуг)",
+          "raw_name": "Space Балчуг",
+          "developer": "Space1",
+          "address": "Садовническая ул., 9А",
+          "latitude": 55.747637,
+          "longitude": 37.6289,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "high",
+          "duplicate_of": null,
+          "aliases": [
+            "Space Балчуг"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-137",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Space Балчуг (Балчуг)",
+          "raw_name": "Space Балчуг",
+          "developer": "Space1",
+          "address": "Садовническая ул., 9А",
+          "latitude": 55.747637,
+          "longitude": 37.6289,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "high",
+          "duplicate_of": "proj-75",
+          "aliases": [
+            "Space Балчуг"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "сode delegat 1 й щемиловский 16с2",
+      "ids": [
+        "proj-151",
+        "proj-78"
+      ],
+      "names": [
+        "СODE Delegat (1-й Щемиловский 16с2)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-78",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "СODE Delegat (1-й Щемиловский 16с2)",
+          "raw_name": "СODE Delegat",
+          "developer": "СODE",
+          "address": "1-й Щемиловский 16с2",
+          "latitude": 55.779089,
+          "longitude": 37.607197,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "СODE Delegat"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-151",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "СODE Delegat (1-й Щемиловский 16с2)",
+          "raw_name": "СODE Delegat",
+          "developer": "СODE",
+          "address": "1-й Щемиловский 16с2",
+          "latitude": 55.779089,
+          "longitude": 37.607197,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": "proj-78",
+          "aliases": [
+            "СODE Delegat"
+          ]
+        }
+      ]
+    },
+    {
+      "normalized": "manufaqtury поклонка poklonka place",
+      "ids": [
+        "proj-174",
+        "proj-83",
+        "proj-84"
+      ],
+      "names": [
+        "Manufaqtury Поклонка (Poklonka Place)"
+      ],
+      "records": [
+        {
+          "canonical_project_id": "proj-83",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Manufaqtury Поклонка (Poklonka Place)",
+          "raw_name": "Manufaqtury Поклонка",
+          "developer": "Manufaqtury",
+          "address": "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+          "latitude": 55.737258,
+          "longitude": 37.534514,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Manufaqtury Поклонка"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-84",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Manufaqtury Поклонка (Poklonka Place)",
+          "raw_name": "Manufaqtury Поклонка",
+          "developer": "Manufaqtury",
+          "address": "",
+          "latitude": 55.736179,
+          "longitude": 37.533194,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Manufaqtury Поклонка"
+          ]
+        },
+        {
+          "canonical_project_id": "proj-174",
+          "canonical_building_id": null,
+          "entity_grain": "project",
+          "canonical_name": "Manufaqtury Поклонка (Poklonka Place)",
+          "raw_name": "Manufaqtury Поклонка",
+          "developer": "Manufaqtury",
+          "address": "г. Москва, ул. Поклонная, д. 3, корп.",
+          "latitude": 55.736179,
+          "longitude": 37.533194,
+          "gla": null,
+          "gba": null,
+          "market_channel": [
+            "coworking"
+          ],
+          "project_status": "Не установлен",
+          "offer_status": "Не применяется",
+          "source": "classifier.html",
+          "verification_status": "accepted",
+          "confidence": "medium",
+          "duplicate_of": null,
+          "aliases": [
+            "Manufaqtury Поклонка"
+          ]
+        }
+      ]
+    }
+  ],
+  "next_review": [
+    "validate candidate merges with address/developer/GLA or GBA, never name alone",
+    "separate project, building/corpus/tower and lot before assigning PRJ IDs",
+    "review empty/missing historical channel files explicitly"
+  ]
+}
