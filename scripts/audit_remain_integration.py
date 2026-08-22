@@ -27,6 +27,8 @@ import json
 from datetime import date
 from pathlib import Path
 
+from all_projects_entity_roles import role_assignment_note
+
 ROOT = Path(__file__).resolve().parents[1]
 LAYER_PATH = ROOT / "data" / "all_projects_layer.json"
 TODAY = date.today().isoformat()
@@ -98,6 +100,7 @@ def build_only_remain_entry(rec: dict, next_seq: int) -> dict:
         "longitude": None,
         "geometry_quality": "unknown",
         "entity_grain": "project",
+        "entity_role": "office_project",
         "area_scope": "project",
         "project_status": "Введён" if rec.get("completion") else "Не установлен",
         "offer_status": "Ещё не вышел в продажу",
@@ -126,7 +129,8 @@ def build_only_remain_entry(rec: dict, next_seq: int) -> dict:
         "flex_site_label": None,
         "qa_status": "quarantine",
         "qa_notes": f"only_remain кандидат из REMAIN_GAP_ANALYSIS_2026-07-29.md (раздел C, {rec.get('completion', 'дата не указана')}); "
-                    "перед public_visibility нужна проверка реальных лотов на продажу/аренду.",
+                    "перед public_visibility нужна проверка реальных лотов на продажу/аренду. "
+                    f"{role_assignment_note('office_project')}",
     }
 
 

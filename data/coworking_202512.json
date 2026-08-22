@@ -343,13 +343,17 @@
     "network": "Multispace",
     "district": "Сити",
     "bc": "Porta",
-    "address": "ул. Заречная, 2/1",
+    "address": "Москва, Заречная улица, 2/1",
     "vacancy": 650.0,
     "seats": 650,
     "rate": null,
-    "lat": 55.747221,
-    "lng": 37.518821,
-    "id": 79
+    "lat": 55.75048,
+    "lng": 37.53953,
+    "id": 79,
+    "prev_address": "ул. Заречная, 2/1",
+    "prev_lat": 55.747221,
+    "prev_lng": 37.518821,
+    "qa_notes": "Исправлено 2026-08-22 по точному зданию, не по ближайшей точке: porta.moscow (официальный сайт БЦ, Заречная ул., вл. 2/1), arendator.ru/news/188612 (Multispace именно в БЦ Porta); координаты уже подтверждены независимой записью BusinessClub PORTA по тому же адресу."
   },
   {
     "name": "Multispace Дубинин",

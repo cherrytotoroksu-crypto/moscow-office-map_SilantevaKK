@@ -45,13 +45,25 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
     def test_registry_passes_validator(self):
         self.assertEqual(validate(self.records), [])
 
+    def test_entity_roles_match_source_and_channel_contract(self):
+        from all_projects_entity_roles import derive_entity_role
+
+        for record in self.records:
+            self.assertEqual(
+                record["entity_role"],
+                derive_entity_role(record.get("source"), record.get("market_channel")),
+                record["canonical_project_id"],
+            )
+            self.assertIn("entity_role=", record.get("qa_notes") or "", record["canonical_project_id"])
+            self.assertIn("2026-08-22", record.get("qa_notes") or "", record["canonical_project_id"])
+
     def test_record_count_matches_active_raw_data(self):
-        # 279 RAW_DATA rows - 2 out_of_scope (Новосибирск/Астана) = 277.
+        # 279 RAW_DATA rows - 3 out_of_scope (Новосибирск/Астана/Челябинск) = 276.
         # Считаем только classifier-производные записи: внешние источники
         # (remain_datalens и т.п.) добавляются ПОВЕРХ, а не через
         # build_all_projects_layer.py, и не должны сдвигать этот счётчик.
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 277)
+        self.assertEqual(len(classifier_records), 276)
 
     def test_external_only_records_are_additive_not_mixed_into_classifier_base(self):
         external_records = [r for r in self.records if r.get("external_only")]
@@ -218,11 +230,11 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         cls.by_id = {r["canonical_project_id"]: r for r in cls.records}
 
     def test_record_count_unchanged_nothing_deleted(self):
-        """Слияние — это разметка полей, не удаление строк: 277 classifier-
+        """Слияние — это разметка полей, не удаление строк: 276 classifier-
         производных записей до и после (внешние source добавляются поверх,
         см. AllProjectsLayerRegistryTests.test_record_count_matches_active_raw_data)."""
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 277)
+        self.assertEqual(len(classifier_records), 276)
 
     def test_canonical_project_ids_are_globally_unique(self):
         """canonical_project_id не должен повторяться — кроме badaevsky

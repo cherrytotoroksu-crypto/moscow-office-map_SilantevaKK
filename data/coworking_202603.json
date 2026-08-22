@@ -345,13 +345,17 @@
     "network": "Multispace",
     "district": "Сити",
     "bc": "Porta",
-    "address": "ул. Заречная, 2/1",
+    "address": "Москва, Заречная улица, 2/1",
     "vacancy": 650.0,
     "seats": 650,
     "rate": null,
-    "lat": 55.747221,
-    "lng": 37.518821,
-    "id": 79
+    "lat": 55.75048,
+    "lng": 37.53953,
+    "id": 79,
+    "prev_address": "ул. Заречная, 2/1",
+    "prev_lat": 55.747221,
+    "prev_lng": 37.518821,
+    "qa_notes": "Исправлено 2026-08-22 по точному зданию, не по ближайшей точке: porta.moscow (официальный сайт БЦ, Заречная ул., вл. 2/1), arendator.ru/news/188612 (Multispace именно в БЦ Porta); координаты уже подтверждены независимой записью BusinessClub PORTA по тому же адресу."
   },
   {
     "name": "Multispace Дубинин",
@@ -735,13 +739,15 @@
     "network": "Онегин PMG",
     "district": "Центр",
     "bc": "Онегин",
-    "address": "ул. Малая Полянка, 2",
+    "address": "Москва, улица Малая Полянка, 2",
     "vacancy": 440.0,
     "seats": 440,
     "rate": 79300.0,
     "lat": 55.728358,
     "lng": 37.615048,
-    "id": 92
+    "id": 92,
+    "prev_address": "ул. Малая Полянка, 2",
+    "qa_notes": "Адрес подтверждён 2026-08-22: pmg-office.ru (официальный сайт оператора) и cian.ru/coworking-servisnyj-ofis-pmg-onegin-71739."
   },
   {
     "name": "F2",

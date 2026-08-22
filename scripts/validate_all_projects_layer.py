@@ -25,6 +25,8 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+from all_projects_entity_roles import ENTITY_ROLES, derive_entity_role, role_completeness_issues
+
 OFFER_STATUSES = {"В продаже", "Продано / снято", "Ещё не вышел в продажу", "Не применяется"}
 PROJECT_STATUSES = {"Проектируется", "Строится", "Введён", "Заморожен", "Отменён", "Не установлен"}
 VERIFICATION_STATUSES = {"unverified", "under_review", "accepted", "blocked", "quarantine"}
@@ -38,7 +40,7 @@ PUBLIC_VISIBILITY = {"public", "internal_only"}
 OFFER_NOT_STARTED_REASONS = {"Проектная стадия", "Нет подтверждённых лотов", "Продажи не раскрыты"}
 
 REQUIRED = {
-    "canonical_project_id", "entity_grain", "raw_name", "canonical_name",
+    "canonical_project_id", "entity_grain", "entity_role", "raw_name", "canonical_name",
     "project_status", "offer_status", "source", "source_date",
     "verification_status", "confidence", "public_visibility",
 }
@@ -78,6 +80,18 @@ def validate(doc: Any) -> list[str]:
         grain = item.get("entity_grain")
         if grain not in GRAINS:
             errors.append(issue(row, f"invalid entity_grain: {grain!r}"))
+
+        role = item.get("entity_role")
+        if role not in ENTITY_ROLES:
+            errors.append(issue(row, f"invalid entity_role: {role!r}"))
+        elif role != derive_entity_role(item.get("source"), item.get("market_channel")):
+            errors.append(issue(row, f"entity_role={role!r} conflicts with source/market_channel"))
+        if role == "coworking_site" and grain != "project":
+            errors.append(issue(row, "entity_role='coworking_site' requires entity_grain='project'"))
+        if role == "coworking_site" and item.get("public_visibility") == "public" and not item.get("canonical_building_id"):
+            errors.append(issue(row, "entity_role='coworking_site' requires a linked canonical_building_id"))
+        if role == "host_building" and grain != "building":
+            errors.append(issue(row, "entity_role='host_building' requires entity_grain='building'"))
 
         cpid = item.get("canonical_project_id")
         if not isinstance(cpid, str) or not cpid.strip():
@@ -149,6 +163,19 @@ def validate(doc: Any) -> list[str]:
         else:
             errors.append(issue(row, "source_date must be a string"))
 
+        for year_field, minimum in (
+            ("construction_start_year", 1800),
+            ("sales_start_year", 2000),
+            ("input_year", 1800),
+        ):
+            value = item.get(year_field)
+            if value is not None and (not isinstance(value, int) or not minimum <= value <= 2035):
+                errors.append(issue(row, f"{year_field}={value!r} outside supported range"))
+        for quarter_field in ("construction_start_quarter", "sales_start_quarter", "input_quarter"):
+            value = item.get(quarter_field)
+            if value is not None and value not in (1, 2, 3, 4):
+                errors.append(issue(row, f"{quarter_field}={value!r} must be 1..4 or null"))
+
         lat = item.get("latitude")
         lng = item.get("longitude")
         if lat is not None:
@@ -175,6 +202,10 @@ def validate(doc: Any) -> list[str]:
         if channels is not None:
             if not isinstance(channels, list) or any(c not in MARKET_CHANNELS for c in channels):
                 errors.append(issue(row, f"invalid market_channel: {channels!r}"))
+        observed_channels = item.get("observed_market_channels")
+        if observed_channels is not None:
+            if not isinstance(observed_channels, list) or any(c not in MARKET_CHANNELS for c in observed_channels):
+                errors.append(issue(row, f"invalid observed_market_channels: {observed_channels!r}"))
 
         qa_status = item.get("qa_status")
         if qa_status is not None and qa_status not in QA_STATUSES:

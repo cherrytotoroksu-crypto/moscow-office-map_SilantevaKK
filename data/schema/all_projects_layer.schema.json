@@ -7,6 +7,7 @@
   "required": [
     "canonical_project_id",
     "entity_grain",
+    "entity_role",
     "raw_name",
     "canonical_name",
     "project_status",
@@ -30,6 +31,10 @@
     "entity_grain": {
       "enum": ["project", "building"],
       "description": "project — запись уровня всего проекта; building — запись уровня отдельного корпуса/башни (Codex: entity_grain)."
+    },
+    "entity_role": {
+      "enum": ["office_project", "coworking_site", "host_building"],
+      "description": "Семантическая роль записи и политика полноты. office_project — офисный проект/корпус; coworking_site — площадка оператора, для неё GBA/GLA и строительные даты не обязательны; host_building — физическое здание-хост, для него площади и год ввода обязательны. Не смешивать с entity_grain."
     },
 
     "raw_name": {
@@ -73,8 +78,28 @@
 
     "input_year": {
       "type": ["integer", "null"],
-      "minimum": 2015,
+      "minimum": 1800,
       "maximum": 2035
+    },
+    "construction_start_year": {
+      "type": ["integer", "null"],
+      "minimum": 1800,
+      "maximum": 2035,
+      "description": "Год фактического/подтверждённого начала строительства; не подменять годом анонса."
+    },
+    "construction_start_quarter": {
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, 4, null]
+    },
+    "sales_start_year": {
+      "type": ["integer", "null"],
+      "minimum": 2000,
+      "maximum": 2035,
+      "description": "Год старта продаж офисной части; для аренды/коворкинга может быть неприменим."
+    },
+    "sales_start_quarter": {
+      "type": ["integer", "null"],
+      "enum": [1, 2, 3, 4, null]
     },
     "input_quarter": {
       "type": ["integer", "null"],
@@ -103,6 +128,11 @@
       "type": "array",
       "items": {"enum": ["sale", "rent", "serviced_office", "coworking", "other"]},
       "description": "Массив — проект может иметь несколько каналов ОДНОВРЕМЕННО (например sale+rent), но при подсчёте ЛЮБОГО итога (площадь/цена/count) каналы обязаны быть взаимоисключающими — never сумма по двум каналам разом, см. ALL_PROJECTS_LAYER_SPEC раздел «Каналы». 'serviced_office' (сервисный офис) добавлен 2026-07-31 как отдельный от 'coworking' — ⚠️ наши текущие данные (RAW_DATA/classifier.html) исторически не разделяют сервисные офисы (Регус, WeWork, BusinessClub — договор через оператора) и чистый коворкинг структурно; конвертация (scripts/build_all_projects_layer.py) пока продолжает писать всё как 'coworking' без доказательной переразметки — см. известные ограничения в отчёте."
+    },
+    "observed_market_channels": {
+      "type": "array",
+      "items": {"enum": ["sale", "rent", "serviced_office", "coworking", "other"]},
+      "description": "Объединение каналов всех записей с тем же canonical_building_id. Производное поле для сквозного кодификатора; не использовать для суммирования площадей."
     },
 
     "source": {"type": "string", "minLength": 1, "description": "Основной источник ЭТОЙ записи целиком (для истории по каждому полю см. отдельную таблицу sources — не реализована в этой задаче, см. открытые вопросы)."},
@@ -151,6 +181,16 @@
     },
     {
       "if": {"properties": {"entity_grain": {"const": "building"}}},
+      "then": {"required": ["canonical_building_id"]}
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_role": {"const": "coworking_site"},
+          "public_visibility": {"const": "public"}
+        },
+        "required": ["entity_role", "public_visibility"]
+      },
       "then": {"required": ["canonical_building_id"]}
     }
   ]

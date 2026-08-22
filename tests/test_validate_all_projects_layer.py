@@ -6,7 +6,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
-from validate_all_projects_layer import validate
+from validate_all_projects_layer import role_completeness_issues, validate
 
 SAMPLE = json.loads(
     (REPO_ROOT / "data" / "test_fixtures" / "all_projects_layer.sample.json").read_text(encoding="utf-8")
@@ -79,6 +79,33 @@ class AllProjectsLayerValidationTests(unittest.TestCase):
         payload[0]["offer_status"] = "На паузе"
         errors = validate(payload)
         self.assertTrue(any("invalid offer_status" in e for e in errors))
+
+    def test_unknown_entity_role_is_rejected(self):
+        payload = copy.deepcopy(SAMPLE)
+        payload[0]["entity_role"] = "workspace"
+        errors = validate(payload)
+        self.assertTrue(any("invalid entity_role" in e for e in errors))
+
+    def test_coworking_site_does_not_require_host_building_area_or_dates(self):
+        record = copy.deepcopy(SAMPLE[0])
+        record["entity_role"] = "coworking_site"
+        record["market_channel"] = ["coworking"]
+        record["canonical_building_id"] = "test-host-building"
+        record["gba"] = None
+        record["gla"] = None
+        record["input_year"] = None
+        self.assertEqual(role_completeness_issues(record), [])
+
+    def test_office_project_area_and_dates_remain_required_for_completeness(self):
+        record = copy.deepcopy(SAMPLE[0])
+        record["entity_role"] = "office_project"
+        record["gba"] = None
+        record["gla"] = None
+        record["input_year"] = None
+        issues = role_completeness_issues(record)
+        self.assertTrue(any("gba" in issue for issue in issues))
+        self.assertTrue(any("gla" in issue for issue in issues))
+        self.assertTrue(any("input_year" in issue for issue in issues))
 
     def test_project_status_is_lifecycle_not_offer(self):
         # Регресс на переименование 2026-07-31: project_status обязан быть

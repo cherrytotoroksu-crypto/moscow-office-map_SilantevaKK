@@ -47,6 +47,8 @@ import os
 import re
 import sys
 
+from all_projects_entity_roles import derive_entity_role, role_assignment_note
+
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_PATH = os.path.join(REPO_ROOT, "data", "all_projects_layer.json")
 TODAY = "2026-07-31"
@@ -121,6 +123,15 @@ def commission_to_input(commission_q):
     year = int(str(commission_q)[:4])
     month = str(commission_q)[4:6]
     quarter = QUARTER_MONTH_TO_Q.get(month)
+    return year, quarter
+
+
+def quarter_to_parts(value):
+    """Convert a YYYYMM quarter marker to year/quarter without inventing precision."""
+    if not value or not re.match(r"^\d{6}$", str(value)):
+        return None, None
+    year = int(str(value)[:4])
+    quarter = QUARTER_MONTH_TO_Q.get(str(value)[4:6])
     return year, quarter
 
 
@@ -296,7 +307,10 @@ def convert_row(row, colormap, quarter_presence, warnings):
 
     project_status = derive_project_status(row.get("status"))
     channels = derive_market_channel(row)
+    entity_role = derive_entity_role("classifier.html", channels)
     input_year, input_quarter = commission_to_input(row.get("commission_q"))
+    construction_start_year, construction_start_quarter = quarter_to_parts(row.get("construction_start_q"))
+    sales_start_year, sales_start_quarter = quarter_to_parts(row.get("start_q"))
 
     refs = sorted(quarter_presence.get(name, set()) | quarter_presence.get(name_orig, set()))
     quarter_offer_exists = "202606" in refs
@@ -309,6 +323,7 @@ def convert_row(row, colormap, quarter_presence, warnings):
     if project_status == "Не установлен":
         qa_notes.append("Коворкинг-оператор без собственного статуса стройки — project_status/offer_status не применимы буквально.")
     qa_notes.append("offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py.")
+    qa_notes.append(role_assignment_note(entity_role))
 
     has_area = any(row.get(k) is not None for k in ("gba", "gla"))
     qa_status = "ok"
@@ -319,6 +334,7 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "canonical_project_id": canonical_project_id,
         "canonical_building_id": canonical_building_id,
         "entity_grain": entity_grain,
+        "entity_role": entity_role,
         "raw_name": name_orig,
         "canonical_name": name,
         "flex_site_label": derive_flex_site_label(name, name_orig),
@@ -337,6 +353,10 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "offer_not_started_reason": offer_reason,
         "input_year": input_year,
         "input_quarter": input_quarter,
+        "construction_start_year": construction_start_year,
+        "construction_start_quarter": construction_start_quarter,
+        "sales_start_year": sales_start_year,
+        "sales_start_quarter": sales_start_quarter,
         "input_date_kind": "confirmed" if project_status == "Введён" else ("planned" if input_year else "unknown"),
         "cls": row.get("cls"),
         "gba": row.get("gba"),
@@ -348,6 +368,7 @@ def convert_row(row, colormap, quarter_presence, warnings):
         "bizFormed": row.get("bizFormed") or None,
         "bizForming": row.get("bizForming") or None,
         "market_channel": channels,
+        "observed_market_channels": channels,
         "source": "classifier.html",
         "source_date": TODAY,
         "verification_status": verification_status,

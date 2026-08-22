@@ -274,6 +274,7 @@ const CODIFIER_COLUMNS = [
   // идентификация + видимая проверка данных), не прячем их за режим QA:
   // internal:true оставлен только для действительно служебных полей ниже.
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'canonical_building_id', label:'ID здания', type:'text', visible:true},
   {key:'project_group_name', label:'Проект', type:'text', visible:true},
   {key:'canonical_name', label:'Название записи (проект/корпус)', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
@@ -284,6 +285,10 @@ const CODIFIER_COLUMNS = [
   {key:'submarket', label:'Субрынок', type:'text', visible:true},
   {key:'zone', label:'Кольцо', type:'text', visible:true},
   {key:'project_status', label:'Статус проекта', type:'text', visible:true},
+  {key:'construction_start_year', label:'Начало строительства, год', type:'number', visible:true},
+  {key:'construction_start_quarter', label:'Начало строительства, квартал', type:'number', visible:false},
+  {key:'sales_start_year', label:'Старт продаж, год', type:'number', visible:true},
+  {key:'sales_start_quarter', label:'Старт продаж, квартал', type:'number', visible:false},
   {key:'input_year', label:'Год ввода', type:'number', visible:true},
   {key:'input_quarter', label:'Квартал ввода', type:'number', visible:true},
   {key:'input_date_kind', label:'Заявлено/подтверждено', type:'text', visible:false},
@@ -295,6 +300,7 @@ const CODIFIER_COLUMNS = [
   {key:'office_area', label:'GLA офисная (если указана отдельно), м²', type:'number', visible:false},
   {key:'area_scope', label:'Уровень площади', type:'text', visible:true, displayMap: AREA_SCOPE_DISPLAY},
   {key:'market_channel', label:'Сегменты рынка (справочно)', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
+  {key:'observed_market_channels', label:'Все каналы здания', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
   {key:'quarter_offer_exists', label:'Есть предложение в квартале', type:'bool', visible:false},
   {key:'offer_status', label:'Статус предложения', type:'text', visible:false},
   {key:'source', label:'Источник', type:'text', visible:true},
@@ -307,7 +313,6 @@ const CODIFIER_COLUMNS = [
   {key:'latitude', label:'Широта', type:'number', visible:false},
   {key:'longitude', label:'Долгота', type:'number', visible:false},
   // --- технические/служебные поля — только в режиме QA ---
-  {key:'canonical_building_id', label:'ID корпуса (техн.)', type:'text', visible:false, internal:true},
   {key:'raw_name', label:'Исходное название (техн.)', type:'text', visible:false, internal:true},
   {key:'aliases', label:'Альт. названия (техн.)', type:'list', visible:false, internal:true},
   {key:'external_only', label:'Только внешний источник (техн.)', type:'bool', visible:false, internal:true, boolTrueLabel:'Найдено только во внешнем источнике'},
@@ -628,14 +633,20 @@ function registryByFlexSiteLabelMap() {
 }
 function applyRegistryMatch(row, match) {
   row.canonical_project_id = match ? match.canonical_project_id : null;
+  row.canonical_building_id = match ? match.canonical_building_id : null;
   row.reg_project_status = match ? match.project_status : null;
   row.reg_offer_status = match ? match.offer_status : null;
   row.reg_input_quarter = match ? match.input_quarter : null;
+  row.reg_construction_start_year = match ? match.construction_start_year : null;
+  row.reg_construction_start_quarter = match ? match.construction_start_quarter : null;
+  row.reg_sales_start_year = match ? match.sales_start_year : null;
+  row.reg_sales_start_quarter = match ? match.sales_start_quarter : null;
   row.reg_source = match ? match.source : null;
   row.reg_confidence = match ? match.confidence : null;
   row.reg_bizFormed = match ? match.bizFormed : null;
   row.reg_bizForming = match ? match.bizForming : null;
   row.reg_market_channel = match ? match.market_channel : null;
+  row.reg_observed_market_channels = match ? match.observed_market_channels : null;
   row.reg_developer = match ? match.developer : null;
   row.reg_cls = match ? match.cls : null;
   row.reg_zone = match ? match.zone : null;

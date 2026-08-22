@@ -23,12 +23,49 @@ all_projects_layer.json и не должен (см. вышеупомянутый
 Usage: python scripts/add_coworking_host_buildings.py
 """
 
+import hashlib
 import json
 from pathlib import Path
+
+from all_projects_entity_roles import role_assignment_note
+from unified_building_identity import link_coworking_sites, link_note, normalize_label
 
 ROOT = Path(__file__).resolve().parents[1]
 LAYER_PATH = ROOT / "data" / "all_projects_layer.json"
 TODAY = "2026-08-19"
+COORDINATE_RECHECK_DATE = "2026-08-22"
+
+# Единственный bc в текущем срезе, который относится к двум соседним домам:
+# Space Балчуг — Садовническая 9А, KW Балчуг — Садовническая 9. Запись-хост
+# ниже описывает именно дом 9, поэтому выбор сделан по адресу, не по ближайшей
+# точке. Остальные HOSTS имеют одну уникальную текущую координату на bc.
+HOST_COORDINATE_OVERRIDES = {
+    "Балчуг": (55.746441, 37.629053, "coworking_202606.json id=233, Садовническая наб., 9"),
+}
+
+# Two-source identity decision: the Multispace Porta announcement names BC
+# Porta, while the official project site and a second market source place that
+# building at Заречная 2/1. Keep operator sites separate, share one building id.
+BC_CANONICAL_LABELS = {
+    "porta": "Заречная 2/1",
+}
+HOST_ALIASES = {
+    "Заречная 2/1": ["Porta"],
+}
+PREFERRED_BUILDING_IDS = {
+    "Долгоруковская 21": "code-novo-dolgorukovskaya-21",
+}
+HISTORICAL_HOST_OVERRIDES = {
+    "Онегин": {
+        "address": "Москва, улица Малая Полянка, 2",
+        "latitude": 55.728358,
+        "longitude": 37.615048,
+        "evidence": (
+            "pmg-office.ru (official operator site) and cian.ru/coworking-servisnyj-ofis-pmg-onegin-71739; "
+            "checked 2026-08-22"
+        ),
+    },
+}
 
 # bc -> (cls, address, evidence)
 HOSTS = [
@@ -162,25 +199,150 @@ HOSTS = [
 ]
 
 
-def build_record(bc: str, cls: str, address: str, evidence: str, seq: int) -> dict:
+def current_host_coordinates() -> dict:
+    rows = json.loads((ROOT / "data" / "coworking_202606.json").read_text(encoding="utf-8-sig"))
+    grouped = {}
+    for row in rows:
+        if row.get("bc") and row.get("lat") is not None and row.get("lng") is not None:
+            grouped.setdefault(row["bc"], []).append(row)
+    result = {}
+    for bc, matches in grouped.items():
+        points = {(r["lat"], r["lng"]) for r in matches}
+        if len(points) == 1:
+            lat, lng = next(iter(points))
+            ids = ",".join(str(r.get("id")) for r in matches)
+            result[bc] = (lat, lng, f"coworking_202606.json id={ids}")
+    result.update(HOST_COORDINATE_OVERRIDES)
+    return result
+
+
+def coordinate_note(bc: str, evidence: str) -> str:
+    return (
+        f"Координаты проверены {COORDINATE_RECHECK_DATE}: "
+        f"data/{evidence}, точное совпадение здания-хоста по bc={bc!r}; "
+        "адрес независимо подтверждён источниками класса, указанными выше. "
+        "Не использовался поиск ближайшей точки."
+    )
+
+
+def all_coworking_observations():
+    observations = []
+    for path in sorted((ROOT / "data").glob("coworking_20*.json")):
+        rows = json.loads(path.read_text(encoding="utf-8-sig"))
+        for row in rows:
+            item = dict(row)
+            item["_source_file"] = path.name
+            observations.append(item)
+    return observations
+
+
+def stable_historical_id(label):
+    digest = hashlib.sha1(normalize_label(label).encode("utf-8")).hexdigest()[:10]
+    return f"cwhost-hist-{digest}"
+
+
+def historical_host_record(label, observations):
+    override = HISTORICAL_HOST_OVERRIDES.get(label)
+    usable = [
+        row for row in observations
+        if row.get("address") and row.get("lat") is not None and row.get("lng") is not None
+    ]
+    if override:
+        address = override["address"]
+        lat = override["latitude"]
+        lng = override["longitude"]
+        evidence = override["evidence"]
+    elif usable:
+        latest = max(usable, key=lambda row: (row["_source_file"], str(row.get("id"))))
+        address, lat, lng = latest["address"], latest["lat"], latest["lng"]
+        evidence = f"data/{latest['_source_file']} id={latest.get('id')}, exact bc={label!r}"
+    else:
+        return None
+
+    project_id = stable_historical_id(label)
+    return {
+        "canonical_project_id": project_id,
+        "canonical_building_id": f"{project_id}-bld",
+        "entity_grain": "building",
+        "entity_role": "host_building",
+        "raw_name": label,
+        "canonical_name": label,
+        "flex_site_label": None,
+        "aliases": HOST_ALIASES.get(label, []),
+        "developer": None,
+        "address": address,
+        "latitude": lat,
+        "longitude": lng,
+        "geometry_quality": "geocoded_approx",
+        "project_status": "Введён",
+        "offer_status": "Не применяется",
+        "offer_not_started_reason": None,
+        "input_year": None,
+        "input_quarter": None,
+        "construction_start_year": None,
+        "construction_start_quarter": None,
+        "sales_start_year": None,
+        "sales_start_quarter": None,
+        "input_date_kind": "unknown",
+        "cls": None,
+        "gba": None,
+        "gla": None,
+        "office_area": None,
+        "area_scope": "building",
+        "zone": None,
+        "submarket": None,
+        "bizFormed": None,
+        "bizForming": None,
+        "market_channel": [],
+        "observed_market_channels": ["coworking"],
+        "source": "coworking_host_lookup",
+        "source_date": COORDINATE_RECHECK_DATE,
+        "verification_status": "under_review",
+        "confidence": "medium",
+        "external_only": False,
+        "quarter_offer_refs": [],
+        "quarter_offer_exists": False,
+        "qa_status": "missing_required",
+        "qa_notes": (
+            f"Historical coworking host restored {COORDINATE_RECHECK_DATE}; source: {evidence}. "
+            "Identity is based on exact bc, not nearest coordinates. Class/areas/dates remain missing until "
+            f"two-source verification. {role_assignment_note('host_building')}"
+        ),
+        "public_visibility": "public",
+        "first_seen_at": min(row["_source_file"][10:16] for row in observations),
+        "last_verified_at": COORDINATE_RECHECK_DATE,
+        "source_count": 1,
+        "duplicate_of": None,
+        "legacy_ids": [],
+    }
+
+
+def build_record(bc: str, cls: str, address: str, evidence: str, seq: int,
+                 coordinates: tuple) -> dict:
+    lat, lng, coordinate_evidence = coordinates
     return {
         "canonical_project_id": f"cwhost-{seq:04d}",
         "canonical_building_id": f"cwhost-{seq:04d}-bld",
         "entity_grain": "building",
+        "entity_role": "host_building",
         "raw_name": bc,
         "canonical_name": bc,
         "flex_site_label": None,
         "aliases": [],
         "developer": None,
         "address": address,
-        "latitude": None,
-        "longitude": None,
-        "geometry_quality": "unknown",
+        "latitude": lat,
+        "longitude": lng,
+        "geometry_quality": "geocoded_approx",
         "project_status": "Введён",
         "offer_status": "Не применяется",
         "offer_not_started_reason": None,
         "input_year": None,
         "input_quarter": None,
+        "construction_start_year": None,
+        "construction_start_quarter": None,
+        "sales_start_year": None,
+        "sales_start_quarter": None,
         "input_date_kind": "unknown",
         "cls": cls,
         "gba": None,
@@ -192,6 +354,7 @@ def build_record(bc: str, cls: str, address: str, evidence: str, seq: int) -> di
         "bizFormed": None,
         "bizForming": None,
         "market_channel": [],
+        "observed_market_channels": ["coworking"],
         "source": "coworking_host_lookup",
         "source_date": TODAY,
         "verification_status": "accepted",
@@ -202,11 +365,12 @@ def build_record(bc: str, cls: str, address: str, evidence: str, seq: int) -> di
         "qa_status": "ok",
         "qa_notes": f"Здание-хост для коворкинга, добавлено 2026-08-19 только для заполнения cls у "
                     f"coworking_202606.json записей с bc={bc!r}; НЕ отслеживается NF по каналам "
-                    f"продажи/аренды/коворкинга. Источник: {evidence}.",
+                    f"продажи/аренды/коворкинга. Источник: {evidence}. "
+                    f"{role_assignment_note('host_building')}",
         "public_visibility": "public",
         "first_seen_at": TODAY,
         "last_verified_at": TODAY,
-        "source_count": 1,
+        "source_count": 2,
         "duplicate_of": None,
         "legacy_ids": [],
     }
@@ -216,19 +380,117 @@ def main() -> int:
     with open(LAYER_PATH, encoding="utf-8") as f:
         layer = json.load(f)
 
-    existing_names = {r["canonical_name"] for r in layer if r.get("source") == "coworking_host_lookup"}
+    existing = {
+        r["canonical_name"]: r for r in layer if r.get("source") == "coworking_host_lookup"
+    }
     seq = sum(1 for r in layer if r.get("source") == "coworking_host_lookup") + 1
+    coordinates = current_host_coordinates()
+    observations = all_coworking_observations()
     added = []
+    updated = []
     for bc, cls, address, evidence in HOSTS:
-        if bc in existing_names:
+        if bc not in coordinates:
+            raise ValueError(f"No unique current coordinate for coworking host {bc!r}")
+        if bc in existing:
+            record = existing[bc]
+            record["entity_role"] = "host_building"
+            role_note = role_assignment_note("host_building")
+            if role_note not in (record.get("qa_notes") or ""):
+                record["qa_notes"] = (record.get("qa_notes") or "").rstrip() + " " + role_note
+            lat, lng, coordinate_evidence = coordinates[bc]
+            record["latitude"] = lat
+            record["longitude"] = lng
+            record["geometry_quality"] = "geocoded_approx"
+            record["last_verified_at"] = COORDINATE_RECHECK_DATE
+            record["source_count"] = max(2, record.get("source_count") or 0)
+            note = coordinate_note(bc, coordinate_evidence)
+            if note not in (record.get("qa_notes") or ""):
+                record["qa_notes"] = (record.get("qa_notes") or "").rstrip() + " " + note
+            updated.append(record["canonical_project_id"])
+        else:
+            record = build_record(bc, cls, address, evidence, seq, coordinates[bc])
+            record["qa_notes"] += " " + coordinate_note(bc, coordinates[bc][2])
+            record["last_verified_at"] = COORDINATE_RECHECK_DATE
+            layer.append(record)
+            added.append(f"cwhost-{seq:04d}")
+            seq += 1
+
+    # Restore every historical Moscow host that has an address+coordinate
+    # observation. Labels explicitly proven to be aliases are canonicalized
+    # before grouping, so Porta is one building rather than two nearest points.
+    existing_labels = {
+        normalize_label(value)
+        for record in layer if record.get("entity_role") == "host_building"
+        for value in [record.get("canonical_name"), *(record.get("aliases") or [])]
+        if value
+    }
+    grouped = {}
+    for observation in observations:
+        label = BC_CANONICAL_LABELS.get(normalize_label(observation.get("bc")), observation.get("bc"))
+        if label:
+            grouped.setdefault(normalize_label(label), {"label": label, "rows": []})["rows"].append(observation)
+    historical_added = []
+    for normalized, group in sorted(grouped.items()):
+        if normalized in existing_labels:
             continue
-        layer.append(build_record(bc, cls, address, evidence, seq))
-        added.append(f"cwhost-{seq:04d}")
-        seq += 1
+        record = historical_host_record(group["label"], group["rows"])
+        if record is None:
+            continue
+        layer.append(record)
+        historical_added.append(record["canonical_project_id"])
+        existing_labels.add(normalized)
+        existing_labels.update(normalize_label(alias) for alias in record.get("aliases") or [])
+
+    for record in layer:
+        if record.get("entity_role") == "host_building" and record.get("canonical_name") in PREFERRED_BUILDING_IDS:
+            record["canonical_building_id"] = PREFERRED_BUILDING_IDS[record["canonical_name"]]
+        if str(record.get("canonical_project_id", "")).startswith("cwhost-hist-"):
+            record["quarter_offer_refs"] = []
+            record["quarter_offer_exists"] = False
+
+    links, rejected = link_coworking_sites(layer, observations)
+    linked = []
+    for record in layer:
+        if record.get("entity_role") != "coworking_site":
+            continue
+        link = links.get(record["canonical_project_id"])
+        if link:
+            record["canonical_building_id"] = link["canonical_building_id"]
+            note = link_note(link)
+            if note not in (record.get("qa_notes") or ""):
+                record["qa_notes"] = ((record.get("qa_notes") or "").rstrip() + " " + note).strip()
+            if "Building link blocked 2026-08-22" in (record.get("qa_notes") or ""):
+                record["public_visibility"] = "public"
+                record["verification_status"] = "accepted"
+                record["qa_status"] = "duplicate_suspect" if record.get("duplicate_of") else "ok"
+            linked.append(record["canonical_project_id"])
+        else:
+            record["canonical_building_id"] = None
+            record["public_visibility"] = "internal_only"
+            record["verification_status"] = "blocked"
+            record["qa_status"] = "quarantine"
+            reason = rejected.get(record["canonical_project_id"]) or rejected.get(normalize_label(record.get("flex_site_label"))) or "no safe host match"
+            note = f"Building link blocked {COORDINATE_RECHECK_DATE}: {reason}; kept internal until two-source verification."
+            if note not in (record.get("qa_notes") or ""):
+                record["qa_notes"] = ((record.get("qa_notes") or "").rstrip() + " " + note).strip()
+
+    channels_by_building = {}
+    for record in layer:
+        building_id = record.get("canonical_building_id")
+        if building_id:
+            channels_by_building.setdefault(building_id, set()).update(record.get("market_channel") or [])
+    for record in layer:
+        building_id = record.get("canonical_building_id")
+        record["observed_market_channels"] = sorted(
+            channels_by_building.get(building_id, set()) or set(record.get("market_channel") or [])
+        )
 
     with open(LAYER_PATH, "w", encoding="utf-8") as f:
         json.dump(layer, f, ensure_ascii=False, indent=2)
-    print(f"added {len(added)}: {added}")
+    print(
+        f"added confirmed {len(added)}: {added}; updated coordinates {len(updated)}: {updated}; "
+        f"added historical {len(historical_added)}; linked sites {len(linked)}; unresolved {len(rejected)}"
+    )
     return 0
 
 

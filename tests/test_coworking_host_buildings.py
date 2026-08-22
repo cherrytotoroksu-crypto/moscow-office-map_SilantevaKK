@@ -32,20 +32,40 @@ class CoworkingHostBuildingTests(unittest.TestCase):
         self.assertGreaterEqual(len(self.hosts), 61)
 
     def test_host_records_have_confirmed_class_and_evidence(self):
-        for r in self.hosts:
+        confirmed = [r for r in self.hosts if r.get("cls")]
+        self.assertGreaterEqual(len(confirmed), 61)
+        for r in confirmed:
             self.assertIn(r["cls"], {"Prime", "A", "B+", "B"})
             self.assertIn("Источник:", r["qa_notes"])
+        historical = [r for r in self.hosts if not r.get("cls")]
+        self.assertTrue(historical)
+        for r in historical:
+            self.assertEqual(r["qa_status"], "missing_required")
+            self.assertIn("two-source verification", r["qa_notes"])
 
     def test_host_records_never_enter_quarterly_volumes(self):
         for r in self.hosts:
+            self.assertEqual(r["entity_role"], "host_building")
             self.assertEqual(r["market_channel"], [])
             self.assertEqual(r["quarter_offer_refs"], [])
             self.assertFalse(r["quarter_offer_exists"])
 
     def test_host_records_are_not_classifier_derived(self):
-        classifier_names = {r["canonical_name"] for r in self.layer if r["source"] == "classifier.html"}
+        classifier_ids = {r["canonical_project_id"] for r in self.layer if r["source"] == "classifier.html"}
         for r in self.hosts:
-            self.assertNotIn(r["canonical_name"], classifier_names)
+            self.assertNotIn(r["canonical_project_id"], classifier_ids)
+
+    def test_every_public_coworking_site_resolves_to_one_host_building(self):
+        hosts_by_building = {}
+        for host in self.hosts:
+            self.assertNotIn(host["canonical_building_id"], hosts_by_building)
+            hosts_by_building[host["canonical_building_id"]] = host
+        sites = [
+            r for r in self.layer
+            if r.get("entity_role") == "coworking_site" and r.get("public_visibility") == "public"
+        ]
+        for site in sites:
+            self.assertIn(site.get("canonical_building_id"), hosts_by_building, site["canonical_project_id"])
 
     def test_layer_still_passes_validator(self):
         self.assertEqual(validate_layer(self.layer), [])

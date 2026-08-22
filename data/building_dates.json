@@ -4,392 +4,504 @@
     "start_q": "202212",
     "commission_q": "202607",
     "source": "ИСПРАВЛЕНО (2026-08-01): kommersant.ru — ЗОС получен ~17.06.2026 (doc/8740091, дублируется на vedomosti.ru), РНВ подтверждён отдельной статьёй от 17.07.2026 (doc/8828986, «Бизнес-центр Tower D введён в эксплуатацию»). Точная дата ввода между этими датами не указана, но раз статья о самом вводе датирована июлем — квартал исправлен с 202606 (Q2, ошибочно взят квартал публикации первой заметки) на 202607 (Q3); основные строительные работы начаты март 2025",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-89",
+    "canonical_building_id": null
   },
   "stone towers. towers bc": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202412",
     "source": "УТОЧНЕНО (2026-08-01): cre.ru/news/97101 (19.12.2024) — 2-я очередь STONE Towers (Tower B+C, 70 тыс. м²) построена/введена в декабре 2024 г.; kommersant.ru/doc/7433061 (16.01.2025) сообщает о РНВ пост-фактум (передача помещений собственникам началась в январе 2025, это уже следующий шаг после ввода) — сдвинуто с Q1 2025 на Q4 2024",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-90",
+    "canonical_building_id": null
   },
   "прайм тайм": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202212",
     "source": "novostroev.ru, mskguru.ru — «построен/введён в эксплуатацию в 2022 году» (2 источника согласны на годе, точный квартал не указан нигде — взят Q4 как консервативная оценка), GBA 12929 точно совпадает с нашими данными",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-104",
+    "canonical_building_id": null
   },
   "stone белорусская": {
     "construction_start_q": "202402",
     "start_q": "202311",
     "commission_q": null,
     "source": "cre.ru/news/93770 — разрешение на строительство февраль 2024, строительство с начала 2024; старт продаж ноябрь 2023 (продажа единым лотом институциональному инвестору закрыта в конце 2023) — монолит завершён 23.07.2025, ввод в эксплуатацию ещё не подтверждён",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-91",
+    "canonical_building_id": null
   },
   "магистральная 12 (бывший — магистральная ул., 12)": {
     "construction_start_q": "202412",
     "start_q": "202409",
     "commission_q": null,
     "source": "fsk.ru — разрешение на строительство 10.12.2024, строительство начато на его основании; старт продаж «в начале сентября» (pulsprodaj.ru) — год не указан явно, вероятно 2024 (до разрешения — обычная практика ранней брони), не 100% уверенность. Ввод — план Q1 2026, не подтверждён постфактум.",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-99",
+    "canonical_building_id": null
   },
   "королев (рассвет)": {
     "construction_start_q": "202307",
     "start_q": "202212",
     "commission_q": null,
     "source": "redeveloper.ru — старт продаж конец 2022; kommersant.ru/office-news.ru — план начала строительства Q3 2023 (реставрация объекта культурного наследия, необычная последовательность продажи-до-стройки — типично для реставрационных объектов с ранним резервированием)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-98",
+    "canonical_building_id": null
   },
   "алкон 3": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202307",
     "source": "stroi.mos.ru («Алкон» сдан в эксплуатацию), arendator.ru — разрешение на ввод от 14.07.2023; ОДИН источник (novostroy) расходится, называя просто «2022 год» без даты — доверяю датированному разрешению",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-95",
+    "canonical_building_id": null
   },
   "stone towers. tower a": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202209",
     "source": "agpipe.ru, office-news.ru — разрешение на ввод в эксплуатацию получено в сентябре 2022, по плану",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-88",
+    "canonical_building_id": null
   },
   "обсидиан (бывший — businessclass ходынка)": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "ОТКАЧЕНО (2026-08-01): прежний commission_q=202512 опирался на cre.ru/news/100832 (13.01.2026) о получении РНВ «в конце декабря» 2025. НО два более поздних авторитетных источника это опровергают: kommersant.ru/doc/8515138 (18-19.03.2026) и realty.ria.ru/20260319/obsidian-2081621906.html (19.03.2026), оба в контексте сделки с Дом.РФ, прямо называют «Обсидиан» «строящимся» зданием с плановой сдачей «в 2026 году» (в сделку заложено ~1.3 млрд руб. на отделочные работы). Также office-news.ru (без даты) пишет, что «в январе 2026 года Business Club планирует начать отделочные работы» — здание явно ещё не готово к въезду арендаторов. Ровно тот сценарий, которого нужно избегать по CRITICAL RULE (январская новость про РНВ оказалась преждевременной/ошибочной). commission_q убран до появления однозначного постфактум-подтверждения.",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-100",
+    "canonical_building_id": null
   },
   "plaza technopark": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202112",
     "source": "technopark-plaza.ru — офиц. разрешение на ввод в эксплуатацию №77-126000-010568-2021 (Мосгосстройнадзор), Q4 2021",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-85",
+    "canonical_building_id": null
   },
   "cityzen": {
     "construction_start_q": "202402",
     "start_q": "202402",
     "commission_q": null,
     "source": "mr-group.ru — разрешение на строительство первой очереди 02.02.2024, продажи начались тогда же; план сдачи Q3 2027. Даты относятся к жилой первой очереди мультиквартала (корпуса Parus/Volna), для офисного компонента отдельно не подтверждены.",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-263",
+    "canonical_building_id": null
   },
   "stone мневники i": {
     "construction_start_q": null,
     "start_q": "202411",
     "commission_q": null,
     "source": "kommersant.ru — «STONE приступает к строительству... STONE Мнёвники 1» (точный квартал начала стройки не указан); продажи (обе очереди 1+2) стартовали поздней осенью 2024",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-185",
+    "canonical_building_id": null
   },
   "stone мневники ii": {
     "construction_start_q": null,
     "start_q": "202411",
     "commission_q": null,
     "source": "forbes.ru — разрешение на строительство «STONE Мнёвники 2» получено, GBA источника 54300 — почти точное совпадение с нашим 54900 (~1.1%); продажи стартовали поздней осенью 2024 вместе с очередью 1",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-188",
+    "canonical_building_id": null
   },
   "мфк строгино": {
     "construction_start_q": null,
     "start_q": "202509",
     "commission_q": null,
     "source": "avagroup.ru/parade-development.ru — старт продаж сентябрь 2025 (более 20% лотов забронировано за 2 мес.); план сдачи конец 2028; дата начала стройки/разрешения не нашлась",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-236",
+    "canonical_building_id": null
   },
   "top tower": {
     "construction_start_q": "202512",
     "start_q": null,
     "commission_q": null,
     "source": "moscow-city.guide, mr-group.ru — период строительства Q4 2025 - Q4 2029 (вторая очередь iCITY в Шелепихе); класс здания уточнён на Prime (fluffywhite.moscow: «офисы класса PRIME от MR Group») — исправлено в data (было A)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-204",
+    "canonical_building_id": null
   },
   "aurus": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": null,
     "source": "ИТОГ (2026-07-28): старое значение 202511 было про предварительную бронь квартир жилого компонента «Страна.Сити»/Aurus Residences, не про офис. Пользователь подтвердил: для учёта «старт продаж» считается офисная часть — у неё реальные выставленные лоты в базе (13 лотов, 13398 м², цена 1 054 859) с firstQ=202603, это подтверждённый старт офисных продаж Q1 2026, старая жилая дата к нему не относится.",
-    "last_checked": "2026-07-28"
+    "last_checked": "2026-07-28",
+    "canonical_project_id": "proj-259",
+    "canonical_building_id": null
   },
   "звенигородская от гранель": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": null,
     "source": "ПОДТВЕРЖДЕНО (2026-07-28): cre.ru/news/101199 (18.03.2026) — ГК «Гранель» официально открыла продажи в БЦ класса А «Звенигородская от Гранель» (1-й Силикатный проезд, Большой Сити). Реальный старт продаж Q1 2026, совпадает с firstQ=202603. Статья также даёт GBA всего комплекса 107236 (почти точное совпадение с нашими 107000) и отдельно офисную часть 70500 — открытый вопрос, наше значение относится к комплексу целиком или уже к офисной части (не решено, требуется решение пользователя).",
-    "last_checked": "2026-07-28"
+    "last_checked": "2026-07-28",
+    "canonical_project_id": "proj-97",
+    "canonical_building_id": null
   },
   "stone ходынка iv": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": null,
     "source": "ПОДТВЕРЖДЕНО (2026-07-28): stone.ru — STONE открыл продажи в БЦ STONE Ходынка 4 4 марта 2026. Реальный старт продаж Q1 2026, совпадает с firstQ=202603. | ДОПОЛНЕНО (2026-08-22): stone.ru/commercial/hodinka4 (живой фетч — \"Готовность 2032 г.\"), stonebrokers.ru, anwin.ru согласуются на 2032 год (ввод/сдача), квартал не уточнён ни одним источником — commission_q по-прежнему null. Год зафиксирован в data/all_projects_layer.json (proj-258, input_year=2032).",
-    "last_checked": "2026-08-22"
+    "last_checked": "2026-08-22",
+    "canonical_project_id": "proj-258",
+    "canonical_building_id": null
   },
   "set": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": null,
     "source": "ИТОГ (2026-07-28): restate.ru относил дату сентября 2024 к жилому/апартаментному компоненту мультиквартала SET (сама статья не подтверждена напрямую, WebFetch дал 403). Пользователь подтвердил: для учёта «старт продаж» считается офисная часть — у неё реальные выставленные лоты в базе (119 лотов, 35399.1 м², цена 344 493) с firstQ=202603, это подтверждённый старт офисных продаж Q1 2026.",
-    "last_checked": "2026-07-28"
+    "last_checked": "2026-07-28",
+    "canonical_project_id": "proj-261",
+    "canonical_building_id": null
   },
   "korp. молодежная": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "⚠️ ПОД ВОПРОСОМ (2026-07-28): firstQ=202603 (Q1 2026), но novostroy-m.ru датирует анонс старта продаж БЦ «KORP. Молодежная» от Группы Аквилон 26.12.2025 — до 2026 года. Точная дата фактического запуска продаж не уточнена источником (декабрь 2025 или начало января 2026 — неясно). Не разрешать волевым решением, start_q оставлен пустым.",
-    "last_checked": "2026-07-28"
+    "last_checked": "2026-07-28",
+    "canonical_project_id": "proj-251",
+    "canonical_building_id": null
   },
   "плэйн (бывший — workplace авиационная)": {
     "construction_start_q": null,
     "start_q": "202602",
     "commission_q": null,
     "source": "mirkvartir.ru (новость от 17.02.2026), mperspektiva.ru — старт продаж вместе с «Минто» как парная новая площадка FORMA workplace на Волоколамском/Авиационная; план ввода Q4 2028. GBA источник даёт ТОЧНОЕ совпадение с нашим — 15984 м²",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-273",
+    "canonical_building_id": null
   },
   "минто (бывший — workplace волоколамское)": {
     "construction_start_q": null,
     "start_q": "202602",
     "commission_q": null,
     "source": "realty.rbc.ru/mperspektiva.ru — старт продаж февраль 2026 (объявлено вместе с «Плэйн» как две новые площадки FORMA workplace на Волоколамском шоссе); план сдачи конец 2028. GBA источник даёт 62208 (у нас 56702, ~9.7% расхождение — не правила, единственный источник)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-214",
+    "canonical_building_id": null
   },
   "one tower": {
     "construction_start_q": "201907",
     "start_q": "202509",
     "commission_q": null,
     "source": "разрешение на строительство от 30.06.2018, стройка началась июль 2019 (проект изначально вёл Мосинжпроект, с конца 2023 — MR Group, что совпадает с нашим девелопером); официальный старт продаж планировался сентябрь-октябрь 2025 (умеренная уверенность — формулировка «планируется»); план сдачи Q2 2030 (точно совпадает с нашим year=2030)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-164",
+    "canonical_building_id": null
   },
   "lakes 2": {
     "construction_start_q": "202509",
     "start_q": null,
     "commission_q": null,
     "source": "kommersant.ru/office-news.ru — архитектурная концепция согласована Москомархитектурой 19.09.2025 (взято как начало стройки); план сдачи Q3 2028. Продажи уже идут по отзывам пользователей, точная дата старта не нашлась.",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-139",
+    "canonical_building_id": null
   },
   "k-city": {
     "construction_start_q": "202504",
     "start_q": "202501",
     "commission_q": null,
     "source": "cre.ru/news/99415, talkprimorye.ru — разрешение на строительство Q2 2025, старт продаж январь 2025, стройка начата апрель 2025; план сдачи конец 2028",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-136",
+    "canonical_building_id": null
   },
   "jois": {
     "construction_start_q": null,
     "start_q": "202312",
     "commission_q": null,
     "source": "novostroy-m.ru — старт продаж (квартиры/апартаменты) конец 2023; готовность 63% на январь 2026, план сдачи Q4 2027. Дата относится к жилому компоненту комплекса, для офисной части отдельно не подтверждена.",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-134",
+    "canonical_building_id": null
   },
   "lunar": {
     "construction_start_q": null,
     "start_q": "202103",
     "commission_q": null,
     "source": "realty.rbc.ru — разрешение на начало продаж (эскроу) получено в марте 2021; ввод самого модуля отдельно не подтверждён (не путать с «Lunar модуль В», у которого свой РНВ сентябрь 2024)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-14",
+    "canonical_building_id": null
   },
   "porta forma": {
     "construction_start_q": "202301",
     "start_q": "202308",
     "commission_q": null,
     "source": "cre.ru/news/92086, novostroycity.ru — начало строительства 2023, старт продаж август 2023; ввод «планируется в 1 пол. 2025» — формулировка как план, явного подтверждения постфактум не нашла, не проставляю",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-86",
+    "canonical_building_id": null
   },
   "lakes": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "lakes-office.ru/office-news.ru — «готовность IV кв. 2025, продажи открыты», формулировка неоднозначна (факт или прогноз на момент публикации) — явного «введён в эксплуатацию» не нашла, не проставляю. GBA 55378 (24136 ритейл + 18951 офис по этому источнику) — точно совпадает с нашими данными.",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-77",
+    "canonical_building_id": null
   },
   "lunar модуль в": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202409",
     "source": "forbes.ru — разрешение на ввод в эксплуатацию выдано Мосгосстройнадзором в сентябре 2024, все офисы модуля В реализованы (cre.ru)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-80",
+    "canonical_building_id": null
   },
   "orbital": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202309",
     "source": "УКРЕПЛЕНО (2026-08-01): cian.ru, morrowgroup.ru, brightrich.moscow — здание построено и «введено в эксплуатацию в 2023 году» (площадь 27271 м², класс А), активные лоты аренды/продажи на рынке — независимо подтверждает прежнюю оценку Q3 2023, точный квартал внутри года по-прежнему не уточнён явно",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-101",
+    "canonical_building_id": null
   },
   "air": {
     "construction_start_q": "202506",
     "start_q": "202506",
     "commission_q": null,
     "source": "tekta.ru, rg.ru — разрешение на строительство от Мосгосстройнадзора 10.06.2025, старт продаж анонсирован тем же летом 2025; ввод — план 2028 (не подтверждён РНВ, не проставлять)",
-    "last_checked": "2026-07-16"
+    "last_checked": "2026-07-16",
+    "canonical_project_id": "proj-112",
+    "canonical_building_id": null
   },
   "stone савеловская": {
     "construction_start_q": "202101",
     "start_q": "202104",
     "commission_q": "202603",
     "source": "ПОДТВЕРЖДЕНО (2026-08-01): kommersant.ru/doc/8462393 (25.02.2026, «Бизнес-центр STONE Савеловская введен в эксплуатацию») и companies.rbc.ru — РНВ реально получен 25.02.2026 (~100 тыс. м² общая площадь, 68,3 тыс. м² офисы, >90% продано/сдано); дата попадает в Q1 2026, квартал исправлен с 202601 на 202603 (принятая в реестре конвенция — id по последнему месяцу квартала)",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-194",
+    "canonical_building_id": null
   },
   "afi парк воронцовский": {
     "construction_start_q": "202101",
     "start_q": null,
     "commission_q": null,
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu подтверждает РНВ только на 4 ЖИЛЫХ корпуса (83,5 тыс. м², 826 квартир) и прямо называет 21-этажный офисный корпус будущим/более поздним этапом реализации, всё ещё строящимся — офисная часть по-прежнему без подтверждённого РНВ, ошибка смешения жилого/офисного не повторена",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-106",
+    "canonical_building_id": null
   },
   "октябрьское поле (бывший — общественно-деловой центр \"октябрьское поле\")": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202411",
     "source": "УКРЕПЛЕНО (2026-08-01): mskguru.ru («Достроен бизнес-центр в бывшей промзоне Октябрьское поле») — здание (Технопарк Октябрьское поле) получило разрешение на ввод в эксплуатацию, явное подтверждение РНВ (сильнее прежнего единственного источника про «сертификат практической готовности»); точный квартал по-прежнему не уточнён, оставлен 11.11.2024 (Q4 2024) по исходному rg-dev.ru",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-237",
+    "canonical_building_id": null
   },
   "fili centre": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "ОТКАЧЕНО (2026-08-01): повторная проверка kf.expert (fili-tsentr-os53166) показывает статус ПО-ПРЕЖНЕМУ «Готовность — 3 кв. 2025» (плановая, не факт ввода), в продаже выставлено здание целиком (22630 м², ~8.6 млрд руб.), активных лотов В АРЕНДУ не найдено (fili-centr.ru тоже на стадии продажи, не эксплуатации) — прежнее утверждение «реальные лоты в аренду уже на рынке» не подтвердилось при перепроверке. РНВ не найден ни в одном источнике (CRE/Kommersant/stroi.mos.ru). commission_q снят до появления явного подтверждения",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-122",
+    "canonical_building_id": null
   },
   "plaza botanica": {
     "construction_start_q": "202201",
     "start_q": null,
     "commission_q": "202412",
     "source": "УТОЧНЕНО (2026-08-01): tadviser.ru — торгово-офисный центр Botanica (90 тыс. м², включая офисную башню Plaza Botanica, этажи 4-18) получил РНВ в ноябре 2024 г.; «открытие весной 2025» (сер. февраля 2025 по novostroy-m.ru) — это техническое/маркетинговое открытие ТРЦ, а не сама дата РНВ. cre.ru/news/84576 оказался статьёй 2021 г. о начале строительства, не о вводе. Сдвинуто с Q1 2025 на Q4 2024",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-170",
+    "canonical_building_id": null
   },
   "ahead": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "voshodmoscow.ru, realty.rbc.ru — только плановая дата (сдвигалась с Q4 2024 на Q2 2025), подтверждения фактического РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-109",
+    "canonical_building_id": null
   },
   "fili residence": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "поиск — только плановая дата (сдвигалась с Q1 на Q2 2025), явного подтверждения выданного РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-124",
+    "canonical_building_id": null
   },
   "qoob": {
     "construction_start_q": "202402",
     "start_q": "202310",
     "commission_q": null,
     "source": "cre.ru/news/93883, alldoma.ru, companies.rbc.ru — первый бетон 21.02.2024, старт продаж октябрь 2023; по состоянию на февр. 2026 получено только ЗОС (заключение о соответствии) — предпоследний шаг перед РНВ, сам ввод в эксплуатацию ещё не подтверждён",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-171",
+    "canonical_building_id": null
   },
   "технопарк густав": {
     "construction_start_q": "202406",
     "start_q": null,
     "commission_q": "202609",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): redeveloper.ru, erzrf.ru, moskvichmag.ru, archi.ru — по-прежнему только плановая дата Q3 2026, подтверждения РНВ не найдено, признаков переноса тоже нет",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-247",
+    "canonical_building_id": null
   },
   "варст": {
     "construction_start_q": null,
     "start_q": "202510",
     "commission_q": "202612",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): cre.ru/news/100383, wwgroup.ru — план ввода 1-й очереди по-прежнему Q4 2026 (2-я очередь — Q4 2027), РНВ не подтверждён",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-230",
+    "canonical_building_id": null
   },
   "twist": {
     "construction_start_q": "202304",
     "start_q": "202302",
     "commission_q": null,
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): застройщик Sminex-Inteko, ЕРЗ.РФ/twist-office.ru — плановый ввод Q3 2026, разрешение на строительство от 11.04.2023 (realty.ria.ru); одна непроверенная агрегаторская заметка про «получение разрешения 20.05.2026» не подтвердилась ни на одном первичном источнике (mos.ru, stroi.mos.ru, ЕРЗ, sminex.com/kompaniya/novosti) — РНВ не проставляю",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-205",
+    "canonical_building_id": null
   },
   "nevsky plaza": {
     "construction_start_q": "202303",
     "start_q": null,
     "commission_q": "202612",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): krost.ru по-прежнему указывает IV кв. 2026, РНВ не получено. Риск дальнейшего переноса: mperspektiva.ru (01.06.2026) — средняя задержка КРОСТ по московским проектам ~19.8 мес., у объекта уже история переносов (Q4 2025 → 2027 → Q4 2026) — держать как план, перепроверить в следующем прогоне",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-155",
+    "canonical_building_id": null
   },
   "бизнес-парк переделкино": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202512",
     "source": "ПОДТВЕРЖДЕНО (2026-08-01): stroi.mos.ru + mskguru.ru/news/14735 — «Введены в эксплуатацию четыре корпуса бизнес-парка Переделкино», РНВ получен 31.12.2025 (43 тыс. м², 4 корпуса, Внуково/Новая Москва, застройщик «Абсолют»); точная дата подтверждает прежнюю оценку Q4 2025",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-221",
+    "canonical_building_id": null
   },
   "рублево бизнес-парк": {
     "construction_start_q": null,
     "start_q": "202011",
     "commission_q": null,
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): zeppelinpm.ru (01.10.2025) — «УК Zeppelin начала предэксплуатацию Rublevo Business Park» (115 581,8 м²), явно ДО-эксплуатационная стадия, РНВ ещё нет; riamo.ru (24.02.2026) описывает банный комплекс внутри «готовится к открытию» (будущее время) — комплекс близок, но подтверждения фактического ввода на дату проверки нет; комплекс из 2 башен (A/Б), непонятно какой части соответствует наша запись — не проставляю commission_q",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-244",
+    "canonical_building_id": null
   },
   "останкино": {
     "construction_start_q": "202009",
     "start_q": null,
     "commission_q": "202210",
     "source": "novostroy-m.ru — разрешение на строительство сентябрь 2020, 1-я очередь введена в IV кв. 2022 (отдельные корпуса — до 2024)",
-    "last_checked": "2026-07-13"
+    "last_checked": "2026-07-13",
+    "canonical_project_id": "proj-274",
+    "canonical_building_id": null
   },
   "деловой дуэт": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202412",
     "source": "ПОДТВЕРЖДЕНО (2026-08-01): morrowgroup.ru, kf.expert, ibcrealestate.ru, officenavigator.ru — здание введено в эксплуатацию, 2024 год, множество реальных активных лотов аренды/продажи по конкретным этажам и помещениям на рынке (функциональное подтверждение эксплуатации по CRITICAL RULE), точный квартал не уточнён нигде — оставлен Q4 как консервативная оценка",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-277",
+    "canonical_building_id": null
   },
   "квартал lucky": {
     "construction_start_q": "201806",
     "start_q": null,
     "commission_q": "202309",
     "source": "stroi.mos.ru — разрешение на строительство 30.06.2018, ввод корпусов 1-6 — 26.09.2023 (III кв. 2023)",
-    "last_checked": "2026-07-13"
+    "last_checked": "2026-07-13",
+    "canonical_project_id": "proj-275",
+    "canonical_building_id": null
   },
   "icity (space)": {
     "construction_start_q": "202008",
     "start_q": "202207",
     "commission_q": "202509",
     "source": "УТОЧНЕНО (2026-08-01): cre.ru/news/99147 — Мосгосстройнадзор выдал РНВ на 61-этажную башню Space Tower (iCity, 2-я очередь, 112,7 тыс. м² с атриумом) 05.08.2025 (отличается от башни Time, введённой раньше); сдвинуто с оценки Q4 2025 на подтверждённый Q3 2025",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-129",
+    "canonical_building_id": null
   },
   "эйлер": {
     "construction_start_q": null,
     "start_q": "202207",
     "commission_q": null,
     "source": "kommersant.ru, cre.ru — старт продаж Q3 2022; дата ввода только плановая (Q1 2024, затем Q2 2024), подтверждения фактического РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-250",
+    "canonical_building_id": null
   },
   "taller": {
     "construction_start_q": "202201",
     "start_q": "202201",
     "commission_q": null,
     "source": "coldy.info, archi.ru — старт строительства и продаж январь 2022; получен только ЗОС (не РНВ) — та же ошибка, что и с QOOB. Подтверждено мастер-таблицей пользователя (Свод Q2 2026, лист ЗДАНИЯ): статус «Строящийся» по состоянию на Q2 2026 — commission_q убран",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-201",
+    "canonical_building_id": null
   },
   "stone курская": {
     "construction_start_q": "202204",
     "start_q": null,
     "commission_q": "202512",
     "source": "ПОДТВЕРЖДЕНО (2026-08-01): kommersant.ru/doc/8177805 и cre.ru/news/100440, оба от 31.10.2025 — РНВ на STONE Курская (17,1 тыс. м², Prime-класс, Таганский р-н) получен 31.10.2025, точная дата подтверждает прежнюю оценку Q4 2025",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-181",
+    "canonical_building_id": null
   },
   "upside кунцево": {
     "construction_start_q": null,
     "start_q": "202401",
     "commission_q": "202512",
     "source": "УТОЧНЕНО (2026-08-01): cre.ru/news/100754, kuntsevo-gazeta.ru, mm-g.ru (все от 18.12.2025) — Мосгосстройнадзор оформил РВЭ для Upside Кунцево (Рублёвское ш., 21); дата публикации подтверждает Q4 2025, а не Q3 2025 как было ранее; старт продаж 2024 без изменений",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-138",
+    "canonical_building_id": null
   },
   "rail.a": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): застройщик ORTIGA Development, Переведеновский пер. — ortiga.ru, свежая новость от 19.06.2026 описывает АКТИВНУЮ стройку (фасадные работы этажи 14-19, монолит 25 этажа, кладка стен 21-24, окна 21-24/27-28, кровля, электрика 29 этажа) — здание явно далеко от готовности, продающий сайт rail-a.ru всё ещё рекламирует лапсированный план «ввод конец 2025» как маркетинг; commission_q не проставляю",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-173",
+    "canonical_building_id": null
   },
   "dream riva": {
     "construction_start_q": null,
     "start_q": "202504",
     "commission_q": "202604",
     "source": "ПОДТВЕРЖДЕНО (2026-08-01, без изменений): cre.ru/news/101480 (24.04.2026) прямо пишет «введён в эксплуатацию бизнес-центр «Рива»» (прошедшее время); никаких более поздних опровержений не найдено; старт продаж апрель 2025",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-276",
+    "canonical_building_id": null
   },
   "chalet пятницкая 40": {
     "construction_start_q": "202603",
@@ -398,251 +510,335 @@
     "stage": "Начальный этап строительства",
     "stage_as_of": "202606",
     "source": "ИСПРАВЛЕНО (2026-07-29, по прямому указанию пользователя с источниками): плановый ввод = Q2 2028 (202806). Основание 1 — официальный сайт проекта https://chalet40.moscow/about, дословно «Срок сдачи: 2 кв. 2028 г.» (проверено WebFetch 2026-07-29). Основание 2 — https://mskguru.ru/news/15028-v-zamoskvoreche-startovalo-stroitelystvo-bk-pyatnickaya-40-shale от 11.03.2026: «Хайтек Девелопмент» получила разрешение на строительство, работы начинаются → construction_start_q=202603 (Q1 2026) и stage=«Начальный этап строительства» на конец Q2 2026. Статус остаётся «Строится» — в «Построен/введён» НЕ переводить и стадию выше начальной НЕ поднимать без отдельного датированного доказательства (монтаж этажей/фасад). SUPERSEDED (сохранено только как история источников, НЕ как актуальный срок): «2026» (было в year квартального файла) и «Q4 2026»=202612 (было в commission_q, источники rusdevelopers.ru/hitdev.ru от 2026-07-14); также встречается устаревшее «IV квартал 2027» (в частности в стороннем трекере Remain, см. REMAIN_GAP_ANALYSIS_2026-07-29.md) — все три значения считать недействительными. Старт продаж Q2 2026 не менялся, подтверждён мастер-таблицей пользователя (Свод Q2 2026, лист ЗДАНИЯ).",
-    "last_checked": "2026-07-29"
+    "last_checked": "2026-07-29",
+    "canonical_project_id": "proj-272",
+    "canonical_building_id": null
   },
   "солид (бывший — nice tower)": {
     "construction_start_q": "202112",
     "start_q": null,
     "commission_q": "202712",
     "source": "coldy.info — старт продаж N'ICE TOWER, ввод в эксплуатацию запланирован на 2027 год",
-    "last_checked": "2026-07-13"
+    "last_checked": "2026-07-13",
+    "canonical_project_id": "proj-158",
+    "canonical_building_id": null
   },
   "noon": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202609",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): d-a.ru (новости до конца июня 2026) — фасад завершён, идёт отделка МОП и инженерия, дата ввода явно не названа, РНВ не подтверждён; неофициальный комментарий на novostroy-m.ru намекает на возможный перенос на начало 2027 (не подтверждено) — держать план Q3 2026, перепроверить в сентябре 2026",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-159",
+    "canonical_building_id": null
   },
   "opus": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): застройщик PIONEER, Дербеневская наб., 1 — kommersant.ru/doc/6635722 (10.04.2024) называл план 2025; текущие площадки продаж (cian.ru, freedome-realty.ru, roomfi.ru) сходятся на Q1 2026 (ЕИСЖС) — план уже просрочен на несколько месяцев, подтверждения РНВ нигде не нашла (cian.ru недоступен из-за CAPTCHA)",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-165",
+    "canonical_building_id": null
   },
   "бадаевский западная лента": {
     "construction_start_q": null,
     "start_q": "202606",
     "commission_q": "202703",
     "source": "office-news.ru говорил про февраль 2021, НО это была, похоже, другая очередь комплекса — мастер-таблица пользователя (Свод Q2 2026, лист СРАВНЕНИЕ КВАРТАЛОВ) показывает, что именно это здание впервые появилось в продаже в Q2 2026 (отсутствовало в Q1) — используем эту дату как более точную; передача ключей запланирована на Q1 2027 (стройготовность 85% на момент проверки, не РНВ)",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "badaevsky",
+    "canonical_building_id": "badaevsky-west"
   },
   "likova": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": "202612",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): официальный сайт likova.center на 01.08.2026 указывает III кв. 2026 (на квартал раньше текущей записи), но rusdevelopers.ru и другие агрегаторы по-прежнему называют IV кв. 2026 — источники расходятся, РНВ нигде не подтверждён; оставляю Q4 2026 как консервативную оценку, рекомендуется ручная проверка",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-266",
+    "canonical_building_id": null
   },
   "руновский 14": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": null,
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): застройщик Ziggurat — плановая передача ключей по-прежнему 30.09.2026 (Q3 2025 → Q2 2026 → 30.09.2026), РНВ не подтверждена; runovsky14.ru и cian.ru недоступны для проверки (пустая страница/CAPTCHA)",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-265",
+    "canonical_building_id": null
   },
   "stone ленинский": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202609",
     "source": "ПОДТВЕРЖДЕНО И УТОЧНЕНО (2026-08-01): kommersant.ru/doc/8832150 (~22.07.2026) — STONE Ленинский получил РНВ от Мосгосстройнадзора, третий БЦ STONE, введённый в 2026 г.; 73,7 тыс. м², 97% продано, STONE Office уже принимает помещения. Явное подтверждение ввода, сдвинуто с плановой оценки Q4 2026 на подтверждённый Q3 2026",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-184",
+    "canonical_building_id": null
   },
   "afi2b tagilskaya": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202609",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): afi-development.com и большинство агрегаторов (roomfi.ru, novostroy-m.ru) по-прежнему указывают план Q3 2026; РНВ не подтверждён. Обнаружено единичное расхождение (Q4 2026 на одной странице AFI) — не является надёжным сигналом переноса",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-108",
+    "canonical_building_id": null
   },
   "бц на ул. эдварда грига": {
     "construction_start_q": "202306",
     "start_q": null,
     "commission_q": "202606",
     "source": "УТОЧНЕНО (2026-08-01): stroi.mos.ru + a101.ru (новость ~27.05.2026) — офисный центр А101 на ул. Эдварда Грига, 18, корп. 1-4 (пос. Сосенское, 8-этажное здание-«айсберг», 3682 м²) получил РНВ; ранее в реестре стояла оценка Q1 2026, уточнено до Q2 2026 по дате новости",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-226",
+    "canonical_building_id": null
   },
   "level воронцовская": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202612",
     "source": "ПЕРЕПРОВЕРЕНО (2026-08-01, без изменений): business.level.ru по-прежнему указывает план IV кв. 2026, РНВ не получено",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-144",
+    "canonical_building_id": null
   },
   "geolog 2": {
     "construction_start_q": "202310",
     "start_q": "202509",
     "commission_q": "202606",
     "source": "⚠️ ПЕРЕПРОВЕРЕНО, ПРОТИВОРЕЧИЕ СОХРАНЯЕТСЯ (2026-08-01): повторный веб-поиск (Hutton, geolog2.business, cian.ru, archi.ru) снова не находит РНВ — снова только план «ввод Q2-Q3 2026», cian.ru показывает отделку сдаваемых лотов к 01.09.2026 (т.е. ещё идёт fit-out). Мастер-таблица пользователя (Свод Q2 2026, лист ЗДАНИЯ) по-прежнему показывает статус «Введён» на Q2 2026 — оставляю приоритет за внутренним источником как и в прошлый раз, но помечаю: два независимых захода веб-поиска подряд НЕ находят публичного подтверждения, стоит сверить напрямую по таблице/первичному реестру РНВ при следующей проверке",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-128",
+    "canonical_building_id": null
   },
   "level южнопортовая": {
     "construction_start_q": "202203",
     "start_q": "202206",
     "commission_q": "202606",
     "source": "⚠️ ПЕРЕПРОВЕРЕНО, ПРОТИВОРЕЧИЕ УСИЛИЛОСЬ (2026-08-01): level.ru/companies.rbc.ru — офисный центр (2295 м², 4 этажа) выставлялся на аукцион ЦЕЛИКОМ как Shell&Core (старт торгов 17.10.2025, стартовая цена 500 млн руб.), проектная страница business.level.ru по-прежнему пишет «ввод запланирован на Q2 2026» (будущее время), РНВ конкретно для офисного центра нигде не подтверждён (найденный РНВ — только для жилых корпусов 4-7). Мастер-таблица пользователя (Свод Q2 2026, лист ЗДАНИЯ + СРАВНЕНИЕ КВАРТАЛОВ) по-прежнему показывает «Введён» и лот в Q1+Q2 2026 — оставляю приоритет за внутренним источником, но сигнал стал сильнее (аукцион шелл-объекта): рекомендуется ручная сверка перед следующим циклом",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-146",
+    "canonical_building_id": null
   },
   "бадаевский восточная лента": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202712",
     "source": "mirkvartir.ru и др. — только плановая дата (Q4 2027), монолит завершён, подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "badaevsky",
+    "canonical_building_id": "badaevsky-east"
   },
   "а101 прокшино": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202712",
     "source": "a101.ru — только плановая дата (2-я очередь, Q4 2027), продажи идут, подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-216",
+    "canonical_building_id": null
   },
   "stone дмитровская": {
     "construction_start_q": "202406",
     "start_q": null,
     "commission_q": "202703",
     "source": "mperspektiva.ru, kommersant.ru — начало работ на площадке июнь 2024, монолит на 50% (на момент проверки), только плановая дата ввода (Q1 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-177",
+    "canonical_building_id": null
   },
   "башня рябов": {
     "construction_start_q": "202606",
     "start_q": null,
     "commission_q": null,
     "source": "ИСПРАВЛЕНО (2026-08-01, устранён дубль ключа — было два конфликтующих объекта \"башня рябов\" в файле, JSON.parse тихо использовал только второй, из-за чего более свежая (16.07) проверка терялась). mirkvartir.ru (11.06.2026, «Началось строительство БЦ «Башня Рябов» в Холодильном переулке») — строительство фактически стартовало июнь 2026, подтверждает более раннее разрешение на строительство+АГР от 31.03.2026 (companies.rbc.ru). Плановый ввод — Q1 2029 («сдать в эксплуатацию планируется в I квартале 2029 года»), это ТОЛЬКО план на самом раннем этапе стройки — commission_q не проставляю по CRITICAL RULE. ПРИМЕЧАНИЕ: в данных здания (buildings_202606.json) поле year=2027, источники называют план 2029 — расхождение, возможно стоит поправить поле year отдельно (не сделано в этом прогоне, вне области задачи).",
-    "last_checked": "2026-08-01"
+    "last_checked": "2026-08-01",
+    "canonical_project_id": "proj-220",
+    "canonical_building_id": null
   },
   "stone ходынка i": {
     "construction_start_q": null,
     "start_q": "202309",
     "commission_q": "202712",
     "source": "stone.ru — старт продаж сентябрь 2023, только плановая дата ввода (2027 год), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-196",
+    "canonical_building_id": null
   },
   "west pier": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202706",
     "source": "fortexgroup.ru — только плановая дата (Q2 2027, возможен перенос на более ранний срок), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-212",
+    "canonical_building_id": null
   },
   "бизнес-хаб потапово": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": "202709",
     "source": "a101.ru — старт продаж 1-й очереди март 2026, только плановая дата ввода 1-й очереди (Q3 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-278",
+    "canonical_building_id": null
   },
   "мануфактура xix": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202712",
     "source": "cre.ru/news/101207, realty.ru — продажи открыты, только плановая дата ввода (Q4 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-270",
+    "canonical_building_id": null
   },
   "emotion": {
     "construction_start_q": null,
     "start_q": "202603",
     "commission_q": "202706",
     "source": "ИТОГ (2026-07-28): старое значение 202308 было про продажи жилого апарт-комплекса Emotion (ГК «Основа»), не про офис (класс A, GBA 77700). Пользователь подтвердил: для учёта «старт продаж» считается офисная часть — у неё реальные выставленные лоты в базе (14 лотов, 1624.8 м², цена 480 946) с firstQ=202603, это подтверждённый старт офисных продаж Q1 2026, старая жилая дата не относится.",
-    "last_checked": "2026-07-28"
+    "last_checked": "2026-07-28",
+    "canonical_project_id": "proj-262",
+    "canonical_building_id": null
   },
   "upside tech сколково": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202709",
     "source": "fortexgroup.ru, upside-tech.ru — только плановая дата (Q3 2027, возможен перенос на более ранний срок), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-254",
+    "canonical_building_id": null
   },
   "бизнес-парк раменки (бывший — огни)": {
     "construction_start_q": "201806",
     "start_q": "201903",
     "commission_q": null,
     "source": "novostroycity.ru, domkad.ru — разрешение на строительство и старт продаж 2018-2019; сроки сдачи по комплексу расходятся сильно (Q1 2025 - Q4 2029, часть корпусов комплекса уже сдана, но неясно, относится ли это к отслеживаемой у нас части) — не проставляю commission_q из-за низкой уверенности",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-252",
+    "canonical_building_id": null
   },
   "сити-4": {
     "construction_start_q": "202502",
     "start_q": null,
     "commission_q": "202706",
     "source": "moscow-city.guide — символическая закладка февраль 2025 (проект куплен у структур Усманова в окт. 2024), только плановая дата ввода (Q2 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-245",
+    "canonical_building_id": null
   },
   "edel": {
     "construction_start_q": null,
     "start_q": "202601",
     "commission_q": "202712",
     "source": "office-news.ru — контракт со стройподрядчиком заключён, старт продаж примерно начало 2026, только плановая дата ввода (2-е полугодие 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-120",
+    "canonical_building_id": null
   },
   "aspace хорошевская": {
     "construction_start_q": null,
     "start_q": "202505",
     "commission_q": "202712",
     "source": "kommersant.ru, realty.ria.ru — старт продаж май 2025, только плановая дата ввода (конец 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-113",
+    "canonical_building_id": null
   },
   "frame": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202706",
     "source": "cre.ru/news/98974 — продажи идут, только плановая дата ввода (Q2 2027), подтверждения РНВ не нашла; ПРИМЕЧАНИЕ: ПИК ведёт переговоры о продаже этого БЦ другому собственнику (лето 2025) — не влияет на дату ввода, но стоит иметь в виду при след. проверке",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-126",
+    "canonical_building_id": null
   },
   "valtri": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202709",
     "source": "arendator.ru, office-news.ru — «не позднее Q3 2027» (плановая дата), реализовано 60% стартового объёма к дек. 2025, подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-209",
+    "canonical_building_id": null
   },
   "ольховая sky": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202712",
     "source": "fortexgroup.ru — «строительство проходит по графику, приёмка госкомиссией запланирована на Q4 2027» — плановая дата, подтверждения фактического РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-240",
+    "canonical_building_id": null
   },
   "цетлин": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202712",
     "source": "moscow-city.guide, cre.ru/news/100989 — завершение запланировано на Q4 2027, продажи идут (есть конкретные сделки), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-249",
+    "canonical_building_id": null
   },
   "upside ямская": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202706",
     "source": "upside.ru и др. — источники расходятся (Q2 2027 vs 2028 год), взят вариант, совпадающий с нашим полем year=2027; подтверждения РНВ не нашла, старт продаж не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-208",
+    "canonical_building_id": null
   },
   "sezar tower": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202806",
     "source": "fortexgroup.ru, comfortclass.ru — источники сильно расходятся (Q2 2028 vs Q4 2030), взят вариант, совпадающий с нашим полем year=2028; идут земляные работы/ограждение котлована, подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-268",
+    "canonical_building_id": null
   },
   "stone ходынка ii": {
     "construction_start_q": "202507",
     "start_q": "202503",
     "commission_q": "202809",
     "source": "cre.ru/news/94248, realty.rbc.ru, stone.ru — старт продаж март 2025, начало строительства июль 2025 (фундаменты трёх башен); срок сдачи расходится (Q1 2028 vs Q3 2028 на офиц. сайте) — взят более поздний/осторожный вариант, подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14"
+    "last_checked": "2026-07-14",
+    "canonical_project_id": "proj-197",
+    "canonical_building_id": null
   },
   "бизнес-центр sezar": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "ПОДТВЕРЖДЕНО (2026-08-22): rusdevelopers.ru (\"Срок реализации проекта 2027 год\"), silikatny-13.ru, sezar-group.pvt.ru — сходятся на 2027 год, точный квартал не уточняется ни одним источником (commission_q оставлен null — фабриковать месяц/квартал не стал). Год зафиксирован напрямую в data/all_projects_layer.json (proj-72, input_year=2027, input_date_kind=confirmed).",
-    "last_checked": "2026-08-22"
+    "last_checked": "2026-08-22",
+    "canonical_project_id": "proj-72",
+    "canonical_building_id": null
   },
   "stone ходынка iii": {
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
     "source": "ПОДТВЕРЖДЕНО (2026-08-22): stone.ru/commercial/hodinka3 (живой фетч страницы — \"Готовность 2029\"), stonebrokers.ru (\"Готовность 2029 год\"), kommersant.ru/doc/8228995 (\"завершение строительных работ запланировано на 2029 год\") — 3 независимых источника, 2029. Разрешение на строительство получено (та же статья kommersant.ru). Ранее числился конфликт 2028 (заголовок в поисковой выдаче stone.ru) vs 2029 (stonebrokers.ru) — заголовок оказался устаревшей SEO-метаданной, содержимое живой страницы прямо называет 2029. Квартал не уточнён ни одним источником, commission_q оставлен null. Год зафиксирован в data/all_projects_layer.json (proj-200, input_year=2029).",
+    "last_checked": "2026-08-22",
+    "canonical_project_id": "proj-200",
+    "canonical_building_id": null
+  },
+  "империя": {
+    "canonical_project_id": "cwhost-0001",
+    "canonical_building_id": "cwhost-0001-bld",
+    "construction_start_q": null,
+    "construction_start_year": 2006,
+    "start_q": null,
+    "sales_start_year": null,
+    "commission_q": null,
+    "commission_year": 2011,
+    "source": "moscow-city.guide/towers/bashnya-imperiya; imoscowcity.ru/tower/bashnya-imperiya; imperia-tower.com — two sources agree on 203191 m2/121497 m2/2011, official project page corroborates 2006 start and ~203000 m2",
     "last_checked": "2026-08-22"
   }
 }

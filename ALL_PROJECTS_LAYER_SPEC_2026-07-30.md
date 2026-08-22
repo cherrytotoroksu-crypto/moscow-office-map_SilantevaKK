@@ -52,6 +52,7 @@
 | `canonical_project_id` | Устойчивый ключ для связи с квартальным слоем и внешними наблюдениями — без него нельзя ни на что сослаться | Codex |
 | `canonical_building_id` | Разделение проекта на корпуса (Бадаевский, STONE-кластеры) | Codex |
 | `entity_grain` | `project` или `building` — на каком уровне запись | Codex |
+| `entity_role` | `office_project`, `coworking_site` или `host_building` — семантическая роль и набор обязательных полей; не смешивать с уровнем project/building | решение пользователя 2026-08-22, AUDIT-011 |
 | `aliases` | Известные альтернативные названия (для entity_matches) | Codex |
 | `developer`, `address`, `latitude`, `longitude` | Базовые описательные поля — без них слой бесполезен | очевидно из контекста задачи |
 | `geometry_quality` | Отдельная (не общая) оценка надёжности координаты | Codex, правило «нельзя одной общей оценкой» |
@@ -64,6 +65,27 @@
 | `quarter_offer_refs` / `quarter_offer_exists` | Ссылки на кварталы с реальными лотами — вычисляемые, не хранить руками | Codex, критично для раздела 3 |
 | `qa_status`, `qa_notes` | Итог автоматической проверки | новое, для scripts/validate_all_projects_layer.py |
 | `first_seen_at`, `last_verified_at`, `source_count` | История проверки записи | Codex |
+
+### Роли сущностей и разные обязательные поля (решено 2026-08-22)
+
+Площадка оператора и физическое здание-хост остаются двумя разными публичными
+сущностями. `entity_grain` для этого недостаточно: площадка оператора живёт на
+уровне записи `project`, но не является девелоперским офисным проектом. Поэтому
+введено независимое поле `entity_role`:
+
+| `entity_role` | Что описывает | Обязательные поля полноты |
+|---|---|---|
+| `office_project` | офисный проект или его отдельный корпус | address, latitude, longitude, GBA, GLA, input_year |
+| `coworking_site` | площадка оператора внутри здания | address, latitude, longitude, developer (в текущей модели — оператор); GBA/GLA и строительные даты здания **не обязательны** |
+| `host_building` | физическое здание, где размещена площадка | address, latitude, longitude, cls, GBA, GLA, input_year |
+
+Правило запрещает копировать GBA/GLA/дату ввода здания-хоста в
+`coworking_site`: это разные сущности и такое копирование создаёт двойной учёт.
+Роль выводится централизованно в `scripts/all_projects_entity_roles.py`:
+`source=coworking_host_lookup` → `host_building`, чистый канал
+`market_channel=["coworking"]` → `coworking_site`, остальные записи →
+`office_project`. Смешанные sale/rent+coworking записи остаются
+`office_project`, потому что описывают само здание/проект, а не только площадку.
 
 ## Дубли корпусов/башен — явное правило (по задаче)
 

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Челябинск",
+    "network": "Практик",
+    "district": "Другое",
+    "bc": "Коммуны, 87",
+    "address": "г. Челябинск, ул. Коммуны, 87",
+    "vacancy": 70.0,
+    "seats": null,
+    "rate": 19000.0,
+    "lat": 55.781489,
+    "lng": 37.615695,
+    "id": 36,
+    "source_file": "coworking_202503.json",
+    "out_of_scope": true,
+    "city": "Челябинск",
+    "verified_address": "Челябинск, улица Коммуны, 87",
+    "qa_notes": "Исключено из московского слоя 2026-08-22: официальный praktik.work/chelyabinsk и cian.ru/coworking-praktik-chelyabinsk-70101 подтверждают адрес Челябинск, ул. Коммуны, 87; московские координаты были ошибочными."
+  }
+]
