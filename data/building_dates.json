@@ -84,8 +84,8 @@
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202112",
-    "source": "technopark-plaza.ru — офиц. разрешение на ввод в эксплуатацию №77-126000-010568-2021 (Мосгосстройнадзор), Q4 2021",
-    "last_checked": "2026-07-16",
+    "source": "technopark-plaza.ru официальное разрешение на ввод №77-126000-010568-2021 (уже в building_dates.json с 2026-07-16)",
+    "last_checked": "2026-08-22",
     "canonical_project_id": "proj-85",
     "canonical_building_id": null
   },
@@ -245,9 +245,9 @@
   "porta forma": {
     "construction_start_q": "202301",
     "start_q": "202308",
-    "commission_q": null,
-    "source": "cre.ru/news/92086, novostroycity.ru — начало строительства 2023, старт продаж август 2023; ввод «планируется в 1 пол. 2025» — формулировка как план, явного подтверждения постфактум не нашла, не проставляю",
-    "last_checked": "2026-07-16",
+    "commission_q": "202509",
+    "source": "cre.ru/news/95248: «запланирован ввод в 3 квартале 2025 года», проект реализован на 50% | КОНФЛИКТ: Пользователь сообщил подтверждение ввода через работающий Multispace в БЦ Porta — независимая перепроверка (2ГИС, 2026-08-22) НЕ нашла коворкинг Multispace по адресу Заречная ул., вл.2/1, и сам 2ГИС всё ещё называет объект «строящийся бизнес-центр». cre.ru/news/95248 даёт только ПЛАНОВЫЙ срок (Q3 2025) со стадии ~50% готовности, не фактический ввод. commission_q проставлен по плановому сроку с пометкой низкой уверенности; факт ввода НЕ подтверждён двумя независимыми источниками — конфликт с утверждением пользователя зафиксирован, дальнейшая проверка нужна отдельно (проверить реестр Мосгосстройнадзора/ввод в эксплуатацию по адресу Заречная ул., вл. 2/1).",
+    "last_checked": "2026-08-22",
     "canonical_project_id": "proj-86",
     "canonical_building_id": null
   },
@@ -840,5 +840,14 @@
     "commission_year": 2011,
     "source": "moscow-city.guide/towers/bashnya-imperiya; imoscowcity.ru/tower/bashnya-imperiya; imperia-tower.com — two sources agree on 203191 m2/121497 m2/2011, official project page corroborates 2006 start and ~203000 m2",
     "last_checked": "2026-08-22"
+  },
+  "stone пресня": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202703",
+    "source": "IBC Real Estate (плановый ввод I кв. 2027); of.ru (карточка STONE Пресня, срок сдачи Q1 2027)",
+    "last_checked": "2026-08-22",
+    "canonical_project_id": "proj-1",
+    "canonical_building_id": null
   }
 }
