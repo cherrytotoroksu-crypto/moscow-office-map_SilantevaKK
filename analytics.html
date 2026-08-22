@@ -261,6 +261,23 @@ const ANA_GROUPBY_PROJECTS = [['developer','Девелопер'],['submarket','�
   ['input_year','Год ввода'],['confidence','Уверенность данных']];
 const ANA_NA_LABEL = 'Не определено';
 
+// Хронологический groupBy ("Год ввода") — не сортировать по значению
+// метрики, иначе годы перемешиваются (было замечено на линейном графике:
+// 2026 после "Не определено", 2011 внутри малых значений). Остальные
+// group-by (девелопер/класс/статус и т.п.) — категориальные, для них
+// сортировка по значению метрики (убывание) остаётся как была.
+const ANA_CHRONOLOGICAL_GROUPBY = new Set(['input_year']);
+function sortAnaEntries(entries, groupBy) {
+  if (!ANA_CHRONOLOGICAL_GROUPBY.has(groupBy)) {
+    return entries.slice().sort((a, b) => b[1] - a[1]);
+  }
+  return entries.slice().sort((a, b) => {
+    const aNa = a[0] === ANA_NA_LABEL, bNa = b[0] === ANA_NA_LABEL;
+    if (aNa || bNa) return aNa === bNa ? 0 : (aNa ? 1 : -1);
+    return Number(a[0]) - Number(b[0]);
+  });
+}
+
 function anaDomain() { return document.querySelector('input[name="anaDomain"]:checked').value; }
 
 function fillSelect(sel, options, keepValue) {
@@ -484,7 +501,7 @@ async function renderAnalytics() {
     const agg = domain === 'quarterly'
       ? aggregateQuarterly(toQ, channel, metric, groupBy, null, developerFilter)
       : aggregateProjects(metric, groupBy, statusFilter, developerFilter);
-    const entries = Object.entries(agg).filter(([,v]) => v != null).sort((a,b) => b[1]-a[1]);
+    const entries = sortAnaEntries(Object.entries(agg).filter(([,v]) => v != null), groupBy);
     labels = entries.map(([k]) => k);
     const data = entries.map(([,v]) => Math.round(v * 100) / 100);
     datasets = [{ label: (domain==='quarterly'?ANA_METRICS[channel]:ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric,
@@ -545,7 +562,7 @@ async function exportAnalytics() {
     : aggregateProjects(metric, groupBy, statusFilter, developerFilter);
   const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
   const metricLabel = (domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric;
-  const rows = Object.entries(agg).filter(([,v])=>v!=null).sort((a,b)=>b[1]-a[1])
+  const rows = sortAnaEntries(Object.entries(agg).filter(([,v])=>v!=null), groupBy)
     .map(([k,v]) => ({ [groupLabel]: k, [metricLabel]: Math.round(v*100)/100 }));
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Конструктор');
