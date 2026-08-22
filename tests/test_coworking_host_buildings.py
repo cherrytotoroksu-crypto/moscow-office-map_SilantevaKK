@@ -29,7 +29,7 @@ class CoworkingHostBuildingTests(unittest.TestCase):
         cls.hosts = [r for r in cls.layer if r.get("source") == "coworking_host_lookup"]
 
     def test_at_least_the_confirmed_hosts_are_present(self):
-        self.assertGreaterEqual(len(self.hosts), 57)
+        self.assertGreaterEqual(len(self.hosts), 61)
 
     def test_host_records_have_confirmed_class_and_evidence(self):
         for r in self.hosts:
