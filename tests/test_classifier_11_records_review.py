@@ -60,6 +60,11 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         self.assertEqual(r["input_year"], 2027)
         self.assertEqual(r["input_quarter"], 4)
 
+    def test_olkhovaya_sky_class_reconciled_to_b(self):
+        r = self.by_id["proj-240"]
+        self.assertEqual(r["cls"], "B")
+        self.assertIn("Fortex Group", r["qa_notes"])
+
     def test_sezar_completion_year_fixed_with_cited_source(self):
         # 2026-08-22: rusdevelopers.ru ("Срок реализации проекта 2027 год"),
         # silikatny-13.ru, sezar-group.pvt.ru, novostroy-m.ru — квартал не
@@ -90,6 +95,11 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         self.assertIsNone(r["input_quarter"])
         self.assertEqual(r["input_date_kind"], "confirmed")
         self.assertIn("stone.ru", r["qa_notes"])
+
+    def test_stone_khodynka_4_class_reconciled_to_prime(self):
+        r = self.by_id["proj-258"]
+        self.assertEqual(r["cls"], "Prime")
+        self.assertIn("STONE official page", r["qa_notes"])
 
     def test_new_date_fixes_did_not_fabricate_a_quarter(self):
         # Общий инвариант этого захода: там, где источники называют только
@@ -161,11 +171,11 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         r = self.by_id["proj-13"]
         self.assertEqual(r["offer_status"], "Ещё не вышел в продажу")
 
-    def test_stone_khodynka_4_class_mismatch_still_unresolved(self):
-        # stone.ru/commercial/hodinka4: класс Прайм — наша запись хранит A.
-        # Пин на текущее (неверное) значение, чтобы правка была осознанной.
+    def test_stone_khodynka_4_class_reconciled(self):
+        # STONE official page calls the project premium; market sources map
+        # that label to canonical class Prime.
         r = self.by_id["proj-258"]
-        self.assertEqual(r["cls"], "A")
+        self.assertEqual(r["cls"], "Prime")
 
     def test_review_did_not_touch_building_dates(self):
         bd_path = REPO_ROOT / "data" / "building_dates.json"
