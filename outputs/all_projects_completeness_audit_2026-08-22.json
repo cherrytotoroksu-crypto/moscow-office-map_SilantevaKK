@@ -2,9 +2,9 @@
   "generated_at": "2026-08-22",
   "read_only": true,
   "registry": {
-    "rows": 373,
-    "public_rows": 353,
-    "canonical_public_rows": 336,
+    "rows": 374,
+    "public_rows": 355,
+    "canonical_public_rows": 338,
     "duplicate_rows_excluded_from_completeness_denominator": 17
   },
   "historical_sources": {
@@ -22,7 +22,7 @@
     },
     "unmatched_observation_count": 0,
     "unmatched_unique": [],
-    "ambiguous_observation_count": 681,
+    "ambiguous_observation_count": 690,
     "ambiguous_unique": [
       {
         "channel": "building",
@@ -2087,6 +2087,19 @@
       },
       {
         "channel": "coworking",
+        "source": "coworking_202403.json",
+        "name": "Apollax Технопарк",
+        "bc": "Технопарк",
+        "address": "проспект Андропова, 10",
+        "lat": 55.69393,
+        "lng": 37.66443,
+        "matched_ids": [
+          "proj-58",
+          "proj-8"
+        ]
+      },
+      {
+        "channel": "coworking",
         "source": "coworking_202407.json",
         "name": "WeWork Роза",
         "bc": "Красная Роза",
@@ -2996,6 +3009,19 @@
       },
       {
         "channel": "coworking",
+        "source": "coworking_202407.json",
+        "name": "Apollax Технопарк",
+        "bc": "Технопарк",
+        "address": "проспект Андропова, 10",
+        "lat": 55.693931,
+        "lng": 37.664428,
+        "matched_ids": [
+          "proj-58",
+          "proj-8"
+        ]
+      },
+      {
+        "channel": "coworking",
         "source": "coworking_202410.json",
         "name": "Speace Jet Тимура Фрунзе",
         "bc": "Красная Роза",
@@ -3725,7 +3751,7 @@
         "source": "coworking_202410.json",
         "name": "Apollax Space",
         "bc": "Технопарк",
-        "address": "",
+        "address": "проспект Андропова, 10",
         "lat": 55.693931,
         "lng": 37.664428,
         "matched_ids": [
@@ -4688,7 +4714,7 @@
         "source": "coworking_202412.json",
         "name": "Apollax Space",
         "bc": "Технопарк",
-        "address": "",
+        "address": "проспект Андропова, 10",
         "lat": 55.693931,
         "lng": 37.664428,
         "matched_ids": [
@@ -4992,11 +5018,12 @@
         "channel": "coworking",
         "source": "coworking_202503.json",
         "name": "Multispace Галерея Актер",
-        "bc": "",
-        "address": "",
+        "bc": "Галерея Актер",
+        "address": "Тверская ул., 16, стр. 1",
         "lat": 55.7762,
         "lng": 37.5895,
         "matched_ids": [
+          "proj-160",
           "proj-31",
           "proj-41"
         ]
@@ -5164,10 +5191,11 @@
         "source": "coworking_202503.json",
         "name": "Signature Столешников",
         "bc": "Signature Столешников, 11",
-        "address": "",
+        "address": "Столешников пер., 11",
         "lat": 55.763432,
         "lng": 37.615857,
         "matched_ids": [
+          "cwhost-0047",
           "proj-17",
           "proj-242",
           "proj-45"
@@ -5178,7 +5206,7 @@
         "source": "coworking_202503.json",
         "name": "Регус (Пр. Мира, 40)",
         "bc": "Проспект Мира, 40",
-        "address": "",
+        "address": "Мира пр-т, 40",
         "lat": 55.780233,
         "lng": 37.63376,
         "matched_ids": [
@@ -5204,10 +5232,11 @@
         "source": "coworking_202503.json",
         "name": "Smart Yard (на Волгоградском)",
         "bc": "РТС Волгоградский",
-        "address": "",
+        "address": "Волгоградский проспект, 32к31",
         "lat": 55.707674,
         "lng": 37.749283,
         "matched_ids": [
+          "cwhost-hist-97886a34a7",
           "proj-34",
           "proj-47"
         ]
@@ -5671,7 +5700,7 @@
         "source": "coworking_202503.json",
         "name": "Apollax Space",
         "bc": "Технопарк",
-        "address": "",
+        "address": "проспект Андропова, 10",
         "lat": 55.693931,
         "lng": 37.664428,
         "matched_ids": [
@@ -5736,7 +5765,7 @@
         "source": "coworking_202503.json",
         "name": "Apollax Space",
         "bc": "Останкино",
-        "address": "",
+        "address": "Огородный пр., 16/1с2",
         "lat": 55.814897,
         "lng": 37.60098,
         "matched_ids": [
@@ -5768,7 +5797,7 @@
         "source": "coworking_202503.json",
         "name": "Apollax Space",
         "bc": "Новосущевский",
-        "address": "",
+        "address": "ул. Сущёвский Вал, 18",
         "lat": 55.789851,
         "lng": 37.606972,
         "matched_ids": [
@@ -5800,10 +5829,11 @@
         "source": "coworking_202503.json",
         "name": "Apollax Space",
         "bc": "Новослободская",
-        "address": "",
+        "address": "Новослободская ул., 16",
         "lat": 55.785787,
         "lng": 37.594917,
         "matched_ids": [
+          "cwhost-0006",
           "proj-179",
           "proj-182",
           "proj-183",
@@ -5924,10 +5954,11 @@
         "source": "coworking_202503.json",
         "name": "Газетный",
         "bc": "Газетный 17",
-        "address": "",
+        "address": "Газетный пер., 17",
         "lat": 55.758965,
         "lng": 37.610619,
         "matched_ids": [
+          "cwhost-0060",
           "cwhost-hist-fc98f0ea7d",
           "proj-162",
           "proj-63"
@@ -5938,7 +5969,7 @@
         "source": "coworking_202503.json",
         "name": "Порта",
         "bc": "Заречная 2/1",
-        "address": "",
+        "address": "ул. Заречная, 2/1",
         "lat": 55.75048,
         "lng": 37.53953,
         "matched_ids": [
@@ -5951,11 +5982,12 @@
         "source": "coworking_202503.json",
         "name": "Ходынка",
         "bc": "Авиаконструктора Микояна",
-        "address": "",
+        "address": "ул. Авиакоструктора Микояна, д. 1",
         "lat": 55.791268,
         "lng": 37.534397,
         "matched_ids": [
           "cwhost-hist-682333d260",
+          "cwhost-hist-c087a56535",
           "proj-64",
           "proj-66"
         ]
@@ -6038,7 +6070,7 @@
         "channel": "coworking",
         "source": "coworking_202506.json",
         "name": "AFI Gallery 4 эт",
-        "bc": "",
+        "bc": "AFI Gallery",
         "address": "г. Москва, Тверская Застава пл, д. 3",
         "lat": 55.775682,
         "lng": 37.581191,
@@ -6051,7 +6083,7 @@
         "channel": "coworking",
         "source": "coworking_202506.json",
         "name": "AFI Gallery 7 эт",
-        "bc": "",
+        "bc": "AFI Gallery",
         "address": "г. Москва, Тверская Застава пл, д. 3",
         "lat": 55.775682,
         "lng": 37.581191,
@@ -6064,7 +6096,7 @@
         "channel": "coworking",
         "source": "coworking_202506.json",
         "name": "Multispace Галерея Актер",
-        "bc": "",
+        "bc": "Галерея Актер",
         "address": "Тверская ул., 9",
         "lat": 55.759861,
         "lng": 37.610557,
@@ -7281,12 +7313,27 @@
       {
         "channel": "coworking",
         "source": "coworking_202509.json",
+        "name": "Multispace Актер",
+        "bc": "Галерея Актер",
+        "address": "Тверская ул., 16, стр. 1",
+        "lat": 55.7762,
+        "lng": 37.5895,
+        "matched_ids": [
+          "proj-160",
+          "proj-31",
+          "proj-41"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202509.json",
         "name": "Газетный",
         "bc": "Газетный 17",
-        "address": "",
+        "address": "Газетный пер., 17",
         "lat": 55.758965,
         "lng": 37.610619,
         "matched_ids": [
+          "cwhost-0060",
           "cwhost-hist-fc98f0ea7d",
           "proj-162",
           "proj-63"
@@ -7297,11 +7344,12 @@
         "source": "coworking_202509.json",
         "name": "Ходынка",
         "bc": "Авиаконструктора Микояна",
-        "address": "",
+        "address": "ул. Авиакоструктора Микояна, д. 1",
         "lat": 55.791268,
         "lng": 37.534397,
         "matched_ids": [
           "cwhost-hist-682333d260",
+          "cwhost-hist-c087a56535",
           "proj-64",
           "proj-66"
         ]
@@ -7391,6 +7439,19 @@
           "proj-174",
           "proj-83",
           "proj-84"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202509.json",
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "address": "пл. Тверская Застава, 3",
+        "lat": null,
+        "lng": null,
+        "matched_ids": [
+          "cwhost-hist-4b033613e3",
+          "proj-176"
         ]
       },
       {
@@ -7509,7 +7570,7 @@
         "source": "coworking_202509.json",
         "name": "Apollax Space",
         "bc": "Новосущевский",
-        "address": "",
+        "address": "ул. Сущёвский Вал, 18",
         "lat": 55.789851,
         "lng": 37.606972,
         "matched_ids": [
@@ -7573,7 +7634,7 @@
         "source": "coworking_202509.json",
         "name": "Apollax Space",
         "bc": "Останкино",
-        "address": "",
+        "address": "Огородный пр., 16/1с2",
         "lat": 55.814897,
         "lng": 37.60098,
         "matched_ids": [
@@ -7637,7 +7698,7 @@
         "source": "coworking_202509.json",
         "name": "Apollax Space",
         "bc": "Технопарк",
-        "address": "",
+        "address": "проспект Андропова, 10",
         "lat": 55.693931,
         "lng": 37.664428,
         "matched_ids": [
@@ -7669,10 +7730,11 @@
         "source": "coworking_202509.json",
         "name": "Apollax Space",
         "bc": "Новослободская",
-        "address": "",
+        "address": "Новослободская ул., 16",
         "lat": 55.785787,
         "lng": 37.594917,
         "matched_ids": [
+          "cwhost-0006",
           "proj-179",
           "proj-182",
           "proj-183",
@@ -7792,7 +7854,7 @@
         "source": "coworking_202509.json",
         "name": "Регус (Пр. Мира, 40)",
         "bc": "Проспект Мира, 40",
-        "address": "",
+        "address": "Мира пр-т, 40",
         "lat": 55.780233,
         "lng": 37.63376,
         "matched_ids": [
@@ -7885,10 +7947,11 @@
         "source": "coworking_202509.json",
         "name": "Signature Столешников",
         "bc": "Signature Столешников, 11",
-        "address": "",
+        "address": "Столешников пер., 11",
         "lat": 55.763432,
         "lng": 37.615857,
         "matched_ids": [
+          "cwhost-0047",
           "proj-17",
           "proj-242",
           "proj-45"
@@ -8160,7 +8223,7 @@
         "source": "coworking_202512.json",
         "name": "Space Балчуг",
         "bc": "Балчуг",
-        "address": "",
+        "address": "Садовническая ул., 9А",
         "lat": 55.747606,
         "lng": 37.625729,
         "matched_ids": [
@@ -8240,12 +8303,27 @@
       {
         "channel": "coworking",
         "source": "coworking_202512.json",
+        "name": "Multispace Актер",
+        "bc": "Галерея Актер",
+        "address": "Тверская ул., 16, стр. 1",
+        "lat": 55.7762,
+        "lng": 37.5895,
+        "matched_ids": [
+          "proj-160",
+          "proj-31",
+          "proj-41"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202512.json",
         "name": "Газетный",
         "bc": "Газетный 17",
-        "address": "",
+        "address": "Газетный пер., 17",
         "lat": 55.758965,
         "lng": 37.610619,
         "matched_ids": [
+          "cwhost-0060",
           "cwhost-hist-fc98f0ea7d",
           "proj-162",
           "proj-63"
@@ -8256,11 +8334,12 @@
         "source": "coworking_202512.json",
         "name": "Ходынка",
         "bc": "Авиаконструктора Микояна",
-        "address": "",
+        "address": "ул. Авиакоструктора Микояна, д. 1",
         "lat": 55.791268,
         "lng": 37.534397,
         "matched_ids": [
           "cwhost-hist-682333d260",
+          "cwhost-hist-c087a56535",
           "proj-64",
           "proj-66"
         ]
@@ -8343,7 +8422,7 @@
         "source": "coworking_202512.json",
         "name": "Manufaqtury Поклонка",
         "bc": "Poklonka Place",
-        "address": "",
+        "address": "ул. Поклонная, 3, корп. 1–4",
         "lat": 55.755819,
         "lng": 37.617644,
         "matched_ids": [
@@ -8364,6 +8443,19 @@
           "proj-174",
           "proj-83",
           "proj-84"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202512.json",
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "address": "пл. Тверская Застава, 3",
+        "lat": 55.663329,
+        "lng": 37.538188,
+        "matched_ids": [
+          "cwhost-hist-4b033613e3",
+          "proj-176"
         ]
       },
       {
@@ -8482,7 +8574,7 @@
         "source": "coworking_202512.json",
         "name": "Apollax Space",
         "bc": "Новосущевский",
-        "address": "",
+        "address": "ул. Сущёвский Вал, 18",
         "lat": 55.789851,
         "lng": 37.606972,
         "matched_ids": [
@@ -8546,7 +8638,7 @@
         "source": "coworking_202512.json",
         "name": "Apollax Space",
         "bc": "Останкино",
-        "address": "",
+        "address": "Огородный пр., 16/1с2",
         "lat": 55.814897,
         "lng": 37.60098,
         "matched_ids": [
@@ -8610,7 +8702,7 @@
         "source": "coworking_202512.json",
         "name": "Apollax Space",
         "bc": "Технопарк",
-        "address": "",
+        "address": "проспект Андропова, 10",
         "lat": 55.693931,
         "lng": 37.664428,
         "matched_ids": [
@@ -8642,10 +8734,11 @@
         "source": "coworking_202512.json",
         "name": "Apollax Space",
         "bc": "Новослободская",
-        "address": "",
+        "address": "Новослободская ул., 16",
         "lat": 55.785787,
         "lng": 37.594917,
         "matched_ids": [
+          "cwhost-0006",
           "proj-179",
           "proj-182",
           "proj-183",
@@ -8674,7 +8767,7 @@
         "source": "coworking_202512.json",
         "name": "Apollax Space",
         "bc": "Кузнецкий Мост",
-        "address": "",
+        "address": "Кузнецкий мост 13",
         "lat": 55.761913,
         "lng": 37.621507,
         "matched_ids": [
@@ -8810,7 +8903,7 @@
         "source": "coworking_202512.json",
         "name": "Регус (Пр. Мира, 40)",
         "bc": "Проспект Мира, 40",
-        "address": "",
+        "address": "Мира пр-т, 40",
         "lat": 55.780233,
         "lng": 37.63376,
         "matched_ids": [
@@ -8903,10 +8996,11 @@
         "source": "coworking_202512.json",
         "name": "Signature Столешников",
         "bc": "Signature Столешников, 11",
-        "address": "",
+        "address": "Столешников пер., 11",
         "lat": 55.763432,
         "lng": 37.615857,
         "matched_ids": [
+          "cwhost-0047",
           "proj-17",
           "proj-242",
           "proj-45"
@@ -9178,7 +9272,7 @@
         "source": "coworking_202603.json",
         "name": "Space Балчуг",
         "bc": "Балчуг",
-        "address": "",
+        "address": "Садовническая ул., 9А",
         "lat": 55.747606,
         "lng": 37.625729,
         "matched_ids": [
@@ -9258,12 +9352,27 @@
       {
         "channel": "coworking",
         "source": "coworking_202603.json",
+        "name": "Multispace Актер",
+        "bc": "Галерея Актер",
+        "address": "Тверская ул., 16, стр. 1",
+        "lat": 55.7762,
+        "lng": 37.5895,
+        "matched_ids": [
+          "proj-160",
+          "proj-31",
+          "proj-41"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202603.json",
         "name": "Газетный",
         "bc": "Газетный 17",
-        "address": "",
+        "address": "Газетный пер., 17",
         "lat": 55.758965,
         "lng": 37.610619,
         "matched_ids": [
+          "cwhost-0060",
           "cwhost-hist-fc98f0ea7d",
           "proj-162",
           "proj-63"
@@ -9347,7 +9456,7 @@
         "source": "coworking_202603.json",
         "name": "Manufaqtury Поклонка",
         "bc": "Poklonka Place",
-        "address": "",
+        "address": "ул. Поклонная, 3, корп. 1–4",
         "lat": 55.755819,
         "lng": 37.617644,
         "matched_ids": [
@@ -9368,6 +9477,19 @@
           "proj-174",
           "proj-83",
           "proj-84"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202603.json",
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "address": "пл. Тверская Застава, 3",
+        "lat": 55.663329,
+        "lng": 37.538188,
+        "matched_ids": [
+          "cwhost-hist-4b033613e3",
+          "proj-176"
         ]
       },
       {
@@ -9828,7 +9950,7 @@
         "source": "coworking_202603.json",
         "name": "Регус (Пр. Мира, 40)",
         "bc": "Проспект Мира, 40",
-        "address": "",
+        "address": "Мира пр-т, 40",
         "lat": 55.780233,
         "lng": 37.63376,
         "matched_ids": [
@@ -9921,10 +10043,11 @@
         "source": "coworking_202603.json",
         "name": "Signature Столешников",
         "bc": "Signature Столешников, 11",
-        "address": "",
+        "address": "Столешников пер., 11",
         "lat": 55.763432,
         "lng": 37.615857,
         "matched_ids": [
+          "cwhost-0047",
           "proj-17",
           "proj-242",
           "proj-45"
@@ -10274,10 +10397,11 @@
         "source": "coworking_202606.json",
         "name": "Газетный",
         "bc": "Газетный 17",
-        "address": "",
+        "address": "Газетный пер., 17",
         "lat": 55.758965,
         "lng": 37.610619,
         "matched_ids": [
+          "cwhost-0060",
           "cwhost-hist-fc98f0ea7d",
           "proj-162",
           "proj-63"
@@ -10367,6 +10491,19 @@
           "proj-174",
           "proj-83",
           "proj-84"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202606.json",
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "address": "пл. Тверская Застава, 3",
+        "lat": 55.663329,
+        "lng": 37.538188,
+        "matched_ids": [
+          "cwhost-hist-4b033613e3",
+          "proj-176"
         ]
       },
       {
@@ -10788,7 +10925,7 @@
         "source": "coworking_202606.json",
         "name": "Регус (Пр. Мира, 40)",
         "bc": "Проспект Мира, 40",
-        "address": "",
+        "address": "Мира пр-т, 40",
         "lat": 55.780233,
         "lng": 37.63376,
         "matched_ids": [
@@ -10881,10 +11018,11 @@
         "source": "coworking_202606.json",
         "name": "Signature Столешников",
         "bc": "Signature Столешников, 11",
-        "address": "",
+        "address": "Столешников пер., 11",
         "lat": 55.763432,
         "lng": 37.615857,
         "matched_ids": [
+          "cwhost-0047",
           "proj-17",
           "proj-242",
           "proj-45"
@@ -10982,7 +11120,7 @@
         ]
       }
     ],
-    "ambiguous_identity_group_count": 127,
+    "ambiguous_identity_group_count": 123,
     "ambiguous_identity_groups": [
       {
         "channel": "building",
@@ -12705,6 +12843,23 @@
       },
       {
         "channel": "coworking",
+        "source": "coworking_202403.json",
+        "name": "Apollax Технопарк",
+        "bc": "Технопарк",
+        "address": "проспект Андропова, 10",
+        "lat": 55.69393,
+        "lng": 37.66443,
+        "matched_ids": [
+          "proj-58",
+          "proj-8"
+        ],
+        "sources": [
+          "coworking_202403.json",
+          "coworking_202407.json"
+        ]
+      },
+      {
+        "channel": "coworking",
         "source": "coworking_202410.json",
         "name": "Speace Jet Тимура Фрунзе",
         "bc": "Красная Роза",
@@ -12808,7 +12963,7 @@
         "source": "coworking_202410.json",
         "name": "Apollax Space",
         "bc": "Технопарк",
-        "address": "",
+        "address": "проспект Андропова, 10",
         "lat": 55.693931,
         "lng": 37.664428,
         "matched_ids": [
@@ -12838,6 +12993,7 @@
           "coworking_202410.json",
           "coworking_202412.json",
           "coworking_202503.json",
+          "coworking_202506.json",
           "coworking_202509.json",
           "coworking_202512.json"
         ]
@@ -12897,6 +13053,41 @@
         ],
         "sources": [
           "coworking_202410.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202412.json",
+        "name": "Apollax Space",
+        "bc": "Сокольники",
+        "address": "",
+        "lat": 55.790109,
+        "lng": 37.679376,
+        "matched_ids": [
+          "proj-179",
+          "proj-182",
+          "proj-183",
+          "proj-186",
+          "proj-187",
+          "proj-190",
+          "proj-191",
+          "proj-193",
+          "proj-195",
+          "proj-198",
+          "proj-23",
+          "proj-58",
+          "proj-59",
+          "proj-60",
+          "proj-61",
+          "proj-67",
+          "proj-68",
+          "proj-69",
+          "proj-70",
+          "proj-71",
+          "proj-9"
+        ],
+        "sources": [
+          "coworking_202412.json"
         ]
       },
       {
@@ -12954,11 +13145,12 @@
         "channel": "coworking",
         "source": "coworking_202503.json",
         "name": "Multispace Галерея Актер",
-        "bc": "",
-        "address": "",
+        "bc": "Галерея Актер",
+        "address": "Тверская ул., 16, стр. 1",
         "lat": 55.7762,
         "lng": 37.5895,
         "matched_ids": [
+          "proj-160",
           "proj-31",
           "proj-41"
         ],
@@ -13015,16 +13207,18 @@
         "source": "coworking_202503.json",
         "name": "Signature Столешников",
         "bc": "Signature Столешников, 11",
-        "address": "",
+        "address": "Столешников пер., 11",
         "lat": 55.763432,
         "lng": 37.615857,
         "matched_ids": [
+          "cwhost-0047",
           "proj-17",
           "proj-242",
           "proj-45"
         ],
         "sources": [
           "coworking_202503.json",
+          "coworking_202506.json",
           "coworking_202509.json",
           "coworking_202512.json",
           "coworking_202603.json",
@@ -13036,7 +13230,7 @@
         "source": "coworking_202503.json",
         "name": "Регус (Пр. Мира, 40)",
         "bc": "Проспект Мира, 40",
-        "address": "",
+        "address": "Мира пр-т, 40",
         "lat": 55.780233,
         "lng": 37.63376,
         "matched_ids": [
@@ -13045,6 +13239,7 @@
         ],
         "sources": [
           "coworking_202503.json",
+          "coworking_202506.json",
           "coworking_202509.json",
           "coworking_202512.json",
           "coworking_202603.json",
@@ -13056,15 +13251,17 @@
         "source": "coworking_202503.json",
         "name": "Smart Yard (на Волгоградском)",
         "bc": "РТС Волгоградский",
-        "address": "",
+        "address": "Волгоградский проспект, 32к31",
         "lat": 55.707674,
         "lng": 37.749283,
         "matched_ids": [
+          "cwhost-hist-97886a34a7",
           "proj-34",
           "proj-47"
         ],
         "sources": [
-          "coworking_202503.json"
+          "coworking_202503.json",
+          "coworking_202506.json"
         ]
       },
       {
@@ -13090,18 +13287,135 @@
       {
         "channel": "coworking",
         "source": "coworking_202503.json",
+        "name": "Apollax Space",
+        "bc": "Останкино",
+        "address": "Огородный пр., 16/1с2",
+        "lat": 55.814897,
+        "lng": 37.60098,
+        "matched_ids": [
+          "proj-179",
+          "proj-182",
+          "proj-183",
+          "proj-186",
+          "proj-187",
+          "proj-190",
+          "proj-191",
+          "proj-193",
+          "proj-195",
+          "proj-198",
+          "proj-23",
+          "proj-58",
+          "proj-59",
+          "proj-60",
+          "proj-61",
+          "proj-67",
+          "proj-68",
+          "proj-69",
+          "proj-70",
+          "proj-71",
+          "proj-9"
+        ],
+        "sources": [
+          "coworking_202503.json",
+          "coworking_202506.json",
+          "coworking_202509.json",
+          "coworking_202512.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202503.json",
+        "name": "Apollax Space",
+        "bc": "Новосущевский",
+        "address": "ул. Сущёвский Вал, 18",
+        "lat": 55.789851,
+        "lng": 37.606972,
+        "matched_ids": [
+          "proj-179",
+          "proj-182",
+          "proj-183",
+          "proj-186",
+          "proj-187",
+          "proj-190",
+          "proj-191",
+          "proj-193",
+          "proj-195",
+          "proj-198",
+          "proj-23",
+          "proj-58",
+          "proj-59",
+          "proj-60",
+          "proj-61",
+          "proj-67",
+          "proj-68",
+          "proj-69",
+          "proj-70",
+          "proj-71",
+          "proj-9"
+        ],
+        "sources": [
+          "coworking_202503.json",
+          "coworking_202506.json",
+          "coworking_202509.json",
+          "coworking_202512.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202503.json",
+        "name": "Apollax Space",
+        "bc": "Новослободская",
+        "address": "Новослободская ул., 16",
+        "lat": 55.785787,
+        "lng": 37.594917,
+        "matched_ids": [
+          "cwhost-0006",
+          "proj-179",
+          "proj-182",
+          "proj-183",
+          "proj-186",
+          "proj-187",
+          "proj-190",
+          "proj-191",
+          "proj-193",
+          "proj-195",
+          "proj-198",
+          "proj-23",
+          "proj-58",
+          "proj-59",
+          "proj-60",
+          "proj-61",
+          "proj-67",
+          "proj-68",
+          "proj-69",
+          "proj-70",
+          "proj-71",
+          "proj-9"
+        ],
+        "sources": [
+          "coworking_202503.json",
+          "coworking_202506.json",
+          "coworking_202509.json",
+          "coworking_202512.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202503.json",
         "name": "Газетный",
         "bc": "Газетный 17",
-        "address": "",
+        "address": "Газетный пер., 17",
         "lat": 55.758965,
         "lng": 37.610619,
         "matched_ids": [
+          "cwhost-0060",
           "cwhost-hist-fc98f0ea7d",
           "proj-162",
           "proj-63"
         ],
         "sources": [
           "coworking_202503.json",
+          "coworking_202506.json",
           "coworking_202509.json",
           "coworking_202512.json",
           "coworking_202603.json",
@@ -13113,7 +13427,7 @@
         "source": "coworking_202503.json",
         "name": "Порта",
         "bc": "Заречная 2/1",
-        "address": "",
+        "address": "ул. Заречная, 2/1",
         "lat": 55.75048,
         "lng": 37.53953,
         "matched_ids": [
@@ -13129,16 +13443,18 @@
         "source": "coworking_202503.json",
         "name": "Ходынка",
         "bc": "Авиаконструктора Микояна",
-        "address": "",
+        "address": "ул. Авиакоструктора Микояна, д. 1",
         "lat": 55.791268,
         "lng": 37.534397,
         "matched_ids": [
           "cwhost-hist-682333d260",
+          "cwhost-hist-c087a56535",
           "proj-64",
           "proj-66"
         ],
         "sources": [
           "coworking_202503.json",
+          "coworking_202506.json",
           "coworking_202509.json",
           "coworking_202512.json"
         ]
@@ -13147,7 +13463,7 @@
         "channel": "coworking",
         "source": "coworking_202506.json",
         "name": "AFI Gallery 4 эт",
-        "bc": "",
+        "bc": "AFI Gallery",
         "address": "г. Москва, Тверская Застава пл, д. 3",
         "lat": 55.775682,
         "lng": 37.581191,
@@ -13163,7 +13479,7 @@
         "channel": "coworking",
         "source": "coworking_202506.json",
         "name": "AFI Gallery 7 эт",
-        "bc": "",
+        "bc": "AFI Gallery",
         "address": "г. Москва, Тверская Застава пл, д. 3",
         "lat": 55.775682,
         "lng": 37.581191,
@@ -13179,7 +13495,7 @@
         "channel": "coworking",
         "source": "coworking_202506.json",
         "name": "Multispace Галерея Актер",
-        "bc": "",
+        "bc": "Галерея Актер",
         "address": "Тверская ул., 9",
         "lat": 55.759861,
         "lng": 37.610557,
@@ -13214,57 +13530,6 @@
       {
         "channel": "coworking",
         "source": "coworking_202506.json",
-        "name": "Signature Столешников",
-        "bc": "Signature Столешников, 11",
-        "address": "Столешников пер., 11",
-        "lat": 55.763432,
-        "lng": 37.615857,
-        "matched_ids": [
-          "cwhost-0047",
-          "proj-17",
-          "proj-242",
-          "proj-45"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Регус (Пр. Мира, 40)",
-        "bc": "Проспект Мира, 40",
-        "address": "Мира пр-т, 40",
-        "lat": 55.780233,
-        "lng": 37.63376,
-        "matched_ids": [
-          "proj-219",
-          "proj-46"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Smart Yard (на Волгоградском)",
-        "bc": "РТС Волгоградский",
-        "address": "Волгоградский проспект, 32к31",
-        "lat": 55.707674,
-        "lng": 37.749283,
-        "matched_ids": [
-          "cwhost-hist-97886a34a7",
-          "proj-34",
-          "proj-47"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
         "name": "Ключ Сретенка",
         "bc": "Сретенка",
         "address": "Сретенский бульвар, 5",
@@ -13278,183 +13543,6 @@
         "sources": [
           "coworking_202506.json",
           "coworking_202606.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Apollax Space",
-        "bc": "Технопарк",
-        "address": "Проспект Андропова, 10",
-        "lat": 55.693931,
-        "lng": 37.664428,
-        "matched_ids": [
-          "proj-179",
-          "proj-182",
-          "proj-183",
-          "proj-186",
-          "proj-187",
-          "proj-190",
-          "proj-191",
-          "proj-193",
-          "proj-195",
-          "proj-198",
-          "proj-23",
-          "proj-58",
-          "proj-59",
-          "proj-60",
-          "proj-61",
-          "proj-67",
-          "proj-68",
-          "proj-69",
-          "proj-70",
-          "proj-71",
-          "proj-9"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Apollax Space",
-        "bc": "Останкино",
-        "address": "Огородный пр., 16/1с2",
-        "lat": 55.814897,
-        "lng": 37.60098,
-        "matched_ids": [
-          "proj-179",
-          "proj-182",
-          "proj-183",
-          "proj-186",
-          "proj-187",
-          "proj-190",
-          "proj-191",
-          "proj-193",
-          "proj-195",
-          "proj-198",
-          "proj-23",
-          "proj-58",
-          "proj-59",
-          "proj-60",
-          "proj-61",
-          "proj-67",
-          "proj-68",
-          "proj-69",
-          "proj-70",
-          "proj-71",
-          "proj-9"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Apollax Space",
-        "bc": "Новосущевский",
-        "address": "ул. Сущёвский Вал, 18",
-        "lat": 55.789851,
-        "lng": 37.606972,
-        "matched_ids": [
-          "proj-179",
-          "proj-182",
-          "proj-183",
-          "proj-186",
-          "proj-187",
-          "proj-190",
-          "proj-191",
-          "proj-193",
-          "proj-195",
-          "proj-198",
-          "proj-23",
-          "proj-58",
-          "proj-59",
-          "proj-60",
-          "proj-61",
-          "proj-67",
-          "proj-68",
-          "proj-69",
-          "proj-70",
-          "proj-71",
-          "proj-9"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Apollax Space",
-        "bc": "Новослободская",
-        "address": "Новослободская ул., 16",
-        "lat": 55.785787,
-        "lng": 37.594917,
-        "matched_ids": [
-          "cwhost-0006",
-          "proj-179",
-          "proj-182",
-          "proj-183",
-          "proj-186",
-          "proj-187",
-          "proj-190",
-          "proj-191",
-          "proj-193",
-          "proj-195",
-          "proj-198",
-          "proj-23",
-          "proj-58",
-          "proj-59",
-          "proj-60",
-          "proj-61",
-          "proj-67",
-          "proj-68",
-          "proj-69",
-          "proj-70",
-          "proj-71",
-          "proj-9"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Газетный",
-        "bc": "Газетный 17",
-        "address": "Газетный пер., 17",
-        "lat": 55.758965,
-        "lng": 37.610619,
-        "matched_ids": [
-          "cwhost-0060",
-          "cwhost-hist-fc98f0ea7d",
-          "proj-162",
-          "proj-63"
-        ],
-        "sources": [
-          "coworking_202506.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202506.json",
-        "name": "Ходынка",
-        "bc": "Авиаконструктора Микояна",
-        "address": "ул. Авиакоструктора Микояна, д. 1",
-        "lat": 55.791268,
-        "lng": 37.534397,
-        "matched_ids": [
-          "cwhost-hist-682333d260",
-          "cwhost-hist-c087a56535",
-          "proj-64",
-          "proj-66"
-        ],
-        "sources": [
-          "coworking_202506.json"
         ]
       },
       {
@@ -13473,6 +13561,26 @@
           "coworking_202509.json",
           "coworking_202512.json",
           "coworking_202603.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202509.json",
+        "name": "Multispace Актер",
+        "bc": "Галерея Актер",
+        "address": "Тверская ул., 16, стр. 1",
+        "lat": 55.7762,
+        "lng": 37.5895,
+        "matched_ids": [
+          "proj-160",
+          "proj-31",
+          "proj-41"
+        ],
+        "sources": [
+          "coworking_202509.json",
+          "coworking_202512.json",
+          "coworking_202603.json",
+          "coworking_202606.json"
         ]
       },
       {
@@ -13580,6 +13688,25 @@
       {
         "channel": "coworking",
         "source": "coworking_202509.json",
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "address": "пл. Тверская Застава, 3",
+        "lat": null,
+        "lng": null,
+        "matched_ids": [
+          "cwhost-hist-4b033613e3",
+          "proj-176"
+        ],
+        "sources": [
+          "coworking_202509.json",
+          "coworking_202512.json",
+          "coworking_202603.json",
+          "coworking_202606.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202509.json",
         "name": "Flexity SOLO/Flexity",
         "bc": "Павелецкая Плаза (А)",
         "address": "Павелецкая площадь, 2",
@@ -13602,7 +13729,7 @@
         "source": "coworking_202512.json",
         "name": "Space Балчуг",
         "bc": "Балчуг",
-        "address": "",
+        "address": "Садовническая ул., 9А",
         "lat": 55.747606,
         "lng": 37.625729,
         "matched_ids": [
@@ -13611,7 +13738,8 @@
         ],
         "sources": [
           "coworking_202512.json",
-          "coworking_202603.json"
+          "coworking_202603.json",
+          "coworking_202606.json"
         ]
       },
       {
@@ -13637,7 +13765,7 @@
         "source": "coworking_202512.json",
         "name": "Manufaqtury Поклонка",
         "bc": "Poklonka Place",
-        "address": "",
+        "address": "ул. Поклонная, 3, корп. 1–4",
         "lat": 55.755819,
         "lng": 37.617644,
         "matched_ids": [
@@ -13648,6 +13776,43 @@
         "sources": [
           "coworking_202512.json",
           "coworking_202603.json"
+        ]
+      },
+      {
+        "channel": "coworking",
+        "source": "coworking_202512.json",
+        "name": "Apollax Space",
+        "bc": "Кузнецкий Мост",
+        "address": "Кузнецкий мост 13",
+        "lat": 55.761913,
+        "lng": 37.621507,
+        "matched_ids": [
+          "proj-179",
+          "proj-182",
+          "proj-183",
+          "proj-186",
+          "proj-187",
+          "proj-190",
+          "proj-191",
+          "proj-193",
+          "proj-195",
+          "proj-198",
+          "proj-23",
+          "proj-58",
+          "proj-59",
+          "proj-60",
+          "proj-61",
+          "proj-67",
+          "proj-68",
+          "proj-69",
+          "proj-70",
+          "proj-71",
+          "proj-9"
+        ],
+        "sources": [
+          "coworking_202512.json",
+          "coworking_202603.json",
+          "coworking_202606.json"
         ]
       },
       {
@@ -13762,42 +13927,6 @@
       {
         "channel": "coworking",
         "source": "coworking_202603.json",
-        "name": "Apollax Space",
-        "bc": "Кузнецкий Мост",
-        "address": "Кузнецкий мост 13",
-        "lat": 55.762409,
-        "lng": 37.623016,
-        "matched_ids": [
-          "proj-179",
-          "proj-182",
-          "proj-183",
-          "proj-186",
-          "proj-187",
-          "proj-190",
-          "proj-191",
-          "proj-193",
-          "proj-195",
-          "proj-198",
-          "proj-23",
-          "proj-58",
-          "proj-59",
-          "proj-60",
-          "proj-61",
-          "proj-67",
-          "proj-68",
-          "proj-69",
-          "proj-70",
-          "proj-71",
-          "proj-9"
-        ],
-        "sources": [
-          "coworking_202603.json",
-          "coworking_202606.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202603.json",
         "name": "Онегин PMG",
         "bc": "Онегин",
         "address": "Москва, улица Малая Полянка, 2",
@@ -13809,22 +13938,6 @@
         ],
         "sources": [
           "coworking_202603.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202606.json",
-        "name": "Space Балчуг",
-        "bc": "Балчуг",
-        "address": "Садовническая ул., 9А",
-        "lat": 55.747637,
-        "lng": 37.6289,
-        "matched_ids": [
-          "proj-137",
-          "proj-75"
-        ],
-        "sources": [
-          "coworking_202606.json"
         ]
       },
       {
@@ -13874,23 +13987,6 @@
           "cwhost-hist-699587ab73",
           "proj-151",
           "proj-78"
-        ],
-        "sources": [
-          "coworking_202606.json"
-        ]
-      },
-      {
-        "channel": "coworking",
-        "source": "coworking_202606.json",
-        "name": "Multispace Актер",
-        "bc": "Галерея Актер",
-        "address": "Тверская ул., 16, стр. 1",
-        "lat": 55.764551,
-        "lng": 37.606406,
-        "matched_ids": [
-          "proj-160",
-          "proj-31",
-          "proj-41"
         ],
         "sources": [
           "coworking_202606.json"
@@ -13972,57 +14068,57 @@
   "geography_outliers": [],
   "field_coverage": {
     "gba": {
-      "applicable": 221,
-      "not_applicable": 115,
+      "applicable": 222,
+      "not_applicable": 116,
       "present": 129,
-      "missing": 92,
-      "coverage_pct": 58.4,
+      "missing": 93,
+      "coverage_pct": 58.1,
       "missing_by_source": {
         "classifier.html": 1,
-        "coworking_host_lookup": 91
+        "coworking_host_lookup": 92
       },
       "missing_by_channel": {
-        "no_market_channel": 91,
+        "no_market_channel": 92,
         "sale": 1
       }
     },
     "gla": {
-      "applicable": 221,
-      "not_applicable": 115,
+      "applicable": 222,
+      "not_applicable": 116,
       "present": 113,
-      "missing": 108,
-      "coverage_pct": 51.1,
+      "missing": 109,
+      "coverage_pct": 50.9,
       "missing_by_source": {
         "classifier.html": 16,
-        "coworking_host_lookup": 92
+        "coworking_host_lookup": 93
       },
       "missing_by_channel": {
         "coworking": 1,
-        "no_market_channel": 92,
+        "no_market_channel": 93,
         "rent": 6,
         "sale": 16
       }
     },
     "construction_start_year": {
-      "applicable": 221,
-      "not_applicable": 115,
+      "applicable": 222,
+      "not_applicable": 116,
       "present": 34,
-      "missing": 187,
-      "coverage_pct": 15.4,
+      "missing": 188,
+      "coverage_pct": 15.3,
       "missing_by_source": {
         "classifier.html": 96,
-        "coworking_host_lookup": 91
+        "coworking_host_lookup": 92
       },
       "missing_by_channel": {
         "coworking": 2,
-        "no_market_channel": 91,
+        "no_market_channel": 92,
         "rent": 22,
         "sale": 96
       }
     },
     "sales_start_year": {
       "applicable": 129,
-      "not_applicable": 207,
+      "not_applicable": 209,
       "present": 43,
       "missing": 86,
       "coverage_pct": 33.3,
@@ -14036,18 +14132,18 @@
       }
     },
     "input_year": {
-      "applicable": 221,
-      "not_applicable": 115,
+      "applicable": 222,
+      "not_applicable": 116,
       "present": 87,
-      "missing": 134,
-      "coverage_pct": 39.4,
+      "missing": 135,
+      "coverage_pct": 39.2,
       "missing_by_source": {
         "classifier.html": 44,
-        "coworking_host_lookup": 90
+        "coworking_host_lookup": 91
       },
       "missing_by_channel": {
         "coworking": 3,
-        "no_market_channel": 90,
+        "no_market_channel": 91,
         "rent": 10,
         "sale": 44
       }
@@ -14055,11 +14151,11 @@
   },
   "entity_roles": {
     "counts": {
-      "coworking_site": 115,
-      "host_building": 92,
+      "coworking_site": 116,
+      "host_building": 93,
       "office_project": 129
     },
-    "incomplete_record_count": 223,
+    "incomplete_record_count": 225,
     "incomplete_records": [
       {
         "canonical_project_id": "proj-1",
@@ -14717,6 +14813,14 @@
         "issues": [
           "construction_start_year is required for entity_role=office_project",
           "sales_start_year is required for entity_role=office_project"
+        ]
+      },
+      {
+        "canonical_project_id": "proj-176",
+        "canonical_name": "AFI GAllery",
+        "entity_role": "coworking_site",
+        "issues": [
+          "address is required for entity_role=coworking_site"
         ]
       },
       {
@@ -16271,12 +16375,24 @@
           "construction_start_year is required for entity_role=host_building",
           "input_year is required for entity_role=host_building"
         ]
+      },
+      {
+        "canonical_project_id": "cwhost-hist-4b033613e3",
+        "canonical_name": "AFI Gallery",
+        "entity_role": "host_building",
+        "issues": [
+          "cls is required for entity_role=host_building",
+          "gba is required for entity_role=host_building",
+          "gla is required for entity_role=host_building",
+          "construction_start_year is required for entity_role=host_building",
+          "input_year is required for entity_role=host_building"
+        ]
       }
     ]
   },
   "building_identity": {
-    "public_coworking_sites": 115,
-    "public_coworking_sites_with_building_id": 115,
+    "public_coworking_sites": 116,
+    "public_coworking_sites_with_building_id": 116,
     "internal_blocked_coworking_sites": [
       {
         "canonical_project_id": "proj-23",
@@ -16319,10 +16435,6 @@
         "canonical_name": "Space Балчуг (Балчуг)"
       },
       {
-        "canonical_project_id": "proj-176",
-        "canonical_name": "AFI GAllery"
-      },
-      {
         "canonical_project_id": "proj-213",
         "canonical_name": "Рабочая Станция (Парк Горького) (Парк Горького)"
       },
@@ -16339,7 +16451,7 @@
         "canonical_name": "Flexity SOLO/Flexity (Павелецкая Плаза (В))"
       }
     ],
-    "host_buildings": 92
+    "host_buildings": 93
   },
   "date_model": {
     "all_projects_has_only_commission_input_year": false,
@@ -17305,8 +17417,12 @@
       "canonical_project_id": "cwhost-0033",
       "canonical_name": "Галерея Актер",
       "host_address": "Тверская ул., 16с1",
-      "candidate_count": 4,
+      "candidate_count": 6,
       "unique_points": [
+        {
+          "lat": 55.759861,
+          "lng": 37.610557
+        },
         {
           "lat": 55.764551,
           "lng": 37.606406
@@ -17316,7 +17432,7 @@
           "lng": 37.5895
         }
       ],
-      "spread_m": 1672.1,
+      "spread_m": 2244.0,
       "latest_source": "coworking_202606.json",
       "latest_site": "Multispace Актер",
       "latest_site_address": "Тверская ул., 16, стр. 1",
@@ -17706,7 +17822,7 @@
       "spread_m": 0.0,
       "latest_source": "coworking_202606.json",
       "latest_site": "Регус (Пр. Мира, 40)",
-      "latest_site_address": "",
+      "latest_site_address": "Мира пр-т, 40",
       "current_candidate_count": 1,
       "current_unique_points": [
         {
@@ -17733,7 +17849,7 @@
       "spread_m": 0.3,
       "latest_source": "coworking_202606.json",
       "latest_site": "Signature Столешников",
-      "latest_site_address": "",
+      "latest_site_address": "Столешников пер., 11",
       "current_candidate_count": 1,
       "current_unique_points": [
         {
@@ -18046,7 +18162,7 @@
       "spread_m": 0.0,
       "latest_source": "coworking_202606.json",
       "latest_site": "Space Вивальди",
-      "latest_site_address": "",
+      "latest_site_address": "ул. Летниковская, 2",
       "current_candidate_count": 1,
       "current_unique_points": [
         {
@@ -18069,7 +18185,7 @@
       "spread_m": 0.0,
       "latest_source": "coworking_202606.json",
       "latest_site": "Multispace Дубинин",
-      "latest_site_address": "",
+      "latest_site_address": "ул. Дубининская, вл. 39–41",
       "current_candidate_count": 1,
       "current_unique_points": [
         {
@@ -18092,7 +18208,7 @@
       "spread_m": 0.0,
       "latest_source": "coworking_202606.json",
       "latest_site": "Газетный",
-      "latest_site_address": "",
+      "latest_site_address": "Газетный пер., 17",
       "current_candidate_count": 1,
       "current_unique_points": [
         {
@@ -18289,7 +18405,7 @@
       "spread_m": 0.0,
       "latest_source": "coworking_202512.json",
       "latest_site": "Ходынка",
-      "latest_site_address": "",
+      "latest_site_address": "ул. Авиакоструктора Микояна, д. 1",
       "current_candidate_count": 0,
       "current_unique_points": []
     },
@@ -18490,7 +18606,7 @@
       "spread_m": 0.0,
       "latest_source": "coworking_202503.json",
       "latest_site": "Порта",
-      "latest_site_address": "",
+      "latest_site_address": "ул. Заречная, 2/1",
       "current_candidate_count": 0,
       "current_unique_points": []
     },
@@ -18823,6 +18939,33 @@
       "latest_site_address": "Авиаконструктора Микояна",
       "current_candidate_count": 0,
       "current_unique_points": []
+    },
+    {
+      "canonical_project_id": "cwhost-hist-4b033613e3",
+      "canonical_name": "AFI Gallery",
+      "host_address": "пл. Тверская Застава, 3",
+      "candidate_count": 5,
+      "unique_points": [
+        {
+          "lat": 55.663329,
+          "lng": 37.538188
+        },
+        {
+          "lat": 55.775682,
+          "lng": 37.581191
+        }
+      ],
+      "spread_m": 12780.1,
+      "latest_source": "coworking_202606.json",
+      "latest_site": "AFI GAllery",
+      "latest_site_address": "пл. Тверская Застава, 3",
+      "current_candidate_count": 1,
+      "current_unique_points": [
+        {
+          "lat": 55.663329,
+          "lng": 37.538188
+        }
+      ]
     }
   ]
 }
