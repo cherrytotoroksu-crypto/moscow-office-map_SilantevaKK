@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-08-24",
+  "track": "missing_data_backlog",
+  "wave": "03-recheck",
+  "applied": [
+    {
+      "canonical_project_id": "proj-103",
+      "canonical_name": "Парк Легенд класс В+",
+      "address": "г. Москва, Даниловский р-н, Автозаводская ул., д. 23, стр. 120",
+      "before": {
+        "gba": 48000,
+        "gla": null
+      },
+      "after": {
+        "gba": 48000,
+        "gla": 48000
+      },
+      "sources": [
+        {
+          "publisher": "NF Group Research",
+          "url": "https://media.kf.expert/lenta_analytics/0/625/NF%20Group_%D0%A0%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%BE%D1%84%D0%B8%D1%81%D0%BD%D0%BE%D0%B9%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.%201%20%D0%BA%D0%B2.%202023_rus.pdf",
+          "evidence": "Park Legends A/B explicitly labelled GLA 43,320/48,000 m2."
+        },
+        {
+          "publisher": "IBC Real Estate / JLL",
+          "url": "https://ibcrealestate.ru/upload/iblock/a03/yggwy9btmm425vg83wh732mh2nv6q55r.pdf",
+          "evidence": "Independent market report lists Park Legends B+ at 48,000 m2."
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "canonical_project_id": "proj-95",
+      "canonical_name": "Алкон 3",
+      "reason": "A separate office-area figure is public, contrary to wave 03, but exact-address sources conflict (11,785; approximately 17,800; and other figures). No value meets the two-independent-confirmation rule."
+    },
+    {
+      "canonical_project_id": "proj-102",
+      "canonical_name": "Парк Легенд класс А",
+      "reason": "NF Group explicitly labels GLA as 43,320 m2, while IBC/JLL reports 44,168 m2 for class A. The conflict prevents application."
+    }
+  ]
+}
