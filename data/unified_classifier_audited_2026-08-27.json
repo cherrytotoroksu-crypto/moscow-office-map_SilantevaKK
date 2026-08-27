@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "generated_by": "scripts/build_unified_classifier.py",
-  "source_total": 713,
-  "with_coordinates": 688,
+  "source_total": 714,
+  "with_coordinates": 689,
   "without_coordinates": 25,
   "records": [
     {
@@ -25279,6 +25279,46 @@
       "canonical_no": 711
     },
     {
+      "unified_id": "UC-OBJ-ADD-007",
+      "source_id": "allprojects-porta-forma",
+      "name": "Porta Forma",
+      "address": "Заречная ул, 2/1",
+      "developer": "Forma (ПИК)",
+      "gba": 43337.0,
+      "gla": 27127.0,
+      "cls": "A",
+      "commission_year": null,
+      "commission_quarter": null,
+      "status": "Строится",
+      "latitude": 55.747221,
+      "longitude": 37.518821,
+      "coordinates_status": "geocoded_approx",
+      "legacy_ids": [],
+      "quarter_offer_refs": [],
+      "market_channel": [
+        "sale"
+      ],
+      "layer_status": "Строится",
+      "layer_offer_status": null,
+      "layer_source": "all_projects_layer.json",
+      "layer_source_date": "2026-08-27",
+      "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки unified-реестра с data/all_projects_layer.json (entity_role=office_project) — отсутствовало по любому варианту названия. Восстановлено под собственным именем 2026-08-27 по прямому указанию пользователя — не объединять с PORTA Workplace (Заречная ул., 2/1, тот же адрес и застройщик FORMA, но отдельная публичная запись).",
+      "source_links": [
+        "https://www.cian.ru/biznes-centr-porta-workplace-moskva-283975/",
+        "https://mperspektiva.ru/topics/forma-v-techenie-goda-zapustit-100-tys-kv-m-ofisnoy-nedvizhimosti-novoy-lineyki-workplace/"
+      ],
+      "verification_status": "Добавлено после проверки пропусков",
+      "confidence": "Низкий",
+      "entity_type": "office_project_candidate",
+      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. По прямому указанию пользователя сохраняется под именем 'Porta Forma' как отдельная запись (не объединена с PORTA Workplace, хотя адрес и застройщик совпадают) — дата старта продаж отдельно не подтверждена.",
+      "needs_review": true,
+      "review_reason": "missing_from_unified_migration",
+      "sales_start_date": null,
+      "sales_start_confidence": null,
+      "sales_start_source": null,
+      "canonical_no": 712
+    },
+    {
       "unified_id": "UC-OBJ-ADD-008",
       "source_id": "allprojects-stone-towers-tower-a",
       "name": "STONE Towers, Tower A",
@@ -25315,7 +25355,7 @@
       "sales_start_date": null,
       "sales_start_confidence": null,
       "sales_start_source": null,
-      "canonical_no": 712
+      "canonical_no": 713
     },
     {
       "unified_id": "UC-OBJ-ADD-009",
@@ -25354,7 +25394,7 @@
       "sales_start_date": "2026-02-17",
       "sales_start_confidence": "needs_review",
       "sales_start_source": "https://mperspektiva.ru/topics/forma-workplace-predstavila-dva-novykh-delovykh-prostranstva-na-severo-zapade-moskvy/",
-      "canonical_no": 713
+      "canonical_no": 714
     }
   ]
 }

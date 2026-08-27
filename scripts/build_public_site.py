@@ -48,6 +48,10 @@ DATA_ALLOW_PATTERNS = [
     # файл публикуется целиком, включая записи с «Низкий» уровнем доверия
     # (анонсы/СМИ). В UI они по умолчанию скрыты и помечены «требуют проверки».
     re.compile(r"^future_projects\.json$"),
+    # unified-реестр классификатора (classifier.html), добавлен 2026-08-27 —
+    # без этого паттерна classifier.html на публичном сайте грузится, но
+    # fetch за данными получает 404 (файл не копировался в _site/data/).
+    re.compile(r"^unified_classifier_audited.*\.json$"),
 ]
 
 # Корневые файлы, которые тоже публикуются по прямой просьбе пользователя
@@ -58,6 +62,7 @@ DATA_ALLOW_PATTERNS = [
 # как есть, без строк/трансформаций (в отличие от building_dates.json ниже).
 ROOT_ALLOW_PATTERNS = [
     re.compile(r"^classifier\.html$"),
+    re.compile(r"^classifier_legacy.*\.html$"),
     re.compile(r"^codifier\.html$"),
     re.compile(r"^analytics\.html$"),
     re.compile(r"^.+\.md$"),
