@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "generated_by": "scripts/build_unified_classifier.py",
-  "source_total": 714,
-  "with_coordinates": 689,
+  "source_total": 713,
+  "with_coordinates": 688,
   "without_coordinates": 25,
   "records": [
     {
@@ -25106,16 +25106,18 @@
       "layer_source": "buildings_202606.json / all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки полноты миграции из classifier.html (279 записей) в unified-реестр — отсутствовало по любому варианту названия. Источник данных: codex_unified_additions_5_2026-08-27.md.",
-      "source_links": [],
+      "source_links": [
+        "https://officenavigator.ru/news/praym_taym_viktorenko/"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Дата публикации анонса CBRE/Атлантик о старте продаж офисных блоков (16.02.2023); needs_review — не отдельно подтверждена как дата события.",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
-      "sales_start_date": null,
-      "sales_start_confidence": null,
-      "sales_start_source": null,
+      "sales_start_date": "2023-02-16",
+      "sales_start_confidence": "needs_review",
+      "sales_start_source": "https://officenavigator.ru/news/praym_taym_viktorenko/",
       "canonical_no": 707
     },
     {
@@ -25143,16 +25145,19 @@
       "layer_source": "buildings_202606.json / all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки полноты миграции из classifier.html (279 записей) в unified-реестр — отсутствовало по любому варианту названия. Источник данных: codex_unified_additions_5_2026-08-27.md.",
-      "source_links": [],
+      "source_links": [
+        "https://www.arendator.ru/news/181888-na_rassvete_startuet_korolev/",
+        "https://redeveloper.ru/news/kr-properties-vyvel-na-rynok-biznes-tsentr-korolev-v-delovom-kvartale-rassvet.htm"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Дата публикации анонса KR Properties о выводе на рынок БЦ Королёв (06.02.2023); needs_review.",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
-      "sales_start_date": null,
-      "sales_start_confidence": null,
-      "sales_start_source": null,
+      "sales_start_date": "2023-02-06",
+      "sales_start_confidence": "needs_review",
+      "sales_start_source": "https://www.arendator.ru/news/181888-na_rassvete_startuet_korolev/",
       "canonical_no": 708
     },
     {
@@ -25180,11 +25185,13 @@
       "layer_source": "buildings_202606.json / all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки полноты миграции из classifier.html (279 записей) в unified-реестр — отсутствовало по любому варианту названия. Источник данных: codex_unified_additions_5_2026-08-27.md.",
-      "source_links": [],
+      "source_links": [
+        "https://moscow-city.guide/en/news/mr-group-vyvela-v-prodazhi-ofisnyy-neboskryeb-top-tower-ryadom-s-icity/"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Продажи офисов открыты (MR Group), точная дата старта не найдена ни на одном источнике.",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
       "sales_start_date": null,
@@ -25217,16 +25224,18 @@
       "layer_source": "buildings_202606.json / all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки полноты миграции из classifier.html (279 записей) в unified-реестр — отсутствовало по любому варианту названия. Источник данных: codex_unified_additions_5_2026-08-27.md.",
-      "source_links": [],
+      "source_links": [
+        "https://mperspektiva.ru/topics/forma-workplace-predstavila-dva-novykh-delovykh-prostranstva-na-severo-zapade-moskvy/"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Дата публикации анонса FORMA workplace про Минто и Плэйн одновременно (17.02.2026); needs_review, дата не выделена отдельно для Плэйн.",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
-      "sales_start_date": null,
-      "sales_start_confidence": null,
-      "sales_start_source": null,
+      "sales_start_date": "2026-02-17",
+      "sales_start_confidence": "needs_review",
+      "sales_start_source": "https://mperspektiva.ru/topics/forma-workplace-predstavila-dva-novykh-delovykh-prostranstva-na-severo-zapade-moskvy/",
       "canonical_no": 710
     },
     {
@@ -25254,54 +25263,20 @@
       "layer_source": "all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки unified-реестра с data/all_projects_layer.json (entity_role=office_project) — отсутствовало по любому варианту названия.",
-      "source_links": [],
+      "source_links": [
+        "https://pioneer.ru/project/technopark-plaza",
+        "https://technopark-plaza.ru/"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Введён в эксплуатацию 2021 (ЗОС Мосгосстройнадзор), офисы проданы/сняты с продажи — точная дата старта продаж не найдена.",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
       "sales_start_date": null,
       "sales_start_confidence": null,
       "sales_start_source": null,
       "canonical_no": 711
-    },
-    {
-      "unified_id": "UC-OBJ-ADD-007",
-      "source_id": "allprojects-porta-forma",
-      "name": "Porta Forma",
-      "address": "Заречная ул, 2/1",
-      "developer": "Forma (ПИК)",
-      "gba": 43337.0,
-      "gla": 27127.0,
-      "cls": "A",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строится",
-      "latitude": 55.747221,
-      "longitude": 37.518821,
-      "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": null,
-      "layer_source": "all_projects_layer.json",
-      "layer_source_date": "2026-08-27",
-      "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки unified-реестра с data/all_projects_layer.json (entity_role=office_project) — отсутствовало по любому варианту названия.",
-      "source_links": [],
-      "verification_status": "Добавлено после проверки пропусков",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. Дата старта продаж отдельно не подтверждена.",
-      "needs_review": true,
-      "review_reason": "missing_from_unified_migration",
-      "sales_start_date": null,
-      "sales_start_confidence": null,
-      "sales_start_source": null,
-      "canonical_no": 712
     },
     {
       "unified_id": "UC-OBJ-ADD-008",
@@ -25328,17 +25303,19 @@
       "layer_source": "all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки unified-реестра с data/all_projects_layer.json (entity_role=office_project) — отсутствовало по любому варианту названия.",
-      "source_links": [],
+      "source_links": [
+        "https://of.ru/bc/11035"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Введён в эксплуатацию 2022; точная дата старта продаж не найдена (не путать со стартом продаж STONE Towers в целом, сентябрь 2020, — не подтверждено, что относится именно к Tower A).",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
       "sales_start_date": null,
       "sales_start_confidence": null,
       "sales_start_source": null,
-      "canonical_no": 713
+      "canonical_no": 712
     },
     {
       "unified_id": "UC-OBJ-ADD-009",
@@ -25365,17 +25342,19 @@
       "layer_source": "all_projects_layer.json",
       "layer_source_date": "2026-08-27",
       "layer_qa_notes": "Добавлено 2026-08-27 по итогам сверки unified-реестра с data/all_projects_layer.json (entity_role=office_project) — отсутствовало по любому варианту названия.",
-      "source_links": [],
+      "source_links": [
+        "https://mperspektiva.ru/topics/forma-workplace-predstavila-dva-novykh-delovykh-prostranstva-na-severo-zapade-moskvy/"
+      ],
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. Дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Дата публикации анонса FORMA workplace про Минто и Плэйн одновременно (17.02.2026); needs_review, дата не выделена отдельно для Минто.",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
-      "sales_start_date": null,
-      "sales_start_confidence": null,
-      "sales_start_source": null,
-      "canonical_no": 714
+      "sales_start_date": "2026-02-17",
+      "sales_start_confidence": "needs_review",
+      "sales_start_source": "https://mperspektiva.ru/topics/forma-workplace-predstavila-dva-novykh-delovykh-prostranstva-na-severo-zapade-moskvy/",
+      "canonical_no": 713
     }
   ]
 }
