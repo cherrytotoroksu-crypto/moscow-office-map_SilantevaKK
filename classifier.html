@@ -7,8 +7,8 @@
 <title>Классификатор зданий (unified) — карта офисной недвижимости Москвы</title>
 <style>
   :root {
-    --bg: #F6F4EF; --surface: #FFFFFF; --ink: #22262B; --muted: #6B7178; --line: #E3DFD6;
-    --accent: #2F4858; --accent-soft: #E1E9EC;
+    --bg: #F4F5F7; --surface: #FFFFFF; --ink: #161616; --muted: #6B7178; --line: #E3E5EA;
+    --accent: #1B2A4A; --accent-soft: #EDEFF3; --brand-red: #A6093D;
     --green-bg: #DCEFE1; --green-ink: #276440; --green-line: #B7DDC3;
     --amber-bg: #FBEFD3; --amber-ink: #8A5A10; --amber-line: #F0D89C;
     --red-bg: #F8DEDD;   --red-ink: #9B2F2A;  --red-line: #EFC1BE;
@@ -17,7 +17,7 @@
   }
   :root[data-theme="dark"] {
     --bg: #15171A; --surface: #1D2024; --ink: #E9E6DE; --muted: #9AA0A6; --line: #2B2F35;
-    --accent: #8FB4C7; --accent-soft: #23343C;
+    --accent: #9FB0CC; --accent-soft: #232B3C; --brand-red: #D9587B;
     --green-bg: #1C3327; --green-ink: #8FDBA8; --green-line: #2C4A38;
     --amber-bg: #3A2F14; --amber-ink: #E7BE6C; --amber-line: #55461E;
     --red-bg: #3A2020;   --red-ink: #E8938E;  --red-line: #543030;
@@ -26,7 +26,7 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #15171A; --surface: #1D2024; --ink: #E9E6DE; --muted: #9AA0A6; --line: #2B2F35;
-      --accent: #8FB4C7; --accent-soft: #23343C;
+      --accent: #9FB0CC; --accent-soft: #232B3C; --brand-red: #D9587B;
       --green-bg: #1C3327; --green-ink: #8FDBA8; --green-line: #2C4A38;
       --amber-bg: #3A2F14; --amber-ink: #E7BE6C; --amber-line: #55461E;
       --red-bg: #3A2020;   --red-ink: #E8938E;  --red-line: #543030;
@@ -35,10 +35,10 @@
   }
   * { box-sizing: border-box; }
   html, body { margin:0; padding:0; background:var(--bg); color:var(--ink);
-    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; max-width:100%; }
-  header { padding:14px 20px; background:var(--surface); border-bottom:1px solid var(--line);
+    font-family:'Montserrat','Segoe UI',Arial,sans-serif; max-width:100%; }
+  header { padding:14px 20px; background:var(--surface); border-bottom:3px solid var(--brand-red);
     position:sticky; top:0; z-index:6; box-shadow:var(--shadow); }
-  h1 { font-size:17px; margin:0 0 4px; }
+  h1 { font-size:16px; font-weight:800; text-transform:uppercase; letter-spacing:.3px; color:var(--accent); margin:0 0 4px; }
   .sub { color:var(--muted); font-size:12px; }
   .sub a { color:var(--accent); }
   .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; align-items:center; }
@@ -55,10 +55,51 @@
   table { border-collapse:collapse; width:100%; font-size:12px; background:var(--surface); }
   th, td { border:1px solid var(--line); padding:4px 7px; text-align:left; vertical-align:top; white-space:nowrap; }
   td.wrap-cell { white-space:normal; max-width:240px; }
-  th { background:var(--accent-soft); position:sticky; top:0; cursor:pointer; user-select:none; z-index:3; }
-  th:hover { color:var(--accent); }
-  th .arrow { font-size:9px; opacity:0.6; }
-  tr:nth-child(even) td { background:rgba(127,127,127,0.035); }
+  th { background:var(--surface); color:var(--accent); text-transform:uppercase; font-size:10.5px;
+    font-weight:800; letter-spacing:.4px; border-bottom:2px solid var(--accent);
+    position:sticky; top:0; user-select:none; z-index:3; white-space:nowrap; }
+  th.filtered { border-bottom-color:var(--brand-red); }
+  .th-inner { display:flex; align-items:center; gap:2px; }
+  .th-label { flex:1; cursor:pointer; padding:4px 2px 4px 7px; min-width:0; }
+  .th-label:hover { color:var(--brand-red); }
+  .arrow { font-size:9px; opacity:0.8; margin-left:2px; }
+  .filter-btn {
+    flex-shrink:0; width:20px; height:20px; margin-right:3px; display:flex; align-items:center;
+    justify-content:center; border-radius:4px; cursor:pointer; color:#9aa0a6; border:1px solid transparent;
+    font-size:10px; background:none;
+  }
+  .filter-btn:hover { background:var(--accent-soft); color:var(--accent); }
+  .filter-btn.active { color:#fff; background:var(--brand-red); border-color:var(--brand-red); }
+  tr:nth-child(even) td { background:rgba(127,127,127,0.05); }
+
+  .filter-panel {
+    position:fixed; z-index:200; background:var(--surface); color:var(--ink); border:1px solid var(--line);
+    border-radius:6px; box-shadow:var(--shadow); padding:10px; max-height:min(420px, 80vh);
+    overflow:auto; width:240px; max-width:92vw;
+  }
+  .filter-panel .fp-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+  .filter-panel .fp-title { font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.3px; color:var(--accent); }
+  .filter-panel .fp-close { cursor:pointer; font-size:16px; line-height:1; color:var(--muted); padding:0 4px; }
+  .filter-panel .fp-close:hover { color:var(--brand-red); }
+  .filter-panel input[type=text] {
+    width:100%; padding:5px 7px; margin-bottom:7px; border:1px solid var(--line); border-radius:4px;
+    font-size:12px; background:var(--surface); color:var(--ink);
+  }
+  .filter-panel label {
+    display:flex; align-items:center; gap:6px; padding:3px 2px; font-size:12px; white-space:nowrap;
+    cursor:pointer; overflow:hidden; text-overflow:ellipsis;
+  }
+  .filter-panel label input { accent-color:var(--brand-red); flex-shrink:0; }
+  .fp-select-all { border-bottom:1px solid var(--line); padding-bottom:6px; margin-bottom:4px; font-weight:700; }
+  .fp-list { max-height:220px; overflow:auto; }
+  .fp-actions { display:flex; gap:6px; margin-top:8px; border-top:1px solid var(--line); padding-top:8px; }
+  .fp-actions button {
+    flex:1; padding:6px; border:1px solid var(--line); border-radius:4px; background:var(--surface);
+    color:var(--ink); font-size:12px; cursor:pointer;
+  }
+  .fp-actions button.primary { background:var(--brand-red); color:#fff; border-color:var(--brand-red); }
+  .fp-actions button:hover { filter:brightness(0.96); }
+  .fp-empty { color:var(--muted); font-size:11.5px; padding:4px 2px; }
   .num { text-align:right; font-variant-numeric:tabular-nums; }
   .cell-green { background:var(--green-bg) !important; color:var(--green-ink); }
   .cell-amber { background:var(--amber-bg) !important; color:var(--amber-ink); }
@@ -95,33 +136,10 @@
   </div>
   <div class="toolbar">
     <input type="text" id="filterText" placeholder="Поиск по названию / адресу / девелоперу…">
-    <select id="filterCls"><option value="">Класс: все</option></select>
-    <select id="filterStatus"><option value="">Статус: все</option></select>
-    <select id="filterDeveloper"><option value="">Девелопер: все</option></select>
-    <select id="filterChannel">
-      <option value="">Канал: все</option>
-      <option value="sale">Продажа</option>
-      <option value="rent">Аренда</option>
-      <option value="coworking">Коворкинг</option>
-    </select>
-    <select id="filterConfidence">
-      <option value="">Надёжность записи: все</option>
-      <option value="Высокий">Высокая</option>
-      <option value="Средний">Средняя</option>
-      <option value="Низкий">Низкая</option>
-    </select>
-    <select id="filterSales">
-      <option value="">Старт продаж: все</option>
-      <option value="withdate">С датой</option>
-      <option value="nodate">Без даты</option>
-    </select>
-    <select id="filterReview">
-      <option value="">needs_review: все</option>
-      <option value="true">только needs_review</option>
-      <option value="false">только подтверждённые</option>
-    </select>
+    <button class="btn" id="clearAllFilters" type="button" style="padding:6px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);font-size:12px;cursor:pointer;">Сбросить фильтры колонок</button>
     <span id="rowcount" class="stat">—</span>
   </div>
+  <div class="sub" style="margin-top:6px;">Фильтры по колонкам — значок воронки в шапке таблицы (как автофильтр в Excel).</div>
   <div class="legend">
     Надёжность ячейки:
     <span><span class="swatch" style="background:var(--green-bg);border-color:var(--green-line)"></span>высокая</span>
@@ -248,41 +266,142 @@ function rowValue(r, key) {
   }
 }
 
+// ---- Excel-подобный автофильтр по колонкам ----
+let colFilters = {}; // key -> Set(допустимых отображаемых значений); нет ключа = фильтр не активен
+
+function colDisplayValues(r, key) {
+  if (key === "channel") {
+    const labels = { sale:"Продажа", rent:"Аренда", coworking:"Коворкинг" };
+    const ch = r.market_channel || [];
+    return ch.length ? ch.map(c => labels[c] || c) : ["—"];
+  }
+  if (key === "needs_review") return [r.needs_review ? "Да" : "Нет"];
+  if (key === "commission") return [commissionLabel(r) || "—"];
+  if (key === "coords") return [coordsLabel(r) || "—"];
+  if (key === "sources") return [(r.source_links||[]).length ? "Есть" : "Нет"];
+  const v = r[key];
+  return [v === null || v === undefined || v === "" ? "—" : String(v)];
+}
+
 function renderHead() {
   const tr = document.getElementById("headRow");
-  tr.innerHTML = COLS.map(c => `<th data-key="${c.key}">${c.label}<span class="arrow"></span></th>`).join("");
-  tr.querySelectorAll("th").forEach(th => {
-    th.addEventListener("click", () => {
-      const key = th.dataset.key;
+  tr.innerHTML = COLS.map(c => `
+    <th data-key="${c.key}">
+      <div class="th-inner">
+        <span class="th-label" data-key="${c.key}">${c.label}<span class="arrow"></span></span>
+        <button class="filter-btn" data-key="${c.key}" title="Фильтр по колонке" type="button">&#9662;</button>
+      </div>
+    </th>`).join("");
+  tr.querySelectorAll(".th-label").forEach(el => {
+    el.addEventListener("click", () => {
+      const key = el.dataset.key;
       if (sortKey === key) sortDir *= -1; else { sortKey = key; sortDir = 1; }
       render();
     });
   });
+  tr.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", e => { e.stopPropagation(); openFilterPanel(btn.dataset.key, btn); });
+  });
+  syncFilterButtonStates();
 }
 
-function populateSelect(id, values) {
-  const sel = document.getElementById(id);
-  const cur = sel.value;
-  const first = sel.querySelector("option");
-  sel.innerHTML = "";
-  sel.appendChild(first);
-  values.forEach(v => {
-    const o = document.createElement("option");
-    o.value = v; o.textContent = v;
-    sel.appendChild(o);
+function syncFilterButtonStates() {
+  document.querySelectorAll("#headRow .filter-btn").forEach(btn => {
+    const active = !!colFilters[btn.dataset.key];
+    btn.classList.toggle("active", active);
+    btn.closest("th").classList.toggle("filtered", active);
   });
-  sel.value = cur;
 }
+
+let fpPanel = null;
+function closeFilterPanel() {
+  if (fpPanel) { fpPanel.remove(); fpPanel = null; document.removeEventListener("mousedown", onFpOutsideClick, true); }
+}
+function onFpOutsideClick(e) {
+  if (fpPanel && !fpPanel.contains(e.target)) closeFilterPanel();
+}
+
+function openFilterPanel(key, btn) {
+  const isSame = fpPanel && fpPanel.dataset.key === key;
+  closeFilterPanel();
+  if (isSame) return;
+
+  const col = COLS.find(c => c.key === key);
+  const allValues = [...new Set(RAW.flatMap(r => colDisplayValues(r, key)))]
+    .sort((a,b) => a === "—" ? 1 : b === "—" ? -1 : String(a).localeCompare(String(b), "ru", {numeric:true}));
+  const activeSet = colFilters[key] || new Set(allValues);
+
+  const panel = document.createElement("div");
+  panel.className = "filter-panel";
+  panel.dataset.key = key;
+  panel.innerHTML = `
+    <div class="fp-header"><span class="fp-title">${col.label}</span><span class="fp-close">&times;</span></div>
+    <input type="text" class="fp-search" placeholder="Поиск значения…">
+    <label class="fp-select-all"><input type="checkbox" class="fp-all"> Выбрать все</label>
+    <div class="fp-list"></div>
+    <div class="fp-actions">
+      <button class="fp-cancel" type="button">Отмена</button>
+      <button class="fp-ok primary" type="button">OK</button>
+    </div>`;
+  document.body.appendChild(panel);
+  fpPanel = panel;
+
+  const listEl = panel.querySelector(".fp-list");
+  const allCb = panel.querySelector(".fp-all");
+  const searchEl = panel.querySelector(".fp-search");
+
+  function renderList(filterQ) {
+    const q = (filterQ || "").trim().toLowerCase();
+    const vals = q ? allValues.filter(v => String(v).toLowerCase().includes(q)) : allValues;
+    if (!vals.length) { listEl.innerHTML = `<div class="fp-empty">Нет значений</div>`; return; }
+    listEl.innerHTML = vals.map(v => `<label><input type="checkbox" value="${esc(v)}" ${activeSet.has(v)?"checked":""}> ${esc(v)}</label>`).join("");
+    syncAllCb();
+  }
+  function syncAllCb() {
+    const cbs = [...listEl.querySelectorAll("input[type=checkbox]")];
+    allCb.checked = cbs.length > 0 && cbs.every(cb => cb.checked);
+    allCb.indeterminate = cbs.some(cb => cb.checked) && !allCb.checked;
+  }
+  renderList("");
+
+  searchEl.addEventListener("input", () => renderList(searchEl.value));
+  allCb.addEventListener("change", () => {
+    listEl.querySelectorAll("input[type=checkbox]").forEach(cb => { cb.checked = allCb.checked; });
+  });
+  listEl.addEventListener("change", e => { if (e.target.matches("input[type=checkbox]")) syncAllCb(); });
+
+  panel.querySelector(".fp-close").addEventListener("click", closeFilterPanel);
+  panel.querySelector(".fp-cancel").addEventListener("click", closeFilterPanel);
+  panel.querySelector(".fp-ok").addEventListener("click", () => {
+    const checked = new Set([...listEl.querySelectorAll("input[type=checkbox]:checked")].map(cb => cb.value));
+    // если поиск сужал список — сохраняем состояние вне видимых значений как было в activeSet
+    const visibleVals = new Set([...listEl.querySelectorAll("input[type=checkbox]")].map(cb => cb.value));
+    const finalSet = new Set(activeSet);
+    visibleVals.forEach(v => finalSet.delete(v));
+    checked.forEach(v => finalSet.add(v));
+    if (finalSet.size === allValues.length) delete colFilters[key];
+    else colFilters[key] = finalSet;
+    closeFilterPanel();
+    render();
+  });
+
+  const rect = btn.getBoundingClientRect();
+  let left = rect.left;
+  if (left + 240 > window.innerWidth - 12) left = window.innerWidth - 240 - 12;
+  panel.style.left = Math.max(12, left) + "px";
+  panel.style.top = (rect.bottom + 4) + "px";
+
+  setTimeout(() => document.addEventListener("mousedown", onFpOutsideClick, true), 0);
+}
+
+document.getElementById("clearAllFilters").addEventListener("click", () => {
+  colFilters = {};
+  document.getElementById("filterText").value = "";
+  render();
+});
 
 function initFilters() {
-  populateSelect("filterCls", [...new Set(RAW.map(r=>r.cls).filter(Boolean))].sort());
-  populateSelect("filterStatus", [...new Set(RAW.map(r=>r.status).filter(Boolean))].sort());
-  populateSelect("filterDeveloper", [...new Set(RAW.map(r=>r.developer).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"ru")));
-  ["filterText","filterCls","filterStatus","filterDeveloper","filterChannel","filterConfidence","filterSales","filterReview"]
-    .forEach(id => {
-      document.getElementById(id).addEventListener("input", render);
-      document.getElementById(id).addEventListener("change", render);
-    });
+  document.getElementById("filterText").addEventListener("input", render);
 }
 
 function passesFilters(r) {
@@ -291,22 +410,11 @@ function passesFilters(r) {
     const hay = [r.name, r.address, r.developer].filter(Boolean).join(" ").toLowerCase();
     if (!hay.includes(q)) return false;
   }
-  const cls = document.getElementById("filterCls").value;
-  if (cls && r.cls !== cls) return false;
-  const status = document.getElementById("filterStatus").value;
-  if (status && r.status !== status) return false;
-  const dev = document.getElementById("filterDeveloper").value;
-  if (dev && r.developer !== dev) return false;
-  const ch = document.getElementById("filterChannel").value;
-  if (ch && !(r.market_channel||[]).includes(ch)) return false;
-  const conf = document.getElementById("filterConfidence").value;
-  if (conf && r.confidence !== conf) return false;
-  const salesF = document.getElementById("filterSales").value;
-  if (salesF === "withdate" && !r.sales_start_date) return false;
-  if (salesF === "nodate" && r.sales_start_date) return false;
-  const reviewF = document.getElementById("filterReview").value;
-  if (reviewF === "true" && !r.needs_review) return false;
-  if (reviewF === "false" && r.needs_review) return false;
+  for (const key in colFilters) {
+    const allowed = colFilters[key];
+    const vals = colDisplayValues(r, key);
+    if (!vals.some(v => allowed.has(v))) return false;
+  }
   return true;
 }
 
@@ -356,6 +464,7 @@ function render() {
   });
   tbody.innerHTML = html;
   document.getElementById("rowcount").textContent = rows.length + " / " + RAW.length;
+  syncFilterButtonStates();
 
   const gN = rows.filter(r=>confColor(r.confidence)==="cell-green").length;
   const aN = rows.filter(r=>confColor(r.confidence)==="cell-amber").length;
