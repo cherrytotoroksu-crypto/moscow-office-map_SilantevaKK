@@ -8,55 +8,66 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Конструктор аналитики — Офисный рынок Москвы</title>
 <style>
+  :root {
+    --nf-red:#A6093D; --nf-red-dark:#7A0630; --nf-navy:#1B2A4A; --nf-navy-dark:#121E36;
+    --nf-ink:#161616; --nf-grey:#666; --nf-line:#e3e5ea; --nf-bg:#f4f5f7;
+  }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:#1a1a1a; background:#f4f5f7; }
-  header { background:#2F4858; color:#fff; padding:10px 16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-  header h1 { font-size:15px; font-weight:600; }
-  header a.back { color:#c9d3d8; text-decoration:none; font-size:12px; display:flex; align-items:center; gap:4px; }
+  body { font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:var(--nf-ink); background:var(--nf-bg); }
+  header {
+    background:var(--nf-navy-dark); color:#fff; padding:12px 20px; display:flex; align-items:center; gap:16px;
+    flex-wrap:wrap; border-bottom:3px solid var(--nf-red);
+  }
+  header h1 { font-size:16px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; }
+  header a.back { color:#aeb8cc; text-decoration:none; font-size:12px; display:flex; align-items:center; gap:4px; font-weight:600; }
   header a.back:hover { color:#fff; }
 
-  .layout { display:flex; height:calc(100vh - 46px); }
+  .layout { display:flex; height:calc(100vh - 49px); }
   aside.controls {
-    width:260px; flex-shrink:0; background:#fff; border-right:1px solid #dde;
+    width:260px; flex-shrink:0; background:#fff; border-right:1px solid var(--nf-line);
     padding:12px; overflow-y:auto; font-size:12px;
   }
   aside.controls h3 {
-    font-size:10px; font-weight:700; color:#666; text-transform:uppercase;
-    letter-spacing:.4px; margin:10px 0 3px;
+    font-size:10px; font-weight:800; color:var(--nf-navy); text-transform:uppercase;
+    letter-spacing:.6px; margin:12px 0 4px;
   }
   aside.controls h3:first-child { margin-top:0; }
-  aside.controls hr { border:none; border-top:1px solid #eee; margin:8px 0; }
+  aside.controls hr { border:none; border-top:1px solid var(--nf-line); margin:10px 0; }
   .radio-row, .check-row {
     display:flex; align-items:center; gap:6px; margin:2px 0; cursor:pointer; color:#333; line-height:1.3;
   }
-  .radio-row input, .check-row input { cursor:pointer; flex-shrink:0; }
+  .radio-row input, .check-row input { cursor:pointer; flex-shrink:0; accent-color:var(--nf-red); }
   select {
-    width:100%; padding:5px 6px; border:1px solid #ccc; border-radius:4px;
+    width:100%; padding:5px 6px; border:1px solid #ccc; border-radius:3px;
     font-size:12px; margin-top:2px; cursor:pointer; background:#fff;
   }
+  select:focus { outline:none; border-color:var(--nf-red); }
   .hint { font-size:10px; color:#999; margin-bottom:4px; line-height:1.35; }
   button.btn {
-    display:block; width:100%; margin-top:6px; padding:7px;
-    background:#931F2B; color:#fff; border:none; border-radius:5px;
-    font-size:12px; cursor:pointer; text-align:center;
+    display:block; width:100%; margin-top:8px; padding:9px;
+    background:var(--nf-red); color:#fff; border:none; border-radius:3px;
+    font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;
+    cursor:pointer; text-align:center; transition:background .15s;
   }
-  button.btn:hover { background:#6E1620; }
+  button.btn:hover { background:var(--nf-red-dark); }
   #anaStatus { font-size:11px; color:#888; min-height:14px; }
 
   main.content { flex:1; padding:20px; overflow:auto; display:flex; flex-direction:column; gap:12px; min-width:0; }
   #anaCaption {
-    font-size:12px; color:#555; background:#fff; border-radius:8px;
-    padding:10px 14px; box-shadow:0 1px 6px rgba(0,0,0,.08); flex-shrink:0;
+    font-size:12px; color:#555; background:#fff; border-radius:4px; border-left:3px solid var(--nf-red);
+    padding:10px 14px; box-shadow:0 1px 6px rgba(0,0,0,.06); flex-shrink:0;
   }
-  #anaCaption b { color:#1a1a1a; }
+  #anaCaption b { color:var(--nf-navy); }
   #anaChartWrap, #anaTableWrap {
-    background:#fff; border-radius:8px; padding:18px;
-    box-shadow:0 1px 6px rgba(0,0,0,.08); flex:1; min-height:0; position:relative;
+    background:#fff; border-radius:4px; padding:18px;
+    box-shadow:0 1px 6px rgba(0,0,0,.06); flex:1; min-height:0; position:relative;
   }
   #anaTableWrap { overflow:auto; }
   #analyticsTable { width:100%; border-collapse:collapse; font-size:12px; }
-  #analyticsTable th, #analyticsTable td { text-align:left; padding:7px 12px; border-bottom:1px solid #eee; }
-  #analyticsTable th { color:#666; text-transform:uppercase; font-size:10px; letter-spacing:.4px; position:sticky; top:0; background:#fff; }
+  #analyticsTable th, #analyticsTable td { text-align:left; padding:8px 12px; border-bottom:1px solid var(--nf-line); }
+  #analyticsTable th { color:#fff; background:var(--nf-navy); text-transform:uppercase; font-size:10px; letter-spacing:.5px; font-weight:700; position:sticky; top:0; }
+  #analyticsTable tbody tr:nth-child(even) { background:#f6f7f9; }
+  #analyticsTable tbody tr:hover { background:#fbeef0; }
   #analyticsTable td.num, #analyticsTable th.num { text-align:right; font-variant-numeric:tabular-nums; }
 
   @media (max-width: 800px) {
@@ -176,8 +187,11 @@ function loadScript(src) {
 function ensureXLSX() {
   return window.XLSX ? Promise.resolve() : loadScript('https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js');
 }
-function ensureChart() {
-  return window.Chart ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js');
+let _datalabelsRegistered = false;
+async function ensureChart() {
+  if (!window.Chart) await loadScript('https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js');
+  if (!window.ChartDataLabels) await loadScript('https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js');
+  if (!_datalabelsRegistered) { Chart.register(window.ChartDataLabels); _datalabelsRegistered = true; }
 }
 
 // Метрика здания-продажи из карточки data/buildings_{q}.json: цена/объём —
@@ -203,8 +217,10 @@ function bldRentVal(b, qid, metric) {
   return withRate.reduce((s,l)=>s+l.rate*(l.area||0),0) / totalArea;
 }
 
-const CHART_COLORS = ['#7c3aed','#2563eb','#0891b2','#16a34a','#ca8a04','#dc2626','#db2777',
-  '#0d9488','#65a30d','#9333ea','#ea580c','#0284c7','#4d7c0f','#be123c','#7c2d12','#1e3a8a','#831843'];
+// Палитра NF Group: бордовый + тёмно-синий как основная пара (как в столбцах
+// "период1/период2" отчёта), остальные — оттенки той же гаммы по кругу.
+const CHART_COLORS = ['#A6093D','#1B2A4A','#C94F6E','#4A5C80','#7A0630','#8C97AC',
+  '#D98BA0','#2E4066','#5C0A25','#B3BAC9','#E3A6B5','#0F1A30'];
 
 // ============================================================
 //  Загрузка данных всех кварталов (без геослоёв — конструктору нужны
@@ -535,12 +551,24 @@ async function renderAnalytics() {
       responsive: true, maintainAspectRatio: false,
       layout: { padding: { top: 8, right: 14 } },
       plugins: {
-        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } }, display: datasets.length > 1 || isDoughnut },
-        tooltip: { callbacks: { label: c => `${c.dataset.label ?? c.label}: ${(c.parsed.y ?? c.parsed)?.toLocaleString?.('ru-RU') ?? c.formattedValue}` } },
+        legend: {
+          position: 'bottom', labels: { boxWidth: 12, font: { size: 11, weight: '600' }, color: '#1B2A4A' },
+          display: datasets.length > 1 || isDoughnut,
+        },
+        tooltip: {
+          backgroundColor: '#1B2A4A', padding: 8, cornerRadius: 3, titleFont: { weight: '700' },
+          callbacks: { label: c => `${c.dataset.label ?? c.label}: ${(c.parsed.y ?? c.parsed)?.toLocaleString?.('ru-RU') ?? c.formattedValue}` },
+        },
+        datalabels: chartType === 'line' ? false : {
+          display: !isDoughnut && !isStacked && datasets.length <= 2,
+          anchor: 'end', align: 'end', offset: 2,
+          color: '#1B2A4A', font: { size: 10, weight: '700' },
+          formatter: v => v == null ? '' : v.toLocaleString('ru-RU'),
+        },
       },
       scales: isDoughnut ? undefined : {
-        x: { stacked: isStacked },
-        y: { stacked: isStacked, beginAtZero: true, grace: '8%' },
+        x: { stacked: isStacked, grid: { display: false }, ticks: { color: '#333', font: { size: 11 } } },
+        y: { stacked: isStacked, beginAtZero: true, grace: '10%', grid: { color: '#eceef2' }, ticks: { color: '#666' } },
       },
     },
   });

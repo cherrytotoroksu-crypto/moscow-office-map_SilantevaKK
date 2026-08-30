@@ -43,7 +43,7 @@
       display: flex; align-items: center; gap: 6px;
       max-width: none;
       font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-      color: #931F2B !important;
+      color: #A6093D !important;
       background: rgba(255,255,255,0.85) !important;
       padding: 4px 8px;
       border-radius: 6px;
@@ -116,11 +116,11 @@
     /* Кнопка загрузки */
     .upload-btn {
       display: block; width: 100%; margin-top: 4px;
-      padding: 5px; background: #931F2B; color: white;
+      padding: 5px; background: #A6093D; color: white;
       border: none; border-radius: 5px; font-size: 11px;
       cursor: pointer; text-align: center;
     }
-    .upload-btn:hover { background: #6E1620; }
+    .upload-btn:hover { background: #7A0630; }
     #fileStatus {
       margin-top: 3px; font-size: 11px; color: #555;
       min-height: 14px;
@@ -157,7 +157,7 @@
     }
     .legend-gradient {
       height: 12px; border-radius: 3px;
-      background: linear-gradient(to right, #FFFBE0, #FBCB6B, #931F2B) !important;
+      background: linear-gradient(to right, #FFFBE0, #FBCB6B, #A6093D) !important;
     }
     .legend-labels { display: flex; justify-content: space-between; font-size: 10px; color: #666 !important; margin: 3px 0 8px; }
     .legend-item { display: flex; align-items: center; gap: 7px; margin: 3px 0; }
@@ -179,7 +179,7 @@
     .stats-table th { color: #888; font-weight: 600; border-bottom: 1px solid #ddd; font-size: 10px; text-transform: uppercase; }
     .stats-table td:first-child, .stats-table th:first-child { text-align: left; }
     .stats-table tr:not(:last-child) td { border-bottom: 1px solid #f3f3f3; }
-    .stats-table td.hl { font-weight: 700; color: #931F2B; }
+    .stats-table td.hl { font-weight: 700; color: #A6093D; }
 
     /* Легенда зданий (цвет = класс, размер = объём) */
     .buildings-legend {
@@ -216,10 +216,10 @@
     .modal-head h3 { font-size: 15px; flex: 1; color: #222; }
     .modal-head .sub { font-size: 12px; color: #888; }
     .modal-dl {
-      padding: 6px 12px; background: #931F2B; color: #fff;
+      padding: 6px 12px; background: #A6093D; color: #fff;
       border: none; border-radius: 6px; font-size: 12px; cursor: pointer;
     }
-    .modal-dl:hover { background: #6E1620; }
+    .modal-dl:hover { background: #7A0630; }
     .modal-x {
       background: none; border: none; font-size: 22px; line-height: 1;
       color: #999; cursor: pointer; padding: 0 4px;
@@ -253,7 +253,7 @@
       box-shadow: 0 1px 8px rgba(0,0,0,0.2); font-size: 13px; outline: none;
       background: #ffffff !important; color: #333 !important;
     }
-    .map-search input:focus { border-color: #931F2B; }
+    .map-search input:focus { border-color: #A6093D; }
     .map-search-results {
       position: absolute; top: 100%; left: 0; right: 0; z-index: 50;
       background: #ffffff !important; color: #333 !important; border-radius: 7px; box-shadow: 0 3px 14px rgba(0,0,0,0.22);
@@ -273,7 +273,7 @@
       cursor: pointer; transition: all .15s; white-space: nowrap;
     }
     .mode-btn.active {
-      background: #931F2B; border-color: #931F2B; color: #fff;
+      background: #A6093D; border-color: #A6093D; color: #fff;
     }
     .mode-btn:not(.active):hover { background: #e5e7eb; }
 
@@ -379,11 +379,11 @@
     .leaflet-popup-content { font-size: 13px; min-width: 200px; }
     .popup-lots-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 5px 8px;
-      background: #931F2B; color: #fff; border-radius: 5px;
+      background: #A6093D; color: #fff; border-radius: 5px;
       font-size: 11px; cursor: pointer; border: none;
       white-space: nowrap; flex: 1;
     }
-    .popup-lots-btn:hover { background: #6E1620; }
+    .popup-lots-btn:hover { background: #7A0630; }
     .popup-btn-row { display: flex; gap: 4px; margin-top: 6px; }
     .leaflet-popup-content b { font-size: 14px; }
     .prow { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid #f0f0f0; gap: 8px; }
@@ -412,8 +412,8 @@
 <!-- Поиск по зданиям (верхний левый угол) -->
 <div class="map-search">
   <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="11" cy="11" r="7" stroke="#931F2B" stroke-width="2"/>
-    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#931F2B" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="11" cy="11" r="7" stroke="#A6093D" stroke-width="2"/>
+    <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/>
   </svg>
   <input id="mapSearch" type="text" placeholder="Поиск здания — карта приблизится…" autocomplete="off">
   <div class="map-search-results" id="mapSearchResults"></div>
@@ -457,7 +457,7 @@
 
   <hr>
   <h3>Аналитика</h3>
-  <button class="upload-btn" id="openDynamics" style="background:#931F2B; display:flex; align-items:center; justify-content:center; gap:6px;">
+  <button class="upload-btn" id="openDynamics" style="background:#A6093D; display:flex; align-items:center; justify-content:center; gap:6px;">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,17 9,11 13,15 21,5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5 21,5 21,11" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Динамика по кварталам
   </button>
@@ -631,9 +631,9 @@
   <label class="check-row"><input type="checkbox" id="ovDraw"> Режим рисования</label>
   <button class="upload-btn" id="exportGeo" style="margin-top:5px; display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгрузить GeoJSON</button>
   <button class="upload-btn" id="exportXlsx" style="margin-top:4px; background:#C9525E; display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгрузить Excel</button>
-  <a class="upload-btn" href="classifier.html" target="_blank" rel="noopener" style="margin-top:4px; background:#2F4858; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="#ffffff" stroke-width="1.8"/><line x1="3" y1="9" x2="21" y2="9" stroke="#ffffff" stroke-width="1.8"/><line x1="9" y1="9" x2="9" y2="20" stroke="#ffffff" stroke-width="1.8"/></svg>Классификатор зданий</a>
-  <a class="upload-btn" href="codifier.html" target="_blank" rel="noopener" style="margin-top:4px; background:#0d9488; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="7" height="16" rx="1" stroke="#ffffff" stroke-width="1.8"/><rect x="14" y="4" width="7" height="7" rx="1" stroke="#ffffff" stroke-width="1.8"/><rect x="14" y="14" width="7" height="6" rx="1" stroke="#ffffff" stroke-width="1.8"/></svg>Онлайн-таблицы</a>
-  <a class="upload-btn" href="analytics.html" target="_blank" rel="noopener" style="margin-top:4px; background:#7c3aed; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/></svg>Конструктор аналитики</a>
+  <a class="upload-btn" href="classifier.html" target="_blank" rel="noopener" style="margin-top:4px; background:#1B2A4A; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="#ffffff" stroke-width="1.8"/><line x1="3" y1="9" x2="21" y2="9" stroke="#ffffff" stroke-width="1.8"/><line x1="9" y1="9" x2="9" y2="20" stroke="#ffffff" stroke-width="1.8"/></svg>Классификатор зданий</a>
+  <a class="upload-btn" href="codifier.html" target="_blank" rel="noopener" style="margin-top:4px; background:#2E4066; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="7" height="16" rx="1" stroke="#ffffff" stroke-width="1.8"/><rect x="14" y="4" width="7" height="7" rx="1" stroke="#ffffff" stroke-width="1.8"/><rect x="14" y="14" width="7" height="6" rx="1" stroke="#ffffff" stroke-width="1.8"/></svg>Онлайн-таблицы</a>
+  <a class="upload-btn" href="analytics.html" target="_blank" rel="noopener" style="margin-top:4px; background:#A6093D; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/></svg>Конструктор аналитики</a>
   <div id="drawStatus" style="font-size:11px;color:#777;margin-top:5px;"></div>
 
   <hr>
@@ -687,7 +687,7 @@
 <div class="modal-bg" id="dynModalBg">
   <div class="modal" style="width:min(860px,94vw);">
     <div class="modal-head">
-      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,17 9,11 13,15 21,5" stroke="#931F2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5 21,5 21,11" stroke="#931F2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Динамика по кварталам</h3>
+      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,17 9,11 13,15 21,5" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5 21,5 21,11" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Динамика по кварталам</h3>
       <button class="modal-dl" id="dynDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
       <button class="modal-x" id="dynClose">&times;</button>
     </div>
@@ -739,7 +739,7 @@
 <div class="modal-bg" id="cmpModalBg">
   <div class="modal" style="width:min(900px,94vw);">
     <div class="modal-head">
-      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#931F2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#931F2B" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#931F2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#931F2B" stroke-width="2" stroke-linecap="round"/></svg>Сравнение кварталов</h3>
+      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/></svg>Сравнение кварталов</h3>
       <button class="modal-dl" id="cmpDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
       <button class="modal-x" id="cmpClose">&times;</button>
     </div>
@@ -773,7 +773,7 @@
 <div class="modal-bg" id="bldCompareModalBg">
   <div class="modal" style="width:min(900px,94vw);">
     <div class="modal-head">
-      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#931F2B" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#931F2B" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#931F2B" stroke-width="2"/></svg>Сравнение зданий</h3>
+      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#A6093D" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#A6093D" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#A6093D" stroke-width="2"/></svg>Сравнение зданий</h3>
       <button class="modal-dl" id="bcDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
       <button class="modal-x" id="bcClose">&times;</button>
     </div>
@@ -1050,7 +1050,7 @@ function makeColorScale(vals) {
   // Жёлто-красная шкала (YlOrRd) с концом в фирменном красном NF Group
   const stops = [
     [0.00, '#FFFBE0'], [0.17, '#FEEA9E'], [0.33, '#FDCC6B'],
-    [0.50, '#FBAA4C'], [0.67, '#EE7145'], [0.83, '#C9433A'], [1.00, '#931F2B']
+    [0.50, '#FBAA4C'], [0.67, '#EE7145'], [0.83, '#C9433A'], [1.00, '#A6093D']
   ];
   function hexToRgb(h) {
     const r = parseInt(h.slice(1,3),16), g = parseInt(h.slice(3,5),16), b = parseInt(h.slice(5,7),16);
@@ -1674,7 +1674,7 @@ function updateLegend(scale) {
   document.getElementById('legendTitle').textContent = labels[currentMetric];
   document.getElementById('legendMin').textContent = fmtShort(scale.min);
   document.getElementById('legendMax').textContent = fmtShort(scale.max);
-  const gradColors = ['#FFFBE0','#FBAA4C','#931F2B'];
+  const gradColors = ['#FFFBE0','#FBAA4C','#A6093D'];
   document.getElementById('legendGradient').style.background =
     `linear-gradient(to right, ${gradColors.join(',')})`;
   repositionSignature();
@@ -1945,7 +1945,7 @@ function renderBuildings() {
         ['Субрынок',        b.geoSubmarket || '—'],
       ];
       btns = `<div class="popup-btn-row">
-        <button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${nRentLots})</button>
+        <button class="popup-lots-btn" style="background:#A6093D;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${nRentLots})</button>
         <button class="popup-lots-btn" style="background:#B23A48;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика аренды</button>
       </div>`;
       if (nLots > 0) {
@@ -1974,7 +1974,7 @@ function renderBuildings() {
       btns = `<div class="popup-btn-row">${lotsBtn}${anaSaleBtn}</div>`;
       if (hasRent) {
         btns += `<div class="popup-btn-row">
-          <button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${nRentLots})</button>
+          <button class="popup-lots-btn" style="background:#A6093D;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${nRentLots})</button>
           <button class="popup-lots-btn" style="background:#B23A48;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика аренды</button>
         </div>`;
       }
@@ -2572,7 +2572,7 @@ window.openBuildingCard = function(idx) {
   btns += `<button class="popup-lots-btn" style="background:#C9525E;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика продаж</button></div>`;
   if (rentLots.length) {
     btns += `<div class="popup-btn-row">
-      <button class="popup-lots-btn" style="background:#931F2B;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${rentLots.length})</button>
+      <button class="popup-lots-btn" style="background:#A6093D;" onclick="openRentLotsModal(${idx})">${ICON_BUILDING} Аренда (${rentLots.length})</button>
       <button class="popup-lots-btn" style="background:#B23A48;" onclick="openBuildingAnalytics(${idx})">${ICON_CHART} Аналитика аренды</button>
     </div>`;
   }
@@ -2705,7 +2705,7 @@ function renderCoworking() {
     const bIdx = buildingIndexForCoworking(c);
     const bcVal = c.bc || c.address || '—';
     const bcCell = bIdx >= 0
-      ? `<a href="#" onclick="openBuildingCard(${bIdx});return false;" style="color:#931F2B;text-decoration:underline;" title="Открыть карточку здания">${bcVal}</a>`
+      ? `<a href="#" onclick="openBuildingCard(${bIdx});return false;" style="color:#A6093D;text-decoration:underline;" title="Открыть карточку здания">${bcVal}</a>`
       : bcVal;
     const rows = [
       ['Сеть', c.network || '—'],
@@ -2855,7 +2855,7 @@ function getFilteredFuture() {
 
 function fpPopupHtml(p) {
   const src = (p.sources || []).map(u =>
-    `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#931F2B;">${escapeHtml(u.replace(/^https?:\/\//, '').slice(0, 42))}</a>`
+    `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#A6093D;">${escapeHtml(u.replace(/^https?:\/\//, '').slice(0, 42))}</a>`
   ).join('<br>');
   const lowConfidence = (p.confidence || 'Низкий') === 'Низкий';
   const warningBadge = lowConfidence
@@ -3003,7 +3003,7 @@ function fpPriorityRank(p) {
 
 function fpSourceLinks(p) {
   const links = (p.sources || []).map((u, i) =>
-    `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#931F2B;">${i + 1}</a>`
+    `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:#A6093D;">${i + 1}</a>`
   ).join(', ');
   return links || '—';
 }
@@ -3426,8 +3426,9 @@ function syncDynMetricOptions() {
   const values = [...sel.options].map(o => o.value);
   sel.value = values.includes(prev) ? prev : values[0];
 }
-const CHART_COLORS = ['#7c3aed','#2563eb','#0891b2','#16a34a','#ca8a04','#dc2626','#db2777',
-  '#0d9488','#65a30d','#9333ea','#ea580c','#0284c7','#4d7c0f','#be123c','#7c2d12','#1e3a8a','#831843'];
+// Палитра NF Group: бордовый + тёмно-синий как основная пара, дальше по кругу.
+const CHART_COLORS = ['#A6093D','#1B2A4A','#C94F6E','#4A5C80','#7A0630','#8C97AC',
+  '#D98BA0','#2E4066','#5C0A25','#B3BAC9','#E3A6B5','#0F1A30'];
 
 function divDisp(layer, name) {
   if (layer === 'zones') return ZONE_NAMES[name] || name;
@@ -4000,7 +4001,7 @@ async function renderBldCompare() {
   const chipsEl = document.getElementById('bcChips');
   chipsEl.innerHTML = bldCompareList.map(idx => {
     const b = buildingsData[idx];
-    return `<span style="display:inline-flex;align-items:center;gap:5px;background:#F7E4E6;color:#931F2B;border-radius:14px;padding:4px 10px;font-size:12px;margin:2px 4px 2px 0;">${b.name}<span style="cursor:pointer;font-weight:700;" onclick="removeBldCompare(${idx})">&times;</span></span>`;
+    return `<span style="display:inline-flex;align-items:center;gap:5px;background:#F7E4E6;color:#A6093D;border-radius:14px;padding:4px 10px;font-size:12px;margin:2px 4px 2px 0;">${b.name}<span style="cursor:pointer;font-weight:700;" onclick="removeBldCompare(${idx})">&times;</span></span>`;
   }).join('') || '<span style="color:#999;font-size:12px;">Добавьте здания для сравнения (до 4)</span>';
 
   const body = document.getElementById('bcBody');
