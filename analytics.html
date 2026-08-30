@@ -7,6 +7,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Конструктор аналитики — Офисный рынок Москвы</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
   :root {
     --nf-red:#A6093D; --nf-red-dark:#7A0630; --nf-navy:#1B2A4A; --nf-navy-dark:#121E36;
@@ -256,9 +257,9 @@ let analyticsChart = null;
 let analyticsProjectsData = null; // кэш data/all_projects_layer.json — снимок, не зависит от квартала
 
 const ANA_METRICS = {
-  sale: [['count','Кол-во объектов, шт.'],['volume','Объём предложения, кв.м'],
+  sale: [['count','Кол-во объектов, шт.'],['volume','Площадь лотов в продаже, кв.м'],
     ['avg','Ср. цена, руб/кв.м'],['wavg','Ср. взвешенная цена, руб/кв.м']],
-  rent: [['count','Кол-во объектов, шт.'],['volume','Объём предложения, кв.м'],
+  rent: [['count','Кол-во объектов, шт.'],['volume','Площадь в аренду, кв.м'],
     ['avg','Ср. ставка, руб/кв.м/год'],['wavg','Ср. взвешенная ставка, руб/кв.м/год']],
   coworking: [['count','Кол-во площадок, шт.'],['seats','Мест всего, шт.'],
     ['vacancy','Вакантно, мест'],['avgRate','Ср. ставка, руб/мес'],['wavgRate','Ср. взв. ставка, руб/мес']],
@@ -311,7 +312,7 @@ async function initAnalyticsConstructor() {
     const fromSel = document.getElementById('anaQuarterFrom');
     const toSel = document.getElementById('anaQuarterTo');
     const qOpts = qs.map(q => [q.id, q.label]);
-    fillSelect(fromSel, qOpts, qs[0].id);
+    fillSelect(fromSel, qOpts, qs[Math.max(0, qs.length - 2)].id);
     fillSelect(toSel, qOpts, qs[qs.length-1].id);
     document.querySelectorAll('input[name="anaDomain"]').forEach(r => r.addEventListener('change', onAnaDomainChange));
     document.getElementById('anaChannel').addEventListener('change', onAnaDomainChange);

@@ -22,6 +22,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow">
   <title>Офисный рынок Москвы</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
@@ -450,7 +451,7 @@
   <div id="fileStatus">Загрузка…</div>
   <div id="fileStats" style="display:none; margin-top:5px; padding-top:5px; border-top:1px solid #eee; grid-template-columns:1fr 1fr; gap:0 12px;">
     <div class="stat-row"><span>Объектов</span><span id="statCount">—</span></div>
-    <div class="stat-row"><span id="statVolumeLabel">Объём</span><span id="statVolume">—</span></div>
+    <div class="stat-row"><span id="statVolumeLabel">Площадь лотов в продаже</span><span id="statVolume">—</span></div>
     <div class="stat-row"><span id="statAvgPriceLabel">Ср. цена</span><span id="statAvgPrice">—</span></div>
     <div class="stat-row"><span id="statWAvgPriceLabel">Ср. взв.</span><span id="statWAvgPrice">—</span></div>
   </div>
@@ -621,7 +622,7 @@
   <select id="metricSelect">
     <option value="wavg">Ср. взвешенная цена (руб/кв.м)</option>
     <option value="avg">Ср. цена (руб/кв.м)</option>
-    <option value="volume">Объём предложения (кв.м)</option>
+    <option value="volume">Площадь лотов в продаже (кв.м)</option>
     <option value="count">Кол-во объектов (шт.)</option>
   </select>
   </div>
@@ -724,7 +725,7 @@
         <select id="dynMetric">
           <option value="wavg">Ср. взв. цена, руб/кв.м</option>
           <option value="avg">Ср. цена, руб/кв.м</option>
-          <option value="volume">Объём, кв.м</option>
+          <option value="volume">Площадь лотов в продаже, кв.м</option>
           <option value="count">Кол-во объектов</option>
           <option value="price">Цена здания, руб/кв.м</option>
           <option value="lots">Лотов, шт.</option>
@@ -760,7 +761,7 @@
         <select id="cmpMetric">
           <option value="wavg">Ср. взв. цена</option>
           <option value="avg">Ср. цена</option>
-          <option value="volume">Объём</option>
+          <option value="volume">Площадь лотов в продаже</option>
           <option value="count">Кол-во объектов</option>
         </select>
       </label>
@@ -1490,6 +1491,33 @@ async function precomputeAll() {
 // хронологический порядок qid (старые → новые)
 function quartersChrono() { return [...QUARTERS].slice().reverse(); }
 
+function comparisonStatsSource(mode) {
+  if (mode === 'coworking') return allCoworkingStats;
+  if (mode === 'rent') return allRentStats;
+  return allStats;
+}
+
+// Выбираем два последних квартала с данными в текущем режиме, но не позднее
+// квартала, открытого на карте. Так модалки сравнения не стартуют с Q2 2021
+// и не предлагают заведомо пустой период для аренды/коворкингов.
+function getDefaultComparisonQuarters(mode) {
+  const qs = quartersChrono();
+  const currentIdx = qs.findIndex(q => q.id === currentQuarter.id);
+  const availableRange = qs.slice(0, currentIdx >= 0 ? currentIdx + 1 : qs.length);
+  const source = comparisonStatsSource(mode);
+  const withData = availableRange.filter(q =>
+    Object.values(source[q.id] || {}).some(byArea =>
+      Object.values(byArea || {}).some(stats => Number(stats?.count) > 0)
+    )
+  );
+  const candidates = withData.length >= 2 ? withData : availableRange;
+  const to = candidates[candidates.length - 1] || qs[qs.length - 1];
+  const from = candidates[candidates.length - 2]
+    || qs[Math.max(0, qs.findIndex(q => q.id === to.id) - 1)]
+    || to;
+  return { from: from.id, to: to.id };
+}
+
 // ============================================================
 //  РЕНДЕР ХОРОПЛЕТА
 // ============================================================
@@ -1512,7 +1540,7 @@ function renderStatsTable(key) {
   let html = `<h4>${title}</h4>` +
     `<div class="note">Геометрия районов временно скрыта. Цифры — по таблице зданий.</div>` +
     `<table><thead><tr>` +
-    `<th>Район</th><th>Объект.</th><th>Объём</th><th>Ср. цена</th><th>Ср.взв.</th>` +
+    `<th>Район</th><th>Объект.</th><th>${rentMode ? 'Площадь в аренду' : 'Площадь лотов в продаже'}</th><th>Ср. цена</th><th>Ср.взв.</th>` +
     `</tr></thead><tbody>`;
   for (const [name, v] of rows) {
     const cell = (m, val) => `<td class="${currentMetric === m ? 'hl' : ''}">${val}</td>`;
@@ -1599,7 +1627,7 @@ async function renderChoropleth() {
         ['Ср. взв. ставка, руб/кв.м/год',    stats?.wavg   != null ? fmt(Math.round(stats.wavg)) : '—'],
       ] : [
         ['Объектов, шт.',          stats?.count  != null ? fmt(Math.round(stats.count)) : '—'],
-        ['Объём, кв.м',            stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
+        ['Площадь лотов в продаже, кв.м', stats?.volume != null ? fmt(Math.round(stats.volume)) : '—'],
         ['Ср. цена, руб/кв.м',     stats?.avg    != null ? fmt(Math.round(stats.avg)) : '—'],
         ['Ср. взв. цена, руб/кв.м',stats?.wavg   != null ? fmt(Math.round(stats.wavg)) : '—'],
       ];
@@ -1652,7 +1680,7 @@ async function renderOverlays() {
 const METRIC_LABELS = {
   wavg: 'Ср. взв. цена, руб/кв.м',
   avg:  'Ср. цена, руб/кв.м',
-  volume: 'Объём предложения, кв.м',
+  volume: 'Площадь лотов в продаже, кв.м',
   count: 'Кол-во объектов, шт.',
 };
 const METRIC_LABELS_RENT = {
@@ -1748,7 +1776,7 @@ function getStatsPoints(buildings) {
 
 function updateGlobalStats(pts) {
   document.getElementById('fileStats').style.display = 'grid';
-  document.getElementById('statVolumeLabel').textContent = rentMode ? 'Площ. в аренду' : 'Объём';
+  document.getElementById('statVolumeLabel').textContent = rentMode ? 'Площадь в аренду' : 'Площадь лотов в продаже';
   document.getElementById('statAvgPriceLabel').textContent = rentMode ? 'Ср. ставка' : 'Ср. цена';
   document.getElementById('statWAvgPriceLabel').textContent = rentMode ? 'Ср. взв. ставка' : 'Ср. взв.';
   if (!pts.length) {
@@ -1820,12 +1848,16 @@ function coordsCell(b) {
   return `<span class="coord-val">${lat}, ${lng}</span><button class="coord-copy-btn" type="button" onclick="copyBuildingCoords(this, '${lat}, ${lng}')" title="Скопировать координаты">${ICON_COPY}</button>`;
 }
 window.copyBuildingCoords = function(btn, text) {
-  Promise.resolve(copyToClipboard(text)).then(() => {
-    const original = btn.innerHTML;
-    btn.classList.add('copied');
-    btn.innerHTML = ICON_CHECK;
-    setTimeout(() => { btn.innerHTML = original; btn.classList.remove('copied'); }, 1200);
-  });
+  const original = btn.innerHTML;
+  copyToClipboard(text)
+    .then(() => {
+      btn.classList.add('copied');
+      btn.innerHTML = ICON_CHECK;
+    })
+    .catch(() => { btn.title = 'Не удалось скопировать — ' + text; })
+    .finally(() => {
+      setTimeout(() => { btn.innerHTML = original; btn.classList.remove('copied'); }, 1200);
+    });
 };
 function buildingRadius(vol) {
   if (!isFinite(vol) || vol <= 0) return 4;
@@ -2221,7 +2253,7 @@ function applyStateFromURL() {
     document.getElementById('rentFilterWrap').style.display = rentMode ? 'block' : 'none';
     document.getElementById('rangeFilterTitle').textContent = rentMode ? 'Диапазон: ставка, руб/кв.м/год' : 'Диапазон: цена, руб/кв.м';
     const metricSelect = document.getElementById('metricSelect');
-    metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
+    metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : (rentMode ? METRIC_OPTIONS_RENT : METRIC_OPTIONS_SALE);
   }
   const layer = p.get('layer');
   if (layer && LAYER_CFG[layer]) {
@@ -2267,11 +2299,15 @@ function applyStateFromURL() {
 }
 
 const COPY_LINK_LABEL = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 14a4 4 0 0 0 5.66 0l2.34-2.34a4 4 0 0 0-5.66-5.66l-1 1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10a4 4 0 0 0-5.66 0l-2.34 2.34a4 4 0 0 0 5.66 5.66l1-1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Скопировать ссылку на вид';
-function copyToClipboard(text) {
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    return navigator.clipboard.writeText(text).catch(() => copyViaTextarea(text));
-  }
-  return copyViaTextarea(text);
+// Clipboard API иногда зависает (нет фокуса вкладки, заблокировано
+// разрешение) и промис не резолвится и не реджектится вовсе — без таймаута
+// кнопка молча остаётся в состоянии "Копируем…" навсегда. Гоним запись в
+// гонке с таймаутом и всегда падаем на textarea-фолбэк, если он проиграл.
+function withTimeout(promise, ms) {
+  return new Promise((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error('clipboard write timed out')), ms);
+    promise.then(v => { clearTimeout(t); resolve(v); }, e => { clearTimeout(t); reject(e); });
+  });
 }
 function copyViaTextarea(text) {
   const ta = document.createElement('textarea');
@@ -2284,12 +2320,30 @@ function copyViaTextarea(text) {
   document.body.removeChild(ta);
   return ok;
 }
+// Резолвится, если текст реально скопирован (нативно или через textarea),
+// реджектится только если оба способа не сработали — вызывающий код всегда
+// получает определённый исход в течение ~1.5с, а не зависшее состояние.
+function copyToClipboard(text) {
+  const attempt = (navigator.clipboard && navigator.clipboard.writeText)
+    ? withTimeout(navigator.clipboard.writeText(text), 1500)
+    : Promise.reject(new Error('Clipboard API недоступен'));
+  return attempt.catch(() => {
+    if (!copyViaTextarea(text)) throw new Error('copy failed');
+  });
+}
 document.getElementById('copyLinkBtn').addEventListener('click', function() {
   syncURL();
-  Promise.resolve(copyToClipboard(location.href)).then(() => {
-    this.textContent = 'Ссылка скопирована!';
-    setTimeout(() => { this.innerHTML = COPY_LINK_LABEL; }, 1500);
-  });
+  const btn = this;
+  const href = location.href;
+  btn.disabled = true;
+  btn.textContent = 'Копируем…';
+  copyToClipboard(href)
+    .then(() => { btn.textContent = 'Ссылка скопирована!'; })
+    .catch(() => { btn.textContent = 'Не удалось скопировать — ссылка в адресной строке'; })
+    .finally(() => {
+      btn.disabled = false;
+      setTimeout(() => { btn.innerHTML = COPY_LINK_LABEL; }, 1800);
+    });
 });
 map.on('moveend', () => syncURL());
 
@@ -3033,10 +3087,15 @@ function openFutureNoCoordsModal(count, tableHtml) {
 // ============================================================
 //  ПЕРЕКЛЮЧЕНИЕ РЕЖИМА ПРОДАЖА / АРЕНДА / КОВОРКИНГИ
 // ============================================================
-const METRIC_OPTIONS_SALERENT =
+const METRIC_OPTIONS_SALE =
   `<option value="wavg">Ср. взвешенная цена (руб/кв.м)</option>
    <option value="avg">Ср. цена (руб/кв.м)</option>
-   <option value="volume">Объём предложения (кв.м)</option>
+   <option value="volume">Площадь лотов в продаже (кв.м)</option>
+   <option value="count">Кол-во объектов (шт.)</option>`;
+const METRIC_OPTIONS_RENT =
+  `<option value="wavg">Ср. взвешенная ставка (руб/кв.м/год)</option>
+   <option value="avg">Ср. ставка (руб/кв.м/год)</option>
+   <option value="volume">Площадь в аренду (кв.м)</option>
    <option value="count">Кол-во объектов (шт.)</option>`;
 const METRIC_OPTIONS_COWORKING =
   `<option value="wavgRate">Ср. взв. ставка (руб/мес)</option>
@@ -3091,7 +3150,7 @@ window.setMode = async function(mode) {
   ['fltPriceMin','fltPriceMax','fltAreaMin','fltAreaMax'].forEach(id => document.getElementById(id).value = '');
 
   const metricSelect = document.getElementById('metricSelect');
-  metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : METRIC_OPTIONS_SALERENT;
+  metricSelect.innerHTML = coworkingMode ? METRIC_OPTIONS_COWORKING : (rentMode ? METRIC_OPTIONS_RENT : METRIC_OPTIONS_SALE);
   currentMetric = coworkingMode ? 'wavgRate' : 'wavg';
   metricSelect.value = currentMetric;
 
@@ -3378,7 +3437,7 @@ document.getElementById('exportXlsx').addEventListener('click', async function()
 const DIV_LABELS = { zones:'Зоны', ao:'Округа', submarkets:'Субрынки',
   bizFormed:'Дел. районы (сформир.)', bizForming:'Дел. районы (формир.)' };
 const METRIC_NAMES = { wavg:'Ср. взв. цена, руб/кв.м', avg:'Ср. цена, руб/кв.м',
-  volume:'Объём, кв.м', count:'Кол-во объектов', price:'Цена, руб/кв.м', lots:'Лотов, шт.' };
+  volume:'Площадь лотов в продаже, кв.м', count:'Кол-во объектов', price:'Цена, руб/кв.м', lots:'Лотов, шт.' };
 const METRIC_NAMES_RENT_BUILDING = { price:'Ставка, руб/кв.м/год', volume:'Площадь в аренду, кв.м', lots:'Лотов в аренде, шт.' };
 const METRIC_NAMES_COWORK_BUILDING = { price:'Ставка, руб/мес с НДС', seats:'Мест всего, шт.', vacancy:'Вакантно, мест', lots:'Площадок, шт.' };
 const METRIC_NAMES_COWORK_DIVISION = { wavgRate:'Ср. взв. ставка, руб/мес', avgRate:'Ср. ставка, руб/мес', seats:'Мест всего, шт.', vacancy:'Вакантно, мест', count:'Кол-во площадок' };
@@ -3388,7 +3447,7 @@ const METRIC_NAMES_RENT_DIVISION = { wavg:'Ср. взвешенная ставк
 const DYN_METRIC_OPTIONS_DIVISION =
   `<option value="wavg">Ср. взвешенная цена, руб/кв.м</option>
    <option value="avg">Ср. цена, руб/кв.м</option>
-   <option value="volume">Объём, кв.м</option>
+   <option value="volume">Площадь лотов в продаже, кв.м</option>
    <option value="count">Кол-во объектов</option>`;
 const DYN_METRIC_OPTIONS_DIVISION_COWORK =
   `<option value="wavgRate">Ср. взв. ставка, руб/мес</option>
@@ -3403,7 +3462,7 @@ const DYN_METRIC_OPTIONS_DIVISION_RENT =
    <option value="count">Кол-во объектов</option>`;
 const DYN_METRIC_OPTIONS_BUILDING_SALE =
   `<option value="price">Цена, руб/кв.м</option>
-   <option value="volume">Объём, кв.м</option>
+   <option value="volume">Площадь лотов в продаже, кв.м</option>
    <option value="lots">Лотов, шт.</option>`;
 const DYN_METRIC_OPTIONS_BUILDING_RENT =
   `<option value="price">Ставка, руб/кв.м/год</option>
@@ -3681,9 +3740,10 @@ function fillQuarterSelect(sel, def) {
 }
 async function openCompare() {
   await precomputeAll();
-  const qs = quartersChrono();
-  fillQuarterSelect(document.getElementById('cmpFrom'), qs[0].id);
-  fillQuarterSelect(document.getElementById('cmpTo'), qs[qs.length-1].id);
+  const mode = coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale');
+  const defaults = getDefaultComparisonQuarters(mode);
+  fillQuarterSelect(document.getElementById('cmpFrom'), defaults.from);
+  fillQuarterSelect(document.getElementById('cmpTo'), defaults.to);
   document.getElementById('cmpModalBg').classList.add('open');
   renderCompare();
 }
@@ -3692,7 +3752,7 @@ async function openCompare() {
 const CMP_METRIC_OPTIONS_DIVISION =
   `<option value="wavg">Ср. взв. цена</option>
    <option value="avg">Ср. цена</option>
-   <option value="volume">Объём</option>
+   <option value="volume">Площадь лотов в продаже</option>
    <option value="count">Кол-во объектов</option>`;
 const CMP_METRIC_OPTIONS_DIVISION_COWORK =
   `<option value="wavgRate">Ср. взв. ставка</option>
@@ -3707,7 +3767,7 @@ const CMP_METRIC_OPTIONS_DIVISION_RENT =
    <option value="count">Кол-во объектов</option>`;
 const CMP_METRIC_OPTIONS_BUILDING =
   `<option value="price">Цена</option>
-   <option value="volume">Объём</option>
+   <option value="volume">Площадь лотов в продаже</option>
    <option value="lots">Лотов, шт.</option>`;
 const CMP_METRIC_OPTIONS_BUILDING_RENT =
   `<option value="price">Ставка, руб/кв.м/год</option>
@@ -4060,11 +4120,12 @@ document.addEventListener('click', e => {
 
 async function openBldCompareModal() {
   await precomputeAll();
-  const qs = quartersChrono();
-  fillQuarterSelect(document.getElementById('bcFrom'), qs[0].id);
-  fillQuarterSelect(document.getElementById('bcTo'), qs[qs.length - 1].id);
   // по умолчанию — режим, из которого открыли модалку; дальше переключается независимо от карты
-  document.getElementById('bcMode').value = coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale');
+  const mode = coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale');
+  document.getElementById('bcMode').value = mode;
+  const defaults = getDefaultComparisonQuarters(mode);
+  fillQuarterSelect(document.getElementById('bcFrom'), defaults.from);
+  fillQuarterSelect(document.getElementById('bcTo'), defaults.to);
   document.getElementById('bldCompareModalBg').classList.add('open');
   renderBldCompare();
 }

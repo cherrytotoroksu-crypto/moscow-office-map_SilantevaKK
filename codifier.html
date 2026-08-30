@@ -7,6 +7,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Кодификатор — Офисный рынок Москвы</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
   :root {
     --nf-red:#A6093D; --nf-red-dark:#7A0630; --nf-navy:#1B2A4A; --nf-navy-dark:#121E36;
@@ -97,15 +98,15 @@
   <span class="meta" id="metaLine"></span>
 </header>
 
-<div class="tabs" id="sectionTabs">
-  <div class="tab" data-section="codifier">Общий кодификатор</div>
-  <div class="tab" data-section="golden">Golden File</div>
-  <div class="tab" data-section="sale">Продажа офисов</div>
-  <div class="tab" data-section="rent">Аренда офисов</div>
-  <div class="tab" data-section="flex">Гибкие офисы</div>
-  <div class="tab" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</div>
+<div class="tabs" id="sectionTabs" role="tablist" aria-label="Разделы">
+  <div class="tab" role="tab" tabindex="0" data-section="codifier">Общий кодификатор</div>
+  <div class="tab" role="tab" tabindex="-1" data-section="golden">Golden File</div>
+  <div class="tab" role="tab" tabindex="-1" data-section="sale">Продажа офисов</div>
+  <div class="tab" role="tab" tabindex="-1" data-section="rent">Аренда офисов</div>
+  <div class="tab" role="tab" tabindex="-1" data-section="flex">Гибкие офисы</div>
+  <div class="tab" role="tab" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</div>
 </div>
-<div class="subtabs" id="viewTabs" style="display:none;"></div>
+<div class="subtabs" id="viewTabs" role="tablist" aria-label="Вкладки раздела" style="display:none;"></div>
 <div class="segment-cards" id="segmentCards" style="display:none;"></div>
 
 <div class="toolbar" id="toolbar">
@@ -498,7 +499,7 @@ const COMPARE_COLUMNS = [
   {key:'segment', label:'Сегмент рынка', type:'text', visible:true},
   {key:'objects', label:'Объектов', type:'number', visible:true},
   {key:'volumeLabel', label:'Показатель объёма', type:'text', visible:true},
-  {key:'volume', label:'Объём предложения', type:'number', visible:true},
+  {key:'volume', label:'Площадь предложения', type:'number', visible:true},
   {key:'lotsCount', label:'Лотов/предложений', type:'number', visible:true},
   {key:'rateLabel', label:'Показатель ставки/цены', type:'text', visible:true},
   {key:'rate', label:'Ставка/цена (ср.взв.)', type:'number', visible:true},
@@ -1043,25 +1044,25 @@ async function computeSegmentKPIs(quarterId) {
 
   const saleGolden = golden && golden.sale;
   const sale = saleGolden
-    ? {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel: 'Площадь, м² (Golden File, контрольно)',
+    ? {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel: 'Контрольная площадь продажи (Golden File), м²',
        volume: saleGolden.available_area_sqm, lotsCount: saleLots,
        rateLabel: 'Цена (ср.взв.), руб/м² (Golden File)', rate: saleGolden.weighted_price_rub_per_sqm,
        updated: label, sourceNote: goldenNoteFor(golden.source_sheet)}
-    : {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel:'Площадь, м²', volume: saleArea || null,
+    : {segment: SEGMENT_LABEL.sale, objects: saleObjects, volumeLabel:'Площадь лотов в продаже, м²', volume: saleArea || null,
        lotsCount: saleLots, rateLabel:'Цена (ср.взв.), руб/м²', rate: saleArea ? Math.round(saleTotal / saleArea) : null, updated: label};
 
   const rentGolden = golden && golden.rent;
   const rent = rentGolden
-    ? {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel: 'Площадь, м² (Golden File, контрольно)',
+    ? {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel: 'Контрольная площадь аренды (Golden File), м²',
        volume: rentGolden.available_area_sqm, lotsCount: rentLots,
        rateLabel: 'Ставка (ср.взв.), руб/м²/год (Golden File)', rate: Math.round(rentGolden.rate_class_a_plus_prime_rub_sqm_year),
        updated: label, sourceNote: goldenNoteFor(golden.source_sheet)}
-    : {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel:'Площадь, м²', volume: rentArea || null,
+    : {segment: SEGMENT_LABEL.rent, objects: rentObjects, volumeLabel:'Площадь в аренду, м²', volume: rentArea || null,
        lotsCount: rentLots, rateLabel:'Ставка (ср.взв.), руб/м²/год', rate: rentArea ? Math.round(rentRateWeighted / rentArea) : null, updated: label};
 
   const flexGolden = golden && golden.flex;
   const flex = flexGolden
-    ? {segment: SEGMENT_LABEL.flex, objects: flexRaw.length, volumeLabel: 'Открытые площадки, м² (Golden File, контрольно)',
+    ? {segment: SEGMENT_LABEL.flex, objects: flexRaw.length, volumeLabel: 'Контрольная открытая площадь (Golden File), м²',
        volume: flexGolden.open_space_seats_sqm, lotsCount: flexRaw.length,
        rateLabel: 'Ставка, руб/мес (Golden File)', rate: flexGolden.coworking_rate_rub_month,
        updated: label, sourceNote: goldenNoteFor(golden.source_sheet)}
@@ -2097,14 +2098,24 @@ function renderSubtabs() {
   const wrap = document.getElementById('viewTabs');
   if (!section || section.views.length <= 1) { wrap.style.display = 'none'; wrap.innerHTML = ''; return; }
   wrap.style.display = '';
-  wrap.innerHTML = section.views.map(v => `<div class="subtab${v === currentView ? ' active' : ''}" data-view="${v}">${escapeHtml(VIEWS[v].label)}</div>`).join('');
+  wrap.innerHTML = section.views.map(v => {
+    const active = v === currentView;
+    return `<div class="subtab${active ? ' active' : ''}" role="tab" tabindex="${active ? 0 : -1}" `
+      + `aria-selected="${active}" data-view="${v}">${escapeHtml(VIEWS[v].label)}</div>`;
+  }).join('');
   wrap.querySelectorAll('.subtab').forEach(st => {
     st.onclick = () => switchToView(st.dataset.view);
   });
+  bindTablistKeyboardNav(wrap);
 }
 
 function syncSectionTabsActive() {
-  document.querySelectorAll('#sectionTabs .tab').forEach(t => t.classList.toggle('active', t.dataset.section === currentSection));
+  document.querySelectorAll('#sectionTabs .tab').forEach(t => {
+    const active = t.dataset.section === currentSection;
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', String(active));
+    t.tabIndex = active ? 0 : -1;
+  });
 }
 
 document.querySelectorAll('#sectionTabs .tab').forEach(tab => {
@@ -2116,6 +2127,27 @@ document.querySelectorAll('#sectionTabs .tab').forEach(tab => {
     switchToView(section.views[0]);
   };
 });
+bindTablistKeyboardNav(document.getElementById('sectionTabs'));
+
+// Стандартная клавиатурная навигация по WAI-ARIA tablist: стрелки двигают
+// фокус (roving tabindex) и сразу активируют вкладку, Home/End — к краям,
+// Enter/Space активируют текущую в фокусе (нужно div'ам без нативного клика).
+function bindTablistKeyboardNav(list) {
+  if (!list || list._kbBound) return;
+  list._kbBound = true;
+  list.addEventListener('keydown', e => {
+    const tabs = [...list.querySelectorAll('[role="tab"]')];
+    const i = tabs.indexOf(document.activeElement);
+    if (i === -1) return;
+    let next = null;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = tabs[(i + 1) % tabs.length];
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = tabs[(i - 1 + tabs.length) % tabs.length];
+    else if (e.key === 'Home') next = tabs[0];
+    else if (e.key === 'End') next = tabs[tabs.length - 1];
+    else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tabs[i].click(); return; }
+    if (next) { e.preventDefault(); next.focus(); next.click(); }
+  });
+}
 
 function loadCurrentView() {
   switch (currentView) {
