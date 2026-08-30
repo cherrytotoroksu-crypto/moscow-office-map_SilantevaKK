@@ -5,20 +5,40 @@
 Лист «Все объекты (чистый)» — единственный источник геометрии (см. промпт на листе
 «Промпт для Клода»). Объекты без полной пары координат в geometry НЕ попадают —
 они выносятся в отдельный список no_coords, без геокодинга по догадке.
+
+Запуск:
+    python scripts/export_future_projects.py --source <путь-к-книге.xlsx>
 """
+import argparse
 import json
 import re
-import sys
 from pathlib import Path
 
 import openpyxl
 
-SRC = Path(r'C:\Users\zapas\Documents\Codex\2026-08-05\final-2-xlsx\outputs\Будущие_проекты_очищено_с_памятью.xlsx')
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / 'data' / 'future_projects.json'
 OVERRIDES = REPO / 'data' / 'future_projects_verification_overrides.json'
 
 SHEET = 'Все объекты (чистый)'
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description='Экспорт будущих офисных проектов из проверенной Excel-книги в JSON.',
+    )
+    parser.add_argument(
+        '--source',
+        required=True,
+        type=Path,
+        help='Путь к книге Будущие_проекты_очищено_с_памятью.xlsx.',
+    )
+    parser.add_argument(
+        '--stats',
+        type=Path,
+        help='Необязательный путь для JSON со сводной статистикой.',
+    )
+    return parser.parse_args(argv)
 
 FIELD_MAP = {
     'ID': 'id',
@@ -100,9 +120,14 @@ def apply_override(rec, override):
     return rec
 
 
-def main():
+def main(argv=None):
+    args = parse_args(argv)
+    source = args.source.expanduser().resolve()
+    if not source.is_file():
+        raise FileNotFoundError(f'Исходная Excel-книга не найдена: {source}')
+
     overrides = load_overrides()
-    wb = openpyxl.load_workbook(SRC, data_only=True, read_only=True)
+    wb = openpyxl.load_workbook(source, data_only=True, read_only=True)
     ws = wb[SHEET]
     rows = ws.iter_rows(values_only=True)
     header = [h for h in next(rows)]
@@ -153,7 +178,7 @@ def main():
             records.append(rec)
 
     payload = {
-        'source_file': SRC.name,
+        'source_file': source.name,
         'source_sheet': SHEET,
         'generated_by': 'scripts/export_future_projects.py',
         'total': len(records) + len(no_coords),
@@ -180,7 +205,8 @@ def main():
         stats['by_status'][r['status'] or '—'] = stats['by_status'].get(r['status'] or '—', 0) + 1
         stats['by_confidence'][r['confidence'] or '—'] = stats['by_confidence'].get(r['confidence'] or '—', 0) + 1
 
-    stats_path = Path(sys.argv[1]) if len(sys.argv) > 1 else OUT.with_name('future_projects_stats.json')
+    stats_path = args.stats.expanduser().resolve() if args.stats else OUT.with_name('future_projects_stats.json')
+    stats_path.parent.mkdir(parents=True, exist_ok=True)
     with stats_path.open('w', encoding='utf-8') as f:
         json.dump(stats, f, ensure_ascii=False, indent=1)
 
