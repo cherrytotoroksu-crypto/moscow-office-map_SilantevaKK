@@ -1,11 +1,10 @@
-"""Section 8/9/10 of the Remain-integration follow-up (2026-08-18):
+"""Completeness checks for the current classifier/registry architecture.
 
-- п.7: internal_only разрешён ТОЛЬКО для неподтверждённых записей —
-  явный инвариант, не соглашение.
-- п.8: тесты на полноту общего слоя и классификатора — каждая строка
-  RAW_DATA из classifier.html должна дойти до all_projects_layer.json
-  (никто не потерян при сборке), и наоборот — ни одна external_only
-  запись не просочилась обратно в classifier.html.
+- classifier.html now reads the audited unified classifier JSON and no longer
+  embeds the legacy RAW_DATA array;
+- every unified classifier row must be represented exactly once in the mapping
+  report, and every exact match must point to an existing registry row;
+- public/internal visibility rules remain registry invariants.
 
 Не проверяет полноту относительно Remain (заблокировано отсутствием
 табличного дампа — см. outputs/remain_integration_audit_2026-08-18.md).
@@ -17,65 +16,54 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
-from build_all_projects_layer import load_classifier, BADAEVSKY_IDS
+from build_all_projects_layer import load_classifier
 
 REGISTRY_PATH = REPO_ROOT / "data" / "all_projects_layer.json"
-CLASSIFIER_PATH = REPO_ROOT / "classifier.html"
+CLASSIFIER_PATH = REPO_ROOT / "data" / "unified_classifier_audited_2026-08-27.json"
+MAPPING_PATH = REPO_ROOT / "outputs" / "classifier_registry_mapping_2026-08-30.json"
+CLASSIFIER_HTML_PATH = REPO_ROOT / "classifier.html"
 
 
-@unittest.skipUnless(REGISTRY_PATH.exists() and CLASSIFIER_PATH.exists(), "generated files not present")
+class LegacyClassifierLoaderContractTests(unittest.TestCase):
+    @unittest.skipUnless(CLASSIFIER_HTML_PATH.exists(), "classifier page not present")
+    def test_legacy_builder_rejects_the_current_non_embedded_classifier(self):
+        with self.assertRaisesRegex(RuntimeError, "circular build"):
+            load_classifier()
+
+
+@unittest.skipUnless(
+    REGISTRY_PATH.exists() and CLASSIFIER_PATH.exists() and MAPPING_PATH.exists(),
+    "generated files not present",
+)
 class GeneralLayerCompletenessTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.records = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
-        cls.raw_data, _colormap = load_classifier()
+        cls.classifier = json.loads(CLASSIFIER_PATH.read_text(encoding="utf-8"))["records"]
+        cls.mapping = json.loads(MAPPING_PATH.read_text(encoding="utf-8"))
 
-    def test_every_classifier_row_reaches_the_general_layer(self):
-        # Легаси-строки не удаляются (см. build_all_projects_layer.py) — каждый
-        # old_id из RAW_DATA должен встречаться хотя бы один раз среди
-        # classifier-производных записей: либо как canonical_project_id/
-        # legacy_ids (после слияния технических дублей), либо — для Бадаевского —
-        # через canonical_building_id (там canonical_project_id общий "badaevsky",
-        # не proj-{old_id}, см. BADAEVSKY_IDS).
-        classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        known_ids = set()
-        known_building_ids = set()
-        for r in classifier_records:
-            known_ids.add(r["canonical_project_id"])
-            known_ids.update(r.get("legacy_ids", []))
-            if r.get("canonical_building_id"):
-                known_building_ids.add(r["canonical_building_id"])
+    def test_every_classifier_row_reaches_the_mapping_report_exactly_once(self):
+        classifier_ids = [row["unified_id"] for row in self.classifier]
+        mapping_ids = [row["unified_id"] for row in self.mapping]
+        self.assertEqual(len(classifier_ids), len(set(classifier_ids)), "duplicate classifier unified_id")
+        self.assertEqual(len(mapping_ids), len(set(mapping_ids)), "duplicate mapping unified_id")
+        self.assertEqual(set(classifier_ids), set(mapping_ids))
 
-        missing = []
-        for row in self.raw_data:
-            old_id = row.get("old_id")
-            if old_id is None or row.get("out_of_scope"):
-                continue
-            name_orig = row.get("name_orig") or row.get("name")
-            if name_orig in BADAEVSKY_IDS:
-                _pid, bld_id, _grain = BADAEVSKY_IDS[name_orig]
-                if bld_id not in known_building_ids:
-                    missing.append(f"proj-{old_id} (badaevsky/{bld_id})")
-                continue
-            pid = f"proj-{old_id}"
-            if pid not in known_ids:
-                missing.append(pid)
-        self.assertEqual(missing, [], f"RAW_DATA rows missing from the general layer: {missing}")
-
-    def test_classifier_row_count_matches_layer_exactly(self):
-        classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        rows_in_scope = [
-            row for row in self.raw_data
-            if row.get("old_id") is not None and not row.get("out_of_scope")
+    def test_exact_classifier_matches_reference_existing_registry_rows(self):
+        registry_ids = {row["canonical_project_id"] for row in self.records}
+        exact_matches = [row for row in self.mapping if row["status"] == "exact_match"]
+        self.assertTrue(exact_matches, "mapping report has no exact matches")
+        missing = [
+            (row["unified_id"], row.get("matched_project_id"))
+            for row in exact_matches
+            if row.get("matched_project_id") not in registry_ids
         ]
-        self.assertEqual(len(classifier_records), len(rows_in_scope))
+        self.assertEqual(missing, [], f"exact matches missing from registry: {missing}")
 
-    def test_no_external_record_leaked_into_classifier_html(self):
-        # classifier.html — источник истины ТОЛЬКО для локальных данных;
-        # remain-only-* id не должны попасть в RAW_DATA ни при каком слиянии.
-        raw_ids = {f"proj-{row.get('old_id')}" for row in self.raw_data if row.get("old_id") is not None}
-        external_ids = {r["canonical_project_id"] for r in self.records if r.get("external_only")}
-        self.assertEqual(raw_ids & external_ids, set())
+    def test_non_exact_matches_are_not_presented_as_exact(self):
+        for row in self.mapping:
+            if row["status"] != "exact_match":
+                self.assertIsNone(row.get("matched_project_id"), row["unified_id"])
 
     def test_public_visibility_requires_confirmation(self):
         # п.7: internal_only разрешён ТОЛЬКО для неподтверждённых записей.

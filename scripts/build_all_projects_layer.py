@@ -59,7 +59,15 @@ QUARTER_MONTH_TO_Q = {"03": 1, "06": 2, "09": 3, "12": 4}
 def load_classifier():
     with open(os.path.join(REPO_ROOT, "classifier.html"), encoding="utf-8") as f:
         text = f.read()
-    start = text.index("const RAW_DATA = [")
+    marker = "const RAW_DATA = ["
+    if marker not in text:
+        raise RuntimeError(
+            "classifier.html no longer embeds RAW_DATA and cannot be used to "
+            "regenerate all_projects_layer.json. The current classifier reads "
+            "data/unified_classifier_audited_2026-08-27.json, which is derived "
+            "from the registry; feeding it back here would create a circular build."
+        )
+    start = text.index(marker)
     open_idx = text.index("[", start)
     close_idx = text.rindex("]", open_idx, text.index("const COLORMAP = {"))
     raw_data = json.loads(text[open_idx:close_idx + 1])
