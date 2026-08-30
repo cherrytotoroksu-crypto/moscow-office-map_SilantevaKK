@@ -8,74 +8,83 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Кодификатор — Офисный рынок Москвы</title>
 <style>
+  :root {
+    --nf-red:#A6093D; --nf-red-dark:#7A0630; --nf-navy:#1B2A4A; --nf-navy-dark:#121E36;
+    --nf-ink:#161616; --nf-grey:#666; --nf-line:#e3e5ea; --nf-bg:#f4f5f7;
+  }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size:13px; color:#1a1a1a; background:#f4f5f7; }
-  header { background:#2F4858; color:#fff; padding:10px 16px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-  header h1 { font-size:15px; font-weight:600; }
-  header .meta { font-size:11px; color:#c9d3d8; }
-  .tabs { display:flex; gap:2px; padding:0 16px; background:#e8eaee; }
-  .tab { padding:8px 16px; cursor:pointer; font-weight:500; color:#555; border-bottom:2px solid transparent; }
-  .tab.active { color:#2F4858; border-bottom-color:#C9525E; background:#fff; }
-  .subtabs { display:flex; gap:2px; padding:0 16px; background:#f4f5f7; border-bottom:1px solid #dde; }
+  body { font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:var(--nf-ink); background:var(--nf-bg); }
+  header {
+    background:var(--nf-navy-dark); color:#fff; padding:11px 16px; display:flex; align-items:center; gap:16px;
+    flex-wrap:wrap; border-bottom:3px solid var(--nf-red);
+  }
+  header h1 { font-size:15px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; }
+  header .meta { font-size:11px; color:#aeb8cc; }
+  .tabs { display:flex; gap:2px; padding:0 16px; background:#fff; border-bottom:1px solid var(--nf-line); }
+  .tab { padding:9px 16px; cursor:pointer; font-weight:700; font-size:12.5px; color:var(--nf-grey); border-bottom:2px solid transparent; }
+  .tab.active { color:var(--nf-navy); border-bottom-color:var(--nf-red); background:#fff; }
+  .subtabs { display:flex; gap:2px; padding:0 16px; background:var(--nf-bg); border-bottom:1px solid var(--nf-line); }
   .subtab { padding:6px 14px; cursor:pointer; font-size:12px; color:#666; border-bottom:2px solid transparent; }
-  .subtab:hover { color:#2F4858; }
-  .subtab.active { color:#2F4858; border-bottom-color:#8aa4ab; background:#fff; font-weight:600; }
-  .toolbar { display:flex; align-items:center; gap:8px; padding:10px 16px; background:#fff; border-bottom:1px solid #dde; flex-wrap:wrap; }
-  .toolbar input[type=search] { padding:6px 10px; border:1px solid #ccc; border-radius:4px; width:240px; font-size:12px; }
-  .toolbar select { padding:6px 8px; border:1px solid #ccc; border-radius:4px; font-size:12px; }
-  button.btn { padding:6px 12px; border:1px solid #ccc; background:#fff; border-radius:4px; cursor:pointer; font-size:12px; }
+  .subtab:hover { color:var(--nf-navy); }
+  .subtab.active { color:var(--nf-navy); border-bottom-color:var(--nf-navy); background:#fff; font-weight:700; }
+  .toolbar { display:flex; align-items:center; gap:8px; padding:10px 16px; background:#fff; border-bottom:1px solid var(--nf-line); flex-wrap:wrap; }
+  .toolbar input[type=search] { padding:6px 10px; border:1px solid #ccc; border-radius:3px; width:240px; font-size:12px; }
+  .toolbar select { padding:6px 8px; border:1px solid #ccc; border-radius:3px; font-size:12px; }
+  button.btn { padding:6px 12px; border:1px solid #ccc; background:#fff; border-radius:3px; cursor:pointer; font-size:12px; }
   button.btn:hover { background:#f0f0f0; }
-  button.btn.primary { background:#2F4858; color:#fff; border-color:#2F4858; }
-  button.btn.primary:hover { background:#25394a; }
-  .cols-panel, .filter-panel { position:fixed; z-index:200; background:#fff; border:1px solid #ccc; border-radius:6px; box-shadow:0 4px 16px rgba(0,0,0,.2); padding:10px; max-height:min(420px, 80vh); overflow:auto; width:260px; max-width:92vw; }
+  button.btn.primary { background:var(--nf-red); color:#fff; border-color:var(--nf-red); font-weight:700; }
+  button.btn.primary:hover { background:var(--nf-red-dark); }
+  .cols-panel, .filter-panel { position:fixed; z-index:200; background:#fff; border:1px solid var(--nf-line); border-radius:6px; box-shadow:0 4px 16px rgba(0,0,0,.18); padding:10px; max-height:min(420px, 80vh); overflow:auto; width:260px; max-width:92vw; }
   .cols-panel label, .filter-panel label { display:flex; align-items:center; gap:6px; padding:3px 2px; font-size:12px; white-space:nowrap; cursor:pointer; }
+  .cols-panel input, .filter-panel input[type=checkbox] { accent-color:var(--nf-red); }
   .filter-panel .fp-actions { display:flex; gap:6px; margin-top:8px; border-top:1px solid #eee; padding-top:8px; }
   .filter-panel input[type=text], .filter-panel input[type=number], .filter-panel select { width:100%; padding:4px 6px; margin-bottom:6px; border:1px solid #ccc; border-radius:4px; font-size:12px; }
   .fp-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
-  .fp-header .fp-title { font-weight:600; font-size:12px; }
+  .fp-header .fp-title { font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.3px; color:var(--nf-navy); }
   .fp-close { cursor:pointer; font-size:18px; line-height:1; color:#888; padding:0 4px; }
-  .fp-close:hover { color:#333; }
+  .fp-close:hover { color:var(--nf-red); }
   .fp-mode-tabs { display:flex; gap:4px; margin-bottom:8px; }
   .fp-mode-tab { flex:1; padding:4px 6px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:11px; text-align:center; background:#fff; }
-  .fp-mode-tab.active { background:#2F4858; color:#fff; border-color:#2F4858; }
-  .fp-select-all { border-bottom:1px solid #eee; padding-bottom:6px; margin-bottom:4px; font-weight:600; }
+  .fp-mode-tab.active { background:var(--nf-navy); color:#fff; border-color:var(--nf-navy); }
+  .fp-select-all { border-bottom:1px solid #eee; padding-bottom:6px; margin-bottom:4px; font-weight:700; }
   .fp-condition-row { display:flex; gap:6px; align-items:center; }
   .fp-condition-row input { margin-bottom:0; }
-  .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid #dde; border-radius:6px; max-height:calc(100vh - 190px); }
+  .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid var(--nf-line); border-radius:6px; max-height:calc(100vh - 190px); }
   table { border-collapse:collapse; width:100%; font-size:12px; }
   th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left; white-space:nowrap; }
-  th { background:#f8f9fb; position:sticky; top:0; z-index:2; user-select:none; padding:0; }
+  th { background:var(--nf-navy); color:#fff; position:sticky; top:0; z-index:2; user-select:none; padding:0; text-transform:uppercase; font-size:10.5px; letter-spacing:.3px; }
   th:first-child, td:first-child { position:sticky; left:0; background:#fff; z-index:1; box-shadow:2px 0 3px rgba(0,0,0,.04); }
-  th:first-child { z-index:3; background:#f8f9fb; }
+  th:first-child { z-index:3; background:var(--nf-navy); }
+  tr:nth-child(even) td { background:rgba(27,42,74,0.025); }
   .th-inner { display:flex; align-items:center; gap:2px; padding:6px 4px 6px 10px; }
   .th-label { flex:1; cursor:pointer; min-width:0; }
-  .sort-ind { color:#C9525E; margin-left:4px; }
-  .filter-btn { flex-shrink:0; width:22px; height:22px; display:flex; align-items:center; justify-content:center; border-radius:4px; cursor:pointer; color:#8a94a3; border:1px solid transparent; font-size:12px; background:none; }
-  .filter-btn:hover { background:#e8eaee; color:#2F4858; }
-  .filter-btn.active { color:#fff; background:#C9525E; border-color:#C9525E; }
-  .filter-btn:focus-visible { outline:2px solid #2F4858; outline-offset:1px; }
-  tr:hover td { background:#fafbfc; }
-  tr:hover td:first-child { background:#f4f6f7; }
+  .sort-ind { color:#ff9db3; margin-left:4px; }
+  .filter-btn { flex-shrink:0; width:22px; height:22px; display:flex; align-items:center; justify-content:center; border-radius:4px; cursor:pointer; color:#c3cadb; border:1px solid transparent; font-size:12px; background:none; }
+  .filter-btn:hover { background:rgba(255,255,255,.12); color:#fff; }
+  .filter-btn.active { color:#fff; background:var(--nf-red); border-color:var(--nf-red); }
+  .filter-btn:focus-visible { outline:2px solid var(--nf-red); outline-offset:1px; }
+  tr:hover td { background:#fbeef0; }
+  tr:hover td:first-child { background:#fbeef0; }
   .empty-cell { color:#bbb; }
   td.flagged { position:relative; }
   td.flagged::after { content:''; position:absolute; top:0; right:0; border-width:0 7px 7px 0; border-style:solid; border-color:transparent #d9822b transparent transparent; }
   .status-row { padding:6px 16px; font-size:11px; color:#666; background:#fff; }
-  tr.section-start td { border-top:2px solid #c9d3d8; }
+  tr.section-start td { border-top:2px solid var(--nf-navy); }
   .qa-conflict { background:#fff3f0 !important; }
   .qa-quarantine { background:#fff8e1 !important; }
   .no-results-row td { text-align:center; padding:28px 16px; color:#888; font-size:13px; }
   .no-results-row .btn { margin-left:8px; }
   .card-btn { width:22px; height:22px; border-radius:4px; border:1px solid transparent; background:none; cursor:pointer; color:#8a94a3; font-size:12px; }
-  .card-btn:hover { background:#e8eaee; color:#2F4858; }
+  .card-btn:hover { background:#e8eaee; color:var(--nf-navy); }
   th.card-th { width:30px; text-align:center; }
   .source-card { width:340px; }
   .sc-row { font-size:12px; padding:5px 2px; border-bottom:1px solid #f2f2f2; line-height:1.4; }
-  .sc-row b { color:#2F4858; display:block; font-size:11px; text-transform:uppercase; letter-spacing:.02em; margin-bottom:1px; }
+  .sc-row b { color:var(--nf-navy); display:block; font-size:11px; text-transform:uppercase; letter-spacing:.02em; margin-bottom:1px; }
   .qa-toggle { display:flex; align-items:center; gap:5px; font-size:12px; color:#555; cursor:pointer; padding:4px 8px; border:1px solid #ccc; border-radius:4px; background:#fff; }
-  .qa-toggle input { cursor:pointer; }
-  .segment-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; padding:14px 16px; background:#f4f5f7; }
-  .seg-card { background:#fff; border:1px solid #dde; border-radius:8px; padding:14px; }
-  .seg-card h3 { font-size:13px; margin-bottom:8px; color:#2F4858; }
+  .qa-toggle input { cursor:pointer; accent-color:var(--nf-red); }
+  .segment-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; padding:14px 16px; background:var(--nf-bg); }
+  .seg-card { background:#fff; border:1px solid var(--nf-line); border-top:3px solid var(--nf-red); border-radius:6px; padding:14px; }
+  .seg-card h3 { font-size:13px; margin-bottom:8px; color:var(--nf-navy); font-weight:800; }
   .seg-card .seg-row { font-size:12px; color:#555; margin-bottom:4px; }
   .seg-card .seg-row b { color:#1a1a1a; }
   .seg-card button { margin-top:10px; width:100%; }
@@ -143,8 +152,9 @@
   <span id="pagerLabel"></span>
   <button class="btn" id="btnNextPage">След. →</button>
   <select id="pageSizeSelect" style="margin-left:auto;">
+    <option value="0" selected>Все строки (пролистывание)</option>
     <option value="50">50 строк/стр.</option>
-    <option value="100" selected>100 строк/стр.</option>
+    <option value="100">100 строк/стр.</option>
     <option value="250">250 строк/стр.</option>
     <option value="1000">1000 строк/стр.</option>
   </select>
@@ -269,59 +279,66 @@ const GEOMETRY_QUALITY_DISPLAY = {
 // ниже). Обычные скрытые-по-умолчанию поля (visible:false, без internal)
 // остаются доступны всем через панель "Колонки" — это просто "свёрнутые",
 // а не "запрещённые" колонки.
+// "Общий кодификатор" = ВЕСЬ unified-классификатор (data/unified_classifier_audited,
+// 714 построчно проверенных записей batch1-26 — тот же файл и те же строки,
+// что и в отдельном classifier.html, "основном" классификаторе пользователя).
+// Ниже — сначала собственные поля этой записи, затем (после отметки) —
+// поля из общего реестра data/all_projects_layer.json, присоединённые по
+// названию (join, см. loadCodifier): субрынок/кольцо/статус проекта/источник/
+// QA-статус — раньше это был единственный набор полей "Общего кодификатора",
+// сейчас это дополнение поверх полного классификатора, не вместо него.
+// Совпадает не для каждой строки (реестр — 374 проектных записи, классификатор
+// — 714 более дробных building-level записей) — cls_matched/reg_matched честно
+// показывает, где пары нет, а не выдумывает значение.
 const CODIFIER_COLUMNS = [
-  // ID и QA-статус/примечания — ядро смысла кодификатора (сквозная
-  // идентификация + видимая проверка данных), не прячем их за режим QA:
-  // internal:true оставлен только для действительно служебных полей ниже.
-  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
-  {key:'canonical_building_id', label:'ID здания', type:'text', visible:true},
-  {key:'project_group_name', label:'Проект', type:'text', visible:true},
-  {key:'canonical_name', label:'Название записи (проект/корпус)', type:'text', visible:true},
+  {key:'canonical_no', label:'№', type:'number', visible:true},
+  {key:'name', label:'Проект', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
-  {key:'address', label:'Адрес', type:'text', visible:true, format: STRIP_MOSCOW_PREFIX},
   {key:'cls', label:'Класс', type:'text', visible:true},
-  {key:'bizFormed', label:'Дел. район (сформ.)', type:'text', visible:false},
-  {key:'bizForming', label:'Дел. район (форм.)', type:'text', visible:false},
-  {key:'submarket', label:'Субрынок', type:'text', visible:true},
-  {key:'zone', label:'Кольцо', type:'text', visible:true},
-  {key:'project_status', label:'Статус проекта', type:'text', visible:true},
-  {key:'construction_start_year', label:'Начало строительства, год', type:'number', visible:true},
-  {key:'construction_start_quarter', label:'Начало строительства, квартал', type:'number', visible:false},
-  {key:'sales_start_year', label:'Старт продаж, год', type:'number', visible:true},
-  {key:'sales_start_quarter', label:'Старт продаж, квартал', type:'number', visible:false},
-  {key:'input_year', label:'Год ввода', type:'number', visible:true},
-  {key:'input_quarter', label:'Квартал ввода', type:'number', visible:true},
-  {key:'input_date_kind', label:'Заявлено/подтверждено', type:'text', visible:false},
-  // GLA — основная площадь (показывается первой, не пересчитывается из GBA:
-  // если источник дал только GBA, GLA остаётся "нет данных", а не подменяется).
-  // GBA — вторичная/справочная, скрыта по умолчанию, всегда после GLA.
-  {key:'gla', label:'GLA, м²', type:'number', visible:true},
   {key:'gba', label:'GBA, м²', type:'number', visible:false},
-  {key:'office_area', label:'GLA офисная (если указана отдельно), м²', type:'number', visible:false},
-  {key:'area_scope', label:'Уровень площади', type:'text', visible:true, displayMap: AREA_SCOPE_DISPLAY},
-  {key:'market_channel', label:'Сегменты рынка (справочно)', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
-  {key:'observed_market_channels', label:'Все каналы здания', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
-  {key:'quarter_offer_exists', label:'Есть предложение в квартале', type:'bool', visible:false},
-  {key:'offer_status', label:'Статус предложения', type:'text', visible:false},
-  {key:'source', label:'Источник', type:'text', visible:true},
-  {key:'last_verified_at', label:'Дата последней проверки', type:'text', visible:true},
-  {key:'confidence', label:'Уровень доверия', type:'text', visible:true},
-  {key:'qa_status', label:'Статус проверки', type:'text', visible:true, displayMap: QA_STATUS_DISPLAY},
-  {key:'qa_notes', label:'Примечания', type:'text', visible:true},
-  {key:'geometry_quality', label:'Точность координат', type:'text', visible:false, displayMap: GEOMETRY_QUALITY_DISPLAY},
-  {key:'offer_not_started_reason', label:'Причина отсутствия предложения', type:'text', visible:false},
+  {key:'gla', label:'GLA, м²', type:'number', visible:true},
+  {key:'status', label:'Статус', type:'text', visible:true},
+  {key:'commission_label', label:'Ввод', type:'text', visible:true},
+  {key:'coords_label', label:'Координаты', type:'text', visible:false},
+  {key:'coordinates_status', label:'Точность координат', type:'text', visible:false},
+  {key:'market_channel', label:'Канал реализации', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
+  {key:'sales_start_date', label:'Старт продаж', type:'text', visible:true},
+  {key:'sales_start_confidence', label:'Увер. старта продаж', type:'text', visible:false},
+  {key:'confidence', label:'Надёжность записи', type:'text', visible:true},
+  {key:'needs_review', label:'needs_review', type:'bool', visible:true, boolTrueLabel:'да', boolFalseLabel:'нет'},
+  {key:'sources_count', label:'Источников', type:'number', visible:false},
+  {key:'classification_note', label:'Заметка классификации', type:'text', visible:false},
+  {key:'review_reason', label:'Причина проверки', type:'text', visible:false},
+  {key:'layer_qa_notes', label:'QA-заметка слоя', type:'text', visible:false},
+  {key:'verification_status', label:'Verification status', type:'text', visible:false, displayMap: VERIFICATION_STATUS_DISPLAY},
+  {key:'sales_start_source', label:'Источник даты старта продаж', type:'text', visible:false},
+  {key:'entity_type', label:'Тип сущности', type:'text', visible:false},
+  {key:'legacy_ids', label:'Legacy IDs', type:'list', visible:false},
   {key:'latitude', label:'Широта', type:'number', visible:false},
   {key:'longitude', label:'Долгота', type:'number', visible:false},
-  // --- технические/служебные поля — только в режиме QA ---
-  {key:'raw_name', label:'Исходное название (техн.)', type:'text', visible:false, internal:true},
-  {key:'aliases', label:'Альт. названия (техн.)', type:'list', visible:false, internal:true},
-  {key:'external_only', label:'Только внешний источник (техн.)', type:'bool', visible:false, internal:true, boolTrueLabel:'Найдено только во внешнем источнике'},
-  {key:'public_visibility', label:'Видимость (техн.)', type:'text', visible:false, internal:true},
-  {key:'quarter_offer_refs', label:'Ссылки на квартальные записи (техн.)', type:'list', visible:false, internal:true},
-  {key:'verification_status', label:'Статус верификации (техн.)', type:'text', visible:false, internal:true, displayMap: VERIFICATION_STATUS_DISPLAY},
-  {key:'entity_grain', label:'Уровень записи (техн.)', type:'text', visible:false, internal:true},
-  {key:'first_seen_at', label:'Впервые зафиксировано (техн.)', type:'text', visible:false, internal:true},
-  {key:'source_count', label:'Число источников (техн.)', type:'number', visible:false, internal:true},
+  // --- поля из общего реестра (join по названию) ---
+  {key:'reg_canonical_project_id', label:'ID проекта (реестр)', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'reg_submarket', label:'Субрынок (реестр)', type:'text', visible:true},
+  {key:'reg_zone', label:'Кольцо (реестр)', type:'text', visible:true},
+  {key:'reg_project_status', label:'Статус проекта (реестр)', type:'text', visible:false},
+  {key:'reg_construction_start_year', label:'Начало стр-ва, год (реестр)', type:'number', visible:false},
+  {key:'reg_input_year', label:'Год ввода (реестр)', type:'number', visible:false},
+  {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
+  {key:'reg_last_verified_at', label:'Дата проверки (реестр)', type:'text', visible:false},
+  {key:'reg_qa_status', label:'Статус проверки (реестр)', type:'text', visible:false, displayMap: QA_STATUS_DISPLAY},
+  {key:'reg_geometry_quality', label:'Точность координат (реестр)', type:'text', visible:false, displayMap: GEOMETRY_QUALITY_DISPLAY},
+  {key:'reg_matched', label:'Есть пара в реестре', type:'bool', visible:false, boolTrueLabel:'да', boolFalseLabel:'нет'},
+  // Unprefixed pass-through of registry building/date identity (join по
+  // названию, см. loadCodifier) - тот же смысл, что и reg_-колонки выше,
+  // но под именами полей самого реестра: используется join-кодом остальных
+  // разделов (Продажа/Аренда/Гибкие офисы, см. `row.canonical_building_id =
+  // match ? ...` ниже) и тестами на building-identity.
+  {key:'canonical_building_id', label:'ID здания (реестр)', type:'text', visible:false},
+  {key:'construction_start_year', label:'Начало стр-ва, год (реестр)', type:'number', visible:false},
+  {key:'sales_start_year', label:'Старт продаж, год (реестр)', type:'number', visible:false},
+  {key:'input_year', label:'Год ввода (реестр)', type:'number', visible:false},
+  {key:'observed_market_channels', label:'Все каналы здания (реестр)', type:'list', visible:false, displayMap: MARKET_CHANNEL_DISPLAY},
 ];
 
 // --- Продажа офисов ---
@@ -533,7 +550,7 @@ const state = {
 let allProjectsLayer = [];
 let currentQuarterId = QUARTERS[0].id;
 let dataMeta = {};
-let pageSize = 100;
+let pageSize = 0; // 0 = все строки без пагинации (пролистывание)
 let suppressURLSync = false; // true пока восстанавливаем состояние из URL — не переписывать URL посреди восстановления
 // Режим QA — открывает доступ к техническим/служебным колонкам (internal:true).
 // В обычном режиме такие колонки не видны нигде: ни в таблице, ни в панели
@@ -581,15 +598,51 @@ function computeProjectGroupNames(rows) {
   return groupName;
 }
 
+// "Общий кодификатор" = ВЕСЬ unified-классификатор (data/unified_classifier_audited,
+// 714 записей — тот же файл, что открывает отдельный classifier.html; здесь
+// не подмножество и не другой снимок, а те же строки). Реестр
+// data/all_projects_layer.json грузим параллельно: используем как a) источник
+// для join в разделах Продажа/Аренда/Гибкие офисы (allProjectsLayer, как и
+// раньше), b) дополнительные reg_-колонки поверх классификатора — join по
+// названию, совпадает не для каждой строки (реестр строит по проектам,
+// классификатор — более дробно, по зданиям/корпусам), нет пары — поля пустые.
 async function loadCodifier() {
-  const rows = await fetchJSON('data/all_projects_layer.json');
-  const groupNames = computeProjectGroupNames(rows);
+  const [registryRows, classifierData] = await Promise.all([
+    fetchJSON('data/all_projects_layer.json'),
+    fetchJSON('data/unified_classifier_audited_2026-08-27.json'),
+  ]);
+  allProjectsLayer = registryRows;
+
+  const rows = classifierData.records || [];
+  const byName = registryByNameMap();
   for (const r of rows) {
-    r.project_group_name = r.canonical_project_id ? (groupNames.get(r.canonical_project_id) || r.canonical_name) : r.canonical_name;
+    r.commission_label = r.commission_year
+      ? (r.commission_quarter ? `Q${r.commission_quarter} ${r.commission_year}` : String(r.commission_year))
+      : null;
+    r.coords_label = (r.latitude != null && r.longitude != null)
+      ? `${r.latitude.toFixed(5)}, ${r.longitude.toFixed(5)}` : null;
+    r.sources_count = (r.source_links || []).length;
+
+    const reg = byName.get(r.name);
+    r.reg_matched = !!reg;
+    r.reg_canonical_project_id = reg ? reg.canonical_project_id : null;
+    r.reg_submarket = reg ? reg.submarket : null;
+    r.reg_zone = reg ? reg.zone : null;
+    r.reg_project_status = reg ? reg.project_status : null;
+    r.reg_construction_start_year = reg ? reg.construction_start_year : null;
+    r.reg_input_year = reg ? reg.input_year : null;
+    r.reg_source = reg ? reg.source : null;
+    r.reg_last_verified_at = reg ? reg.last_verified_at : null;
+    r.reg_qa_status = reg ? reg.qa_status : null;
+    r.reg_geometry_quality = reg ? reg.geometry_quality : null;
+    r.canonical_building_id = reg ? reg.canonical_building_id : null;
+    r.construction_start_year = reg ? reg.construction_start_year : null;
+    r.sales_start_year = reg ? reg.sales_start_year : null;
+    r.input_year = reg ? reg.input_year : null;
+    r.observed_market_channels = reg ? reg.observed_market_channels : null;
   }
-  allProjectsLayer = rows;
   state.codifier.rows = rows;
-  dataMeta.codifier = {updated: rows.length ? rows[0].last_verified_at : null, count: rows.length};
+  dataMeta.codifier = {updated: classifierData.generated_at || classifierData.last_verified_at || null, count: rows.length};
   render();
 }
 
@@ -1243,21 +1296,14 @@ function computeTotals(view, rows) {
   const segmentLabel = SEGMENT_LABEL[section];
   const prefix = segmentLabel ? `${segmentLabel} · ` : '';
   if (view === 'codifier') {
-    const projects = uniqueCount(rows, r => r.canonical_project_id);
-    // GLA — основная площадь, считается первой. area_scope='building' —
-    // корпуса ВНУТРИ проекта, который уже посчитан на уровне 'project';
-    // складывать их с проектными GLA нельзя (задвоение), поэтому считаем
-    // раздельно по уровню агрегации (п.3: "не суммировать одновременно
-    // GLA корпуса и GLA проекта").
-    const projectRows = rows.filter(r => (r.area_scope || 'project') !== 'building');
-    const buildingRows = rows.filter(r => r.area_scope === 'building');
-    const glaProject = sumField(projectRows, 'gla');
-    const glaBuilding = sumField(buildingRows, 'gla');
+    const needsReview = rows.filter(r => r.needs_review).length;
+    const withSales = rows.filter(r => r.sales_start_date).length;
+    const regMatched = rows.filter(r => r.reg_matched).length;
+    const gla = sumField(rows, 'gla');
     const gba = sumField(rows, 'gba');
-    return `Уникальных проектов: ${fmtNum(projects)} · Записей: ${rows.length} · `
-      + `GLA проектов (сумма по ${glaProject.n} из ${projectRows.length}): ${fmtSum(glaProject)} м²`
-      + (buildingRows.length ? ` · GLA отдельных корпусов (сумма по ${glaBuilding.n} из ${buildingRows.length}, НЕ входит в сумму выше): ${fmtSum(glaBuilding)} м²` : '')
-      + ` · GBA (справочно, сумма по ${gba.n} из ${rows.length}): ${fmtSum(gba)} м²`;
+    return `Записей: ${rows.length} · needs_review: ${needsReview} · со стартом продаж: ${withSales} · `
+      + `сопоставлено с реестром: ${regMatched} · `
+      + `GLA (сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · GBA (справочно, сумма по ${gba.n} из ${rows.length}): ${fmtSum(gba)} м²`;
   }
   if (view === 'sale_buildings') {
     const projects = uniqueCount(rows, r => r.canonical_project_id || r.name);
@@ -1338,7 +1384,7 @@ function computeTotals(view, rows) {
 }
 
 const VIEW_SOURCE_LABEL = {
-  codifier: () => 'data/all_projects_layer.json',
+  codifier: () => 'data/unified_classifier_audited_2026-08-27.json (+ join по названию с data/all_projects_layer.json)',
   sale_buildings: () => `data/buildings_${currentQuarterId}.json (+ join по реестру)`,
   sale_developers: () => `data/buildings_${currentQuarterId}.json (агрегат по девелоперам)`,
   sale_lots: () => `data/lots_${currentQuarterId}.json`,
@@ -1363,9 +1409,10 @@ function render() {
   const cols = ts.columns.filter(isColumnShown);
   const showCard = SOURCE_CARD_VIEWS.has(currentView);
 
-  const totalPages = Math.max(1, Math.ceil(filteredRows.length / pageSize));
+  const showAll = !pageSize;
+  const totalPages = showAll ? 1 : Math.max(1, Math.ceil(filteredRows.length / pageSize));
   ts.page = Math.min(Math.max(1, ts.page || 1), totalPages);
-  const pageRows = filteredRows.slice((ts.page - 1) * pageSize, ts.page * pageSize);
+  const pageRows = showAll ? filteredRows : filteredRows.slice((ts.page - 1) * pageSize, ts.page * pageSize);
 
   const thead = document.querySelector('#mainTable thead');
   thead.innerHTML = '<tr>' + (showCard ? '<th class="card-th" title="Источник и проверка">ℹ</th>' : '') + cols.map(col => {
@@ -1427,9 +1474,9 @@ function render() {
     `Строк: ${filteredRows.length} из ${ts.rows.length}` +
     (meta ? ` · срез: ${meta.updated ?? '—'}` : '');
   document.getElementById('totalsRow').textContent = 'Итого по выборке: ' + computeTotals(currentView, filteredRows);
-  document.getElementById('pagerLabel').textContent = `Стр. ${ts.page} из ${totalPages}`;
-  document.getElementById('btnPrevPage').disabled = ts.page <= 1;
-  document.getElementById('btnNextPage').disabled = ts.page >= totalPages;
+  document.getElementById('pagerLabel').textContent = showAll ? `Все строки: ${filteredRows.length}` : `Стр. ${ts.page} из ${totalPages}`;
+  document.getElementById('btnPrevPage').disabled = showAll || ts.page <= 1;
+  document.getElementById('btnNextPage').disabled = showAll || ts.page >= totalPages;
   const segmentLabel = SEGMENT_LABEL[VIEWS[currentView].section];
   const headerPrefix = currentView === 'compare_segments'
     ? 'Сравнение всех сегментов (Продажа офисов / Аренда офисов / Гибкие офисы) · '

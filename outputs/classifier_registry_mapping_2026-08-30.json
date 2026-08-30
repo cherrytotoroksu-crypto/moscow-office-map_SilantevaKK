@@ -1,0 +1,6075 @@
+[
+  {
+    "unified_id": "UC-OBJ-0060",
+    "canonical_no": 1,
+    "name": "Stone Курская",
+    "address": "Костомаровский пер, д. 11, стр. 1",
+    "status": "probable_match",
+    "candidate_project_id": "proj-181",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0073",
+    "canonical_no": 2,
+    "name": "STONE Ленинский",
+    "address": "ул. Вавилова, вл. 11, 13а",
+    "status": "probable_match",
+    "candidate_project_id": "proj-184",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0039",
+    "canonical_no": 3,
+    "name": "Stone Савеловская",
+    "address": "ул. Двинцев, влд 3",
+    "status": "probable_match",
+    "candidate_project_id": "proj-194",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0654",
+    "canonical_no": 4,
+    "name": "STONE Савёловская (Башня 1 и Башня 2)",
+    "address": "ул. Двинцев, вл. 3",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0046",
+    "canonical_no": 5,
+    "name": "Taller",
+    "address": "Жуков проезд, 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-201",
+    "match_basis": "name+address",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0028",
+    "canonical_no": 6,
+    "name": "А101 Прокшино Бизнес-центр 1-я очередь",
+    "address": "поселение Сосенское, квартал № 35",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0085",
+    "canonical_no": 7,
+    "name": "А101 Прокшино Бизнес-центр 2-я очередь",
+    "address": "поселение Сосенское, квартал № 35",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0167",
+    "canonical_no": 8,
+    "name": "А101 Прокшино Бизнес-центр 3-я очередь",
+    "address": "поселение Сосенское, квартал № 35",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-216"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0571",
+    "canonical_no": 9,
+    "name": "МФК Lucky",
+    "address": "2-ая Звенигородская ул., д. 12",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0010",
+    "canonical_no": 10,
+    "name": "МФК Lucky, стр. 1",
+    "address": "2-ая Звенигородская ул., д. 12",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0061",
+    "canonical_no": 11,
+    "name": "Ahead",
+    "address": "Василисы Кожиной, 25/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-109",
+    "match_basis": "name+address",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0697",
+    "canonical_no": 12,
+    "name": "Fly Tower",
+    "address": "Ленинградский пр-кт, 37к3",
+    "status": "probable_match",
+    "candidate_project_id": "proj-13",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0683",
+    "canonical_no": 13,
+    "name": "STONE Дмитровская",
+    "address": "Дмитровский пр-д, вл. 1Г",
+    "status": "probable_match",
+    "candidate_project_id": "proj-177",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0105",
+    "canonical_no": 14,
+    "name": "Stone Дмитровский",
+    "address": "Дмитровский проезд, вл. 1г",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-177"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0622",
+    "canonical_no": 15,
+    "name": "Stone Пресня",
+    "address": "Ходынская ул., вл. 2, стр. 9",
+    "status": "probable_match",
+    "candidate_project_id": "proj-1",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0012",
+    "canonical_no": 16,
+    "name": "Алкон III",
+    "address": "Ленинградский пр-т., 34",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-95"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0058",
+    "canonical_no": 17,
+    "name": "БЦ Серебряный Фонтан",
+    "address": "ул. Новоалексеевская, 16, корпус 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-20",
+    "match_basis": "name+address+corpus",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0082",
+    "canonical_no": 18,
+    "name": "OPUS",
+    "address": "Дербеневская набережная, 1",
+    "status": "probable_match",
+    "candidate_project_id": "proj-165",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0004",
+    "canonical_no": 19,
+    "name": "Orbital",
+    "address": "3-я Магистральная ул., 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-101",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0075",
+    "canonical_no": 20,
+    "name": "Берников",
+    "address": "Николоямская ул., 12 стр. 2",
+    "status": "probable_match",
+    "candidate_project_id": "proj-19",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0064",
+    "canonical_no": 21,
+    "name": "Эйлер",
+    "address": "Береговой проезд, 18",
+    "status": "probable_match",
+    "candidate_project_id": "proj-250",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0719",
+    "canonical_no": 22,
+    "name": "GEOLOG 2",
+    "address": "ул. Обручева, вл. 23",
+    "status": "probable_match",
+    "candidate_project_id": "proj-128",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0054",
+    "canonical_no": 23,
+    "name": "Lakes",
+    "address": "ул. Озёрная вл.42",
+    "status": "exact_match",
+    "matched_project_id": "proj-77",
+    "match_basis": "name+address",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0083",
+    "canonical_no": 24,
+    "name": "Level Воронцовская",
+    "address": "Академика Семенихина ул., 2",
+    "status": "probable_match",
+    "candidate_project_id": "proj-144",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0717",
+    "canonical_no": 25,
+    "name": "NEVSKY PLAZA",
+    "address": "Выборгская ул., 18с1",
+    "status": "probable_match",
+    "candidate_project_id": "proj-155",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0056",
+    "canonical_no": 26,
+    "name": "QOOB",
+    "address": "Свиридова ул., 9/3 и 17",
+    "status": "probable_match",
+    "candidate_project_id": "proj-171",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0114",
+    "canonical_no": 27,
+    "name": "Stone Калужская",
+    "address": "Старокалужское шоссе, 64",
+    "status": "probable_match",
+    "candidate_project_id": "proj-180",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0115",
+    "canonical_no": 28,
+    "name": "STONE Ходынка 2",
+    "address": "Москва, Ходынский бульвар, 20а/2",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-197"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0126",
+    "canonical_no": 29,
+    "name": "Stone Ходынка 3",
+    "address": "Москва, Ходынский бульвар, 20а/2",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-197"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0088",
+    "canonical_no": 30,
+    "name": "Twist",
+    "address": "Бутырская ул., 1",
+    "status": "probable_match",
+    "candidate_project_id": "proj-205",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0050",
+    "canonical_no": 31,
+    "name": "Upside Кунцево",
+    "address": "Молдавская ул., 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-138",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0090",
+    "canonical_no": 32,
+    "name": "Башня Власов",
+    "address": "Холодильный пер.,д.3",
+    "status": "exact_match",
+    "matched_project_id": "proj-96",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0727",
+    "canonical_no": 33,
+    "name": "Башня Рябов (Рябовская Мануфактура)",
+    "address": "Холодильный пер., 3к1с1",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-96"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0053",
+    "canonical_no": 34,
+    "name": "Деловой Дуэт",
+    "address": "Шумкина ул., 14с13",
+    "status": "probable_match",
+    "candidate_project_id": "proj-277",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0315",
+    "canonical_no": 35,
+    "name": "На Берзарина",
+    "address": "Берзарина ул., 32",
+    "status": "probable_match",
+    "candidate_project_id": "proj-57",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0601",
+    "canonical_no": 36,
+    "name": "Фили Центр",
+    "address": "Москва, Промышленный проезд, вл. 5",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-122"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0136",
+    "canonical_no": 37,
+    "name": "Stone Белорусская",
+    "address": "1-я улица Ямского Поля, вл. 30",
+    "status": "exact_match",
+    "matched_project_id": "proj-91",
+    "match_basis": "name+address",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0165",
+    "canonical_no": 38,
+    "name": "Бадаевский Восточная лента",
+    "address": "г. Москва, Кутузовский проспект, 12с3",
+    "status": "probable_match",
+    "candidate_project_id": "badaevsky",
+    "mismatch": [
+      "address",
+      "corpus"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0763",
+    "canonical_no": 39,
+    "name": "Бадаевский Западная лента",
+    "address": "Кутузовский пр-кт, вл. 12",
+    "status": "probable_match",
+    "candidate_project_id": "badaevsky",
+    "mismatch": [
+      "address",
+      "corpus"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0066",
+    "canonical_no": 40,
+    "name": "БЦ Сколковский",
+    "address": "Сколково",
+    "status": "probable_match",
+    "candidate_project_id": "proj-227",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0092",
+    "canonical_no": 41,
+    "name": "AFI Воронцовский",
+    "address": "ул. Академика Челомея, 1А",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-106",
+      "proj-176",
+      "cwhost-hist-4b033613e3"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0185",
+    "canonical_no": 42,
+    "name": "AFI Воронцовский Park",
+    "address": "ул. Академика Челомея, 1А",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-106"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0373",
+    "canonical_no": 43,
+    "name": "Air",
+    "address": "Ходынское поле",
+    "status": "probable_match",
+    "candidate_project_id": "proj-112",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0196",
+    "canonical_no": 44,
+    "name": "Fili residence",
+    "address": "Кастанаевская улица, 34 с2",
+    "status": "probable_match",
+    "candidate_project_id": "proj-124",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0123",
+    "canonical_no": 45,
+    "name": "K-City",
+    "address": "г. Москва, Бауманская ул., 11",
+    "status": "probable_match",
+    "candidate_project_id": "proj-136",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0099",
+    "canonical_no": 46,
+    "name": "Light City",
+    "address": "2-я Магистральная ул., д. 3, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-147",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0094",
+    "canonical_no": 47,
+    "name": "NOON",
+    "address": "Окская ул., вл. 9",
+    "status": "probable_match",
+    "candidate_project_id": "proj-159",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0218",
+    "canonical_no": 48,
+    "name": "Stone Мневники 2",
+    "address": "ул. Нижние Мнёвники , з/у 39",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-188",
+      "proj-189"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0116",
+    "canonical_no": 49,
+    "name": "STONE Римская",
+    "address": "Москва, ул. Золоторожский Вал, вл. 11А/1",
+    "status": "probable_match",
+    "candidate_project_id": "proj-192",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0716",
+    "canonical_no": 50,
+    "name": "Strogino by PARADE.Pro",
+    "address": "Строгино, пр-д №607, влд. 21",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-236"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0163",
+    "canonical_no": 51,
+    "name": "Valtri",
+    "address": "г. Моква, ул. Грузинский Вал, 3с9",
+    "status": "probable_match",
+    "candidate_project_id": "proj-209",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0705",
+    "canonical_no": 52,
+    "name": "БЦ Valtri",
+    "address": "ул. Грузинский Вал, 3",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0122",
+    "canonical_no": 53,
+    "name": "Родина Парк",
+    "address": "г. Москва, ул. Верейская, вл. 12",
+    "status": "probable_match",
+    "candidate_project_id": "proj-241",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0121",
+    "canonical_no": 54,
+    "name": "Avium",
+    "address": "3-я Хорошёвская улица, 18/2",
+    "status": "probable_match",
+    "candidate_project_id": "proj-115",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0149",
+    "canonical_no": 55,
+    "name": "Bell",
+    "address": "1-я ул. Ямского поля, вл. 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-117",
+    "match_basis": "name+address",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0087",
+    "canonical_no": 56,
+    "name": "Dream Riva",
+    "address": "Проспект Андропова",
+    "status": "probable_match",
+    "candidate_project_id": "proj-276",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0113",
+    "canonical_no": 57,
+    "name": "JOIS",
+    "address": "г. Москва, 3-й Силикатный проезд, 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-134",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0150",
+    "canonical_no": 58,
+    "name": "Link",
+    "address": "г. Москва, ул. Рябиновая, влд 44",
+    "status": "probable_match",
+    "candidate_project_id": "proj-150",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0151",
+    "canonical_no": 59,
+    "name": "Mind",
+    "address": "г. Москва, ул. Серегина вл.5-7",
+    "status": "probable_match",
+    "candidate_project_id": "proj-152",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0104",
+    "canonical_no": 60,
+    "name": "Orbital-2",
+    "address": "1-й Магистральный проезд, 12.",
+    "status": "probable_match",
+    "candidate_project_id": "proj-168",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0168",
+    "canonical_no": 61,
+    "name": "Rail.A",
+    "address": "г. Москва, Переведеновский пер., вл. 13с11, 12",
+    "status": "probable_match",
+    "candidate_project_id": "proj-173",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0690",
+    "canonical_no": 62,
+    "name": "Бизнес-парк Переделкино",
+    "address": "пос. Внуковское, кв-л 9, з/у 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-221",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0701",
+    "canonical_no": 63,
+    "name": "БЦ Мещерский",
+    "address": "Боровское ш., 2",
+    "status": "probable_match",
+    "candidate_project_id": "proj-73",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0124",
+    "canonical_no": 64,
+    "name": "Мещерский Лес",
+    "address": "г. Москва, Боровское шоссе, вл.2",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-73",
+      "proj-153"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0080",
+    "canonical_no": 65,
+    "name": "Технопарк Густав",
+    "address": "Москва, Складочная ул., 6с36",
+    "status": "exact_match",
+    "matched_project_id": "proj-247",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0200",
+    "canonical_no": 66,
+    "name": "Jenga",
+    "address": "Поллеский проезд",
+    "status": "probable_match",
+    "candidate_project_id": "proj-132",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0202",
+    "canonical_no": 67,
+    "name": "Lakes 2",
+    "address": "ул. Озёрная",
+    "status": "probable_match",
+    "candidate_project_id": "proj-139",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0203",
+    "canonical_no": 68,
+    "name": "Lavin",
+    "address": "Ильменский проезд, земельный участок 13/8",
+    "status": "probable_match",
+    "candidate_project_id": "proj-141",
+    "mismatch": [
+      "address",
+      "corpus"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0206",
+    "canonical_no": 69,
+    "name": "Mount",
+    "address": "Боровское шоссе",
+    "status": "probable_match",
+    "candidate_project_id": "proj-153",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0127",
+    "canonical_no": 70,
+    "name": "One Tower",
+    "address": "1-й Красногвардейский проезд, 13",
+    "status": "probable_match",
+    "candidate_project_id": "proj-164",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0698",
+    "canonical_no": 71,
+    "name": "STONE Towers (Tower D)",
+    "address": "Бумажный пр-д, вл. 19, стр. 4,5",
+    "status": "probable_match",
+    "candidate_project_id": "proj-89",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0715",
+    "canonical_no": 72,
+    "name": "STONE Мневники 1",
+    "address": "ул. Нижние Мнёвники , з/у 41",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-185",
+      "proj-188",
+      "proj-189"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0262",
+    "canonical_no": 73,
+    "name": "БЦ «Варшавская»",
+    "address": "г. Москва, Каширский проезд,25/2",
+    "status": "probable_match",
+    "candidate_project_id": "proj-224",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0709",
+    "canonical_no": 74,
+    "name": "МФК Юг",
+    "address": "2-й Хорошевский проезд, вл. 7",
+    "status": "probable_match",
+    "candidate_project_id": "proj-234",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0323",
+    "canonical_no": 75,
+    "name": "Ольховая SKY",
+    "address": "район Коммунарка, квартал 150",
+    "status": "probable_match",
+    "candidate_project_id": "proj-240",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0189",
+    "canonical_no": 76,
+    "name": "Aspace Хорошевская",
+    "address": "Хорошевское ш., 39",
+    "status": "probable_match",
+    "candidate_project_id": "proj-113",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0193",
+    "canonical_no": 77,
+    "name": "Edel",
+    "address": "17-й проезд Марьиной рощи, 9",
+    "status": "probable_match",
+    "candidate_project_id": "proj-120",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0177",
+    "canonical_no": 78,
+    "name": "Level Южнопортовая",
+    "address": "ЖК Левел Южнопортовая, 4",
+    "status": "probable_match",
+    "candidate_project_id": "proj-146",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0209",
+    "canonical_no": 79,
+    "name": "Omni tower",
+    "address": "Алексея Свиридова, 7",
+    "status": "probable_match",
+    "candidate_project_id": "proj-161",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0214",
+    "canonical_no": 80,
+    "name": "Solo",
+    "address": "Солженицына, 27",
+    "status": "probable_match",
+    "candidate_project_id": "proj-175",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0219",
+    "canonical_no": 81,
+    "name": "Stone Мневники 3",
+    "address": "ул. Нижние Мнёвники, зу 192",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0678",
+    "canonical_no": 82,
+    "name": "STONE Мневники 3 (Башня 1 и Башня 2)",
+    "address": "ул. Нижние Мнёвники, з/у 192",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-185",
+      "proj-188",
+      "proj-189"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0370",
+    "canonical_no": 83,
+    "name": "Upside Ямская",
+    "address": "2-я Ямская ул., вл. 9",
+    "status": "probable_match",
+    "candidate_project_id": "proj-208",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0230",
+    "canonical_no": 84,
+    "name": "А101 на улице Эдварда Грига",
+    "address": "ул. Александры Монаховой, 39Б",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-226"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0275",
+    "canonical_no": 85,
+    "name": "ВАРСТ",
+    "address": "улица Сущёвский Вал, 43с2, Москва",
+    "status": "probable_match",
+    "candidate_project_id": "proj-230",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0287",
+    "canonical_no": 86,
+    "name": "Дом Правды",
+    "address": "ул. Правды, 24, стр. 2, Москва",
+    "status": "probable_match",
+    "candidate_project_id": "proj-231",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0341",
+    "canonical_no": 87,
+    "name": "Сити-4",
+    "address": "Пресненская набережная, 4",
+    "status": "exact_match",
+    "matched_project_id": "proj-245",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0360",
+    "canonical_no": 88,
+    "name": "Цетлин",
+    "address": "г. Москва, улица Неверовского, 10с3",
+    "status": "probable_match",
+    "candidate_project_id": "proj-249",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0181",
+    "canonical_no": 89,
+    "name": "1-й Силикатный проезд, 13",
+    "address": "1-й Силикатный проезд, 13",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-97"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0374",
+    "canonical_no": 90,
+    "name": "Aurus",
+    "address": "улица Антонова-Овсеенко, вл. 13-15",
+    "status": "exact_match",
+    "matched_project_id": "proj-259",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0194",
+    "canonical_no": 91,
+    "name": "Emotion",
+    "address": "2-й Силикатный проезд, влд. 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-262",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0201",
+    "canonical_no": 92,
+    "name": "KORP. Молодежная",
+    "address": "г. Москва, ул. Ярцевская, ЗУ 21/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-251",
+    "match_basis": "name+address",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0211",
+    "canonical_no": 93,
+    "name": "Set",
+    "address": "г. Москва, ул. Верейская, д. 29/32Б",
+    "status": "exact_match",
+    "matched_project_id": "proj-261",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0224",
+    "canonical_no": 94,
+    "name": "Stone Ходынка 4",
+    "address": "Москва, Ходынский бульвар",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-200"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0369",
+    "canonical_no": 95,
+    "name": "Upside Tech Сколково (фаза Альфа)",
+    "address": "г. Москва, Нобеля ул.",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-254"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0455",
+    "canonical_no": 96,
+    "name": "Upside Tech Сколково (фаза Бета)",
+    "address": "г. Москва, Нобеля ул.",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-254"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0229",
+    "canonical_no": 97,
+    "name": "Upside Останкино",
+    "address": "проезд Огородный, 20А/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-253",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0238",
+    "canonical_no": 98,
+    "name": "Бизнес-хаб «Потапово»",
+    "address": "проспект Куприна, 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-278",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0387",
+    "canonical_no": 99,
+    "name": "Звенигородская от Гранель",
+    "address": "1-й Силикатный проезд, 13",
+    "status": "exact_match",
+    "matched_project_id": "proj-97",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0301",
+    "canonical_no": 100,
+    "name": "Ликова",
+    "address": "г. Москва, ул. Омская, земельный участок 14/4",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-266"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0421",
+    "canonical_no": 101,
+    "name": "Руновский 14",
+    "address": "руновский переулок, 14",
+    "status": "exact_match",
+    "matched_project_id": "proj-265",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0145",
+    "canonical_no": 102,
+    "name": "Сколково Технопарк от Upside Development",
+    "address": "г. Москва, Нобеля ул.",
+    "status": "new_record",
+    "reason": "no registry row with matching name or nearby coordinates"
+  },
+  {
+    "unified_id": "UC-OBJ-0389",
+    "canonical_no": 103,
+    "name": "Энтузиаст",
+    "address": "Москва, шоссе Энтузиастов, 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-264",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0364",
+    "canonical_no": 104,
+    "name": "Энтузиастов, 12",
+    "address": "Москва, шоссе Энтузиастов, 12",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-264"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0413",
+    "canonical_no": 105,
+    "name": "Cityzen",
+    "address": "Вишневая, 7",
+    "status": "exact_match",
+    "matched_project_id": "proj-263",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0192",
+    "canonical_no": 106,
+    "name": "Dius",
+    "address": "ул. Академика Ильюшина, вл. 21, Москва",
+    "status": "exact_match",
+    "matched_project_id": "proj-269",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0204",
+    "canonical_no": 107,
+    "name": "Level Нижегородская",
+    "address": "Перовское шоссе, вл. 21",
+    "status": "exact_match",
+    "matched_project_id": "proj-267",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0213",
+    "canonical_no": 108,
+    "name": "Sezar Tower",
+    "address": "г. Москва, Краснопресненская наб., уч. 4",
+    "status": "probable_match",
+    "candidate_project_id": "proj-268",
+    "mismatch": [
+      "address"
+    ],
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-0420",
+    "canonical_no": 109,
+    "name": "Мануфактура XIX",
+    "address": "ул. Петра Алексеева, 12с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-270",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-0481",
+    "canonical_no": 110,
+    "name": "ул. Академика Ильюшина, вл. 21",
+    "address": "ул. Академика Ильюшина, вл. 21",
+    "status": "conflict",
+    "candidate_project_ids": [
+      "proj-269"
+    ],
+    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
+  },
+  {
+    "unified_id": "UC-OBJ-0486",
+    "canonical_no": 111,
+    "name": "1-й Магистральный проезд, 12",
+    "address": "1-й Магистральный проезд, 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0417",
+    "canonical_no": 112,
+    "name": "1-й Троицкий переулок, вл. 12/2с",
+    "address": "1-й Троицкий переулок, вл. 12/2с",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0605",
+    "canonical_no": 113,
+    "name": "1-я Магистральная, вл. 29",
+    "address": "1-я Магистральная, вл. 29",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0488",
+    "canonical_no": 114,
+    "name": "1-я ул. Ямского Поля, вл. 17",
+    "address": "1-я ул. Ямского Поля, вл. 17",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0599",
+    "canonical_no": 115,
+    "name": "2-ая Магистральная, вл. 3, 16",
+    "address": "2-ая Магистральная, вл. 3, 16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0489",
+    "canonical_no": 116,
+    "name": "2-й Силикатный пр-д, вл.13",
+    "address": "2-й Силикатный пр-д, вл.13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0490",
+    "canonical_no": 117,
+    "name": "2-й Силикатный проезд, вл. 9.",
+    "address": "2-й Силикатный проезд, вл. 9.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0603",
+    "canonical_no": 118,
+    "name": "2-й Силикатный, 8",
+    "address": "2-й Силикатный проезд, район Хорошёво-Мнёвники, Москва, Центральный федеральный округ, 123290, Россия",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0182",
+    "canonical_no": 119,
+    "name": "2-ой Силикатный проезд",
+    "address": "Москва, 2-ой Силикатный проезд, 34с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0429",
+    "canonical_no": 120,
+    "name": "2-я Магистральная, 18",
+    "address": "2-я Магистральная, 18",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0492",
+    "canonical_no": 121,
+    "name": "2-я Магистральная, 7А",
+    "address": "2-я Магистральная, 7А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0493",
+    "canonical_no": 122,
+    "name": "2-я Магистральной улица, вл. 7а.",
+    "address": "2-я Магистральной улица, вл. 7а.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0494",
+    "canonical_no": 123,
+    "name": "2-я Ямская ул., вл. 9",
+    "address": "2-я Ямская ул., вл. 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0183",
+    "canonical_no": 124,
+    "name": "2-я Ямская, вл. 2",
+    "address": "ул. 2-я Ямская, вл. 2, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0496",
+    "canonical_no": 125,
+    "name": "3-й Добрынинский пер., земельный участок 4/2,",
+    "address": "3-й Добрынинский пер., земельный участок 4/2,",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0184",
+    "canonical_no": 126,
+    "name": "3-й Силикатный 1к1",
+    "address": "3-й Силикатный пр-д, 1к1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0598",
+    "canonical_no": 127,
+    "name": "4-ая Магистральная, вл. 7",
+    "address": "4-ая Магистральная, вл. 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0442",
+    "canonical_no": 128,
+    "name": "4-я Магистральная, 4 стр. 11",
+    "address": "4-я Магистральная ул., 4 стр. 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0408",
+    "canonical_no": 129,
+    "name": "5-й Донской, 21Б",
+    "address": "5-й Донской, 21Б",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0542",
+    "canonical_no": 130,
+    "name": "AFI Park «Воронцовский»",
+    "address": "улица Академика Челомея, 7Ас2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0580",
+    "canonical_no": 131,
+    "name": "AFI square",
+    "address": "Грузинский Вал ул., 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0475",
+    "canonical_no": 132,
+    "name": "AFI Tagilskaya",
+    "address": "Тагильская улица, вл.4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0101",
+    "canonical_no": 133,
+    "name": "AFI Галерея",
+    "address": "г. Москва, Тверская застава ул., 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0186",
+    "canonical_no": 134,
+    "name": "AFI Нагатинская",
+    "address": "ул. Нагатинская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0188",
+    "canonical_no": 135,
+    "name": "ASPACE Кузнецкий мост",
+    "address": "г. Москва, Кузнецкий мост 13/9с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0441",
+    "canonical_no": 136,
+    "name": "Avium 2 очередь",
+    "address": "3-я Хорошёвская улица, 18/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0702",
+    "canonical_no": 137,
+    "name": "Botanica Plaza",
+    "address": "1-я ул. Леонова, 18",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0014",
+    "canonical_no": 138,
+    "name": "Capital Towers",
+    "address": "Краснопресненская наб., 14, стр., 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0634",
+    "canonical_no": 139,
+    "name": "Capital Towers (Park Tower)",
+    "address": "Краснопресненская наб., 14Ак2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0190",
+    "canonical_no": 140,
+    "name": "Chalet",
+    "address": "Пятницкая улица, 40с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0191",
+    "canonical_no": 141,
+    "name": "Coldy на ул. Нижняя Красносельская",
+    "address": "ул. Нижняя Красносельская, 35",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0581",
+    "canonical_no": 142,
+    "name": "Comcity Bravo",
+    "address": "Киевское ш, 22-й км, 6A",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0545",
+    "canonical_no": 143,
+    "name": "Crosswall Park Pobedy",
+    "address": "улица Неверовского, 10с3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0019",
+    "canonical_no": 144,
+    "name": "D-Stantion",
+    "address": "Земляной Вал ул., 9А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0003",
+    "canonical_no": 145,
+    "name": "DM Tower",
+    "address": "Новоданиловская наб., 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0042",
+    "canonical_no": 146,
+    "name": "Dubinin'SKY",
+    "address": "Ул. Дубининская вл.39-41",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0606",
+    "canonical_no": 147,
+    "name": "Dubininsky SKY",
+    "address": "Ул. Дубининская вл.39-41",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0195",
+    "canonical_no": 148,
+    "name": "Ferrum",
+    "address": "г. Москва, Шарикоподшипниковская ул., д. 11 стр. 8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0051",
+    "canonical_no": 149,
+    "name": "Fili Center",
+    "address": "Промышленный пр-д, вл. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0129",
+    "canonical_no": 150,
+    "name": "FLY",
+    "address": "Ленинградский проспект, 37 корп. 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0197",
+    "canonical_no": 151,
+    "name": "Forma Workplace на Волоколамском",
+    "address": "Волоколамское шоссе, вл. 32",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0198",
+    "canonical_no": 152,
+    "name": "Forma Workplace на Волоколамском маленький",
+    "address": "Авиационная ул., вл. 17-22",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0103",
+    "canonical_no": 153,
+    "name": "FRAME WORKPLACE",
+    "address": "Ул. Пресненский Вал, 27",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0747",
+    "canonical_no": 154,
+    "name": "Gate 1",
+    "address": "пр-кт 60-летия Октября, 5А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0737",
+    "canonical_no": 155,
+    "name": "GEOLOG",
+    "address": "ул. Обручева, 23к2с3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0680",
+    "canonical_no": 156,
+    "name": "GloraX Business Римская",
+    "address": "Перовский пр-д, вл. 54",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0706",
+    "canonical_no": 157,
+    "name": "GRANARD Белорусская",
+    "address": "1-я ул. Ямского Поля, вл. 30",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0655",
+    "canonical_no": 158,
+    "name": "iCITY (Башня Space)",
+    "address": "Шмитовский пр-д, 37",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0649",
+    "canonical_no": 159,
+    "name": "iCITY (Башня Time)",
+    "address": "Шмитовский пр-д, 37",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0023",
+    "canonical_no": 160,
+    "name": "iCity Time",
+    "address": "проезд Шмитовский, д. 37, стр 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0142",
+    "canonical_no": 161,
+    "name": "iCity-2",
+    "address": "г. Москва, Шмитовский проезд д. 37",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0199",
+    "canonical_no": 162,
+    "name": "Insolver на Проспекте 60-летия Октября",
+    "address": "проспект 60-летия Октября, 5А, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0584",
+    "canonical_no": 163,
+    "name": "Jazz",
+    "address": "Сущевский Вал ул., 49, стр. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0621",
+    "canonical_no": 164,
+    "name": "Klever Park",
+    "address": "Новая Москва, Мамыри, 46",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0736",
+    "canonical_no": 165,
+    "name": "Kobzon City (K-City) (I очередь)",
+    "address": "ул. Бауманская, 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0692",
+    "canonical_no": 166,
+    "name": "Kobzon City (K-City) (II очередь)",
+    "address": "ул. Бауманская, 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0623",
+    "canonical_no": 167,
+    "name": "Korolev, Rassvet",
+    "address": "Столярный , 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0602",
+    "canonical_no": 168,
+    "name": "KR Properties",
+    "address": "Магистральный пер., 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0541",
+    "canonical_no": 169,
+    "name": "Level Work Воронцовская",
+    "address": "улица Академика Семенихина, земельный участок 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0205",
+    "canonical_no": 170,
+    "name": "Level Стрелецкая",
+    "address": "Стрелецкая улица, 2с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0663",
+    "canonical_no": 171,
+    "name": "Link (Башня NEO и Башня RUNE)",
+    "address": "ул. Рябиновая, 44",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0574",
+    "canonical_no": 172,
+    "name": "Lomonosov Cluster",
+    "address": "Москва, Раменский бульвар, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0016",
+    "canonical_no": 173,
+    "name": "Lucky (корпус 6)",
+    "address": "Москва, 2-я Звенигородская ул., 12А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0579",
+    "canonical_no": 174,
+    "name": "Lucky, bldg 2",
+    "address": "2nd Zvenigorodskaya, 28",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0745",
+    "canonical_no": 175,
+    "name": "LUNAR (Module B)",
+    "address": "Ленинский пр-кт, 38",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0521",
+    "canonical_no": 176,
+    "name": "Luzhniki Collection",
+    "address": "Лужнецкая набережная, вл. 2/4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0021",
+    "canonical_no": 177,
+    "name": "Moscow Towers",
+    "address": "Красногвардейский 1-й проезд, 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0454",
+    "canonical_no": 178,
+    "name": "MR Group на Верейской",
+    "address": "Верейская ул.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0378",
+    "canonical_no": 179,
+    "name": "MR в Сокольниках",
+    "address": "ул. Маленковская, вл. 30",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0398",
+    "canonical_no": 180,
+    "name": "MR Марьина Роща",
+    "address": "в районе улиц Складочная и Анненская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0154",
+    "canonical_no": 181,
+    "name": "MYPRIORITY Дубровка",
+    "address": "г. Москва, Шарикоподшипниковская ул., вл. 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0153",
+    "canonical_no": 182,
+    "name": "MYPRIORITY Мневники",
+    "address": "г. Москва, ул. Народного Ополчения, 34",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0081",
+    "canonical_no": 183,
+    "name": "N'ICE TOWER",
+    "address": "Скотопрогонная ул. 31Ас1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0207",
+    "canonical_no": 184,
+    "name": "Nexus",
+    "address": "Москва, ул. Ярцевская, 21/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0208",
+    "canonical_no": 185,
+    "name": "North Wind",
+    "address": "г. Москва, 2-й Силикатный проезд, 13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0704",
+    "canonical_no": 186,
+    "name": "N’ICE TOWER",
+    "address": "Скотопрогонная улица, вл1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0062",
+    "canonical_no": 187,
+    "name": "Obsidian",
+    "address": "Авиаконструктора Микояна, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0732",
+    "canonical_no": 188,
+    "name": "OSTANKINO BUSINESS PARK (здание 1)",
+    "address": "Огородный пр-д, 16/1с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0730",
+    "canonical_no": 189,
+    "name": "OSTANKINO BUSINESS PARK (здание 6)",
+    "address": "Огородный пр-д., 16/1с6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0044",
+    "canonical_no": 190,
+    "name": "PORTA Workplace",
+    "address": "Заречная ул., вл. 2/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0585",
+    "canonical_no": 191,
+    "name": "Prime Time",
+    "address": "Викторенко ул., 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0752",
+    "canonical_no": 192,
+    "name": "QOOB (Корпус B)",
+    "address": "ул. Алексея Свиридова, вл. 17",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0607",
+    "canonical_no": 193,
+    "name": "Red Town",
+    "address": "ул. 2-я Звенигородская, д. 13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0210",
+    "canonical_no": 194,
+    "name": "Regions development на ул. Краснобогатырская",
+    "address": "ул. Краснобогатырская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0476",
+    "canonical_no": 195,
+    "name": "Riva",
+    "address": "Проспект Андропова, 11Г",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0652",
+    "canonical_no": 196,
+    "name": "Rublevo Business Park",
+    "address": "МКАД, 64-й километр, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0212",
+    "canonical_no": 197,
+    "name": "Sezar City",
+    "address": "г. Москва, 2-й Хорошевский проезд, вл. 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0174",
+    "canonical_no": 198,
+    "name": "Sezar Group, уч. 4",
+    "address": "г. Москва, Краснопресненская наб., уч. 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0367",
+    "canonical_no": 199,
+    "name": "Silica",
+    "address": "г. Москва, 2-й Силикатный проезд, 13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0037",
+    "canonical_no": 200,
+    "name": "Slava (4 очередь)",
+    "address": "1-я улица Ямского поля, вл. 8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0648",
+    "canonical_no": 201,
+    "name": "SLAVA (4-я оч.)",
+    "address": "1-я ул. Ямского Поля, 8с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0626",
+    "canonical_no": 202,
+    "name": "Slava (5 очередь)",
+    "address": "1-я улица Ямского поля, вл. 8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0653",
+    "canonical_no": 203,
+    "name": "SLAVA (5-я оч.)",
+    "address": "1-я ул. Ямского Поля, 8с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0215",
+    "canonical_no": 204,
+    "name": "Sound",
+    "address": "г. Москва, ул. Радио, 16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0570",
+    "canonical_no": 205,
+    "name": "STONE Towers (Tower B)",
+    "address": "Москва, Бумажный проезд, 19с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0576",
+    "canonical_no": 206,
+    "name": "STONE Towers (Tower C)",
+    "address": "проезд Бумажный, д. 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0587",
+    "canonical_no": 207,
+    "name": "Stone Towers A",
+    "address": "Бумажный пр-д, 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0024",
+    "canonical_no": 208,
+    "name": "Stone Towers B, С",
+    "address": "проезд Бумажный, д. 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0079",
+    "canonical_no": 209,
+    "name": "Stone Towers D",
+    "address": "проезд Бумажный, д. 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0381",
+    "canonical_no": 210,
+    "name": "STONE Towers E",
+    "address": "г. Москва,ул. Нижняя Масловка, 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0216",
+    "canonical_no": 211,
+    "name": "STONE Вернадского",
+    "address": "пр-кт Вернадского, 10",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0217",
+    "canonical_no": 212,
+    "name": "STONE Кутузовская",
+    "address": "просп. Кутузовский, уч. 16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0669",
+    "canonical_no": 213,
+    "name": "STONE Ленинский (Башня L и Башня S)",
+    "address": "ул. Вавилова, вл. 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0118",
+    "canonical_no": 214,
+    "name": "Stone Мневники",
+    "address": "ул. Нижние Мневники, уч.45",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0220",
+    "canonical_no": 215,
+    "name": "Stone Мневники 4",
+    "address": "ул. Нижние Мнёвники",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0221",
+    "canonical_no": 216,
+    "name": "STONE Москва-Сити",
+    "address": "Шмидтовский проезд, 32",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0222",
+    "canonical_no": 217,
+    "name": "STONE Пионерская",
+    "address": "ул. Малая Филевская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0223",
+    "canonical_no": 218,
+    "name": "STONE Сущевский Вал",
+    "address": "ул. Сущевский Вал, 31",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0696",
+    "canonical_no": 219,
+    "name": "STONE Ходынка 1 (Башня H1)",
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0722",
+    "canonical_no": 220,
+    "name": "STONE Ходынка 1 (Башня H2)",
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0735",
+    "canonical_no": 221,
+    "name": "STONE Ходынка 1 (Башня H3)",
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0100",
+    "canonical_no": 222,
+    "name": "STONE Ходынка 1 (квартал целиком)",
+    "address": "Москва, Ходынский бульвар, з/у 6/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0225",
+    "canonical_no": 223,
+    "name": "Stories на Мосфильмовской",
+    "address": "Мосфильмовская ул., 100, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0668",
+    "canonical_no": 224,
+    "name": "Sydney City",
+    "address": "улица Шеногина, вл2/11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0002",
+    "canonical_no": 225,
+    "name": "TESLA (Нагатино i-Land)",
+    "address": "Андропова пр-т, 18к9, стр.2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0227",
+    "canonical_no": 226,
+    "name": "Touch АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 151",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0586",
+    "canonical_no": 227,
+    "name": "Trend Line",
+    "address": "Нахимовский пр-кт, 51",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0703",
+    "canonical_no": 228,
+    "name": "Upside Kuntsevo",
+    "address": "Западный административный округ, район Кунцево, 48-й квартал",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0228",
+    "canonical_no": 229,
+    "name": "Upside на Ленинградском",
+    "address": "Ленинградский проспект, вл. 37, корп. 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0388",
+    "canonical_no": 230,
+    "name": "Upside на Ленинградском (бывш. FLY)",
+    "address": "Ленинградский проспект, вл. 37, корп. 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0034",
+    "canonical_no": 231,
+    "name": "White Sea",
+    "address": "Ленинградское ш., 61с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0450",
+    "canonical_no": 232,
+    "name": "А101 АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 150",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0474",
+    "canonical_no": 233,
+    "name": "А101 на Эдварда Грига",
+    "address": "Эдварда Грига ул., з/у 18А/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0613",
+    "canonical_no": 234,
+    "name": "Абсолют Союз",
+    "address": "Лужнецкая наб, д. 2/4, стр. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0645",
+    "canonical_no": 235,
+    "name": "Авиапарк Офисы",
+    "address": "Ходынский б-р, 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0231",
+    "canonical_no": 236,
+    "name": "Адмирал",
+    "address": "Шоссейная ул., вл. 4А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0436",
+    "canonical_no": 237,
+    "name": "Академика Комарова, 1Д",
+    "address": "Академика Комарова, 1Д",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0232",
+    "canonical_no": 238,
+    "name": "Академика Опарина, 2",
+    "address": "ул. Академика Опарина, 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0233",
+    "canonical_no": 239,
+    "name": "Академика Пилюгина, д. 24",
+    "address": "улица Академика Пилюгина, д. 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0234",
+    "canonical_no": 240,
+    "name": "Академика Янгеля, 12",
+    "address": "Академика Янгеля, 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0738",
+    "canonical_no": 241,
+    "name": "Актион на 1905 года",
+    "address": "Ходынская ул., з/у 2/9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0495",
+    "canonical_no": 242,
+    "name": "Алкон Север, Алкон 4",
+    "address": "3-й Балтийский пер., вл.5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0609",
+    "canonical_no": 243,
+    "name": "Арма стр. 20",
+    "address": "Нижний Сусальный пер., д. 5, стр. 20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0017",
+    "canonical_no": 244,
+    "name": "Астория II",
+    "address": "Химки, Транспортный пр-д., 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0733",
+    "canonical_no": 245,
+    "name": "АФИ Галерея",
+    "address": "Тверская Застава пл., 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0011",
+    "canonical_no": 246,
+    "name": "Б. Тульская ул., 19",
+    "address": "Б. Тульская ул., 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0093",
+    "canonical_no": 247,
+    "name": "Бадаевский Западный",
+    "address": "ул Тараса Шевченко",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0635",
+    "canonical_no": 248,
+    "name": "Башня в Сити",
+    "address": "Краснопресненская наб., вл. 16/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0731",
+    "canonical_no": 249,
+    "name": "Башня Власов (Рябовская Мануфактура)",
+    "address": "Холодильный пер., 3с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0236",
+    "canonical_no": 250,
+    "name": "Бевард",
+    "address": "Садовая улица, 86, деревня Румянцево, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0499",
+    "canonical_no": 251,
+    "name": "Беломорская, 40",
+    "address": "Беломорская улица, 40",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0237",
+    "canonical_no": 252,
+    "name": "Белорусский жилой и деловой кварталы",
+    "address": "Москва-Товарная-Смоленская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0395",
+    "canonical_no": 253,
+    "name": "Береговой Эмуна развитие",
+    "address": "Береговой проезд, 4/6, 4/3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0131",
+    "canonical_no": 254,
+    "name": "Бережковская",
+    "address": "Бережковская набережная",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0694",
+    "canonical_no": 255,
+    "name": "Бизнес-квартал Прокшино (Башня 1) (1-я оч.)",
+    "address": "пос. Сосенское, БК Прокшино",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0691",
+    "canonical_no": 256,
+    "name": "Бизнес-квартал Прокшино (Башня 2) (2-я оч.)",
+    "address": "пос. Сосенское, БК Прокшино",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0710",
+    "canonical_no": 257,
+    "name": "Бизнес-квартал Прокшино (Башня 3) (3-я оч.)",
+    "address": "БК Прокшино, пос. Сосенское, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0074",
+    "canonical_no": 258,
+    "name": "Бизнес-центр Клевер парк",
+    "address": "Москва, п. Сосенское, уч.46, в районе дер. Мамыри",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0418",
+    "canonical_no": 259,
+    "name": "Большая Садовая улица, 3с10",
+    "address": "Большая Садовая улица, 3с10",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0769",
+    "canonical_no": 260,
+    "name": "Большевик 2",
+    "address": "Ленинградский пр-кт, 15с21",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0500",
+    "canonical_no": 261,
+    "name": "Большой Якиманке, вл. 2",
+    "address": "Большой Якиманке, вл. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0025",
+    "canonical_no": 262,
+    "name": "Ботаника",
+    "address": "ул. Леонова 1-я, д. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0047",
+    "canonical_no": 263,
+    "name": "БП Переделкино",
+    "address": "Боровское шоссе, 29 км",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0239",
+    "canonical_no": 264,
+    "name": "Бульвар Генерала Карбышева",
+    "address": "ул. Маршала Тухачевского, 22-44",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0158",
+    "canonical_no": 265,
+    "name": "Бумажный пр-д, 2/2",
+    "address": "г. Москва, Бумажный пр-д, 2/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0240",
+    "canonical_no": 266,
+    "name": "БЦ Artel",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0241",
+    "canonical_no": 267,
+    "name": "БЦ MR 1",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0242",
+    "canonical_no": 268,
+    "name": "БЦ MR 2",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0243",
+    "canonical_no": 269,
+    "name": "БЦ Riva",
+    "address": "Проспект Андропова",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0244",
+    "canonical_no": 270,
+    "name": "БЦ Springs",
+    "address": "Москва, ул. Малая Филёвская, 46",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0245",
+    "canonical_no": 271,
+    "name": "БЦ Unikey",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0166",
+    "canonical_no": 272,
+    "name": "БЦ WEST PIER",
+    "address": "г. Москва, Причальный проезд, 4к2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0759",
+    "canonical_no": 273,
+    "name": "БЦ «Обсидиан»",
+    "address": "Москва, Хорошёвское шоссе, вл. 38А / ул. Авиаконструктора Микояна, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0405",
+    "canonical_no": 274,
+    "name": "БЦ «Шелепиха»",
+    "address": "Москва, ул. 2-я Магистральная, земельный участок 7А/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0246",
+    "canonical_no": 275,
+    "name": "БЦ А101",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0247",
+    "canonical_no": 276,
+    "name": "БЦ в Beside",
+    "address": "Рязанский просп.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0248",
+    "canonical_no": 277,
+    "name": "БЦ в Крылатском",
+    "address": "ул. Крылатская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0249",
+    "canonical_no": 278,
+    "name": "БЦ в Лужниках",
+    "address": "ул. Лужники, ЗУ 24/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0250",
+    "canonical_no": 279,
+    "name": "БЦ в Марьиной Роще",
+    "address": "ул. Веткина, вл. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0251",
+    "canonical_no": 280,
+    "name": "БЦ в Очаково-Матвеевском",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0453",
+    "canonical_no": 281,
+    "name": "БЦ в промзоне Южное Медведково",
+    "address": "Вилюйская ул.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0252",
+    "canonical_no": 282,
+    "name": "БЦ в Филях",
+    "address": "Береговой проезд, 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0253",
+    "canonical_no": 283,
+    "name": "БЦ в Южном порту",
+    "address": "Южнопортовый пр., вл. 12В",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0132",
+    "canonical_no": 284,
+    "name": "БЦ Ермакова Роща",
+    "address": "ул. Ермакова Роща, 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0693",
+    "canonical_no": 285,
+    "name": "БЦ Жуков пр-д, 19",
+    "address": "Жуков пр-д, 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0254",
+    "canonical_no": 286,
+    "name": "БЦ Жуков проезд, 19",
+    "address": "Жуков проезд, 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0137",
+    "canonical_no": 287,
+    "name": "БЦ Капитолий",
+    "address": "Москва, Вернадского пр-т, 6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0255",
+    "canonical_no": 288,
+    "name": "БЦ Крост",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0256",
+    "canonical_no": 289,
+    "name": "БЦ ЛСР",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0257",
+    "canonical_no": 290,
+    "name": "БЦ Магистральная 12 (из буклета 2026)",
+    "address": "г. Москва, 5-я Магистральная ул., 4, стр. 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0095",
+    "canonical_no": 291,
+    "name": "БЦ Магистральный (из буклета 2026)",
+    "address": "г. Москва, 4-я Магистральная ул., вл. 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0258",
+    "canonical_no": 292,
+    "name": "БЦ Монс",
+    "address": "Огородный проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0739",
+    "canonical_no": 293,
+    "name": "БЦ на 2-м Силикатном пр-д, вл.13",
+    "address": "2-й Силикатный пр-д, вл.13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0718",
+    "canonical_no": 294,
+    "name": "БЦ на 2-ой Магистральной, 7А",
+    "address": "2-я Магистральная ул., 7А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0259",
+    "canonical_no": 295,
+    "name": "БЦ на Авиамоторной",
+    "address": "ул. Авиамоторная, 19А/9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0147",
+    "canonical_no": 296,
+    "name": "БЦ на Варшавском шоссе",
+    "address": "г. Москва, Варшавское шоссе, вл. 36.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0637",
+    "canonical_no": 297,
+    "name": "БЦ на Войковской",
+    "address": "Старопетровский пр-д, 7А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0508",
+    "canonical_no": 298,
+    "name": "БЦ на Делегацкой",
+    "address": "Делегатская улица, 25",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0260",
+    "canonical_no": 299,
+    "name": "БЦ на Дубиниской",
+    "address": "ул. Дубиниская,вл. 77-83",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0659",
+    "canonical_no": 300,
+    "name": "БЦ на Дубнинской",
+    "address": "ул. Дубнинская, 83с5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0261",
+    "canonical_no": 301,
+    "name": "БЦ на Духовской",
+    "address": "пр-зд Духовской, 17/4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0757",
+    "canonical_no": 302,
+    "name": "БЦ на Колпачном пер., 9Ас1",
+    "address": "Колпачный пер., 9Ас1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0562",
+    "canonical_no": 303,
+    "name": "БЦ на Космонавта Волкова",
+    "address": "улица Космонавта Волкова, 2с4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0766",
+    "canonical_no": 304,
+    "name": "БЦ на Кржижановского",
+    "address": "ул. Кржижановского, 13к3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0263",
+    "canonical_no": 305,
+    "name": "БЦ на Курской",
+    "address": "ул. Верхняя Сыромятническая, 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0639",
+    "canonical_no": 306,
+    "name": "БЦ на Ленинградском пр-кте, 37",
+    "address": "Ленинградский пр-кт, 37",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0768",
+    "canonical_no": 307,
+    "name": "БЦ на Ленинградском пр-кте, 37А",
+    "address": "Ленинградский пр-кт, 37А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0076",
+    "canonical_no": 308,
+    "name": "БЦ на Люсиновской",
+    "address": "Люсиновская ул., 57",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0516",
+    "canonical_no": 309,
+    "name": "БЦ на месте \"Старт\" (МПТ)",
+    "address": "Ленинградский проспект, 37Б",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0406",
+    "canonical_no": 310,
+    "name": "БЦ на месте экспоцентра в Сити",
+    "address": "1-й Красногвардейский проезд, 1с7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0672",
+    "canonical_no": 311,
+    "name": "БЦ на Нагатинской набережной",
+    "address": "Варшавское ш., 37Гс7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0414",
+    "canonical_no": 312,
+    "name": "БЦ на Приречной ул.",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0749",
+    "canonical_no": 313,
+    "name": "БЦ на Сущевском валу",
+    "address": "ул. Сущевский Вал, 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0264",
+    "canonical_no": 314,
+    "name": "БЦ на Текстильщиков",
+    "address": "г. Москва, 8-я Текстильщиков ул.,",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0265",
+    "canonical_no": 315,
+    "name": "БЦ на Трифоновской улице",
+    "address": "Трифоновская улица, 24с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0266",
+    "canonical_no": 316,
+    "name": "БЦ на ул. Гашека",
+    "address": "улица Гашека, 12с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0777",
+    "canonical_no": 317,
+    "name": "БЦ на ул. Гончарная д.20/1c2",
+    "address": "ул. Гончарная, 20/1c2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0267",
+    "canonical_no": 318,
+    "name": "БЦ на ул. Малахитовой",
+    "address": "Малахитовая улица, 20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0268",
+    "canonical_no": 319,
+    "name": "БЦ на ул. Нижегородская",
+    "address": "г. Москва, Нижегородская улица, д. 94, корп. 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0269",
+    "canonical_no": 320,
+    "name": "БЦ на ул. Угличская",
+    "address": "ул. Угличская, 16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0482",
+    "canonical_no": 321,
+    "name": "БЦ на Ходынке",
+    "address": "Ходынский бульвар, 4/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0638",
+    "canonical_no": 322,
+    "name": "БЦ на Шмитовском пр-д, вл. 32, 32А",
+    "address": "Шмитовский пр-д, вл. 32, 32А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0270",
+    "canonical_no": 323,
+    "name": "БЦ по КРТ в Марьиной Роще",
+    "address": "ул. 2-я Ямская, вл. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0271",
+    "canonical_no": 324,
+    "name": "БЦ Самолет",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0661",
+    "canonical_no": 325,
+    "name": "БЦ Смольный (II очередь)",
+    "address": "Смольная ул., 14с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0272",
+    "canonical_no": 326,
+    "name": "БЦ Старт",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0432",
+    "canonical_no": 327,
+    "name": "БЦ у авиапарка",
+    "address": "парковка у ТЦ Авиапарк",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0273",
+    "canonical_no": 328,
+    "name": "БЦ у ВДНХ",
+    "address": "проезд Серебрякова",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0274",
+    "canonical_no": 329,
+    "name": "БЦ у Океании",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0091",
+    "canonical_no": 330,
+    "name": "БЦ Ходынский",
+    "address": "Ходынская ул., 2С9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0049",
+    "canonical_no": 331,
+    "name": "БЦ ЦМТ Фаза 4",
+    "address": "Краснопресненская наб., 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0501",
+    "canonical_no": 332,
+    "name": "Варшавское шоссе, 36",
+    "address": "Варшавское шоссе, 36",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0276",
+    "canonical_no": 333,
+    "name": "Варшавское, 37",
+    "address": "Варшавское, 37, ул. Нагатинская 3А6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0502",
+    "canonical_no": 334,
+    "name": "Верейская улица, вл. 5/1",
+    "address": "Верейская улица, вл. 5/1.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0375",
+    "canonical_no": 335,
+    "name": "Вернадский",
+    "address": "Москва, проспект Вернадского, вл. 6В",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0134",
+    "canonical_no": 336,
+    "name": "Вернадского 39",
+    "address": "Вернадского пр-кт, д. 39",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0503",
+    "canonical_no": 337,
+    "name": "Вернадского, 6В",
+    "address": "Вернадского, 6В",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0505",
+    "canonical_no": 338,
+    "name": "Верхняя Сыромятническая ул., вл.7, стр.1",
+    "address": "Верхняя Сыромятническая ул., вл.7, стр.1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0277",
+    "canonical_no": 339,
+    "name": "Веткина",
+    "address": "г. Москва, ул. Веткина, владение 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0419",
+    "canonical_no": 340,
+    "name": "Волгоградский проспект, 177",
+    "address": "Волгоградский проспект, 177",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0278",
+    "canonical_no": 341,
+    "name": "Вперед",
+    "address": "1-я ул. Ямского поля, вл. 17",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0155",
+    "canonical_no": 342,
+    "name": "г. Москва, Тюменская ул., вл. 5",
+    "address": "г. Москва, Тюменская ул., вл. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0507",
+    "canonical_no": 343,
+    "name": "Гаврикова улица, 11с3",
+    "address": "Гаврикова улица, 11с3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0097",
+    "canonical_no": 344,
+    "name": "Гагаринский",
+    "address": "Орджоникидзе ул., д. 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0128",
+    "canonical_no": 345,
+    "name": "Галс Багратион",
+    "address": "Краснопресненская набережная, 16с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0279",
+    "canonical_no": 346,
+    "name": "Галс Багратион (РВБ)",
+    "address": "Краснопресненская набережная, 16с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0133",
+    "canonical_no": 347,
+    "name": "Галс Южный Порт",
+    "address": "Шоссейная ул., вл. 4А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0035",
+    "canonical_no": 348,
+    "name": "ГБУ Мосгоргеотрест",
+    "address": "Ленинградский проспект 11, стр. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0009",
+    "canonical_no": 349,
+    "name": "Геолог",
+    "address": "Обручева улица,23",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0086",
+    "canonical_no": 350,
+    "name": "Геолог 2",
+    "address": "Обручева улица,23",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0280",
+    "canonical_no": 351,
+    "name": "Георгиевский, 3/2",
+    "address": "Георгиевский, 3/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0281",
+    "canonical_no": 352,
+    "name": "ГК Север на Савеловской",
+    "address": "Бутырская улица, вл1-1, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0282",
+    "canonical_no": 353,
+    "name": "Глоракс Бизнес Римская",
+    "address": "Москва, Перовский проезд, вл. 54",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0380",
+    "canonical_no": 354,
+    "name": "Гранард в Крылатском",
+    "address": "ул. Крылатская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0284",
+    "canonical_no": 355,
+    "name": "Грузовой порт у Рижского вокзала",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0285",
+    "canonical_no": 356,
+    "name": "Гульден",
+    "address": "Складочная ул., 1, стр. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0681",
+    "canonical_no": 357,
+    "name": "Деловое пространство в Савеловском районе (по программе КРТ)",
+    "address": "Вятская ул., вл. 41А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0646",
+    "canonical_no": 358,
+    "name": "Деловой Квартал Light City",
+    "address": "2-я Магистральная ул., 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0741",
+    "canonical_no": 359,
+    "name": "Деловой Квартал Сколково Парк 1",
+    "address": "Сколковское ш., вл. 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0743",
+    "canonical_no": 360,
+    "name": "Деловой Квартал Сколково Парк 2",
+    "address": "Сколковское ш., вл. 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0742",
+    "canonical_no": 361,
+    "name": "Деловой Квартал Сколково Парк 3",
+    "address": "Сколковское ш., вл. 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0744",
+    "canonical_no": 362,
+    "name": "Деловой Квартал Сколково Парк 4",
+    "address": "Сколковское ш., вл. 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0740",
+    "canonical_no": 363,
+    "name": "Деловой Квартал Сколково Парк 5",
+    "address": "Сколковское ш., вл. 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0746",
+    "canonical_no": 364,
+    "name": "Деловой Квартал Сколково Парк 6",
+    "address": "Сколковское ш., вл. 43",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0286",
+    "canonical_no": 365,
+    "name": "Деловой квартал у Курского вокзала",
+    "address": "Курский грузовой двор",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0772",
+    "canonical_no": 366,
+    "name": "Деловой квартал ЮПорт (корпус 1)",
+    "address": "пр-кт Андропова, 11к1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0775",
+    "canonical_no": 367,
+    "name": "Деловой квартал ЮПорт (корпус 2)",
+    "address": "пр-кт Андропова, 11к2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0776",
+    "canonical_no": 368,
+    "name": "Деловой квартал ЮПорт (корпус 4)",
+    "address": "пр-кт Андропова, 11к4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0771",
+    "canonical_no": 369,
+    "name": "Деловой квартал ЮПорт (корпус 5)",
+    "address": "пр-кт Андропова, 11к5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0774",
+    "canonical_no": 370,
+    "name": "Деловой квартал ЮПорт (корпус 6)",
+    "address": "пр-кт Андропова, 11к6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0770",
+    "canonical_no": 371,
+    "name": "Деловой квартал ЮПорт (корпус 7)",
+    "address": "пр-кт Андропова, 11к7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0143",
+    "canonical_no": 372,
+    "name": "Деловой комплекс на территории грузового двора \"Москва-Товарная-рязанская\"",
+    "address": "г. Москва, Спартаковская площадь, 1/7с16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0670",
+    "canonical_no": 373,
+    "name": "Деловой комплекс Шмитовский 34",
+    "address": "Шмитовский пр-д, вл. 34",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0679",
+    "canonical_no": 374,
+    "name": "Деловой Центр Ликова",
+    "address": "Внуково, квартал 30",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0629",
+    "canonical_no": 375,
+    "name": "Деловой Центр м. Университет",
+    "address": "пр-кт Вернадского, вл6-Вс1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0720",
+    "canonical_no": 376,
+    "name": "Деловой центр от West Wind Group",
+    "address": "ул. Неверовского",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0460",
+    "canonical_no": 377,
+    "name": "Дениса Давыдова ул., вл. 4",
+    "address": "Дениса Давыдова ул., вл. 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0527",
+    "canonical_no": 378,
+    "name": "деревня Ликова",
+    "address": "поселение Внуковское, ул Омская 14/4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0526",
+    "canonical_no": 379,
+    "name": "деревня Пыхтино",
+    "address": "поселение Внуковское, квартал 9, земельный участок № 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0438",
+    "canonical_no": 380,
+    "name": "Дженга Сити-2",
+    "address": "ул. Антонова-Овсеенко, вл.7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0415",
+    "canonical_no": 381,
+    "name": "Диапазон",
+    "address": "1-й Волоколамский проезд, 10с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0018",
+    "canonical_no": 382,
+    "name": "Династия Plaza",
+    "address": "Хорошевское ш., 25Б",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0288",
+    "canonical_no": 383,
+    "name": "Дом Солнца БЦ в Коммунарке",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0289",
+    "canonical_no": 384,
+    "name": "Дом Чкалов",
+    "address": "площадь Курского Вокзала, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0553",
+    "canonical_no": 385,
+    "name": "Дом-самолет",
+    "address": "Фрунзенская набережная, 50",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0397",
+    "canonical_no": 386,
+    "name": "Донстрой в Раменках",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0290",
+    "canonical_no": 387,
+    "name": "Донстрой в Сити",
+    "address": "Москва, Эрисмана, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0394",
+    "canonical_no": 388,
+    "name": "Жуков проезд, 19",
+    "address": "Жуков проезд, 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0543",
+    "canonical_no": 389,
+    "name": "з/у Алексея Свиридова, 5А",
+    "address": "улица Алексея Свиридова, 9с3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0487",
+    "canonical_no": 390,
+    "name": "з/у Силикатный проезд, 13",
+    "address": "1-ый Силикатный проезд, 13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0556",
+    "canonical_no": 391,
+    "name": "з/у Энтузиастов, 12",
+    "address": "ш. Энтузиастов,д. 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0555",
+    "canonical_no": 392,
+    "name": "Застройка завода Медведково",
+    "address": "Чермянский проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0045",
+    "canonical_no": 393,
+    "name": "Здание УК ФРТ",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0015",
+    "canonical_no": 394,
+    "name": "Земледельческий пер., 20А",
+    "address": "Земледельческий пер., 20А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0575",
+    "canonical_no": 395,
+    "name": "ЗИЛ В",
+    "address": "Автозаводская улица,23,стр. 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0640",
+    "canonical_no": 396,
+    "name": "ЗИЛАРТ GRAND (Дом 18)",
+    "address": "ул Автозаводская, вл. 23/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0292",
+    "canonical_no": 397,
+    "name": "Зорге, вл. 21–23",
+    "address": "ул. Зорге, вл. 21–23",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0512",
+    "canonical_no": 398,
+    "name": "ЗУ \"Лобачевского, 110 к1\"",
+    "address": "ЗУ \"Лобачевского, 110 к1\"",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0109",
+    "canonical_no": 399,
+    "name": "Империя-2",
+    "address": "Пресненская набережная, 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0084",
+    "canonical_no": 400,
+    "name": "Инград Лужники",
+    "address": "Лужнецкий проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0513",
+    "canonical_no": 401,
+    "name": "Калошин пер., вл.6-8, стр.17.",
+    "address": "Калошин пер., вл.6-8, стр.17.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0422",
+    "canonical_no": 402,
+    "name": "Каминский",
+    "address": "Большой Кисельный переулок, 5с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0728",
+    "canonical_no": 403,
+    "name": "Капитолий (фаза II)",
+    "address": "пр-кт Вернадского, 6В",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0558",
+    "canonical_no": 404,
+    "name": "Квартал Адмирал",
+    "address": "Шоссейная улица, вл. 4А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0293",
+    "canonical_no": 405,
+    "name": "Кватра инвест АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 150",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0294",
+    "canonical_no": 406,
+    "name": "Киевский грузовой двор",
+    "address": "Киевский грузовой двор",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0443",
+    "canonical_no": 407,
+    "name": "Кинотеатр \"Октябрь\"",
+    "address": "Новый Арбат, 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0006",
+    "canonical_no": 408,
+    "name": "Кластер \"Ломоносов\"",
+    "address": "Вернадского пр-т., 8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0514",
+    "canonical_no": 409,
+    "name": "Комсомольский проспект, вл. 1",
+    "address": "Комсомольский проспект, вл. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0565",
+    "canonical_no": 410,
+    "name": "корабельная",
+    "address": "Корабельная улица, Жилой комплекс «Ривер Парк», Коломенка, район Нагатинский Затон, Москва, Центральный федеральный округ, 115142, Россия",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0721",
+    "canonical_no": 411,
+    "name": "Корпоративный центр Сибур",
+    "address": "ул. Большая Якиманка, 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0295",
+    "canonical_no": 412,
+    "name": "Красносельский жилой и деловой квартал",
+    "address": "грузовой двор «Москва-товарная-Рязанская»",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0563",
+    "canonical_no": 413,
+    "name": "кржижановского",
+    "address": "улица Кржижановского, Академический район, Москва, Центральный федеральный округ, 117218, Россия",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0399",
+    "canonical_no": 414,
+    "name": "Кристалл",
+    "address": "Самокатная, 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0296",
+    "canonical_no": 415,
+    "name": "Крост АДЦ Коммунарка",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0506",
+    "canonical_no": 416,
+    "name": "КРТ Волоколамское шоссе",
+    "address": "Волоколамское шоссе, вл.32, Авиационная ул., вл.17-22",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0433",
+    "canonical_no": 417,
+    "name": "КРТ Дербеневская набережная",
+    "address": "ул. Дербеневская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0699",
+    "canonical_no": 418,
+    "name": "КРТ на Дубининской",
+    "address": "ул. Дубининская, вл. 71",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0560",
+    "canonical_no": 419,
+    "name": "КРТ на магистральных улицах",
+    "address": "Хорошёвское шоссе, 39Бс1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0529",
+    "canonical_no": 420,
+    "name": "КРТ на проезде Черепановых",
+    "address": "проезд Черепановых, вл 64",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0550",
+    "canonical_no": 421,
+    "name": "КРТ Огродный проезд",
+    "address": "улица Руставели, 14",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0425",
+    "canonical_no": 422,
+    "name": "Крт Серп и Молот",
+    "address": "Перовский проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0297",
+    "canonical_no": 423,
+    "name": "КРТ Теплый стан",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0472",
+    "canonical_no": 424,
+    "name": "КРТ Троекурово Пионер",
+    "address": "МКАД, 51 км",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0411",
+    "canonical_no": 425,
+    "name": "КРТ Федосьино",
+    "address": "ул. Федосьино",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0510",
+    "canonical_no": 426,
+    "name": "Круглый БЦ на Павелецкой",
+    "address": "Жуков проезд, 19",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0298",
+    "canonical_no": 427,
+    "name": "Крутицкая, 1",
+    "address": "Крутицкая наб., 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0299",
+    "canonical_no": 428,
+    "name": "Крылатская, 2",
+    "address": "Крылатская ул., 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0469",
+    "canonical_no": 429,
+    "name": "Кунцево, 59 км МКАД",
+    "address": "Кунцево, 59 км МКАД",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0176",
+    "canonical_no": 430,
+    "name": "Легенда. Береговые кварталы",
+    "address": "г. Москва, Ленинградское шоссе, вл. 63Г",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0515",
+    "canonical_no": 431,
+    "name": "Ленинградский проспект, 37Б",
+    "address": "Ленинградский проспект, 37Б",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0517",
+    "canonical_no": 432,
+    "name": "Ленинградское шоссе, 63Ас3",
+    "address": "Ленинградское шоссе, 63Ас3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0300",
+    "canonical_no": 433,
+    "name": "Ленинградское, 63А/1А",
+    "address": "Ленинградское, 63А/1А, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0302",
+    "canonical_no": 434,
+    "name": "Лобачевского, 118/6",
+    "address": "Лобачевского, 118/6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0303",
+    "canonical_no": 435,
+    "name": "Ломоносов-2",
+    "address": "Раменский бульвар, 1с1, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0755",
+    "canonical_no": 436,
+    "name": "Лофт Квартал Сколково (корпус 1)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0767",
+    "canonical_no": 437,
+    "name": "Лофт Квартал Сколково (корпус 10)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0750",
+    "canonical_no": 438,
+    "name": "Лофт Квартал Сколково (корпус 2)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0760",
+    "canonical_no": 439,
+    "name": "Лофт Квартал Сколково (корпус 3)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0765",
+    "canonical_no": 440,
+    "name": "Лофт Квартал Сколково (корпус 4)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0754",
+    "canonical_no": 441,
+    "name": "Лофт Квартал Сколково (корпус 5)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0761",
+    "canonical_no": 442,
+    "name": "Лофт Квартал Сколково (корпус 6)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0779",
+    "canonical_no": 443,
+    "name": "Лофт Квартал Сколково (корпус 7)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0764",
+    "canonical_no": 444,
+    "name": "Лофт Квартал Сколково (корпус 8)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0751",
+    "canonical_no": 445,
+    "name": "Лофт Квартал Сколково (корпус 9)",
+    "address": "ИЦ Сколково, ул. Зворыкина, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0567",
+    "canonical_no": 446,
+    "name": "Лофт-квартал в Сколково",
+    "address": "ул. Зворыкина, д. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0033",
+    "canonical_no": 447,
+    "name": "Лофт-квартал в Сколково, 1 к",
+    "address": "Сколково б-р Большой, д. 42",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0618",
+    "canonical_no": 448,
+    "name": "Лофт-квартал в Сколково, 1-2 к",
+    "address": "Сколково б-р Большой, д. 42",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0052",
+    "canonical_no": 449,
+    "name": "Лофт-квартал Сколково, 3-10 к",
+    "address": "Сколково б-р Большой, д. 42",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0519",
+    "canonical_no": 450,
+    "name": "Лужнецкая наб., вл. 6, стр. 1",
+    "address": "Лужнецкая наб., вл. 6, стр. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0164",
+    "canonical_no": 451,
+    "name": "Лужники Collection",
+    "address": "г. Москва, Лужнецкая наб., вл. 2/4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0366",
+    "canonical_no": 452,
+    "name": "Магистральная 12",
+    "address": "г. Москва, 5-я Магистральная ул., 4, стр. 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0522",
+    "canonical_no": 453,
+    "name": "Малая Сухаревская площадь, дом 5",
+    "address": "Малая Сухаревская площадь, дом 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0119",
+    "canonical_no": 454,
+    "name": "Мангазея (Б. Тульская, 10)",
+    "address": "Бол. Тульская ул., 10",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0402",
+    "canonical_no": 455,
+    "name": "Мангазея Крылатское",
+    "address": "рылатская улица, вл.14.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0304",
+    "canonical_no": 456,
+    "name": "Мангазея на Вятской улице",
+    "address": "Вятская ул., вл. 41",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0162",
+    "canonical_no": 457,
+    "name": "Мангазея на Речном",
+    "address": "г. Москва, шоссе Ленинградское, ЗУ 63А/1А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0674",
+    "canonical_no": 458,
+    "name": "Мангазея на Тульской",
+    "address": "Большая Тульская ул., 10с5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0386",
+    "canonical_no": 459,
+    "name": "Мангазея Северный порт",
+    "address": "Ленинградское, 63А/1А, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0686",
+    "canonical_no": 460,
+    "name": "Мануфактура Строгино",
+    "address": "ул. Маршала Прошлякова, 26с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0424",
+    "canonical_no": 461,
+    "name": "Мастерс",
+    "address": "Викторенко ул., уч.18/3А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0008",
+    "canonical_no": 462,
+    "name": "МГУ, Кластер \"Образовательный\"",
+    "address": "Раменский б-р., 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0660",
+    "canonical_no": 463,
+    "name": "Медиацентр НТВ",
+    "address": "Новомосковская ул., вл. 18-22",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0305",
+    "canonical_no": 464,
+    "name": "Международная, 11",
+    "address": "Москва, Международная ул., 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0306",
+    "canonical_no": 465,
+    "name": "Митьково грузовой двор",
+    "address": "Митьково грузовой двор",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0403",
+    "canonical_no": 466,
+    "name": "Мичуринский проспект, вл. 45",
+    "address": "Мичуринский проспект, вл. 45",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0434",
+    "canonical_no": 467,
+    "name": "Мневники Центр Инвест",
+    "address": "улица Нижние Мнёвники, соор1Ас1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0636",
+    "canonical_no": 468,
+    "name": "Многофункциональный комплекс ЗИЛ",
+    "address": "ул. Автозаводская, 23к15, стр. 85, стр. 310",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0688",
+    "canonical_no": 469,
+    "name": "Многофункциональный офисный комплекс",
+    "address": "ш. Энтузиастов. вл. 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0651",
+    "canonical_no": 470,
+    "name": "Многофункциональный офисный центр",
+    "address": "Ленинградское ш., уч. 63А/1А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0111",
+    "canonical_no": 471,
+    "name": "МФК Slava (5 очередь)",
+    "address": "улица Бутырский Вал, 5с2, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0096",
+    "canonical_no": 472,
+    "name": "МФК Strogino",
+    "address": "г. Москва, Строгино, проезд №607, влд. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0677",
+    "canonical_no": 473,
+    "name": "МФК АРМА (фаза II)",
+    "address": "Нижний Сусальный пер., 5Ас2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0307",
+    "canonical_no": 474,
+    "name": "МФК в Гольяново",
+    "address": "Амурская ул., вл. 15/1, ул. Бирюсинка, вл. 5,9, Иркутская ул., вл. 5/6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0308",
+    "canonical_no": 475,
+    "name": "МФК в Люблино",
+    "address": "Люблинская ул., Егорьевский проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0309",
+    "canonical_no": 476,
+    "name": "МФК в Марьино",
+    "address": "ул. Нижнее Поле",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0310",
+    "canonical_no": 477,
+    "name": "МФК в Отрадном",
+    "address": "Алтуфьевское ш., пересеч. ул. Декабристов",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0117",
+    "canonical_no": 478,
+    "name": "МФК Верейская",
+    "address": "ул. Верейская, ЗУ 29/32В",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0664",
+    "canonical_no": 479,
+    "name": "МФК Веткина",
+    "address": "ул. Веткина, вл.2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0106",
+    "canonical_no": 480,
+    "name": "МФК Мануфактура",
+    "address": "Строгино, пересечение МКАД (64-й км) и проезда №607",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0684",
+    "canonical_no": 481,
+    "name": "МФК Миклухо-Маклая",
+    "address": "ул. Миклухо-Маклая, 16/10",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0641",
+    "canonical_no": 482,
+    "name": "МФК на Малой Юшуньской",
+    "address": "Малая Юшуньская ул., 1к2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0311",
+    "canonical_no": 483,
+    "name": "МФК на проспекте Вернадского",
+    "address": "Москва, проспект Вернадского, вл. 6В",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0538",
+    "canonical_no": 484,
+    "name": "МФК на Тушинской",
+    "address": "Тушинская улица, 24с12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0312",
+    "canonical_no": 485,
+    "name": "МФК на Тушинской улице",
+    "address": "Тушинская, вл. 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0313",
+    "canonical_no": 486,
+    "name": "МФК на ул. Удальцова",
+    "address": "Москва, ул. Удальцова, 75А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0566",
+    "canonical_no": 487,
+    "name": "МФК Новатэк",
+    "address": "Ленинский проспект, вл. 90/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0633",
+    "canonical_no": 488,
+    "name": "МФК Парк Победы",
+    "address": "ул. Барклая, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0102",
+    "canonical_no": 489,
+    "name": "МФК Сатирикон",
+    "address": "Шереметьевская ул., д. 8а",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0043",
+    "canonical_no": 490,
+    "name": "МФК Сидней Сити",
+    "address": "Шеногина ул., земельный участок 2/11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0173",
+    "canonical_no": 491,
+    "name": "МФК Сити 20",
+    "address": "г. Москва, 1-й Красногвардейский пр-д, 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0108",
+    "canonical_no": 492,
+    "name": "МФК Тушинская",
+    "address": "ул. Тушинская, д. 22, д. 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0428",
+    "canonical_no": 493,
+    "name": "МФК у метро Университет",
+    "address": "Ломоносовский проспект, 23Ас1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0671",
+    "canonical_no": 494,
+    "name": "МФК Центральный Телеграф",
+    "address": "Тверская ул., 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0725",
+    "canonical_no": 495,
+    "name": "МФК Электролитный",
+    "address": "Электролитный пр-д, вл. 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0112",
+    "canonical_no": 496,
+    "name": "МФК Ямского Поля",
+    "address": "ул. 1-я ул. Ямского Поля, вл.12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0427",
+    "canonical_no": 497,
+    "name": "МЦК Ростокино",
+    "address": "проспект Мира, вл. 220А, улица Бажова, вл. 17, 28-30 и в Будайском проезде, вл. 11.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0063",
+    "canonical_no": 498,
+    "name": "На Полесском",
+    "address": "проезд Полесский, д. 16, стр 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0456",
+    "canonical_no": 499,
+    "name": "Нагатинская ул., вл. 34 стр. 2",
+    "address": "Нагатинская ул., вл. 34 стр. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0316",
+    "canonical_no": 500,
+    "name": "Нагорный проезд, вл. 3",
+    "address": "г. Москва, Нагорный проезд, вл. 3.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0160",
+    "canonical_no": 501,
+    "name": "Наметкина, 14",
+    "address": "г. Москва, ул. Наметкина, 14",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0627",
+    "canonical_no": 502,
+    "name": "Национальный космический центр",
+    "address": "г. Москва, ул. Большая Филевская, 20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0178",
+    "canonical_no": 503,
+    "name": "Неверовского, вл. 10",
+    "address": "г. Москва, ул. Неверовского, вл. 10",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0317",
+    "canonical_no": 504,
+    "name": "Неверовского, вл. 9",
+    "address": "Неверовского, вл. 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0059",
+    "canonical_no": 505,
+    "name": "Невский Плаза",
+    "address": "Выборгская ул., 18",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0773",
+    "canonical_no": 506,
+    "name": "Нега",
+    "address": "Хохловский пер., 13с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0546",
+    "canonical_no": 507,
+    "name": "Нижние Мневники",
+    "address": "улица Нижние Мнёвники, 36с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0318",
+    "canonical_no": 508,
+    "name": "Нижние Мневники, 20",
+    "address": "Нижние Мневники, 20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0447",
+    "canonical_no": 509,
+    "name": "Нижний Журавлёв переулок, вл8",
+    "address": "Нижний Журавлёв переулок, вл8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0159",
+    "canonical_no": 510,
+    "name": "Нижняя Масловка, 3",
+    "address": "г. Москва,ул. Нижняя Масловка, 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0457",
+    "canonical_no": 511,
+    "name": "Новаторов ул., вл. 15",
+    "address": "Новаторов ул., вл. 15",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0588",
+    "canonical_no": 512,
+    "name": "Новорязанская ул., 8A, стр. 2",
+    "address": "Новорязанская ул., 8A, стр. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0319",
+    "canonical_no": 513,
+    "name": "Новослободская, 55, стр. 1",
+    "address": "Новослободская, 55 стр. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0320",
+    "canonical_no": 514,
+    "name": "Новоясеневский, 5-13",
+    "address": "Новоясеневский, 5-13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0321",
+    "canonical_no": 515,
+    "name": "Новые решения",
+    "address": "Александры Монаховой, 46Ж",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0030",
+    "canonical_no": 516,
+    "name": "Ньютон Плаза 2",
+    "address": "Нагатинский 1-й проезд, д. 10, стр. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0628",
+    "canonical_no": 517,
+    "name": "Общественно-деловой комплекс",
+    "address": "Кавказский б-р, вл. 54",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0658",
+    "canonical_no": 518,
+    "name": "Общественно-деловой комплекс на Молдавской",
+    "address": "Молдавская ул., вл. 3-5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0583",
+    "canonical_no": 519,
+    "name": "Овчинниковская наб.",
+    "address": "Овчинниковская наб., 18/1, стр. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0322",
+    "canonical_no": 520,
+    "name": "Огородный проезд",
+    "address": "Огородный проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0467",
+    "canonical_no": 521,
+    "name": "Огородный проезд, 6-12",
+    "address": "Огородный проезд, 6-12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0707",
+    "canonical_no": 522,
+    "name": "ООО Марьина роща",
+    "address": "2-я Ямская ул., 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0600",
+    "canonical_no": 523,
+    "name": "Орбитал",
+    "address": "3-я Магистральная ул., 10",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0324",
+    "canonical_no": 524,
+    "name": "Основа АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 150",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0568",
+    "canonical_no": 525,
+    "name": "Останкино 2",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0005",
+    "canonical_no": 526,
+    "name": "Останкино бизнес-парк, 4 корпус",
+    "address": "Огородный пр-д., 16, стр., 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0007",
+    "canonical_no": 527,
+    "name": "Останкино бизнес-парк, 5 корпус",
+    "address": "Огородный пр-д., 16, стр., 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0582",
+    "canonical_no": 528,
+    "name": "Останкино фаза 1",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0610",
+    "canonical_no": 529,
+    "name": "Останкино фаза 1 (2,3 корпус)",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0612",
+    "canonical_no": 530,
+    "name": "Останкино фаза 2 (4,5 корпус)",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0029",
+    "canonical_no": 531,
+    "name": "Останкино фаза 3 (6 корпус)",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0620",
+    "canonical_no": 532,
+    "name": "Останкино фаза 4 (1 корпус)",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0055",
+    "canonical_no": 533,
+    "name": "Останкино, Фаза IV (1 корпус)",
+    "address": "Огородный пр-д, вл.16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0497",
+    "canonical_no": 534,
+    "name": "Офис Газпромабанка",
+    "address": "3-й Добрынинский, 4/2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0141",
+    "canonical_no": 535,
+    "name": "Офис на ул. Менжинского",
+    "address": "г. Москва, Менжинского ул.,",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0146",
+    "canonical_no": 536,
+    "name": "Офисно-складской комплекс на 60-летия Октября",
+    "address": "г. Москва, проспект 60-летия Октября, 11Ас5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0644",
+    "canonical_no": 537,
+    "name": "Офисно-спортивный комплекс",
+    "address": "ул. Нижние Мнёвники",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0156",
+    "canonical_no": 538,
+    "name": "Офисный комплекс в Мневниковской пойме",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0673",
+    "canonical_no": 539,
+    "name": "Офисный комплекс Кожуховский",
+    "address": "2-й Кожуховский пр-д, д.29, к2с16",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0148",
+    "canonical_no": 540,
+    "name": "Офисный комплекс на Даниловской наб.",
+    "address": "г. Москва, Даниловская набережная, вл. 8, стр. 14.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0700",
+    "canonical_no": 541,
+    "name": "Офисный комплекс на Зацепа 21",
+    "address": "ул. Зацепа, 21",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0448",
+    "canonical_no": 542,
+    "name": "офисный центр в Мневниковской пойме",
+    "address": "Мневниковская пойма",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0630",
+    "canonical_no": 543,
+    "name": "Офисный центр Новая Ипатовка",
+    "address": "ул. Новая Ипатовка, вл. 23А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0325",
+    "canonical_no": 544,
+    "name": "Очаковское, 40",
+    "address": "г. Москва, Очаковское, 40",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0509",
+    "canonical_no": 545,
+    "name": "Павелецкая Сити",
+    "address": "Дубининская, 55",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0326",
+    "canonical_no": 546,
+    "name": "Павелецкий грузовой двор",
+    "address": "Грузовой двор Москва-Товарная-Павелецкая",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0524",
+    "canonical_no": 547,
+    "name": "Павловская, 18с2",
+    "address": "Павловская, 18с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0013",
+    "canonical_no": 548,
+    "name": "Пангея",
+    "address": "Сергея Радонежского ул., 15-17, стр., 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0711",
+    "canonical_no": 549,
+    "name": "Парк Легенд (корпус 1)",
+    "address": "Автозаводская ул., 23Ак2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0748",
+    "canonical_no": 550,
+    "name": "Парк Легенд (корпус 2)",
+    "address": "Автозаводская ул., 23Ак2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0695",
+    "canonical_no": 551,
+    "name": "Парк Легенд (корпус 3)",
+    "address": "Автозаводская ул., 23Ак2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0778",
+    "canonical_no": 552,
+    "name": "Парк Легенд (корпус 4)",
+    "address": "Автозаводская ул., 23Ак2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0022",
+    "canonical_no": 553,
+    "name": "Парк Легенд В",
+    "address": "Автозаводская улица,23,корп. 15",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0001",
+    "canonical_no": 554,
+    "name": "Парк Легенд, А",
+    "address": "Лихачева пр-т., 15",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0125",
+    "canonical_no": 555,
+    "name": "Парк Победы",
+    "address": "г. Москва, улица Барклая, вл. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0327",
+    "canonical_no": 556,
+    "name": "пер. Вознесенский,6/3",
+    "address": "пер. Вознесенский,6/3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0525",
+    "canonical_no": 557,
+    "name": "Переведеновский переулок, 13, строения 11, 12",
+    "address": "Переведеновский переулок, 13, строения 11, 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0157",
+    "canonical_no": 558,
+    "name": "Поклонная, 5",
+    "address": "г. Москва, ул. Поклонная, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0452",
+    "canonical_no": 559,
+    "name": "Полбина 21",
+    "address": "улица Полбина, вл21",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0328",
+    "canonical_no": 560,
+    "name": "Поле",
+    "address": "Ленинградский просп., 37Б, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0451",
+    "canonical_no": 561,
+    "name": "Порт Савеловск",
+    "address": "ул. Сущевский Вал, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0382",
+    "canonical_no": 562,
+    "name": "пр-д Духовской, 17/4",
+    "address": "пр-д Духовской, 17/4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0440",
+    "canonical_no": 563,
+    "name": "пр-кт Ленинградский, 47",
+    "address": "пр-кт Ленинградский, 47",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0409",
+    "canonical_no": 564,
+    "name": "пр-кт Мира, 82-92",
+    "address": "пр-кт Мира, 82-92",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0461",
+    "canonical_no": 565,
+    "name": "пр-т Вернадского, 97",
+    "address": "пр-т Вернадского, 97",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0400",
+    "canonical_no": 566,
+    "name": "пр-т Волгоградский, 32",
+    "address": "пр-т Волгоградский, 32",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0431",
+    "canonical_no": 567,
+    "name": "проезд Добролюбова, 13",
+    "address": "проезд Добролюбова, 13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0528",
+    "canonical_no": 568,
+    "name": "Прокшино",
+    "address": "поселении Сосенское",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0329",
+    "canonical_no": 569,
+    "name": "Пролетарский проспект, вл. 20",
+    "address": "Пролетарский проспект, вл. 20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0330",
+    "canonical_no": 570,
+    "name": "Промышленный проезд, вл. 7",
+    "address": "Промышленный проезд, вл. 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0504",
+    "canonical_no": 571,
+    "name": "проспект Вернадского",
+    "address": "Вернадского, вл. 6В.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0468",
+    "canonical_no": 572,
+    "name": "Профсоюзная, 4-12",
+    "address": "Профсоюзная, 4-12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0559",
+    "canonical_no": 573,
+    "name": "Пятницкая ул., вл. 40",
+    "address": "Пятницкая ул., вл. 40",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0331",
+    "canonical_no": 574,
+    "name": "Раздельная, 10С1",
+    "address": "Раздельная, 10С1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0368",
+    "canonical_no": 575,
+    "name": "Раменки",
+    "address": "г. Москва, ул. Лобачевского, 114",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0089",
+    "canonical_no": 576,
+    "name": "Рассвет к.1",
+    "address": "Столярный пер., д. 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0332",
+    "canonical_no": 577,
+    "name": "Расцветай АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 150",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0466",
+    "canonical_no": 578,
+    "name": "Расцветай Магистральная 9ас4",
+    "address": "ул. Магистральная 9Ас4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0175",
+    "canonical_no": 579,
+    "name": "Ре:Порт",
+    "address": "г. Москва, шоссе Ленинградское, ЗУ 63А/3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0753",
+    "canonical_no": 580,
+    "name": "Ривер Парк Коломенское (корпус 12, секции 1, 2)",
+    "address": "ул. Речников, зу 7/3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0713",
+    "canonical_no": 581,
+    "name": "Ривер Парк Коломенское (корпус 14, секция 1)",
+    "address": "ул. Речников, зу 7/7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0714",
+    "canonical_no": 582,
+    "name": "Ривер Парк Коломенское (корпус 14, секция 2)",
+    "address": "ул. Речников, зу 7/7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0724",
+    "canonical_no": 583,
+    "name": "Ривер Парк Коломенское (корпус 7, секция 1)",
+    "address": "ул. Речников, зу 7/8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0723",
+    "canonical_no": 584,
+    "name": "Ривер Парк Коломенское (корпус 7, секция 2)",
+    "address": "ул. Речников, зу 7/8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0333",
+    "canonical_no": 585,
+    "name": "Рижский грузовой двор",
+    "address": "г. Москва, улица Сущёвский Вал",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0708",
+    "canonical_no": 586,
+    "name": "Родина Переделкино",
+    "address": "Боровское ш., вл. 51",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0404",
+    "canonical_no": 587,
+    "name": "Родина Серебрякова, вл. 2",
+    "address": "Серебрякова, вл. 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0036",
+    "canonical_no": 588,
+    "name": "Роскосмос",
+    "address": "Новозаводская улица, 18с255",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0632",
+    "canonical_no": 589,
+    "name": "Ростех-Сити (2-я оч.)",
+    "address": "ул. Летная, 95Б",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0110",
+    "canonical_no": 590,
+    "name": "РостехСити2",
+    "address": "Волоколамское шоссе, 75",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0041",
+    "canonical_no": 591,
+    "name": "Рублево БП",
+    "address": "Липовой Рощи ул., д. 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0458",
+    "canonical_no": 592,
+    "name": "Рябиновая ул., вл. 38А",
+    "address": "Рябиновая ул., вл. 38А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0068",
+    "canonical_no": 593,
+    "name": "Рябушинский",
+    "address": "ул. Тимура Фрунзе, д. 11, стр. 44",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0334",
+    "canonical_no": 594,
+    "name": "Савеловский грузовой двор",
+    "address": "грузовой двор Москва-Бутырская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0335",
+    "canonical_no": 595,
+    "name": "Сакко и Ванцетти",
+    "address": "Кутузовский проспект, вл. 12, 14а",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0336",
+    "canonical_no": 596,
+    "name": "Самолет АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 151",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0071",
+    "canonical_no": 597,
+    "name": "СберСити (А22)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А22",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0072",
+    "canonical_no": 598,
+    "name": "СберСити (А23)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А23",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0070",
+    "canonical_no": 599,
+    "name": "СберСити (А24)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0098",
+    "canonical_no": 600,
+    "name": "СберСити (А25)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А25",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0172",
+    "canonical_no": 601,
+    "name": "СберСити (А26)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А26",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0337",
+    "canonical_no": 602,
+    "name": "Сберсити (А27)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А27",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0171",
+    "canonical_no": 603,
+    "name": "СберСити (А31)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А31",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0338",
+    "canonical_no": 604,
+    "name": "Светлый проезд, вл. 4",
+    "address": "Светлый проезд, вл. 4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0048",
+    "canonical_no": 605,
+    "name": "Север",
+    "address": "Ленинградский проспект, д . 36, к. 13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0339",
+    "canonical_no": 606,
+    "name": "Север.Сити",
+    "address": "улица Антонова-Овсеенко, вл. 13-15",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0726",
+    "canonical_no": 607,
+    "name": "Северный порт",
+    "address": "Ленинградское шоссе, 63с7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0518",
+    "canonical_no": 608,
+    "name": "Северный порт. Береговые кварталы",
+    "address": "Ленинградское шоссе, 63с6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0530",
+    "canonical_no": 609,
+    "name": "Северный речной порт",
+    "address": "Ленинградское ш., 63Ас3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0435",
+    "canonical_no": 610,
+    "name": "Сельскохозяйственная, 30/1",
+    "address": "Сельскохозяйственная, 30/1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0430",
+    "canonical_no": 611,
+    "name": "Симоновский",
+    "address": "улица Ленинская Слобода, 26с35",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0531",
+    "canonical_no": 612,
+    "name": "Синельниковская улица",
+    "address": "Синельниковская улица",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0675",
+    "canonical_no": 613,
+    "name": "Сиреневый парк",
+    "address": "ул. Тагильская, 4А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0077",
+    "canonical_no": 614,
+    "name": "Сиреневый Парк (МФК)",
+    "address": "Тагильская улица, 4с15",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0473",
+    "canonical_no": 615,
+    "name": "Сити девелопмент АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 151, ул. Сосенский Стан,10/18К",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0140",
+    "canonical_no": 616,
+    "name": "Сити-2",
+    "address": "г. Москва, 2-й Красногвардейский проезд, 6Б",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0423",
+    "canonical_no": 617,
+    "name": "Сити-2 лот 5 Центринвест",
+    "address": "ул. Антонова-Овсеенко, вл.13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0536",
+    "canonical_no": 618,
+    "name": "Скайбург",
+    "address": "Территория инновационного центра Сколково",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0532",
+    "canonical_no": 619,
+    "name": "Складочная улица, 6к2",
+    "address": "Складочная улица, 6к2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0564",
+    "canonical_no": 620,
+    "name": "сколково",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0026",
+    "canonical_no": 621,
+    "name": "Сколково парк (фаза 1), 1 и 2 корпус",
+    "address": "Поселок Заречье, ул. Весенняя, 2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0484",
+    "canonical_no": 622,
+    "name": "Смирновская, 10",
+    "address": "Смирновская ул., 10, стр. 2,",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0479",
+    "canonical_no": 623,
+    "name": "Сокольники БЦ",
+    "address": "1-я Рыбинская ул., вл. 1а",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0446",
+    "canonical_no": 624,
+    "name": "Солнце",
+    "address": "Старопетровский проезд, 7А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0342",
+    "canonical_no": 625,
+    "name": "Спелое солнце АДЦ Коммунарка",
+    "address": "Коммунарка, квартал 150",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0437",
+    "canonical_no": 626,
+    "name": "Среда Варшавская",
+    "address": "1-й Варшавский проезд, вл. 1А, стр. 31, 32, 33",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0161",
+    "canonical_no": 627,
+    "name": "Станколит",
+    "address": "г. Москва, ул. Складочная, 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0343",
+    "canonical_no": 628,
+    "name": "Старые Сосёнки, квартал 30",
+    "address": "Старые Сосёнки, квартал 30",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0416",
+    "canonical_no": 629,
+    "name": "Стекло",
+    "address": "Душинская улица, 7с1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0344",
+    "canonical_no": 630,
+    "name": "Страна Заречная",
+    "address": "Иловайская, 3А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0345",
+    "canonical_no": 631,
+    "name": "Страна.Сити",
+    "address": "ул. Антона Овсиенко",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0120",
+    "canonical_no": 632,
+    "name": "Строгино Сити",
+    "address": "улица Маршала Прошлякова, 21",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0385",
+    "canonical_no": 633,
+    "name": "Сумма элементов Академика Пилюгина, д. 24",
+    "address": "улица Академика Пилюгина, д. 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0383",
+    "canonical_no": 634,
+    "name": "Сумма элементов Вавилова",
+    "address": "г. Москва, ул. Вавилова, вл. 9А, стр. 3, 11, 19, 20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0346",
+    "canonical_no": 635,
+    "name": "Сумма Элементов ул. Лобачевского 138",
+    "address": "г. Москва, ул. Лобачевского, 138",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0412",
+    "canonical_no": 636,
+    "name": "Сущевский Вал, 31",
+    "address": "Сущевский Вал, 31",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0533",
+    "canonical_no": 637,
+    "name": "Сходненский тупик, вл.16-20",
+    "address": "Сходненский тупик, вл.16-20",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0534",
+    "canonical_no": 638,
+    "name": "Сходненский тупик. вл. 1.",
+    "address": "Сходненский тупик. вл. 1.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0407",
+    "canonical_no": 639,
+    "name": "Талалихина, 41",
+    "address": "Талалихина, 41",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0477",
+    "canonical_no": 640,
+    "name": "Тверская, 24",
+    "address": "Тверская, 24",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0459",
+    "canonical_no": 641,
+    "name": "Текстильщиков 8-я ул., вл. 8",
+    "address": "Текстильщиков 8-я ул., вл. 8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0348",
+    "canonical_no": 642,
+    "name": "Территория регбийного стадиона «Фили»",
+    "address": null,
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0537",
+    "canonical_no": 643,
+    "name": "Территория спортивного комплекса \"Лужники\"",
+    "address": "Территория спортивного комплекса \"Лужники\"",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0349",
+    "canonical_no": 644,
+    "name": "Техногород",
+    "address": "Москва, Волгоградский проспект, 42к8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0396",
+    "canonical_no": 645,
+    "name": "Техногород (один корпус)",
+    "address": "Москва, Волгоградский проспект, 42к8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0376",
+    "canonical_no": 646,
+    "name": "Техногород (оставшиеся корпуса)",
+    "address": "Москва, Волгоградский проспект, 42к8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0144",
+    "canonical_no": 647,
+    "name": "Технопарк \"Алкон Север\"",
+    "address": "г. Москва, 3-й Балтийский пер., вл. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0657",
+    "canonical_no": 648,
+    "name": "Технопарк ЗИЛ А",
+    "address": "Автозаводская ул., 23с85",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0712",
+    "canonical_no": 649,
+    "name": "Технопарк ЗИЛ Б",
+    "address": "пр-кт Лихачёва, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0057",
+    "canonical_no": 650,
+    "name": "Технопарк ЗИЛ, (А1 и А2)",
+    "address": "Автозаводская улица, 23с84",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0027",
+    "canonical_no": 651,
+    "name": "Технопарк ЗИЛ, фаза I",
+    "address": "Автозаводская улица,23,стр. 86",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0351",
+    "canonical_no": 652,
+    "name": "Технопарк Ижорский",
+    "address": "Ижорская ул., вл. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0352",
+    "canonical_no": 653,
+    "name": "Технопарк НТВ",
+    "address": "г. Москва, Новомосковская ул., д.12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0480",
+    "canonical_no": 654,
+    "name": "Технопарк Октябрьское поле",
+    "address": "ул. Берзарина, 32с4",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0169",
+    "canonical_no": 655,
+    "name": "Технопарк ПАО Сбербанк",
+    "address": "г. Москва, ул. Нобеля, 1, 73",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0491",
+    "canonical_no": 656,
+    "name": "Технопарк Плеханово",
+    "address": "2-ой проезд Перова Поля, вл. 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0561",
+    "canonical_no": 657,
+    "name": "Технопарк Ростех",
+    "address": "Старопетровский проезд",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0353",
+    "canonical_no": 658,
+    "name": "Технопарк Электрозавод",
+    "address": "ул. Электрозаводская, 21",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0354",
+    "canonical_no": 659,
+    "name": "Технополис Москва (корп. 13)",
+    "address": "пр-кт Волгоградский, 42к13",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0355",
+    "canonical_no": 660,
+    "name": "Технополис Москва (штаб-квартира Трансмашхолдинг)",
+    "address": "г. Москва, Волгоградский проспект, 42, корп. 8",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0356",
+    "canonical_no": 661,
+    "name": "ТПУ «Суворовская»",
+    "address": "ул. Дурова, 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0462",
+    "canonical_no": 662,
+    "name": "ТПУ Ильинское",
+    "address": "Г. МОСКВА, НОВОРИЖСКОЕ ШОССЕ 22КМ",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0465",
+    "canonical_no": 663,
+    "name": "ТПУ Кленовый бульвар",
+    "address": "бульвар Кленовый",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0631",
+    "canonical_no": 664,
+    "name": "ТПУ Минская",
+    "address": "м. Минская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0463",
+    "canonical_no": 665,
+    "name": "ТПУ Народное Ополчение",
+    "address": "пр-т Маршала Жукова, 24А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0464",
+    "canonical_no": 666,
+    "name": "ТПУ Остров Мечты",
+    "address": "пр-т Андропова",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0643",
+    "canonical_no": 667,
+    "name": "ТПУ Петрово-Разумовская",
+    "address": "Валаамская ул.",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0676",
+    "canonical_no": 668,
+    "name": "ТПУ Рязанская",
+    "address": "Нижегородский район",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0523",
+    "canonical_no": 669,
+    "name": "ТПУ Рязанский",
+    "address": "Москва, Нижегородский район, Рязанский пр-т",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0393",
+    "canonical_no": 670,
+    "name": "Триумфальная арка",
+    "address": "улица Гашека, 12с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0642",
+    "canonical_no": 671,
+    "name": "ул. Ермакова Роща, 7",
+    "address": "ул. Ермакова Роща, 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0449",
+    "canonical_no": 672,
+    "name": "ул. Лобачевского",
+    "address": "ул. Лобачевского",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0539",
+    "canonical_no": 673,
+    "name": "ул. Молдавская, участок 1",
+    "address": "ул. Молдавская, участок 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0540",
+    "canonical_no": 674,
+    "name": "ул. Перовская, вл. 66Е",
+    "address": "ул. Перовская, вл. 66Е",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0401",
+    "canonical_no": 675,
+    "name": "ул. Складочная, 5",
+    "address": "ул. Складочная, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0358",
+    "canonical_no": 676,
+    "name": "улица Бутырский Вал, 5с2",
+    "address": "улица Бутырский Вал, 5с2, Москва",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0544",
+    "canonical_no": 677,
+    "name": "улица Вавилова, 21",
+    "address": "улица Вавилова, 21",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0439",
+    "canonical_no": 678,
+    "name": "улица Кульнева, 6",
+    "address": "улица Кульнева, 6",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0180",
+    "canonical_no": 679,
+    "name": "улица Лобачевского, 138",
+    "address": "г. Москва, ул. Лобачевского, 138",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0547",
+    "canonical_no": 680,
+    "name": "улица Подольская, владение 22",
+    "address": "улица Подольская, владение 22",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0549",
+    "canonical_no": 681,
+    "name": "улица Радио",
+    "address": "улица Радио",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0551",
+    "canonical_no": 682,
+    "name": "улица Серёгина, 5",
+    "address": "улица Серёгина, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0552",
+    "canonical_no": 683,
+    "name": "улица Улофа Пальме, вл. 5",
+    "address": "улица Улофа Пальме, вл. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0359",
+    "canonical_no": 684,
+    "name": "Фабрика Станиславского Space 1",
+    "address": "улица Станиславского, 21с3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0410",
+    "canonical_no": 685,
+    "name": "Фабрициуса, 19А",
+    "address": "Фабрициуса, 19А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0734",
+    "canonical_no": 686,
+    "name": "Фактория",
+    "address": "Вятская ул., 27с11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0426",
+    "canonical_no": 687,
+    "name": "Феномен города",
+    "address": "ул. Минская",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0483",
+    "canonical_no": 688,
+    "name": "ФизтехСити",
+    "address": "Москва, ул. Новодачная",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0647",
+    "canonical_no": 689,
+    "name": "Фили",
+    "address": "Промышленный пр-д, 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0554",
+    "canonical_no": 690,
+    "name": "Ходынская улица, вл. 2, стр. 9",
+    "address": "Ходынская улица, вл. 2, стр. 9",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0470",
+    "canonical_no": 691,
+    "name": "Хорошевское ш., 38",
+    "address": "Хорошевское ш., 38",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0078",
+    "canonical_no": 692,
+    "name": "Центральный Телеграф",
+    "address": "Тверская, 7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0361",
+    "canonical_no": 693,
+    "name": "Шант билдинг",
+    "address": "1-й Щемиловский переулок, 16с2",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0444",
+    "canonical_no": 694,
+    "name": "Шипиловский пр-д, вл. 55",
+    "address": "Шипиловский пр-д, вл. 55",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0362",
+    "canonical_no": 695,
+    "name": "Шмитовский проезд, влад. 32, 32А",
+    "address": "Шмитовский проезд, влад. 32, 32А",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0557",
+    "canonical_no": 696,
+    "name": "шоссе Энтузиастов, вл. 12",
+    "address": "шоссе Энтузиастов, вл. 12",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0130",
+    "canonical_no": 697,
+    "name": "Штаб-квартира Мосинжпроекта",
+    "address": "ТПУ Карамышевская (Народное Ополчение)",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0170",
+    "canonical_no": 698,
+    "name": "Штаб-квартира Сбера и компаний-партнеров (А27)",
+    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А27",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0038",
+    "canonical_no": 699,
+    "name": "Штаб-квартира Яндекса",
+    "address": "Академика Зельдовича ул., 1",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0445",
+    "canonical_no": 700,
+    "name": "Электролитный проезд, вл. 1, к. 5",
+    "address": "Электролитный проезд, вл. 1, к. 5",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0471",
+    "canonical_no": 701,
+    "name": "Электроника на Пресне",
+    "address": "ул. Большая Декабрьская, вл. 3",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0569",
+    "canonical_no": 702,
+    "name": "Эталон/Андропова (Нагатино i-Land)",
+    "address": "Андропова проспект,182",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0625",
+    "canonical_no": 703,
+    "name": "Южный Речной Порт",
+    "address": "Проспект Андропова,д.11 корп. 4,5,6,7",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0135",
+    "canonical_no": 704,
+    "name": "Южный2 речной вокзал",
+    "address": "г. Москва, проспект Андропова, 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-0365",
+    "canonical_no": 705,
+    "name": "Юпорт",
+    "address": "г. Москва, проспект Андропова, 11",
+    "status": "excluded_from_quarterly_layer",
+    "reason": "no active quarterly market_channel"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-001",
+    "canonical_no": 706,
+    "name": "River Park Коломенское",
+    "address": "ул. Корабельная, 3А",
+    "status": "exact_match",
+    "matched_project_id": "proj-279",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-002",
+    "canonical_no": 707,
+    "name": "Прайм Тайм",
+    "address": "Викторенко ул., д. 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-104",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-003",
+    "canonical_no": 708,
+    "name": "Королёв (Рассвет)",
+    "address": "Столярный пер., 3 корп. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-98",
+    "match_basis": "name+address+corpus",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-004",
+    "canonical_no": 709,
+    "name": "Top Tower",
+    "address": "Москва, Шепелихинский тупик, 17/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-204",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-005",
+    "canonical_no": 710,
+    "name": "Плэйн (бывший — Workplace Авиационная)",
+    "address": "Москва, ул. Авиационная, 22",
+    "status": "exact_match",
+    "matched_project_id": "proj-273",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-006",
+    "canonical_no": 711,
+    "name": "Plaza Technopark",
+    "address": "г. Москва, Даниловский р-н, Андропова пр-кт, влд 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-85",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-007",
+    "canonical_no": 712,
+    "name": "Porta Forma",
+    "address": "Заречная ул, 2/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-86",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-008",
+    "canonical_no": 713,
+    "name": "STONE Towers, Tower A",
+    "address": "г. Москва, Бумажный проезд, 19с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-88",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-009",
+    "canonical_no": 714,
+    "name": "Минто (бывший — Workplace Волоколамское)",
+    "address": "Москва, Волоколамское шоссе, 32",
+    "status": "exact_match",
+    "matched_project_id": "proj-214",
+    "match_basis": "name+address",
+    "coord_corroborated": true
+  }
+]

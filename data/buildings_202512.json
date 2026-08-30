@@ -20,7 +20,8 @@
     "lng": 37.537524,
     "id": 106,
     "name_orig": "AFI Парк Воронцовский",
-    "lots": 28
+    "lots": 28,
+    "unified_id": null
   },
   {
     "name": "AFI2B Tagilskaya",
@@ -43,7 +44,8 @@
     "lng": 37.752868,
     "id": 108,
     "name_orig": "AFI2B Tagilskaya",
-    "lots": 26
+    "lots": 26,
+    "unified_id": null
   },
   {
     "name": "Ahead",
@@ -66,7 +68,8 @@
     "lng": 37.492262,
     "id": 109,
     "name_orig": "Ahead",
-    "lots": 35
+    "lots": 35,
+    "unified_id": "UC-OBJ-0061"
   },
   {
     "name": "Air",
@@ -89,7 +92,8 @@
     "lng": 37.530992,
     "id": 112,
     "name_orig": "Air",
-    "lots": 72
+    "lots": 72,
+    "unified_id": null
   },
   {
     "name": "ASPACE Хорошевская",
@@ -112,7 +116,8 @@
     "lng": 37.514383,
     "id": 113,
     "name_orig": "ASPACE Хорошевская",
-    "lots": 3
+    "lots": 3,
+    "unified_id": null
   },
   {
     "name": "Avium",
@@ -135,7 +140,8 @@
     "lng": 37.502938,
     "id": 115,
     "name_orig": "Avium",
-    "lots": 33
+    "lots": 33,
+    "unified_id": null
   },
   {
     "name": "Bell",
@@ -158,7 +164,8 @@
     "lng": 37.584241,
     "id": 117,
     "name_orig": "Bell",
-    "lots": 27
+    "lots": 27,
+    "unified_id": "UC-OBJ-0149"
   },
   {
     "name": "Dream Riva",
@@ -181,7 +188,8 @@
     "lng": 37.66384028259566,
     "id": 276,
     "name_orig": "Dream Riva",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Edel",
@@ -204,7 +212,8 @@
     "lng": 37.60885,
     "id": 120,
     "name_orig": "Edel",
-    "lots": 37
+    "lots": 37,
+    "unified_id": null
   },
   {
     "name": "Fili Centre",
@@ -227,7 +236,8 @@
     "lng": 37.509505,
     "id": 122,
     "name_orig": "Fili Centre",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Fili residence",
@@ -250,7 +260,8 @@
     "lng": 37.494252,
     "id": 124,
     "name_orig": "Fili residence",
-    "lots": 3
+    "lots": 3,
+    "unified_id": null
   },
   {
     "name": "Frame",
@@ -273,7 +284,8 @@
     "lng": 37.575982,
     "id": 126,
     "name_orig": "Frame",
-    "lots": 3
+    "lots": 3,
+    "unified_id": null
   },
   {
     "name": "Geolog 2",
@@ -296,7 +308,8 @@
     "lng": 37.530139,
     "id": 128,
     "name_orig": "Geolog 2",
-    "lots": 15
+    "lots": 15,
+    "unified_id": null
   },
   {
     "name": "iCITY (Space)",
@@ -319,7 +332,8 @@
     "lng": 37.530139,
     "id": 129,
     "name_orig": "iCITY (Space)",
-    "lots": 19
+    "lots": 19,
+    "unified_id": null
   },
   {
     "name": "Jenga",
@@ -342,7 +356,8 @@
     "lng": 37.458295,
     "id": 132,
     "name_orig": "Jenga",
-    "lots": 116
+    "lots": 116,
+    "unified_id": null
   },
   {
     "name": "Jois",
@@ -365,7 +380,8 @@
     "lng": 37.507519,
     "id": 134,
     "name_orig": "Jois",
-    "lots": 94
+    "lots": 94,
+    "unified_id": "UC-OBJ-0113"
   },
   {
     "name": "K-city",
@@ -388,7 +404,8 @@
     "lng": 37.678361,
     "id": 136,
     "name_orig": "K-city",
-    "lots": 24
+    "lots": 24,
+    "unified_id": null
   },
   {
     "name": "Upside Кунцево",
@@ -411,7 +428,8 @@
     "lng": 37.44321,
     "id": 138,
     "name_orig": "Upside Кунцево",
-    "lots": 32
+    "lots": 32,
+    "unified_id": "UC-OBJ-0050"
   },
   {
     "name": "Lakes",
@@ -434,7 +452,8 @@
     "lng": 37.443768,
     "id": 77,
     "name_orig": "Lakes",
-    "lots": 3
+    "lots": 3,
+    "unified_id": "UC-OBJ-0054"
   },
   {
     "name": "Lakes 2",
@@ -457,7 +476,8 @@
     "lng": 37.441723,
     "id": 139,
     "name_orig": "Lakes 2",
-    "lots": 54
+    "lots": 54,
+    "unified_id": null
   },
   {
     "name": "Lavin",
@@ -480,7 +500,8 @@
     "lng": 37.543192,
     "id": 141,
     "name_orig": "Lavin",
-    "lots": 38
+    "lots": 38,
+    "unified_id": null
   },
   {
     "name": "Level Воронцовская",
@@ -503,7 +524,8 @@
     "lng": 37.535628,
     "id": 144,
     "name_orig": "Level Воронцовская",
-    "lots": 42
+    "lots": 42,
+    "unified_id": null
   },
   {
     "name": "Level Южнопортовая",
@@ -526,7 +548,8 @@
     "lng": 37.698196,
     "id": 146,
     "name_orig": "Level Южнопортовая",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Light City",
@@ -549,7 +572,8 @@
     "lng": 37.531092,
     "id": 147,
     "name_orig": "Light City",
-    "lots": 58
+    "lots": 58,
+    "unified_id": "UC-OBJ-0099"
   },
   {
     "name": "Link",
@@ -572,7 +596,8 @@
     "lng": 37.435127,
     "id": 150,
     "name_orig": "Link",
-    "lots": 122
+    "lots": 122,
+    "unified_id": null
   },
   {
     "name": "Lunar модуль В",
@@ -595,7 +620,8 @@
     "lng": 37.572207,
     "id": 80,
     "name_orig": "Lunar модуль В",
-    "lots": 2
+    "lots": 2,
+    "unified_id": null
   },
   {
     "name": "Mind",
@@ -618,7 +644,8 @@
     "lng": 37.548376,
     "id": 152,
     "name_orig": "Mind",
-    "lots": 31
+    "lots": 31,
+    "unified_id": null
   },
   {
     "name": "Mount",
@@ -641,7 +668,8 @@
     "lng": 37.407555,
     "id": 153,
     "name_orig": "Mount",
-    "lots": 33
+    "lots": 33,
+    "unified_id": null
   },
   {
     "name": "Nevsky Plaza",
@@ -664,7 +692,8 @@
     "lng": 37.49683,
     "id": 155,
     "name_orig": "Nevsky Plaza",
-    "lots": 68
+    "lots": 68,
+    "unified_id": null
   },
   {
     "name": "Солид (бывший — Nice Tower)",
@@ -687,7 +716,8 @@
     "lng": 37.694423,
     "id": 158,
     "name_orig": "Солид (бывший — Nice Tower)",
-    "lots": 24
+    "lots": 24,
+    "unified_id": null
   },
   {
     "name": "NOON",
@@ -710,7 +740,8 @@
     "lng": 37.774742,
     "id": 159,
     "name_orig": "NOON",
-    "lots": 29
+    "lots": 29,
+    "unified_id": null
   },
   {
     "name": "Omni Tower",
@@ -733,7 +764,8 @@
     "lng": 37.454995,
     "id": 161,
     "name_orig": "Omni Tower",
-    "lots": 73
+    "lots": 73,
+    "unified_id": null
   },
   {
     "name": "One Tower",
@@ -756,7 +788,8 @@
     "lng": 37.539644,
     "id": 164,
     "name_orig": "One Tower",
-    "lots": 34
+    "lots": 34,
+    "unified_id": null
   },
   {
     "name": "Opus",
@@ -779,7 +812,8 @@
     "lng": 37.651809,
     "id": 165,
     "name_orig": "Opus",
-    "lots": 9
+    "lots": 9,
+    "unified_id": null
   },
   {
     "name": "Orbital-2",
@@ -802,7 +836,8 @@
     "lng": 37.523959,
     "id": 168,
     "name_orig": "Orbital-2",
-    "lots": 2
+    "lots": 2,
+    "unified_id": null
   },
   {
     "name": "Plaza Botanica",
@@ -825,7 +860,8 @@
     "lng": 37.639222,
     "id": 170,
     "name_orig": "Plaza Botanica",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Plaza Technopark",
@@ -848,7 +884,8 @@
     "lng": 37.66506,
     "id": 85,
     "name_orig": "Plaza Technopark",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-ADD-006"
   },
   {
     "name": "Porta Forma",
@@ -871,7 +908,8 @@
     "lng": 37.518821,
     "id": 86,
     "name_orig": "Porta Forma",
-    "lots": 1
+    "lots": 1,
+    "unified_id": "UC-OBJ-ADD-007"
   },
   {
     "name": "QOOB",
@@ -894,7 +932,8 @@
     "lng": 37.451638,
     "id": 171,
     "name_orig": "QOOB",
-    "lots": 38
+    "lots": 38,
+    "unified_id": null
   },
   {
     "name": "Rail.A",
@@ -917,7 +956,8 @@
     "lng": 37.686671,
     "id": 173,
     "name_orig": "Rail.A",
-    "lots": 28
+    "lots": 28,
+    "unified_id": null
   },
   {
     "name": "Slava",
@@ -940,7 +980,8 @@
     "lng": 37.583095,
     "id": 87,
     "name_orig": "Slava",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Solo",
@@ -963,7 +1004,8 @@
     "lng": 37.664743,
     "id": 175,
     "name_orig": "Solo",
-    "lots": 40
+    "lots": 40,
+    "unified_id": null
   },
   {
     "name": "STONE Towers. Tower A",
@@ -986,7 +1028,8 @@
     "lng": 37.585734,
     "id": 88,
     "name_orig": "STONE Towers. Tower A",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-ADD-008"
   },
   {
     "name": "STONE Towers. Tower D",
@@ -1009,7 +1052,8 @@
     "lng": 37.585665,
     "id": 89,
     "name_orig": "STONE Towers. Tower D",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "STONE Towers. Towers BC",
@@ -1032,7 +1076,8 @@
     "lng": 37.585881,
     "id": 90,
     "name_orig": "STONE Towers. Towers BC",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "STONE Белорусская",
@@ -1055,7 +1100,8 @@
     "lng": 37.585853,
     "id": 91,
     "name_orig": "STONE Белорусская",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-0136"
   },
   {
     "name": "STONE Дмитровская",
@@ -1078,7 +1124,8 @@
     "lng": 37.575947,
     "id": 177,
     "name_orig": "STONE Дмитровская",
-    "lots": 38
+    "lots": 38,
+    "unified_id": null
   },
   {
     "name": "STONE Калужская",
@@ -1101,7 +1148,8 @@
     "lng": 37.537184,
     "id": 180,
     "name_orig": "STONE Калужская",
-    "lots": 109
+    "lots": 109,
+    "unified_id": null
   },
   {
     "name": "STONE Курская",
@@ -1124,7 +1172,8 @@
     "lng": 37.666791,
     "id": 181,
     "name_orig": "STONE Курская",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "STONE Ленинский",
@@ -1147,7 +1196,8 @@
     "lng": 37.584135,
     "id": 184,
     "name_orig": "STONE Ленинский",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "STONE Мневники I",
@@ -1170,7 +1220,8 @@
     "lng": 37.455796,
     "id": 185,
     "name_orig": "STONE Мневники I",
-    "lots": 5
+    "lots": 5,
+    "unified_id": null
   },
   {
     "name": "STONE Мневники II",
@@ -1193,7 +1244,8 @@
     "lng": 37.456532,
     "id": 188,
     "name_orig": "STONE Мневники II",
-    "lots": 37
+    "lots": 37,
+    "unified_id": null
   },
   {
     "name": "STONE Мневники III",
@@ -1216,7 +1268,8 @@
     "lng": 37.456699,
     "id": 189,
     "name_orig": "STONE Мневники III",
-    "lots": 162
+    "lots": 162,
+    "unified_id": null
   },
   {
     "name": "STONE Римская",
@@ -1239,7 +1292,8 @@
     "lng": 37.683733,
     "id": 192,
     "name_orig": "STONE Римская",
-    "lots": 110
+    "lots": 110,
+    "unified_id": null
   },
   {
     "name": "STONE Савеловская",
@@ -1262,7 +1316,8 @@
     "lng": 37.595177,
     "id": 194,
     "name_orig": "STONE Савеловская",
-    "lots": 10
+    "lots": 10,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка I",
@@ -1285,7 +1340,8 @@
     "lng": 37.533598,
     "id": 196,
     "name_orig": "STONE Ходынка I",
-    "lots": 30
+    "lots": 30,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка II",
@@ -1308,7 +1364,8 @@
     "lng": 37.525082,
     "id": 197,
     "name_orig": "STONE Ходынка II",
-    "lots": 51
+    "lots": 51,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка III",
@@ -1331,7 +1388,8 @@
     "lng": 37.5236,
     "id": 200,
     "name_orig": "STONE Ходынка III",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Taller",
@@ -1354,7 +1412,8 @@
     "lng": 37.644387,
     "id": 201,
     "name_orig": "Taller",
-    "lots": 11
+    "lots": 11,
+    "unified_id": "UC-OBJ-0046"
   },
   {
     "name": "Top Tower",
@@ -1377,7 +1436,8 @@
     "lng": 37.529984,
     "id": 204,
     "name_orig": "Top Tower",
-    "lots": 74
+    "lots": 74,
+    "unified_id": "UC-OBJ-ADD-004"
   },
   {
     "name": "Twist",
@@ -1400,7 +1460,8 @@
     "lng": 37.585449,
     "id": 205,
     "name_orig": "Twist",
-    "lots": 8
+    "lots": 8,
+    "unified_id": null
   },
   {
     "name": "Upside Ямская",
@@ -1423,7 +1484,8 @@
     "lng": 37.607035,
     "id": 208,
     "name_orig": "Upside Ямская",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Valtri",
@@ -1446,7 +1508,8 @@
     "lng": 37.576591,
     "id": 209,
     "name_orig": "Valtri",
-    "lots": 9
+    "lots": 9,
+    "unified_id": null
   },
   {
     "name": "West Pier",
@@ -1469,7 +1532,8 @@
     "lng": 37.518892,
     "id": 212,
     "name_orig": "West Pier",
-    "lots": 2
+    "lots": 2,
+    "unified_id": null
   },
   {
     "name": "Плэйн (бывший — Workplace Авиационная)",
@@ -1492,7 +1556,8 @@
     "lng": 37.476501,
     "id": 273,
     "name_orig": "Workplace Авиационная",
-    "lots": 1
+    "lots": 1,
+    "unified_id": "UC-OBJ-ADD-005"
   },
   {
     "name": "Минто (бывший — Workplace Волоколамское)",
@@ -1515,7 +1580,8 @@
     "lng": 37.477857,
     "id": 214,
     "name_orig": "Workplace Волоколамское",
-    "lots": 1
+    "lots": 1,
+    "unified_id": "UC-OBJ-ADD-009"
   },
   {
     "name": "А101 Прокшино",
@@ -1538,7 +1604,8 @@
     "lng": 37.43693,
     "id": 216,
     "name_orig": "А101 Прокшино",
-    "lots": 50
+    "lots": 50,
+    "unified_id": null
   },
   {
     "name": "Алкон 3",
@@ -1561,7 +1628,8 @@
     "lng": 37.568839,
     "id": 95,
     "name_orig": "Алкон 3",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Бадаевский Западная лента",
@@ -1584,7 +1652,8 @@
     "lng": 37.5588,
     "id": 271,
     "name_orig": "Бадаевский Западная лента",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Бадаевский Восточная лента",
@@ -1607,7 +1676,8 @@
     "lng": 37.5602,
     "id": 217,
     "name_orig": "Бадаевский Восточная лента",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Башня Власов",
@@ -1630,7 +1700,8 @@
     "lng": 37.625397,
     "id": 96,
     "name_orig": "Башня Власов",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-0090"
   },
   {
     "name": "Башня Рябов",
@@ -1653,7 +1724,8 @@
     "lng": 37.626809,
     "id": 220,
     "name_orig": "Башня Рябов",
-    "lots": 20
+    "lots": 20,
+    "unified_id": null
   },
   {
     "name": "Бизнес-парк Переделкино",
@@ -1676,7 +1748,8 @@
     "lng": 37.307163,
     "id": 221,
     "name_orig": "Бизнес-парк Переделкино",
-    "lots": 36
+    "lots": 36,
+    "unified_id": "UC-OBJ-0690"
   },
   {
     "name": "Бизнес-центр SEZAR",
@@ -1699,7 +1772,8 @@
     "lng": 37.506874,
     "id": 72,
     "name_orig": "Бизнес-центр SEZAR",
-    "lots": 9
+    "lots": 9,
+    "unified_id": null
   },
   {
     "name": "БЦ Варшавская",
@@ -1722,7 +1796,8 @@
     "lng": 37.624391,
     "id": 224,
     "name_orig": "БЦ Варшавская",
-    "lots": 30
+    "lots": 30,
+    "unified_id": null
   },
   {
     "name": "БЦ Мещерский",
@@ -1745,7 +1820,8 @@
     "lng": 37.407555,
     "id": 73,
     "name_orig": "БЦ Мещерский",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "БЦ на ул. Эдварда Грига",
@@ -1768,7 +1844,8 @@
     "lng": 37.491323,
     "id": 226,
     "name_orig": "БЦ на ул. Эдварда Грига",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "БЦ Сколковский",
@@ -1791,7 +1868,8 @@
     "lng": 37.349749,
     "id": 227,
     "name_orig": "БЦ Сколковский",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "ВАРСТ",
@@ -1814,7 +1892,8 @@
     "lng": 37.609581,
     "id": 230,
     "name_orig": "ВАРСТ",
-    "lots": 4
+    "lots": 4,
+    "unified_id": null
   },
   {
     "name": "Деловой дуэт",
@@ -1837,7 +1916,8 @@
     "lng": 37.666701,
     "id": 277,
     "name_orig": "Деловой дуэт",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Дом Правды",
@@ -1860,7 +1940,8 @@
     "lng": 37.581891,
     "id": 231,
     "name_orig": "Дом Правды",
-    "lots": 135
+    "lots": 135,
+    "unified_id": null
   },
   {
     "name": "Квартал Lucky",
@@ -1883,7 +1964,8 @@
     "lng": 37.556909,
     "id": 275,
     "name_orig": "Квартал Lucky",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Королев (Рассвет)",
@@ -1906,7 +1988,8 @@
     "lng": 37.569135,
     "id": 98,
     "name_orig": "Королев (Рассвет)",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-ADD-003"
   },
   {
     "name": "Магистральная 12 (бывший — Магистральная ул., 12)",
@@ -1929,7 +2012,8 @@
     "lng": 37.527988,
     "id": 99,
     "name_orig": "Магистральная 12",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "МФК Юг",
@@ -1952,7 +2036,8 @@
     "lng": 37.534881,
     "id": 234,
     "name_orig": "МФК Юг",
-    "lots": 12
+    "lots": 12,
+    "unified_id": null
   },
   {
     "name": "МФК Строгино",
@@ -1975,7 +2060,8 @@
     "lng": 37.381783,
     "id": 236,
     "name_orig": "МФК Строгино",
-    "lots": 74
+    "lots": 74,
+    "unified_id": null
   },
   {
     "name": "Обсидиан (бывший — BusinessClass Ходынка)",
@@ -1998,7 +2084,8 @@
     "lng": 37.544117,
     "id": 100,
     "name_orig": "Обсидиан",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
@@ -2021,7 +2108,8 @@
     "lng": 37.471039,
     "id": 237,
     "name_orig": "Общественно-деловой центр \"Октябрьское поле\"",
-    "lots": 8
+    "lots": 8,
+    "unified_id": null
   },
   {
     "name": "Бизнес-парк Раменки (бывший — Огни)",
@@ -2044,7 +2132,8 @@
     "lng": 37.47677,
     "id": 252,
     "name_orig": "Бизнес-парк Раменки (бывший — Огни)",
-    "lots": 1
+    "lots": 1,
+    "unified_id": null
   },
   {
     "name": "Ольховая SKY",
@@ -2067,7 +2156,8 @@
     "lng": 37.45855,
     "id": 240,
     "name_orig": "Ольховая SKY",
-    "lots": 9
+    "lots": 9,
+    "unified_id": null
   },
   {
     "name": "Orbital",
@@ -2090,7 +2180,8 @@
     "lng": 37.523115,
     "id": 101,
     "name_orig": "Orbital",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-0004"
   },
   {
     "name": "Останкино",
@@ -2113,7 +2204,8 @@
     "lng": 37.60098,
     "id": 274,
     "name_orig": "Останкино",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Парк Легенд класс А",
@@ -2136,7 +2228,8 @@
     "lng": 37.633868,
     "id": 102,
     "name_orig": "Парк Легенд класс А",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Парк Легенд класс В+",
@@ -2159,7 +2252,8 @@
     "lng": 37.642608,
     "id": 103,
     "name_orig": "Парк Легенд класс В+",
-    "lots": 0
+    "lots": 0,
+    "unified_id": null
   },
   {
     "name": "Прайм Тайм",
@@ -2182,7 +2276,8 @@
     "lng": 37.524718,
     "id": 104,
     "name_orig": "Прайм Тайм",
-    "lots": 0
+    "lots": 0,
+    "unified_id": "UC-OBJ-ADD-002"
   },
   {
     "name": "Родина Парк",
@@ -2205,7 +2300,8 @@
     "lng": 37.440891,
     "id": 241,
     "name_orig": "Родина Парк",
-    "lots": 9
+    "lots": 9,
+    "unified_id": null
   },
   {
     "name": "Рублево Бизнес-Парк",
@@ -2228,7 +2324,8 @@
     "lng": 37.381693,
     "id": 244,
     "name_orig": "Рублево Бизнес-Парк",
-    "lots": 69
+    "lots": 69,
+    "unified_id": null
   },
   {
     "name": "Сити-4",
@@ -2251,7 +2348,8 @@
     "lng": 37.541225,
     "id": 245,
     "name_orig": "Сити-4",
-    "lots": 21
+    "lots": 21,
+    "unified_id": "UC-OBJ-0341"
   },
   {
     "name": "Технопарк Густав",
@@ -2274,7 +2372,8 @@
     "lng": 37.597492,
     "id": 247,
     "name_orig": "Технопарк Густав",
-    "lots": 22
+    "lots": 22,
+    "unified_id": "UC-OBJ-0080"
   },
   {
     "name": "Цетлин",
@@ -2297,7 +2396,8 @@
     "lng": 37.51026,
     "id": 249,
     "name_orig": "Цетлин",
-    "lots": 20
+    "lots": 20,
+    "unified_id": null
   },
   {
     "name": "Эйлер",
@@ -2320,6 +2420,7 @@
     "lng": 37.512625,
     "id": 250,
     "name_orig": "Эйлер",
-    "lots": 5
+    "lots": 5,
+    "unified_id": null
   }
 ]

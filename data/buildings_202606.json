@@ -20,7 +20,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 106
+    "id": 106,
+    "unified_id": null
   },
   {
     "name": "AFI2B Tagilskaya",
@@ -43,7 +44,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 108
+    "id": 108,
+    "unified_id": null
   },
   {
     "name": "Ahead",
@@ -66,7 +68,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 109
+    "id": 109,
+    "unified_id": "UC-OBJ-0061"
   },
   {
     "name": "Air",
@@ -89,7 +92,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 112
+    "id": 112,
+    "unified_id": null
   },
   {
     "name": "ASPACE Хорошевская",
@@ -112,7 +116,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 113
+    "id": 113,
+    "unified_id": null
   },
   {
     "name": "Avium",
@@ -135,7 +140,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 115
+    "id": 115,
+    "unified_id": null
   },
   {
     "name": "Bell",
@@ -158,7 +164,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 117
+    "id": 117,
+    "unified_id": "UC-OBJ-0149"
   },
   {
     "name": "Edel",
@@ -181,7 +188,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 120
+    "id": 120,
+    "unified_id": null
   },
   {
     "name": "Fili Centre",
@@ -204,7 +212,8 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": 122
+    "id": 122,
+    "unified_id": null
   },
   {
     "name": "Fili residence",
@@ -229,7 +238,8 @@
     "weight": 0,
     "id": 124,
     "price_fix_source": "2026-08-22: пересчитано после исправления цены одного лота (229241213 -> 229241 руб/м2, см. lots_202606.json). Было price=102768631 (искажено ошибочным лотом), стало 341177 (взвешенное среднее по всем 4 лотам после исправления).",
-    "prev_price": 102768631
+    "prev_price": 102768631,
+    "unified_id": null
   },
   {
     "name": "Frame",
@@ -252,7 +262,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 126
+    "id": 126,
+    "unified_id": null
   },
   {
     "name": "Geolog 2",
@@ -275,7 +286,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 128
+    "id": 128,
+    "unified_id": null
   },
   {
     "name": "iCITY (Space)",
@@ -298,7 +310,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 129
+    "id": 129,
+    "unified_id": null
   },
   {
     "name": "Jenga",
@@ -321,7 +334,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 132
+    "id": 132,
+    "unified_id": null
   },
   {
     "name": "Jois",
@@ -344,7 +358,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 134
+    "id": 134,
+    "unified_id": "UC-OBJ-0113"
   },
   {
     "name": "K-city",
@@ -367,7 +382,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 136
+    "id": 136,
+    "unified_id": null
   },
   {
     "name": "Upside Кунцево",
@@ -390,7 +406,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 138
+    "id": 138,
+    "unified_id": "UC-OBJ-0050"
   },
   {
     "name": "Lakes 2",
@@ -413,7 +430,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 139
+    "id": 139,
+    "unified_id": null
   },
   {
     "name": "Lavin",
@@ -436,7 +454,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 141
+    "id": 141,
+    "unified_id": null
   },
   {
     "name": "Level Воронцовская",
@@ -459,7 +478,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 144
+    "id": 144,
+    "unified_id": null
   },
   {
     "name": "Level Южнопортовая",
@@ -482,7 +502,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 146
+    "id": 146,
+    "unified_id": null
   },
   {
     "name": "Light City",
@@ -505,7 +526,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 147
+    "id": 147,
+    "unified_id": "UC-OBJ-0099"
   },
   {
     "name": "Link",
@@ -528,7 +550,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 150
+    "id": 150,
+    "unified_id": null
   },
   {
     "name": "Mind",
@@ -551,7 +574,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 152
+    "id": 152,
+    "unified_id": null
   },
   {
     "name": "Mount",
@@ -574,7 +598,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 153
+    "id": 153,
+    "unified_id": null
   },
   {
     "name": "Nevsky Plaza",
@@ -597,7 +622,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 155
+    "id": 155,
+    "unified_id": null
   },
   {
     "name": "Солид (бывший — Nice Tower)",
@@ -620,7 +646,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 158
+    "id": 158,
+    "unified_id": null
   },
   {
     "name": "NOON",
@@ -643,7 +670,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 159
+    "id": 159,
+    "unified_id": null
   },
   {
     "name": "Omni Tower",
@@ -666,7 +694,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 161
+    "id": 161,
+    "unified_id": null
   },
   {
     "name": "One Tower",
@@ -689,7 +718,8 @@
     "year": "2030",
     "start": "",
     "weight": 0,
-    "id": 164
+    "id": 164,
+    "unified_id": null
   },
   {
     "name": "Opus",
@@ -712,7 +742,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 165
+    "id": 165,
+    "unified_id": null
   },
   {
     "name": "Orbital-2",
@@ -735,7 +766,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 168
+    "id": 168,
+    "unified_id": null
   },
   {
     "name": "Plaza Botanica",
@@ -758,7 +790,8 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": 170
+    "id": 170,
+    "unified_id": null
   },
   {
     "name": "QOOB",
@@ -781,7 +814,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 171
+    "id": 171,
+    "unified_id": null
   },
   {
     "name": "Rail.A",
@@ -804,7 +838,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 173
+    "id": 173,
+    "unified_id": null
   },
   {
     "name": "Solo",
@@ -827,7 +862,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 175
+    "id": 175,
+    "unified_id": null
   },
   {
     "name": "STONE Дмитровская",
@@ -850,7 +886,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 177
+    "id": 177,
+    "unified_id": null
   },
   {
     "name": "STONE Калужская",
@@ -873,7 +910,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 180
+    "id": 180,
+    "unified_id": null
   },
   {
     "name": "STONE Курская",
@@ -896,7 +934,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 181
+    "id": 181,
+    "unified_id": null
   },
   {
     "name": "STONE Ленинский",
@@ -919,7 +958,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 184
+    "id": 184,
+    "unified_id": null
   },
   {
     "name": "STONE Мневники I",
@@ -942,7 +982,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 185
+    "id": 185,
+    "unified_id": null
   },
   {
     "name": "STONE Мневники II",
@@ -965,7 +1006,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 188
+    "id": 188,
+    "unified_id": null
   },
   {
     "name": "STONE Мневники III",
@@ -988,7 +1030,8 @@
     "year": "2030",
     "start": "",
     "weight": 0,
-    "id": 189
+    "id": 189,
+    "unified_id": null
   },
   {
     "name": "STONE Римская",
@@ -1011,7 +1054,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 192
+    "id": 192,
+    "unified_id": null
   },
   {
     "name": "STONE Савеловская",
@@ -1034,7 +1078,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 194
+    "id": 194,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка I",
@@ -1057,7 +1102,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 196
+    "id": 196,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка II",
@@ -1080,7 +1126,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 197
+    "id": 197,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка III",
@@ -1103,7 +1150,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 200
+    "id": 200,
+    "unified_id": null
   },
   {
     "name": "Taller",
@@ -1126,7 +1174,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 201
+    "id": 201,
+    "unified_id": "UC-OBJ-0046"
   },
   {
     "name": "Top Tower",
@@ -1149,7 +1198,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 204
+    "id": 204,
+    "unified_id": "UC-OBJ-ADD-004"
   },
   {
     "name": "Twist",
@@ -1172,7 +1222,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 205
+    "id": 205,
+    "unified_id": null
   },
   {
     "name": "Upside Ямская",
@@ -1195,7 +1246,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 208
+    "id": 208,
+    "unified_id": null
   },
   {
     "name": "Valtri",
@@ -1218,7 +1270,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 209
+    "id": 209,
+    "unified_id": null
   },
   {
     "name": "West Pier",
@@ -1241,7 +1294,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 212
+    "id": 212,
+    "unified_id": null
   },
   {
     "name": "Минто (бывший — Workplace Волоколамское)",
@@ -1264,7 +1318,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 214
+    "id": 214,
+    "unified_id": "UC-OBJ-ADD-009"
   },
   {
     "name": "А101 Прокшино",
@@ -1287,7 +1342,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 216
+    "id": 216,
+    "unified_id": null
   },
   {
     "name": "Бадаевский Восточная лента",
@@ -1310,7 +1366,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 217
+    "id": 217,
+    "unified_id": null
   },
   {
     "name": "Башня Рябов",
@@ -1333,7 +1390,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 220
+    "id": 220,
+    "unified_id": null
   },
   {
     "name": "Бизнес-парк Переделкино",
@@ -1356,7 +1414,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 221
+    "id": 221,
+    "unified_id": "UC-OBJ-0690"
   },
   {
     "name": "БЦ Варшавская",
@@ -1379,7 +1438,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 224
+    "id": 224,
+    "unified_id": null
   },
   {
     "name": "БЦ на ул. Эдварда Грига",
@@ -1402,7 +1462,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 226
+    "id": 226,
+    "unified_id": null
   },
   {
     "name": "БЦ Сколковский",
@@ -1425,7 +1486,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 227
+    "id": 227,
+    "unified_id": null
   },
   {
     "name": "ВАРСТ",
@@ -1448,7 +1510,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 230
+    "id": 230,
+    "unified_id": null
   },
   {
     "name": "Дом Правды",
@@ -1471,7 +1534,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 231
+    "id": 231,
+    "unified_id": null
   },
   {
     "name": "МФК Юг",
@@ -1494,7 +1558,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 234
+    "id": 234,
+    "unified_id": null
   },
   {
     "name": "МФК Строгино",
@@ -1517,7 +1582,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 236
+    "id": 236,
+    "unified_id": null
   },
   {
     "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
@@ -1540,7 +1606,8 @@
     "year": "2024",
     "start": "",
     "weight": 0,
-    "id": 237
+    "id": 237,
+    "unified_id": null
   },
   {
     "name": "Ольховая SKY",
@@ -1563,7 +1630,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 240
+    "id": 240,
+    "unified_id": null
   },
   {
     "name": "Родина Парк",
@@ -1586,7 +1654,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 241
+    "id": 241,
+    "unified_id": null
   },
   {
     "name": "Рублево Бизнес-Парк",
@@ -1609,7 +1678,8 @@
     "year": "2026",
     "start": "",
     "weight": 2854717912,
-    "id": 244
+    "id": 244,
+    "unified_id": null
   },
   {
     "name": "Сити-4",
@@ -1632,7 +1702,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 245
+    "id": 245,
+    "unified_id": "UC-OBJ-0341"
   },
   {
     "name": "Технопарк Густав",
@@ -1655,7 +1726,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 247
+    "id": 247,
+    "unified_id": "UC-OBJ-0080"
   },
   {
     "name": "Цетлин",
@@ -1678,7 +1750,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 249
+    "id": 249,
+    "unified_id": null
   },
   {
     "name": "Эйлер",
@@ -1701,7 +1774,8 @@
     "year": "2025",
     "start": "",
     "weight": 0,
-    "id": 250
+    "id": 250,
+    "unified_id": null
   },
   {
     "name": "KORP. Молодежная",
@@ -1724,7 +1798,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 251
+    "id": 251,
+    "unified_id": "UC-OBJ-0201"
   },
   {
     "name": "Бизнес-парк Раменки (бывший — Огни)",
@@ -1747,7 +1822,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 252
+    "id": 252,
+    "unified_id": null
   },
   {
     "name": "Upside Останкино",
@@ -1770,7 +1846,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 253
+    "id": 253,
+    "unified_id": "UC-OBJ-0229"
   },
   {
     "name": "Upside Tech Сколково",
@@ -1793,7 +1870,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 254
+    "id": 254,
+    "unified_id": null
   },
   {
     "name": "STONE Ходынка IV",
@@ -1816,7 +1894,8 @@
     "year": "2032",
     "start": "",
     "weight": 0,
-    "id": 258
+    "id": 258,
+    "unified_id": null
   },
   {
     "name": "Aurus",
@@ -1839,7 +1918,8 @@
     "year": "2031",
     "start": "",
     "weight": 0,
-    "id": 259
+    "id": 259,
+    "unified_id": "UC-OBJ-0374"
   },
   {
     "name": "Север.Сити",
@@ -1862,7 +1942,8 @@
     "year": "2029",
     "start": "",
     "weight": 0,
-    "id": 260
+    "id": 260,
+    "unified_id": null
   },
   {
     "name": "Set",
@@ -1885,7 +1966,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 261
+    "id": 261,
+    "unified_id": "UC-OBJ-0211"
   },
   {
     "name": "Emotion",
@@ -1908,7 +1990,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 262
+    "id": 262,
+    "unified_id": "UC-OBJ-0194"
   },
   {
     "name": "Cityzen",
@@ -1931,7 +2014,8 @@
     "year": "2030",
     "start": "",
     "weight": 0,
-    "id": 263
+    "id": 263,
+    "unified_id": "UC-OBJ-0413"
   },
   {
     "name": "Энтузиаст",
@@ -1954,7 +2038,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 264
+    "id": 264,
+    "unified_id": "UC-OBJ-0389"
   },
   {
     "name": "Руновский 14",
@@ -1977,7 +2062,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 265
+    "id": 265,
+    "unified_id": "UC-OBJ-0421"
   },
   {
     "name": "LIKOVA",
@@ -2000,7 +2086,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 266
+    "id": 266,
+    "unified_id": null
   },
   {
     "name": "Level Нижегородская",
@@ -2023,7 +2110,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 267
+    "id": 267,
+    "unified_id": "UC-OBJ-0204"
   },
   {
     "name": "SEZAR TOWER",
@@ -2046,7 +2134,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 268
+    "id": 268,
+    "unified_id": null
   },
   {
     "name": "DIUS",
@@ -2069,7 +2158,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 269
+    "id": 269,
+    "unified_id": "UC-OBJ-0192"
   },
   {
     "name": "Мануфактура XIX",
@@ -2092,7 +2182,8 @@
     "year": "2027",
     "start": "",
     "weight": 0,
-    "id": 270
+    "id": 270,
+    "unified_id": "UC-OBJ-0420"
   },
   {
     "name": "Бадаевский Западная лента",
@@ -2115,7 +2206,8 @@
     "year": "2026",
     "start": "",
     "weight": 0,
-    "id": 271
+    "id": 271,
+    "unified_id": null
   },
   {
     "name": "CHALET Пятницкая 40",
@@ -2138,7 +2230,8 @@
     "year": "2028",
     "start": "",
     "weight": 0,
-    "id": 272
+    "id": 272,
+    "unified_id": null
   },
   {
     "name": "Плэйн (бывший — Workplace Авиационная)",
@@ -2161,7 +2254,8 @@
     "address": "Москва, ул. Авиационная, 22",
     "year": "2028",
     "start": "",
-    "weight": 4791427776
+    "weight": 4791427776,
+    "unified_id": "UC-OBJ-ADD-005"
   },
   {
     "name": "Останкино",
@@ -2184,7 +2278,8 @@
     "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
     "year": "2025",
     "start": "",
-    "weight": 0
+    "weight": 0,
+    "unified_id": null
   },
   {
     "name": "Квартал Lucky",
@@ -2207,7 +2302,8 @@
     "address": "2-ая Звенигородская ул., д. 12",
     "year": "2023",
     "start": "",
-    "weight": 0
+    "weight": 0,
+    "unified_id": null
   },
   {
     "name": "Dream Riva",
@@ -2230,7 +2326,8 @@
     "address": "просп. Андропова, 11Г",
     "year": "2026",
     "start": "Q2 2025",
-    "weight": 0
+    "weight": 0,
+    "unified_id": null
   },
   {
     "name": "Деловой дуэт",
@@ -2253,7 +2350,8 @@
     "address": "Шумкина ул., 14с5, с13",
     "year": "2025",
     "start": "",
-    "weight": 7475000000
+    "weight": 7475000000,
+    "unified_id": null
   },
   {
     "name": "Бизнес-хаб Потапово",
@@ -2276,7 +2374,8 @@
     "volume": 711.2,
     "price": 259290,
     "weight": 184407089,
-    "lots": 4
+    "lots": 4,
+    "unified_id": "UC-OBJ-0238"
   },
   {
     "name": "Звенигородская от Гранель",
@@ -2299,7 +2398,8 @@
     "lng": 37.510502,
     "id": 97,
     "name_orig": "Звенигородская от Гранель",
-    "lots": 19
+    "lots": 19,
+    "unified_id": "UC-OBJ-0387"
   },
   {
     "name": "River Park Коломенское",
@@ -2322,6 +2422,7 @@
     "lng": 37.700056,
     "id": 279,
     "name_orig": "River Park Коломенское",
-    "lots": 10
+    "lots": 10,
+    "unified_id": "UC-OBJ-ADD-001"
   }
 ]
