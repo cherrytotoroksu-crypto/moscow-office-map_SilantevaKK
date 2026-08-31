@@ -80,7 +80,7 @@
   }
   .filter-panel .fp-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
   .filter-panel .fp-title { font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.3px; color:var(--accent); }
-  .filter-panel .fp-close { cursor:pointer; font-size:16px; line-height:1; color:var(--muted); padding:0 4px; }
+  .filter-panel .fp-close { border:0; background:transparent; cursor:pointer; font-size:16px; line-height:1; color:var(--muted); padding:0 4px; }
   .filter-panel .fp-close:hover { color:var(--brand-red); }
   .filter-panel input[type=text] {
     width:100%; padding:5px 7px; margin-bottom:7px; border:1px solid var(--line); border-radius:4px;
@@ -100,6 +100,8 @@
   }
   .fp-actions button.primary { background:var(--brand-red); color:#fff; border-color:var(--brand-red); }
   .fp-actions button:hover { filter:brightness(0.96); }
+  :where(button, a, input, select, [tabindex]):focus-visible { outline:3px solid var(--brand-red); outline-offset:2px; }
+  .th-label { border:0; background:transparent; color:inherit; font:inherit; text-align:left; cursor:pointer; padding:0; }
   .fp-empty { color:var(--muted); font-size:11.5px; padding:4px 2px; }
   .num { text-align:right; font-variant-numeric:tabular-nums; }
   .cell-green { background:var(--green-bg) !important; color:var(--green-ink); }
@@ -138,7 +140,7 @@
   <div class="toolbar">
     <input type="text" id="filterText" placeholder="Поиск по названию / адресу / девелоперу…">
     <button class="btn" id="clearAllFilters" type="button" style="padding:6px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);font-size:12px;cursor:pointer;">Сбросить фильтры колонок</button>
-    <span id="rowcount" class="stat">—</span>
+    <span id="rowcount" class="stat" role="status" aria-live="polite">—</span>
   </div>
   <div class="sub" style="margin-top:6px;">Фильтры по колонкам — значок воронки в шапке таблицы (как автофильтр в Excel).</div>
   <div class="legend">
@@ -287,10 +289,10 @@ function colDisplayValues(r, key) {
 function renderHead() {
   const tr = document.getElementById("headRow");
   tr.innerHTML = COLS.map(c => `
-    <th data-key="${c.key}">
+    <th data-key="${c.key}" aria-sort="${sortKey === c.key ? (sortDir === 1 ? 'ascending' : 'descending') : 'none'}">
       <div class="th-inner">
-        <span class="th-label" data-key="${c.key}">${c.label}<span class="arrow"></span></span>
-        <button class="filter-btn" data-key="${c.key}" title="Фильтр по колонке" type="button">&#9662;</button>
+        <button class="th-label" data-key="${c.key}" type="button" aria-label="Сортировать по столбцу «${c.label}»">${c.label}<span class="arrow"></span></button>
+        <button class="filter-btn" data-key="${c.key}" title="Фильтр по колонке" aria-label="Фильтр по столбцу «${c.label}»" type="button">&#9662;</button>
       </div>
     </th>`).join("");
   tr.querySelectorAll(".th-label").forEach(el => {
@@ -315,8 +317,11 @@ function syncFilterButtonStates() {
 }
 
 let fpPanel = null;
-function closeFilterPanel() {
+let fpReturnFocus = null;
+function closeFilterPanel(returnFocus = false) {
   if (fpPanel) { fpPanel.remove(); fpPanel = null; document.removeEventListener("mousedown", onFpOutsideClick, true); }
+  if (returnFocus && fpReturnFocus?.isConnected) fpReturnFocus.focus();
+  fpReturnFocus = null;
 }
 function onFpOutsideClick(e) {
   if (fpPanel && !fpPanel.contains(e.target)) closeFilterPanel();
@@ -335,8 +340,11 @@ function openFilterPanel(key, btn) {
   const panel = document.createElement("div");
   panel.className = "filter-panel";
   panel.dataset.key = key;
+  panel.setAttribute("role", "dialog");
+  panel.setAttribute("aria-modal", "false");
+  panel.setAttribute("aria-labelledby", `fp-title-${key}`);
   panel.innerHTML = `
-    <div class="fp-header"><span class="fp-title">${col.label}</span><span class="fp-close">&times;</span></div>
+    <div class="fp-header"><span class="fp-title" id="fp-title-${key}">${col.label}</span><button class="fp-close" type="button" aria-label="Закрыть фильтр">&times;</button></div>
     <input type="text" class="fp-search" placeholder="Поиск значения…">
     <label class="fp-select-all"><input type="checkbox" class="fp-all"> Выбрать все</label>
     <div class="fp-list"></div>
@@ -346,6 +354,7 @@ function openFilterPanel(key, btn) {
     </div>`;
   document.body.appendChild(panel);
   fpPanel = panel;
+  fpReturnFocus = btn;
 
   const listEl = panel.querySelector(".fp-list");
   const allCb = panel.querySelector(".fp-all");
@@ -354,8 +363,8 @@ function openFilterPanel(key, btn) {
   function renderList(filterQ) {
     const q = (filterQ || "").trim().toLowerCase();
     const vals = q ? allValues.filter(v => String(v).toLowerCase().includes(q)) : allValues;
-    if (!vals.length) { listEl.innerHTML = `<div class="fp-empty">Нет значений</div>`; return; }
-    listEl.innerHTML = vals.map(v => `<label><input type="checkbox" value="${esc(v)}" ${activeSet.has(v)?"checked":""}> ${esc(v)}</label>`).join("");
+    if (!vals.length) { listEl.innerHTML = `<div class="fp-empty">Ничего не найдено. Измените поисковый запрос.</div>`; return; }
+    listEl.innerHTML = vals.map(v => `<label title="${esc(v)}"><input type="checkbox" value="${esc(v)}" ${activeSet.has(v)?"checked":""}> ${esc(v)}</label>`).join("");
     syncAllCb();
   }
   function syncAllCb() {
@@ -371,8 +380,8 @@ function openFilterPanel(key, btn) {
   });
   listEl.addEventListener("change", e => { if (e.target.matches("input[type=checkbox]")) syncAllCb(); });
 
-  panel.querySelector(".fp-close").addEventListener("click", closeFilterPanel);
-  panel.querySelector(".fp-cancel").addEventListener("click", closeFilterPanel);
+  panel.querySelector(".fp-close").addEventListener("click", () => closeFilterPanel(true));
+  panel.querySelector(".fp-cancel").addEventListener("click", () => closeFilterPanel(true));
   panel.querySelector(".fp-ok").addEventListener("click", () => {
     const checked = new Set([...listEl.querySelectorAll("input[type=checkbox]:checked")].map(cb => cb.value));
     // если поиск сужал список — сохраняем состояние вне видимых значений как было в activeSet
@@ -382,8 +391,11 @@ function openFilterPanel(key, btn) {
     checked.forEach(v => finalSet.add(v));
     if (finalSet.size === allValues.length) delete colFilters[key];
     else colFilters[key] = finalSet;
-    closeFilterPanel();
+    closeFilterPanel(true);
     render();
+  });
+  panel.addEventListener("keydown", e => {
+    if (e.key === "Escape") { e.preventDefault(); closeFilterPanel(true); }
   });
 
   const rect = btn.getBoundingClientRect();
@@ -391,6 +403,7 @@ function openFilterPanel(key, btn) {
   if (left + 240 > window.innerWidth - 12) left = window.innerWidth - 240 - 12;
   panel.style.left = Math.max(12, left) + "px";
   panel.style.top = (rect.bottom + 4) + "px";
+  searchEl.focus();
 
   setTimeout(() => document.addEventListener("mousedown", onFpOutsideClick, true), 0);
 }
@@ -505,8 +518,9 @@ document.getElementById("tbody").addEventListener("mouseout", e => {
   if (!e.relatedTarget || !e.relatedTarget.closest("td.has-note, td .src-count")) hidePopup();
 });
 
+document.getElementById("tbody").innerHTML = `<tr><td colspan="${COLS.length}" style="padding:28px;text-align:center;">Загрузка классификатора…</td></tr>`;
 fetch(DATA_URL, { cache: "no-cache" })
-  .then(r => r.json())
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
   .then(d => {
     RAW = d.records || [];
     renderHead();
@@ -514,8 +528,9 @@ fetch(DATA_URL, { cache: "no-cache" })
     render();
   })
   .catch(err => {
+    document.getElementById("rowcount").textContent = "Данные не загружены";
     document.getElementById("tbody").innerHTML =
-      `<tr><td colspan="${COLS.length}">Ошибка загрузки ${DATA_URL}: ${esc(err.message)}</td></tr>`;
+      `<tr><td colspan="${COLS.length}" style="padding:28px;text-align:center;color:#b42318;">Не удалось загрузить классификатор. Обновите страницу; если ошибка повторится, проверьте наличие файла данных.</td></tr>`;
   });
 </script>
 </body>

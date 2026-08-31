@@ -42,8 +42,12 @@
     width:100%; padding:5px 6px; border:1px solid #ccc; border-radius:3px;
     font-size:12px; margin-top:2px; cursor:pointer; background:#fff;
   }
-  select:focus { outline:none; border-color:var(--nf-red); }
-  .hint { font-size:10px; color:#999; margin-bottom:4px; line-height:1.35; }
+  select:focus { border-color:var(--nf-red); }
+  select:focus-visible { outline:2px solid var(--nf-red); outline-offset:1px; }
+  :where(button, a, input, select, [role="tab"], [tabindex]):focus-visible {
+    outline:3px solid var(--nf-red); outline-offset:2px;
+  }
+  .hint { font-size:10px; color:#767676; margin-bottom:4px; line-height:1.35; }
   button.btn {
     display:block; width:100%; margin-top:8px; padding:9px;
     background:var(--nf-red); color:#fff; border:none; border-radius:3px;
@@ -51,7 +55,8 @@
     cursor:pointer; text-align:center; transition:background .15s;
   }
   button.btn:hover { background:var(--nf-red-dark); }
-  #anaStatus { font-size:11px; color:#888; min-height:14px; }
+  button.btn:disabled { background:#9ca3af; cursor:not-allowed; opacity:.75; }
+  #anaStatus { font-size:11px; color:#767676; min-height:14px; }
 
   main.content { flex:1; padding:20px; overflow:auto; display:flex; flex-direction:column; gap:12px; min-width:0; }
   #anaCaption {
@@ -63,6 +68,13 @@
     background:#fff; border-radius:4px; padding:18px;
     box-shadow:0 1px 6px rgba(0,0,0,.06); flex:1; min-height:0; position:relative;
   }
+  #anaEmpty {
+    min-height:260px; display:flex; align-items:center; justify-content:center;
+    padding:28px; text-align:center; color:#666; background:#fff;
+    border:1px dashed #cfd3dc; border-radius:6px; line-height:1.5;
+    box-shadow:0 1px 6px rgba(0,0,0,.06);
+  }
+  #anaChartHint { margin-top:4px; color:#777; }
   #anaTableWrap { overflow:auto; }
   #analyticsTable { width:100%; border-collapse:collapse; font-size:12px; }
   #analyticsTable th, #analyticsTable td { text-align:left; padding:8px 12px; border-bottom:1px solid var(--nf-line); }
@@ -89,7 +101,7 @@
     <h3>Источник</h3>
     <label class="radio-row"><input type="radio" name="anaDomain" value="quarterly" checked> Предложение по кварталам</label>
     <label class="radio-row"><input type="radio" name="anaDomain" value="projects"> Реестр проектов (снимок)</label>
-    <div id="anaStatus"></div>
+    <div id="anaStatus" role="status" aria-live="polite"></div>
 
     <div id="anaQuarterlyControls">
       <h3>Канал</h3>
@@ -103,7 +115,7 @@
       <div id="anaPeriodHint" class="hint" style="display:none;">Диапазон учитывается только для типа графика «Линия» — для остальных берётся срез на конечный квартал.</div>
       <div style="display:flex;gap:6px;align-items:center;">
         <select id="anaQuarterFrom" style="flex:1;display:none;"></select>
-        <span id="anaPeriodDash" style="font-size:11px;color:#888;display:none;">—</span>
+        <span id="anaPeriodDash" style="font-size:11px;color:#767676;display:none;">—</span>
         <select id="anaQuarterTo" style="flex:1;"></select>
       </div>
     </div>
@@ -117,11 +129,11 @@
     <h3>Тип графика</h3>
     <select id="anaChartType">
       <option value="bar">Столбцы</option>
-      <option value="stacked">Столбцы с накоплением</option>
       <option value="line">Линия (по периодам)</option>
       <option value="doughnut">Кольцевая</option>
       <option value="table">Таблица</option>
     </select>
+    <div id="anaChartHint" class="hint"></div>
 
     <div id="anaProjectsFilterControls" style="display:none;">
       <h3>Статус проекта</h3>
@@ -139,10 +151,11 @@
     <div class="hint">Правило источника: домен «Предложение по кварталам» — метрики sale/rent считаются по зданиям из data/buildings_{квартал}.json, коворкинги — напрямую по data/coworking_{квартал}.json (там нет класса/девелопера — только оператор и площадка). Домен «Реестр проектов» — снимок data/all_projects_layer.json, без привязки к кварталу. Записи без значения по оси группировки показаны как «Не определено», не отбрасываются и не считаются нулём.</div>
   </aside>
 
-  <main class="content">
-    <div id="anaCaption">Загрузка…</div>
+  <main class="content" id="anaContent" aria-busy="true">
+    <div id="anaCaption" aria-live="polite">Загрузка…</div>
     <div id="anaChartWrap"><canvas id="analyticsChart"></canvas></div>
     <div id="anaTableWrap" style="display:none;"><table id="analyticsTable"></table></div>
+    <div id="anaEmpty" role="status" aria-live="polite" style="display:none;"></div>
   </main>
 </div>
 
@@ -171,8 +184,18 @@ const QUARTERS = [
 ];
 function quartersChrono() { return [...QUARTERS].slice().reverse(); } // старые -> новые
 
-function fetchJSON(url, fallback) {
-  return fetch(url, { cache: 'no-cache' }).then(r => r.json()).catch(() => fallback);
+const analyticsLoadFailures = new Set();
+async function fetchJSON(url, fallback) {
+  try {
+    const response = await fetch(url, { cache:'no-cache' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    analyticsLoadFailures.delete(url);
+    return data;
+  } catch (error) {
+    analyticsLoadFailures.add(url);
+    return fallback;
+  }
 }
 
 let _scriptCache = {};
@@ -180,7 +203,16 @@ function loadScript(src) {
   if (_scriptCache[src]) return _scriptCache[src];
   _scriptCache[src] = new Promise((resolve, reject) => {
     const s = document.createElement('script');
-    s.src = src; s.onload = resolve; s.onerror = reject;
+    const fail = () => {
+      clearTimeout(timer);
+      delete _scriptCache[src];
+      s.remove();
+      reject(new Error(`Не удалось загрузить ${src}`));
+    };
+    const timer = setTimeout(fail, 10000);
+    s.src = src;
+    s.onload = () => { clearTimeout(timer); resolve(); };
+    s.onerror = fail;
     document.head.appendChild(s);
   });
   return _scriptCache[src];
@@ -222,6 +254,21 @@ function bldRentVal(b, qid, metric) {
 // "период1/период2" отчёта), остальные — оттенки той же гаммы по кругу.
 const CHART_COLORS = ['#A6093D','#1B2A4A','#C94F6E','#4A5C80','#7A0630','#8C97AC',
   '#D98BA0','#2E4066','#5C0A25','#B3BAC9','#E3A6B5','#0F1A30'];
+const ANA_COMPOSITION_METRICS = new Set(['count','volume','seats','vacancy','lots_count','gba','gla']);
+function anaCompactNumber(value) {
+  const n = Number(value);
+  if (!isFinite(n)) return value;
+  const abs = Math.abs(n);
+  const compact = (divisor, suffix) => `${(n / divisor).toLocaleString('ru-RU', { maximumFractionDigits: 1 })} ${suffix}`;
+  if (abs >= 1e9) return compact(1e9, 'млрд');
+  if (abs >= 1e6) return compact(1e6, 'млн');
+  if (abs >= 1e3) return compact(1e3, 'тыс.');
+  return n.toLocaleString('ru-RU', { maximumFractionDigits: 1 });
+}
+function anaShortLabel(value, maxLength = 34) {
+  const text = String(value ?? '');
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text;
+}
 
 // ============================================================
 //  Загрузка данных всех кварталов (без геослоёв — конструктору нужны
@@ -305,8 +352,8 @@ function fillSelect(sel, options, keepValue) {
 }
 
 let analyticsInited = false;
+let lastAnaChartType = null;
 async function initAnalyticsConstructor() {
-  await ensureChart();
   if (!analyticsInited) {
     const qs = quartersChrono();
     const fromSel = document.getElementById('anaQuarterFrom');
@@ -334,22 +381,38 @@ function anaDeveloperRowsFor(domain, channel, qid) {
 }
 
 async function onAnaDomainChange() {
-  const domain = anaDomain();
-  document.getElementById('anaQuarterlyControls').style.display = domain === 'quarterly' ? 'block' : 'none';
-  document.getElementById('anaProjectsFilterControls').style.display = domain === 'projects' ? 'block' : 'none';
-  const channel = document.getElementById('anaChannel').value || 'sale';
-  fillSelect(document.getElementById('anaMetric'), domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS);
-  fillSelect(document.getElementById('anaGroupBy'), anaGroupByOptions(domain, channel));
-  document.getElementById('anaStatus').textContent = 'Загрузка…';
-  if (domain === 'quarterly') {
-    await loadAllQuarters();
-  } else {
-    if (!analyticsProjectsData) analyticsProjectsData = await fetchJSON('data/all_projects_layer.json', []);
+  const content = document.getElementById('anaContent');
+  const status = document.getElementById('anaStatus');
+  content.setAttribute('aria-busy', 'true');
+  status.textContent = 'Загрузка данных…';
+  status.style.color = '#666';
+  try {
+    const domain = anaDomain();
+    document.getElementById('anaQuarterlyControls').style.display = domain === 'quarterly' ? 'block' : 'none';
+    document.getElementById('anaProjectsFilterControls').style.display = domain === 'projects' ? 'block' : 'none';
+    const channel = document.getElementById('anaChannel').value || 'sale';
+    fillSelect(document.getElementById('anaMetric'), domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS);
+    fillSelect(document.getElementById('anaGroupBy'), anaGroupByOptions(domain, channel));
+    if (domain === 'quarterly') {
+      await loadAllQuarters();
+    } else {
+      if (!analyticsProjectsData) analyticsProjectsData = await fetchJSON('data/all_projects_layer.json', []);
+    }
+    fillAnaDeveloperOptions(anaDeveloperRowsFor(domain, channel, document.getElementById('anaQuarterTo').value), anaDeveloperFieldFor(domain, channel));
+    document.getElementById('anaDeveloperLabel').textContent = (domain === 'quarterly' && channel === 'coworking') ? 'Оператор (сеть)' : 'Девелопер';
+    status.textContent = analyticsLoadFailures.size
+      ? `Не удалось загрузить ${analyticsLoadFailures.size} файл(а). Остальные данные доступны; обновите страницу для повторной попытки.`
+      : '';
+    status.style.color = analyticsLoadFailures.size ? '#b42318' : '#666';
+    await renderAnalytics();
+  } catch (error) {
+    console.error('Не удалось обновить аналитику', error);
+    status.textContent = 'Не удалось построить график. Проверьте подключение и повторите действие или выберите вид «Таблица».';
+    status.style.color = '#b42318';
+    document.getElementById('anaExport').disabled = true;
+  } finally {
+    content.setAttribute('aria-busy', 'false');
   }
-  fillAnaDeveloperOptions(anaDeveloperRowsFor(domain, channel, document.getElementById('anaQuarterTo').value), anaDeveloperFieldFor(domain, channel));
-  document.getElementById('anaDeveloperLabel').textContent = (domain === 'quarterly' && channel === 'coworking') ? 'Оператор (сеть)' : 'Девелопер';
-  document.getElementById('anaStatus').textContent = '';
-  renderAnalytics();
 }
 
 function fillAnaDeveloperOptions(rows, field) {
@@ -414,7 +477,7 @@ function aggregateQuarterly(qid, channel, metric, groupBy, statusFilter, develop
   if (channel === 'coworking') return aggregateCoworkingDirect(qid, metric, groupBy, developerFilter);
   const blds = (allBuildings[qid] || []).filter(b => {
     if (developerFilter && b.developer !== developerFilter) return false;
-    if (statusFilter && statusFilter.length && !statusFilter.includes(b.status)) return false;
+    if (statusFilter && !statusFilter.includes(b.status)) return false;
     return true;
   });
   const kind = ANA_METRIC_KIND[metric] || 'sum';
@@ -442,7 +505,7 @@ function aggregateQuarterly(qid, channel, metric, groupBy, statusFilter, develop
 function aggregateProjects(metric, groupBy, statusFilter, developerFilter) {
   const rows = (analyticsProjectsData || []).filter(r => {
     if (developerFilter && r.developer !== developerFilter) return false;
-    if (statusFilter && statusFilter.length && !statusFilter.includes(r.project_status)) return false;
+    if (statusFilter && !statusFilter.includes(r.project_status)) return false;
     return true;
   });
   const acc = {};
@@ -478,20 +541,41 @@ function anaCaptionText(domain, channel, metric, groupBy, chartType, fromQ, toQ)
 // линии, чтобы это не выглядело как нерабочий контрол.
 function syncPeriodUI() {
   const isLine = document.getElementById('anaChartType').value === 'line';
+  if (isLine && lastAnaChartType !== 'line') {
+    const qs = quartersChrono();
+    const fromSel = document.getElementById('anaQuarterFrom');
+    const toSel = document.getElementById('anaQuarterTo');
+    const fromIndex = qs.findIndex(q => q.id === fromSel.value);
+    const toIndex = qs.findIndex(q => q.id === toSel.value);
+    if (toIndex >= 0 && (fromIndex < 0 || toIndex - fromIndex + 1 < 8)) {
+      fromSel.value = qs[Math.max(0, toIndex - 7)].id;
+    }
+  }
   document.getElementById('anaQuarterFrom').style.display = isLine ? '' : 'none';
   document.getElementById('anaPeriodDash').style.display = isLine ? '' : 'none';
   document.getElementById('anaPeriodHint').style.display = isLine ? '' : 'none';
   document.getElementById('anaPeriodLabel').textContent = isLine ? 'Период' : 'Квартал';
+  lastAnaChartType = isLine ? 'line' : document.getElementById('anaChartType').value;
 }
 
 async function renderAnalytics() {
-  await ensureChart();
   syncPeriodUI();
   const domain = anaDomain();
   const channel = document.getElementById('anaChannel').value || 'sale';
   const metric = document.getElementById('anaMetric').value;
   const groupBy = document.getElementById('anaGroupBy').value;
-  const chartType = document.getElementById('anaChartType').value;
+  const chartTypeSelect = document.getElementById('anaChartType');
+  let chartType = chartTypeSelect.value;
+  const doughnutOption = chartTypeSelect.querySelector('option[value="doughnut"]');
+  const compositionAllowed = ANA_COMPOSITION_METRICS.has(metric);
+  doughnutOption.disabled = !compositionAllowed;
+  doughnutOption.title = compositionAllowed ? '' : 'Кольцевая диаграмма применима только к суммируемым показателям';
+  const chartHint = document.getElementById('anaChartHint');
+  chartHint.textContent = compositionAllowed ? '' : 'Кольцевая диаграмма недоступна для цен, ставок и средних значений: они не образуют доли целого.';
+  if (chartType === 'doughnut' && !compositionAllowed) {
+    chartType = 'bar';
+    chartTypeSelect.value = chartType;
+  }
   const developerFilter = document.getElementById('anaDeveloper').value || null;
   const statusFilter = domain === 'projects'
     ? [...document.querySelectorAll('.flt-ana-status:checked')].map(cb=>cb.value)
@@ -511,14 +595,20 @@ async function renderAnalytics() {
     datasets = [...keySet].sort().map((key, i) => ({
       label: key,
       data: perQuarter.map(m => m[key] != null ? Math.round(m[key]) : null),
-      borderColor: CHART_COLORS[i % CHART_COLORS.length], backgroundColor: 'transparent', tension: 0.2, spanGaps: true,
+      borderColor: CHART_COLORS[i % CHART_COLORS.length], backgroundColor: 'transparent', tension: 0.2, spanGaps: false,
     }));
     tableRows = null;
   } else {
     const agg = domain === 'quarterly'
       ? aggregateQuarterly(toQ, channel, metric, groupBy, null, developerFilter)
       : aggregateProjects(metric, groupBy, statusFilter, developerFilter);
-    const entries = sortAnaEntries(Object.entries(agg).filter(([,v]) => v != null), groupBy);
+    let entries = sortAnaEntries(Object.entries(agg).filter(([,v]) => v != null), groupBy);
+    if (chartType === 'doughnut' && entries.length > 8) {
+      const visible = entries.slice(0, 7);
+      const rest = entries.slice(7);
+      entries = [...visible, [`Другие (${rest.length})`, rest.reduce((sum, [, value]) => sum + value, 0)]];
+      chartHint.textContent = `Для читаемости показаны 7 крупнейших категорий; остальные ${rest.length} объединены в «Другие».`;
+    }
     labels = entries.map(([k]) => k);
     const data = entries.map(([,v]) => Math.round(v * 100) / 100);
     datasets = [{ label: (domain==='quarterly'?ANA_METRICS[channel]:ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric,
@@ -527,8 +617,17 @@ async function renderAnalytics() {
   }
 
   const showTable = chartType === 'table';
-  document.getElementById('anaChartWrap').style.display = showTable ? 'none' : 'block';
-  document.getElementById('anaTableWrap').style.display = showTable ? 'block' : 'none';
+  const hasData = datasets.some(ds => ds.data.some(v => v != null && isFinite(v)));
+  const chartWrap = document.getElementById('anaChartWrap');
+  const tableWrap = document.getElementById('anaTableWrap');
+  const empty = document.getElementById('anaEmpty');
+  const exportButton = document.getElementById('anaExport');
+  chartWrap.style.display = !showTable && hasData ? 'block' : 'none';
+  tableWrap.style.display = showTable ? 'block' : 'none';
+  empty.style.display = !showTable && !hasData ? 'flex' : 'none';
+  empty.textContent = 'По выбранным фильтрам данных нет. Измените квартал, показатель, группировку или фильтр.';
+  exportButton.disabled = !hasData;
+  exportButton.title = hasData ? 'Выгрузить текущую выборку в Excel' : 'Выгрузка недоступна: в выборке нет данных';
 
   if (showTable) {
     const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
@@ -536,47 +635,69 @@ async function renderAnalytics() {
     const rows = tableRows || [];
     document.getElementById('analyticsTable').innerHTML =
       `<thead><tr><th>${groupLabel}</th><th class="num">${metricLabel}</th></tr></thead><tbody>`
-      + rows.map(([k,v]) => `<tr><td>${k}</td><td class="num">${Math.round(v*100)/100}</td></tr>`).join('')
+      + (rows.length
+        ? rows.map(([k,v]) => `<tr><td>${k}</td><td class="num">${(Math.round(v*100)/100).toLocaleString('ru-RU')}</td></tr>`).join('')
+        : '<tr><td colspan="2" style="padding:28px;text-align:center;color:#777;">По выбранным фильтрам данных нет. Измените квартал, показатель, группировку или фильтр.</td></tr>')
       + `</tbody>`;
     if (analyticsChart) { analyticsChart.destroy(); analyticsChart = null; }
     return;
   }
 
-  if (analyticsChart) analyticsChart.destroy();
+  if (analyticsChart) { analyticsChart.destroy(); analyticsChart = null; }
+  if (!hasData) return;
+  await ensureChart();
   const isDoughnut = chartType === 'doughnut';
-  const isStacked = chartType === 'stacked';
   const type = isDoughnut ? 'doughnut' : (chartType === 'line' ? 'line' : 'bar');
+  const metricLabel = (domain === 'quarterly' ? ANA_METRICS[channel] : ANA_METRICS_PROJECTS).find(m=>m[0]===metric)?.[1] || metric;
+  const groupLabel = anaGroupByOptions(domain, channel).find(g=>g[0]===groupBy)?.[1] || groupBy;
+  const quarterLabel = id => QUARTERS.find(q => q.id === id)?.label || id;
+  const periodLabel = chartType === 'line' ? `${quarterLabel(fromQ)} — ${quarterLabel(toQ)}` : quarterLabel(toQ);
+  chartWrap.style.minHeight = type === 'bar' ? `${Math.max(380, labels.length * 34 + 130)}px` : '430px';
   analyticsChart = new Chart(document.getElementById('analyticsChart'), {
     type, data: { labels, datasets },
     options: {
-      responsive: true, maintainAspectRatio: false,
-      layout: { padding: { top: 8, right: 14 } },
+      responsive: true, maintainAspectRatio: false, indexAxis: type === 'bar' ? 'y' : 'x',
+      layout: { padding: { top: 8, right: 28 } },
       plugins: {
+        title: { display:true, text:metricLabel, color:'#1B2A4A', font:{size:14,weight:'700'} },
+        subtitle: { display:true, text:`${periodLabel} · группировка: ${groupLabel}`, color:'#666', font:{size:11} },
         legend: {
           position: 'bottom', labels: { boxWidth: 12, font: { size: 11, weight: '600' }, color: '#1B2A4A' },
           display: datasets.length > 1 || isDoughnut,
         },
         tooltip: {
           backgroundColor: '#1B2A4A', padding: 8, cornerRadius: 3, titleFont: { weight: '700' },
-          callbacks: { label: c => `${c.dataset.label ?? c.label}: ${(c.parsed.y ?? c.parsed)?.toLocaleString?.('ru-RU') ?? c.formattedValue}` },
+          callbacks: { label: c => {
+            const value = type === 'bar' ? c.parsed.x : (type === 'line' ? c.parsed.y : c.parsed);
+            return `${c.dataset.label ?? c.label}: ${value?.toLocaleString?.('ru-RU') ?? c.formattedValue}`;
+          } },
         },
         datalabels: chartType === 'line' ? false : {
-          display: !isDoughnut && !isStacked && datasets.length <= 2,
+          display: !isDoughnut && datasets.length <= 2,
           anchor: 'end', align: 'end', offset: 2,
           color: '#1B2A4A', font: { size: 10, weight: '700' },
           formatter: v => v == null ? '' : v.toLocaleString('ru-RU'),
         },
       },
       scales: isDoughnut ? undefined : {
-        x: { stacked: isStacked, grid: { display: false }, ticks: { color: '#333', font: { size: 11 } } },
-        y: { stacked: isStacked, beginAtZero: true, grace: '10%', grid: { color: '#eceef2' }, ticks: { color: '#666' } },
+        x: type === 'bar'
+          ? { beginAtZero:true, grace:'10%', grid:{color:'#eceef2'}, ticks:{color:'#666', callback:anaCompactNumber} }
+          : { grid:{display:false}, ticks:{color:'#333',font:{size:11},maxRotation:0,autoSkip:true,maxTicksLimit:9} },
+        y: type === 'bar'
+          ? { grid:{display:false}, ticks:{color:'#333',font:{size:11},callback:function(value){ return anaShortLabel(this.getLabelForValue(value)); }} }
+          : { beginAtZero:false, grace:'10%', grid:{color:'#eceef2'}, ticks:{color:'#666',callback:anaCompactNumber} },
       },
     },
   });
 }
 
 async function exportAnalytics() {
-  await ensureXLSX();
+  const button = document.getElementById('anaExport');
+  const originalText = button.textContent;
+  button.disabled = true;
+  button.textContent = 'Подготовка файла…';
+  try {
+    await ensureXLSX();
   const domain = anaDomain();
   const channel = document.getElementById('anaChannel').value || 'sale';
   const metric = document.getElementById('anaMetric').value;
@@ -595,10 +716,25 @@ async function exportAnalytics() {
     .map(([k,v]) => ({ [groupLabel]: k, [metricLabel]: Math.round(v*100)/100 }));
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Конструктор');
-  XLSX.writeFile(wb, `analytics_${domain}_${metric}_${groupBy}.xlsx`);
+    XLSX.writeFile(wb, `analytics_${domain}_${metric}_${groupBy}.xlsx`);
+    button.textContent = 'Файл подготовлен';
+  } catch (error) {
+    button.textContent = 'Не удалось выгрузить — повторите';
+  } finally {
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+    }, 1400);
+  }
 }
 
-initAnalyticsConstructor();
+initAnalyticsConstructor().catch(error => {
+  console.error('Не удалось инициализировать конструктор аналитики', error);
+  const status = document.getElementById('anaStatus');
+  status.textContent = 'Не удалось запустить конструктор аналитики. Обновите страницу и повторите попытку.';
+  status.style.color = '#b42318';
+  document.getElementById('anaContent').setAttribute('aria-busy', 'false');
+});
 </script>
 </body>
 </html>

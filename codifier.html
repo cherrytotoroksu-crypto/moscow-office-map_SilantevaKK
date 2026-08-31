@@ -22,10 +22,10 @@
   header h1 { font-size:15px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; }
   header .meta { font-size:11px; color:#aeb8cc; }
   .tabs { display:flex; gap:2px; padding:0 16px; background:#fff; border-bottom:1px solid var(--nf-line); }
-  .tab { padding:9px 16px; cursor:pointer; font-weight:700; font-size:12.5px; color:var(--nf-grey); border-bottom:2px solid transparent; }
+  .tab { padding:9px 16px; cursor:pointer; font-family:inherit; font-weight:700; font-size:12.5px; color:var(--nf-grey); background:transparent; border:0; border-bottom:2px solid transparent; }
   .tab.active { color:var(--nf-navy); border-bottom-color:var(--nf-red); background:#fff; }
   .subtabs { display:flex; gap:2px; padding:0 16px; background:var(--nf-bg); border-bottom:1px solid var(--nf-line); }
-  .subtab { padding:6px 14px; cursor:pointer; font-size:12px; color:#666; border-bottom:2px solid transparent; }
+  .subtab { padding:6px 14px; cursor:pointer; font-family:inherit; font-size:12px; color:#666; background:transparent; border:0; border-bottom:2px solid transparent; }
   .subtab:hover { color:var(--nf-navy); }
   .subtab.active { color:var(--nf-navy); border-bottom-color:var(--nf-navy); background:#fff; font-weight:700; }
   .toolbar { display:flex; align-items:center; gap:8px; padding:10px 16px; background:#fff; border-bottom:1px solid var(--nf-line); flex-wrap:wrap; }
@@ -35,6 +35,7 @@
   button.btn:hover { background:#f0f0f0; }
   button.btn.primary { background:var(--nf-red); color:#fff; border-color:var(--nf-red); font-weight:700; }
   button.btn.primary:hover { background:var(--nf-red-dark); }
+  :where(button, a, input, select, [role="tab"], [tabindex]):focus-visible { outline:3px solid var(--nf-red); outline-offset:2px; }
   .cols-panel, .filter-panel { position:fixed; z-index:200; background:#fff; border:1px solid var(--nf-line); border-radius:6px; box-shadow:0 4px 16px rgba(0,0,0,.18); padding:10px; max-height:min(420px, 80vh); overflow:auto; width:260px; max-width:92vw; }
   .cols-panel label, .filter-panel label { display:flex; align-items:center; gap:6px; padding:3px 2px; font-size:12px; white-space:nowrap; cursor:pointer; }
   .cols-panel input, .filter-panel input[type=checkbox] { accent-color:var(--nf-red); }
@@ -71,8 +72,10 @@
   td.flagged::after { content:''; position:absolute; top:0; right:0; border-width:0 7px 7px 0; border-style:solid; border-color:transparent #d9822b transparent transparent; }
   .status-row { padding:6px 16px; font-size:11px; color:#666; background:#fff; }
   tr.section-start td { border-top:2px solid var(--nf-navy); }
-  .qa-conflict { background:#fff3f0 !important; }
-  .qa-quarantine { background:#fff8e1 !important; }
+  .qa-conflict { background:#fff3f0 !important; border-inline-start:3px solid var(--nf-red); }
+  .qa-quarantine { background:#fff8e1 !important; border-inline-start:3px solid #d9822b; }
+  .qa-conflict td:first-child::before { content:"⚠ конфликт · "; color:var(--nf-red); font-weight:700; font-size:10px; }
+  .qa-quarantine td:first-child::before { content:"⏳ карантин · "; color:#d9822b; font-weight:700; font-size:10px; }
   .no-results-row td { text-align:center; padding:28px 16px; color:#888; font-size:13px; }
   .no-results-row .btn { margin-left:8px; }
   .card-btn { width:22px; height:22px; border-radius:4px; border:1px solid transparent; background:none; cursor:pointer; color:#8a94a3; font-size:12px; }
@@ -99,15 +102,15 @@
 </header>
 
 <div class="tabs" id="sectionTabs" role="tablist" aria-label="Разделы">
-  <div class="tab" role="tab" tabindex="0" data-section="codifier">Общий кодификатор</div>
-  <div class="tab" role="tab" tabindex="-1" data-section="golden">Golden File</div>
-  <div class="tab" role="tab" tabindex="-1" data-section="sale">Продажа офисов</div>
-  <div class="tab" role="tab" tabindex="-1" data-section="rent">Аренда офисов</div>
-  <div class="tab" role="tab" tabindex="-1" data-section="flex">Гибкие офисы</div>
-  <div class="tab" role="tab" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</div>
+  <button class="tab" type="button" role="tab" aria-selected="true" tabindex="0" data-section="codifier">Общий кодификатор</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="golden">Golden File</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="sale">Продажа офисов</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="rent">Аренда офисов</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="flex">Гибкие офисы</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</button>
 </div>
 <div class="subtabs" id="viewTabs" role="tablist" aria-label="Вкладки раздела" style="display:none;"></div>
-<div class="segment-cards" id="segmentCards" style="display:none;"></div>
+<div class="segment-cards" id="segmentCards" aria-live="polite" style="display:none;"></div>
 
 <div class="toolbar" id="toolbar">
   <input type="search" id="globalSearch" placeholder="Поиск по всей таблице...">
@@ -139,15 +142,15 @@
   <button class="btn primary" id="btnExportXlsx">Экспорт XLSX</button>
 </div>
 
-<div class="status-row" id="statusRow"></div>
+<div class="status-row" id="statusRow" role="status" aria-live="polite"></div>
 <div class="status-row" id="qaLegend">
   Подсветка строк: <span style="background:#fff3f0;padding:1px 6px;border-radius:3px;">конфликт источников</span>
   <span style="background:#fff8e1;padding:1px 6px;border-radius:3px;margin-left:6px;">на карантине/проверке</span>
   <span style="margin-left:6px;">— без цвета: проверено, конфликтов нет</span>
   <span style="margin-left:6px;">· уголок в ячейке (наведите) — спорный момент по этому полю</span>
 </div>
-<div class="status-row" id="totalsRow" style="font-weight:600;"></div>
-<div class="table-wrap"><table id="mainTable"><thead></thead><tbody></tbody></table></div>
+<div class="status-row" id="totalsRow" aria-live="polite" style="font-weight:600;"></div>
+<div class="table-wrap" id="tableWrap" aria-busy="false"><table id="mainTable"><thead></thead><tbody></tbody></table></div>
 <div class="status-row" id="pagerRow" style="display:flex; align-items:center; gap:8px;">
   <button class="btn" id="btnPrevPage">← Пред.</button>
   <span id="pagerLabel"></span>
@@ -1449,7 +1452,7 @@ function render() {
         if (row.section !== prevSection) rowClass = (rowClass + ' section-start').trim();
         prevSection = row.section;
       }
-      const cardCell = showCard ? `<td><button type="button" class="card-btn" data-row-idx="${i}" title="Источник и проверка">ℹ</button></td>` : '';
+      const cardCell = showCard ? `<td><button type="button" class="card-btn" data-row-idx="${i}" title="Источник и проверка" aria-label="Источник и проверка">ℹ</button></td>` : '';
       return `<tr class="${rowClass}">` + cardCell + cols.map(col => {
         const v = cellValue(row, col);
         const display = (v == null || v === '')
@@ -2100,8 +2103,8 @@ function renderSubtabs() {
   wrap.style.display = '';
   wrap.innerHTML = section.views.map(v => {
     const active = v === currentView;
-    return `<div class="subtab${active ? ' active' : ''}" role="tab" tabindex="${active ? 0 : -1}" `
-      + `aria-selected="${active}" data-view="${v}">${escapeHtml(VIEWS[v].label)}</div>`;
+    return `<button class="subtab${active ? ' active' : ''}" type="button" role="tab" tabindex="${active ? 0 : -1}" `
+      + `aria-selected="${active}" data-view="${v}">${escapeHtml(VIEWS[v].label)}</button>`;
   }).join('');
   wrap.querySelectorAll('.subtab').forEach(st => {
     st.onclick = () => switchToView(st.dataset.view);
@@ -2175,7 +2178,13 @@ async function renderSegmentCards() {
   wrap.style.display = '';
   wrap.innerHTML = '<div class="seg-card">Загрузка сводки по сегментам…</div>';
   const quarterId = QUARTERS[0].id;
-  const kpi = await computeSegmentKPIs(quarterId);
+  let kpi;
+  try {
+    kpi = await computeSegmentKPIs(quarterId);
+  } catch (error) {
+    wrap.innerHTML = '<div class="seg-card" style="color:#b42318;">Не удалось загрузить сводку. Обновите страницу или перейдите в раздел сегмента через вкладки выше.</div>';
+    return;
+  }
   if (currentView !== 'codifier') return; // пользователь мог уже переключиться, пока грузилось
   const cards = [
     {k: kpi.sale, gotoView: 'sale_buildings'},
@@ -2196,7 +2205,7 @@ async function renderSegmentCards() {
   });
 }
 
-function switchToView(viewId) {
+async function switchToView(viewId) {
   currentView = viewId;
   currentSection = VIEWS[viewId].section;
   syncSectionTabsActive();
@@ -2208,9 +2217,20 @@ function switchToView(viewId) {
   quarterSelect.value = currentQuarterId;
   compareSelect.value = compareQuarterId;
   closePanels();
+  const tableWrap = document.getElementById('tableWrap');
+  const status = document.getElementById('statusRow');
+  tableWrap.setAttribute('aria-busy', 'true');
+  status.textContent = 'Загрузка раздела…';
   if (currentView === 'codifier') renderSegmentCards();
   else document.getElementById('segmentCards').style.display = 'none';
-  return loadCurrentView();
+  try {
+    return await loadCurrentView();
+  } catch (error) {
+    status.textContent = 'Не удалось загрузить раздел. Обновите страницу или выберите другую вкладку.';
+    document.querySelector('#mainTable tbody').innerHTML = '<tr class="no-results-row"><td>Данные раздела недоступны. Обновите страницу для повторной попытки.</td></tr>';
+  } finally {
+    tableWrap.setAttribute('aria-busy', 'false');
+  }
 }
 
 const quarterSelect = document.getElementById('quarterSelect');
@@ -2245,7 +2265,10 @@ quarterSelect.onchange = (e) => {
   }
   suppressURLSync = false;
   syncURL();
-})();
+})().catch(() => {
+  document.getElementById('statusRow').textContent = 'Не удалось запустить кодификатор. Обновите страницу; если ошибка повторится, проверьте файлы данных.';
+  document.getElementById('tableWrap').setAttribute('aria-busy', 'false');
+});
 </script>
 </body>
 </html>

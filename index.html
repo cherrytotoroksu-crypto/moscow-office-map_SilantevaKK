@@ -33,6 +33,13 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, input, select, button, textarea { font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; color-scheme: light; }
+    :where(button, a, input, select, textarea, [role="button"], [tabindex]):focus-visible {
+      outline: 3px solid #A6093D; outline-offset: 2px;
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
     #map { width: 100vw; height: 100vh; }
 
     /* Подпись автора */
@@ -174,10 +181,10 @@
       max-height: 50vh; overflow-y: auto;
     }
     .stats-table h4 { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 8px; }
-    .stats-table .note { font-size: 10px; color: #999; margin-bottom: 8px; }
+    .stats-table .note { font-size: 10px; color: #767676; margin-bottom: 8px; }
     .stats-table table { border-collapse: collapse; width: 100%; }
     .stats-table th, .stats-table td { padding: 3px 8px; text-align: right; white-space: nowrap; }
-    .stats-table th { color: #888; font-weight: 600; border-bottom: 1px solid #ddd; font-size: 10px; text-transform: uppercase; }
+    .stats-table th { color: #767676; font-weight: 600; border-bottom: 1px solid #ddd; font-size: 10px; text-transform: uppercase; }
     .stats-table td:first-child, .stats-table th:first-child { text-align: left; }
     .stats-table tr:not(:last-child) td { border-bottom: 1px solid #f3f3f3; }
     .stats-table td.hl { font-weight: 700; color: #A6093D; }
@@ -189,7 +196,7 @@
       padding: 10px 14px; font-size: 12px; min-width: 150px;
     }
     .buildings-legend h4 { font-size: 11px; font-weight: 700; color: #666 !important; text-transform: uppercase; margin-bottom: 8px; }
-    .buildings-legend .sub { font-size: 10px; font-weight: 700; color: #999 !important; text-transform: uppercase; margin: 8px 0 4px; }
+    .buildings-legend .sub { font-size: 10px; font-weight: 700; color: #767676 !important; text-transform: uppercase; margin: 8px 0 4px; }
     .bl-item { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
     .bl-dot { border-radius: 50%; border: 1px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); flex-shrink: 0; }
     .bl-size-row { display: flex; align-items: flex-end; gap: 12px; padding: 4px 2px 0; }
@@ -215,17 +222,23 @@
       padding: 14px 18px; border-bottom: 1px solid #eee;
     }
     .modal-head h3 { font-size: 15px; flex: 1; color: #222; }
-    .modal-head .sub { font-size: 12px; color: #888; }
+    .modal-head .sub { font-size: 12px; color: #767676; }
     .modal-dl {
       padding: 6px 12px; background: #A6093D; color: #fff;
       border: none; border-radius: 6px; font-size: 12px; cursor: pointer;
     }
     .modal-dl:hover { background: #7A0630; }
+    .modal-dl:disabled { background:#9ca3af; cursor:not-allowed; opacity:.75; }
     .modal-x {
       background: none; border: none; font-size: 22px; line-height: 1;
-      color: #999; cursor: pointer; padding: 0 4px;
+      color: #767676; cursor: pointer; padding: 0 4px;
     }
     .modal-body { overflow: auto; padding: 12px 18px 16px; }
+    .chart-empty {
+      min-height:220px; display:flex; align-items:center; justify-content:center;
+      padding:28px; text-align:center; color:#666; background:#f7f8fa;
+      border:1px dashed #cfd3dc; border-radius:6px; line-height:1.5;
+    }
     .modal label { font-size: 12px; color: #555; }
     .modal label select { font-size: 12px; margin-left: 4px; padding: 3px 5px; border: 1px solid #ddd; border-radius: 4px; }
     #bcSearchInput { display: block; box-sizing: border-box; width: 100%; margin-top: 4px; padding: 5px 7px; border: 1px solid #ddd; border-radius: 4px; } /* font-size не задаём тут — на мобильных его переопределяет .modal-controls input[type=text] на 16px против авто-зума iOS */
@@ -251,10 +264,11 @@
     }
     .map-search input {
       width: 100%; padding: 8px 11px 8px 33px; border: 1px solid #ccc; border-radius: 7px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.2); font-size: 13px; outline: none;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.2); font-size: 13px;
       background: #ffffff !important; color: #333 !important;
     }
     .map-search input:focus { border-color: #A6093D; }
+    .map-search input:focus-visible { outline: 2px solid #A6093D; outline-offset: 1px; }
     .map-search-results {
       position: absolute; top: 100%; left: 0; right: 0; z-index: 50;
       background: #ffffff !important; color: #333 !important; border-radius: 7px; box-shadow: 0 3px 14px rgba(0,0,0,0.22);
@@ -264,14 +278,14 @@
     .msr-item { padding: 7px 11px; font-size: 12px; cursor: pointer; border-bottom: 1px solid #f2f2f2; }
     .msr-item:last-child { border-bottom: none; }
     .msr-item:hover, .msr-item.active { background: #F7E4E6; }
-    .msr-sub { color: #999; font-size: 10px; }
+    .msr-sub { color: #767676; font-size: 10px; }
 
     /* Тоггл режима продажа/аренда */
     #modeToggleWrap { display: flex; gap: 4px; margin-bottom: 2px; }
     .mode-btn {
       flex: 1; padding: 6px 1px; border: 1.5px solid #d1d5db; border-radius: 6px;
       background: #f9fafb; color: #374151; font-size: 10.5px; font-weight: 500;
-      cursor: pointer; transition: all .15s; white-space: nowrap;
+      cursor: pointer; transition: background-color .15s, border-color .15s, color .15s; white-space: nowrap;
     }
     .mode-btn.active {
       background: #A6093D; border-color: #A6093D; color: #fff;
@@ -389,7 +403,7 @@
     .leaflet-popup-content b { font-size: 14px; }
     .prow { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid #f0f0f0; gap: 8px; }
     .prow:last-child { border-bottom: none; }
-    .plabel { color: #888; font-size: 11px; white-space: nowrap; }
+    .plabel { color: #767676; font-size: 11px; white-space: nowrap; }
     .pval { font-weight: 600; color: #222; text-align: right; }
     .coord-val { font-family: 'SFMono-Regular', Consolas, Menlo, monospace; font-size: 11.5px; }
     .coord-copy-btn {
@@ -402,6 +416,7 @@
   </style>
 </head>
 <body>
+<h1 class="sr-only">Офисный рынок Москвы — интерактивная карта</h1>
 <div id="map"></div>
 
 <!-- Подпись автора -->
@@ -423,7 +438,7 @@
 <!-- Затемнение фона при открытой панели -->
 <div id="panelBackdrop"></div>
 <!-- Кнопка открытия/закрытия панели (только на мобильных) -->
-<button id="panelToggle" title="Меню">☰</button>
+<button id="panelToggle" title="Меню" aria-label="Меню">☰</button>
 
 <!-- Правая панель -->
 <div class="panel" id="mainPanel">
@@ -448,7 +463,7 @@
 
   <hr>
   <h3>Данные</h3>
-  <div id="fileStatus">Загрузка…</div>
+  <div id="fileStatus" role="status" aria-live="polite">Загрузка…</div>
   <div id="fileStats" style="display:none; margin-top:5px; padding-top:5px; border-top:1px solid #eee; grid-template-columns:1fr 1fr; gap:0 12px;">
     <div class="stat-row"><span>Объектов</span><span id="statCount">—</span></div>
     <div class="stat-row"><span id="statVolumeLabel">Площадь лотов в продаже</span><span id="statVolume">—</span></div>
@@ -476,7 +491,7 @@
   <label class="check-row"><input type="checkbox" id="ovBuildings" checked> Показать здания</label>
   <label class="check-row"><input type="checkbox" id="ovCluster" checked> Группировать (кластеры)</label>
   <label class="check-row"><input type="checkbox" id="ovChanges"> Подсветить изменения кв/кв</label>
-  <div id="changesNote" style="font-size:10px;color:#888;margin:2px 0 0;"></div>
+  <div id="changesNote" style="font-size:10px;color:#767676;margin:2px 0 0;"></div>
 
   <hr>
   <h3>Фильтр по статусу</h3>
@@ -492,7 +507,7 @@
     <label class="check-row"><input type="checkbox" class="flt-rent" value="да" checked> В аренде</label>
     <label class="check-row"><input type="checkbox" class="flt-rent" value="нет"> Не в аренде</label>
   </div>
-  <div id="filterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+  <div id="filterStats" style="font-size:11px;color:#767676;margin-top:3px;"></div>
 
   <h3 style="margin-top:5px;">Класс</h3>
   <label class="check-row"><input type="checkbox" class="flt-cls" value="Prime" checked> Prime</label>
@@ -503,20 +518,24 @@
 
   <h3 id="rangeFilterTitle" style="margin-top:5px;">Диапазон: цена, руб/кв.м</h3>
   <div class="range-row">
-    <input type="number" id="fltPriceMin" class="range-input" placeholder="от">
-    <input type="number" id="fltPriceMax" class="range-input" placeholder="до">
+    <span id="fltPriceMinLbl" class="sr-only">от</span>
+    <input type="number" id="fltPriceMin" class="range-input" placeholder="от" aria-labelledby="rangeFilterTitle fltPriceMinLbl">
+    <span id="fltPriceMaxLbl" class="sr-only">до</span>
+    <input type="number" id="fltPriceMax" class="range-input" placeholder="до" aria-labelledby="rangeFilterTitle fltPriceMaxLbl">
   </div>
-  <h3 style="margin-top:5px;">Диапазон: площадь, кв.м</h3>
+  <h3 id="areaFilterTitle" style="margin-top:5px;">Диапазон: площадь, кв.м</h3>
   <div class="range-row">
-    <input type="number" id="fltAreaMin" class="range-input" placeholder="от">
-    <input type="number" id="fltAreaMax" class="range-input" placeholder="до">
+    <span id="fltAreaMinLbl" class="sr-only">от</span>
+    <input type="number" id="fltAreaMin" class="range-input" placeholder="от" aria-labelledby="areaFilterTitle fltAreaMinLbl">
+    <span id="fltAreaMaxLbl" class="sr-only">до</span>
+    <input type="number" id="fltAreaMax" class="range-input" placeholder="до" aria-labelledby="areaFilterTitle fltAreaMaxLbl">
   </div>
   </div>
 
   <div id="coworkingControls" style="display:none;">
     <hr>
     <h3>Коворкинги</h3>
-    <div id="cwStatus" style="font-size:11px;color:#888;">Загрузка…</div>
+    <div id="cwStatus" role="status" aria-live="polite" style="font-size:11px;color:#767676;">Загрузка…</div>
     <div id="cwStats" style="display:none; margin-top:5px; padding-top:5px; border-top:1px solid #eee; grid-template-columns:1fr 1fr; gap:0 12px;">
       <div class="stat-row"><span>Площадок</span><span id="cwCount">—</span></div>
       <div class="stat-row"><span>Мест всего</span><span id="cwSeats">—</span></div>
@@ -543,10 +562,10 @@
     <h3 style="margin-top:8px;">Фильтр по ставке</h3>
     <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="да" checked> Со ставкой</label>
     <label class="check-row"><input type="checkbox" class="flt-cw-rate" value="нет" checked> Без ставки</label>
-    <div id="cwFilterStats" style="font-size:11px;color:#888;margin-top:3px;"></div>
+    <div id="cwFilterStats" style="font-size:11px;color:#767676;margin-top:3px;"></div>
 
     <h3 style="margin-top:8px;">Класс (по зданию площадки)</h3>
-    <div style="font-size:10px;color:#999;margin-bottom:4px;">Класс берётся у ближайшего здания в радиусе 80 м; площадки без такого здания — «Без здания».</div>
+    <div style="font-size:10px;color:#767676;margin-bottom:4px;">Класс берётся у ближайшего здания в радиусе 80 м; площадки без такого здания — «Без здания».</div>
     <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="Prime" checked> Prime</label>
     <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="A" checked> A</label>
     <label class="check-row"><input type="checkbox" class="flt-cw-cls" value="B+" checked> B+</label>
@@ -557,9 +576,9 @@
   <div id="projectsControls" style="display:none;">
     <hr>
     <h3>Все офисные проекты — свод</h3>
-    <div id="fpStatus" style="font-size:11px;color:#888;">Загрузка…</div>
-    <div id="fpStats" style="font-size:11px;color:#888;margin:4px 0 6px;"></div>
-    <div style="font-size:10px;color:#999;margin-bottom:4px;">Справочник проектов — не зависит от выбранного квартала</div>
+    <div id="fpStatus" role="status" aria-live="polite" style="font-size:11px;color:#767676;">Загрузка…</div>
+    <div id="fpStats" style="font-size:11px;color:#767676;margin:4px 0 6px;"></div>
+    <div style="font-size:10px;color:#767676;margin-bottom:4px;">Справочник проектов — не зависит от выбранного квартала</div>
 
     <h3 style="margin-top:6px;">Быстрый выбор</h3>
     <div id="fpQuickBtns" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;">
@@ -581,7 +600,7 @@
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Не определён" checked> Не определён</label>
 
     <h3 style="margin-top:6px;">Уровень доверия</h3>
-    <div style="font-size:10px;color:#999;margin-bottom:4px;">По умолчанию показаны все объекты; низкая уверенность означает необходимость дополнительной проверки, а не отсутствие объекта</div>
+    <div style="font-size:10px;color:#767676;margin-bottom:4px;">По умолчанию показаны все объекты; низкая уверенность означает необходимость дополнительной проверки, а не отсутствие объекта</div>
     <label class="radio-row"><input type="radio" name="fpConfMode" value="all" checked> Все объекты</label>
     <label class="radio-row"><input type="radio" name="fpConfMode" value="verified"> Только высокий и средний</label>
     <label class="radio-row"><input type="radio" name="fpConfMode" value="review"> Только требуют проверки (низкий)</label>
@@ -654,8 +673,8 @@
 </div>
 
 <!-- Модальное окно лотов -->
-<div class="modal-bg" id="lotsModalBg">
-  <div class="modal">
+<div class="modal-bg" id="lotsModalBg" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="lotsModalTitle">
     <div class="modal-head">
       <div>
         <h3 id="lotsModalTitle">Лоты</h3>
@@ -663,10 +682,10 @@
       </div>
       <button class="modal-dl" id="lotsModalCard" style="display:flex;align-items:center;gap:5px;background:#6b7280;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3" width="10" height="18" stroke="#ffffff" stroke-width="1.8"/><rect x="15" y="9" width="6" height="12" stroke="#ffffff" stroke-width="1.8"/><line x1="8" y1="7" x2="8" y2="7.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="7" x2="12" y2="7.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="11" x2="8" y2="11.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="11" x2="12" y2="11.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="15" x2="8" y2="15.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="12" y2="15.01" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>Карточка здания</button>
       <button class="modal-dl" id="lotsModalDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать Excel</button>
-      <button class="modal-x" id="lotsModalClose">&times;</button>
+      <button class="modal-x" id="lotsModalClose" aria-label="Закрыть окно лотов">&times;</button>
     </div>
     <div id="rentFinishFilterWrap" style="display:none; padding:8px 18px; border-bottom:1px solid #eee; font-size:12px;">
-      <span style="color:#888; margin-right:8px;">Отделка:</span>
+      <span style="color:#767676; margin-right:8px;">Отделка:</span>
       <span id="rentFinishFilterItems"></span>
     </div>
     <div class="modal-body" id="lotsModalBody"></div>
@@ -674,23 +693,23 @@
 </div>
 
 <!-- Модалка КАРТОЧКА ЗДАНИЯ (полная информация — из попапа коворкинга и т.п.) -->
-<div class="modal-bg" id="bldCardModalBg">
-  <div class="modal" style="width:min(420px,94vw);">
+<div class="modal-bg" id="bldCardModalBg" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bldCardTitle" style="width:min(420px,94vw);">
     <div class="modal-head">
       <h3 id="bldCardTitle">Здание</h3>
-      <button class="modal-x" id="bldCardClose">&times;</button>
+      <button class="modal-x" id="bldCardClose" aria-label="Закрыть карточку здания">&times;</button>
     </div>
     <div class="modal-body" id="bldCardBody"></div>
   </div>
 </div>
 
 <!-- Модалка ДИНАМИКА -->
-<div class="modal-bg" id="dynModalBg">
-  <div class="modal" style="width:min(860px,94vw);">
+<div class="modal-bg" id="dynModalBg" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dynModalTitle" aria-busy="false" style="width:min(860px,94vw);">
     <div class="modal-head">
-      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,17 9,11 13,15 21,5" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5 21,5 21,11" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Динамика по кварталам</h3>
+      <h3 id="dynModalTitle" style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,17 9,11 13,15 21,5" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,5 21,5 21,11" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Динамика по кварталам</h3>
       <button class="modal-dl" id="dynDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
-      <button class="modal-x" id="dynClose">&times;</button>
+      <button class="modal-x" id="dynClose" aria-label="Закрыть динамику по кварталам">&times;</button>
     </div>
     <div id="dynRentNote" style="display:none;padding:6px 18px;background:#FEF3E2;color:#92450c;font-size:12px;border-bottom:1px solid #eee;"></div>
     <div style="padding:10px 18px 0;">
@@ -732,17 +751,20 @@
         </select>
       </label>
     </div>
-    <div class="modal-body"><canvas id="dynChart" height="150"></canvas></div>
+    <div class="modal-body" id="dynChartWrap">
+      <canvas id="dynChart" height="150"></canvas>
+      <div id="dynEmpty" class="chart-empty" role="status" aria-live="polite" style="display:none;"></div>
+    </div>
   </div>
 </div>
 
 <!-- Модалка СРАВНЕНИЕ -->
-<div class="modal-bg" id="cmpModalBg">
-  <div class="modal" style="width:min(900px,94vw);">
+<div class="modal-bg" id="cmpModalBg" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cmpModalTitle" style="width:min(900px,94vw);">
     <div class="modal-head">
-      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/></svg>Сравнение кварталов</h3>
+      <h3 id="cmpModalTitle" style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/></svg>Сравнение кварталов</h3>
       <button class="modal-dl" id="cmpDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
-      <button class="modal-x" id="cmpClose">&times;</button>
+      <button class="modal-x" id="cmpClose" aria-label="Закрыть сравнение кварталов">&times;</button>
     </div>
     <div class="modal-controls">
       <label>Было: <select id="cmpFrom"></select></label>
@@ -771,12 +793,12 @@
 </div>
 
 <!-- Модалка СРАВНЕНИЕ ЗДАНИЙ -->
-<div class="modal-bg" id="bldCompareModalBg">
-  <div class="modal" style="width:min(900px,94vw);">
+<div class="modal-bg" id="bldCompareModalBg" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bcModalTitle" style="width:min(900px,94vw);">
     <div class="modal-head">
-      <h3 style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#A6093D" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#A6093D" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#A6093D" stroke-width="2"/></svg>Сравнение зданий</h3>
+      <h3 id="bcModalTitle" style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#A6093D" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#A6093D" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#A6093D" stroke-width="2"/></svg>Сравнение зданий</h3>
       <button class="modal-dl" id="bcDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
-      <button class="modal-x" id="bcClose">&times;</button>
+      <button class="modal-x" id="bcClose" aria-label="Закрыть сравнение зданий">&times;</button>
     </div>
     <div class="modal-controls" style="position:relative;">
       <label>Режим: <select id="bcMode">
@@ -831,9 +853,16 @@ function loadScript(src) {
   if (_scriptCache[src]) return _scriptCache[src];
   _scriptCache[src] = new Promise((resolve, reject) => {
     const s = document.createElement('script');
+    const fail = () => {
+      clearTimeout(timer);
+      delete _scriptCache[src];
+      s.remove();
+      reject(new Error(`Не удалось загрузить ${src}`));
+    };
+    const timer = setTimeout(fail, 10000);
     s.src = src;
-    s.onload = resolve;
-    s.onerror = () => reject(new Error(`Не удалось загрузить ${src}`));
+    s.onload = () => { clearTimeout(timer); resolve(); };
+    s.onerror = fail;
     document.head.appendChild(s);
   });
   return _scriptCache[src];
@@ -1551,7 +1580,7 @@ function renderStatsTable(key) {
       cell('wavg',   v.wavg != null ? fmt(Math.round(v.wavg)) : '—') +
       `</tr>`;
   }
-  if (!rows.length) html += `<tr><td colspan="5" style="color:#999">Нет данных</td></tr>`;
+  if (!rows.length) html += `<tr><td colspan="5" style="color:#767676">Нет данных</td></tr>`;
   html += `</tbody></table>`;
   el.innerHTML = html;
   el.style.display = 'block';
@@ -1604,7 +1633,7 @@ async function renderChoropleth() {
       return {
         fillColor: color,
         fillOpacity: val != null ? 0.75 : 0.3,
-        color: '#888', weight: 0.8, opacity: 0.8
+        color: '#767676', weight: 0.8, opacity: 0.8
       };
     },
     onEachFeature: (f, layer) => {
@@ -1845,7 +1874,7 @@ const ICON_CHECK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" 
 function coordsCell(b) {
   if (!isFinite(b.lat) || !isFinite(b.lng)) return '—';
   const lat = b.lat.toFixed(6), lng = b.lng.toFixed(6);
-  return `<span class="coord-val">${lat}, ${lng}</span><button class="coord-copy-btn" type="button" onclick="copyBuildingCoords(this, '${lat}, ${lng}')" title="Скопировать координаты">${ICON_COPY}</button>`;
+  return `<span class="coord-val">${lat}, ${lng}</span><button class="coord-copy-btn" type="button" onclick="copyBuildingCoords(this, '${lat}, ${lng}')" title="Скопировать координаты" aria-label="Скопировать координаты">${ICON_COPY}</button>`;
 }
 window.copyBuildingCoords = function(btn, text) {
   const original = btn.innerHTML;
@@ -2067,7 +2096,7 @@ function renderBuildingsLegend() {
   }).join('');
 
   if (rentMode && Object.keys(rentLotsData).length === 0) {
-    el.innerHTML = `<h4>Здания — класс</h4><div style="color:#999;font-size:11px;">Нет данных аренды для этого квартала</div>`;
+    el.innerHTML = `<h4>Здания — класс</h4><div style="color:#767676;font-size:11px;">Нет данных аренды для этого квартала</div>`;
     el.style.display = 'block';
     repositionSignature();
     return;
@@ -2089,12 +2118,18 @@ function renderBuildingsLegend() {
 function fetchJSON(url, fallback) {
   return fetch(url, { cache: 'no-cache' }).then(r => r.json()).catch(() => fallback);
 }
+function fetchJSONRequired(url) {
+  return fetch(url, { cache:'no-cache' }).then(r => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  });
+}
 
 async function loadBuildings() {
   const status = document.getElementById('fileStatus');
   try {
     const [data, lots, rent] = await Promise.all([
-      fetchJSON(currentQuarter.file, []),
+      fetchJSONRequired(currentQuarter.file),
       currentQuarter.lots ? fetchJSON(currentQuarter.lots, {}) : Promise.resolve({}),
       currentQuarter.rent ? fetchJSON(currentQuarter.rent, {}) : Promise.resolve({}),
       loadCoworking(), // сама пишет в coworkingData + обновляет статус коворкингов
@@ -2122,7 +2157,7 @@ async function loadBuildings() {
     await recomputeAll();
     assignGeo();
   } catch(e) {
-    status.textContent = '✗ Не удалось загрузить данные';
+    status.textContent = '✗ Не удалось загрузить здания. Обновите страницу; если ошибка повторится, проверьте файл выбранного квартала.';
     status.style.color = '#dc2626';
   }
 }
@@ -2707,12 +2742,15 @@ async function loadCoworking() {
     coworkingLoaded = true;
     coworkingLoadedFor = currentQuarter.id;
     document.getElementById('cwStatus').textContent = `Нет данных коворкингов для ${currentQuarter.label}`;
-    document.getElementById('cwStatus').style.color = '#999';
+    document.getElementById('cwStatus').style.color = '#767676';
     document.getElementById('cwStats').style.display = 'none';
     return;
   }
   try {
-    coworkingData = await fetch(currentQuarter.coworking, { cache: 'no-cache' }).then(r => r.json());
+    coworkingData = await fetch(currentQuarter.coworking, { cache: 'no-cache' }).then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    });
     coworkingLoaded = true;
     coworkingLoadedFor = currentQuarter.id;
     document.getElementById('cwStatus').textContent = `✓ ${currentQuarter.label}: ${coworkingData.length} площадок`;
@@ -2720,7 +2758,7 @@ async function loadCoworking() {
     updateCoworkingStatsUI();
   } catch (e) {
     coworkingData = [];
-    document.getElementById('cwStatus').textContent = '✗ Не удалось загрузить данные коворкингов';
+    document.getElementById('cwStatus').textContent = '✗ Не удалось загрузить коворкинги. Обновите страницу или выберите другой квартал.';
     document.getElementById('cwStatus').style.color = '#dc2626';
   }
 }
@@ -2838,14 +2876,17 @@ async function loadFutureProjects() {
   if (futureLoaded) return;
   const st = document.getElementById('fpStatus');
   try {
-    futureData = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => r.json());
+    futureData = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    });
     assignGeoToRows(futureData.projects);
     futureLoaded = true;
     st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат)`;
     st.style.color = '#16a34a';
     fpFillSelects();
   } catch (e) {
-    st.textContent = '✗ Не удалось загрузить свод проектов';
+    st.textContent = '✗ Не удалось загрузить свод проектов. Обновите страницу; если ошибка повторится, проверьте файл данных.';
     st.style.color = '#dc2626';
   }
 }
@@ -2996,9 +3037,9 @@ function renderFutureLegend() {
     .map(([label, c]) => `<div class="bl-item"><span class="bl-dot" style="width:14px;height:14px;background:${c}"></span><span>${label}</span></div>`)
     .join('');
   el.innerHTML = `<h4>Проекты — статус</h4>${items}` +
-    `<div style="font-size:10px;color:#888;margin-top:4px;">Размер точки — по GLA</div>` +
-    `<div style="font-size:10px;color:#888;margin-top:2px;">Бледная заливка — низкое доверие</div>` +
-    `<div style="font-size:10px;color:#888;margin-top:2px;">Пунктирная обводка — точка комплекса/улицы, не здания</div>`;
+    `<div style="font-size:10px;color:#767676;margin-top:4px;">Размер точки — по GLA</div>` +
+    `<div style="font-size:10px;color:#767676;margin-top:2px;">Бледная заливка — низкое доверие</div>` +
+    `<div style="font-size:10px;color:#767676;margin-top:2px;">Пунктирная обводка — точка комплекса/улицы, не здания</div>`;
   el.style.display = 'block';
   repositionSignature();
 }
@@ -3488,6 +3529,16 @@ function syncDynMetricOptions() {
 // Палитра NF Group: бордовый + тёмно-синий как основная пара, дальше по кругу.
 const CHART_COLORS = ['#A6093D','#1B2A4A','#C94F6E','#4A5C80','#7A0630','#8C97AC',
   '#D98BA0','#2E4066','#5C0A25','#B3BAC9','#E3A6B5','#0F1A30'];
+function chartCompactNumber(value) {
+  const n = Number(value);
+  if (!isFinite(n)) return value;
+  const abs = Math.abs(n);
+  const compact = (divisor, suffix) => `${(n / divisor).toLocaleString('ru-RU', { maximumFractionDigits: 1 })} ${suffix}`;
+  if (abs >= 1e9) return compact(1e9, 'млрд');
+  if (abs >= 1e6) return compact(1e6, 'млн');
+  if (abs >= 1e3) return compact(1e3, 'тыс.');
+  return n.toLocaleString('ru-RU', { maximumFractionDigits: 1 });
+}
 
 function divDisp(layer, name) {
   if (layer === 'zones') return ZONE_NAMES[name] || name;
@@ -3611,14 +3662,30 @@ window.setDynMode = async function(mode) {
   renderDynamics();
 };
 async function openDynamics() {
-  await precomputeAll();
-  buildDynBuildingList();
-  fillDynBuildingSelect('');
-  document.getElementById('dynBuildingSearch').value = '';
-  document.getElementById('dynRentNote').style.display = 'none';
-  syncDynModeButtons();
-  document.getElementById('dynModalBg').classList.add('open');
-  renderDynamics();
+  const bg = document.getElementById('dynModalBg');
+  const dialog = bg.querySelector('[role="dialog"]');
+  const empty = document.getElementById('dynEmpty');
+  bg.classList.add('open');
+  dialog.setAttribute('aria-busy', 'true');
+  document.getElementById('dynChart').style.display = 'none';
+  document.getElementById('dynDownload').disabled = true;
+  empty.style.display = 'flex';
+  empty.textContent = 'Загрузка и расчёт данных по кварталам…';
+  try {
+    await precomputeAll();
+    buildDynBuildingList();
+    fillDynBuildingSelect('');
+    document.getElementById('dynBuildingSearch').value = '';
+    document.getElementById('dynRentNote').style.display = 'none';
+    syncDynModeButtons();
+    await renderDynamics();
+  } catch (error) {
+    console.error('Не удалось подготовить динамику', error);
+    empty.style.display = 'flex';
+    empty.textContent = 'Не удалось загрузить динамику. Проверьте подключение и повторно откройте окно.';
+  } finally {
+    dialog.setAttribute('aria-busy', 'false');
+  }
 }
 // открыть аналитику для конкретного здания (из попапа)
 window.openBuildingAnalytics = async function(idx) {
@@ -3672,7 +3739,7 @@ async function renderDynamics() {
     [...names].forEach((n,i)=>{
       datasets.push({ label: divDisp(layer,n),
         data: qs.map(q=>{ const v=divVal(q.id,layer,n,metric,statsSource); return v==null?null:Math.round(v); }),
-        borderColor: CHART_COLORS[i%CHART_COLORS.length], backgroundColor:'transparent', tension:0.2, spanGaps:true });
+        borderColor: CHART_COLORS[i%CHART_COLORS.length], backgroundColor:'transparent', tension:0.2, spanGaps:false });
     });
   } else {
     const id = document.getElementById('dynBuilding').value;
@@ -3687,7 +3754,7 @@ async function renderDynamics() {
     });
     datasets.push({ label: name,
       data: values.map(v => v==null?null:Math.round(v)),
-      borderColor: CHART_COLORS[0], backgroundColor:'rgba(124,58,237,0.1)', tension:0.2, spanGaps:true, fill:true });
+      borderColor: CHART_COLORS[0], backgroundColor:'rgba(166,9,61,0.08)', tension:0.2, spanGaps:false, fill:true });
     // если у этого конкретного здания нет данных аренды/коворкингов — явно об этом сказать
     const noData = (rentMode || coworkingMode) && values.every(v => v==null);
     document.getElementById('dynRentNote').textContent = noData
@@ -3695,22 +3762,39 @@ async function renderDynamics() {
       : '';
     document.getElementById('dynRentNote').style.display = noData ? 'block' : 'none';
   }
-  if (dynChart) dynChart.destroy();
+  const metricLabel = (level==='building'
+    ? (coworkingMode ? METRIC_NAMES_COWORK_BUILDING : rentMode ? METRIC_NAMES_RENT_BUILDING : METRIC_NAMES)
+    : (coworkingMode ? METRIC_NAMES_COWORK_DIVISION : rentMode ? METRIC_NAMES_RENT_DIVISION : METRIC_NAMES))[metric];
+  const hasData = datasets.some(ds => ds.data.some(v => v != null && isFinite(v)));
+  const canvas = document.getElementById('dynChart');
+  const empty = document.getElementById('dynEmpty');
+  const download = document.getElementById('dynDownload');
+  if (dynChart) { dynChart.destroy(); dynChart = null; }
+  canvas.style.display = hasData ? 'block' : 'none';
+  empty.style.display = hasData ? 'none' : 'flex';
+  empty.textContent = level === 'building'
+    ? 'Для выбранного здания и показателя данных нет. Выберите другое здание, режим или показатель.'
+    : 'Для выбранного деления и показателя данных нет. Выберите другое деление, режим или показатель.';
+  download.disabled = !hasData;
+  download.title = hasData ? 'Выгрузить данные графика в Excel' : 'Выгрузка недоступна: на графике нет данных';
+  if (!hasData) return;
   dynChart = new Chart(document.getElementById('dynChart'), {
     type:'line', data:{ labels, datasets },
     options:{
       responsive:true,
       layout:{ padding:{ top:8, right:14 } },
-      elements:{ point:{ radius:4, hoverRadius:7, hitRadius:10 } },
+      elements:{ point:{ radius:4, hoverRadius:7, hitRadius:10, backgroundColor:'#fff', borderWidth:2 } },
       plugins:{
-        legend:{ position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
-        title:{ display:true, text:(level==='building'
-          ? (coworkingMode ? METRIC_NAMES_COWORK_BUILDING : rentMode ? METRIC_NAMES_RENT_BUILDING : METRIC_NAMES)
-          : (coworkingMode ? METRIC_NAMES_COWORK_DIVISION : rentMode ? METRIC_NAMES_RENT_DIVISION : METRIC_NAMES))[metric] },
+        legend:{ display:datasets.length > 1, position:'bottom', labels:{ boxWidth:12, font:{size:11} } },
+        title:{ display:true, text:metricLabel, color:'#1B2A4A', font:{size:13,weight:'700'} },
+        subtitle:{ display:true, text:`${labels[0]} — ${labels[labels.length-1]} · ${labels.length} кварталов`, color:'#666', font:{size:11} },
         tooltip:{ callbacks:{ label:c=>`${c.dataset.label}: ${c.parsed.y!=null?c.parsed.y.toLocaleString('ru-RU'):'—'}` } }
       },
       // grace добавляет отступы сверху/снизу, чтобы крайние точки не упирались в край и были видны
-      scales:{ y:{ beginAtZero:false, grace:'12%' } }
+      scales:{
+        x:{ grid:{ display:false }, ticks:{ color:'#555', maxRotation:0, autoSkip:true, maxTicksLimit:9 } },
+        y:{ beginAtZero:false, grace:'12%', grid:{ color:'#eceef2' }, ticks:{ color:'#666', callback:chartCompactNumber } }
+      }
     }
   });
 }
@@ -3831,8 +3915,9 @@ function renderCompare() {
       <td class="${cls}">${r.delta!=null?(r.delta>0?'+':'')+fmt(Math.round(r.delta)):'—'}</td>
       <td class="${cls}">${r.pct!=null?(r.pct>0?'+':'')+r.pct.toFixed(1)+'%':'—'}</td></tr>`;
   }).join('');
-  document.getElementById('cmpBody').innerHTML =
-    `<table class="cmp-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  document.getElementById('cmpBody').innerHTML = rows.length
+    ? `<table class="cmp-table"><thead>${head}</thead><tbody>${body}</tbody></table>`
+    : '<div class="chart-empty">Для выбранных периодов и показателя данных нет. Выберите другие кварталы, уровень или показатель.</div>';
 }
 document.getElementById('openCompare').addEventListener('click', openCompare);
 document.getElementById('openDynamicsCw').addEventListener('click', openDynamics);
@@ -3922,7 +4007,7 @@ msInput.addEventListener('input', function() {
   }
   msBox.innerHTML = matches.map(m =>
     `<div class="msr-item" data-idx="${m.idx}" data-kind="${m.kind}">${m.name}<div class="msr-sub">${m.sub}</div></div>`
-  ).join('') || '<div class="msr-item" style="color:#999">Ничего не найдено</div>';
+  ).join('') || '<div class="msr-item" style="color:#767676">Ничего не найдено</div>';
   msBox.classList.add('open');
 });
 function msGo(it) {
@@ -4062,7 +4147,7 @@ async function renderBldCompare() {
   chipsEl.innerHTML = bldCompareList.map(idx => {
     const b = buildingsData[idx];
     return `<span style="display:inline-flex;align-items:center;gap:5px;background:#F7E4E6;color:#A6093D;border-radius:14px;padding:4px 10px;font-size:12px;margin:2px 4px 2px 0;">${b.name}<span style="cursor:pointer;font-weight:700;" onclick="removeBldCompare(${idx})">&times;</span></span>`;
-  }).join('') || '<span style="color:#999;font-size:12px;">Добавьте здания для сравнения (до 4)</span>';
+  }).join('') || '<span style="color:#767676;font-size:12px;">Добавьте здания для сравнения (до 4)</span>';
 
   const body = document.getElementById('bcBody');
   if (!bldCompareList.length) { body.innerHTML = ''; return; }
@@ -4135,6 +4220,42 @@ document.getElementById('openBldCompareCw').addEventListener('click', openBldCom
 document.getElementById('bcClose').addEventListener('click', () => document.getElementById('bldCompareModalBg').classList.remove('open'));
 document.getElementById('bldCompareModalBg').addEventListener('click', e => {
   if (e.target.id === 'bldCompareModalBg') document.getElementById('bldCompareModalBg').classList.remove('open');
+});
+
+// Общая клавиатурная модель модальных окон: перенос фокуса внутрь,
+// закрытие по Escape, удержание Tab внутри и возврат фокуса к кнопке открытия.
+const modalReturnFocus = new WeakMap();
+const modalFocusableSelector = 'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+document.querySelectorAll('.modal-bg').forEach(bg => {
+  const observer = new MutationObserver(() => {
+    const isOpen = bg.classList.contains('open');
+    bg.setAttribute('aria-hidden', String(!isOpen));
+    if (isOpen) {
+      modalReturnFocus.set(bg, document.activeElement);
+      requestAnimationFrame(() => (bg.querySelector('.modal-x') || bg.querySelector(modalFocusableSelector))?.focus());
+    } else {
+      const returnTo = modalReturnFocus.get(bg);
+      if (returnTo && returnTo.isConnected) requestAnimationFrame(() => returnTo.focus());
+    }
+  });
+  observer.observe(bg, { attributes:true, attributeFilter:['class'] });
+});
+document.addEventListener('keydown', e => {
+  const openModals = [...document.querySelectorAll('.modal-bg.open')];
+  const bg = openModals[openModals.length - 1];
+  if (!bg) return;
+  if (e.key === 'Escape') {
+    e.preventDefault();
+    const close = bg.querySelector('.modal-x');
+    if (close) close.click(); else bg.classList.remove('open');
+    return;
+  }
+  if (e.key !== 'Tab') return;
+  const focusable = [...bg.querySelectorAll(modalFocusableSelector)].filter(el => el.offsetParent !== null);
+  if (!focusable.length) { e.preventDefault(); return; }
+  const first = focusable[0], last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
 });
 document.getElementById('bcDownload').addEventListener('click', async () => {
   if (!bldCompareList.length) return;
