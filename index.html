@@ -22,7 +22,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow">
   <title>Офисный рынок Москвы</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css"/>
   <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.css"/>
   <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.Default.css"/>
@@ -766,7 +766,7 @@
 
 <!-- Модалка СРАВНЕНИЕ -->
 <div class="modal-bg" id="cmpModalBg" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cmpModalTitle" style="width:min(900px,94vw);">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cmpModalTitle" aria-busy="false" style="width:min(900px,94vw);">
     <div class="modal-head">
       <h3 id="cmpModalTitle" style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="17,3 21,3 21,7" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="3" x2="13" y2="11" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/><polyline points="7,21 3,21 3,17" stroke="#A6093D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="21" x2="11" y2="13" stroke="#A6093D" stroke-width="2" stroke-linecap="round"/></svg>Сравнение кварталов</h3>
       <button class="modal-dl" id="cmpDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
@@ -794,13 +794,13 @@
         </select>
       </label>
     </div>
-    <div class="modal-body" id="cmpBody"></div>
+    <div class="modal-body" id="cmpBody" role="status" aria-live="polite"></div>
   </div>
 </div>
 
 <!-- Модалка СРАВНЕНИЕ ЗДАНИЙ -->
 <div class="modal-bg" id="bldCompareModalBg" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bcModalTitle" style="width:min(900px,94vw);">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bcModalTitle" aria-busy="false" style="width:min(900px,94vw);">
     <div class="modal-head">
       <h3 id="bcModalTitle" style="display:flex;align-items:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="10" width="5" height="11" stroke="#A6093D" stroke-width="2"/><rect x="10" y="5" width="5" height="16" stroke="#A6093D" stroke-width="2"/><rect x="17" y="13" width="5" height="8" stroke="#A6093D" stroke-width="2"/></svg>Сравнение зданий</h3>
       <button class="modal-dl" id="bcDownload" style="display:flex;align-items:center;gap:5px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel</button>
@@ -1131,9 +1131,14 @@ async function fetchGeoJSON(key) {
 }
 
 async function preloadAll() {
-  // грузим только файловые слои; синтетические — после загрузки зданий
+  // Грузим только активный на старте слой деления (по умолчанию 'mo',
+  // 1 МБ) — остальные 5 (ao/zones/submarkets/bizFormed/bizForming, ещё
+  // ~1.6 МБ суммарно) подтягиваются лениво через fetchGeoJSON() уже при
+  // переключении на них (renderChoropleth и т.п. сами это делают).
+  // Раньше все 6 качались разом до первой отрисовки карты — самая
+  // тяжёлая часть медленной загрузки.
   await Promise.all([
-    ...Object.keys(LAYER_CFG).filter(k => !LAYER_CFG[k].synth).map(fetchGeoJSON),
+    fetchGeoJSON(activeLayerKey),
     loadBuildingDates(),
   ]);
 }
@@ -1323,13 +1328,22 @@ function computeStats(layerKey, geojson, blds, useRent, rentSource) {
   return out;
 }
 
-async function recomputeAll() {
+// Статистика по каждому слою деления считается только когда он реально
+// показан — раньше recomputeAll() тянул geojson и считал стату сразу для
+// всех 6 (mo/ao/zones/submarkets/bizFormed/bizForming), даже для 5, которые
+// пользователь мог никогда не открыть за сессию. При смене фильтров/квартала
+// computed сбрасывается целиком (числа зависят от фильтра), а досчитывается
+// заново только активный слой + любой другой — лениво, при переключении на
+// него (см. обработчик input[name="activeLayer"]).
+async function ensureLayerComputed(key) {
+  if (computed[key]) return;
   const filtered = getFilteredBuildings();
+  const gj = await fetchGeoJSON(key);
+  computed[key] = computeStats(key, gj, filtered, rentMode);
+}
+async function recomputeAll() {
   computed = {};
-  for (const key of Object.keys(LAYER_CFG)) {
-    const gj = await fetchGeoJSON(key);
-    computed[key] = computeStats(key, gj, filtered, rentMode);
-  }
+  await ensureLayerComputed(activeLayerKey);
 }
 
 // Фильтр по наличию ставки. Если ставка не указана — считаем, что данных нет.
@@ -1386,12 +1400,14 @@ function computeCoworkingStats(layerKey, geojson, cwList) {
   return out;
 }
 let computedCoworking = {};
+async function ensureCoworkingLayerComputed(key) {
+  if (computedCoworking[key]) return;
+  const gj = await fetchGeoJSON(key);
+  computedCoworking[key] = computeCoworkingStats(key, gj);
+}
 async function recomputeCoworkingAll() {
   computedCoworking = {};
-  for (const key of Object.keys(LAYER_CFG)) {
-    const gj = await fetchGeoJSON(key);
-    computedCoworking[key] = computeCoworkingStats(key, gj);
-  }
+  await ensureCoworkingLayerComputed(activeLayerKey);
 }
 
 // ============================================================
@@ -1401,7 +1417,10 @@ let allBuildings = {};   // qid -> [building]
 let allStats = {};       // qid -> { layerKey -> {name -> stats} }  (продажа)
 let allRentStats = {};   // qid -> { layerKey -> {name -> stats} }  (аренда)
 let buildById = {};      // id -> { qid -> building }
-let precomputed = false;
+let historicalBuildingsReady = false;
+let historicalBuildingsPromise = null;
+const precomputedModes = new Set();
+const precomputeModePromises = {};
 
 // Единый ключ здания для сквозной сверки между кварталами.
 // Поле b.id ненадёжно (в разных кварталах — то числовое, то текстовый
@@ -1478,50 +1497,86 @@ async function ensureLots(qid) {
   allLots[qid] = q?.lots ? await fetchJSON(q.lots, {}) : {};
   return allLots[qid];
 }
-async function precomputeAll() {
-  if (precomputed) return;
-  // порядок кварталов от старых к новым
+function activeHistoryMode() {
+  return coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale');
+}
+
+async function ensureHistoricalBuildings() {
+  if (historicalBuildingsReady) return;
+  if (historicalBuildingsPromise) return historicalBuildingsPromise;
   const qs = [...QUARTERS].slice().reverse();
-  // 1) сначала тянем данные всех кварталов ПАРАЛЛЕЛЬНО (раньше это были
-  // 17 последовательных раундов по 3 файла — самая долгая часть первого
-  // открытия «Динамики»/«Сравнения»), считать статистику будем потом
-  const fetched = await Promise.all(qs.map(async q => {
-    const [blds, rent, coworking] = await Promise.all([
-      fetchJSON(q.file, []),
-      q.rent ? fetchJSON(q.rent, {}) : Promise.resolve({}),
-      q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]),
-    ]);
-    return { q, blds, rent, coworking };
-  }));
-  // 2) считаем статистику — чисто CPU-работа поверх уже закэшированных
-  // geojson-слоёв (preloadAll успел их загрузить раньше), без сетевых пауз
-  // «mo» (адм. границы Москвы) — самый тяжёлый полигон (1 МБ, один сплошной
-  // контур на весь город) и при этом НЕ входит ни в один селект «по делениям»
-  // (там только zones/ao/submarkets/bizFormed/bizForming) — считать его
-  // 17×3 раза для истории смысла нет, это используется только на живой
-  // карте текущего квартала через отдельный recomputeAll().
-  const divisionLayers = Object.keys(LAYER_CFG).filter(k => k !== 'mo');
-  for (const { q, blds, rent, coworking } of fetched) {
-    applyBuildingDates(blds, q.id);
-    allBuildings[q.id] = blds;
-    allRentLots[q.id] = rent;
-    allCoworking[q.id] = coworking;
-    allStats[q.id] = {};
-    allRentStats[q.id] = {};
-    allCoworkingStats[q.id] = {};
-    for (const key of divisionLayers) {
-      const gj = await fetchGeoJSON(key);
-      allStats[q.id][key] = computeStats(key, gj, blds);
-      allRentStats[q.id][key] = computeStats(key, gj, blds, true, rent);
-      allCoworkingStats[q.id][key] = computeCoworkingStats(key, gj, coworking);
+  historicalBuildingsPromise = (async () => {
+    const fetched = await Promise.all(qs.map(async q => ({
+      q,
+      blds: q.id === currentQuarter.id && !projectsMode && buildingsData.length
+        ? buildingsData
+        : await fetchJSON(q.file, []),
+    })));
+    for (const { q, blds } of fetched) {
+      applyBuildingDates(blds, q.id);
+      allBuildings[q.id] = blds;
+      for (const b of blds) {
+        const nid = normId(b);
+        if (!nid) continue;
+        (buildById[nid] ||= {})[q.id] = b;
+      }
     }
-    for (const b of blds) {
-      const nid = normId(b);
-      if (!nid) continue;
-      (buildById[nid] ||= {})[q.id] = b;
-    }
+    historicalBuildingsReady = true;
+  })();
+  try {
+    await historicalBuildingsPromise;
+  } catch (error) {
+    historicalBuildingsPromise = null;
+    throw error;
   }
-  precomputed = true;
+}
+
+// История считается лениво по режимам. Продажа не загружает заранее аренду
+// и коворкинги; Promise-кэш объединяет параллельные открытия аналитики.
+async function precomputeHistoryMode(mode) {
+  const historyMode = ['rent', 'coworking'].includes(mode) ? mode : 'sale';
+  if (precomputedModes.has(historyMode)) return;
+  if (precomputeModePromises[historyMode]) return precomputeModePromises[historyMode];
+  precomputeModePromises[historyMode] = (async () => {
+    await ensureHistoricalBuildings();
+    const qs = [...QUARTERS].slice().reverse();
+    let modeData = null;
+    if (historyMode === 'rent') {
+      modeData = await Promise.all(qs.map(q => q.id === currentQuarter.id && !projectsMode
+        ? rentLotsData
+        : (q.rent ? fetchJSON(q.rent, {}) : Promise.resolve({}))));
+    } else if (historyMode === 'coworking') {
+      modeData = await Promise.all(qs.map(q => q.id === currentQuarter.id && !projectsMode
+        ? coworkingData
+        : (q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]))));
+    }
+    const divisionLayers = Object.keys(LAYER_CFG).filter(k => k !== 'mo');
+    for (let i = 0; i < qs.length; i++) {
+      const q = qs[i], blds = allBuildings[q.id] || [];
+      const target = historyMode === 'rent' ? allRentStats
+        : historyMode === 'coworking' ? allCoworkingStats : allStats;
+      target[q.id] = {};
+      if (historyMode === 'rent') allRentLots[q.id] = modeData[i];
+      if (historyMode === 'coworking') allCoworking[q.id] = modeData[i];
+      for (const key of divisionLayers) {
+        const gj = await fetchGeoJSON(key);
+        target[q.id][key] = historyMode === 'rent'
+          ? computeStats(key, gj, blds, true, modeData[i])
+          : historyMode === 'coworking'
+            ? computeCoworkingStats(key, gj, modeData[i])
+            : computeStats(key, gj, blds);
+      }
+    }
+    precomputedModes.add(historyMode);
+  })();
+  try {
+    await precomputeModePromises[historyMode];
+  } finally {
+    delete precomputeModePromises[historyMode];
+  }
+}
+async function precomputeAll() {
+  return precomputeHistoryMode(activeHistoryMode());
 }
 // хронологический порядок qid (старые → новые)
 function quartersChrono() { return [...QUARTERS].slice().reverse(); }
@@ -1697,15 +1752,21 @@ const OVERLAY_CFG = [
   { id: 'ovBizForming', key: 'bizForming', style: { color:'#e07b00', weight:2, dashArray:'5 4', fillOpacity:0 } },
 ];
 
+async function ensureOverlayLayer(oc) {
+  if (overlayLayers[oc.id]) return overlayLayers[oc.id];
+  const gj = await fetchGeoJSON(oc.key);
+  overlayLayers[oc.id] = L.geoJSON(gj, { style: oc.style, interactive: false });
+  return overlayLayers[oc.id];
+}
+
 async function renderOverlays() {
   for (const oc of OVERLAY_CFG) {
     if (overlayLayers[oc.id]) map.removeLayer(overlayLayers[oc.id]);
-    const gj = await fetchGeoJSON(oc.key);
-    overlayLayers[oc.id] = L.geoJSON(gj, {
-      style: oc.style,
-      interactive: false,
-    });
-    if (document.getElementById(oc.id).checked) overlayLayers[oc.id].addTo(map);
+    // Оверлеи по умолчанию выключены (см. чекбоксы ovZones/ovSub/...) —
+    // не качаем их geojson, пока пользователь реально не включит слой.
+    if (!document.getElementById(oc.id).checked) continue;
+    const layer = await ensureOverlayLayer(oc);
+    layer.addTo(map);
   }
 }
 
@@ -2421,10 +2482,16 @@ document.getElementById('quarterSelect').addEventListener('change', async functi
 //  ОБРАБОТЧИКИ СОБЫТИЙ
 // ============================================================
 
-// Смена базового слоя
+// Смена базового слоя — статистика для этого слоя могла не считаться ни
+// разу за сессию (см. ensureLayerComputed/ensureCoworkingLayerComputed),
+// досчитываем её здесь перед перерисовкой.
 document.querySelectorAll('input[name="activeLayer"]').forEach(r => {
-  r.addEventListener('change', function() {
+  r.addEventListener('change', async function() {
     activeLayerKey = this.value;
+    if (dataLoaded) {
+      if (coworkingMode) await ensureCoworkingLayerComputed(activeLayerKey);
+      else await ensureLayerComputed(activeLayerKey);
+    }
     renderChoropleth();
     syncURL();
   });
@@ -2437,11 +2504,17 @@ document.getElementById('metricSelect').addEventListener('change', function() {
   syncURL();
 });
 
-// Оверлеи
+// Оверлеи — слой мог ещё не быть построен (ленивая загрузка), поэтому
+// при первом включении дожидаемся ensureOverlayLayer(), а не просто
+// проверяем overlayLayers[oc.id].
 OVERLAY_CFG.forEach(oc => {
-  document.getElementById(oc.id).addEventListener('change', function() {
-    if (!overlayLayers[oc.id]) return;
-    this.checked ? overlayLayers[oc.id].addTo(map) : map.removeLayer(overlayLayers[oc.id]);
+  document.getElementById(oc.id).addEventListener('change', async function() {
+    if (this.checked) {
+      const layer = await ensureOverlayLayer(oc);
+      layer.addTo(map);
+    } else if (overlayLayers[oc.id]) {
+      map.removeLayer(overlayLayers[oc.id]);
+    }
   });
 });
 
@@ -3665,9 +3738,19 @@ function syncDynModeButtons() {
 }
 // переключатель Продажа/Аренда внутри модалки «Динамика» — переиспользует общий setMode
 window.setDynMode = async function(mode) {
-  await setMode(mode);
-  syncDynModeButtons();
-  renderDynamics();
+  const dialog = document.querySelector('#dynModalBg [role="dialog"]');
+  const empty = document.getElementById('dynEmpty');
+  dialog.setAttribute('aria-busy', 'true');
+  empty.style.display = 'flex';
+  empty.textContent = 'Загрузка данных выбранного режима…';
+  try {
+    await setMode(mode);
+    await precomputeHistoryMode(mode);
+    syncDynModeButtons();
+    await renderDynamics();
+  } finally {
+    dialog.setAttribute('aria-busy', 'false');
+  }
 };
 async function openDynamics() {
   const bg = document.getElementById('dynModalBg');
@@ -3831,13 +3914,26 @@ function fillQuarterSelect(sel, def) {
   sel.value = def;
 }
 async function openCompare() {
-  await precomputeAll();
-  const mode = coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale');
-  const defaults = getDefaultComparisonQuarters(mode);
-  fillQuarterSelect(document.getElementById('cmpFrom'), defaults.from);
-  fillQuarterSelect(document.getElementById('cmpTo'), defaults.to);
-  document.getElementById('cmpModalBg').classList.add('open');
-  renderCompare();
+  const bg = document.getElementById('cmpModalBg');
+  const dialog = bg.querySelector('[role="dialog"]');
+  const body = document.getElementById('cmpBody');
+  bg.classList.add('open');
+  dialog.setAttribute('aria-busy', 'true');
+  document.getElementById('cmpDownload').disabled = true;
+  body.innerHTML = '<div class="chart-empty">Загрузка и расчёт сравнения…</div>';
+  try {
+    await precomputeAll();
+    const mode = activeHistoryMode();
+    const defaults = getDefaultComparisonQuarters(mode);
+    fillQuarterSelect(document.getElementById('cmpFrom'), defaults.from);
+    fillQuarterSelect(document.getElementById('cmpTo'), defaults.to);
+    renderCompare();
+  } catch (error) {
+    console.error('Не удалось подготовить сравнение', error);
+    body.innerHTML = '<div class="chart-empty">Не удалось загрузить сравнение. Проверьте подключение и повторно откройте окно.</div>';
+  } finally {
+    dialog.setAttribute('aria-busy', 'false');
+  }
 }
 // На уровне зданий wavg/avg/price дают одно и то же число, поэтому для
 // сравнения по зданиям показываем только осмысленные показатели.
@@ -3915,6 +4011,10 @@ function renderCompare() {
   });
   rows.sort((a,b)=>(Math.abs(b.pct||0)-Math.abs(a.pct||0)));
   cmpRows = rows;
+  document.getElementById('cmpDownload').disabled = rows.length === 0;
+  document.getElementById('cmpDownload').title = rows.length
+    ? 'Выгрузить сравнение в Excel'
+    : 'Выгрузка недоступна: в сравнении нет данных';
   const fLbl = QUARTERS.find(q=>q.id===from)?.label, tLbl = QUARTERS.find(q=>q.id===to)?.label;
   const head = `<tr><th>Объект</th><th>${fLbl}</th><th>${tLbl}</th><th>Δ абс.</th><th>Δ %</th></tr>`;
   const body = rows.map(r=>{
@@ -4224,7 +4324,22 @@ async function openBldCompareModal() {
 }
 document.getElementById('openBldCompare').addEventListener('click', openBldCompareModal);
 document.getElementById('openBldCompareCw').addEventListener('click', openBldCompareModal);
-['bcFrom', 'bcTo', 'bcMode'].forEach(id => document.getElementById(id).addEventListener('change', renderBldCompare));
+['bcFrom', 'bcTo'].forEach(id => document.getElementById(id).addEventListener('change', renderBldCompare));
+document.getElementById('bcMode').addEventListener('change', async function() {
+  const dialog = document.querySelector('#bldCompareModalBg [role="dialog"]');
+  const body = document.getElementById('bcBody');
+  dialog.setAttribute('aria-busy', 'true');
+  body.innerHTML = '<div class="chart-empty">Загрузка данных выбранного режима…</div>';
+  try {
+    await precomputeHistoryMode(this.value);
+    await renderBldCompare();
+  } catch (error) {
+    console.error('Не удалось переключить режим сравнения зданий', error);
+    body.innerHTML = '<div class="chart-empty">Не удалось загрузить данные режима. Проверьте подключение и повторите действие.</div>';
+  } finally {
+    dialog.setAttribute('aria-busy', 'false');
+  }
+});
 document.getElementById('bcClose').addEventListener('click', () => document.getElementById('bldCompareModalBg').classList.remove('open'));
 document.getElementById('bldCompareModalBg').addEventListener('click', e => {
   if (e.target.id === 'bldCompareModalBg') document.getElementById('bldCompareModalBg').classList.remove('open');
