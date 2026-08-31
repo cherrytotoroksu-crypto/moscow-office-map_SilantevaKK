@@ -68,6 +68,10 @@ ROOT_ALLOW_PATTERNS = [
     re.compile(r"^.+\.md$"),
     re.compile(r"^qa_.+\.json$"),
     re.compile(r"^classifier_audit_baseline.*\.json$"),
+    # favicon.svg — все 4 HTML-страницы ссылаются на него по относительному
+    # пути (<link rel="icon" href="favicon.svg">); без этого паттерна файл
+    # не копируется в _site/ и вкладка браузера отдаёт 404 на проде.
+    re.compile(r"^favicon\.svg$"),
 ]
 ROOT_DENY_NAMES = {"SECURITY_AUDIT.md"}
 
@@ -166,6 +170,24 @@ def build_data_dir():
         print(f"  data/building_dates.json: {len(cleaned)} записей, поля source/last_checked удалены")
 
 
+def build_vendor_dir():
+    # Leaflet/Chart.js/xlsx/Montserrat были локализованы (перестали грузиться
+    # с unpkg/jsdelivr/fonts.googleapis.com) и лежат в vendor/, на который все
+    # 4 HTML-страницы ссылаются относительными путями (vendor/leaflet/leaflet.js
+    # и т.п.). До этой функции сборка его не копировала вообще — на проде
+    # (GitHub Pages) все vendor/* отдавали 404, и вся карта не работала
+    # ("L is not defined", т.к. Leaflet не успевал загрузиться). Обнаружено
+    # 2026-08-31 при проверке живого сайта.
+    src_vendor = os.path.join(REPO_ROOT, "vendor")
+    if not os.path.isdir(src_vendor):
+        print("  vendor/: директория не найдена, пропущено")
+        return
+    out_vendor = os.path.join(OUT_DIR, "vendor")
+    shutil.copytree(src_vendor, out_vendor)
+    file_count = sum(len(files) for _, _, files in os.walk(out_vendor))
+    print(f"  vendor/: скопировано {file_count} файлов (Leaflet, Chart.js, xlsx, шрифты)")
+
+
 def build_robots_txt():
     # По просьбе пользователя (2026-07-30): сайт должен быть сложно найти без
     # точной ссылки — поисковики не должны его индексировать вообще.
@@ -181,6 +203,7 @@ def main():
     build_index_html()
     build_data_dir()
     build_root_files()
+    build_vendor_dir()
     build_robots_txt()
 
     # Явный список того, что НЕ попало в сборку, для наглядности при проверке.
