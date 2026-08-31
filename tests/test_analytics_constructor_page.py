@@ -58,10 +58,12 @@ class AnalyticsConstructorPageTest(unittest.TestCase):
             window = self.html[max(0, idx - 400):idx]
             self.assertTrue("domain === 'quarterly'" in window and "} else {" in window, window)
 
-    def test_csp_allows_both_chart_and_xlsx_cdns(self):
+    def test_csp_keeps_scripts_and_styles_local(self):
         csp = re.search(r'Content-Security-Policy" content="([^"]+)"', self.html).group(1)
-        self.assertIn("https://cdn.jsdelivr.net", csp)
-        self.assertIn("https://unpkg.com", csp)
+        self.assertIn("script-src 'self' 'unsafe-inline'", csp)
+        self.assertIn("style-src 'self' 'unsafe-inline'", csp)
+        self.assertNotIn("https://cdn.jsdelivr.net", csp)
+        self.assertNotIn("https://unpkg.com", csp)
 
     def test_na_label_used_for_missing_groupby_values(self):
         """Записи без значения по оси группировки не должны отбрасываться
