@@ -15,7 +15,10 @@
     --nf-ink:#161616; --nf-grey:#666; --nf-line:#e3e5ea; --nf-bg:#f4f5f7;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:var(--nf-ink); background:var(--nf-bg); }
+  body {
+    font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:var(--nf-ink); background:var(--nf-bg);
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
   header {
     background:var(--nf-navy-strong); color:#fff; padding:11px 16px; display:flex; align-items:center; gap:16px;
     flex-wrap:wrap; border-bottom:3px solid var(--nf-red);
@@ -55,6 +58,7 @@
   .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid var(--nf-line); border-radius:6px; max-height:calc(100vh - 190px); }
   table { border-collapse:collapse; width:100%; font-size:12px; }
   th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left; white-space:nowrap; }
+  td.num-cell, th.num-cell { text-align:right; font-variant-numeric:tabular-nums; }
   th { background:var(--nf-navy); color:#fff; position:sticky; top:0; z-index:2; user-select:none; padding:0; text-transform:uppercase; font-size:10.5px; letter-spacing:.3px; }
   th:first-child, td:first-child { position:sticky; left:0; background:#fff; z-index:1; box-shadow:2px 0 3px rgba(0,0,0,.04); }
   th:first-child { z-index:3; background:var(--nf-navy); }
@@ -1425,7 +1429,7 @@ function render() {
     const sortInd = isSorted ? `<span class="sort-ind">${ts.sort.dir === 1 ? '▲' : '▼'}</span>` : '';
     const f = ts.filters[col.key];
     const hasFilter = !!(f && ((f.values && f.values.size > 0) || f.emptyOnly || f.nonEmptyOnly || (f.mode === 'condition' && f.condition && f.condition.op)));
-    return `<th data-key="${col.key}"><div class="th-inner">`
+    return `<th data-key="${col.key}"${col.type === 'number' ? ' class="num-cell"' : ''}><div class="th-inner">`
       + `<span class="th-label" data-sort-key="${col.key}" title="Сортировать">${escapeHtml(col.label)}${sortInd}</span>`
       + `<button type="button" class="filter-btn${hasFilter ? ' active' : ''}" data-filter-key="${col.key}" `
       + `aria-label="Фильтр по столбцу «${escapeHtml(col.label)}»"${hasFilter ? ' aria-pressed="true"' : ''} title="Фильтр">▾</button>`
@@ -1460,9 +1464,10 @@ function render() {
           ? '<span class="empty-cell">—</span>'
           : escapeHtml(formatDisplayValue(row, col, v));
         const flag = cellFlag(row, col);
+        const numCls = col.type === 'number' ? ' num-cell' : '';
         return flag
-          ? `<td class="flagged" title="${escapeHtml(flag)}">${display}</td>`
-          : `<td>${display}</td>`;
+          ? `<td class="flagged${numCls}" title="${escapeHtml(flag)}">${display}</td>`
+          : `<td${numCls ? ` class="${numCls.trim()}"` : ''}>${display}</td>`;
       }).join('') + '</tr>';
     }).join('');
     if (showCard) {

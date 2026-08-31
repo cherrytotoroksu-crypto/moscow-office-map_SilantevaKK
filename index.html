@@ -31,6 +31,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, input, select, button, textarea { font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; color-scheme: light; }
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     :where(button, a, input, select, textarea, [role="button"], [tabindex]):focus-visible {
       outline: 3px solid var(--nf-red); outline-offset: 2px;
     }
@@ -139,7 +140,7 @@
       font-size: 11px; margin: 1px 0;
       color: #444;
     }
-    .stat-row span:last-child { font-weight: 600; color: #111; }
+    .stat-row span:last-child { font-weight: 600; color: #111; font-variant-numeric: tabular-nums; }
 
     /* Контейнер легенд (левый нижний угол, стопкой вверх) */
     .left-stack {
@@ -248,12 +249,12 @@
       gap: 10px; align-items: center; border-bottom: 1px solid #eee;
     }
     .cmp-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    .cmp-table th, .cmp-table td { padding: 5px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; }
+    .cmp-table th, .cmp-table td { padding: 5px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; font-variant-numeric: tabular-nums; }
     .cmp-table th { position: sticky; top: 0; background: #fafafa; color: #666; font-size: 10px; text-transform: uppercase; }
     .cmp-table td:first-child, .cmp-table th:first-child { text-align: left; }
     .cmp-up { color: #16a34a; } .cmp-down { color: #dc2626; }
     .lots-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    .lots-table th, .lots-table td { padding: 6px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; }
+    .lots-table th, .lots-table td { padding: 6px 8px; text-align: right; white-space: nowrap; border-bottom: 1px solid #f0f0f0; font-variant-numeric: tabular-nums; }
     .lots-table th { position: sticky; top: 0; background: #fafafa; color: #666; font-weight: 600; text-transform: uppercase; font-size: 10px; }
     .lots-table td:first-child, .lots-table th:first-child { text-align: left; }
 

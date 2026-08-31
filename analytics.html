@@ -15,7 +15,10 @@
     --nf-ink:#161616; --nf-grey:#666; --nf-line:#e3e5ea; --nf-bg:#f4f5f7;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:var(--nf-ink); background:var(--nf-bg); }
+  body {
+    font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-size:13px; color:var(--nf-ink); background:var(--nf-bg);
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
   header {
     background:var(--nf-navy-strong); color:#fff; padding:12px 20px; display:flex; align-items:center; gap:16px;
     flex-wrap:wrap; border-bottom:3px solid var(--nf-red);
