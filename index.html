@@ -287,7 +287,7 @@
     /* Тоггл режима продажа/аренда */
     #modeToggleWrap { display: flex; gap: 4px; margin-bottom: 2px; }
     .mode-btn {
-      flex: 1; padding: 6px 1px; border: 1.5px solid #d1d5db; border-radius: 6px;
+      flex: 1; padding: 6px 4px; border: 1.5px solid #d1d5db; border-radius: 6px;
       background: #f9fafb; color: #374151; font-size: 10.5px; font-weight: 500;
       cursor: pointer; transition: background-color .15s, border-color .15s, color .15s; white-space: nowrap;
     }
@@ -4013,7 +4013,7 @@ msInput.addEventListener('input', function() {
   }
   msBox.innerHTML = matches.map(m =>
     `<div class="msr-item" data-idx="${m.idx}" data-kind="${m.kind}">${m.name}<div class="msr-sub">${m.sub}</div></div>`
-  ).join('') || '<div class="msr-item" style="color:#767676">Ничего не найдено</div>';
+  ).join('') || `<div class="msr-item" style="color:#767676">Ничего не найдено по «${escapeHtml(this.value.trim())}»</div>`;
   msBox.classList.add('open');
 });
 function msGo(it) {
