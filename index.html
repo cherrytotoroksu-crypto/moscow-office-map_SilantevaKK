@@ -673,8 +673,8 @@
 
   <hr>
   <h3>Подложка</h3>
-  <label class="radio-row"><input type="radio" name="basemap" value="carto"> CARTO (светлая)</label>
-  <label class="radio-row"><input type="radio" name="basemap" value="osm" checked> OSM</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="carto" checked> CARTO (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="osm"> OSM</label>
   <label class="radio-row"><input type="radio" name="basemap" value="satellite"> Спутник</label>
 </div>
 
@@ -1074,7 +1074,7 @@ const basemaps = {
   satellite: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     { attribution: 'Tiles &copy; Esri', maxZoom: 19 })
 };
-basemaps.osm.addTo(map);
+basemaps.carto.addTo(map);
 
 // ============================================================
 //  ЦВЕТА
