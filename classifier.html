@@ -121,6 +121,26 @@
   #hoverPopup b { display:block; margin:6px 0 2px; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.02em; }
   #hoverPopup b:first-child { margin-top:0; }
   #hoverPopup a { color:var(--accent); word-break:break-all; }
+  @media (max-width: 640px) {
+    body { overflow-x:hidden; }
+    header { position:relative; padding:12px 14px; }
+    h1 { font-size:15px; line-height:1.3; }
+    .sub { font-size:11px; line-height:1.4; overflow-wrap:anywhere; }
+    .toolbar { gap:6px; margin-top:8px; }
+    .toolbar input[type=text] { flex:1 0 100%; width:100%; min-width:0; min-height:44px; font-size:16px; }
+    #clearAllFilters { min-height:40px; }
+    #rowcount { margin-left:auto; }
+    .legend { gap:4px 6px; font-size:10.5px; line-height:1.35; }
+    .wrap { padding:10px 8px 28px; overscroll-behavior-inline:contain; }
+    .filter-btn { width:30px; height:30px; }
+    .filter-panel {
+      left:8px !important; right:8px !important; top:auto !important; bottom:8px !important;
+      width:auto; max-width:none; max-height:72vh; border-radius:10px;
+    }
+    .filter-panel input[type=text] { min-height:44px; font-size:16px; }
+    .fp-actions button { min-height:40px; }
+    footer { padding:12px 14px 24px; }
+  }
 </style>
 </head>
 <body>

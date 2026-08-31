@@ -322,8 +322,9 @@
     #panelBackdrop.open { display: block; }
 
     @media (max-width: 640px) {
-      #panelToggle { display: flex; top: 10px; right: 10px; z-index: 1103; }
-      .map-search { top: 10px; left: 10px; width: calc(100vw - 66px); z-index: 1102; }
+      #panelToggle { display: flex; top: 8px; right: 8px; z-index: 1103; width:44px; height:44px; }
+      .map-search { top: 8px; left: 8px; width: calc(100vw - 68px); z-index: 1102; }
+      .map-search input { min-height:44px; }
       .map-search input, select, .range-input { font-size: 16px; } /* 16px — иначе iOS Safari зумит страницу при фокусе на поле */
       .radio-row, .check-row { padding: 6px 0; } /* тап-таргет ближе к 44px вместо исходных ~15px */
       .panel {
@@ -340,6 +341,7 @@
       }
       .panel.open { transform: translateX(0); }
       .leaflet-top.leaflet-left { margin-top: 56px; }
+      .leaflet-bar a { width:36px; height:36px; line-height:36px; }
 
       /* Модалки на мобильных — полный экран */
       .modal-bg { align-items: flex-end; }
@@ -350,7 +352,7 @@
       }
       .modal-head { padding: 10px 14px; }
       .modal-head h3 { font-size: 13px; }
-      .modal-dl { padding: 5px 9px; font-size: 11px; }
+      .modal-dl { min-height:40px; padding: 7px 10px; font-size: 11px; }
       .modal-x { padding: 10px; } /* было 0 4px — тап по крестику промахивался */
       .modal-body { -webkit-overflow-scrolling: touch; }
       .popup-lots-btn { padding: 9px 8px; } /* было 5px 8px — кнопки в попапе на карте были мельче тап-таргета */
@@ -671,8 +673,8 @@
 
   <hr>
   <h3>Подложка</h3>
-  <label class="radio-row"><input type="radio" name="basemap" value="carto" checked> Базовая карта</label>
-  <label class="radio-row"><input type="radio" name="basemap" value="osm"> OSM</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="carto"> CARTO (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="osm" checked> OSM</label>
   <label class="radio-row"><input type="radio" name="basemap" value="satellite"> Спутник</label>
 </div>
 
@@ -1072,7 +1074,7 @@ const basemaps = {
   satellite: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     { attribution: 'Tiles &copy; Esri', maxZoom: 19 })
 };
-basemaps.carto.addTo(map);
+basemaps.osm.addTo(map);
 
 // ============================================================
 //  ЦВЕТА

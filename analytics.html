@@ -92,6 +92,17 @@
     .layout { flex-direction:column; height:auto; }
     aside.controls { width:100%; border-right:none; border-bottom:1px solid #dde; }
   }
+  @media (max-width: 480px) {
+    header { padding:9px 12px; gap:10px; }
+    header h1 { font-size:14px; }
+    aside.controls { padding:12px; }
+    aside.controls select { min-height:44px; font-size:16px; }
+    .radio-row { min-height:36px; }
+    button.btn { min-height:44px; }
+    main.content { padding:12px; gap:10px; }
+    #anaCaption { padding:10px 12px; }
+    #anaChartWrap, #anaTableWrap { padding:12px; }
+  }
 </style>
 </head>
 <body>

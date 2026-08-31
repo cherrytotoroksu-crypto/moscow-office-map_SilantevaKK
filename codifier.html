@@ -98,6 +98,41 @@
   .seg-card .seg-row { font-size:12px; color:#555; margin-bottom:4px; }
   .seg-card .seg-row b { color:#1a1a1a; }
   .seg-card button { margin-top:10px; width:100%; }
+  @media (max-width: 640px) {
+    html, body { max-width:100%; overflow-x:hidden; }
+    header { padding:10px 12px; gap:8px; }
+    header h1 { width:100%; }
+    header .meta { overflow-wrap:anywhere; line-height:1.45; }
+    .tabs, .subtabs {
+      width:100%; padding:0 8px; overflow-x:auto; overflow-y:hidden;
+      flex-wrap:nowrap; overscroll-behavior-inline:contain; scrollbar-width:thin;
+      -webkit-overflow-scrolling:touch;
+    }
+    .tab, .subtab { flex:0 0 auto; min-height:44px; padding:8px 12px; }
+    .segment-cards {
+      display:flex; grid-template-columns:none; overflow-x:auto; gap:8px; padding:12px 8px;
+      scroll-snap-type:x proximity; overscroll-behavior-inline:contain;
+      -webkit-overflow-scrolling:touch;
+    }
+    .seg-card { flex:0 0 min(82vw, 320px); padding:12px; scroll-snap-align:start; }
+    .seg-card button { min-height:40px; }
+    .toolbar { padding:10px 8px; gap:8px; align-items:stretch; }
+    .toolbar input[type=search] { width:100%; min-height:44px; font-size:16px; }
+    .toolbar select { flex:1 1 150px; min-width:0; min-height:40px; font-size:16px; }
+    button.btn, .qa-toggle { min-height:40px; }
+    #sourceModeGroup { width:100%; flex-wrap:wrap; }
+    .cols-panel, .filter-panel {
+      left:8px !important; right:8px !important; top:auto !important; bottom:8px !important;
+      width:auto; max-width:none; max-height:72vh; border-radius:10px;
+    }
+    .filter-panel input[type=text], .filter-panel input[type=number], .filter-panel select { min-height:40px; font-size:16px; }
+    .filter-btn, .card-btn { width:32px; height:32px; }
+    .status-row { padding:6px 8px; }
+    .table-wrap { margin:0 8px 12px; max-height:calc(100vh - 210px); }
+    #pagerRow { flex-wrap:wrap; padding:8px; }
+    #pagerRow .btn { flex:1 1 92px; }
+    #pageSizeSelect { flex:1 0 100%; width:100%; margin-left:0 !important; min-height:40px; font-size:16px; }
+  }
 </style>
 </head>
 <body>
