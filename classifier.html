@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <title>Классификатор зданий (unified) — карта офисной недвижимости Москвы</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
@@ -24,16 +24,10 @@
     --red-bg: #3A2020;   --red-ink: #E8938E;  --red-line: #543030;
     --grey-bg: #24262A;  --grey-ink: #9AA0A6; --grey-line: #34373C;
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #15171A; --surface: #1D2024; --ink: #E9E6DE; --muted: #9AA0A6; --line: #2B2F35;
-      --accent: #9FB0CC; --accent-soft: #232B3C; --brand-red: #D9587B;
-      --green-bg: #1C3327; --green-ink: #8FDBA8; --green-line: #2C4A38;
-      --amber-bg: #3A2F14; --amber-ink: #E7BE6C; --amber-line: #55461E;
-      --red-bg: #3A2020;   --red-ink: #E8938E;  --red-line: #543030;
-      --grey-bg: #24262A;  --grey-ink: #9AA0A6; --grey-line: #34373C;
-    }
-  }
+  /* Авто-переключение по ОС отключено для консистентности с остальными 3
+     страницами сайта (все зафиксированы в светлой теме NF Group). Ручной
+     тёмный вариант (:root[data-theme="dark"] выше) оставлен в коде на
+     случай, если позже понадобится явный переключатель. */
   * { box-sizing: border-box; }
   html, body { margin:0; padding:0; background:var(--bg); color:var(--ink);
     font-family:'Montserrat','Segoe UI',Arial,sans-serif; max-width:100%;

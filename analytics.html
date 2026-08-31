@@ -56,9 +56,10 @@
     display:block; width:100%; margin-top:8px; padding:9px;
     background:var(--nf-red); color:#fff; border:none; border-radius:3px;
     font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;
-    cursor:pointer; text-align:center; transition:background .15s;
+    cursor:pointer; text-align:center; transition:background .15s, transform .1s;
   }
   button.btn:hover { background:var(--nf-red-hover); }
+  button.btn:active:not(:disabled) { transform:scale(0.96); }
   button.btn:disabled { background:#9ca3af; cursor:not-allowed; opacity:.75; }
   #anaStatus { font-size:11px; color:#767676; min-height:14px; }
 
