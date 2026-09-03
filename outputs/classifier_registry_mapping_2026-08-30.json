@@ -1259,14 +1259,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0493",
-    "canonical_no": 122,
-    "name": "2-я Магистральной улица, вл. 7а.",
-    "address": "2-я Магистральной улица, вл. 7а.",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0496",
     "canonical_no": 125,
     "name": "3-й Добрынинский пер., земельный участок 4/2,",
@@ -1563,14 +1555,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0623",
-    "canonical_no": 167,
-    "name": "Korolev, Rassvet",
-    "address": "Столярный , 3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0602",
     "canonical_no": 168,
     "name": "KR Properties",
@@ -1767,14 +1751,6 @@
     "canonical_no": 196,
     "name": "Rublevo Business Park",
     "address": "МКАД, 64-й километр, 1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0212",
-    "canonical_no": 197,
-    "name": "Sezar City",
-    "address": "г. Москва, 2-й Хорошевский проезд, вл. 7",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -1979,14 +1955,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0668",
-    "canonical_no": 224,
-    "name": "Sydney City",
-    "address": "улица Шеногина, вл2/11",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0002",
     "canonical_no": 225,
     "name": "TESLA (Нагатино i-Land)",
@@ -2087,14 +2055,6 @@
     "canonical_no": 240,
     "name": "Академика Янгеля, 12",
     "address": "Академика Янгеля, 12",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0738",
-    "canonical_no": 241,
-    "name": "Актион на 1905 года",
-    "address": "Ходынская ул., з/у 2/9",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2571,14 +2531,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0639",
-    "canonical_no": 306,
-    "name": "БЦ на Ленинградском пр-кте, 37",
-    "address": "Ленинградский пр-кт, 37",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0768",
     "canonical_no": 307,
     "name": "БЦ на Ленинградском пр-кте, 37А",
@@ -2627,14 +2579,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0749",
-    "canonical_no": 313,
-    "name": "БЦ на Сущевском валу",
-    "address": "ул. Сущевский Вал, 43",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0264",
     "canonical_no": 314,
     "name": "БЦ на Текстильщиков",
@@ -2679,14 +2623,6 @@
     "canonical_no": 320,
     "name": "БЦ на ул. Угличская",
     "address": "ул. Угличская, 16",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0482",
-    "canonical_no": 321,
-    "name": "БЦ на Ходынке",
-    "address": "Ходынский бульвар, 4/1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2891,14 +2827,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0284",
-    "canonical_no": 355,
-    "name": "Грузовой порт у Рижского вокзала",
-    "address": null,
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0285",
     "canonical_no": 356,
     "name": "Гульден",
@@ -3023,14 +2951,6 @@
     "canonical_no": 371,
     "name": "Деловой квартал ЮПорт (корпус 7)",
     "address": "пр-кт Андропова, 11к7",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0143",
-    "canonical_no": 372,
-    "name": "Деловой комплекс на территории грузового двора \"Москва-Товарная-рязанская\"",
-    "address": "г. Москва, Спартаковская площадь, 1/7с16",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -3447,14 +3367,6 @@
     "canonical_no": 427,
     "name": "Крутицкая, 1",
     "address": "Крутицкая наб., 1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0299",
-    "canonical_no": 428,
-    "name": "Крылатская, 2",
-    "address": "Крылатская ул., 2",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -4843,14 +4755,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0530",
-    "canonical_no": 609,
-    "name": "Северный речной порт",
-    "address": "Ленинградское ш., 63Ас3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0435",
     "canonical_no": 610,
     "name": "Сельскохозяйственная, 30/1",
@@ -4871,14 +4775,6 @@
     "canonical_no": 612,
     "name": "Синельниковская улица",
     "address": "Синельниковская улица",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0675",
-    "canonical_no": 613,
-    "name": "Сиреневый парк",
-    "address": "ул. Тагильская, 4А",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5183,14 +5079,6 @@
     "canonical_no": 653,
     "name": "Технопарк НТВ",
     "address": "г. Москва, Новомосковская ул., д.12",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0480",
-    "canonical_no": 654,
-    "name": "Технопарк Октябрьское поле",
-    "address": "ул. Берзарина, 32с4",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5527,14 +5415,6 @@
     "canonical_no": 697,
     "name": "Штаб-квартира Мосинжпроекта",
     "address": "ТПУ Карамышевская (Народное Ополчение)",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0170",
-    "canonical_no": 698,
-    "name": "Штаб-квартира Сбера и компаний-партнеров (А27)",
-    "address": "г. Москва, мкр. Рублёво-Архангельское, кв-л А27",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },

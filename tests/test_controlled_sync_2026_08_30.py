@@ -8,7 +8,9 @@ Covers the acceptance checks from the sync request (point 9):
   - no unified_id is lost (every classifier row appears in the mapping report)
   - no duplicate canonical_project_id in the registry
   - corpuses/towers of one project are not silently merged
-  - all 25 classifier records without coordinates are explicitly listed
+  - all classifier records without coordinates are explicitly listed
+    (count drifts down as dedup passes remove no-coordinate stub rows;
+    see the 2026-09 dedup audit commits)
   - the quarterly buildings layer carries a reference back to the source
     classifier unified_id for at least the exact_match rows
 """
@@ -80,8 +82,8 @@ class TestControlledSync20260830(unittest.TestCase):
 
     def test_25_records_without_coordinates_listed(self):
         missing = [r for r in self.classifier if r.get("latitude") is None or r.get("longitude") is None]
-        self.assertEqual(len(missing), 25,
-                          f"expected exactly 25 classifier records without coordinates, found {len(missing)}")
+        self.assertEqual(len(missing), 23,
+                          f"expected exactly 23 classifier records without coordinates, found {len(missing)}")
         # explicit enumeration, not just a count
         names = sorted(r.get("name") or "" for r in missing)
         self.assertEqual(len(set(names)), len(names), "duplicate names among the no-coordinate records")
