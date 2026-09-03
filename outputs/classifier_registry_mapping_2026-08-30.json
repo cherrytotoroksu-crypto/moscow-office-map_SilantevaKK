@@ -2157,15 +2157,15 @@
     "unified_id": "UC-OBJ-0240",
     "canonical_no": 266,
     "name": "БЦ Artel",
-    "address": null,
+    "address": "Электрозаводская ул., 60",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
   {
     "unified_id": "UC-OBJ-0241",
     "canonical_no": 267,
-    "name": "БЦ MR 1",
-    "address": null,
+    "name": "Берёзка 10",
+    "address": "Берёзовая аллея, 5а, стр. 6",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2188,8 +2188,8 @@
   {
     "unified_id": "UC-OBJ-0245",
     "canonical_no": 271,
-    "name": "БЦ Unikey",
-    "address": null,
+    "name": "БЦ «Новые решения» (Unikey)",
+    "address": "поселение Сосенское, ул. Александры Монаховой",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2434,14 +2434,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0516",
-    "canonical_no": 309,
-    "name": "БЦ на месте \"Старт\" (МПТ)",
-    "address": "Ленинградский проспект, 37Б",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0406",
     "canonical_no": 310,
     "name": "БЦ на месте экспоцентра в Сити",
@@ -2526,14 +2518,6 @@
     "canonical_no": 325,
     "name": "БЦ Смольный (II очередь)",
     "address": "Смольная ул., 14с2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0272",
-    "canonical_no": 326,
-    "name": "БЦ Старт",
-    "address": null,
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
