@@ -3675,14 +3675,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0651",
-    "canonical_no": 470,
-    "name": "Многофункциональный офисный центр",
-    "address": "Ленинградское ш., уч. 63А/1А",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0111",
     "canonical_no": 471,
     "name": "МФК Slava (5 очередь)",
