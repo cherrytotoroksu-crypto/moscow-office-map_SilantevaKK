@@ -1278,14 +1278,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0494",
-    "canonical_no": 123,
-    "name": "2-я Ямская ул., вл. 9",
-    "address": "2-я Ямская ул., вл. 9",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0183",
     "canonical_no": 124,
     "name": "2-я Ямская, вл. 2",
