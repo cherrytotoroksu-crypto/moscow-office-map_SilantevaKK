@@ -1299,14 +1299,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0542",
-    "canonical_no": 130,
-    "name": "AFI Park «Воронцовский»",
-    "address": "улица Академика Челомея, 7Ас2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0580",
     "canonical_no": 131,
     "name": "AFI square",
@@ -1503,14 +1495,6 @@
     "canonical_no": 159,
     "name": "iCITY (Башня Time)",
     "address": "Шмитовский пр-д, 37",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0142",
-    "canonical_no": 161,
-    "name": "iCity-2",
-    "address": "г. Москва, Шмитовский проезд д. 37",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -1783,14 +1767,6 @@
     "canonical_no": 201,
     "name": "SLAVA (4-я оч.)",
     "address": "1-я ул. Ямского Поля, 8с2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0626",
-    "canonical_no": 202,
-    "name": "Slava (5 очередь)",
-    "address": "1-я улица Ямского поля, вл. 8",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2079,14 +2055,6 @@
     "canonical_no": 244,
     "name": "Астория II",
     "address": "Химки, Транспортный пр-д., 19",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0733",
-    "canonical_no": 245,
-    "name": "АФИ Галерея",
-    "address": "Тверская Застава пл., 4",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2623,14 +2591,6 @@
     "canonical_no": 320,
     "name": "БЦ на ул. Угличская",
     "address": "ул. Угличская, 16",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0638",
-    "canonical_no": 322,
-    "name": "БЦ на Шмитовском пр-д, вл. 32, 32А",
-    "address": "Шмитовский пр-д, вл. 32, 32А",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -3791,14 +3751,6 @@
     "canonical_no": 487,
     "name": "МФК Новатэк",
     "address": "Ленинский проспект, вл. 90/2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0633",
-    "canonical_no": 488,
-    "name": "МФК Парк Победы",
-    "address": "ул. Барклая, 1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5067,14 +5019,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0352",
-    "canonical_no": 653,
-    "name": "Технопарк НТВ",
-    "address": "г. Москва, Новомосковская ул., д.12",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0169",
     "canonical_no": 655,
     "name": "Технопарк ПАО Сбербанк",
@@ -5383,14 +5327,6 @@
     "canonical_no": 694,
     "name": "Шипиловский пр-д, вл. 55",
     "address": "Шипиловский пр-д, вл. 55",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0362",
-    "canonical_no": 695,
-    "name": "Шмитовский проезд, влад. 32, 32А",
-    "address": "Шмитовский проезд, влад. 32, 32А",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
