@@ -131,17 +131,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0105",
-    "canonical_no": 14,
-    "name": "Stone Дмитровский",
-    "address": "Дмитровский проезд, вл. 1г",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-177"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0622",
     "canonical_no": 15,
     "name": "Stone Пресня",
@@ -1505,22 +1494,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0197",
-    "canonical_no": 151,
-    "name": "Forma Workplace на Волоколамском",
-    "address": "Волоколамское шоссе, вл. 32",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0198",
-    "canonical_no": 152,
-    "name": "Forma Workplace на Волоколамском маленький",
-    "address": "Авиационная ул., вл. 17-22",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0103",
     "canonical_no": 153,
     "name": "FRAME WORKPLACE",
@@ -1773,14 +1746,6 @@
     "canonical_no": 184,
     "name": "Nexus",
     "address": "Москва, ул. Ярцевская, 21/1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0208",
-    "canonical_no": 185,
-    "name": "North Wind",
-    "address": "г. Москва, 2-й Силикатный проезд, 13",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2121,25 +2086,9 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0703",
-    "canonical_no": 228,
-    "name": "Upside Kuntsevo",
-    "address": "Западный административный округ, район Кунцево, 48-й квартал",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0228",
     "canonical_no": 229,
     "name": "Upside на Ленинградском",
-    "address": "Ленинградский проспект, вл. 37, корп. 3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0388",
-    "canonical_no": 230,
-    "name": "Upside на Ленинградском (бывш. FLY)",
     "address": "Ленинградский проспект, вл. 37, корп. 3",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
@@ -2577,14 +2526,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0693",
-    "canonical_no": 285,
-    "name": "БЦ Жуков пр-д, 19",
-    "address": "Жуков пр-д, 19",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0254",
     "canonical_no": 286,
     "name": "БЦ Жуков проезд, 19",
@@ -2617,14 +2558,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0257",
-    "canonical_no": 290,
-    "name": "БЦ Магистральная 12 (из буклета 2026)",
-    "address": "г. Москва, 5-я Магистральная ул., 4, стр. 9",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0095",
     "canonical_no": 291,
     "name": "БЦ Магистральный (из буклета 2026)",
@@ -2637,14 +2570,6 @@
     "canonical_no": 292,
     "name": "БЦ Монс",
     "address": "Огородный проезд",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0739",
-    "canonical_no": 293,
-    "name": "БЦ на 2-м Силикатном пр-д, вл.13",
-    "address": "2-й Силикатный пр-д, вл.13",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2825,14 +2750,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0266",
-    "canonical_no": 316,
-    "name": "БЦ на ул. Гашека",
-    "address": "улица Гашека, 12с2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0777",
     "canonical_no": 317,
     "name": "БЦ на ул. Гончарная д.20/1c2",
@@ -2993,14 +2910,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0503",
-    "canonical_no": 337,
-    "name": "Вернадского, 6В",
-    "address": "Вернадского, 6В",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0505",
     "canonical_no": 338,
     "name": "Верхняя Сыромятническая ул., вл.7, стр.1",
@@ -3092,14 +3001,6 @@
     "unified_id": "UC-OBJ-0009",
     "canonical_no": 349,
     "name": "Геолог",
-    "address": "Обручева улица,23",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0086",
-    "canonical_no": 350,
-    "name": "Геолог 2",
     "address": "Обручева улица,23",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
@@ -3521,14 +3422,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0558",
-    "canonical_no": 404,
-    "name": "Квартал Адмирал",
-    "address": "Шоссейная улица, вл. 4А",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0293",
     "canonical_no": 405,
     "name": "Кватра инвест АДЦ Коммунарка",
@@ -3741,14 +3634,6 @@
     "canonical_no": 432,
     "name": "Ленинградское шоссе, 63Ас3",
     "address": "Ленинградское шоссе, 63Ас3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0300",
-    "canonical_no": 433,
-    "name": "Ленинградское, 63А/1А",
-    "address": "Ленинградское, 63А/1А, Москва",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -4141,14 +4026,6 @@
     "canonical_no": 482,
     "name": "МФК на Малой Юшуньской",
     "address": "Малая Юшуньская ул., 1к2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0311",
-    "canonical_no": 483,
-    "name": "МФК на проспекте Вернадского",
-    "address": "Москва, проспект Вернадского, вл. 6В",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -4865,14 +4742,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0559",
-    "canonical_no": 573,
-    "name": "Пятницкая ул., вл. 40",
-    "address": "Пятницкая ул., вл. 40",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0331",
     "canonical_no": 574,
     "name": "Раздельная, 10С1",
@@ -5189,14 +5058,6 @@
     "canonical_no": 613,
     "name": "Сиреневый парк",
     "address": "ул. Тагильская, 4А",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0077",
-    "canonical_no": 614,
-    "name": "Сиреневый Парк (МФК)",
-    "address": "Тагильская улица, 4с15",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
