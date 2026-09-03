@@ -74,7 +74,7 @@
   {
     "name": "Air",
     "address": "Москва, ул. Ходынский бульвар, вл. 4/1",
-    "developer": "Tekta Group",
+    "developer": "Tekta",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -650,7 +650,7 @@
   {
     "name": "Porta Forma",
     "address": "Заречная ул, 2/1",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -1682,7 +1682,7 @@
   {
     "name": "Эйлер",
     "address": "Москва, ул. Заречная, д. 6",
-    "developer": "Сумма элементов",
+    "developer": "Сумма Элементов",
     "status": "Строится",
     "year": "2025",
     "start": "",

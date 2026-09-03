@@ -74,7 +74,7 @@
   {
     "name": "Air",
     "address": "Москва, ул. Ходынский бульвар, вл. 4/1",
-    "developer": "Tekta Group",
+    "developer": "Tekta",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -314,7 +314,7 @@
   {
     "name": "Frame",
     "address": "улица Пресненский Вал, 27с7",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -386,7 +386,7 @@
   {
     "name": "Jenga",
     "address": "г. Москва, Полесский пр-д, 14",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -482,7 +482,7 @@
   {
     "name": "Lakes",
     "address": "Москва, ул. Озёрная вл.42",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -506,7 +506,7 @@
   {
     "name": "Lakes 2",
     "address": "ул. Озёрная, ЗУ 44Б",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -530,7 +530,7 @@
   {
     "name": "Lavin",
     "address": "г. Москва, Ильменский пр-д, 13/8",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -722,7 +722,7 @@
   {
     "name": "Mount",
     "address": "г. Москва, Боровское шоссе, 2",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -962,7 +962,7 @@
   {
     "name": "Porta Forma",
     "address": "Заречная ул, 2/1",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2026",
     "start": "",
@@ -2162,7 +2162,7 @@
   {
     "name": "Минто (бывший — Workplace Волоколамское)",
     "address": "Москва, Волоколамское шоссе, 32",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -2402,7 +2402,7 @@
   {
     "name": "Плэйн (бывший — Workplace Авиационная)",
     "address": "Москва, ул. Авиационная, 22",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -2594,7 +2594,7 @@
   {
     "name": "Технопарк Густав",
     "address": "Складочная ул., 6С36",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2026",
     "start": "Q2 2025",
@@ -2618,7 +2618,7 @@
   {
     "name": "Цетлин",
     "address": "Москва, ул. Неверовского, 10с3",
-    "developer": "Сумма элементов",
+    "developer": "Сумма Элементов",
     "status": "Строится",
     "year": "2027",
     "start": "Q4 2025",
@@ -2642,7 +2642,7 @@
   {
     "name": "Эйлер",
     "address": "Москва, ул. Заречная, д. 6",
-    "developer": "Сумма элементов",
+    "developer": "Сумма Элементов",
     "status": "Строится",
     "year": "2026",
     "start": "",

@@ -74,7 +74,7 @@
   {
     "name": "Air",
     "address": "Москва, ул. Ходынский бульвар, вл. 4/1",
-    "developer": "Tekta Group",
+    "developer": "Tekta",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -266,7 +266,7 @@
   {
     "name": "Frame",
     "address": "улица Пресненский Вал, 27с7",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2027",
     "start": "",
@@ -338,7 +338,7 @@
   {
     "name": "Jenga",
     "address": "г. Москва, Полесский пр-д, 14",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -434,7 +434,7 @@
   {
     "name": "Lakes",
     "address": "Москва, ул. Озёрная вл.42",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -458,7 +458,7 @@
   {
     "name": "Lakes 2",
     "address": "ул. Озёрная, ЗУ 44Б",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -506,7 +506,7 @@
   {
     "name": "Lavin",
     "address": "г. Москва, Ильменский пр-д, 13/8",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -650,7 +650,7 @@
   {
     "name": "Mount",
     "address": "г. Москва, Боровское шоссе, 2",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -890,7 +890,7 @@
   {
     "name": "Porta Forma",
     "address": "Заречная ул, 2/1",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -1922,7 +1922,7 @@
   {
     "name": "Технопарк Густав",
     "address": "Складочная ул., 6С36",
-    "developer": "Forma (ПИК)",
+    "developer": "Forma",
     "status": "Строится",
     "year": "2026",
     "start": "Q2 2025",
@@ -2018,7 +2018,7 @@
   {
     "name": "Эйлер",
     "address": "Москва, ул. Заречная, д. 6",
-    "developer": "Сумма элементов",
+    "developer": "Сумма Элементов",
     "status": "Строится",
     "year": "2025",
     "start": "",
