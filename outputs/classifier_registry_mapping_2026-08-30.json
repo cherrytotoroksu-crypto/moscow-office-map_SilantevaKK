@@ -1402,14 +1402,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0129",
-    "canonical_no": 150,
-    "name": "FLY",
-    "address": "Ленинградский проспект, 37 корп. 3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0103",
     "canonical_no": 153,
     "name": "FRAME WORKPLACE",
