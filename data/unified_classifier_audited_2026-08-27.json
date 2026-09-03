@@ -4050,49 +4050,6 @@
       "canonical_no": 88
     },
     {
-      "unified_id": "UC-OBJ-0181",
-      "source_id": "OBJ-0181",
-      "name": "1-й Силикатный проезд, 13",
-      "address": "1-й Силикатный проезд, 13",
-      "developer": "Гранель",
-      "gba": null,
-      "gla": null,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.767798,
-      "longitude": 37.510502,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-97"
-      ],
-      "quarter_offer_refs": [
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='звенигородская от гранель'; underlying source and its check date remain in that record (2026-07-28).",
-      "source_links": [
-        "https://yandex.ru/maps/213/moscow/house/1_y_silikatny_proyezd_13/Z04YcwZgTEUFQFtvfXt3dntqbA==/",
-        "https://fortexgroup.ru/bc/1-y-silikatnyy-13/",
-        "https://www.cian.ru/sale/commercial/319594068/"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: общая площадь, GLA, год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 89
-    },
-    {
       "unified_id": "UC-OBJ-0374",
       "source_id": "OBJ-0374",
       "name": "Aurus",
@@ -4903,47 +4860,6 @@
       "canonical_no": 109
     },
     {
-      "unified_id": "UC-OBJ-0481",
-      "source_id": "OBJ-0481",
-      "name": "ул. Академика Ильюшина, вл. 21",
-      "address": "ул. Академика Ильюшина, вл. 21",
-      "developer": "Фармэллинрус",
-      "gba": 50000.0,
-      "gla": 20000.0,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строящийся",
-      "latitude": 55.807015,
-      "longitude": 37.547989,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-269"
-      ],
-      "quarter_offer_refs": [
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py.",
-      "source_links": [
-        "https://t.me/stroi_news/1247",
-        "https://t.me/stroi_news/535"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода; Сверить конфликты",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 110
-    },
-    {
       "unified_id": "UC-OBJ-0486",
       "source_id": "OBJ-0486",
       "name": "1-й Магистральный проезд, 12",
@@ -5043,40 +4959,6 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 113
-    },
-    {
-      "unified_id": "UC-OBJ-0488",
-      "source_id": "OBJ-0488",
-      "name": "1-я ул. Ямского Поля, вл. 17",
-      "address": "1-я ул. Ямского Поля, вл. 17",
-      "developer": null,
-      "gba": 73000.0,
-      "gla": null,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Анонсированный",
-      "latitude": 55.783281,
-      "longitude": 37.582933,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://t.me/CREconsultant/3252"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, GLA, год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 114
     },
     {
       "unified_id": "UC-OBJ-0599",
@@ -5352,40 +5234,6 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 122
-    },
-    {
-      "unified_id": "UC-OBJ-0494",
-      "source_id": "OBJ-0494",
-      "name": "2-я Ямская ул., вл. 9",
-      "address": "2-я Ямская ул., вл. 9",
-      "developer": "Патек груп",
-      "gba": 29500.0,
-      "gla": null,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Анонсированный",
-      "latitude": 55.79517,
-      "longitude": 37.607053,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://t.me/stroi_news/2388"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 123
     },
     {
       "unified_id": "UC-OBJ-0183",
@@ -14399,40 +14247,6 @@
       "canonical_no": 387
     },
     {
-      "unified_id": "UC-OBJ-0394",
-      "source_id": "OBJ-0394",
-      "name": "Жуков проезд, 19",
-      "address": "Жуков проезд, 19",
-      "developer": "Гута девелопмент",
-      "gba": 41677.0,
-      "gla": 24865.0,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.722821,
-      "longitude": 37.641521,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://t.me/stroi_news/6086"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 388
-    },
-    {
       "unified_id": "UC-OBJ-0543",
       "source_id": "OBJ-0543",
       "name": "з/у Алексея Свиридова, 5А",
@@ -15855,40 +15669,6 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 430
-    },
-    {
-      "unified_id": "UC-OBJ-0515",
-      "source_id": "OBJ-0515",
-      "name": "Ленинградский проспект, 37Б",
-      "address": "Ленинградский проспект, 37Б",
-      "developer": "Бэсткон",
-      "gba": 160000.0,
-      "gla": null,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строящийся",
-      "latitude": 55.790174,
-      "longitude": 37.543692,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://t.me/Jelezobetonniyzames/22645"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 431
     },
     {
       "unified_id": "UC-OBJ-0517",
@@ -23866,40 +23646,6 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 670
-    },
-    {
-      "unified_id": "UC-OBJ-0642",
-      "source_id": "OBJ-0642",
-      "name": "ул. Ермакова Роща, 7",
-      "address": "ул. Ермакова Роща, 7",
-      "developer": null,
-      "gba": 180000.0,
-      "gla": null,
-      "cls": "A",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.7589491,
-      "longitude": 37.5304947,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D1%83%D0%BB.%20%D0%95%D1%80%D0%BC%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0%20%D0%A0%D0%BE%D1%89%D0%B0%2C%207%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, GLA, год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 671
     },
     {
       "unified_id": "UC-OBJ-0449",

@@ -996,17 +996,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0181",
-    "canonical_no": 89,
-    "name": "1-й Силикатный проезд, 13",
-    "address": "1-й Силикатный проезд, 13",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-97"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0374",
     "canonical_no": 90,
     "name": "Aurus",
@@ -1212,17 +1201,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0481",
-    "canonical_no": 110,
-    "name": "ул. Академика Ильюшина, вл. 21",
-    "address": "ул. Академика Ильюшина, вл. 21",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-269"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0486",
     "canonical_no": 111,
     "name": "1-й Магистральный проезд, 12",
@@ -1243,14 +1221,6 @@
     "canonical_no": 113,
     "name": "1-я Магистральная, вл. 29",
     "address": "1-я Магистральная, вл. 29",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0488",
-    "canonical_no": 114,
-    "name": "1-я ул. Ямского Поля, вл. 17",
-    "address": "1-я ул. Ямского Поля, вл. 17",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -1315,14 +1285,6 @@
     "canonical_no": 122,
     "name": "2-я Магистральной улица, вл. 7а.",
     "address": "2-я Магистральной улица, вл. 7а.",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0494",
-    "canonical_no": 123,
-    "name": "2-я Ямская ул., вл. 9",
-    "address": "2-я Ямская ул., вл. 9",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -3439,14 +3401,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0394",
-    "canonical_no": 388,
-    "name": "Жуков проезд, 19",
-    "address": "Жуков проезд, 19",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0543",
     "canonical_no": 389,
     "name": "з/у Алексея Свиридова, 5А",
@@ -3779,14 +3733,6 @@
     "canonical_no": 430,
     "name": "Легенда. Береговые кварталы",
     "address": "г. Москва, Ленинградское шоссе, вл. 63Г",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0515",
-    "canonical_no": 431,
-    "name": "Ленинградский проспект, 37Б",
-    "address": "Ленинградский проспект, 37Б",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5699,14 +5645,6 @@
     "canonical_no": 670,
     "name": "Триумфальная арка",
     "address": "улица Гашека, 12с2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0642",
-    "canonical_no": 671,
-    "name": "ул. Ермакова Роща, 7",
-    "address": "ул. Ермакова Роща, 7",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
