@@ -1127,17 +1127,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0364",
-    "canonical_no": 104,
-    "name": "Энтузиастов, 12",
-    "address": "Москва, шоссе Энтузиастов, 12",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-264"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0413",
     "canonical_no": 105,
     "name": "Cityzen",
@@ -1526,14 +1515,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0023",
-    "canonical_no": 160,
-    "name": "iCity Time",
-    "address": "проезд Шмитовский, д. 37, стр 1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0142",
     "canonical_no": 161,
     "name": "iCity-2",
@@ -1886,14 +1867,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0587",
-    "canonical_no": 207,
-    "name": "Stone Towers A",
-    "address": "Бумажный пр-д, 19",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0024",
     "canonical_no": 208,
     "name": "Stone Towers B, С",
@@ -2122,14 +2095,6 @@
     "canonical_no": 238,
     "name": "Академика Опарина, 2",
     "address": "ул. Академика Опарина, 2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0233",
-    "canonical_no": 239,
-    "name": "Академика Пилюгина, д. 24",
-    "address": "улица Академика Пилюгина, д. 24",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5558,14 +5523,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0078",
-    "canonical_no": 692,
-    "name": "Центральный Телеграф",
-    "address": "Тверская, 7",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0361",
     "canonical_no": 693,
     "name": "Шант билдинг",
@@ -5650,22 +5607,6 @@
     "canonical_no": 703,
     "name": "Южный Речной Порт",
     "address": "Проспект Андропова,д.11 корп. 4,5,6,7",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0135",
-    "canonical_no": 704,
-    "name": "Южный2 речной вокзал",
-    "address": "г. Москва, проспект Андропова, 11",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0365",
-    "canonical_no": 705,
-    "name": "Юпорт",
-    "address": "г. Москва, проспект Андропова, 11",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
