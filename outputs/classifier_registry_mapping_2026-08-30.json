@@ -1579,14 +1579,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0541",
-    "canonical_no": 169,
-    "name": "Level Work Воронцовская",
-    "address": "улица Академика Семенихина, земельный участок 2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0205",
     "canonical_no": 170,
     "name": "Level Стрелецкая",
@@ -1695,14 +1687,6 @@
     "canonical_no": 184,
     "name": "Nexus",
     "address": "Москва, ул. Ярцевская, 21/1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0704",
-    "canonical_no": 186,
-    "name": "N’ICE TOWER",
-    "address": "Скотопрогонная улица, вл1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2539,14 +2523,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0260",
-    "canonical_no": 299,
-    "name": "БЦ на Дубиниской",
-    "address": "ул. Дубиниская,вл. 77-83",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0659",
     "canonical_no": 300,
     "name": "БЦ на Дубнинской",
@@ -2887,14 +2863,6 @@
     "canonical_no": 348,
     "name": "ГБУ Мосгоргеотрест",
     "address": "Ленинградский проспект 11, стр. 1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0009",
-    "canonical_no": 349,
-    "name": "Геолог",
-    "address": "Обручева улица,23",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
