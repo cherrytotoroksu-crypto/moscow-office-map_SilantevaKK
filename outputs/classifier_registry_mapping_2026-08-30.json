@@ -428,19 +428,6 @@
     "coord_corroborated": false
   },
   {
-    "unified_id": "UC-OBJ-0092",
-    "canonical_no": 41,
-    "name": "AFI Воронцовский",
-    "address": "ул. Академика Челомея, 1А",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-106",
-      "proj-176",
-      "cwhost-hist-4b033613e3"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0185",
     "canonical_no": 42,
     "name": "AFI Воронцовский Park",
@@ -557,14 +544,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0705",
-    "canonical_no": 52,
-    "name": "БЦ Valtri",
-    "address": "ул. Грузинский Вал, 3",
-    "status": "new_record",
-    "reason": "no registry row with matching name or nearby coordinates"
-  },
-  {
     "unified_id": "UC-OBJ-0122",
     "canonical_no": 53,
     "name": "Родина Парк",
@@ -677,18 +656,6 @@
     "matched_project_id": "proj-221",
     "match_basis": "name+address",
     "coord_corroborated": true
-  },
-  {
-    "unified_id": "UC-OBJ-0701",
-    "canonical_no": 63,
-    "name": "БЦ Мещерский",
-    "address": "Боровское ш., 2",
-    "status": "probable_match",
-    "candidate_project_id": "proj-73",
-    "mismatch": [
-      "address"
-    ],
-    "coord_corroborated": false
   },
   {
     "unified_id": "UC-OBJ-0124",

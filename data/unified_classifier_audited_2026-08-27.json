@@ -1937,50 +1937,6 @@
       "canonical_no": 40
     },
     {
-      "unified_id": "UC-OBJ-0092",
-      "source_id": "OBJ-0092",
-      "name": "AFI Воронцовский",
-      "address": "ул. Академика Челомея, 1А",
-      "developer": "AFI Development",
-      "gba": 130000.0,
-      "gla": 9000.0,
-      "cls": "A",
-      "commission_year": 2026,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.663172,
-      "longitude": 37.537515,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-106"
-      ],
-      "quarter_offer_refs": [
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale",
-        "coworking"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='afi парк воронцовский'; underlying source and its check date remain in that record (2026-08-01). Date audit 2026-08-23: AFI official notice (https://afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu) confirms commissioning of residential buildings, while the separate office building remains a construction stage (https://afi-v-park.ru/news/zaversheny-krovelnye-raboty-biznes-tsentra-vorontsovskiy). Office input date is not confirmed; do not transfer residential date to this office_project.",
-      "source_links": [],
-      "verification_status": "Проверено",
-      "confidence": "Средний",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 41
-    },
-    {
       "unified_id": "UC-OBJ-0185",
       "source_id": "OBJ-0185",
       "name": "AFI Воронцовский Park",
@@ -2428,51 +2384,6 @@
       "canonical_no": 51
     },
     {
-      "unified_id": "UC-OBJ-0705",
-      "source_id": "OBJ-0705",
-      "name": "БЦ Valtri",
-      "address": "ул. Грузинский Вал, 3",
-      "developer": "ESVE Group",
-      "gba": 35187.0,
-      "gla": 31900.0,
-      "cls": "A",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.7743083,
-      "longitude": 37.5790136,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-209"
-      ],
-      "quarter_offer_refs": [
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='valtri'; underlying source and its check date remain in that record (2026-07-14).",
-      "source_links": [
-        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D1%83%D0%BB.%20%D0%93%D1%80%D1%83%D0%B7%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%92%D0%B0%D0%BB%2C%203%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 52
-    },
-    {
       "unified_id": "UC-OBJ-0122",
       "source_id": "OBJ-0122",
       "name": "Родина Парк",
@@ -2904,48 +2815,6 @@
       "needs_review": false,
       "review_reason": null,
       "canonical_no": 62
-    },
-    {
-      "unified_id": "UC-OBJ-0701",
-      "source_id": "OBJ-0701",
-      "name": "БЦ Мещерский",
-      "address": "Боровское ш., 2",
-      "developer": "ПИК",
-      "gba": 38000.0,
-      "gla": 20000.0,
-      "cls": "В+",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строящийся",
-      "latitude": 55.663212,
-      "longitude": 37.428073,
-      "coordinates_status": "exact",
-      "legacy_ids": [
-        "proj-73"
-      ],
-      "quarter_offer_refs": [
-        "202506",
-        "202509",
-        "202512"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "Ещё не вышел в продажу",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Date audit 2026-08-23: IBC Real Estate report (https://ibcrealestate.ru/upload/iblock/3b1/pgg4hx5vivjgv9cnr81fj0xwzskmu0h7/OFFICE-MARKET_Q1-2025.pdf) lists Meshchersky completion in 2027; Rusdevelopers (https://www.rusdevelopers.ru/sobytie_dnya/stroitelstvo-biznes-centr-mesherskii-klassa-b-solncevo) states project realization in 2028. Conflict retained; input year/quarter not changed.",
-      "source_links": [
-        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88.%2C%202%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
-      ],
-      "verification_status": "Координата исправлена 2026-08-14: прежняя точка была смещена на ~16.6 км к юго-западу от реального адреса",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 63
     },
     {
       "unified_id": "UC-OBJ-0124",
