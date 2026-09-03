@@ -2,7 +2,7 @@
   {
     "name": "AFI Парк Воронцовский",
     "address": "ул. Академика Челомея, 1А",
-    "developer": "AFI development",
+    "developer": "AFI Development",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -26,7 +26,7 @@
   {
     "name": "AFI2B Tagilskaya",
     "address": "Москва, ул. Тагильская, 4А",
-    "developer": "AFI development",
+    "developer": "AFI Development",
     "status": "Строится",
     "year": "2026",
     "start": "",
@@ -1010,7 +1010,7 @@
   {
     "name": "Деловой дуэт",
     "address": "Шумкина ул., 14с5, с13",
-    "developer": "АО \"Мостранссклад\"",
+    "developer": "АО Мостранссклад",
     "status": "Строится",
     "year": "2024",
     "start": "",
@@ -1106,7 +1106,7 @@
   {
     "name": "На Берзарина",
     "address": "Берзарина ул., вл. 32",
-    "developer": "РГ Девелопмент",
+    "developer": "РГ-Девелопмент",
     "status": "Построен",
     "year": "2024",
     "start": "",

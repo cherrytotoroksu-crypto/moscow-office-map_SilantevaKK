@@ -1452,7 +1452,7 @@
     "aliases": [
       "BusinessClub Газетный"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "Газетный 17",
     "latitude": 55.757931,
     "longitude": 37.609227,
@@ -1511,7 +1511,7 @@
     "aliases": [
       "BusinessClub Porta"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "Заречная 2",
     "latitude": 55.75048,
     "longitude": 37.53953,
@@ -1570,7 +1570,7 @@
     "aliases": [
       "BusinessClub Ходынка"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "Авиаконструктора Микояна",
     "latitude": 55.784865,
     "longitude": 37.53164,
@@ -2134,7 +2134,7 @@
     "aliases": [
       "Порта"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "",
     "latitude": 55.75048,
     "longitude": 37.53953,
@@ -3337,7 +3337,7 @@
     "aliases": [
       "На Берзарина"
     ],
-    "developer": "РГ Девелопмент",
+    "developer": "РГ-Девелопмент",
     "address": "Берзарина ул., вл. 32",
     "latitude": 55.789725,
     "longitude": 37.471039,
@@ -3736,7 +3736,7 @@
     "aliases": [
       "Газетный"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "Газетный пер., 17",
     "latitude": 55.758965,
     "longitude": 37.610619,
@@ -3802,7 +3802,7 @@
     "aliases": [
       "Ходынка"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "ул. Авиакоструктора Микояна, д. 1",
     "latitude": 55.791268,
     "longitude": 37.534397,
@@ -3929,7 +3929,7 @@
     "aliases": [
       "Ходынка"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "",
     "latitude": 55.791268,
     "longitude": 37.534397,
@@ -4518,7 +4518,7 @@
     "aliases": [
       "Space Балчуг"
     ],
-    "developer": "Space1",
+    "developer": "Space 1",
     "address": "Садовническая ул., 9А",
     "latitude": 55.747637,
     "longitude": 37.6289,
@@ -8552,7 +8552,7 @@
     "aliases": [
       "Space Балчуг"
     ],
-    "developer": "Space1",
+    "developer": "Space 1",
     "address": "Садовническая ул., 9А",
     "latitude": 55.747637,
     "longitude": 37.6289,
@@ -9169,7 +9169,7 @@
     "canonical_name": "Light City",
     "flex_site_label": null,
     "aliases": [],
-    "developer": "АО \"ПРОСПЕКТ\"",
+    "developer": "АО «Проспект»",
     "address": "2-я Магистральная ул., д. 3, стр. 1",
     "latitude": 55.762586,
     "longitude": 37.531092,
@@ -10124,7 +10124,7 @@
     "aliases": [
       "Газетный"
     ],
-    "developer": "BusinessClub",
+    "developer": "Business Club",
     "address": "",
     "latitude": 55.758965,
     "longitude": 37.610619,
@@ -13225,7 +13225,7 @@
     "canonical_name": "Valtri",
     "flex_site_label": null,
     "aliases": [],
-    "developer": "ESVE GROUP",
+    "developer": "ESVE Group",
     "address": "ул. Грузинский Вал, 3",
     "latitude": 55.773439,
     "longitude": 37.576591,
@@ -14017,7 +14017,7 @@
     "canonical_name": "Бизнес-парк Переделкино",
     "flex_site_label": null,
     "aliases": [],
-    "developer": "Инвестиционная группа АБСОЛЮТ",
+    "developer": "Инвестиционная Группа АБСОЛЮТ",
     "address": "Москва, пос. Внуковское, кв-л 9, з/у 1",
     "latitude": 55.628458,
     "longitude": 37.307163,
@@ -15041,7 +15041,7 @@
     "aliases": [
       "Октябрьское поле"
     ],
-    "developer": "РГ Девелопмент",
+    "developer": "РГ-Девелопмент",
     "address": "Берзарина ул., вл. 32/4",
     "latitude": 55.789725,
     "longitude": 37.471039,
@@ -17515,7 +17515,7 @@
     "canonical_name": "Деловой дуэт",
     "flex_site_label": null,
     "aliases": [],
-    "developer": "АО \"Мостранссклад\"",
+    "developer": "АО Мостранссклад",
     "address": "Шумкина ул., 14с5, с13",
     "latitude": 55.788479,
     "longitude": 37.666701,
