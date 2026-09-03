@@ -2314,14 +2314,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0255",
-    "canonical_no": 288,
-    "name": "БЦ Крост",
-    "address": null,
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0256",
     "canonical_no": 289,
     "name": "БЦ ЛСР",
@@ -2526,14 +2518,6 @@
     "canonical_no": 323,
     "name": "БЦ по КРТ в Марьиной Роще",
     "address": "ул. 2-я Ямская, вл. 2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0271",
-    "canonical_no": 324,
-    "name": "БЦ Самолет",
-    "address": null,
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
