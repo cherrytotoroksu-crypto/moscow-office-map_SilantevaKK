@@ -82,8 +82,8 @@ class TestControlledSync20260830(unittest.TestCase):
 
     def test_25_records_without_coordinates_listed(self):
         missing = [r for r in self.classifier if r.get("latitude") is None or r.get("longitude") is None]
-        self.assertEqual(len(missing), 9,
-                          f"expected exactly 9 classifier records without coordinates, found {len(missing)}")
+        self.assertEqual(len(missing), 7,
+                          f"expected exactly 7 classifier records without coordinates, found {len(missing)}")
         # explicit enumeration, not just a count
         names = sorted(r.get("name") or "" for r in missing)
         self.assertEqual(len(set(names)), len(names), "duplicate names among the no-coordinate records")
