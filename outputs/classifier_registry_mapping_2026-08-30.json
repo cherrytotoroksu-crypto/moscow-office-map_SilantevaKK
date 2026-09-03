@@ -1278,14 +1278,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0183",
-    "canonical_no": 124,
-    "name": "2-я Ямская, вл. 2",
-    "address": "ул. 2-я Ямская, вл. 2, Москва",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0496",
     "canonical_no": 125,
     "name": "3-й Добрынинский пер., земельный участок 4/2,",
@@ -1462,26 +1454,10 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0606",
-    "canonical_no": 147,
-    "name": "Dubininsky SKY",
-    "address": "Ул. Дубининская вл.39-41",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0195",
     "canonical_no": 148,
     "name": "Ferrum",
     "address": "г. Москва, Шарикоподшипниковская ул., д. 11 стр. 8",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0051",
-    "canonical_no": 149,
-    "name": "Fili Center",
-    "address": "Промышленный пр-д, вл. 5",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -1674,14 +1650,6 @@
     "canonical_no": 175,
     "name": "LUNAR (Module B)",
     "address": "Ленинский пр-кт, 38",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0521",
-    "canonical_no": 176,
-    "name": "Luzhniki Collection",
-    "address": "Лужнецкая набережная, вл. 2/4",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2226,14 +2194,6 @@
     "canonical_no": 247,
     "name": "Бадаевский Западный",
     "address": "ул Тараса Шевченко",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0635",
-    "canonical_no": 248,
-    "name": "Башня в Сити",
-    "address": "Краснопресненская наб., вл. 16/1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2870,14 +2830,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0501",
-    "canonical_no": 332,
-    "name": "Варшавское шоссе, 36",
-    "address": "Варшавское шоссе, 36",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0276",
     "canonical_no": 333,
     "name": "Варшавское, 37",
@@ -2914,14 +2866,6 @@
     "canonical_no": 338,
     "name": "Верхняя Сыромятническая ул., вл.7, стр.1",
     "address": "Верхняя Сыромятническая ул., вл.7, стр.1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0277",
-    "canonical_no": 339,
-    "name": "Веткина",
-    "address": "г. Москва, ул. Веткина, владение 2",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2974,22 +2918,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0279",
-    "canonical_no": 346,
-    "name": "Галс Багратион (РВБ)",
-    "address": "Краснопресненская набережная, 16с1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0133",
-    "canonical_no": 347,
-    "name": "Галс Южный Порт",
-    "address": "Шоссейная ул., вл. 4А",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0035",
     "canonical_no": 348,
     "name": "ГБУ Мосгоргеотрест",
@@ -3018,14 +2946,6 @@
     "canonical_no": 352,
     "name": "ГК Север на Савеловской",
     "address": "Бутырская улица, вл1-1, Москва",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0282",
-    "canonical_no": 353,
-    "name": "Глоракс Бизнес Римская",
-    "address": "Москва, Перовский проезд, вл. 54",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -3510,14 +3430,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0506",
-    "canonical_no": 416,
-    "name": "КРТ Волоколамское шоссе",
-    "address": "Волоколамское шоссе, вл.32, Авиационная ул., вл.17-22",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0433",
     "canonical_no": 417,
     "name": "КРТ Дербеневская набережная",
@@ -3618,14 +3530,6 @@
     "canonical_no": 429,
     "name": "Кунцево, 59 км МКАД",
     "address": "Кунцево, 59 км МКАД",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0176",
-    "canonical_no": 430,
-    "name": "Легенда. Береговые кварталы",
-    "address": "г. Москва, Ленинградское шоссе, вл. 63Г",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -3998,14 +3902,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0664",
-    "canonical_no": 479,
-    "name": "МФК Веткина",
-    "address": "ул. Веткина, вл.2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0106",
     "canonical_no": 480,
     "name": "МФК Мануфактура",
@@ -4330,14 +4226,6 @@
     "canonical_no": 521,
     "name": "Огородный проезд, 6-12",
     "address": "Огородный проезд, 6-12",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0707",
-    "canonical_no": 522,
-    "name": "ООО Марьина роща",
-    "address": "2-я Ямская ул., 9",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5186,14 +5074,6 @@
     "canonical_no": 630,
     "name": "Страна Заречная",
     "address": "Иловайская, 3А",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0345",
-    "canonical_no": 631,
-    "name": "Страна.Сити",
-    "address": "ул. Антона Овсиенко",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
