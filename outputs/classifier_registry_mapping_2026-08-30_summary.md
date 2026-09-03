@@ -1,13 +1,13 @@
 # Classifier <-> registry mapping report (2026-08-30)
 
-- classifier rows (source): 699
+- classifier rows (source): 692
 - registry rows (target): 374
 
 | status | count |
 |---|---|
 | exact_match | 36 |
 | probable_match | 53 |
-| conflict | 20 |
+| conflict | 19 |
 | new_record | 8 |
-| excluded_from_quarterly_layer | 582 |
-| **total** | **699** |
+| excluded_from_quarterly_layer | 576 |
+| **total** | **692** |

@@ -1190,17 +1190,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0481",
-    "canonical_no": 110,
-    "name": "ул. Академика Ильюшина, вл. 21",
-    "address": "ул. Академика Ильюшина, вл. 21",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-269"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0486",
     "canonical_no": 111,
     "name": "1-й Магистральный проезд, 12",
@@ -1221,14 +1210,6 @@
     "canonical_no": 113,
     "name": "1-я Магистральная, вл. 29",
     "address": "1-я Магистральная, вл. 29",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0488",
-    "canonical_no": 114,
-    "name": "1-я ул. Ямского Поля, вл. 17",
-    "address": "1-я ул. Ямского Поля, вл. 17",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -1517,22 +1498,6 @@
     "canonical_no": 150,
     "name": "FLY",
     "address": "Ленинградский проспект, 37 корп. 3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0197",
-    "canonical_no": 151,
-    "name": "Forma Workplace на Волоколамском",
-    "address": "Волоколамское шоссе, вл. 32",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0198",
-    "canonical_no": 152,
-    "name": "Forma Workplace на Волоколамском маленький",
-    "address": "Авиационная ул., вл. 17-22",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2793,14 +2758,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0266",
-    "canonical_no": 316,
-    "name": "БЦ на ул. Гашека",
-    "address": "улица Гашека, 12с2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0777",
     "canonical_no": 317,
     "name": "БЦ на ул. Гончарная д.20/1c2",
@@ -3677,14 +3634,6 @@
     "canonical_no": 430,
     "name": "Легенда. Береговые кварталы",
     "address": "г. Москва, Ленинградское шоссе, вл. 63Г",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0515",
-    "canonical_no": 431,
-    "name": "Ленинградский проспект, 37Б",
-    "address": "Ленинградский проспект, 37Б",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -4797,14 +4746,6 @@
     "canonical_no": 572,
     "name": "Профсоюзная, 4-12",
     "address": "Профсоюзная, 4-12",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0559",
-    "canonical_no": 573,
-    "name": "Пятницкая ул., вл. 40",
-    "address": "Пятницкая ул., вл. 40",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
