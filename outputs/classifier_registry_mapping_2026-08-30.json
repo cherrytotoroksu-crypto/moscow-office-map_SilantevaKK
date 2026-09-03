@@ -1650,14 +1650,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0044",
-    "canonical_no": 190,
-    "name": "PORTA Workplace",
-    "address": "Заречная ул., вл. 2/1",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0585",
     "canonical_no": 191,
     "name": "Prime Time",
@@ -1726,14 +1718,6 @@
     "canonical_no": 200,
     "name": "Slava (4 очередь)",
     "address": "1-я улица Ямского поля, вл. 8",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0648",
-    "canonical_no": 201,
-    "name": "SLAVA (4-я оч.)",
-    "address": "1-я ул. Ямского Поля, 8с2",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -2202,14 +2186,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0243",
-    "canonical_no": 269,
-    "name": "БЦ Riva",
-    "address": "Проспект Андропова",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0244",
     "canonical_no": 270,
     "name": "БЦ Springs",
@@ -2358,14 +2334,6 @@
     "canonical_no": 289,
     "name": "БЦ ЛСР",
     "address": null,
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0095",
-    "canonical_no": 291,
-    "name": "БЦ Магистральный (из буклета 2026)",
-    "address": "г. Москва, 4-я Магистральная ул., вл. 4",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -5094,14 +5062,6 @@
     "canonical_no": 668,
     "name": "ТПУ Рязанская",
     "address": "Нижегородский район",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0523",
-    "canonical_no": 669,
-    "name": "ТПУ Рязанский",
-    "address": "Москва, Нижегородский район, Рязанский пр-т",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
