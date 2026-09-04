@@ -1268,7 +1268,7 @@
       "unified_id": "UC-OBJ-0126",
       "source_id": "OBJ-0126",
       "name": "Stone Ходынка 3",
-      "address": "Москва, Ходынский бульвар, 20а/2",
+      "address": "Москва, Ходынский бульвар, 20а/1",
       "developer": "STONE",
       "gba": 76600.0,
       "gla": 48000.0,
@@ -1276,11 +1276,12 @@
       "commission_year": 2029,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.7891345192086,
-      "longitude": 37.524903817677,
-      "coordinates_status": "unverified",
+      "latitude": 55.789361,
+      "longitude": 37.5236,
+      "coordinates_status": "verified",
       "legacy_ids": [
-        "proj-197"
+        "proj-197",
+        "proj-200"
       ],
       "quarter_offer_refs": [
         "202407",
@@ -1304,7 +1305,7 @@
       "source_links": [
         "https://t.me/stroi_news/2749"
       ],
-      "verification_status": "Сверить конфликты",
+      "verification_status": "Сверить конфликты Исправлено 2026-09-04: адрес/координаты были скопированы с записи 'Ходынка 2' (тот же адрес 20а/2, ~15м друг от друга) - реальный адрес з/у 20а/1 подтверждён stone.ru/commercial/hodinka3, совпадает с registry proj-200 'STONE Ходынка III'.",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
@@ -3937,8 +3938,8 @@
       "commission_year": 2032,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.7893761795632,
-      "longitude": 37.5232408661241,
+      "latitude": 55.788633,
+      "longitude": 37.530055,
       "coordinates_status": "unverified",
       "legacy_ids": [
         "proj-258"
@@ -3956,12 +3957,12 @@
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. | date_research_fix 2026-08-22: stone.ru/commercial/hodinka4 (живая страница, \"Готовность 2032 г.\"), stonebrokers.ru, anwin.ru — согласуются на 2032, квартал не уточнён ни одним источником. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone ходынка iv'; underlying source and its check date remain in that record (2026-08-22). Class rechecked 2026-08-22: STONE official page and STONE Brokers describe the project as premium; CREMAP and Yandex Realty classify it as A. Mapped to canonical class Prime per STONE terminology; previous A retained as non-canonical market label.",
       "source_links": [],
-      "verification_status": "Сверить конфликты",
+      "verification_status": "Сверить конфликты Исправлено 2026-09-04: координаты совпадали с 'Ходынка 3' (тот же баг копирования). Точный адрес башни IV не найден ни в одном открытом источнике (stone.ru/commercial/hodinka4 даёт только адрес офиса продаж) - координаты НЕ угаданы, взяты уже существующие (тоже приблизительные) из registry proj-258, BLOCKED_BY_EVIDENCE на точный адрес.",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
+      "needs_review": true,
+      "review_reason": "coordinates approximate, exact plot for tower IV not publicly documented",
       "canonical_no": 94
     },
     {

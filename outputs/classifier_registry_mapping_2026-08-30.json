@@ -274,10 +274,10 @@
     "unified_id": "UC-OBJ-0126",
     "canonical_no": 29,
     "name": "Stone Ходынка 3",
-    "address": "Москва, Ходынский бульвар, 20а/2",
+    "address": "Москва, Ходынский бульвар, 20а/1",
     "status": "conflict",
     "candidate_project_ids": [
-      "proj-197"
+      "proj-200"
     ],
     "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
   },
@@ -978,7 +978,8 @@
     "address": "Москва, Ходынский бульвар",
     "status": "conflict",
     "candidate_project_ids": [
-      "proj-200"
+      "proj-112",
+      "proj-258"
     ],
     "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
   },
