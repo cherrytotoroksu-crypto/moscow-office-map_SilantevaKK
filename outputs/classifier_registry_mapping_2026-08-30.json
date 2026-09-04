@@ -24,18 +24,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0039",
-    "canonical_no": 3,
-    "name": "Stone Савеловская",
-    "address": "ул. Двинцев, влд 3",
-    "status": "probable_match",
-    "candidate_project_id": "proj-194",
-    "mismatch": [
-      "address"
-    ],
-    "coord_corroborated": true
-  },
-  {
     "unified_id": "UC-OBJ-0654",
     "canonical_no": 4,
     "name": "STONE Савёловская (Башня 1 и Башня 2)",
@@ -84,14 +72,6 @@
     "unified_id": "UC-OBJ-0571",
     "canonical_no": 9,
     "name": "МФК Lucky",
-    "address": "2-ая Звенигородская ул., д. 12",
-    "status": "new_record",
-    "reason": "no registry row with matching name or nearby coordinates"
-  },
-  {
-    "unified_id": "UC-OBJ-0010",
-    "canonical_no": 10,
-    "name": "МФК Lucky, стр. 1",
     "address": "2-ая Звенигородская ул., д. 12",
     "status": "new_record",
     "reason": "no registry row with matching name or nearby coordinates"
@@ -1604,7 +1584,7 @@
   {
     "unified_id": "UC-OBJ-0081",
     "canonical_no": 183,
-    "name": "N'ICE TOWER",
+    "name": "Солид (бывший Nice Tower)",
     "address": "Скотопрогонная ул. 31Ас1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
