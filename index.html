@@ -14,7 +14,7 @@
       addEventListener это не убрать. CSP всё равно ограничивает домены-источники
       скриптов/стилей/тайлов и запрещает <object>/плагины.
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org https://server.arcgisonline.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org https://server.arcgisonline.com https://api.maptiler.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <!-- По просьбе пользователя: сайт должен быть сложно найти без точной ссылки —
        не должен индексироваться поисковиками (сама ссылка при этом продолжает
@@ -674,6 +674,7 @@
   <hr>
   <h3>Подложка</h3>
   <label class="radio-row"><input type="radio" name="basemap" value="carto" checked> CARTO (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="maptiler"> MapTiler (светлая)</label>
   <label class="radio-row"><input type="radio" name="basemap" value="osm"> OSM</label>
   <label class="radio-row"><input type="radio" name="basemap" value="satellite"> Спутник</label>
 </div>
@@ -1072,7 +1073,9 @@ const basemaps = {
   osm: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     { attribution: '&copy; OpenStreetMap', maxZoom: 19 }),
   satellite: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    { attribution: 'Tiles &copy; Esri', maxZoom: 19 })
+    { attribution: 'Tiles &copy; Esri', maxZoom: 19 }),
+  maptiler: L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=04ccdd3ae8e84664b9e096231f087c7c_9aad70d6bc73b65b1c22e0b380aa01eaf5ac882e2d25bea3cc74e2a2f80c4638',
+    { attribution: '&copy; MapTiler &copy; OpenStreetMap contributors', maxZoom: 20 })
 };
 basemaps.carto.addTo(map);
 
