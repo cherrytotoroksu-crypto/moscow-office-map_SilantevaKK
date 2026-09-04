@@ -673,8 +673,8 @@
 
   <hr>
   <h3>Подложка</h3>
-  <label class="radio-row"><input type="radio" name="basemap" value="carto" checked> CARTO (светлая)</label>
-  <label class="radio-row"><input type="radio" name="basemap" value="maptiler"> MapTiler (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="maptiler" checked> MapTiler (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="carto"> CARTO (светлая)</label>
   <label class="radio-row"><input type="radio" name="basemap" value="osm"> OSM</label>
   <label class="radio-row"><input type="radio" name="basemap" value="satellite"> Спутник</label>
 </div>
@@ -1074,10 +1074,10 @@ const basemaps = {
     { attribution: '&copy; OpenStreetMap', maxZoom: 19 }),
   satellite: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     { attribution: 'Tiles &copy; Esri', maxZoom: 19 }),
-  maptiler: L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=04ccdd3ae8e84664b9e096231f087c7c_9aad70d6bc73b65b1c22e0b380aa01eaf5ac882e2d25bea3cc74e2a2f80c4638',
+  maptiler: L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9QNNh0Z3LZcI0sY7H9fB',
     { attribution: '&copy; MapTiler &copy; OpenStreetMap contributors', maxZoom: 20 })
 };
-basemaps.carto.addTo(map);
+basemaps.maptiler.addTo(map);
 
 // ============================================================
 //  ЦВЕТА
