@@ -306,7 +306,7 @@
   {
     "unified_id": "UC-OBJ-0090",
     "canonical_no": 32,
-    "name": "Башня Власов",
+    "name": "БЦ Рябовская Мануфактура",
     "address": "Холодильный пер.,д.3",
     "status": "exact_match",
     "matched_project_id": "proj-96",
@@ -2001,7 +2001,7 @@
   {
     "unified_id": "UC-OBJ-0731",
     "canonical_no": 249,
-    "name": "Башня Власов (Рябовская Мануфактура)",
+    "name": "Башня Рябов (Рябовская Мануфактура, уточнить корпус)",
     "address": "Холодильный пер., 3с1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
@@ -4275,14 +4275,6 @@
     "canonical_no": 570,
     "name": "Промышленный проезд, вл. 7",
     "address": "Промышленный проезд, вл. 7",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0504",
-    "canonical_no": 571,
-    "name": "проспект Вернадского",
-    "address": "Вернадского, вл. 6В.",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },

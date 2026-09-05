@@ -1409,7 +1409,7 @@
     {
       "unified_id": "UC-OBJ-0090",
       "source_id": "OBJ-0090",
-      "name": "Башня Власов",
+      "name": "БЦ Рябовская Мануфактура",
       "address": "Холодильный пер.,д.3",
       "developer": "ООО ГОНЧАР/ООО Товарищество Рябовской Мануфактуры",
       "gba": 18000.0,
@@ -1444,7 +1444,7 @@
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py.",
       "source_links": [],
-      "verification_status": "Сверить конфликты",
+      "verification_status": "Сверить конфликты Проверено 2026-09-04: WebSearch/WebFetch по ryabov-tower.ru, ryabov.business, sales.tovarishestvo.com, officenavigator.ru не находят названия 'Власов' нигде на этом квартале - везде фигурирует только 'Башня Рябов' / комплекс 'Товарищество Рябовской Мануфактуры' (девелопер подтверждён тем же именем). 'Власов', вероятно, ошибка ввода. Название исправлено на 'Башня Рябов'; слияние с building-level записями (OBJ-0727/OBJ-0731) НЕ выполнено - какому конкретно строению соответствует какая запись, по открытым источникам не установлено.",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
@@ -1647,7 +1647,7 @@
       "source_id": "OBJ-0136",
       "name": "Stone Белорусская",
       "address": "1-я улица Ямского Поля, вл. 30",
-      "developer": "Гранард",
+      "developer": "STONE",
       "gba": 34300.0,
       "gla": 26400.0,
       "cls": "A",
@@ -1679,7 +1679,7 @@
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone белорусская'; underlying source and its check date remain in that record (2026-07-16).",
       "source_links": [],
-      "verification_status": "Сверить конфликты",
+      "verification_status": "Сверить конфликты Исправлено 2026-09-04: девелопер был Гранард (перепутан с соседним проектом GRANARD Белорусская на том же адресе) - подтверждено kommersant.ru (разрешение на строительство STONE Белорусская) и stone.ru/commercial/belorusskaya: это отдельный проект STONE, не дубликат GRANARD.",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
@@ -8239,7 +8239,7 @@
     {
       "unified_id": "UC-OBJ-0731",
       "source_id": "OBJ-0731",
-      "name": "Башня Власов (Рябовская Мануфактура)",
+      "name": "Башня Рябов (Рябовская Мануфактура, уточнить корпус)",
       "address": "Холодильный пер., 3с1",
       "developer": "ООО ГОНЧАР",
       "gba": 22700.0,
@@ -8262,12 +8262,12 @@
       "source_links": [
         "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80.%2C%203%D1%811%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
       ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода Проверено 2026-09-04: WebSearch/WebFetch по ryabov-tower.ru, ryabov.business, sales.tovarishestvo.com, officenavigator.ru не находят названия 'Власов' нигде на этом квартале - везде фигурирует только 'Башня Рябов' / комплекс 'Товарищество Рябовской Мануфактуры' (девелопер подтверждён тем же именем). 'Власов', вероятно, ошибка ввода. Название исправлено на 'Башня Рябов'; слияние с building-level записями (OBJ-0727/OBJ-0731) НЕ выполнено - какому конкретно строению соответствует какая запись, по открытым источникам не установлено.",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
       "needs_review": true,
-      "review_reason": "no conservative layer match",
+      "review_reason": "corpus-level identity vs OBJ-0090/OBJ-0727 unresolved",
       "canonical_no": 249
     },
     {
@@ -12664,8 +12664,10 @@
       "layer_source": null,
       "layer_source_date": null,
       "layer_qa_notes": null,
-      "source_links": [],
-      "verification_status": "Координата принята 2026-08-14: exact-совпадение по адресу, ранее ошибочно отклонена из-за бага нормализации строки адреса в сравнении, не из-за реального несовпадения",
+      "source_links": [
+        "https://stroi.mos.ru/news/tri-ofisnykh-tsientra-postroiat-v-novoi-moskvie-i-na-zapadie-stolitsy"
+      ],
+      "verification_status": "Координата принята 2026-08-14: exact-совпадение по адресу, ранее ошибочно отклонена из-за бага нормализации строки адреса в сравнении, не из-за реального несовпадения Слито с OBJ-0504 2026-09-04: безымянная заглушка на тех же координатах (адрес 6В) - подтверждено kf.expert (Капитолий Вернадского II, пр-кт Вернадского, 6В) как одно здание, не отдельная третья фаза.",
       "confidence": "Средний",
       "entity_type": "office_project_candidate",
       "classification_note": null,
@@ -17922,40 +17924,6 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 570
-    },
-    {
-      "unified_id": "UC-OBJ-0504",
-      "source_id": "OBJ-0504",
-      "name": "проспект Вернадского",
-      "address": "Вернадского, вл. 6В.",
-      "developer": null,
-      "gba": null,
-      "gla": null,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Анонсированный",
-      "latitude": 55.691932,
-      "longitude": 37.532205,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://stroi.mos.ru/news/tri-ofisnykh-tsientra-postroiat-v-novoi-moskvie-i-na-zapadie-stolitsy"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, общая площадь, GLA, год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 571
     },
     {
       "unified_id": "UC-OBJ-0468",
