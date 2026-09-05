@@ -673,8 +673,8 @@
 
   <hr>
   <h3>Подложка</h3>
-  <label class="radio-row"><input type="radio" name="basemap" value="maptiler" checked> MapTiler (светлая)</label>
-  <label class="radio-row"><input type="radio" name="basemap" value="carto"> CARTO (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="carto" checked> CARTO (светлая)</label>
+  <label class="radio-row"><input type="radio" name="basemap" value="maptiler"> MapTiler (светлая)</label>
   <label class="radio-row"><input type="radio" name="basemap" value="osm"> OSM</label>
   <label class="radio-row"><input type="radio" name="basemap" value="satellite"> Спутник</label>
 </div>
@@ -1077,7 +1077,7 @@ const basemaps = {
   maptiler: L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9QNNh0Z3LZcI0sY7H9fB',
     { attribution: '&copy; MapTiler &copy; OpenStreetMap contributors', maxZoom: 20 })
 };
-basemaps.maptiler.addTo(map);
+basemaps.carto.addTo(map);
 
 // ============================================================
 //  ЦВЕТА
