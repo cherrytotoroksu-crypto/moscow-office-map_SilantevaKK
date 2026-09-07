@@ -13,6 +13,7 @@ geo-привязку занижала охват (79 реальных площа
 самим площадкам.
 """
 import re
+import json
 import unittest
 from pathlib import Path
 
@@ -70,6 +71,40 @@ class AnalyticsConstructorPageTest(unittest.TestCase):
         и не должны считаться нулём — помечаются отдельной категорией."""
         self.assertIn("ANA_NA_LABEL", self.html)
         self.assertIn("Не определено", self.html)
+
+    def test_developer_options_refresh_when_end_quarter_changes(self):
+        """Селектор девелопера не должен оставаться от квартала инициализации."""
+        self.assertIn(
+            "document.getElementById('anaQuarterTo').addEventListener('change', onAnaQuarterToChange)",
+            self.html,
+        )
+        self.assertIn("function onAnaQuarterToChange()", self.html)
+        self.assertIn("refreshAnaDeveloperOptions();", self.html)
+
+    def test_developer_options_are_limited_to_selected_channel_data(self):
+        """Аренда не должна показывать девелоперов только из файла продаж."""
+        self.assertIn(
+            "(allBuildings[qid] || []).filter(row => anaHasData(row, qid, channel))",
+            self.html,
+        )
+        buildings = json.loads(
+            (REPO_ROOT / "data" / "buildings_202606.json").read_text(encoding="utf-8-sig")
+        )
+        rent = json.loads(
+            (REPO_ROOT / "data" / "rent_lots_202606.json").read_text(encoding="utf-8-sig")
+        )
+        all_developers = {row.get("developer") for row in buildings if row.get("developer")}
+        rent_developers = {
+            row.get("developer")
+            for row in buildings
+            if row.get("developer") and (rent.get(row.get("name")) or rent.get(row.get("name_orig")))
+        }
+        self.assertEqual(len(all_developers), 55)
+        self.assertEqual(len(rent_developers), 14)
+        self.assertLess(rent_developers, all_developers)
+
+    def test_developer_selector_discloses_available_count(self):
+        self.assertIn('`<option value="">Все (${devs.length})</option>`', self.html)
 
 
 if __name__ == "__main__":

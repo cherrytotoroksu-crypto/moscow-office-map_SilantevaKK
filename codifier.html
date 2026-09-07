@@ -820,7 +820,13 @@ async function loadSaleBuildings(quarterId) {
 }
 
 async function loadSaleDevelopers(quarterId) {
-  const buildings = await fetchBuildingsWithJoin(quarterId);
+  const allBuildings = await fetchBuildingsWithJoin(quarterId);
+  // «Девелоперы квартала» — это агрегат текущей выборки зданий, поэтому
+  // фильтры из соседнего представления должны применяться ДО группировки.
+  // Иначе пресет «Строящиеся» показывал 83 здания, но после переключения на
+  // девелоперов снова учитывались все 101 здание квартала.
+  state.sale_buildings.rows = allBuildings;
+  const buildings = getFilteredRows(state.sale_buildings, 'sale_buildings');
   const byDev = new Map();
   for (const b of buildings) {
     const dev = b.developer || '—';
@@ -854,7 +860,12 @@ async function loadSaleDevelopers(quarterId) {
   state.sale_developers.rows = rows;
   if (!suppressURLSync) state.sale_developers.page = 1;
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
-  dataMeta.sale_developers = {updated: label, count: rows.length};
+  dataMeta.sale_developers = {
+    updated: label,
+    count: rows.length,
+    sourceCount: buildings.length,
+    totalSourceCount: allBuildings.length,
+  };
   render();
 }
 
@@ -1263,12 +1274,12 @@ function passesFilter(row, col, filter) {
   return true;
 }
 
-function getFilteredSortedRows(ts) {
-  let rows = ts.rows.filter(row => {
+function getFilteredRows(ts, viewId = currentView) {
+  return ts.rows.filter(row => {
     // Фильтр источника — только для сырых записей общего реестра (codifier);
     // квартальные разделы (продажа/аренда/флекс) строятся из отдельных
     // файлов и никогда не содержат remain_datalens записей (п.4 задачи).
-    if (currentView === 'codifier' && sourceMode !== 'both') {
+    if (viewId === 'codifier' && sourceMode !== 'both') {
       const isRemain = row.public_visibility === 'internal_only';
       if (sourceMode === 'local' && isRemain) return false;
       if (sourceMode === 'remain' && !isRemain) return false;
@@ -1292,6 +1303,10 @@ function getFilteredSortedRows(ts) {
     }
     return true;
   });
+}
+
+function getFilteredSortedRows(ts) {
+  let rows = getFilteredRows(ts, currentView);
   if (ts.sort.key) {
     const col = ts.columns.find(c => c.key === ts.sort.key);
     rows = rows.slice().sort((a, b) => {
@@ -1516,9 +1531,12 @@ function render() {
   if (resetInline) resetInline.onclick = () => document.getElementById('btnReset').click();
 
   const meta = dataMeta[currentView];
+  const sourceSelection = currentView === 'sale_developers' && meta
+    ? ` · зданий в агрегате: ${meta.sourceCount} из ${meta.totalSourceCount}`
+    : '';
   document.getElementById('statusRow').textContent =
     `Строк: ${filteredRows.length} из ${ts.rows.length}` +
-    (meta ? ` · срез: ${meta.updated ?? '—'}` : '');
+    (meta ? ` · срез: ${meta.updated ?? '—'}` : '') + sourceSelection;
   document.getElementById('totalsRow').textContent = 'Итого по выборке: ' + computeTotals(currentView, filteredRows);
   document.getElementById('pagerLabel').textContent = showAll ? `Все строки: ${filteredRows.length}` : `Стр. ${ts.page} из ${totalPages}`;
   document.getElementById('btnPrevPage').disabled = showAll || ts.page <= 1;
@@ -1884,6 +1902,14 @@ document.getElementById('btnReset').onclick = () => {
   ts.sort = {key:null, dir:1};
   ts.globalSearch = '';
   document.getElementById('globalSearch').value = '';
+  if (currentView === 'sale_developers') {
+    // В этом представлении часть фильтров относится к исходным зданиям и
+    // применяется до агрегации, поэтому общий сброс должен очищать и их.
+    state.sale_buildings.filters = {};
+    state.sale_buildings.globalSearch = '';
+    loadSaleDevelopers(currentQuarterId);
+    return;
+  }
   render();
 };
 document.getElementById('qaModeToggle').onchange = (e) => {
@@ -1964,20 +1990,25 @@ document.getElementById('presetSelect').onchange = (e) => {
   e.target.value = '';
   if (!preset) return;
   const ts = state[currentView];
+  // Пресеты статуса/источника относятся к зданиям. В агрегате по
+  // девелоперам применяем их к исходным строкам ДО группировки.
+  const presetTs = currentView === 'sale_developers' ? state.sale_buildings : ts;
   ts.filters = {};
-  const findKey = (...candidates) => candidates.find(k => ts.columns.some(c => c.key === k));
+  if (presetTs !== ts) presetTs.filters = {};
+  const findKey = (...candidates) => candidates.find(k => presetTs.columns.some(c => c.key === k));
   if (preset === 'all_sale') {
     const key = findKey('market_channel', 'reg_market_channel');
-    if (key) ts.filters[key] = {mode:'values', values: new Set([SEGMENT_LABEL.sale]), emptyOnly:false, nonEmptyOnly:false};
+    if (key) presetTs.filters[key] = {mode:'values', values: new Set([SEGMENT_LABEL.sale]), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'under_construction') {
-    const key = findKey('project_status', 'reg_project_status');
-    if (key) ts.filters[key] = {mode:'values', values: new Set(['Строится']), emptyOnly:false, nonEmptyOnly:false};
+    const key = findKey('status', 'project_status', 'reg_project_status');
+    if (key) presetTs.filters[key] = {mode:'values', values: new Set(['Строится']), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'delivered') {
-    const key = findKey('project_status', 'reg_project_status');
-    if (key) ts.filters[key] = {mode:'values', values: new Set(['Введён']), emptyOnly:false, nonEmptyOnly:false};
+    const key = findKey('status', 'project_status', 'reg_project_status');
+    const value = key === 'status' ? 'Построен' : 'Введён';
+    if (key) presetTs.filters[key] = {mode:'values', values: new Set([value]), emptyOnly:false, nonEmptyOnly:false};
   } else if (preset === 'no_source') {
     const key = findKey('source', 'reg_source');
-    if (key) ts.filters[key] = {mode:'values', values: new Set(), emptyOnly:true, nonEmptyOnly:false};
+    if (key) presetTs.filters[key] = {mode:'values', values: new Set(), emptyOnly:true, nonEmptyOnly:false};
   } else if (preset === 'changed_only') {
     // "Только изменения" реализовано только для "Здания квартала" (Продажа) — нужен режим сравнения кварталов.
     if (currentView === 'sale_buildings') {
@@ -1991,7 +2022,11 @@ document.getElementById('presetSelect').onchange = (e) => {
       return;
     }
   }
-  render();
+  if (currentView === 'sale_developers') {
+    loadSaleDevelopers(currentQuarterId);
+  } else {
+    render();
+  }
 };
 
 // ============================================================

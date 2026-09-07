@@ -383,8 +383,9 @@ async function initAnalyticsConstructor() {
     fillSelect(toSel, qOpts, qs[qs.length-1].id);
     document.querySelectorAll('input[name="anaDomain"]').forEach(r => r.addEventListener('change', onAnaDomainChange));
     document.getElementById('anaChannel').addEventListener('change', onAnaDomainChange);
-    ['anaQuarterFrom','anaQuarterTo','anaMetric','anaGroupBy','anaChartType','anaDeveloper']
+    ['anaQuarterFrom','anaMetric','anaGroupBy','anaChartType','anaDeveloper']
       .forEach(id => document.getElementById(id).addEventListener('change', renderAnalytics));
+    document.getElementById('anaQuarterTo').addEventListener('change', onAnaQuarterToChange);
     document.querySelectorAll('.flt-ana-status').forEach(cb => cb.addEventListener('change', renderAnalytics));
     document.getElementById('anaExport').addEventListener('click', exportAnalytics);
     analyticsInited = true;
@@ -397,7 +398,23 @@ function anaDeveloperFieldFor(domain, channel) {
 }
 function anaDeveloperRowsFor(domain, channel, qid) {
   if (domain !== 'quarterly') return analyticsProjectsData || [];
-  return channel === 'coworking' ? (allCoworking[qid] || []) : (allBuildings[qid] || []);
+  if (channel === 'coworking') return allCoworking[qid] || [];
+  // В фильтре должны быть только девелоперы с данными выбранного канала:
+  // иначе аренда предлагала десятки девелоперов только из файла продаж, а
+  // выбор такого пункта приводил к пустому графику.
+  return (allBuildings[qid] || []).filter(row => anaHasData(row, qid, channel));
+}
+function refreshAnaDeveloperOptions() {
+  const domain = anaDomain();
+  const channel = document.getElementById('anaChannel').value || 'sale';
+  const qid = document.getElementById('anaQuarterTo').value;
+  fillAnaDeveloperOptions(anaDeveloperRowsFor(domain, channel, qid), anaDeveloperFieldFor(domain, channel));
+}
+function onAnaQuarterToChange() {
+  // Список зависит от конечного квартала. Раньше менялся только график, а
+  // селектор оставался от квартала, открытого при инициализации.
+  refreshAnaDeveloperOptions();
+  renderAnalytics();
 }
 
 async function onAnaDomainChange() {
@@ -418,7 +435,7 @@ async function onAnaDomainChange() {
     } else {
       if (!analyticsProjectsData) analyticsProjectsData = await fetchJSON('data/all_projects_layer.json', []);
     }
-    fillAnaDeveloperOptions(anaDeveloperRowsFor(domain, channel, document.getElementById('anaQuarterTo').value), anaDeveloperFieldFor(domain, channel));
+    refreshAnaDeveloperOptions();
     document.getElementById('anaDeveloperLabel').textContent = (domain === 'quarterly' && channel === 'coworking') ? 'Оператор (сеть)' : 'Девелопер';
     status.textContent = analyticsLoadFailures.size
       ? `Не удалось загрузить ${analyticsLoadFailures.size} файл(а). Остальные данные доступны; обновите страницу для повторной попытки.`
@@ -439,7 +456,7 @@ function fillAnaDeveloperOptions(rows, field) {
   const sel = document.getElementById('anaDeveloper');
   const prev = sel.value;
   const devs = [...new Set(rows.map(r => r[field]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ru'));
-  sel.innerHTML = '<option value="">Все</option>' + devs.map(d=>`<option value="${d}">${d}</option>`).join('');
+  sel.innerHTML = `<option value="">Все (${devs.length})</option>` + devs.map(d=>`<option value="${d}">${d}</option>`).join('');
   if (devs.includes(prev)) sel.value = prev;
 }
 
