@@ -5299,14 +5299,18 @@
       "layer_offer_status": null,
       "layer_source": null,
       "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [],
-      "verification_status": "Сверить конфликты",
-      "confidence": "Низкий",
+      "layer_qa_notes": "Codex web audit 2026-09-05: mixed_use_project подтверждён 3 независимыми источниками (Capital Group офиц. страница объекта, пресс-центр Capital Group, презентация IBC по Москва-Сити). Офисная GLA 8 808 м² сохранена, весь GBA 243 000 м² не считается офисным.",
+      "source_links": [
+        "https://www.capitalgroup.ru/ru/objects/24",
+        "https://www.capitalgroup.ru/en/presscenter/news/1026",
+        "https://ibcrealestate.ru/upload/iblock/2ad/17ia74kumi9573hmwljace4aoivgwdiv/IBC_Prezentatsiya_Moskva_Siti_mart-2024_2pdf.com_edit_metadata.pdf"
+      ],
+      "verification_status": "Проверено",
+      "confidence": "Высокий",
       "entity_type": "residential_complex_with_commercial_infrastructure",
       "classification_note": "Official Capital Group page describes Capital Towers as three residential skyscrapers; do not count as standalone office project without separate office-building evidence.",
-      "needs_review": true,
-      "review_reason": "manual classification review",
+      "needs_review": false,
+      "review_reason": null,
       "canonical_no": 138
     },
     {
