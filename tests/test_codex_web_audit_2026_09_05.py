@@ -70,6 +70,53 @@ class TestCodexWebAudit20260905(unittest.TestCase):
         path = os.path.join(ROOT, "data", "building_dates.json")
         self.assertTrue(os.path.isfile(path))
 
+    def test_bc_start_candidate_absent_from_live_classifier(self):
+        # Like "БЦ Крост", "БЦ Старт" only exists in the legacy unified_classifier.json.
+        self.assertNotIn("БЦ Старт", self.by_name)
+
+    def test_artel_and_troitsky_pereulok_not_merged(self):
+        # "БЦ Artel" (Электрозаводская) vs "1-й Троицкий переулок, вл. 12/2с"
+        # (Равновесие Капитал): different developer, ~7km apart, different GBA.
+        # Codex flagged this only as probable_match - data shows it is a false lead.
+        artel = self.by_id["UC-OBJ-0240"]
+        troitsky = self.by_id["UC-OBJ-0417"]
+        self.assertEqual(artel["name"], "БЦ Artel")
+        self.assertNotEqual(artel["developer"], troitsky["developer"])
+        self.assertNotEqual(artel["gba"], troitsky["gba"])
+        # Coordinates should stay far apart (roughly >0.05 deg ~ 5+km) - no accidental merge.
+        self.assertGreater(abs(artel["latitude"] - troitsky["latitude"]), 0.01)
+
+    def test_a101_stub_flagged_but_not_merged_to_a_specific_corpus(self):
+        # "БЦ А101" has no address, so it cannot be safely assigned to one of the
+        # existing Prokshino queues (1/2/3-я очередь) even though the developer
+        # and district match. 2026-09-07 web check only adds a qa note; it must
+        # not gain a legacy_id / coordinates / merge into another record.
+        stub = self.by_id["UC-OBJ-0246"]
+        self.assertEqual(stub["name"], "БЦ А101")
+        self.assertIsNone(stub["address"])
+        self.assertEqual(stub["legacy_ids"], [])
+        self.assertIn("Прокшино", stub["layer_qa_notes"])
+
+    def test_severny_port_records_stay_separate_buildings(self):
+        # Three "Северный порт" records (Мангазея UC-OBJ-0386, LEGENDA
+        # UC-OBJ-0726 and UC-OBJ-0518) sit on the same former industrial site
+        # per a 2026-09-07 web check (domkad.ru: joint Мангазея + Legenda
+        # development), but have distinct addresses/corpuses (63А/1А vs с7 vs
+        # с6) - they must remain separate building records, not merged.
+        mangazeya = self.by_id["UC-OBJ-0386"]
+        legenda_main = self.by_id["UC-OBJ-0726"]
+        legenda_beregovye = self.by_id["UC-OBJ-0518"]
+        names = {mangazeya["name"], legenda_main["name"], legenda_beregovye["name"]}
+        self.assertEqual(names, {
+            "Мангазея Северный порт",
+            "Северный порт",
+            "Северный порт. Береговые кварталы",
+        })
+        addresses = {mangazeya["address"], legenda_main["address"], legenda_beregovye["address"]}
+        self.assertEqual(len(addresses), 3, "all three buildings must keep distinct addresses")
+        for rec in (mangazeya, legenda_main, legenda_beregovye):
+            self.assertEqual(rec["legacy_ids"], [], "no merge should have introduced a shared legacy_id")
+
 
 if __name__ == "__main__":
     unittest.main()
