@@ -12,8 +12,10 @@ Covered here:
     market_channel enum in the registry)
   - unique-project counting is not the same as row counting (Бадаевский)
   - empty values are not silently turned into 0
-  - the quarterly map (index.html) never loads the general registry, so it
-    cannot show offer-less projects
+  - the quarterly loaders in index.html (sale/rent/coworking) never load the
+    general registry, so the quarterly map cannot show offer-less projects
+    (loadFutureProjects is the one deliberate exception — see 2026-09 note
+    below — everything else stays quarter-scoped)
   - the general registry (data/all_projects_layer.json) keeps projects that
     have no current-quarter offer (quarter_offer_exists=false)
 """
@@ -148,12 +150,12 @@ class OnlineTablesInvariantTests(unittest.TestCase):
         # строиться ТОЛЬКО из data/buildings_{quarter}.json и т.п. — если бы
         # они тоже читали data/all_projects_layer.json напрямую, на квартальной
         # карте могли бы всплыть проекты без предложения в выбранном квартале.
-        # Общий реестр разрешён ТОЛЬКО в режиме «Конструктор аналитики»
-        # (domain === 'projects'), см. test_general_registry_fetch_is_confined_to_analytics_projects_domain.
+        # loadFutureProjects — намеренное исключение: это загрузчик режима
+        # «Все проекты» (справочник, вне квартальных срезов), с 2026-09-07
+        # явно переведён на общий реестр по решению пользователя, см.
+        # test_projects_mode_registry_fetch_is_only_in_load_future_projects.
         html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
-        quarterly_loader_names = [
-            "loadBuildings", "loadCoworking", "loadFutureProjects", "precomputeAll",
-        ]
+        quarterly_loader_names = ["loadBuildings", "loadCoworking", "precomputeAll"]
         for name in quarterly_loader_names:
             match = re.search(r"async function " + name + r"\s*\([^)]*\)\s*\{", html)
             self.assertIsNotNone(match, f"loader {name} not found in index.html")
@@ -161,18 +163,36 @@ class OnlineTablesInvariantTests(unittest.TestCase):
             self.assertNotIn("all_projects_layer.json", body,
                               f"{name} must not fetch the general registry directly")
 
+    def test_projects_mode_registry_fetch_is_only_in_load_future_projects(self):
+        # 2026-09-07: режим «Все проекты» в index.html намеренно переведён с
+        # устаревшего data/future_projects.json на общий реестр
+        # data/all_projects_layer.json (по явному решению пользователя — карта
+        # должна показывать все здания по всем каналам плюс проекты вне рынка).
+        # Проверено визуально: легенда/зум-контролы/подпись автора не
+        # перекрываются в этом режиме (ранее была такая проблема). Инвариант
+        # здесь — что реальный fetch() общего реестра в index.html существует
+        # РОВНО внутри loadFutureProjects, а не расползается по другим
+        # функциям (комментарии/упоминания вне fetch() не считаются).
+        html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
+        fetch_occurrences = [m.start() for m in re.finditer(r"fetch\([^)]*all_projects_layer\.json", html)]
+        self.assertGreater(len(fetch_occurrences), 0, "expected loadFutureProjects to fetch the general registry")
+        match = re.search(r"async function loadFutureProjects\s*\([^)]*\)\s*\{", html)
+        self.assertIsNotNone(match, "loadFutureProjects not found in index.html")
+        body = _extract_function_body(html, match.end() - 1)
+        body_start = html.index(body)
+        body_end = body_start + len(body)
+        for idx in fetch_occurrences:
+            self.assertTrue(body_start <= idx < body_end,
+                             "all_projects_layer.json fetched in index.html outside loadFutureProjects")
+
     def test_general_registry_fetch_is_confined_to_analytics_projects_domain(self):
-        # Единственный допустимый fetch общего реестра — внутри конструктора
-        # аналитики, гарантированно под веткой domain === 'projects' (режим
-        # «Реестр проектов»), а не квартальных таблиц. Конструктор — это
-        # analytics.html, отдельная страница (не вкладка внутри index.html —
-        # оверлей поверх карты визуально конфликтовал с легендой картограммы/
-        # зум-контролами/подписью автора, вынесен на отдельный URL).
+        # Единственный допустимый fetch общего реестра в analytics.html —
+        # внутри конструктора аналитики, гарантированно под веткой
+        # domain === 'projects' (режим «Реестр проектов»), а не квартальных
+        # таблиц. index.html теперь тоже читает реестр (см. тест выше) —
+        # там это карта с точками (режим «Все проекты»), не конструктор
+        # графиков, поэтому проверка domain-ветки к нему не относится.
         html = (REPO_ROOT / "analytics.html").read_text(encoding="utf-8")
-        # index.html вообще не должен трогать общий реестр — только квартальные файлы.
-        index_html = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertNotIn("all_projects_layer.json", index_html,
-                          "index.html must not fetch the general registry — moved to analytics.html")
         # только реальные вызовы fetch, а не комментарии/объявления переменных
         occurrences = [m.start() for m in re.finditer(r"fetchJSON\([^)]*all_projects_layer\.json", html)]
         self.assertGreater(len(occurrences), 0, "expected the general registry to be fetched in analytics.html")

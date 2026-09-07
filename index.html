@@ -590,20 +590,22 @@
     <div id="fpQuickBtns" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;">
       <button class="fp-quick" data-status="Строящийся">Строящиеся</button>
       <button class="fp-quick" data-status="Сданный">Сданные</button>
-      <button class="fp-quick" data-status="Проектный">Проектные</button>
-      <button class="fp-quick" data-status="Анонсированный">Анонсированные</button>
       <button class="fp-quick" data-status="Замороженный">Замороженные</button>
       <button class="fp-quick" data-status="Не определён">Не определён</button>
       <button class="fp-quick" data-status="__all__">Все</button>
     </div>
 
     <h3 style="margin-top:6px;">Статус</h3>
-    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Анонсированный" checked> Анонсированный</label>
-    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Проектный" checked> Проектный</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Замороженный" checked> Замороженный</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Строящийся" checked> Строящийся</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Сданный" checked> Сданный</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Не определён" checked> Не определён</label>
+
+    <h3 style="margin-top:6px;">Канал рынка</h3>
+    <label class="check-row"><input type="checkbox" class="flt-fp-channel" value="sale" checked> Продажа</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-channel" value="rent" checked> Аренда</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-channel" value="coworking" checked> Коворкинг</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-channel" value="__none__" checked> Нет канала (вне рынка)</label>
 
     <h3 style="margin-top:6px;">Уровень доверия</h3>
     <div style="font-size:10px;color:#767676;margin-bottom:4px;">По умолчанию показаны все объекты; низкая уверенность означает необходимость дополнительной проверки, а не отсутствие объекта</div>
@@ -2920,7 +2922,9 @@ function renderCoworkingLegend() {
 document.getElementById('ovCoworking').addEventListener('change', renderCoworking);
 
 // ============================================================
-//  СЛОЙ «ВСЕ ОФИСНЫЕ ПРОЕКТЫ — СВОД» (data/future_projects.json)
+//  СЛОЙ «ВСЕ ОФИСНЫЕ ПРОЕКТЫ — СВОД» (data/all_projects_layer.json:
+//  канонический реестр по всем каналам — продажа/аренда/коворкинг —
+//  плюс проекты вне активного рынка)
 //  Источник: Будущие_проекты_очищено_с_памятью.xlsx, лист «Все объекты (чистый)».
 //  Слой независим от режима продажа/аренда/коворкинги и от выбранного квартала:
 //  это справочник проектов, а не квартальный срез предложения.
@@ -2928,9 +2932,7 @@ document.getElementById('ovCoworking').addEventListener('change', renderCoworkin
 const FP_STATUS_COLOR = {
   'Сданный': '#16a34a',
   'Строящийся': '#f97316',
-  'Проектный': '#2563eb',
   'Замороженный': '#dc2626',
-  'Анонсированный': '#7c3aed',
   'Не определён': '#9ca3af',
 };
 
@@ -2938,6 +2940,9 @@ const GEOMETRY_QUALITY_LABEL = {
   'exact': 'Точная (адрес/контур здания)',
   'centroid': 'Центроид комплекса (не строения)',
   'approximate': 'Приблизительная',
+  'house_exact': 'Точная (адрес дома)',
+  'geocoded_approx': 'Геокодирована приблизительно',
+  'unknown': 'Неизвестна',
 };
 
 let futureData = null;
@@ -2954,14 +2959,69 @@ function fpRadius(gla) {
   return Math.max(4, Math.min(16, 4 + Math.sqrt(gla) / 30));
 }
 
+// project_status/confidence в data/all_projects_layer.json используют
+// другой словарь значений, чем старый свод future_projects.json — карта
+// и попапы завязаны на русские ярлыки старого свода, поэтому переводим.
+const APL_STATUS_MAP = {
+  'Строится': 'Строящийся',
+  'Введён': 'Сданный',
+  'Заморожен': 'Замороженный',
+  'Не установлен': 'Не определён',
+};
+const APL_CONFIDENCE_MAP = { high: 'Высокий', medium: 'Средний', low: 'Низкий' };
+const MARKET_CHANNEL_LABEL = { sale: 'Продажа', rent: 'Аренда', coworking: 'Коворкинг' };
+
+function mapAllProjectsLayerRecord(r) {
+  return {
+    id: r.canonical_project_id,
+    name: r.raw_name,
+    canonical_name: r.canonical_name,
+    address: r.address,
+    developer: r.developer,
+    gba: r.gba,
+    gla: r.gla != null ? r.gla : r.office_area,
+    cls: r.cls,
+    commission_quarter: r.input_quarter,
+    commission_year: r.input_year,
+    status: APL_STATUS_MAP[r.project_status] || 'Не определён',
+    lat: r.latitude,
+    lng: r.longitude,
+    verification_status: r.verification_status,
+    confidence: APL_CONFIDENCE_MAP[r.confidence] || 'Низкий',
+    sources: [],
+    conflicts: null,
+    merged_rows: r.source_count,
+    source_sheets: r.source,
+    geometry_quality: r.geometry_quality,
+    needs_review: r.qa_status !== 'ok',
+    review_notes: r.qa_notes,
+    market_channel: r.market_channel || [],
+    offer_status: r.offer_status,
+    entity_grain: r.entity_grain,
+  };
+}
+
 async function loadFutureProjects() {
   if (futureLoaded) return;
   const st = document.getElementById('fpStatus');
   try {
-    futureData = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
+    const layer = await fetch('data/all_projects_layer.json', { cache: 'no-cache' }).then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     });
+    // duplicate_of отмечает записи, уже представленные другой канонической
+    // строкой того же проекта — на карте не дублируем.
+    const live = layer.filter(r => !r.duplicate_of);
+    const withCoordsRaw = live.filter(r => r.latitude != null && r.longitude != null);
+    const noCoordsRaw = live.filter(r => r.latitude == null || r.longitude == null);
+    futureData = {
+      total: live.length,
+      with_coords: withCoordsRaw.length,
+      without_coords: noCoordsRaw.length,
+      duplicate_count: layer.length - live.length,
+      projects: withCoordsRaw.map(mapAllProjectsLayerRecord),
+      no_coords: noCoordsRaw.map(mapAllProjectsLayerRecord),
+    };
     assignGeoToRows(futureData.projects);
     futureLoaded = true;
     st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат)`;
@@ -3009,6 +3069,7 @@ function fpConfMode() {
 function getFilteredFuture() {
   if (!futureData) return [];
   const statuses = new Set([...document.querySelectorAll('.flt-fp-status:checked')].map(c => c.value));
+  const channels = new Set([...document.querySelectorAll('.flt-fp-channel:checked')].map(c => c.value));
   const mode = fpConfMode();
   const dev = document.getElementById('fpDeveloper').value;
   const clsSet = new Set([...document.querySelectorAll('.flt-fp-cls:checked')].map(c => c.value));
@@ -3018,6 +3079,9 @@ function getFilteredFuture() {
 
   return futureData.projects.filter(p => {
     if (!statuses.has(p.status || 'Не определён')) return false;
+    const mc = p.market_channel || [];
+    const channelOk = mc.length ? mc.some(c => channels.has(c)) : channels.has('__none__');
+    if (!channelOk) return false;
     const conf = p.confidence || 'Низкий';
     if (mode === 'verified' && conf === 'Низкий') return false;
     if (mode === 'review' && conf !== 'Низкий') return false;
@@ -3052,6 +3116,8 @@ function fpPopupHtml(p) {
     ['Класс', p.cls],
     ['Ввод', [p.commission_quarter ? 'Q' + p.commission_quarter : null, p.commission_year].filter(Boolean).join(' ') || null],
     ['Статус', p.status],
+    ['Каналы рынка', (p.market_channel || []).map(c => MARKET_CHANNEL_LABEL[c] || c).join(', ') || 'Вне рынка'],
+    ['Статус предложения', p.offer_status],
     ['Зона', p.geoZone ? displayName('zones', p.geoZone) : null],
     ['Субрынок', p.geoSubmarket],
     ['Деловой р-н (сформир.)', p.geoBizFormed],
@@ -3066,7 +3132,7 @@ function fpPopupHtml(p) {
     rows.map(([l, v]) =>
       `<div class="prow"><span class="plabel">${l}</span><span class="pval">${l === 'Координаты' ? v : (v == null || v === '' ? '—' : escapeHtml(String(v)))}</span></div>`
     ).join('') +
-    `<div class="prow" style="display:block;"><span class="plabel">Источники</span><div style="margin-top:2px;font-size:10px;word-break:break-all;">${src || 'Нет подтверждённых источников'}</div></div>`;
+    `<div class="prow" style="display:block;"><span class="plabel">Источник</span><div style="margin-top:2px;font-size:10px;word-break:break-all;">${src || escapeHtml(p.source_sheets || 'Не указан')}</div></div>`;
 }
 
 function renderFuture() {
@@ -3082,7 +3148,7 @@ function renderFuture() {
     // непроверенные данные), плюс приглушённая заливка по уровню доверия.
     // Объект НЕ скрывается — только помечается, координаты не трогаются.
     const lowConfidence = (p.confidence || 'Низкий') === 'Низкий';
-    const approx = p.geometry_quality === 'centroid' || p.geometry_quality === 'approximate' || lowConfidence;
+    const approx = ['centroid', 'approximate', 'geocoded_approx', 'unknown'].includes(p.geometry_quality) || lowConfidence;
     const fillOpacity = p.confidence === 'Высокий' ? 0.9 : (p.confidence === 'Средний' ? 0.75 : 0.45);
     const marker = L.circleMarker([p.lat, p.lng], {
       radius: fpRadius(p.gla),
@@ -3127,6 +3193,7 @@ function renderFutureLegend() {
 }
 
 document.querySelectorAll('.flt-fp-status').forEach(cb => cb.addEventListener('change', renderFuture));
+document.querySelectorAll('.flt-fp-channel').forEach(cb => cb.addEventListener('change', renderFuture));
 document.querySelectorAll('input[name="fpConfMode"]').forEach(cb => cb.addEventListener('change', renderFuture));
 ['fpDeveloper', 'fpQuarter'].forEach(id => document.getElementById(id).addEventListener('change', renderFuture));
 ['fpYearMin', 'fpYearMax'].forEach(id => document.getElementById(id).addEventListener('input', renderFuture));
@@ -3170,7 +3237,7 @@ document.getElementById('fpNoCoordsBtn').addEventListener('click', function() {
 
 function fpPriority(p) {
   if (['Строящийся', 'Сданный', 'Не определён'].includes(p.status)) return 'P0';
-  if (p.status === 'Проектный' || p.conflicts) return 'P1';
+  if (p.status === 'Замороженный' || p.conflicts) return 'P1';
   return 'P2';
 }
 
@@ -3182,7 +3249,7 @@ function fpSourceLinks(p) {
   const links = (p.sources || []).map((u, i) =>
     `<a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer" style="color:var(--nf-red);">${i + 1}</a>`
   ).join(', ');
-  return links || '—';
+  return links || escapeHtml(p.source_sheets || '—');
 }
 
 function openFutureNoCoordsModal(count, tableHtml) {
