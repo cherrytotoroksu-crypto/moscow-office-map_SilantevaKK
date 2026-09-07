@@ -11124,7 +11124,7 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone дмитровская'; underlying source and its check date remain in that record (2026-07-14).",
+    "qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone дмитровская'; underlying source and its check date remain in that record (2026-07-14). Sales start rechecked 2026-09-07: IBC Real Estate Office Market Q3 2025 states the project started sales in October 2025; https://ibcrealestate.ru/upload/iblock/afd/02u4usy46doh3xgyzk2xaqbi0ku6pjiz/IBC-Real-Estate_OFFICE_Q3-2025.pdf.",
     "public_visibility": "public",
     "first_seen_at": "202212",
     "last_verified_at": "2026-07-31",
@@ -11137,8 +11137,8 @@
     ],
     "construction_start_year": 2024,
     "construction_start_quarter": 2,
-    "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_year": 2025,
+    "sales_start_quarter": 4
   },
   {
     "canonical_project_id": "proj-178",
@@ -11326,7 +11326,7 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py.",
+    "qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Sales start rechecked 2026-09-07: IBC Real Estate Office Market Q2 2024 lists STONE Калужская among projects with sales start in Q2 2024; https://ibcrealestate.ru/upload/iblock/f86/31ml8xl0nu3dc86qw6u79g72if6eiw8o/OFFICE-MARKET-Q2-2024_2pdf.com_edit_metadata.pdf.",
     "public_visibility": "public",
     "first_seen_at": "202407",
     "last_verified_at": "2026-07-31",
@@ -11340,8 +11340,8 @@
     ],
     "construction_start_year": null,
     "construction_start_quarter": null,
-    "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_year": 2024,
+    "sales_start_quarter": 2
   },
   {
     "canonical_project_id": "proj-181",
