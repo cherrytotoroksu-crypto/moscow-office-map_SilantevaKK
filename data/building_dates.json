@@ -1,4 +1,13 @@
 {
+  "stone калужская": {
+    "construction_start_q": null,
+    "start_q": "202404",
+    "commission_q": null,
+    "source": "IBC Real Estate Office Market Q2 2024 (STONE Калужская указана в разделе проектов со стартом продаж во II квартале 2024 года); https://ibcrealestate.ru/upload/iblock/f86/31ml8xl0nu3dc86qw6u79g72if6eiw8o/OFFICE-MARKET-Q2-2024_2pdf.com_edit_metadata.pdf; дополнительное подтверждение презентацией STONE: https://stone-s3.storage.yandexcloud.net/Idealnye_teksty_dlya_reklamy_bc04ab99cd.pdf",
+    "last_checked": "2026-09-07",
+    "canonical_project_id": "proj-180",
+    "canonical_building_id": null
+  },
   "stone towers. tower d": {
     "construction_start_q": "202503",
     "start_q": "202212",
@@ -643,10 +652,10 @@
   },
   "stone дмитровская": {
     "construction_start_q": "202406",
-    "start_q": null,
+    "start_q": "202510",
     "commission_q": "202703",
-    "source": "mperspektiva.ru, kommersant.ru — начало работ на площадке июнь 2024, монолит на 50% (на момент проверки), только плановая дата ввода (Q1 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14",
+    "source": "mperspektiva.ru, kommersant.ru — начало работ на площадке июнь 2024; IBC Real Estate Office Market Q3 2025 фиксирует старт продаж проекта в октябре 2025 года; https://ibcrealestate.ru/upload/iblock/afd/02u4usy46doh3xgyzk2xaqbi0ku6pjiz/IBC-Real-Estate_OFFICE_Q3-2025.pdf; текущая карточка STONE: https://stone.ru/commercial/dmitrovskaya",
+    "last_checked": "2026-09-07",
     "canonical_project_id": "proj-177",
     "canonical_building_id": null
   },

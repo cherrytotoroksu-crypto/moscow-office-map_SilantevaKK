@@ -597,6 +597,9 @@
       "classification_note": null,
       "needs_review": false,
       "review_reason": null,
+      "sales_start_date": "2025-Q4",
+      "sales_start_confidence": "needs_review",
+      "sales_start_source": "data/building_dates.json key=stone дмитровская; checked 2026-09-07; IBC Real Estate Office Market Q3 2025 фиксирует старт продаж проекта в октябре 2025 года; https://ibcrealestate.ru/upload/iblock/afd/02u4usy46doh3xgyzk2xaqbi0ku6pjiz/IBC-Real-Estate_OFFICE_Q3-2025.pdf",
       "canonical_no": 13
     },
     {
@@ -1221,6 +1224,9 @@
       "classification_note": null,
       "needs_review": false,
       "review_reason": null,
+      "sales_start_date": "2024-Q2",
+      "sales_start_confidence": "needs_review",
+      "sales_start_source": "data/building_dates.json key=stone калужская; checked 2026-09-07; IBC Real Estate Office Market Q2 2024 (STONE Калужская указана в разделе проектов со стартом продаж во II квартале 2024 года); https://ibcrealestate.ru/upload/iblock/f86/31ml8xl0nu3dc86qw6u79g72if6eiw8o/OFFICE-MARKET-Q2-2024_2pdf.com_edit_metadata.pdf; дополнительное подтверждение презентацией STONE: https://stone-s3.storage.yandexcloud.net/Idealnye_teksty_dlya_reklamy_bc04ab99cd.pdf",
       "canonical_no": 27
     },
     {
