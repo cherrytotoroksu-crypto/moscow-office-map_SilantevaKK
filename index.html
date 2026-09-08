@@ -3044,6 +3044,30 @@ async function loadFutureProjects() {
     // нормализованному названию, ни по координате в радиусе 80 м. Ничего в
     // самом реестре не меняем — доп. точки существуют только в этом режиме
     // карты, помечены как legacy_supplement для прозрачности в попапе.
+    //
+    // 2026-09-08: 99 кандидатов со средним/высоким доверием проверены веб-
+    // поиском (5 параллельных агентов). Из них 5 подтверждены как НЕ офисные
+    // проекты (жильё/ритейл/отменённый проект без офисной составляющей) и
+    // исключены здесь явно; OBJ-0367 — дубль OBJ-0208 (тот же дом Sezar Group
+    // на 2-м Силикатном пр., 13), тоже исключён. Остальные ~430 записей с
+    // низким доверием веб-поиском не проверялись — по умолчанию показываются
+    // с пометкой legacy_supplement + needs_review, как и раньше.
+    const LEGACY_VERIFIED_NOT_OFFICE = new Set([
+      'OBJ-0146', // Homesklad офисно-складской — проект отменён, участок передан под жильё (t.me/stroi_news)
+      'OBJ-0212', // Sezar City — жилой комплекс, без офисной составляющей (sezar-group.ru)
+      'OBJ-0258', // БЦ Монс — жилой квартал «Брусника» с розничным подиумом, не самостоятельный БЦ (brusnika.ru)
+      'OBJ-0534', // ГК Самолёт, Сходненский тупик — чисто жилой проект (novostroy-m.ru)
+      'OBJ-0645', // «Авиапарк Офисы» — по этому адресу только ТРЦ «Авиапарк», отдельного офисного корпуса нет (aviapark.com)
+      // Silica (OBJ-0367) и North Wind (OBJ-0208) — координаты в ~5 м друг от
+      // друга, тот же адрес, тот же GBA (15862 кв.м), веб-поиск 2026-09-08
+      // независимо приводит на один и тот же источник (silikatny-13.ru) для
+      // обоих названий — похоже на один БЦ под двумя именами (ребрендинг).
+      // Ранее (тест test_silikatny_cluster_not_auto_merged) их явно решили
+      // НЕ мержить в data/future_projects.json из-за непроверенной identity —
+      // это решение не трогаем; здесь только не показываем Silica как ВТОРОЙ
+      // пин на карте поверх North Wind, сам файл и список duplicates не менялись.
+      'OBJ-0367',
+    ]);
     let legacyAdded = 0;
     try {
       const legacy = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
@@ -3064,6 +3088,7 @@ async function loadFutureProjects() {
       };
       const legacyCandidates = [...legacy.projects, ...legacy.no_coords];
       for (const p of legacyCandidates) {
+        if (LEGACY_VERIFIED_NOT_OFFICE.has(p.id)) continue;
         const nameKey = normalizeNameKey(p.name);
         if (registryNameKeys.has(nameKey)) continue;
         if (isNearRegistry(p.lat, p.lng)) continue;

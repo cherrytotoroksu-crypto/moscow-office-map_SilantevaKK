@@ -116,6 +116,24 @@ class ProjectsModeLegacyMergeTest(unittest.TestCase):
         self.assertGreater(len(unmatched), total_candidates * 0.3)
         self.assertLess(len(unmatched), total_candidates * 0.95)
 
+    def test_verified_not_office_legacy_rows_are_excluded_from_the_map(self):
+        """2026-09-08: 99 medium/high-confidence legacy candidates were web-
+        verified by 5 background agents. 5 came back confirmed NOT an office
+        project, and one (Silica/OBJ-0367) is very likely the same building as
+        another legacy candidate (OBJ-0208, ~5m apart, same address/GBA) —
+        both must be excluded from LEGACY_VERIFIED_NOT_OFFICE so they never
+        appear as map pins, without touching future_projects.json itself."""
+        excluded_ids = ["OBJ-0146", "OBJ-0212", "OBJ-0258", "OBJ-0534", "OBJ-0645", "OBJ-0367"]
+        match = re.search(r"LEGACY_VERIFIED_NOT_OFFICE\s*=\s*new Set\(\[(.*?)\]\);", self.html, re.S)
+        self.assertIsNotNone(match, "LEGACY_VERIFIED_NOT_OFFICE not found in index.html")
+        block = match.group(1)
+        for oid in excluded_ids:
+            self.assertIn(f"'{oid}'", block, f"{oid} missing from LEGACY_VERIFIED_NOT_OFFICE")
+        # and confirm the exclusion check actually runs before the dedup logic
+        loop_match = re.search(r"for \(const p of legacyCandidates\)\s*\{(.*?)\n\s*\}", self.html, re.S)
+        self.assertIsNotNone(loop_match)
+        self.assertIn("LEGACY_VERIFIED_NOT_OFFICE.has(p.id)", loop_match.group(1))
+
     def test_legacy_merge_reads_both_files_without_writing_to_either(self):
         # loadFutureProjects() must GET both JSON files and never issue a
         # write-shaped call (fetch with method PUT/POST, or any localStorage
