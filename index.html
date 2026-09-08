@@ -590,16 +590,21 @@
     <div id="fpQuickBtns" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;">
       <button class="fp-quick" data-status="Строящийся">Строящиеся</button>
       <button class="fp-quick" data-status="Сданный">Сданные</button>
+      <button class="fp-quick" data-status="Проектный">Проектные</button>
+      <button class="fp-quick" data-status="Анонсированный">Анонсированные</button>
       <button class="fp-quick" data-status="Замороженный">Замороженные</button>
       <button class="fp-quick" data-status="Не определён">Не определён</button>
       <button class="fp-quick" data-status="__all__">Все</button>
     </div>
 
     <h3 style="margin-top:6px;">Статус</h3>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Анонсированный" checked> Анонсированный</label>
+    <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Проектный" checked> Проектный</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Замороженный" checked> Замороженный</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Строящийся" checked> Строящийся</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Сданный" checked> Сданный</label>
     <label class="check-row"><input type="checkbox" class="flt-fp-status" value="Не определён" checked> Не определён</label>
+    <div style="font-size:10px;color:#767676;margin:2px 0 4px;">«Проектный»/«Анонсированный» встречаются только у точек из устаревшего свода (см. канал «Нет канала»)</div>
 
     <h3 style="margin-top:6px;">Канал рынка</h3>
     <label class="check-row"><input type="checkbox" class="flt-fp-channel" value="sale" checked> Продажа</label>
@@ -2932,7 +2937,9 @@ document.getElementById('ovCoworking').addEventListener('change', renderCoworkin
 const FP_STATUS_COLOR = {
   'Сданный': '#16a34a',
   'Строящийся': '#f97316',
+  'Проектный': '#2563eb',
   'Замороженный': '#dc2626',
+  'Анонсированный': '#7c3aed',
   'Не определён': '#9ca3af',
 };
 
@@ -3001,6 +3008,20 @@ function mapAllProjectsLayerRecord(r) {
   };
 }
 
+// Сопоставление кандидата из устаревшего свода с реестром — по нормализованному
+// названию ИЛИ по близости координат (<80 м). Порог подобран так, чтобы не
+// плодить вторую точку для того же здания, но и не склеивать соседние дома.
+function normalizeNameKey(s) {
+  if (!s) return '';
+  return s.toLowerCase().replace(/[^a-zа-я0-9]+/g, '');
+}
+const COORD_MATCH_THRESHOLD_M = 80;
+function metersBetween(lat1, lng1, lat2, lng2) {
+  const dLat = (lat1 - lat2) * 111000;
+  const dLng = (lng1 - lng2) * 111000 * Math.cos(lat1 * Math.PI / 180);
+  return Math.sqrt(dLat * dLat + dLng * dLng);
+}
+
 async function loadFutureProjects() {
   if (futureLoaded) return;
   const st = document.getElementById('fpStatus');
@@ -3014,17 +3035,86 @@ async function loadFutureProjects() {
     const live = layer.filter(r => !r.duplicate_of);
     const withCoordsRaw = live.filter(r => r.latitude != null && r.longitude != null);
     const noCoordsRaw = live.filter(r => r.latitude == null || r.longitude == null);
+    const registryProjects = withCoordsRaw.map(mapAllProjectsLayerRecord);
+    const registryNoCoords = noCoordsRaw.map(mapAllProjectsLayerRecord);
+
+    // Устаревший свод (705 записей) шире реестра по охвату — многие проекты
+    // (особенно старые «сданные» без канала продажи/аренды) в реестр не
+    // попали. Добавляем из него ТОЛЬКО то, чего в реестре нет: ни по
+    // нормализованному названию, ни по координате в радиусе 80 м. Ничего в
+    // самом реестре не меняем — доп. точки существуют только в этом режиме
+    // карты, помечены как legacy_supplement для прозрачности в попапе.
+    let legacyAdded = 0;
+    try {
+      const legacy = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      });
+      const registryNameKeys = new Set();
+      const registryCoords = [];
+      for (const r of live) {
+        registryNameKeys.add(normalizeNameKey(r.canonical_name));
+        registryNameKeys.add(normalizeNameKey(r.raw_name));
+        for (const a of r.aliases || []) registryNameKeys.add(normalizeNameKey(a));
+        if (r.latitude != null && r.longitude != null) registryCoords.push([r.latitude, r.longitude]);
+      }
+      const isNearRegistry = (lat, lng) => {
+        if (lat == null || lng == null) return false;
+        return registryCoords.some(([rlat, rlng]) => metersBetween(lat, lng, rlat, rlng) < COORD_MATCH_THRESHOLD_M);
+      };
+      const legacyCandidates = [...legacy.projects, ...legacy.no_coords];
+      for (const p of legacyCandidates) {
+        const nameKey = normalizeNameKey(p.name);
+        if (registryNameKeys.has(nameKey)) continue;
+        if (isNearRegistry(p.lat, p.lng)) continue;
+        const mapped = {
+          id: 'legacy-' + p.id,
+          name: p.name,
+          canonical_name: p.name,
+          address: p.address,
+          developer: p.developer,
+          gba: p.gba,
+          gla: p.gla,
+          cls: p.cls,
+          commission_quarter: p.commission_quarter,
+          commission_year: p.commission_year,
+          status: p.status,
+          lat: p.lat,
+          lng: p.lng,
+          verification_status: p.verification_status,
+          confidence: p.confidence,
+          sources: p.sources || [],
+          conflicts: p.conflicts,
+          merged_rows: p.merged_rows,
+          source_sheets: p.source_sheets,
+          geometry_quality: p.geometry_quality,
+          needs_review: true,
+          review_notes: p.conflicts ? `Устаревший свод, не сверен с реестром. ${p.conflicts}` : 'Устаревший свод, не сверен с реестром.',
+          market_channel: [],
+          offer_status: null,
+          entity_grain: null,
+          legacy_supplement: true,
+        };
+        if (mapped.lat != null && mapped.lng != null) registryProjects.push(mapped);
+        else registryNoCoords.push(mapped);
+        legacyAdded++;
+      }
+    } catch (e) {
+      // Свод не обязателен — если файл недоступен, показываем только реестр.
+    }
+
     futureData = {
-      total: live.length,
-      with_coords: withCoordsRaw.length,
-      without_coords: noCoordsRaw.length,
+      total: registryProjects.length + registryNoCoords.length,
+      with_coords: registryProjects.length,
+      without_coords: registryNoCoords.length,
       duplicate_count: layer.length - live.length,
-      projects: withCoordsRaw.map(mapAllProjectsLayerRecord),
-      no_coords: noCoordsRaw.map(mapAllProjectsLayerRecord),
+      legacy_added: legacyAdded,
+      projects: registryProjects,
+      no_coords: registryNoCoords,
     };
     assignGeoToRows(futureData.projects);
     futureLoaded = true;
-    st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат)`;
+    st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат, из них ${futureData.legacy_added} — из устаревшего свода, требуют сверки)`;
     st.style.color = '#16a34a';
     fpFillSelects();
   } catch (e) {
@@ -3102,6 +3192,9 @@ function fpPopupHtml(p) {
   const warningBadge = lowConfidence
     ? `<div style="margin:4px 0 6px;padding:3px 6px;background:#fff4e5;border-left:3px solid #f97316;font-size:10px;color:#7c2d12;">⚠ Требует проверки — низкий уровень доверия к данным, объект не исключён из выборки</div>`
     : '';
+  const legacyBadge = p.legacy_supplement
+    ? `<div style="margin:4px 0 6px;padding:3px 6px;background:#eef2ff;border-left:3px solid #6366f1;font-size:10px;color:#312e81;">ℹ Устаревший свод (data/future_projects.json) — не сверен с текущим реестром, координаты/статус могли устареть</div>`
+    : '';
   const rows = [
     ['ID', p.id],
     ['Каноническое название', p.canonical_name],
@@ -3128,7 +3221,7 @@ function fpPopupHtml(p) {
     ['Примечание проверки', p.review_notes],
     ['Конфликты', p.conflicts],
   ];
-  return `<b>${escapeHtml(p.name || 'Проект')}</b>` + warningBadge +
+  return `<b>${escapeHtml(p.name || 'Проект')}</b>` + legacyBadge + warningBadge +
     rows.map(([l, v]) =>
       `<div class="prow"><span class="plabel">${l}</span><span class="pval">${l === 'Координаты' ? v : (v == null || v === '' ? '—' : escapeHtml(String(v)))}</span></div>`
     ).join('') +
