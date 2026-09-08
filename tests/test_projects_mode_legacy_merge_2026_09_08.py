@@ -117,62 +117,52 @@ class ProjectsModeLegacyMergeTest(unittest.TestCase):
         self.assertLess(len(unmatched), total_candidates * 0.95)
 
     def test_verified_not_office_legacy_rows_are_excluded_from_the_map(self):
-        """2026-09-08: 99 medium/high-confidence legacy candidates were web-
-        verified by 5 background agents. 5 came back confirmed NOT an office
-        project, and one (Silica/OBJ-0367) is very likely the same building as
-        another legacy candidate (OBJ-0208, ~5m apart, same address/GBA) —
-        both must be excluded from LEGACY_VERIFIED_NOT_OFFICE so they never
-        appear as map pins, without touching future_projects.json itself."""
-        excluded_ids = ["OBJ-0146", "OBJ-0212", "OBJ-0258", "OBJ-0534", "OBJ-0645", "OBJ-0367"]
+        """2026-09-08, revised: three waves of web verification originally
+        excluded ~44 legacy candidates, but most were excluded on "found a
+        residential complex" alone — without checking whether that project
+        also has a separate office building/podium (mixed-use is common;
+        see Capital Towers in Codex web audit 2026-09-05, kept precisely
+        because it has an 8808 sqm office component despite being mostly
+        residential). Those "residential, office not specifically ruled
+        out" rows were reinstated onto the map. Only rows where sources
+        confirmed the site is something else entirely (mall/metro/data
+        center/warehouse/media studio/sports facility) or the named project
+        does not exist at all remain excluded."""
+        excluded_ids = [
+            "OBJ-0146", "OBJ-0645", "OBJ-0367", "OBJ-0141", "OBJ-0307",
+            "OBJ-0352", "OBJ-0431", "OBJ-0491", "OBJ-0495", "OBJ-0552",
+            "OBJ-0185", "OBJ-0191", "OBJ-0404", "OBJ-0461", "OBJ-0463",
+            "OBJ-0464", "OBJ-0471", "OBJ-0241", "OBJ-0242",
+        ]
         match = re.search(r"LEGACY_VERIFIED_NOT_OFFICE\s*=\s*new Set\(\[(.*?)\]\);", self.html, re.S)
         self.assertIsNotNone(match, "LEGACY_VERIFIED_NOT_OFFICE not found in index.html")
         block = match.group(1)
         for oid in excluded_ids:
             self.assertIn(f"'{oid}'", block, f"{oid} missing from LEGACY_VERIFIED_NOT_OFFICE")
+        all_ids = re.findall(r"'(OBJ-\d{4})'", block)
+        self.assertEqual(len(all_ids), len(set(all_ids)), "duplicate id in LEGACY_VERIFIED_NOT_OFFICE")
+        self.assertEqual(len(all_ids), len(excluded_ids), "unexpected extra id in LEGACY_VERIFIED_NOT_OFFICE")
         # and confirm the exclusion check actually runs before the dedup logic
         loop_match = re.search(r"for \(const p of legacyCandidates\)\s*\{(.*?)\n\s*\}", self.html, re.S)
         self.assertIsNotNone(loop_match)
         self.assertIn("LEGACY_VERIFIED_NOT_OFFICE.has(p.id)", loop_match.group(1))
 
-    def test_second_wave_not_office_ids_are_excluded(self):
-        """2026-09-08 second wave: 10 background agents web-verified ~180 of
-        the remaining 430 low-confidence candidates before hitting the
-        session's shared 200-query WebSearch budget. 21 came back confirmed
-        NOT an office project (residential/industrial/media/sports use, or a
-        project that couldn't be found under that name) and must be excluded."""
-        second_wave_ids = [
-            "OBJ-0141", "OBJ-0162", "OBJ-0225", "OBJ-0234", "OBJ-0247",
-            "OBJ-0289", "OBJ-0300", "OBJ-0307", "OBJ-0352", "OBJ-0386",
-            "OBJ-0431", "OBJ-0454", "OBJ-0483", "OBJ-0491", "OBJ-0495",
-            "OBJ-0551", "OBJ-0552", "OBJ-0555", "OBJ-0558", "OBJ-0240", "OBJ-0244",
+    def test_reinstated_mixed_use_candidates_are_not_excluded(self):
+        """The "residential complex found, office not checked" rows must be
+        back on the map (default legacy_supplement/needs_review), not
+        silently dropped — reinstating them is the whole point of the fix."""
+        reinstated_ids = [
+            "OBJ-0212", "OBJ-0258", "OBJ-0534", "OBJ-0162", "OBJ-0225",
+            "OBJ-0234", "OBJ-0247", "OBJ-0289", "OBJ-0300", "OBJ-0386",
+            "OBJ-0454", "OBJ-0483", "OBJ-0551", "OBJ-0555", "OBJ-0558",
+            "OBJ-0240", "OBJ-0244", "OBJ-0186", "OBJ-0344", "OBJ-0509",
+            "OBJ-0518", "OBJ-0723", "OBJ-0724", "OBJ-0726", "OBJ-0631",
         ]
         match = re.search(r"LEGACY_VERIFIED_NOT_OFFICE\s*=\s*new Set\(\[(.*?)\]\);", self.html, re.S)
         self.assertIsNotNone(match)
         block = match.group(1)
-        for oid in second_wave_ids:
-            self.assertIn(f"'{oid}'", block, f"{oid} missing from LEGACY_VERIFIED_NOT_OFFICE")
-        # sanity: no duplicate ids in the combined (first + second wave) set
-        all_ids = re.findall(r"'(OBJ-\d{4})'", block)
-        self.assertEqual(len(all_ids), len(set(all_ids)), "duplicate id in LEGACY_VERIFIED_NOT_OFFICE")
-
-    def test_third_wave_not_office_ids_are_excluded(self):
-        """2026-09-08 third wave: 6 more background agents web-verified ~150
-        of the remaining ~213 low-confidence candidates (again hitting the
-        session's shared WebSearch budget partway through). 17 came back
-        confirmed NOT an office project and must be excluded."""
-        third_wave_ids = [
-            "OBJ-0185", "OBJ-0186", "OBJ-0191", "OBJ-0344", "OBJ-0404",
-            "OBJ-0461", "OBJ-0463", "OBJ-0464", "OBJ-0471", "OBJ-0509",
-            "OBJ-0518", "OBJ-0723", "OBJ-0724", "OBJ-0726", "OBJ-0241",
-            "OBJ-0242", "OBJ-0631",
-        ]
-        match = re.search(r"LEGACY_VERIFIED_NOT_OFFICE\s*=\s*new Set\(\[(.*?)\]\);", self.html, re.S)
-        self.assertIsNotNone(match)
-        block = match.group(1)
-        for oid in third_wave_ids:
-            self.assertIn(f"'{oid}'", block, f"{oid} missing from LEGACY_VERIFIED_NOT_OFFICE")
-        all_ids = re.findall(r"'(OBJ-\d{4})'", block)
-        self.assertEqual(len(all_ids), len(set(all_ids)), "duplicate id in LEGACY_VERIFIED_NOT_OFFICE")
+        for oid in reinstated_ids:
+            self.assertNotIn(f"'{oid}'", block, f"{oid} should have been reinstated, not left excluded")
 
     def test_legacy_merge_reads_both_files_without_writing_to_either(self):
         # loadFutureProjects() must GET both JSON files and never issue a
