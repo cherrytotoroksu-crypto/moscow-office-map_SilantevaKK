@@ -134,6 +134,27 @@ class ProjectsModeLegacyMergeTest(unittest.TestCase):
         self.assertIsNotNone(loop_match)
         self.assertIn("LEGACY_VERIFIED_NOT_OFFICE.has(p.id)", loop_match.group(1))
 
+    def test_second_wave_not_office_ids_are_excluded(self):
+        """2026-09-08 second wave: 10 background agents web-verified ~180 of
+        the remaining 430 low-confidence candidates before hitting the
+        session's shared 200-query WebSearch budget. 21 came back confirmed
+        NOT an office project (residential/industrial/media/sports use, or a
+        project that couldn't be found under that name) and must be excluded."""
+        second_wave_ids = [
+            "OBJ-0141", "OBJ-0162", "OBJ-0225", "OBJ-0234", "OBJ-0247",
+            "OBJ-0289", "OBJ-0300", "OBJ-0307", "OBJ-0352", "OBJ-0386",
+            "OBJ-0431", "OBJ-0454", "OBJ-0483", "OBJ-0491", "OBJ-0495",
+            "OBJ-0551", "OBJ-0552", "OBJ-0555", "OBJ-0558", "OBJ-0240", "OBJ-0244",
+        ]
+        match = re.search(r"LEGACY_VERIFIED_NOT_OFFICE\s*=\s*new Set\(\[(.*?)\]\);", self.html, re.S)
+        self.assertIsNotNone(match)
+        block = match.group(1)
+        for oid in second_wave_ids:
+            self.assertIn(f"'{oid}'", block, f"{oid} missing from LEGACY_VERIFIED_NOT_OFFICE")
+        # sanity: no duplicate ids in the combined (first + second wave) set
+        all_ids = re.findall(r"'(OBJ-\d{4})'", block)
+        self.assertEqual(len(all_ids), len(set(all_ids)), "duplicate id in LEGACY_VERIFIED_NOT_OFFICE")
+
     def test_legacy_merge_reads_both_files_without_writing_to_either(self):
         # loadFutureProjects() must GET both JSON files and never issue a
         # write-shaped call (fetch with method PUT/POST, or any localStorage
