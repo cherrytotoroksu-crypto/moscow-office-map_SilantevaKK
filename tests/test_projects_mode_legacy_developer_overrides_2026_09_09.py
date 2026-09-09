@@ -56,7 +56,7 @@ class LegacyDeveloperOverridesTest(unittest.TestCase):
         self.assertIsNotNone(match, "developer override guard not found — must not clobber existing data")
         body = match.group(1)
         self.assertIn("mapped.developer = LEGACY_DEVELOPER_OVERRIDES[p.id]", body)
-        self.assertIn("enriched_from", body)
+        self.assertIn("webVerifiedFields.push", body)
 
 
 if __name__ == "__main__":

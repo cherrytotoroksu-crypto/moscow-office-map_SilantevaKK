@@ -3136,6 +3136,47 @@ async function loadFutureProjects() {
       'OBJ-0676': 'Мосинжпроект', // ТПУ «Рязанская» — ama.ru, novostroy-m.ru
       'OBJ-0720': 'West Wind Group', // офисы на ул. Неверовского — wwgroup.ru
     };
+    // 2026-09-09: та же веб-проверка, поле "класс" (264 из 510 без cls).
+    // Из них уверенно (точный адрес + источник, класс входит в шкалу
+    // A/B+/B/Prime) подтверждено 33. Остальные — либо проектная стадия
+    // (девелопер класс ещё не заявил), либо найденный по адресу БЦ не
+    // совпадает точно, либо класс вне принятой шкалы (напр. "B-", "C",
+    // "deluxe") — намеренно не внесены.
+    const LEGACY_CLASS_OVERRIDES = {
+      'OBJ-0159': 'A', // STONE Towers E, Нижняя Масловка, 3 — fortexgroup.ru
+      'OBJ-0161': 'B', // Станколит, Складочная ул., 1с1 — cian.ru, wikimetria
+      'OBJ-0180': 'A', // БЦ «Раменки» (Донстрой), Лобачевского, 138 — kommersant.ru
+      'OBJ-0199': 'A', // Gate 1 / Insolver, просп. 60-летия Октября, 5А — office.moscow
+      'OBJ-0248': 'A', // ГРАНАРД Крылатское — office.moscow
+      'OBJ-0254': 'B', // БЦ на Жуков проезде, 19 (действующее здание) — cian.ru, fortexgroup.ru
+      'OBJ-0260': 'B+', // БЦ на Дубнинской (Plus Development) — plus.dev
+      'OBJ-0285': 'B', // БЦ «Гульден», Складочная ул., 1с5 — cian.ru
+      'OBJ-0295': 'A', // Красносельский квартал (Новая эра + Аквилон) — mperspektiva.ru
+      'OBJ-0299': 'A', // ГРАНАРД Ясенево — office.moscow
+      'OBJ-0305': 'B', // БЦ «Международная, 11» — fortexgroup.ru
+      'OBJ-0313': 'B', // БЦ «Удальцова, 75А» — fortexgroup.ru
+      'OBJ-0320': 'A', // ГРАНАРД Ясенево (второй legacy-id того же проекта) — office.moscow
+      'OBJ-0321': 'B+', // БЦ «Новые Решения» (Unikey) — cian.ru, novostroy-m.ru
+      'OBJ-0325': 'B', // Очаковское ш., 40с1 — restate.ru, icx.ru
+      'OBJ-0328': 'A', // БЦ «Поле» (DAR) — pole.moscow
+      'OBJ-0354': 'B', // Технополис Москва, корп. 13 — cian.ru
+      'OBJ-0381': 'A', // STONE Towers E (второй legacy-id того же проекта) — fortexgroup.ru
+      'OBJ-0385': 'B+', // Академика Пилюгина, 24 — fortexgroup.ru, cian.ru
+      'OBJ-0388': 'A', // Upside «Авиатор»/FLY Tower — tadviser.ru, of.ru
+      'OBJ-0394': 'A', // новый проект на Жуков проезде, 19 (Гута-Девелопмент) — fortexgroup.ru
+      'OBJ-0397': 'A', // БЦ «Раменки» (Донстрой), второй legacy-id — kommersant.ru
+      'OBJ-0399': 'B', // БЦ «Кристалл», Самокатная ул., 4с1 — icx.ru
+      'OBJ-0408': 'B', // 5-й Донской проезд, 21Бс10 — icx.ru, wikimetria
+      'OBJ-0415': 'B+', // БЦ «Диапазон», 1-й Волоколамский пр-д, 10с1 — cian.ru
+      'OBJ-0433': 'A', // БЦ ОПУС (Пионер), Дербеневская наб. — opus-bc.ru
+      'OBJ-0505': 'A', // Technopark Plaza, В. Сыромятническая, 7с1 — bc-technoparkplaza.ru
+      'OBJ-0510': 'A', // БЦ «Жуков Про» (Гута-Девелопмент) — fortexgroup.ru, msk1.ru
+      'OBJ-0519': 'B', // БЦ «Панорама-Центр», Лужнецкая наб., 6с1 — fortexgroup.ru
+      'OBJ-0538': 'A', // Cityzen (MR Group) у м. Тушинская — realty.ria.ru
+      'OBJ-0546': 'A', // STONE Мнёвники — fortexgroup.ru
+      'OBJ-0558': 'A', // БЦ Галс-Девелопмент, Шоссейная ул., вл.4А — hals-development.ru
+      'OBJ-0693': 'A', // «Жуков Про», третий legacy-id того же проекта — fortexgroup.ru
+    };
     let legacyAdded = 0;
     try {
       const legacy = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
@@ -3188,10 +3229,18 @@ async function loadFutureProjects() {
           entity_grain: null,
           legacy_supplement: true,
         };
+        const webVerifiedFields = [];
         if (!mapped.developer && LEGACY_DEVELOPER_OVERRIDES[p.id]) {
           mapped.developer = LEGACY_DEVELOPER_OVERRIDES[p.id];
+          webVerifiedFields.push('девелопер');
+        }
+        if (!mapped.cls && LEGACY_CLASS_OVERRIDES[p.id]) {
+          mapped.cls = LEGACY_CLASS_OVERRIDES[p.id];
+          webVerifiedFields.push('класс');
+        }
+        if (webVerifiedFields.length) {
           mapped.enriched_from = 'веб-проверка 2026-09-09';
-          mapped.enriched_fields = ['девелопер'];
+          mapped.enriched_fields = webVerifiedFields;
         }
         if (mapped.lat != null && mapped.lng != null) registryProjects.push(mapped);
         else registryNoCoords.push(mapped);
@@ -3246,8 +3295,8 @@ async function loadFutureProjects() {
         if (!mapped.status && match.status) { mapped.status = match.status; filled.push('статус'); }
         if (!mapped.commission_year && match.year) { mapped.commission_year = match.year; filled.push('год ввода'); }
         if (filled.length) {
-          mapped.enriched_from = match._src;
-          mapped.enriched_fields = filled;
+          mapped.enriched_from = mapped.enriched_from ? `${mapped.enriched_from} + ${match._src}` : match._src;
+          mapped.enriched_fields = (mapped.enriched_fields || []).concat(filled);
           enriched++;
         }
       }
