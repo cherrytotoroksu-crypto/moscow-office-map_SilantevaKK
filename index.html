@@ -3177,6 +3177,46 @@ async function loadFutureProjects() {
       'OBJ-0558': 'A', // БЦ Галс-Девелопмент, Шоссейная ул., вл.4А — hals-development.ru
       'OBJ-0693': 'A', // «Жуков Про», третий legacy-id того же проекта — fortexgroup.ru
     };
+    // 2026-09-10: та же веб-проверка, поле "год ввода" (353 из 510 без
+    // commission_year). Тринадцать параллельных агентов проверили все 353 —
+    // уверенно (точный адрес, конкретный год/квартал, не путать с годом
+    // основания компании) подтверждён год для 31. Остальные — либо
+    // проектная стадия без объявленной даты, либо источники расходятся
+    // (несколько разных лет для одного адреса), либо адрес не совпадает
+    // точно с найденным объектом — не угадывал.
+    const LEGACY_YEAR_OVERRIDES = {
+      'OBJ-0102': 2020, // МФК «Сатирикон», Шереметьевская 8а — brightrich.moscow
+      'OBJ-0248': 2030, // ГРАНАРД Крылатское — fortexgroup.ru, kf.expert
+      'OBJ-0260': 2027, // БЦ на Дубнинской (Plus Development), Q4 2027 — plus.dev
+      'OBJ-0297': 2030, // КРТ Тёплый Стан (4 бизнес-комплекса) — mperspektiva.ru
+      'OBJ-0397': 2027, // БЦ «Раменки» (Донстрой) — mosdom.su, donstroy.moscow
+      'OBJ-0407': 2027, // Sezar Group, Талалихина 41 — novostroy-m.ru
+      'OBJ-0433': 2025, // БЦ ОПУС (Пионер), Дербеневская наб. — mperspektiva.ru
+      'OBJ-0441': 2028, // БЦ AVIUM (Capital Group), Q4 2028 — cian.ru, novostroy-m.ru
+      'OBJ-0443': 2026, // реконструкция кинотеатра «Октябрь» под офисы — msk1.ru
+      'OBJ-0465': 2026, // ТПУ «Кленовый бульвар» (3S Group) — new-retail.ru, profashion.ru
+      'OBJ-0480': 2024, // Технопарк «Октябрьское поле» (РГ-Девелопмент) — rg-dev.ru, nedvigram.ru
+      'OBJ-0518': 2028, // «Северный порт. Береговые кварталы» (LEGENDA), Q1 2028 — mapestate.ru, avaho.ru
+      'OBJ-0521': 2027, // Luzhniki Collection (Абсолют), Q4 2027 — novostroev.ru, cre.ru
+      'OBJ-0538': 2027, // Cityzen (MR Group) у Тушинской, Q3 2027 — общий поиск
+      'OBJ-0541': 2026, // Level Work Воронцовская (Level Group) — business.level.ru, roomfi.ru
+      'OBJ-0551': 2029, // БЦ MIND (MR Group), ул. Серёгина — mind-offices.com, qwartal.ru
+      'OBJ-0559': 2026, // Chalet, Пятницкая 40 (Hitech Development) — rusdevelopers.ru, chalet40.com
+      'OBJ-0646': 2028, // Деловой квартал Light City (АО «Проспект») — lightcity.moscow
+      'OBJ-0654': 2026, // — mskguru.ru, stone.ru
+      'OBJ-0657': 2025, // — tadviser.ru, i.moscow
+      'OBJ-0663': 2028, // Q4 2028 — novostroy-m.ru, mr-bc-link.ru
+      'OBJ-0702': 2024, // Botanica Plaza — mperspektiva.ru, cre.ru
+      'OBJ-0705': 2027, // БЦ VALTRI, Q3 2027 — cre.ru
+      'OBJ-0712': 2025, // Технопарк ЗИЛ — tadviser.ru
+      'OBJ-0713': 2026, // Ривер Парк Коломенское, корп. 14, Q2 2026 — cian.ru
+      'OBJ-0714': 2026, // тот же корпус 14, другая секция — cian.ru
+      'OBJ-0723': 2026, // Ривер Парк Коломенское, корп. 7, Q2 2026 — cian.ru
+      'OBJ-0724': 2026, // тот же корпус 7, другая секция — cian.ru
+      'OBJ-0748': 2017, // Парк Легенд, Автозаводская 23Ак2 — corp-ten.ru, park-legend.ru, kf.expert
+      'OBJ-0768': 2026, // БЦ Терра Нова, Ленинградский просп. 37А — rusdevelopers.ru
+      'OBJ-0773': 2026, // реконструкция БЦ «Нега» (West Wind Group) — rbc.ru/companies, wwgroup.ru
+    };
     let legacyAdded = 0;
     try {
       const legacy = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
@@ -3238,8 +3278,12 @@ async function loadFutureProjects() {
           mapped.cls = LEGACY_CLASS_OVERRIDES[p.id];
           webVerifiedFields.push('класс');
         }
+        if (!mapped.commission_year && LEGACY_YEAR_OVERRIDES[p.id]) {
+          mapped.commission_year = LEGACY_YEAR_OVERRIDES[p.id];
+          webVerifiedFields.push('год ввода');
+        }
         if (webVerifiedFields.length) {
-          mapped.enriched_from = 'веб-проверка 2026-09-09';
+          mapped.enriched_from = 'веб-проверка 2026-09-09/10';
           mapped.enriched_fields = webVerifiedFields;
         }
         if (mapped.lat != null && mapped.lng != null) registryProjects.push(mapped);
