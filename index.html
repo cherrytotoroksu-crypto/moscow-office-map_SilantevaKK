@@ -3109,6 +3109,33 @@ async function loadFutureProjects() {
     // корпус по соседству), Ривер Парк Коломенское корп.7 (0723/0724 —
     // в том же проекте подтверждён ОДЦ, см. OBJ-0753), Северный порт (0726
     // — аналогично 0518), ТПУ Минская (0631, «преимущественно» ≠ «только»).
+    // 2026-09-09: веб-проверка застройщика для legacy-записей без поля
+    // developer (113 из 510 показанных на карте). Из них уверенно
+    // подтверждён адрес+девелопер только для 18 — остальные либо не
+    // публикуют застройщика в открытых источниках (готовые БЦ без активных
+    // продаж), либо найденный проект не совпадает точно по адресу/владению
+    // (помечены агентами как «умеренная уверенность» — намеренно НЕ внесены
+    // сюда, чтобы не показать на публичной карте непроверенные данные).
+    const LEGACY_DEVELOPER_OVERRIDES = {
+      'OBJ-0013': 'ООО «БКЛ Недвижимость»', // БЦ «Пангея» — bklproperty.ru, pangaea.moscow
+      'OBJ-0289': 'IKON Development', // «Дом Chkalov», пл. Курского Вокзала, 1 — m2.ru, novostroy.ru
+      'OBJ-0292': 'Foresight', // офисный комплекс на ул. Зорге, вл.21-23 — mperspektiva.ru
+      'OBJ-0309': 'Страна Девелопмент', // МФК на ул. Нижние Поля — malls.ru
+      'OBJ-0354': 'АО «ОЭЗ «Технополис Москва»»', // технопарк на терр. ОЭЗ — stroi.mos.ru, technomoscow.ru
+      'OBJ-0439': 'ООО «Гелион»', // МФЦ на ул. Кульнева, вл.6 — archi.ru
+      'OBJ-0523': 'Мосинжпроект', // офисная башня в составе ТПУ «Рязанская» — office-news.ru
+      'OBJ-0525': 'Ортига Девелопмент', // БЦ RAIL.A, Переведеновский пер., вл.13 — rail-a.ru
+      'OBJ-0526': 'ГК «Абсолют»', // — cre.ru
+      'OBJ-0528': 'А101 (Группа компаний А101)', // Бизнес-квартал Прокшино — a101.ru
+      'OBJ-0539': 'Upside Development', // БЦ Апсайд Кунцевская — archi.ru
+      'OBJ-0550': 'ГК «ПИК»', // ЖК Руставели 14 — mskguru.ru
+      'OBJ-0565': 'АЕОН Девелопмент', // Ривер Парк Коломенское, Корабельная — cian.ru, restate.ru
+      'OBJ-0613': 'Абсолют Недвижимость', // Luzhniki Collection, Лужнецкая наб. — domkad.ru
+      'OBJ-0658': 'Upside Development', // — plus.rbc.ru
+      'OBJ-0664': 'Plus Development', // БЦ на Веткина — plus.dev
+      'OBJ-0676': 'Мосинжпроект', // ТПУ «Рязанская» — ama.ru, novostroy-m.ru
+      'OBJ-0720': 'West Wind Group', // офисы на ул. Неверовского — wwgroup.ru
+    };
     let legacyAdded = 0;
     try {
       const legacy = await fetch('data/future_projects.json', { cache: 'no-cache' }).then(r => {
@@ -3161,6 +3188,11 @@ async function loadFutureProjects() {
           entity_grain: null,
           legacy_supplement: true,
         };
+        if (!mapped.developer && LEGACY_DEVELOPER_OVERRIDES[p.id]) {
+          mapped.developer = LEGACY_DEVELOPER_OVERRIDES[p.id];
+          mapped.enriched_from = 'веб-проверка 2026-09-09';
+          mapped.enriched_fields = ['девелопер'];
+        }
         if (mapped.lat != null && mapped.lng != null) registryProjects.push(mapped);
         else registryNoCoords.push(mapped);
         legacyAdded++;
@@ -3169,18 +3201,73 @@ async function loadFutureProjects() {
       // Свод не обязателен — если файл недоступен, показываем только реестр.
     }
 
+    // Многие legacy_supplement записи пришли из устаревшего свода с пустыми
+    // полями (девелопер/площадь/класс/статус — см. 312/705 без класса,
+    // 417/705 без даты ввода). Часть этих же зданий уже есть в текущих
+    // снимках продаж/коворкинга (та же QUARTERS[последний квартал]) — если
+    // здание совпало по названию/координате, дозаполняем ТОЛЬКО пустые поля,
+    // ничего не перезаписываем. Сам future_projects.json не трогаем — это
+    // чисто отображение в попапе, пересчитывается при каждой загрузке.
+    let enriched = 0;
+    try {
+      const latestQ = QUARTERS[QUARTERS.length - 1];
+      const [saleBuildings, coworkingList] = await Promise.all([
+        fetch(latestQ.file, { cache: 'no-cache' }).then(r => r.ok ? r.json() : []).catch(() => []),
+        fetch(latestQ.coworking, { cache: 'no-cache' }).then(r => r.ok ? r.json() : []).catch(() => []),
+      ]);
+      const liveSources = [
+        ...saleBuildings.map(b => ({ ...b, _src: 'продажа' })),
+        ...coworkingList.map(c => ({ ...c, name: c.bc || c.name, developer: c.developer || c.network, _src: 'коворкинг' })),
+      ];
+      const liveByNameKey = new Map();
+      const liveWithCoords = [];
+      for (const b of liveSources) {
+        const key = normalizeNameKey(b.name);
+        if (key && !liveByNameKey.has(key)) liveByNameKey.set(key, b);
+        if (b.lat != null && b.lng != null) liveWithCoords.push(b);
+      }
+      const findLiveMatch = (p) => {
+        const key = normalizeNameKey(p.name);
+        if (key && liveByNameKey.has(key)) return liveByNameKey.get(key);
+        if (p.lat != null && p.lng != null) {
+          return liveWithCoords.find(b => metersBetween(p.lat, p.lng, b.lat, b.lng) < COORD_MATCH_THRESHOLD_M) || null;
+        }
+        return null;
+      };
+      for (const mapped of [...registryProjects, ...registryNoCoords]) {
+        if (!mapped.legacy_supplement) continue;
+        const match = findLiveMatch(mapped);
+        if (!match) continue;
+        const filled = [];
+        if (!mapped.developer && match.developer) { mapped.developer = match.developer; filled.push('девелопер'); }
+        if (!mapped.cls && match.cls) { mapped.cls = normalizeCls(match.cls); filled.push('класс'); }
+        if (mapped.gba == null && match.gba != null) { mapped.gba = match.gba; filled.push('GBA'); }
+        if (mapped.gla == null && match.gla != null) { mapped.gla = match.gla; filled.push('GLA'); }
+        if (!mapped.status && match.status) { mapped.status = match.status; filled.push('статус'); }
+        if (!mapped.commission_year && match.year) { mapped.commission_year = match.year; filled.push('год ввода'); }
+        if (filled.length) {
+          mapped.enriched_from = match._src;
+          mapped.enriched_fields = filled;
+          enriched++;
+        }
+      }
+    } catch (e) {
+      // Обогащение необязательно — карточки просто останутся с исходными полями.
+    }
+
     futureData = {
       total: registryProjects.length + registryNoCoords.length,
       with_coords: registryProjects.length,
       without_coords: registryNoCoords.length,
       duplicate_count: layer.length - live.length,
       legacy_added: legacyAdded,
+      enriched_from_live: enriched,
       projects: registryProjects,
       no_coords: registryNoCoords,
     };
     assignGeoToRows(futureData.projects);
     futureLoaded = true;
-    st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат, из них ${futureData.legacy_added} — из устаревшего свода, требуют сверки)`;
+    st.textContent = `✓ ${futureData.total} проектов (${futureData.with_coords} на карте, ${futureData.without_coords} без координат, из них ${futureData.legacy_added} — из устаревшего свода, требуют сверки; ${futureData.enriched_from_live} дополнены данными из текущих продаж/коворкинга)`;
     st.style.color = '#16a34a';
     fpFillSelects();
   } catch (e) {
@@ -3261,6 +3348,9 @@ function fpPopupHtml(p) {
   const legacyBadge = p.legacy_supplement
     ? `<div style="margin:4px 0 6px;padding:3px 6px;background:#eef2ff;border-left:3px solid #6366f1;font-size:10px;color:#312e81;">ℹ Устаревший свод (data/future_projects.json) — не сверен с текущим реестром, координаты/статус могли устареть</div>`
     : '';
+  const enrichedBadge = p.enriched_from
+    ? `<div style="margin:4px 0 6px;padding:3px 6px;background:#f0fdf4;border-left:3px solid #16a34a;font-size:10px;color:#14532d;">✓ Дополнено из текущего свода (${escapeHtml(p.enriched_from)}): ${(p.enriched_fields || []).map(escapeHtml).join(', ')}</div>`
+    : '';
   const rows = [
     ['ID', p.id],
     ['Каноническое название', p.canonical_name],
@@ -3287,7 +3377,7 @@ function fpPopupHtml(p) {
     ['Примечание проверки', p.review_notes],
     ['Конфликты', p.conflicts],
   ];
-  return `<b>${escapeHtml(p.name || 'Проект')}</b>` + legacyBadge + warningBadge +
+  return `<b>${escapeHtml(p.name || 'Проект')}</b>` + legacyBadge + enrichedBadge + warningBadge +
     rows.map(([l, v]) =>
       `<div class="prow"><span class="plabel">${l}</span><span class="pval">${l === 'Координаты' ? v : (v == null || v === '' ? '—' : escapeHtml(String(v)))}</span></div>`
     ).join('') +
