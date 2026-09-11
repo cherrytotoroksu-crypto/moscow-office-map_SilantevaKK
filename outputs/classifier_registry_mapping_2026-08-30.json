@@ -5335,5 +5335,61 @@
     "matched_project_id": "proj-214",
     "match_basis": "name+address",
     "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-010",
+    "canonical_no": 715,
+    "name": "MYPRIORITY Пресня",
+    "address": "г. Москва, 1-й Силикатный пр-д, вл. 13",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-011",
+    "canonical_no": 716,
+    "name": "1-й Южнопортовый пр-д",
+    "address": "1-й Южнопортовый пр-д",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-012",
+    "canonical_no": 717,
+    "name": "ул. Наметкина, 10А",
+    "address": "ул. Наметкина, 10А",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-013",
+    "canonical_no": 718,
+    "name": "Дмитровское шоссе, 49к1",
+    "address": "Дмитровское шоссе, 49к1",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-014",
+    "canonical_no": 719,
+    "name": "Авиамоторная улица, 24",
+    "address": "Авиамоторная улица, 24",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-015",
+    "canonical_no": 720,
+    "name": "МФК на Верхней Сыромятнической",
+    "address": "Верхняя Сыромятническая улица",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-016",
+    "canonical_no": 721,
+    "name": "Гранель",
+    "address": "Дубининская, 17",
+    "status": "new_record",
+    "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
   }
 ]
