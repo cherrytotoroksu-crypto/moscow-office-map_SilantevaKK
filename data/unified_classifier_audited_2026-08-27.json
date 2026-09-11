@@ -7493,7 +7493,9 @@
       "latitude": 55.789537,
       "longitude": 37.585547,
       "coordinates_status": "centroid",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-90"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
@@ -7505,7 +7507,7 @@
       "verification_status": "Агрегированная карточка двух башен B и C (совпадает с реестровой «STONE Towers. Towers BC»: GBA 65 300 против 65 500, GLA 40 455 против 40 500). Отдельные карточки тех же башен — OBJ-0570 и OBJ-0576",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": " | 2026-09-11: \"B, С\" в названии = объединённая запись по башням B+C (GBA/GLA близки к сумме отдельных Tower B (UC-OBJ-0570) + Tower C (UC-OBJ-0576)); proj-90 \"Towers BC\" из слоя соответствует именно этой записи, не отдельной Tower B",
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 208
@@ -7537,10 +7539,11 @@
       "verification_status": "Сверить конфликты",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": " | 2026-09-11: дубль UC-OBJ-0698 \"STONE Towers (Tower D)\" - тот же корпус (GLA идентична 33000, тот же адрес/год ввода), помечено duplicate_of вместо удаления записи",
       "needs_review": true,
       "review_reason": "no conservative layer match",
-      "canonical_no": 209
+      "canonical_no": 209,
+      "duplicate_of": "UC-OBJ-0698"
     },
     {
       "unified_id": "UC-OBJ-0381",
@@ -7548,10 +7551,10 @@
       "name": "STONE Towers E",
       "address": "г. Москва,ул. Нижняя Масловка, 3",
       "developer": "STONE",
-      "gba": null,
-      "gla": null,
-      "cls": null,
-      "commission_year": 2028,
+      "gba": 6876.0,
+      "gla": 6876.0,
+      "cls": "Prime",
+      "commission_year": 2029,
       "commission_quarter": null,
       "status": "Проектный",
       "latitude": 55.791587,
@@ -7565,14 +7568,21 @@
       "layer_source": null,
       "layer_source_date": null,
       "layer_qa_notes": null,
-      "source_links": [],
-      "verification_status": "Нужно найти: общая площадь, GLA",
-      "confidence": "Низкий",
+      "source_links": [
+        "https://www.kommersant.ru/doc/8588630",
+        "https://stone.ru/commercial/tower-e"
+      ],
+      "verification_status": "Проверено 2026-09-11: класс Prime, площадь 6876 м² (8 офисов), старт продаж Q2 2026 (Kommersant, 14.04.2026), старт строительства Q1 2027, ввод 2029 - stone.ru + Kommersant. Ранее пустая запись (заготовка).",
+      "confidence": "Высокий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
       "needs_review": true,
       "review_reason": "no conservative layer match",
-      "canonical_no": 210
+      "canonical_no": 210,
+      "construction_start_year": 2027,
+      "construction_start_quarter": 1,
+      "sales_start_year": 2026,
+      "sales_start_quarter": 2
     },
     {
       "unified_id": "UC-OBJ-0216",
