@@ -17684,9 +17684,9 @@
       "developer": "Dar",
       "gba": 210000.0,
       "gla": 119000.0,
-      "cls": null,
-      "commission_year": 2029,
-      "commission_quarter": null,
+      "cls": "A",
+      "commission_year": 2030,
+      "commission_quarter": 4,
       "status": "Проектный",
       "latitude": 55.790365,
       "longitude": 37.544367,
@@ -17700,9 +17700,11 @@
       "layer_source_date": null,
       "layer_qa_notes": null,
       "source_links": [
-        "https://t.me/stroi_news/9166"
+        "https://pole.moscow/",
+        "https://t.me/stroi_news/9166",
+        "https://pole-office.moscow/"
       ],
-      "verification_status": "Проверено",
+      "verification_status": "Проверено 2026-09-11: класс A и срок ввода Q4 2030 подтверждены двумя независимыми маркетинговыми сайтами (pole.moscow, pole-office.moscow) и WebSearch-сводкой; ранее commission_year=2029 был из t.me/stroi_news (менее точный источник)",
       "confidence": "Высокий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
