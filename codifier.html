@@ -389,6 +389,7 @@ const CODIFIER_COLUMNS = [
 // --- Продажа офисов ---
 const SALE_BUILDINGS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'tower_label', label:'Башня/корпус', type:'text', visible:true},
   {key:'name', label:'Здание', type:'text', visible:true},
   {key:'name_orig', label:'Прежнее название', type:'text', visible:false},
   {key:'address', label:'Адрес', type:'text', visible:true, format: STRIP_MOSCOW_PREFIX},
@@ -730,8 +731,13 @@ function registryByFlexSiteLabelMap() {
   return byLabel;
 }
 function applyRegistryMatch(row, match) {
-  row.canonical_project_id = match ? match.canonical_project_id : null;
-  row.canonical_building_id = match ? match.canonical_building_id : null;
+  // Живое совпадение по имени (all_projects_layer) имеет приоритет, но если
+  // его нет — не затираем canonical_project_id, уже materialized в самом
+  // файле данных (см. data/buildings_202606.json: subid/tower_label/
+  // canonical_project_id, проставлены отдельным проходом для мульти-корпусных
+  // проектов вроде "Поле", которых пока нет в all_projects_layer).
+  row.canonical_project_id = match ? match.canonical_project_id : row.canonical_project_id;
+  row.canonical_building_id = match ? match.canonical_building_id : row.canonical_building_id;
   row.reg_project_status = match ? match.project_status : null;
   row.reg_offer_status = match ? match.offer_status : null;
   row.reg_input_quarter = match ? match.input_quarter : null;
