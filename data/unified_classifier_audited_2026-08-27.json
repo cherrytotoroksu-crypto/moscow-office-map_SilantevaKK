@@ -1838,7 +1838,7 @@
       "sales_start_confidence": "needs_review",
       "sales_start_source": "data/building_dates.json key=бадаевский западная лента; checked 2026-07-14; office-news.ru говорил про февраль 2021, НО это была, похоже, другая очередь комплекса — мастер-таблица пользователя (Свод Q2 2026, лист СРАВНЕНИЕ КВАРТАЛОВ) показывает, что именно это здание впервые появилось в продаже в Q2 2026 (отсутствовало в Q1) — используем эту дату как более точную; передача ключей запланирована на Q1 2027 (стройготовность 85% на момент проверки, не РНВ)",
       "canonical_no": 38,
-      "canonical_project_id": "badaevsky",
+      "canonical_project_id": "282",
       "subid": "01",
       "tower_label": ""
     },
@@ -1892,7 +1892,7 @@
       "sales_start_confidence": "needs_review",
       "sales_start_source": "data/building_dates.json key=бадаевский западная лента; checked 2026-07-14; office-news.ru говорил про февраль 2021, НО это была, похоже, другая очередь комплекса — мастер-таблица пользователя (Свод Q2 2026, лист СРАВНЕНИЕ КВАРТАЛОВ) показывает, что именно это здание впервые появилось в продаже в Q2 2026 (отсутствовало в Q1) — используем эту дату как более точную; передача ключей запланирована на Q1 2027 (стройготовность 85% на момент проверки, не РНВ)",
       "canonical_no": 39,
-      "canonical_project_id": "badaevsky",
+      "canonical_project_id": "282",
       "subid": "01",
       "tower_label": ""
     },
@@ -7582,7 +7582,10 @@
       "construction_start_year": 2027,
       "construction_start_quarter": 1,
       "sales_start_year": 2026,
-      "sales_start_quarter": 2
+      "sales_start_quarter": 2,
+      "canonical_project_id": "283",
+      "subid": "01",
+      "tower_label": ""
     },
     {
       "unified_id": "UC-OBJ-0216",
@@ -22677,7 +22680,10 @@
       "sales_start_date": null,
       "sales_start_confidence": null,
       "sales_start_source": null,
-      "canonical_no": 712
+      "canonical_no": 712,
+      "canonical_project_id": "285",
+      "subid": "01",
+      "tower_label": ""
     },
     {
       "unified_id": "UC-OBJ-ADD-008",
@@ -23073,7 +23079,7 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Восточная лента",
-      "canonical_project_id": "badaevsky"
+      "canonical_project_id": "282"
     },
     {
       "unified_id": "UC-OBJ-0781",
@@ -23113,7 +23119,7 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "Западная лента",
-      "canonical_project_id": "badaevsky"
+      "canonical_project_id": "282"
     },
     {
       "coordinates_status": "geocoded_approx",
@@ -23319,6 +23325,161 @@
       ],
       "verification_status": "Проверено 2026-09-11: класс A, общая площадь 173960 м² (офисы+апартаменты+ритейл), отдельной офисной GLA не найдено.",
       "canonical_project_id": "787"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": null,
+      "quarter_offer_refs": [],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "legacy_ids": [],
+      "unified_id": "UC-OBJ-0788",
+      "source_id": "OBJ-0788",
+      "name": "Мираполис",
+      "address": "Москва, Проспект Мира, 222",
+      "developer": "ГК «Основа»",
+      "gba": null,
+      "gla": null,
+      "cls": "B+",
+      "commission_year": 2027,
+      "latitude": 55.837,
+      "longitude": 37.64,
+      "market_channel": [
+        "sale"
+      ],
+      "source_links": [
+        "https://mirapolis.city/offices/",
+        "https://gk-osnova.ru/mirapolis"
+      ],
+      "verification_status": "Проверено 2026-09-11 (сайт застройщика). Координаты приблизительные (geocoded_approx) - точный адрес вл.222, Ростокино, район ВДНХ/МЦК Ростокино, GPS не найден в открытых источниках.",
+      "canonical_project_id": "284"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": 1,
+      "quarter_offer_refs": [],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "legacy_ids": [],
+      "unified_id": "UC-OBJ-0789",
+      "source_id": "OBJ-0789",
+      "name": "БЦ «Север»",
+      "address": "Москва, Ленинградский просп., д. 36, к. 13",
+      "developer": "Галс-Девелопмент",
+      "gba": null,
+      "gla": 56000.0,
+      "cls": "Prime",
+      "commission_year": 2027,
+      "latitude": 55.789,
+      "longitude": 37.555,
+      "market_channel": [
+        "sale"
+      ],
+      "source_links": [
+        "https://hals-development.ru/realty/object/sever",
+        "https://bc-sever.ru/"
+      ],
+      "verification_status": "Проверено 2026-09-11 (сайт застройщика hals-development.ru). Ввод Q1 2027 подтверждён. Координаты приблизительные (geocoded_approx), у метро Динамо.",
+      "canonical_project_id": "286"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": 4,
+      "quarter_offer_refs": [],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "legacy_ids": [],
+      "unified_id": "UC-OBJ-0790",
+      "source_id": "OBJ-0790",
+      "name": "БЦ «Северный Порт»",
+      "address": "Ленинградское ш., Москва, САО, Левобережный",
+      "developer": "LEGENDA Intelligent Development",
+      "gba": null,
+      "gla": null,
+      "cls": "B+",
+      "commission_year": 2026,
+      "latitude": 55.861,
+      "longitude": 37.4617,
+      "market_channel": [
+        "sale"
+      ],
+      "source_links": [
+        "https://www.novostroy-m.ru/baza/biznestsentr_na_leningradskom_shosse"
+      ],
+      "verification_status": "Проверено 2026-09-11. Координаты точные (55.861, 37.4617) - novostroy-m.ru. Ввод Q4 2026.",
+      "canonical_project_id": "287"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": 1,
+      "quarter_offer_refs": [],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "legacy_ids": [],
+      "unified_id": "UC-OBJ-0791",
+      "source_id": "OBJ-0791",
+      "name": "БЦ «РЕ:ПОРТ»",
+      "address": "Ленинградское ш., 63А/3, Москва",
+      "developer": "PLUS Development",
+      "gba": 51078.0,
+      "gla": 22821.0,
+      "cls": "A",
+      "commission_year": 2028,
+      "latitude": 55.858,
+      "longitude": 37.465,
+      "market_channel": [
+        "sale"
+      ],
+      "source_links": [
+        "https://re-port.business/",
+        "https://www.kommersant.ru/doc/8738240"
+      ],
+      "verification_status": "Проверено 2026-09-11 (re-port.business). Координаты приблизительные (geocoded_approx), в районе Северный речной порт/м.Беломорская, рядом с Северным Портом.",
+      "canonical_project_id": "288"
     }
   ]
 }
