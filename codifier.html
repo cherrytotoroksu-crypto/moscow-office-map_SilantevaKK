@@ -337,6 +337,8 @@ const GEOMETRY_QUALITY_DISPLAY = {
 // показывает, где пары нет, а не выдумывает значение.
 const CODIFIER_COLUMNS = [
   {key:'canonical_no', label:'№', type:'number', visible:true},
+  {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'tower_label', label:'Башня/корпус', type:'text', visible:true},
   {key:'name', label:'Проект', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
