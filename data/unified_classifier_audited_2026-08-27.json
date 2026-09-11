@@ -22651,7 +22651,9 @@
       "longitude": 37.518821,
       "coordinates_status": "geocoded_approx",
       "legacy_ids": [
-        "proj-86"
+        "proj-86",
+        "cwhost-hist-2e3715b7ba",
+        "cwhost-hist-d2e87a98a7"
       ],
       "quarter_offer_refs": [],
       "market_channel": [
@@ -22669,7 +22671,7 @@
       "verification_status": "Добавлено после проверки пропусков",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. По прямому указанию пользователя сохраняется под именем 'Porta Forma' как отдельная запись (не объединена с PORTA Workplace, хотя адрес и застройщик совпадают) — дата старта продаж отдельно не подтверждена.",
+      "classification_note": "Объект отсутствовал в unified-файле; добавлен как пропуск по сверке с all_projects_layer.json. По прямому указанию пользователя сохраняется под именем 'Porta Forma' как отдельная запись (не объединена с PORTA Workplace, хотя адрес и застройщик совпадают) — дата старта продаж отдельно не подтверждена. | 2026-09-11: те же 2 coworking host-записи слоя (cwhost-hist-2e3715b7ba \"Заречная 2/1\", cwhost-hist-d2e87a98a7 \"Порта\") привязаны сюда - их координаты в источнике ошибочно скопированы от Москва-Сити (55.7505/37.5395), верный адрес \"Заречная ул, 2/1\" подтверждён текстовым совпадением, не геокоординатами",
       "needs_review": true,
       "review_reason": "missing_from_unified_migration",
       "sales_start_date": null,
@@ -23112,6 +23114,211 @@
       "subid": "02",
       "tower_label": "Западная лента",
       "canonical_project_id": "badaevsky"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": null,
+      "quarter_offer_refs": [],
+      "market_channel": [
+        "coworking"
+      ],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "unified_id": "UC-OBJ-0783",
+      "source_id": "OBJ-0783",
+      "name": "Империя",
+      "address": "Пресненская наб., 6с2 (Москва-Сити)",
+      "developer": "—",
+      "gba": 203191.0,
+      "gla": 121497.0,
+      "cls": "A",
+      "commission_year": 2011,
+      "latitude": 55.748154,
+      "longitude": 37.540236,
+      "legacy_ids": [
+        "cwhost-0001"
+      ],
+      "source_links": [
+        "https://bashnya-imperiya.ru/",
+        "https://ru.wikipedia.org/wiki/Империя_(небоскрёб)"
+      ],
+      "verification_status": "Проверено 2026-09-11: данные уже были в источнике (coworking_host_lookup) и подтверждены Wikipedia/сайтом застройщика - GBA 203191, офисы класса A 121497 м², введён 2011.",
+      "canonical_project_id": "783"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": null,
+      "quarter_offer_refs": [],
+      "market_channel": [
+        "coworking"
+      ],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "unified_id": "UC-OBJ-0784",
+      "source_id": "OBJ-0784",
+      "name": "Федерация (Башня Запад)",
+      "address": "Пресненская наб., 12 (Москва-Сити)",
+      "developer": "—",
+      "gba": 112000.0,
+      "gla": null,
+      "cls": "A",
+      "commission_year": 2017,
+      "latitude": 55.749633,
+      "longitude": 37.537434,
+      "legacy_ids": [
+        "cwhost-0002",
+        "cwhost-hist-f0518c325b"
+      ],
+      "source_links": [
+        "https://f-375.ru/bashnya-federaciya-vostok-i-zapad/",
+        "https://towers.city/catalog/federatsiya-zapad"
+      ],
+      "verification_status": "Проверено 2026-09-11: конкретно Башня Запад (адрес наб. Пресненская 12 совпадает с cwhost-0002/cwhost-hist-f0518c325b), не весь комплекс Восток+Запад (450000+ м² в источниках - это сумма обеих башен). Площадь Запад 112000 м² (офис+апартаменты+ритейл, отдельной офисной GLA не найдено), класс A.",
+      "canonical_project_id": "784"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": null,
+      "quarter_offer_refs": [],
+      "market_channel": [
+        "coworking"
+      ],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "unified_id": "UC-OBJ-0785",
+      "source_id": "OBJ-0785",
+      "name": "Балчуг (Рабочая Станция)",
+      "address": "Садовническая наб., 9",
+      "developer": "—",
+      "gba": 3086.0,
+      "gla": 3086.0,
+      "cls": "B",
+      "commission_year": 1994,
+      "latitude": 55.746441,
+      "longitude": 37.629053,
+      "legacy_ids": [
+        "cwhost-0010"
+      ],
+      "source_links": [
+        "https://kf.expert/office/osobnyak/sadovnicheskaya-naberezhnaya-9-os4258"
+      ],
+      "verification_status": "Проверено 2026-09-11: НЕ путать с БЦ «Балчуг Плаза» (ул. Балчуг 7, класс A, 29674 м² - другое здание). Наш адрес Садовническая наб. 9 = отдельный меньший объект класса B, 3086 м², 1994 г.",
+      "canonical_project_id": "785"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": null,
+      "quarter_offer_refs": [],
+      "market_channel": [
+        "coworking"
+      ],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "unified_id": "UC-OBJ-0786",
+      "source_id": "OBJ-0786",
+      "name": "Арма (бизнес-парк)",
+      "address": "Нижний Сусальный пер., 5",
+      "developer": "Большой город (ICBG)",
+      "gba": 50000.0,
+      "gla": 42500.0,
+      "cls": "B+",
+      "commission_year": 2007,
+      "latitude": 55.760206,
+      "longitude": 37.663889,
+      "legacy_ids": [
+        "cwhost-0012"
+      ],
+      "source_links": [
+        "https://arma-bc.ru/",
+        "https://fortexgroup.ru/bc/arma/"
+      ],
+      "verification_status": "Проверено 2026-09-11: бизнес-парк из 24 строений, площади по комплексу в целом (GLA 42500, GBA по комплексу ~50000), класс B+, реконструкция завода Арма 2007 г.",
+      "canonical_project_id": "786"
+    },
+    {
+      "coordinates_status": "geocoded_approx",
+      "commission_quarter": null,
+      "quarter_offer_refs": [],
+      "market_channel": [
+        "coworking"
+      ],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": null,
+      "layer_source_date": null,
+      "layer_qa_notes": null,
+      "entity_type": "office_project_candidate",
+      "classification_note": null,
+      "needs_review": false,
+      "review_reason": null,
+      "canonical_no": null,
+      "subid": "01",
+      "tower_label": "",
+      "confidence": "Высокий",
+      "unified_id": "UC-OBJ-0787",
+      "source_id": "OBJ-0787",
+      "name": "Меркурий Сити Тауэр",
+      "address": "1-й Красногвардейский пр-д, 15 (Москва-Сити)",
+      "developer": "—",
+      "gba": 173960.0,
+      "gla": null,
+      "cls": "A",
+      "commission_year": null,
+      "latitude": 55.75051,
+      "longitude": 37.539455,
+      "legacy_ids": [
+        "cwhost-0028"
+      ],
+      "source_links": [
+        "https://mercurycity-tower.ru/",
+        "https://fortexgroup.ru/bc/merkuriy-tauer/"
+      ],
+      "verification_status": "Проверено 2026-09-11: класс A, общая площадь 173960 м² (офисы+апартаменты+ритейл), отдельной офисной GLA не найдено.",
+      "canonical_project_id": "787"
     }
   ]
 }
