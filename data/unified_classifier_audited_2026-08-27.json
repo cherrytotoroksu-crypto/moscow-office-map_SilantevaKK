@@ -1661,7 +1661,8 @@
       "longitude": 37.471039,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-57"
+        "proj-57",
+        "proj-237"
       ],
       "quarter_offer_refs": [
         "202407",
@@ -15654,7 +15655,9 @@
       "latitude": 55.765134,
       "longitude": 37.509864,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "remain-only-0003"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
