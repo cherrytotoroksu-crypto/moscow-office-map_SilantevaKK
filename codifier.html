@@ -336,7 +336,10 @@ const GEOMETRY_QUALITY_DISPLAY = {
 // — 714 более дробных building-level записей) — cls_matched/reg_matched честно
 // показывает, где пары нет, а не выдумывает значение.
 const CODIFIER_COLUMNS = [
-  {key:'canonical_no', label:'№', type:'number', visible:true},
+  // canonical_no — порядковый номер строки в общем кодификаторе (не ID
+  // проекта и не связан с нумерацией на листах Продажа/Аренда/Коворкинги —
+  // тот приходит из отдельного поля canonical_project_id, см. ниже).
+  {key:'canonical_no', label:'№ строки (не ID)', type:'number', visible:true},
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'tower_label', label:'Башня/корпус', type:'text', visible:true},
   {key:'name', label:'Проект', type:'text', visible:true},
@@ -596,6 +599,33 @@ const state = {
   golden_report: makeTableState(GOLDEN_REPORT_COLUMNS),
 };
 let allProjectsLayer = [];
+// Кроссвок all_projects_layer.canonical_project_id ("proj-108") -> наш
+// единый ID проекта ("108", "badaevsky", "280" — та же нумерация, что в
+// data/buildings_{quarter}.json и в едином кодификаторе). Без него
+// Продажа/Аренда/Гибкие офисы показывали "proj-N" из живого join по имени,
+// а Общий кодификатор и SUBID-реестр — свою числовую схему: одно и то же
+// здание в разных разделах получало разные ID. Строится один раз лениво.
+let projectIdCrosswalk = new Map();
+let projectIdCrosswalkReady = null;
+async function buildProjectIdCrosswalk() {
+  if (projectIdCrosswalkReady) return projectIdCrosswalkReady;
+  projectIdCrosswalkReady = (async () => {
+    let rows;
+    try { rows = await fetchJSON(`data/buildings_${QUARTERS[0].id}.json`); }
+    catch (e) { rows = []; }
+    const byName = registryByNameMap();
+    for (const b of rows) {
+      if (!b.canonical_project_id) continue;
+      const match = byName.get(b.name) || byName.get(b.name_orig);
+      if (match) projectIdCrosswalk.set(match.canonical_project_id, b.canonical_project_id);
+    }
+  })();
+  return projectIdCrosswalkReady;
+}
+function unifiedProjectId(rawId) {
+  if (rawId == null) return rawId;
+  return projectIdCrosswalk.has(rawId) ? projectIdCrosswalk.get(rawId) : rawId;
+}
 let currentQuarterId = QUARTERS[0].id;
 let dataMeta = {};
 let pageSize = 0; // 0 = все строки без пагинации (пролистывание)
@@ -660,6 +690,7 @@ async function loadCodifier() {
     fetchJSON('data/unified_classifier_audited_2026-08-27.json'),
   ]);
   allProjectsLayer = registryRows;
+  await buildProjectIdCrosswalk();
 
   const rows = classifierData.records || [];
   const byName = registryByNameMap();
@@ -673,7 +704,7 @@ async function loadCodifier() {
 
     const reg = byName.get(r.name);
     r.reg_matched = !!reg;
-    r.reg_canonical_project_id = reg ? reg.canonical_project_id : null;
+    r.reg_canonical_project_id = reg ? unifiedProjectId(reg.canonical_project_id) : null;
     r.reg_submarket = reg ? reg.submarket : null;
     r.reg_zone = reg ? reg.zone : null;
     r.reg_project_status = reg ? reg.project_status : null;
@@ -738,7 +769,13 @@ function applyRegistryMatch(row, match) {
   // файле данных (см. data/buildings_202606.json: subid/tower_label/
   // canonical_project_id, проставлены отдельным проходом для мульти-корпусных
   // проектов вроде "Поле", которых пока нет в all_projects_layer).
-  row.canonical_project_id = match ? match.canonical_project_id : row.canonical_project_id;
+  // reg_link_id хранит СЫРОЙ id из all_projects_layer ("proj-108") — нужен
+  // resolveRegistryRecord() для обратного поиска записи реестра. Отдельно от
+  // canonical_project_id, который теперь всегда наша единая нумерация
+  // (тот же ID, что в data/buildings_{quarter}.json и в общем кодификаторе) —
+  // через unifiedProjectId(), не сырой proj-N.
+  row.reg_link_id = match ? match.canonical_project_id : row.reg_link_id;
+  row.canonical_project_id = match ? unifiedProjectId(match.canonical_project_id) : row.canonical_project_id;
   row.canonical_building_id = match ? match.canonical_building_id : row.canonical_building_id;
   row.reg_project_status = match ? match.project_status : null;
   row.reg_offer_status = match ? match.offer_status : null;
@@ -922,7 +959,7 @@ async function loadRentBuildings(quarterId) {
       byBuilding.set(building, {
         building, developer: match ? match.developer : null, cls: match ? match.cls : null,
         zone: match ? match.zone : null, submarket: match ? match.submarket : null,
-        canonical_project_id: match ? match.canonical_project_id : null,
+        canonical_project_id: match ? unifiedProjectId(match.canonical_project_id) : null,
         reg_source: match ? match.source : null,
         // GLA/GBA здания — атрибут самого здания (из реестра), не сумма по
         // лотам аренды: площадь предложений аренды (areaSum ниже) — отдельная
@@ -1592,6 +1629,7 @@ function attachHeaderHandlers() {
 // проставлен join'ом при загрузке (см. joinRegistryFields).
 function resolveRegistryRecord(row) {
   if (currentView === 'codifier') return row;
+  if (row.reg_link_id) return allProjectsLayer.find(r => r.canonical_project_id === row.reg_link_id) || null;
   if (row.canonical_project_id) return allProjectsLayer.find(r => r.canonical_project_id === row.canonical_project_id) || null;
   return null;
 }
