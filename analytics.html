@@ -214,6 +214,79 @@ async function fetchJSON(url, fallback) {
   }
 }
 
+// ============================================================
+//  Точка-в-полигоне для группировки по административному делению
+//  (data/mo.geojson — 146 районов Москвы с полями NAME/NAME_AO).
+//  Портировано из index.html (pipRing/featureBBox/pointInFeature) —
+//  на этой странице своего Leaflet нет, а сам алгоритм от него не зависит.
+// ============================================================
+function pipRing(ring, x, y) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j];
+    if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi))
+      inside = !inside;
+  }
+  return inside;
+}
+function featureBBox(feature) {
+  if (feature._bbox) return feature._bbox;
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  const geom = feature.geometry;
+  const polys = geom.type === 'Polygon' ? [geom.coordinates]
+               : geom.type === 'MultiPolygon' ? geom.coordinates : [];
+  for (const poly of polys) {
+    for (const ring of poly) {
+      for (const [x, y] of ring) {
+        if (x < minX) minX = x; if (x > maxX) maxX = x;
+        if (y < minY) minY = y; if (y > maxY) maxY = y;
+      }
+    }
+  }
+  return (feature._bbox = [minX, minY, maxX, maxY]);
+}
+function pointInFeature(lng, lat, feature) {
+  const [minX, minY, maxX, maxY] = featureBBox(feature);
+  if (lng < minX || lng > maxX || lat < minY || lat > maxY) return false;
+  const geom = feature.geometry;
+  const polys = geom.type === 'Polygon' ? [geom.coordinates]
+               : geom.type === 'MultiPolygon' ? geom.coordinates : [];
+  for (const poly of polys) {
+    if (!pipRing(poly[0], lng, lat)) continue;
+    let inHole = false;
+    for (let h = 1; h < poly.length; h++) {
+      if (pipRing(poly[h], lng, lat)) { inHole = true; break; }
+    }
+    if (!inHole) return true;
+  }
+  return false;
+}
+
+let moGeojson = null;
+async function loadMoGeojson() {
+  if (moGeojson) return moGeojson;
+  moGeojson = await fetchJSON('data/mo.geojson', { features: [] });
+  return moGeojson;
+}
+// Проставляет row.admDistrict (район, поле NAME) и row.admOkrug (округ,
+// поле NAME_AO) по координатам — не трогает исходные файлы, только
+// объекты в памяти конструктора.
+function assignAdminDivision(rows, latKey, lngKey) {
+  if (!moGeojson || !moGeojson.features.length) return;
+  for (const r of rows) {
+    const lat = Number(r[latKey]), lng = Number(r[lngKey]);
+    r.admDistrict = ''; r.admOkrug = '';
+    if (!isFinite(lat) || !isFinite(lng)) continue;
+    for (const f of moGeojson.features) {
+      if (pointInFeature(lng, lat, f)) {
+        r.admDistrict = f.properties.NAME || '';
+        r.admOkrug = f.properties.NAME_AO || '';
+        break;
+      }
+    }
+  }
+}
+
 let _scriptCache = {};
 function loadScript(src) {
   if (_scriptCache[src]) return _scriptCache[src];
@@ -291,22 +364,28 @@ function anaShortLabel(value, maxLength = 34) {
 }
 
 // ============================================================
-//  Загрузка данных всех кварталов (без геослоёв — конструктору нужны
-//  только сами здания/лоты аренды/коворкинги, группировка не геозональная)
+//  Загрузка данных всех кварталов (здания/лоты аренды/коворкинги нативно
+//  несут только зону/субрынок — административный округ/район считаем
+//  сами через assignAdminDivision по data/mo.geojson, см. выше)
 // ============================================================
 let allBuildings = {}, allRentLots = {}, allCoworking = {};
 let dataLoaded = false;
 async function loadAllQuarters() {
   if (dataLoaded) return;
-  const fetched = await Promise.all(QUARTERS.map(async q => {
-    const [blds, rent, coworking] = await Promise.all([
-      fetchJSON(q.file, []),
-      q.rent ? fetchJSON(q.rent, {}) : Promise.resolve({}),
-      q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]),
-    ]);
-    return { q, blds, rent, coworking };
-  }));
+  const [fetched] = await Promise.all([
+    Promise.all(QUARTERS.map(async q => {
+      const [blds, rent, coworking] = await Promise.all([
+        fetchJSON(q.file, []),
+        q.rent ? fetchJSON(q.rent, {}) : Promise.resolve({}),
+        q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]),
+      ]);
+      return { q, blds, rent, coworking };
+    })),
+    loadMoGeojson(),
+  ]);
   for (const { q, blds, rent, coworking } of fetched) {
+    assignAdminDivision(blds, 'lat', 'lng');
+    assignAdminDivision(coworking, 'lat', 'lng');
     allBuildings[q.id] = blds;
     allRentLots[q.id] = rent;
     allCoworking[q.id] = coworking;
@@ -332,8 +411,10 @@ const ANA_METRICS = {
     ['vacancy','Вакантно, мест'],['avgRate','Ср. ставка, руб/мес'],['wavgRate','Ср. взв. ставка, руб/мес']],
 };
 const ANA_GROUPBY_QUARTERLY_SALE_RENT = [['cls','Класс'],['developer','Девелопер'],
-  ['submarket','Субрынок'],['zone','Зона (кольцо)'],['status','Статус здания']];
-const ANA_GROUPBY_QUARTERLY_COWORKING = [['network','Оператор (сеть)'],['bc','Площадка']];
+  ['submarket','Субрынок'],['zone','Зона (кольцо)'],['status','Статус здания'],
+  ['admOkrug','Административный округ'],['admDistrict','Административный район']];
+const ANA_GROUPBY_QUARTERLY_COWORKING = [['network','Оператор (сеть)'],['bc','Площадка'],
+  ['admOkrug','Административный округ'],['admDistrict','Административный район']];
 function anaGroupByOptions(domain, channel) {
   if (domain !== 'quarterly') return ANA_GROUPBY_PROJECTS;
   return channel === 'coworking' ? ANA_GROUPBY_QUARTERLY_COWORKING : ANA_GROUPBY_QUARTERLY_SALE_RENT;
@@ -342,7 +423,8 @@ const ANA_METRICS_PROJECTS = [['count','Кол-во проектов, шт.'],
   ['gba','Суммарная площадь GBA, кв.м'],['gla','Суммарная площадь GLA, кв.м']];
 const ANA_GROUPBY_PROJECTS = [['developer','Девелопер'],['submarket','Субрынок'],
   ['zone','Зона (кольцо)'],['project_status','Статус проекта'],['cls','Класс'],
-  ['input_year','Год ввода'],['confidence','Уверенность данных']];
+  ['input_year','Год ввода'],['confidence','Уверенность данных'],
+  ['admOkrug','Административный округ'],['admDistrict','Административный район']];
 const ANA_NA_LABEL = 'Не определено';
 
 // Хронологический groupBy ("Год ввода") — не сортировать по значению
@@ -433,7 +515,11 @@ async function onAnaDomainChange() {
     if (domain === 'quarterly') {
       await loadAllQuarters();
     } else {
-      if (!analyticsProjectsData) analyticsProjectsData = await fetchJSON('data/all_projects_layer.json', []);
+      if (!analyticsProjectsData) {
+        await loadMoGeojson();
+        analyticsProjectsData = await fetchJSON('data/all_projects_layer.json', []);
+        assignAdminDivision(analyticsProjectsData, 'latitude', 'longitude');
+      }
     }
     refreshAnaDeveloperOptions();
     document.getElementById('anaDeveloperLabel').textContent = (domain === 'quarterly' && channel === 'coworking') ? 'Оператор (сеть)' : 'Девелопер';

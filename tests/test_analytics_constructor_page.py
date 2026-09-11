@@ -106,6 +106,43 @@ class AnalyticsConstructorPageTest(unittest.TestCase):
     def test_developer_selector_discloses_available_count(self):
         self.assertIn('`<option value="">Все (${devs.length})</option>`', self.html)
 
+    def test_admin_division_groupby_available_in_all_three_domains(self):
+        """2026-09-11: раньше в конструкторе не было группировки по
+        административному округу/району — только зона/субрынок/деловой
+        район. Ни один файл данных не несёт эти поля готовыми (проверено:
+        data/unified_classifier.json 'district' — 0/705 заполнено), поэтому
+        считаем сами через point-in-polygon по data/mo.geojson (146 районов,
+        поля NAME/NAME_AO), как это уже делает index.html для zone/submarket."""
+        for token in ("ANA_GROUPBY_QUARTERLY_SALE_RENT", "ANA_GROUPBY_QUARTERLY_COWORKING",
+                      "ANA_GROUPBY_PROJECTS"):
+            match = re.search(rf"const {token} = (\[.*?\]);", self.html, re.S)
+            self.assertIsNotNone(match, token)
+            self.assertIn("'admOkrug'", match.group(1), f"{token} missing admOkrug")
+            self.assertIn("'admDistrict'", match.group(1), f"{token} missing admDistrict")
+
+    def test_admin_division_computed_via_point_in_polygon_not_baked_field(self):
+        """Округ/район не читаются как готовое поле из JSON (его там нет) —
+        вычисляются на лету по координатам через mo.geojson."""
+        self.assertIn("function pointInFeature(", self.html)
+        self.assertIn("function assignAdminDivision(", self.html)
+        self.assertIn("loadMoGeojson", self.html)
+        self.assertIn("data/mo.geojson", self.html)
+        self.assertIn("properties.NAME_AO", self.html)
+
+    def test_admin_division_assigned_for_all_three_row_sources(self):
+        """Здания/лоты, коворкинги и снимок реестра проектов используют
+        разные ключи координат (lat/lng vs latitude/longitude) — каждый
+        источник должен быть явно прогнан через assignAdminDivision."""
+        calls = re.findall(r"assignAdminDivision\(([^,]+),\s*'(\w+)',\s*'(\w+)'\)", self.html)
+        targets = {c[0].strip() for c in calls}
+        self.assertIn("blds", targets)
+        self.assertIn("coworking", targets)
+        self.assertIn("analyticsProjectsData", targets)
+        by_target = {c[0].strip(): (c[1], c[2]) for c in calls}
+        self.assertEqual(by_target["analyticsProjectsData"], ("latitude", "longitude"))
+        self.assertEqual(by_target["blds"], ("lat", "lng"))
+        self.assertEqual(by_target["coworking"], ("lat", "lng"))
+
 
 if __name__ == "__main__":
     unittest.main()
