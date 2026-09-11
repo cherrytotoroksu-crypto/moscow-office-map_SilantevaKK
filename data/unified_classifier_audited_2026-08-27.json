@@ -6349,7 +6349,9 @@
       "latitude": 55.704423,
       "longitude": 37.572207,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-80"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
@@ -6587,7 +6589,9 @@
       "latitude": 55.729716,
       "longitude": 37.694423,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-158"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
@@ -6927,7 +6931,9 @@
       "latitude": 55.800797,
       "longitude": 37.381693,
       "coordinates_status": "exact",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-244"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
@@ -9114,7 +9120,9 @@
       "latitude": 55.761284,
       "longitude": 37.518892,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-212"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
@@ -22063,7 +22071,9 @@
       "latitude": 55.686558,
       "longitude": 37.700056,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-279"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22100,7 +22110,9 @@
       "latitude": 55.794872,
       "longitude": 37.524718,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-104"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22139,7 +22151,9 @@
       "latitude": 55.76324,
       "longitude": 37.569135,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-98"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22179,7 +22193,9 @@
       "latitude": 55.753024,
       "longitude": 37.529984,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-204"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22218,7 +22234,9 @@
       "latitude": 55.810719,
       "longitude": 37.476501,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-273"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22257,7 +22275,9 @@
       "latitude": 55.694057,
       "longitude": 37.66506,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-85"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22297,7 +22317,9 @@
       "latitude": 55.747221,
       "longitude": 37.518821,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-86"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22337,7 +22359,9 @@
       "latitude": 55.789541,
       "longitude": 37.585734,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-88"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -22376,7 +22400,9 @@
       "latitude": 55.813147,
       "longitude": 37.477857,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-214"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
