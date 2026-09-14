@@ -4234,7 +4234,7 @@
     {
       "unified_id": "UC-OBJ-0224",
       "source_id": "OBJ-0224",
-      "name": "Stone Ходынка 4",
+      "name": "STONE SKY Ходынка",
       "address": "Москва, Ходынский бульвар",
       "developer": "STONE",
       "gba": 160000.0,
@@ -4262,7 +4262,7 @@
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. | date_research_fix 2026-08-22: stone.ru/commercial/hodinka4 (живая страница, \"Готовность 2032 г.\"), stonebrokers.ru, anwin.ru — согласуются на 2032, квартал не уточнён ни одним источником. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone ходынка iv'; underlying source and its check date remain in that record (2026-08-22). Class rechecked 2026-08-22: STONE official page and STONE Brokers describe the project as premium; CREMAP and Yandex Realty classify it as A. Mapped to canonical class Prime per STONE terminology; previous A retained as non-canonical market label.",
       "source_links": [],
-      "verification_status": "Сверить конфликты Исправлено 2026-09-04: координаты совпадали с 'Ходынка 3' (тот же баг копирования). Точный адрес башни IV не найден ни в одном открытом источнике (stone.ru/commercial/hodinka4 даёт только адрес офиса продаж) - координаты НЕ угаданы, взяты уже существующие (тоже приблизительные) из registry proj-258, BLOCKED_BY_EVIDENCE на точный адрес.",
+      "verification_status": "Сверить конфликты Исправлено 2026-09-04: координаты совпадали с 'Ходынка 3' (тот же баг копирования). Точный адрес башни IV не найден ни в одном открытом источнике (stone.ru/commercial/hodinka4 даёт только адрес офиса продаж) - координаты НЕ угаданы, взяты уже существующие (тоже приблизительные) из registry proj-258, BLOCKED_BY_EVIDENCE на точный адрес. | 2026-09-14: переименован «Stone Ходынка 4»->«STONE SKY Ходынка» (stone.ru/commercial/sky-hodinka, редирект с hodinka4; kommersant.ru подтверждает запуск линейки STONE SKY, флагман — этот проект). В реестре (all_projects_layer.json, proj-258) уже разбит на 2 записи по башням F1/F2 — здесь, на уровне классификатора, остаётся одной агрегатной записью (сплит по башням делается только в реестре).",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
       "classification_note": null,
