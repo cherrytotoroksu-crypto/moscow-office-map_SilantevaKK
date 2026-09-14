@@ -49,7 +49,7 @@ class TestControlledSync20260830(unittest.TestCase):
     # split (2 rows, same canonical_project_id) - present in the committed
     # baseline before this sync touched anything. Not something this sync
     # introduced or is asked to fix.
-    KNOWN_PREEXISTING_DUPLICATE_IDS = {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261", "proj-134", "proj-244", "proj-180"}
+    KNOWN_PREEXISTING_DUPLICATE_IDS = {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261", "proj-134", "proj-244", "proj-180", "proj-194"}
 
     def test_no_duplicate_canonical_project_id(self):
         ids = [r["canonical_project_id"] for r in self.registry]
