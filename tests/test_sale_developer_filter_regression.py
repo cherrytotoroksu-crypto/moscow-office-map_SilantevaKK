@@ -21,7 +21,11 @@ class SaleDeveloperFilterRegressionTests(unittest.TestCase):
         # a5d1fb5/e111839 (Поле x2 башни, Мираполис, БЦ Север, БЦ Северный
         # Порт, БЦ РЕ:ПОРТ, STONE Tower E, БЦ «ПОРТА»), все получили записи
         # в реестре data/all_projects_layer.json (см. commit fixing
-        # test_all_buildings_202606_map_to_registry).
+        # test_all_buildings_202606_map_to_registry). Затем 91: Останкино
+        # разбит на 5 корпус-строк (К2+К3 объединены — в классификаторе есть
+        # только их суммарная площадь), все "Сдан" — не попадают в этот
+        # список; developers не изменилось — ГК Пионер уже учитывался через
+        # другие проекты.
         rows = [row for row in self.buildings if row.get("status") == "Строится"]
         developers = {row.get("developer") or "—" for row in rows}
         self.assertEqual(len(rows), 91)
