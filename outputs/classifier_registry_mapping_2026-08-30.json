@@ -1747,8 +1747,10 @@
     "canonical_no": 210,
     "name": "STONE Towers E",
     "address": "г. Москва,ул. Нижняя Масловка, 3",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
+    "status": "exact_match",
+    "matched_project_id": "proj-285",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=283",
+    "coord_corroborated": true
   },
   {
     "unified_id": "UC-OBJ-0216",
@@ -4193,10 +4195,12 @@
   {
     "unified_id": "UC-OBJ-0328",
     "canonical_no": 560,
-    "name": "Поле",
+    "name": "Поле (Башня А)",
     "address": "Ленинградский просп., 37Б, Москва",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
+    "status": "exact_match",
+    "matched_project_id": "pole",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=280",
+    "coord_corroborated": true
   },
   {
     "unified_id": "UC-OBJ-0451",
@@ -5391,5 +5395,115 @@
     "address": "Дубининская, 17",
     "status": "new_record",
     "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-017",
+    "canonical_no": 722,
+    "name": "Бадаевский (Восточная лента)",
+    "address": "Москва, пр-кт Кутузовский, д. 12/1, корпус 12/2",
+    "status": "exact_match",
+    "matched_project_id": "badaevsky",
+    "match_basis": "canonical_building_id=badaevsky-east, 2026-09-14 renumbered from colliding UC-OBJ-0780 (source_id clashed with data/future_projects.json OBJ-0780)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-018",
+    "canonical_no": 723,
+    "name": "Бадаевский (Западная лента)",
+    "address": "Москва, пр-кт Кутузовский, д. 12/1, корпус 12/2",
+    "status": "exact_match",
+    "matched_project_id": "badaevsky",
+    "match_basis": "canonical_building_id=badaevsky-west, 2026-09-14 renumbered from colliding UC-OBJ-0781 (source_id clashed with data/future_projects.json OBJ-0781)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-019",
+    "canonical_no": 724,
+    "name": "Поле (Башня Б)",
+    "address": "Ленинградский просп., 37Б, Москва",
+    "status": "exact_match",
+    "matched_project_id": "pole",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=281; renumbered from colliding UC-OBJ-0782",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-020",
+    "canonical_no": 725,
+    "name": "Империя",
+    "address": "Пресненская наб., 6с2 (Москва-Сити)",
+    "status": "new_record",
+    "reason": "historical coworking host (cwhost-0001), no matching all_projects_layer.json row; renumbered 2026-09-14 from colliding UC-OBJ-0783"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-021",
+    "canonical_no": 726,
+    "name": "Федерация (Башня Запад)",
+    "address": "Пресненская наб., 12 (Москва-Сити)",
+    "status": "new_record",
+    "reason": "historical coworking host (cwhost-0002), no matching all_projects_layer.json row; renumbered 2026-09-14 from colliding UC-OBJ-0784"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-022",
+    "canonical_no": 727,
+    "name": "Балчуг (Рабочая Станция)",
+    "address": "Садовническая наб., 9",
+    "status": "new_record",
+    "reason": "historical coworking host (cwhost-0010), no matching all_projects_layer.json row; renumbered 2026-09-14 from colliding UC-OBJ-0785"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-023",
+    "canonical_no": 728,
+    "name": "Арма (бизнес-парк)",
+    "address": "Нижний Сусальный пер., 5",
+    "status": "new_record",
+    "reason": "historical coworking host (cwhost-0012), no matching all_projects_layer.json row; renumbered 2026-09-14 from colliding UC-OBJ-0786"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-024",
+    "canonical_no": 729,
+    "name": "Меркурий Сити Тауэр",
+    "address": "1-й Красногвардейский пр-д, 15 (Москва-Сити)",
+    "status": "new_record",
+    "reason": "historical coworking host (cwhost-0028), no matching all_projects_layer.json row; renumbered 2026-09-14 from colliding UC-OBJ-0787"
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-025",
+    "canonical_no": 730,
+    "name": "Мираполис",
+    "address": "Москва, Проспект Мира, 222",
+    "status": "exact_match",
+    "matched_project_id": "proj-281",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=284; renumbered from colliding UC-OBJ-0788",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-026",
+    "canonical_no": 731,
+    "name": "БЦ «Север»",
+    "address": "Москва, Ленинградский просп., д. 36, к. 13",
+    "status": "exact_match",
+    "matched_project_id": "proj-282",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=286; renumbered from colliding UC-OBJ-0789",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-027",
+    "canonical_no": 732,
+    "name": "БЦ «Северный Порт»",
+    "address": "Ленинградское ш., Москва, САО, Левобережный",
+    "status": "exact_match",
+    "matched_project_id": "proj-283",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=287; renumbered from colliding UC-OBJ-0790",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-028",
+    "canonical_no": 733,
+    "name": "БЦ «РЕ:ПОРТ»",
+    "address": "Ленинградское ш., 63А/3, Москва",
+    "status": "exact_match",
+    "matched_project_id": "proj-284",
+    "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=288; renumbered from colliding UC-OBJ-0791",
+    "coord_corroborated": true
   }
 ]

@@ -99,7 +99,11 @@ class AnalyticsConstructorPageTest(unittest.TestCase):
             for row in buildings
             if row.get("developer") and (rent.get(row.get("name")) or rent.get(row.get("name_orig")))
         }
-        self.assertEqual(len(all_developers), 55)
+        # 2026-09-14: было 55 — выросло на 6 после добавления в реестр
+        # зданий из commit b948753/a5d1fb5/e111839 (см. тот же счётчик в
+        # test_sale_developer_filter_regression); rent_developers не
+        # затронут (эти здания не в файле аренды).
+        self.assertEqual(len(all_developers), 61)
         self.assertEqual(len(rent_developers), 14)
         self.assertLess(rent_developers, all_developers)
 

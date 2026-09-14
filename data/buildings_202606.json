@@ -2777,7 +2777,7 @@
     "start": "",
     "weight": 0,
     "id": 281,
-    "unified_id": "UC-OBJ-0328",
+    "unified_id": "UC-OBJ-ADD-019",
     "canonical_project_id": "280",
     "subid": "02",
     "tower_label": "Башня Б"
@@ -2833,7 +2833,7 @@
     "address": "Москва, Проспект Мира, 222",
     "year": "2027",
     "id": 284,
-    "unified_id": "UC-OBJ-0788",
+    "unified_id": "UC-OBJ-ADD-025",
     "canonical_project_id": "284"
   },
   {
@@ -2887,7 +2887,7 @@
     "address": "Москва, Ленинградский просп., д. 36, к. 13",
     "year": "2027",
     "id": 286,
-    "unified_id": "UC-OBJ-0789",
+    "unified_id": "UC-OBJ-ADD-026",
     "canonical_project_id": "286"
   },
   {
@@ -2914,7 +2914,7 @@
     "address": "Ленинградское ш., Москва, САО, Левобережный",
     "year": "2026",
     "id": 287,
-    "unified_id": "UC-OBJ-0790",
+    "unified_id": "UC-OBJ-ADD-027",
     "canonical_project_id": "287"
   },
   {
@@ -2941,7 +2941,7 @@
     "address": "Ленинградское ш., 63А/3, Москва",
     "year": "2028",
     "id": 288,
-    "unified_id": "UC-OBJ-0791",
+    "unified_id": "UC-OBJ-ADD-028",
     "canonical_project_id": "288"
   }
 ]

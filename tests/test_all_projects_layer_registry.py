@@ -237,10 +237,12 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         self.assertEqual(len(classifier_records), 276)
 
     def test_canonical_project_ids_are_globally_unique(self):
-        """canonical_project_id не должен повторяться — кроме badaevsky
-        (два corpus'а с разными canonical_building_id, отдельное правило)."""
+        """canonical_project_id не должен повторяться — кроме badaevsky и
+        pole (по два corpus'а с разными canonical_building_id, отдельное
+        правило: многокорпусные проекты используют словесный id вместо
+        proj-N именно чтобы не конфликтовать с этой проверкой)."""
         ids = [r["canonical_project_id"] for r in self.records]
-        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky"}
+        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole"}
         self.assertEqual(dupes, set(), f"canonical_project_id повторяется: {sorted(dupes)}")
 
     def test_each_group_canonical_has_duplicate_of_none_and_legacy_ids(self):

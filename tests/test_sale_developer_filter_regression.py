@@ -16,11 +16,16 @@ class SaleDeveloperFilterRegressionTests(unittest.TestCase):
         cls.html = CODIFIER.read_text(encoding="utf-8")
         cls.buildings = json.loads(Q2_BUILDINGS.read_text(encoding="utf-8-sig"))
 
-    def test_q2_under_construction_baseline_is_83_buildings_and_47_developers(self):
+    def test_q2_under_construction_baseline_is_91_buildings_and_53_developers(self):
+        # 2026-09-14: было 83/47 — выросло на 8 зданий из-за коммитов b948753/
+        # a5d1fb5/e111839 (Поле x2 башни, Мираполис, БЦ Север, БЦ Северный
+        # Порт, БЦ РЕ:ПОРТ, STONE Tower E, БЦ «ПОРТА»), все получили записи
+        # в реестре data/all_projects_layer.json (см. commit fixing
+        # test_all_buildings_202606_map_to_registry).
         rows = [row for row in self.buildings if row.get("status") == "Строится"]
         developers = {row.get("developer") or "—" for row in rows}
-        self.assertEqual(len(rows), 83)
-        self.assertEqual(len(developers), 47)
+        self.assertEqual(len(rows), 91)
+        self.assertEqual(len(developers), 53)
 
     def test_developer_loader_filters_source_buildings_before_grouping(self):
         match = re.search(

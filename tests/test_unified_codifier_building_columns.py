@@ -21,7 +21,11 @@ class UnifiedCodifierBuildingColumnsTests(unittest.TestCase):
             self.assertIn(f"key:'{key}'", self.html)
 
     def test_quarter_joins_carry_the_same_building_id(self):
-        self.assertIn("row.canonical_building_id = match ? match.canonical_building_id : null", self.html)
+        # canonical_building_id не затирается на null при отсутствии живого
+        # совпадения — сохраняет уже materialized значение (см. комментарий
+        # у applyRegistryMatch в codifier.html), в отличие от полей reg_*,
+        # которые честно null без совпадения.
+        self.assertIn("row.canonical_building_id = match ? match.canonical_building_id : row.canonical_building_id", self.html)
         self.assertIn("row.reg_observed_market_channels = match ? match.observed_market_channels : null", self.html)
 
 

@@ -7560,9 +7560,15 @@
       "latitude": 55.791587,
       "longitude": 37.585592,
       "coordinates_status": "approximate",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
+      "legacy_ids": [
+        "proj-285"
+      ],
+      "quarter_offer_refs": [
+        "202606"
+      ],
+      "market_channel": [
+        "sale"
+      ],
       "layer_status": null,
       "layer_offer_status": null,
       "layer_source": null,
@@ -17992,9 +17998,15 @@
       "latitude": 55.790365,
       "longitude": 37.544367,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
+      "legacy_ids": [
+        "pole-tower-a"
+      ],
+      "quarter_offer_refs": [
+        "202606"
+      ],
+      "market_channel": [
+        "sale"
+      ],
       "layer_status": null,
       "layer_offer_status": null,
       "layer_source": null,
@@ -23002,8 +23014,8 @@
       "review_reason": "imported_from_user_xlsx_not_verified"
     },
     {
-      "unified_id": "UC-OBJ-0782",
-      "source_id": "OBJ-0782",
+      "unified_id": "UC-OBJ-ADD-019",
+      "source_id": "pole-tower-b",
       "name": "Поле (Башня Б)",
       "address": "Ленинградский просп., 37Б, Москва",
       "developer": "Dar",
@@ -23016,9 +23028,15 @@
       "latitude": 55.790365,
       "longitude": 37.544367,
       "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
+      "legacy_ids": [
+        "pole-tower-b"
+      ],
+      "quarter_offer_refs": [
+        "202606"
+      ],
+      "market_channel": [
+        "sale"
+      ],
       "layer_status": null,
       "layer_offer_status": null,
       "layer_source": null,
@@ -23042,8 +23060,8 @@
       "qa_notes": null
     },
     {
-      "unified_id": "UC-OBJ-0780",
-      "source_id": "OBJ-0780",
+      "unified_id": "UC-OBJ-ADD-017",
+      "source_id": "badaevsky-east",
       "name": "Бадаевский (Восточная лента)",
       "address": "Москва, пр-кт Кутузовский, д. 12/1, корпус 12/2",
       "developer": "Capital Group",
@@ -23082,8 +23100,8 @@
       "canonical_project_id": "282"
     },
     {
-      "unified_id": "UC-OBJ-0781",
-      "source_id": "OBJ-0781",
+      "unified_id": "UC-OBJ-ADD-018",
+      "source_id": "badaevsky-west",
       "name": "Бадаевский (Западная лента)",
       "address": "Москва, пр-кт Кутузовский, д. 12/1, корпус 12/2",
       "developer": "Capital Group",
@@ -23141,8 +23159,8 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "unified_id": "UC-OBJ-0783",
-      "source_id": "OBJ-0783",
+      "unified_id": "UC-OBJ-ADD-020",
+      "source_id": "cwhost-0001",
       "name": "Империя",
       "address": "Пресненская наб., 6с2 (Москва-Сити)",
       "developer": "—",
@@ -23182,8 +23200,8 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "unified_id": "UC-OBJ-0784",
-      "source_id": "OBJ-0784",
+      "unified_id": "UC-OBJ-ADD-021",
+      "source_id": "cwhost-0002",
       "name": "Федерация (Башня Запад)",
       "address": "Пресненская наб., 12 (Москва-Сити)",
       "developer": "—",
@@ -23224,8 +23242,8 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "unified_id": "UC-OBJ-0785",
-      "source_id": "OBJ-0785",
+      "unified_id": "UC-OBJ-ADD-022",
+      "source_id": "cwhost-0010",
       "name": "Балчуг (Рабочая Станция)",
       "address": "Садовническая наб., 9",
       "developer": "—",
@@ -23264,8 +23282,8 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "unified_id": "UC-OBJ-0786",
-      "source_id": "OBJ-0786",
+      "unified_id": "UC-OBJ-ADD-023",
+      "source_id": "cwhost-0012",
       "name": "Арма (бизнес-парк)",
       "address": "Нижний Сусальный пер., 5",
       "developer": "Большой город (ICBG)",
@@ -23305,8 +23323,8 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "unified_id": "UC-OBJ-0787",
-      "source_id": "OBJ-0787",
+      "unified_id": "UC-OBJ-ADD-024",
+      "source_id": "cwhost-0028",
       "name": "Меркурий Сити Тауэр",
       "address": "1-й Красногвардейский пр-д, 15 (Москва-Сити)",
       "developer": "—",
@@ -23344,8 +23362,8 @@
       "tower_label": "",
       "confidence": "Высокий",
       "legacy_ids": [],
-      "unified_id": "UC-OBJ-0788",
-      "source_id": "OBJ-0788",
+      "unified_id": "UC-OBJ-ADD-025",
+      "source_id": "buildings202606-284",
       "name": "Мираполис",
       "address": "Москва, Проспект Мира, 222",
       "developer": "ГК «Основа»",
@@ -23383,8 +23401,8 @@
       "tower_label": "",
       "confidence": "Высокий",
       "legacy_ids": [],
-      "unified_id": "UC-OBJ-0789",
-      "source_id": "OBJ-0789",
+      "unified_id": "UC-OBJ-ADD-026",
+      "source_id": "buildings202606-286",
       "name": "БЦ «Север»",
       "address": "Москва, Ленинградский просп., д. 36, к. 13",
       "developer": "Галс-Девелопмент",
@@ -23422,8 +23440,8 @@
       "tower_label": "",
       "confidence": "Высокий",
       "legacy_ids": [],
-      "unified_id": "UC-OBJ-0790",
-      "source_id": "OBJ-0790",
+      "unified_id": "UC-OBJ-ADD-027",
+      "source_id": "buildings202606-287",
       "name": "БЦ «Северный Порт»",
       "address": "Ленинградское ш., Москва, САО, Левобережный",
       "developer": "LEGENDA Intelligent Development",
@@ -23460,8 +23478,8 @@
       "tower_label": "",
       "confidence": "Высокий",
       "legacy_ids": [],
-      "unified_id": "UC-OBJ-0791",
-      "source_id": "OBJ-0791",
+      "unified_id": "UC-OBJ-ADD-028",
+      "source_id": "buildings202606-288",
       "name": "БЦ «РЕ:ПОРТ»",
       "address": "Ленинградское ш., 63А/3, Москва",
       "developer": "PLUS Development",
