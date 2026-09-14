@@ -68,7 +68,7 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
         # (remain_datalens и т.п.) добавляются ПОВЕРХ, а не через
         # build_all_projects_layer.py, и не должны сдвигать этот счётчик.
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 283)
+        self.assertEqual(len(classifier_records), 284)
 
     def test_external_only_records_are_additive_not_mixed_into_classifier_base(self):
         external_records = [r for r in self.records if r.get("external_only")]
@@ -240,7 +240,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         test_record_count_matches_active_raw_data про +4 от разбивки
         «Останкино» на 5 corpus-строк и +1 от iCITY на 2 башни, 2026-09-14)."""
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 283)
+        self.assertEqual(len(classifier_records), 284)
 
     def test_canonical_project_ids_are_globally_unique(self):
         """canonical_project_id не должен повторяться — кроме badaevsky,
@@ -248,7 +248,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         отдельное правило: многокорпусные проекты держат общий
         canonical_project_id и разный canonical_building_id."""
         ids = [r["canonical_project_id"] for r in self.records]
-        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129", "proj-112"}
+        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261"}
         self.assertEqual(dupes, set(), f"canonical_project_id повторяется: {sorted(dupes)}")
 
     def test_each_group_canonical_has_duplicate_of_none_and_legacy_ids(self):
