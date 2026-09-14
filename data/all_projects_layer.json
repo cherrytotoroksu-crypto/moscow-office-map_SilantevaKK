@@ -23213,11 +23213,9 @@
     "canonical_building_id": null,
     "entity_grain": "project",
     "raw_name": "STONE Tower E",
-    "canonical_name": "STONE Tower E",
+    "canonical_name": "STONE Towers E",
     "flex_site_label": null,
-    "aliases": [
-      "STONE Towers E"
-    ],
+    "aliases": [],
     "developer": "STONE",
     "address": "Москва, Белорусско-Савёловский деловой кластер, рядом с ТТК",
     "latitude": 55.791587,
