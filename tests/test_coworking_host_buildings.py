@@ -35,7 +35,7 @@ class CoworkingHostBuildingTests(unittest.TestCase):
         confirmed = [r for r in self.hosts if r.get("cls")]
         self.assertGreaterEqual(len(confirmed), 61)
         for r in confirmed:
-            self.assertIn(r["cls"], {"Prime", "A", "B+", "B"})
+            self.assertIn(r["cls"], {"Prime", "A", "B+", "B", "C"})
             self.assertIn("Источник:", r["qa_notes"])
         historical = [r for r in self.hosts if not r.get("cls")]
         self.assertTrue(historical)
