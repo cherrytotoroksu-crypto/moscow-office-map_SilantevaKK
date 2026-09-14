@@ -62,11 +62,12 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
         # 2026-09-14: +4 — «Останкино» разбит с 1 строки на 5 corpus-строк
         # (proj-274, общий project_id/разные canonical_building_id; К2+К3
         # объединены — в классификаторе есть только их суммарная площадь) = 280.
+        # Затем +1 — iCITY разбит на 2 башни (Time/Space, proj-129) = 281.
         # Считаем только classifier-производные записи: внешние источники
         # (remain_datalens и т.п.) добавляются ПОВЕРХ, а не через
         # build_all_projects_layer.py, и не должны сдвигать этот счётчик.
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 280)
+        self.assertEqual(len(classifier_records), 281)
 
     def test_external_only_records_are_additive_not_mixed_into_classifier_base(self):
         external_records = [r for r in self.records if r.get("external_only")]
@@ -233,12 +234,12 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         cls.by_id = {r["canonical_project_id"]: r for r in cls.records}
 
     def test_record_count_unchanged_nothing_deleted(self):
-        """Слияние — это разметка полей, не удаление строк: 280 classifier-
+        """Слияние — это разметка полей, не удаление строк: 281 classifier-
         производных записей (было 276 — см. AllProjectsLayerRegistryTests.
         test_record_count_matches_active_raw_data про +4 от разбивки
-        «Останкино» на 5 corpus-строк, 2026-09-14)."""
+        «Останкино» на 5 corpus-строк и +1 от iCITY на 2 башни, 2026-09-14)."""
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 280)
+        self.assertEqual(len(classifier_records), 281)
 
     def test_canonical_project_ids_are_globally_unique(self):
         """canonical_project_id не должен повторяться — кроме badaevsky,
@@ -246,7 +247,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         отдельное правило: многокорпусные проекты держат общий
         canonical_project_id и разный canonical_building_id."""
         ids = [r["canonical_project_id"] for r in self.records]
-        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274"}
+        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129"}
         self.assertEqual(dupes, set(), f"canonical_project_id повторяется: {sorted(dupes)}")
 
     def test_each_group_canonical_has_duplicate_of_none_and_legacy_ids(self):
