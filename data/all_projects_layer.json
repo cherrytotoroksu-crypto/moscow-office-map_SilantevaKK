@@ -22740,13 +22740,15 @@
     "quarter_offer_refs": [],
     "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "Historical coworking host restored 2026-08-22; source: data/coworking_202506.json id=64, exact bc='Авиаконструктора Микояна'. Identity is based on exact bc, not nearest coordinates. Class/areas/dates remain missing until two-source verification. entity_role=host_building assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. 2026-09-14: подтверждено вторым независимым источником. Источник: БЦ «Обсидиан» (Businessclub Khodynka), ул. Авиаконструктора Микояна, 1 (kf.expert).",
+    "qa_notes": "Historical coworking host restored 2026-08-22; source: data/coworking_202506.json id=64, exact bc='Авиаконструктора Микояна'. Identity is based on exact bc, not nearest coordinates. Class/areas/dates remain missing until two-source verification. entity_role=host_building assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. 2026-09-14: подтверждено вторым независимым источником. Источник: БЦ «Обсидиан» (Businessclub Khodynka), ул. Авиаконструктора Микояна, 1 (kf.expert). 2026-09-15: подтверждено сопоставлением исходных data/coworking_*.json по кварталам — запись 'Ходынка' (id=12/26 в 202410/202412, координаты 55.784865/37.53164) встречается ТОЛЬКО до 202412, запись 'Авиаконструктора Микояна' (id=66/64/66/66 в 202503-202512, координаты 55.791268/37.534397) встречается ТОЛЬКО начиная с 202503 — без пересечения кварталов. Это один и тот же коворкинг, переименованный/перегеокодированный на стыке 202412->202503, не два разных здания (несмотря на разницу координат ~0.7км — вероятно, ранняя точка была неточной). Объединено по схеме AUDIT-008 (linked, not collapsed): эта запись — primary, cwhost-hist-682333d260 сохранена отдельно с duplicate_of.",
     "public_visibility": "public",
     "first_seen_at": "02503.",
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [
+      "cwhost-hist-682333d260"
+    ]
   },
   {
     "canonical_project_id": "cwhost-hist-1dbea5db6a",
@@ -24014,12 +24016,12 @@
     "quarter_offer_refs": [],
     "quarter_offer_exists": false,
     "qa_status": "missing_required",
-    "qa_notes": "Historical coworking host restored 2026-08-22; source: data/coworking_202412.json id=26, exact bc='Ходынка'. Identity is based on exact bc, not nearest coordinates. Class/areas/dates remain missing until two-source verification. entity_role=host_building assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. 2026-09-14: перепроверил вебом (второй независимый источник), адрес «ул. Авиаконструктора Микояна» без номера дома — на этой улице ~29 разных БЦ; название «Ходынка», вероятно, топоним района, а не конкретное здание. ВАЖНО: очень вероятно, это та же безадресная площадка, что и cwhost-hist-c087a56535 «Авиаконструктора Микояна» под другим именем — не объединяю самостоятельно (нужна проверка исходных coworking_*.json на совпадение id/дат), но фиксирую подозрение на дубль для решения пользователем. Оставляю under_review честно, не выдумываю.",
+    "qa_notes": "Historical coworking host restored 2026-08-22; source: data/coworking_202412.json id=26, exact bc='Ходынка'. Identity is based on exact bc, not nearest coordinates. Class/areas/dates remain missing until two-source verification. entity_role=host_building assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. 2026-09-14: перепроверил вебом (второй независимый источник), адрес «ул. Авиаконструктора Микояна» без номера дома — на этой улице ~29 разных БЦ; название «Ходынка», вероятно, топоним района, а не конкретное здание. ВАЖНО: очень вероятно, это та же безадресная площадка, что и cwhost-hist-c087a56535 «Авиаконструктора Микояна» под другим именем — не объединяю самостоятельно (нужна проверка исходных coworking_*.json на совпадение id/дат), но фиксирую подозрение на дубль для решения пользователем. Оставляю under_review честно, не выдумываю. 2026-09-15: определено как исторический дубль cwhost-hist-c087a56535 «Авиаконструктора Микояна» — тот же коворкинг, до переименования/перегеокодирования на стыке кварталов 202412->202503 (см. qa_notes primary-записи). Запись сохранена (не удалена), помечена duplicate_of по схеме AUDIT-008.",
     "public_visibility": "public",
     "first_seen_at": "02410.",
     "last_verified_at": "2026-08-22",
     "source_count": 1,
-    "duplicate_of": null,
+    "duplicate_of": "cwhost-hist-c087a56535",
     "legacy_ids": []
   },
   {

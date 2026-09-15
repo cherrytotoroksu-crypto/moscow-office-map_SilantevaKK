@@ -273,11 +273,16 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
 
     def test_no_duplicate_of_points_to_another_duplicate_of_row(self):
         """duplicate_of должен указывать на каноническую (не-легаси) запись,
-        а не на другую legacy-строку — цепочек дублей быть не должно."""
-        canonical_ids = {cid for cid, _ in self.GROUPS}
+        а не на другую legacy-строку — цепочек дублей быть не должно.
+        Не ограничено GROUPS (тот список — только classifier.html дубли из
+        конкретного аудита AUDIT-случая); любой другой источник дублей
+        (например cwhost-hist-* коворкинг-хосты) тоже должен указывать на
+        реально каноническую строку — т.е. на запись, у которой самой
+        duplicate_of is None."""
+        non_duplicate_ids = {r["canonical_project_id"] for r in self.records if not r["duplicate_of"]}
         for r in self.records:
             if r["duplicate_of"]:
-                self.assertIn(r["duplicate_of"], canonical_ids, r["canonical_project_id"])
+                self.assertIn(r["duplicate_of"], non_duplicate_ids, r["canonical_project_id"])
 
     def test_four_remaining_uncertain_groups_left_unmerged(self):
         """Координаты внутри этих групп расходятся на 110-160м или требуют
