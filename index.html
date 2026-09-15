@@ -742,6 +742,7 @@
       </label>
       <label id="dynDivWrap">Деление:
         <select id="dynDivision">
+          <option value="mo">Адм. районы Москвы</option>
           <option value="zones">Зоны (кольца)</option>
           <option value="ao">Автономные округа</option>
           <option value="submarkets">Субрынки</option>
@@ -785,6 +786,7 @@
       <label>Стало: <select id="cmpTo"></select></label>
       <label>Уровень:
         <select id="cmpLevel">
+          <option value="mo">Адм. районы Москвы</option>
           <option value="zones">Зоны (кольца)</option>
           <option value="ao">Автономные округа</option>
           <option value="submarkets">Субрынки</option>
@@ -1560,7 +1562,7 @@ async function precomputeHistoryMode(mode) {
         ? coworkingData
         : (q.coworking ? fetchJSON(q.coworking, []) : Promise.resolve([]))));
     }
-    const divisionLayers = Object.keys(LAYER_CFG).filter(k => k !== 'mo');
+    const divisionLayers = Object.keys(LAYER_CFG);
     for (let i = 0; i < qs.length; i++) {
       const q = qs[i], blds = allBuildings[q.id] || [];
       const target = historyMode === 'rent' ? allRentStats
