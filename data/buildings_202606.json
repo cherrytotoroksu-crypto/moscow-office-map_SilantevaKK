@@ -2486,8 +2486,8 @@
     "tower_label": ""
   },
   {
-    "name": "Set (корпус 20 эт.)",
-    "name_orig": "Set (корпус 20 эт.)",
+    "name": "Set (К1)",
+    "name_orig": "Set (К1)",
     "lat": 55.709033,
     "lng": 37.436086,
     "volume": 35399.1,
@@ -2503,18 +2503,18 @@
     "biz": "-",
     "developer": "MR Group",
     "address": "г. Москва, ул. Верейская, д. 29/32Б",
-    "year": "2028",
+    "year": "2029",
     "start": "",
     "weight": 0,
     "id": 261,
     "unified_id": "UC-OBJ-0211",
     "canonical_project_id": "261",
     "subid": "01",
-    "tower_label": "корпус 20 эт."
+    "tower_label": "К1"
   },
   {
-    "name": "Set (корпус 38 эт.)",
-    "name_orig": "Set (корпус 38 эт.)",
+    "name": "Set (К2)",
+    "name_orig": "Set (К2)",
     "lat": 55.709033,
     "lng": 37.436086,
     "volume": 35399.1,
@@ -2530,14 +2530,14 @@
     "biz": "-",
     "developer": "MR Group",
     "address": "г. Москва, ул. Верейская, д. 29/32Б",
-    "year": "2028",
+    "year": "2029",
     "start": "",
     "weight": 0,
     "id": 297,
     "unified_id": "UC-OBJ-0211",
     "canonical_project_id": "261",
     "subid": "02",
-    "tower_label": "корпус 38 эт."
+    "tower_label": "К2"
   },
   {
     "name": "Emotion",
