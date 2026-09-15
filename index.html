@@ -664,6 +664,7 @@
   <label class="check-row"><input type="checkbox" id="ovDraw"> Режим рисования</label>
   <button class="upload-btn" id="exportGeo" style="margin-top:5px; display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгрузить GeoJSON</button>
   <button class="upload-btn" id="exportXlsx" style="margin-top:4px; background:#C9525E; display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгрузить Excel</button>
+  <button class="upload-btn" id="openDrawnDynamics" style="margin-top:4px; background:var(--nf-navy); display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>Сравнить область по кварталам</button>
   <a class="upload-btn" href="classifier.html" target="_blank" rel="noopener" style="margin-top:4px; background:var(--nf-navy); display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="1.5" stroke="#ffffff" stroke-width="2"/><line x1="3" y1="9" x2="21" y2="9" stroke="#ffffff" stroke-width="2"/><line x1="9" y1="9" x2="9" y2="20" stroke="#ffffff" stroke-width="2"/></svg>Классификатор зданий</a>
   <a class="upload-btn" href="codifier.html" target="_blank" rel="noopener" style="margin-top:4px; background:#2E4066; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="7" height="16" rx="1" stroke="#ffffff" stroke-width="2"/><rect x="14" y="4" width="7" height="7" rx="1" stroke="#ffffff" stroke-width="2"/><rect x="14" y="14" width="7" height="6" rx="1" stroke="#ffffff" stroke-width="2"/></svg>Онлайн-таблицы</a>
   <a class="upload-btn" href="analytics.html" target="_blank" rel="noopener" style="margin-top:4px; background:var(--nf-red); display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>Конструктор аналитики</a>
@@ -738,6 +739,7 @@
         <select id="dynLevel">
           <option value="division">По делениям</option>
           <option value="building">По зданиям</option>
+          <option value="drawn">По нарисованной области</option>
         </select>
       </label>
       <label id="dynDivWrap">Деление:
@@ -1410,6 +1412,70 @@ function computeCoworkingStats(layerKey, geojson, cwList) {
     };
   }
   return out;
+}
+// Статистика (продажа/аренда) по НЕИМЕНОВАННОМУ набору полигонов (обводилка на
+// карте) — та же логика сложения, что в computeStats, но без разбивки по
+// названиям слоя: один агрегат на весь набор нарисованных полигонов.
+function computeDrawnSaleStats(blds, polys, useRent, rentSource) {
+  if (!polys.length) return null;
+  const rentLots = rentSource || rentLotsData;
+  const s = { sumPriceArea: 0, sumArea: 0, sumPrice: 0, count: 0, validCount: 0, lots: 0 };
+  for (const b of blds) {
+    if (!isFinite(b.lat) || !isFinite(b.lng)) continue;
+    if (!polys.some(p => pointInFeature(b.lng, b.lat, p))) continue;
+    let area, price, lots;
+    if (useRent) {
+      const rLots = rentLots[b.name] || rentLots[b.name_orig] || [];
+      if (!rLots.length) continue;
+      area = rLots.reduce((sum,l)=>sum+(l.area||0), 0);
+      const wRates = rLots.filter(l=>l.rate);
+      price = wRates.length ? wRates.reduce((sum,l)=>sum+l.rate*l.area,0)/wRates.reduce((sum,l)=>sum+l.area,0) : NaN;
+      lots = rLots.length;
+    } else {
+      area = b.volume; price = b.price; lots = b.lots || 0;
+    }
+    if (isFinite(area) && isFinite(price) && area > 0) {
+      s.sumPriceArea += price * area;
+      s.sumArea += area;
+      s.sumPrice += price;
+      s.validCount += 1;
+    }
+    s.count += 1;
+    s.lots += (lots || 0);
+  }
+  if (s.count === 0) return null;
+  return {
+    wavg:   s.sumArea > 0    ? s.sumPriceArea / s.sumArea : null,
+    avg:    s.validCount > 0 ? s.sumPrice / s.validCount : null,
+    volume: s.sumArea,
+    count:  s.count,
+    lots:   s.lots,
+  };
+}
+// То же для коворкингов — набор площадок внутри нарисованных полигонов.
+function computeDrawnCoworkingStats(cwList, polys) {
+  if (!polys.length) return null;
+  const r = { sumRateSeats: 0, sumSeats: 0, sumRate: 0, validRate: 0, count: 0, vacancy: 0, seats: 0 };
+  for (const c of cwList) {
+    if (!isFinite(c.lat) || !isFinite(c.lng)) continue;
+    if (!polys.some(p => pointInFeature(c.lng, c.lat, p))) continue;
+    r.count += 1;
+    r.vacancy += (c.vacancy || 0);
+    r.seats += (c.seats || 0);
+    if (c.rate != null && isFinite(c.rate)) {
+      r.sumRate += c.rate;
+      r.validRate += 1;
+      if (c.seats) { r.sumRateSeats += c.rate * c.seats; r.sumSeats += c.seats; }
+    }
+  }
+  if (r.count === 0) return null;
+  return {
+    wavgRate: r.sumSeats > 0 ? r.sumRateSeats / r.sumSeats : null,
+    avgRate:  r.validRate > 0 ? r.sumRate / r.validRate : null,
+    seats:    r.seats,
+    vacancy:  r.vacancy,
+    count:    r.count,
+  };
 }
 let computedCoworking = {};
 async function ensureCoworkingLayerComputed(key) {
@@ -4246,6 +4312,20 @@ async function renderDynamics() {
         data: qs.map(q=>{ const v=divVal(q.id,layer,n,metric,statsSource); return v==null?null:Math.round(v); }),
         borderColor: CHART_COLORS[i%CHART_COLORS.length], backgroundColor:'transparent', tension:0.2, spanGaps:false });
     });
+  } else if (level === 'drawn') {
+    const polys = [];
+    drawnItems.eachLayer(l => polys.push(l.toGeoJSON()));
+    if (polys.length) {
+      const values = qs.map(q => {
+        const stat = coworkingMode
+          ? computeDrawnCoworkingStats(allCoworking[q.id] || [], polys)
+          : computeDrawnSaleStats(allBuildings[q.id] || [], polys, rentMode, rentMode ? allRentLots[q.id] : null);
+        return stat ? stat[metric] : null;
+      });
+      datasets.push({ label: 'Нарисованная область',
+        data: values.map(v => v==null?null:Math.round(v)),
+        borderColor: CHART_COLORS[0], backgroundColor:'rgba(166,9,61,0.08)', tension:0.2, spanGaps:false, fill:true });
+    }
   } else {
     const id = document.getElementById('dynBuilding').value;
     const name = (buildById[id] && Object.values(buildById[id])[0]?.name) || 'Здание';
@@ -4279,6 +4359,10 @@ async function renderDynamics() {
   empty.style.display = hasData ? 'none' : 'flex';
   empty.textContent = level === 'building'
     ? 'Для выбранного здания и показателя данных нет. Выберите другое здание, режим или показатель.'
+    : level === 'drawn'
+    ? (drawnItems.getLayers().length
+        ? 'Для нарисованной области и показателя данных нет. Попробуйте другой показатель или расширьте область.'
+        : 'Сначала обведите область на карте: включите «Режим рисования» в панели слева, нарисуйте полигон и вернитесь в это окно.')
     : 'Для выбранного деления и показателя данных нет. Выберите другое деление, режим или показатель.';
   download.disabled = !hasData;
   download.title = hasData ? 'Выгрузить данные графика в Excel' : 'Выгрузка недоступна: на графике нет данных';
@@ -4304,6 +4388,34 @@ async function renderDynamics() {
   });
 }
 document.getElementById('openDynamics').addEventListener('click', openDynamics);
+document.getElementById('openDrawnDynamics').addEventListener('click', async function() {
+  if (!drawnItems.getLayers().length) {
+    alert('Сначала обведи хотя бы один полигон: включи «Режим рисования» выше и нарисуй область на карте.');
+    return;
+  }
+  const bg = document.getElementById('dynModalBg');
+  const dialog = bg.querySelector('[role="dialog"]');
+  const empty = document.getElementById('dynEmpty');
+  bg.classList.add('open');
+  dialog.setAttribute('aria-busy', 'true');
+  document.getElementById('dynChart').style.display = 'none';
+  document.getElementById('dynDownload').disabled = true;
+  empty.style.display = 'flex';
+  empty.textContent = 'Загрузка и расчёт данных по кварталам…';
+  try {
+    await precomputeAll();
+    document.getElementById('dynLevel').value = 'drawn';
+    document.getElementById('dynRentNote').style.display = 'none';
+    syncDynModeButtons();
+    await renderDynamics();
+  } catch (error) {
+    console.error('Не удалось посчитать динамику по нарисованной области', error);
+    empty.style.display = 'flex';
+    empty.textContent = 'Не удалось загрузить динамику. Проверьте подключение и повторно откройте окно.';
+  } finally {
+    dialog.setAttribute('aria-busy', 'false');
+  }
+});
 document.getElementById('dynClose').addEventListener('click', ()=>document.getElementById('dynModalBg').classList.remove('open'));
 document.getElementById('dynModalBg').addEventListener('click', e=>{ if(e.target.id==='dynModalBg') e.currentTarget.classList.remove('open'); });
 ['dynLevel','dynDivision','dynBuilding','dynMetric'].forEach(id=>
