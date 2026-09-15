@@ -2,10 +2,10 @@
   "source_file": "Будущие_проекты_очищено_с_памятью.xlsx",
   "source_sheet": "Все объекты (чистый)",
   "generated_by": "scripts/export_future_projects.py",
-  "total": 712,
-  "with_coords": 687,
+  "total": 710,
+  "with_coords": 685,
   "without_coords": 25,
-  "duplicate_count": 66,
+  "duplicate_count": 68,
   "projects": [
     {
       "id": "OBJ-0001",
@@ -5780,35 +5780,6 @@
       "verified_at": "2026-08-06"
     },
     {
-      "id": "OBJ-0263",
-      "name": "БЦ на Курской",
-      "address": "ул. Верхняя Сыромятническая, 7",
-      "developer": null,
-      "gba": 81000.0,
-      "gla": 65577.6,
-      "cls": null,
-      "commission_quarter": null,
-      "commission_year": null,
-      "status": "Проектный",
-      "lat": 55.754689,
-      "lng": 37.661266,
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода; Сверить конфликты",
-      "confidence": "Низкий",
-      "sources": [
-        "https://www.cian.ru/ofisno-proizvodstvennyy-kompleks-na-ulverhnyaya-syromyatnicheskaya7s2-moskva-68180/",
-        "https://www.arendator.ru/news/188947-v_basmannom_rajone_poyavitsya_obcshestvenno-delovoj_centr_plocshadyu_51_tys_kv_m/",
-        "https://www.arendator.ru/news/188877-v_basmannom_rajone_postroyat_obcshestvenno-delovoj_centr_plocshadyu_51_tys_kv_m/",
-        "https://t.me/officesmokingroom/302"
-      ],
-      "conflicts": "total: 2 знач.; gla: 2 знач.",
-      "merged_rows": 3,
-      "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
-      "geometry_quality": null,
-      "needs_review": true,
-      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Верхняя Сыромятническая, 7\"): ОТКЛОНЕНО — 'Верхняя Сыромятническая улица, 7с1': улица не совпадает ('верхняя сыромятническая улица' != 'улица верхняя сыромятническая'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
-      "verified_at": "2026-08-06"
-    },
-    {
       "id": "OBJ-0264",
       "name": "БЦ на Текстильщиков",
       "address": "г. Москва, 8-я Текстильщиков ул.,",
@@ -10886,32 +10857,6 @@
       "geometry_quality": null,
       "needs_review": true,
       "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, вл. 6В.\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
-      "verified_at": "2026-08-06"
-    },
-    {
-      "id": "OBJ-0505",
-      "name": "Верхняя Сыромятническая ул., вл.7, стр.1",
-      "address": "Верхняя Сыромятническая ул., вл.7, стр.1",
-      "developer": "Технопарк Курский Плаза",
-      "gba": 17500.0,
-      "gla": 17500.0,
-      "cls": null,
-      "commission_quarter": null,
-      "commission_year": null,
-      "status": "Анонсированный",
-      "lat": 55.754689,
-      "lng": 37.661266,
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-      "confidence": "Низкий",
-      "sources": [
-        "https://t.me/stroi_news/1060"
-      ],
-      "conflicts": null,
-      "merged_rows": 1,
-      "source_sheets": "Анонсы",
-      "geometry_quality": null,
-      "needs_review": true,
-      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Верхняя Сыромятническая ул., вл.7, стр.1\"): ОТКЛОНЕНО — 'Верхняя Сыромятническая улица, 7с1': улица не совпадает ('верхняя сыромятническая улица' != 'верхняя сыромятническая улица владение 7'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json",
       "verified_at": "2026-08-06"
     },
     {
@@ -16501,7 +16446,7 @@
       "source_sheets": "Будущие_проекты_final.xlsx / ОСНОВНАЯ",
       "geometry_quality": null,
       "needs_review": true,
-      "review_notes": "Импортировано из пользовательского xlsx, не сверено ни с одним внутренним источником — координаты и площади не перепроверялись."
+      "review_notes": "Импортировано из пользовательского xlsx, не сверено ни с одним внутренним источником — координаты и площади не перепроверялись. 2026-09-15: консолидированы 2 дубля того же КРТ-проекта — OBJ-0263 «БЦ на Курской» (GBA=81000, геокодирование отклонено) и OBJ-0505 «Верхняя Сыромятническая ул., вл.7, стр.1» (GBA=17500, геокодирование отклонено) — перенесены в duplicates с duplicate_of=OBJ-0785."
     },
     {
       "id": "OBJ-0786",
@@ -18897,6 +18842,63 @@
       "duplicate_of": "OBJ-0166",
       "matched_existing_name": "БЦ WEST PIER",
       "verified_at": "2026-08-06"
+    },
+    {
+      "id": "OBJ-0263",
+      "name": "БЦ на Курской",
+      "address": "ул. Верхняя Сыромятническая, 7",
+      "developer": null,
+      "gba": 81000.0,
+      "gla": 65577.6,
+      "cls": null,
+      "commission_quarter": null,
+      "commission_year": null,
+      "status": "Проектный",
+      "lat": 55.754689,
+      "lng": 37.661266,
+      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода; Сверить конфликты",
+      "confidence": "Низкий",
+      "sources": [
+        "https://www.cian.ru/ofisno-proizvodstvennyy-kompleks-na-ulverhnyaya-syromyatnicheskaya7s2-moskva-68180/",
+        "https://www.arendator.ru/news/188947-v_basmannom_rajone_poyavitsya_obcshestvenno-delovoj_centr_plocshadyu_51_tys_kv_m/",
+        "https://www.arendator.ru/news/188877-v_basmannom_rajone_postroyat_obcshestvenno-delovoj_centr_plocshadyu_51_tys_kv_m/",
+        "https://t.me/officesmokingroom/302"
+      ],
+      "conflicts": "total: 2 знач.; gla: 2 знач.",
+      "merged_rows": 3,
+      "source_sheets": "будущие (old); ОСНОВНАЯ; перспективные",
+      "geometry_quality": null,
+      "needs_review": true,
+      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, ул. Верхняя Сыромятническая, 7\"): ОТКЛОНЕНО — 'Верхняя Сыромятническая улица, 7с1': улица не совпадает ('верхняя сыромятническая улица' != 'улица верхняя сыромятническая'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-15: определено как дубль OBJ-0785 «МФК на Верхней Сыромятнической» — тот же КРТ-проект у Курского вокзала (СЗ «КРТ Курская», застройщик ПИК-Инвестпроект), подтверждённая официальная площадь 51040 кв.м (aif.ru, news.rambler.ua). Эта запись и OBJ-0785 обе ссылались на один реальный проект с разными неподтверждёнными GBA из разных листов исходного xlsx; ни одно GBA здесь не подтверждено отдельно.",
+      "verified_at": "2026-08-06",
+      "duplicate_of": "OBJ-0785"
+    },
+    {
+      "id": "OBJ-0505",
+      "name": "Верхняя Сыромятническая ул., вл.7, стр.1",
+      "address": "Верхняя Сыромятническая ул., вл.7, стр.1",
+      "developer": "Технопарк Курский Плаза",
+      "gba": 17500.0,
+      "gla": 17500.0,
+      "cls": null,
+      "commission_quarter": null,
+      "commission_year": null,
+      "status": "Анонсированный",
+      "lat": 55.754689,
+      "lng": 37.661266,
+      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
+      "confidence": "Низкий",
+      "sources": [
+        "https://t.me/stroi_news/1060"
+      ],
+      "conflicts": null,
+      "merged_rows": 1,
+      "source_sheets": "Анонсы",
+      "geometry_quality": null,
+      "needs_review": true,
+      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Верхняя Сыромятническая ул., вл.7, стр.1\"): ОТКЛОНЕНО — 'Верхняя Сыромятническая улица, 7с1': улица не совпадает ('верхняя сыромятническая улица' != 'верхняя сыромятническая улица владение 7'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-15: определено как дубль OBJ-0785 «МФК на Верхней Сыромятнической» — тот же КРТ-проект у Курского вокзала (СЗ «КРТ Курская», застройщик ПИК-Инвестпроект), подтверждённая официальная площадь 51040 кв.м (aif.ru, news.rambler.ua). Эта запись и OBJ-0785 обе ссылались на один реальный проект с разными неподтверждёнными GBA из разных листов исходного xlsx; ни одно GBA здесь не подтверждено отдельно.",
+      "verified_at": "2026-08-06",
+      "duplicate_of": "OBJ-0785"
     }
   ]
 }
