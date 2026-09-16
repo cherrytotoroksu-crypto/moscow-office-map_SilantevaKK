@@ -2,10 +2,10 @@
   "source_file": "Будущие_проекты_очищено_с_памятью.xlsx",
   "source_sheet": "Все объекты (чистый)",
   "generated_by": "scripts/export_future_projects.py",
-  "total": 708,
-  "with_coords": 683,
+  "total": 706,
+  "with_coords": 681,
   "without_coords": 25,
-  "duplicate_count": 70,
+  "duplicate_count": 72,
   "projects": [
     {
       "id": "OBJ-0001",
@@ -11599,33 +11599,7 @@
       "source_sheets": "Анонсы",
       "geometry_quality": null,
       "needs_review": true,
-      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, 6В\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Record has almost no data (no developer, no GBA) and its only source is a private/closed Telegram channel post (t.me/c/...) which is not independently verifiable via web search. LIKELY DUPLICATE of OBJ-0504 ('проспект Вернадского', address 'Вернадского, вл. 6В.') — same address, both missing all key fields. Recommend merging OBJ-0503 and OBJ-0504.",
-      "verified_at": "2026-08-06"
-    },
-    {
-      "id": "OBJ-0504",
-      "name": "проспект Вернадского",
-      "address": "Вернадского, вл. 6В.",
-      "developer": null,
-      "gba": null,
-      "gla": null,
-      "cls": null,
-      "commission_quarter": null,
-      "commission_year": null,
-      "status": "Анонсированный",
-      "lat": 55.691932,
-      "lng": 37.532205,
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, общая площадь, GLA, год ввода",
-      "confidence": "Низкий",
-      "sources": [
-        "https://stroi.mos.ru/news/tri-ofisnykh-tsientra-postroiat-v-novoi-moskvie-i-na-zapadie-stolitsy"
-      ],
-      "conflicts": null,
-      "merged_rows": 1,
-      "source_sheets": "Анонсы",
-      "geometry_quality": null,
-      "needs_review": true,
-      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, вл. 6В.\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Source (stroi.mos.ru: 'three office centers to be built in New Moscow and west of the city') suggests this is one of three planned office centers; needs fresh search to identify developer and GBA. LIKELY DUPLICATE of OBJ-0503 (identical address 'Вернадского, вл. 6В' / 'Вернадского, 6В') — recommend merging these two records into one.",
+      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, 6В\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Record has almost no data (no developer, no GBA) and its only source is a private/closed Telegram channel post (t.me/c/...) which is not independently verifiable via web search. LIKELY DUPLICATE of OBJ-0504 ('проспект Вернадского', address 'Вернадского, вл. 6В.') — same address, both missing all key fields. Recommend merging OBJ-0503 and OBJ-0504. 2026-09-17: OBJ-0504 определён как дубль этой записи (тот же адрес/участок).",
       "verified_at": "2026-08-06"
     },
     {
@@ -12824,33 +12798,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12. Два башни 18 и 17 этажей, общая площадь >43800 кв.м (офисы 37300 + ритейл 6200), ввод к концу 2028. Совпадает по площади с БД (43500) и с записью OBJ-0557 (тот же объект, вероятно дубликат в разных источниках). Девелопер «ТЭН» в открытых источниках напрямую не подтверждён этим поиском. Год ввода из источника (не проставлен в запись автоматически): 2028. Расхождение статуса: в записи 'Анонсированный', источник даёт 'Строящийся/Анонсированный'.",
-      "needs_review": true
-    },
-    {
-      "id": "OBJ-0557",
-      "name": "шоссе Энтузиастов, вл. 12",
-      "address": "шоссе Энтузиастов, вл. 12",
-      "developer": null,
-      "gba": 43500.0,
-      "gla": 37300.0,
-      "cls": null,
-      "commission_quarter": null,
-      "commission_year": null,
-      "status": "Анонсированный",
-      "lat": 55.747368,
-      "lng": 37.707107,
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода",
-      "confidence": "Низкий",
-      "sources": [
-        "https://t.me/stroi_news/2110",
-        "https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12"
-      ],
-      "conflicts": null,
-      "merged_rows": 1,
-      "source_sheets": "Анонсы",
-      "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12. ВЕРОЯТНЫЙ ДУБЛИКАТ OBJ-0556: тот же адрес (шоссе/ш. Энтузиастов, вл.12) и та же GBA (43500 vs 43800 в БД), различаются только названием и написанием адреса ('з/у' vs 'шоссе'). Рекомендуется объединить записи. Год ввода из источника (не проставлен в запись автоматически): 2028. Расхождение статуса: в записи 'Анонсированный', источник даёт 'Строящийся/Анонсированный'.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12. Два башни 18 и 17 этажей, общая площадь >43800 кв.м (офисы 37300 + ритейл 6200), ввод к концу 2028. Совпадает по площади с БД (43500) и с записью OBJ-0557 (тот же объект, вероятно дубликат в разных источниках). Девелопер «ТЭН» в открытых источниках напрямую не подтверждён этим поиском. Год ввода из источника (не проставлен в запись автоматически): 2028. Расхождение статуса: в записи 'Анонсированный', источник даёт 'Строящийся/Анонсированный'. 2026-09-17: OBJ-0557 определён как дубль этой записи (тот же адрес/участок).",
       "needs_review": true
     },
     {
@@ -20012,6 +19960,60 @@
       "duplicate_of": "OBJ-0638",
       "needs_review": true,
       "review_notes": " 2026-09: определено как дубль OBJ-0638 при веб-верификации — тот же адрес/проект под другим названием/номером."
+    },
+    {
+      "id": "OBJ-0557",
+      "name": "шоссе Энтузиастов, вл. 12",
+      "address": "шоссе Энтузиастов, вл. 12",
+      "developer": null,
+      "gba": 43500.0,
+      "gla": 37300.0,
+      "cls": null,
+      "commission_quarter": null,
+      "commission_year": null,
+      "status": "Анонсированный",
+      "lat": 55.747368,
+      "lng": 37.707107,
+      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода",
+      "confidence": "Низкий",
+      "sources": [
+        "https://t.me/stroi_news/2110",
+        "https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12"
+      ],
+      "conflicts": null,
+      "merged_rows": 1,
+      "source_sheets": "Анонсы",
+      "geometry_quality": null,
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12. ВЕРОЯТНЫЙ ДУБЛИКАТ OBJ-0556: тот же адрес (шоссе/ш. Энтузиастов, вл.12) и та же GBA (43500 vs 43800 в БД), различаются только названием и написанием адреса ('з/у' vs 'шоссе'). Рекомендуется объединить записи. Год ввода из источника (не проставлен в запись автоматически): 2028. Расхождение статуса: в записи 'Анонсированный', источник даёт 'Строящийся/Анонсированный'. 2026-09-17: определено как дубль OBJ-0556 — тот же адрес/участок, совпадающие (или отсутствующие с обеих сторон) GBA/застройщик.",
+      "needs_review": true,
+      "duplicate_of": "OBJ-0556"
+    },
+    {
+      "id": "OBJ-0504",
+      "name": "проспект Вернадского",
+      "address": "Вернадского, вл. 6В.",
+      "developer": null,
+      "gba": null,
+      "gla": null,
+      "cls": null,
+      "commission_quarter": null,
+      "commission_year": null,
+      "status": "Анонсированный",
+      "lat": 55.691932,
+      "lng": 37.532205,
+      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, общая площадь, GLA, год ввода",
+      "confidence": "Низкий",
+      "sources": [
+        "https://stroi.mos.ru/news/tri-ofisnykh-tsientra-postroiat-v-novoi-moskvie-i-na-zapadie-stolitsy"
+      ],
+      "conflicts": null,
+      "merged_rows": 1,
+      "source_sheets": "Анонсы",
+      "geometry_quality": null,
+      "needs_review": true,
+      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, вл. 6В.\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Source (stroi.mos.ru: 'three office centers to be built in New Moscow and west of the city') suggests this is one of three planned office centers; needs fresh search to identify developer and GBA. LIKELY DUPLICATE of OBJ-0503 (identical address 'Вернадского, вл. 6В' / 'Вернадского, 6В') — recommend merging these two records into one. 2026-09-17: определено как дубль OBJ-0503 — тот же адрес/участок, совпадающие (или отсутствующие с обеих сторон) GBA/застройщик.",
+      "verified_at": "2026-08-06",
+      "duplicate_of": "OBJ-0503"
     }
   ]
 }
