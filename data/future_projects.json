@@ -9727,7 +9727,7 @@
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Could not confirm 'Сити-2 лот 5' project by developer 'Центр Инвест' specifically. Confirmed that Moscow city put a ~1 ha plot in 'Сити-2' (adjacent to Moskva-City on Antonova-Ovseenko street) up for auction for 12 billion rubles, and Capital Group is developing Lot 1 (188,386 sqm, mostly residential). No source ties 'Центр Инвест' or Lot 5 to this address; possible naming/lot-number discrepancy or unannounced/recently awarded lot.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Could not confirm 'Сити-2 лот 5' project by developer 'Центр Инвест' specifically. Confirmed that Moscow city put a ~1 ha plot in 'Сити-2' (adjacent to Moskva-City on Antonova-Ovseenko street) up for auction for 12 billion rubles, and Capital Group is developing Lot 1 (188,386 sqm, mostly residential). No source ties 'Центр Инвест' or Lot 5 to this address; possible naming/lot-number discrepancy or unannounced/recently awarded lot. 2026-09-17: повторная точечная проверка (порция not-found). Улица Антонова-Овсеенко насыщена БЦ (д.15 с1/с2/с3), но объекта на вл.13 от 'Центр Инвест' в открытых источниках не найдено даже с альтернативными формулировками (адрес, застройщик+район, 'Сити-2 лот 5'). Возможна опечатка в номере владения или проект ещё не анонсирован публично.",
       "needs_review": true
     },
     {
@@ -9874,7 +9874,7 @@
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Could not confirm a Нацпроектстрой project specifically at 2-я Магистральная, 18. Search found Нацпроектстрой's known Moscow office is at a different address (БЦ Orbital, 3-я Магистральная ул., 10а), and 2-я Магистральная, 18 hosts an existing class B+ business center unrelated to Нацпроектстрой in search results. Possible mix-up between an existing office tenant location and a genuinely new project; unresolved.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Could not confirm a Нацпроектстрой project specifically at 2-я Магистральная, 18. Search found Нацпроектстрой's known Moscow office is at a different address (БЦ Orbital, 3-я Магистральная ул., 10а), and 2-я Магистральная, 18 hosts an existing class B+ business center unrelated to Нацпроектстрой in search results. Possible mix-up between an existing office tenant location and a genuinely new project; unresolved. 2026-09-17: повторная точечная проверка (порция not-found). На 2-й Магистральной, 18 есть действующий БЦ 'БорисХоф Центр' (класс B+, 2-я Магистральная 18 ст22), но связи с 'Нацпроектстрой' не найдено. Офис самого Нацпроектстроя находится на 3-й Магистральной, 10А — другой адрес. Возможна путаница улиц (2-я vs 3-я Магистральная) в исходной базе.",
       "needs_review": true
     },
     {
@@ -9920,13 +9920,14 @@
       "confidence": "Низкий",
       "sources": [
         "https://t.me/stroi_news/9166",
-        "https://www.novostroy.ru/buildings/dobrolyubov/"
+        "https://www.novostroy.ru/buildings/dobrolyubov/",
+        "https://sosedi.life/news/zhk-dobrolyubov/"
       ],
       "conflicts": null,
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://www.novostroy.ru/buildings/dobrolyubov/. Could not confirm an office project by 'Русич' specifically at проезд Добролюбова, 13 with GBA 114,000 sqm. Search found 'Русич' as developer of a RESIDENTIAL complex 'Добролюбов' at a nearby but different address (Добролюбова, building 2, Butyrsky district), plus unrelated office buildings elsewhere on Dobrolyubova street/prospect (including one in St. Petersburg). Possible non-office/residential misclassification or an unannounced project; unresolved.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://www.novostroy.ru/buildings/dobrolyubov/. Could not confirm an office project by 'Русич' specifically at проезд Добролюбова, 13 with GBA 114,000 sqm. Search found 'Русич' as developer of a RESIDENTIAL complex 'Добролюбов' at a nearby but different address (Добролюбова, building 2, Butyrsky district), plus unrelated office buildings elsewhere on Dobrolyubova street/prospect (including one in St. Petersburg). Possible non-office/residential misclassification or an unannounced project; unresolved. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://sosedi.life/news/zhk-dobrolyubov/. Застройщик 'Русич' действительно строит на проезде Добролюбова, но это ЖК «Добролюбов» (жилой комплекс бизнес-класса) по адресу проезд Добролюбова, 3/2 — НЕ офисный объект и не по адресу вл.13. Похоже на смешение жилого и офисного проектов одного застройщика в разных источниках; GBA=114000 для офиса не подтверждается.",
       "needs_review": true
     },
     {
@@ -9995,13 +9996,14 @@
       "confidence": "Низкий",
       "sources": [
         "https://t.me/stroi_news/8006",
-        "https://novostroycity.ru/zastroishiki/centr-invest"
+        "https://novostroycity.ru/zastroishiki/centr-invest",
+        "https://tass.ru/obschestvo/22257737"
       ],
       "conflicts": null,
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://novostroycity.ru/zastroishiki/centr-invest. Could not conclusively confirm a Центр Инвест project specifically at ул. Нижние Мнёвники, соор.1Ас1. Nearby confirmed projects in the Mnevniki area include STONE's 'STONE Мнёвники' Class A office (completion 2028) and existing 'Мнёвники 1' business center — developed by different companies (Stone, not Центр-Инвест). Possible naming confusion with the STONE project or Центр-Инвест operating under a JV; unresolved. No GBA/GLA/year found, consistent with original record's gaps.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://novostroycity.ru/zastroishiki/centr-invest. Could not conclusively confirm a Центр Инвест project specifically at ул. Нижние Мнёвники, соор.1Ас1. Nearby confirmed projects in the Mnevniki area include STONE's 'STONE Мнёвники' Class A office (completion 2028) and existing 'Мнёвники 1' business center — developed by different companies (Stone, not Центр-Инвест). Possible naming confusion with the STONE project or Центр-Инвест operating under a JV; unresolved. No GBA/GLA/year found, consistent with original record's gaps. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://tass.ru/obschestvo/22257737. В районе Нижние Мнёвники/Хорошёво-Мнёвники массово строятся объекты STONE (застройщик STONE, не 'Центр Инвест') — Stone Мнёвники 3 (98400 кв.м, участки 39/1 и 41). Совпадения с 'Центр Инвест' и адресом 'соор1Ас1' не найдено; возможна ошибка в названии застройщика в базе (перепутан с STONE).",
       "needs_review": true
     },
     {
@@ -10091,20 +10093,21 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: общая площадь, GLA, год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/stroi_news/5877"
+        "https://t.me/stroi_news/5877",
+        "https://jenga.moscow/"
       ],
       "conflicts": null,
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for 'Дженга Сити-2', ул. Антонова-Овсеенко, вл.7, developer 'Центр инноваций'.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for 'Дженга Сити-2', ул. Антонова-Овсеенко, вл.7, developer 'Центр инноваций'. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://jenga.moscow/. Проект 'JENGA/Дженга' реально существует, но расположен на Полесском проезде (застройщик FORMA), а не на ул. Антонова-Овсеенко вл.7. На Антонова-Овсеенко, 7 в Яндекс.Картах числится безымянный 'бизнес-центр' без подтверждённого названия 'Дженга' и без застройщика 'Центр инноваций'. Похоже на ошибочное сопоставление названия JENGA с другим адресом.",
       "needs_review": true
     },
     {
       "id": "OBJ-0439",
       "name": "улица Кульнева, 6",
       "address": "улица Кульнева, 6",
-      "developer": null,
+      "developer": "ООО «Гелион» (первоначальный проект)",
       "gba": 56400.0,
       "gla": 45661.44,
       "cls": null,
@@ -10116,13 +10119,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/stroi_news/9083"
+        "https://t.me/stroi_news/9083",
+        "https://arvorontsov.com/projects/mnogofunkcionalnyj-delovoj-centr-moskva-ul-kulneva"
       ],
       "conflicts": null,
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for улица Кульнева, 6 (GBA 56,400 sqm).",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for улица Кульнева, 6 (GBA 56,400 sqm). 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://arvorontsov.com/projects/mnogofunkcionalnyj-delovoj-centr-moskva-ul-kulneva. Найден проект 'Многофункциональный деловой центр' на ул. Кульнева, 6 с заявленной площадью 71000 кв.м, спроектированный ещё в 2004–2006 гг. для застройщика ООО «Гелион». Это не совпадает с GBA=56400 в базе и с указанным (отсутствующим) застройщиком — возможно, устаревший или изменившийся проект; актуальность и реализация не подтверждены. Застройщик заполнен: ООО «Гелион» (первоначальный проект).",
       "needs_review": true
     },
     {
@@ -10141,13 +10145,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/stroi_news/9166"
+        "https://t.me/stroi_news/9166",
+        "https://of.ru/bc/72"
       ],
       "conflicts": null,
       "merged_rows": 2,
       "source_sheets": "ОСНОВНАЯ; перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for пр-кт Ленинградский, 47, developer 'Развитие активов' (GBA 98,300 sqm).",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for пр-кт Ленинградский, 47, developer 'Развитие активов' (GBA 98,300 sqm). 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://of.ru/bc/72. По адресу Ленинградский пр-кт, 47 (стр.2/3) находится действующий БЦ «Авион» (класс B+, ~10370 кв.м, построен в 1957), никак не связанный с застройщиком 'Развитие активов' и не соответствующий GBA=98300. Проекта с таким застройщиком по этому адресу не найдено — возможно, спутан адрес или устаревшее название.",
       "needs_review": true
     },
     {
@@ -10190,13 +10195,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/officesmokingroom/847"
+        "https://t.me/officesmokingroom/847",
+        "https://xn--80aaiuqb5ahj7h.xn--90aiage5acygm5b.xn--80aswg/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for 4-я Магистральная ул., 4 стр.11, developer 'Vesta (?)' (GBA 16,700 sqm).",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Not searched — session web search budget (200/200) was exhausted before this record could be checked. Recommend re-running verification separately for 4-я Магистральная ул., 4 стр.11, developer 'Vesta (?)' (GBA 16,700 sqm). 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://xn--80aaiuqb5ahj7h.xn--90aiage5acygm5b.xn--80aswg/. На 4-й Магистральной ул., 11 (не 4, стр.11) есть действующий БЦ «Магистраль» (класс B), но это другой номер дома и нет связи с застройщиком 'Vesta'. Проект по адресу 4-я Магистральная, 4 стр.11 с GBA=16700 не подтверждён; вероятна опечатка в номере дома (4 vs 11).",
       "needs_review": true
     },
     {
@@ -10247,7 +10253,7 @@
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось подтвердить проект по адресу Шипиловский проезд, вл.55 в открытых источниках; найдены только соседние БЦ на Шипиловской ул., 58к1, что не то же самое. Требуется дополнительная проверка (возможно жилой объект вместо офисного).",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось подтвердить проект по адресу Шипиловский проезд, вл.55 в открытых источниках; найдены только соседние БЦ на Шипиловской ул., 58к1, что не то же самое. Требуется дополнительная проверка (возможно жилой объект вместо офисного). 2026-09-17: повторная точечная проверка (порция not-found). Найден только действующий БЦ «Шипиловский» на Шипиловской УЛИЦЕ, 58к1 (другая топонимика — улица, а не проезд). Проекта на Шипиловском ПРОЕЗДЕ, вл.55 в открытых источниках не найдено; возможна путаница улица/проезд в базе.",
       "needs_review": true
     },
     {
@@ -10323,7 +10329,7 @@
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось найти подтверждения проекта «Ферн Девелопмент» по адресу Нижний Журавлёв пер., вл.8 в открытых источниках. Улица существует (номера домов 3, 6А, 8), но привязка к девелоперу и объекту не подтверждена.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось найти подтверждения проекта «Ферн Девелопмент» по адресу Нижний Журавлёв пер., вл.8 в открытых источниках. Улица существует (номера домов 3, 6А, 8), но привязка к девелоперу и объекту не подтверждена. 2026-09-17: повторная точечная проверка (порция not-found). Нижний Журавлёв переулок существует (Сокольники/Соколиная гора, между Б.Семёновской и М.Семёновской), но никаких сведений об объекте на вл.8 или о застройщике 'Ферн Девелопмент' не найдено даже с альтернативными формулировками.",
       "needs_review": true
     },
     {
@@ -10391,17 +10397,18 @@
       "lat": 55.576069,
       "lng": 37.463455,
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
         "https://max.ru/stroi_news/AZ61HasIJ1g",
-        "https://a101.ru/group/1/"
+        "https://a101.ru/group/1/",
+        "https://genplanmos.ru/project/adc_kommunarka/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://a101.ru/group/1/. Существование АДЦ (административно-делового центра) в Коммунарке от А101 подтверждено косвенно (упоминание крупного медцентра и делового центра в районе), но конкретный проект «АДЦ Коммунарка» квартал 150 с GBA 41 010 кв.м не идентифицирован отдельно. Девелопер в записи указан с ошибкой ('А10' вместо 'А101').",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Источник: https://a101.ru/group/1/. Существование АДЦ (административно-делового центра) в Коммунарке от А101 подтверждено косвенно (упоминание крупного медцентра и делового центра в районе), но конкретный проект «АДЦ Коммунарка» квартал 150 с GBA 41 010 кв.м не идентифицирован отдельно. Девелопер в записи указан с ошибкой ('А10' вместо 'А101'). 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://genplanmos.ru/project/adc_kommunarka/. Проект административно-делового центра (АДЦ) вблизи Коммунарки подтверждён как крупная зона деловой застройки Новой Москвы, тесно связанная с ГК «А101». Застройщик в базе указан как 'А10' — почти наверняка опечатка/усечение полного названия 'А101'. Конкретное здание с GBA=41010 в квартале 150 отдельно не идентифицировано.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0451",
@@ -10451,7 +10458,7 @@
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось подтвердить офисный проект «Полбина 21» по ул. Полбина, вл.21. Найдено только упоминание госзаказа на строительство ПАРКИНГА по адресу ул. Полбина, д.21, а также юрлицо «СЗ ПОЛБИНА 21». Есть риск, что объект в базе - это не офисный центр, а паркинг или иной непрофильный объект; требует проверки.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось подтвердить офисный проект «Полбина 21» по ул. Полбина, вл.21. Найдено только упоминание госзаказа на строительство ПАРКИНГА по адресу ул. Полбина, д.21, а также юрлицо «СЗ ПОЛБИНА 21». Есть риск, что объект в базе - это не офисный центр, а паркинг или иной непрофильный объект; требует проверки. 2026-09-17: повторная точечная проверка (порция not-found). На ул. Полбина, вл.21 найден инвестиционный проект строительства МНОГОЭТАЖНОГО ГАРАЖА-СТОЯНКИ, а не бизнес-центра/офисного объекта. Возможно, запись в базе ошибочно классифицирована как офисный проект, тогда как это паркинг.",
       "needs_review": true
     },
     {
@@ -10470,13 +10477,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://max.ru/stroi_news/AZ7tw53gTvc"
+        "https://max.ru/stroi_news/AZ7tw53gTvc",
+        "https://www.mos.ru/news/item/107614073/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не найдено прямого подтверждения проекта БЦ в промзоне Южное Медведково (Вилюйская ул.) от Нацпроектстроя. В районе есть проекты MR Group (жилые), но БЦ от Нацпроектстроя не подтверждён.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не найдено прямого подтверждения проекта БЦ в промзоне Южное Медведково (Вилюйская ул.) от Нацпроектстроя. В районе есть проекты MR Group (жилые), но БЦ от Нацпроектстроя не подтверждён. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://www.mos.ru/news/item/107614073/. На Вилюйской ул., вл.3 (не отдельно указанное 'вл.' в базе) и смежной Чермянской ул., вл.5 в Южном Медведково одобрен проект от застройщика MR Group — это ЖИЛОЙ комплекс с детсадом, а не офисный БЦ, и застройщик не 'Нацпроектстрой'. Возможна путаница застройщика/функционального назначения в базе.",
       "needs_review": true
     },
     {
@@ -10495,13 +10503,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://max.ru/filatofff/AZ5s9DjTMz8"
+        "https://max.ru/filatofff/AZ5s9DjTMz8",
+        "https://veerzhk.ru/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://veerzhk.ru/. MR Group действительно строит на Верейской улице, но это жилой квартал 'Веер' (1842 квартиры), а не офисный объект с GBA=250000 кв.м. Отдельного офисного проекта MR Group на Верейской с таким метражом не найдено — вероятно, в базе смешаны жилая и офисная составляющие комплекса.",
       "needs_review": true
     },
     {
@@ -10635,7 +10644,7 @@
       "lat": 55.739058,
       "lng": 37.516943,
       "verification_status": "Нужно найти: год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
         "https://davydova4.zhk.moscow/"
       ],
@@ -10643,8 +10652,8 @@
       "merged_rows": 1,
       "source_sheets": "ОСНОВНАЯ",
       "geometry_quality": null,
-      "review_notes": " 2026-09: веб-верификация — источник https://davydova4.zhk.moscow/. ВАЖНО: Эталон строит ЖИЛОЙ комплекс на Дениса Давыдова 4, не офисный. Отдельно существует независимый БЦ по тому же адресу, не относящийся к Эталону — запись ошибочна. Расхождение статуса: в записи 'Проектный', источник даёт 'не офисный — жилой комплекс'. ВАЖНО: найденный объект НЕ является типовой рыночной офисной недвижимостью (жилой/государственный/выкуплен/сделка отменена) — confidence НЕ повышен, требуется решение о статусе записи. 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи.",
-      "needs_review": true
+      "review_notes": " 2026-09: веб-верификация — источник https://davydova4.zhk.moscow/. ВАЖНО: Эталон строит ЖИЛОЙ комплекс на Дениса Давыдова 4, не офисный. Отдельно существует независимый БЦ по тому же адресу, не относящийся к Эталону — запись ошибочна. Расхождение статуса: в записи 'Проектный', источник даёт 'не офисный — жилой комплекс'. ВАЖНО: найденный объект НЕ является типовой рыночной офисной недвижимостью (жилой/государственный/выкуплен/сделка отменена) — confidence НЕ повышен, требуется решение о статусе записи. 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://davydova4.zhk.moscow/. Подтверждено: по адресу ул. Дениса Давыдова, 4 находится действующий бизнес-центр «Дениса Давыдова, 4» в составе жилого комплекса от ГК «Эталон» (офисы от 121 до 623 кв.м, часть объектов до 3380 кв.м). Застройщик подтверждён, точный общий GBA=8177 отдельно не верифицирован, но адрес и застройщик совпадают. Уточнение: офисный компонент в составе ЖК подтверждён отдельно (не residential-объект целиком, как некоторые другие red-flag записи) — переклассифицирован в подтверждённые.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0461",
