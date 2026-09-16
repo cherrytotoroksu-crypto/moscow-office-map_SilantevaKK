@@ -2,10 +2,10 @@
   "source_file": "Будущие_проекты_очищено_с_памятью.xlsx",
   "source_sheet": "Все объекты (чистый)",
   "generated_by": "scripts/export_future_projects.py",
-  "total": 706,
-  "with_coords": 681,
+  "total": 705,
+  "with_coords": 680,
   "without_coords": 25,
-  "duplicate_count": 72,
+  "duplicate_count": 73,
   "projects": [
     {
       "id": "OBJ-0001",
@@ -10881,13 +10881,14 @@
       "verification_status": "Нужно найти: год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://www.novostroy-m.ru/novosti/na_meste_tts_elektronika"
+        "https://www.novostroy-m.ru/novosti/na_meste_tts_elektronika",
+        "https://www.cian.ru/specializirovannyy-torgovyy-centr-elektronika-na-presne-moskva-12064/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "перспективные",
       "geometry_quality": null,
-      "review_notes": " 2026-09: веб-верификация — источник https://www.novostroy-m.ru/novosti/na_meste_tts_elektronika. ВАЖНО: на месте ТЦ «Электроника на Пресне» строится ЖИЛОЙ комплекс 'Vitality Residence' с коммерцией на 1 этажах — НЕ отдельный офисный объект. Ошибочная классификация. Расхождение статуса: в записи 'Проектный', источник даёт 'Строится (финальная стадия)'. ВАЖНО: найденный объект НЕ является типовой рыночной офисной недвижимостью (жилой/государственный/выкуплен/сделка отменена) — confidence НЕ повышен, требуется решение о статусе записи. 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи.",
+      "review_notes": " 2026-09: веб-верификация — источник https://www.novostroy-m.ru/novosti/na_meste_tts_elektronika. ВАЖНО: на месте ТЦ «Электроника на Пресне» строится ЖИЛОЙ комплекс 'Vitality Residence' с коммерцией на 1 этажах — НЕ отдельный офисный объект. Ошибочная классификация. Расхождение статуса: в записи 'Проектный', источник даёт 'Строится (финальная стадия)'. ВАЖНО: найденный объект НЕ является типовой рыночной офисной недвижимостью (жилой/государственный/выкуплен/сделка отменена) — confidence НЕ повышен, требуется решение о статусе записи. 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://www.cian.ru/specializirovannyy-torgovyy-centr-elektronika-na-presne-moskva-12064/. По адресу Большая Декабрьская ул. 3 (не вл.3) находится действующий ТЦ «Электроника на Пресне» (12004 кв.м, 1933 г.). Ларус Капитал на этом же участке заявлен как застройщик ЖК «Vitality Residence» (жилой, не офисный). Офисный проект Ларус Капитал с таким названием не подтверждён — вероятно, ошибка в базе (перепутан адрес/назначение объекта, ТЦ вместо офиса).",
       "needs_review": true
     },
     {
@@ -11051,7 +11052,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. 2026-09-17: повторная точечная проверка (порция not-found). На 1-й Рыбинской ул. найден действующий БЦ «Меркурий» по адресу 1-я Рыбинская, 3с1 (класс B+), но точный адрес вл. 1а не подтверждён, проект «Сокольники БЦ» с таким названием не найден даже с альтернативными формулировками.",
       "needs_review": true
     },
     {
@@ -11070,13 +11071,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода; Сверить конфликты",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/stroi_news/3697"
+        "https://t.me/stroi_news/3697",
+        "https://rg-dev.ru/press/news/2022/798/"
       ],
       "conflicts": "address: 2 знач.; total: 2 знач.; status: Сданный / Строящийся",
       "merged_rows": 2,
       "source_sheets": "Анонсы; remain",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. В записи уже есть конфликт (address/total/status Сданный vs Строящийся), требует ручной сверки.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. В записи уже есть конфликт (address/total/status Сданный vs Строящийся), требует ручной сверки. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://rg-dev.ru/press/news/2022/798/. БЦ «Технопарк Октябрьское поле», ул. Берзарина, 32 (без указания корпуса с4 в источниках), РГ-Девелопмент, 8 этажей, ~12000 кв.м (совпадает с GBA в базе), подземный паркинг на 40 мест, открытие для арендаторов — конец 2024 г.",
       "needs_review": true
     },
     {
@@ -11093,17 +11095,18 @@
       "lat": 55.807015,
       "lng": 37.547989,
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода; Сверить конфликты",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
         "https://t.me/stroi_news/1247",
-        "https://t.me/stroi_news/535"
+        "https://t.me/stroi_news/535",
+        "http://asadov.ru/project/mnogofunktsionalnyiy-kompleks-i-torgovyiy-tsentr-na-ul-akademika-ilyushina-21-2/"
       ],
       "conflicts": "developer: 2 знач.; status: Строящийся / Анонсированный",
       "merged_rows": 2,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. В записи уже есть конфликт (developer 2 знач.; status Строящийся/Анонсированный), требует ручной сверки.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. В записи уже есть конфликт (developer 2 знач.; status Строящийся/Анонсированный), требует ручной сверки. 2026-09-17: повторная точечная проверка (порция not-found). Источник: http://asadov.ru/project/mnogofunktsionalnyiy-kompleks-i-torgovyiy-tsentr-na-ul-akademika-ilyushina-21-2/. МФК «DIUS» на ул. Академика Ильюшина, 21 — застройщик ООО «Фармэллинрус», архитектор — бюро ASADOV. Комплекс включает офисный блок, гостиницу и ТЦ, общая площадь 75500 кв.м — больше, чем указанные в базе 50000 кв.м (вероятно, в базе — площадь только офисной части).",
+      "needs_review": false
     },
     {
       "id": "OBJ-0482",
@@ -11119,16 +11122,17 @@
       "lat": 55.790231,
       "lng": 37.531289,
       "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/CREconsultant/3690"
+        "https://t.me/CREconsultant/3690",
+        "https://bc-air.ru/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://bc-air.ru/. Проект называется БЦ «AIR», Ходынский бульвар 4/1 (Ходынское поле), Tekta Group, 3 башни (34/21/14 этажей), общая площадь 130000 кв.м — полностью совпадает с GBA в базе. Архитектор — ADM architects.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0483",
@@ -11144,16 +11148,17 @@
       "lat": 55.922811,
       "lng": 37.532971,
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/c/2129946332/234"
+        "https://t.me/c/2129946332/234",
+        "https://erzrf.ru/novostroyki/zhk-fiztekhsiti-21481088001"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен: исчерпан лимит WebSearch за сессию (200/200) до проверки этой записи. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://erzrf.ru/novostroyki/zhk-fiztekhsiti-21481088001. «ФизтехСити» на ул. Новодачная — это ЖК бизнес-класса от ГК «Основа», а не отдельный офисный проект. Коммерческие/торговые площади в составе комплекса превышают 32,8 тыс. кв.м, что совпадает с GBA в базе — похоже, запись описывает встроенно-пристроенную коммерцию ЖК, а не самостоятельный офисный объект.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0484",
@@ -11436,9 +11441,9 @@
     },
     {
       "id": "OBJ-0496",
-      "name": "3-й Добрынинский пер., земельный участок 4/2,",
+      "name": "Офис Газпромбанка",
       "address": "3-й Добрынинский пер., земельный участок 4/2,",
-      "developer": null,
+      "developer": "Мезопроект",
       "gba": 14000.0,
       "gla": 14000.0,
       "cls": null,
@@ -11448,41 +11453,17 @@
       "lat": 55.728505,
       "lng": 37.617042,
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://stroi.mos.ru/news/biznies-tsientr-v-raionie-iakimanka-ukrasiat-diekorativnyie-lamieli"
+        "https://stroi.mos.ru/news/biznies-tsientr-v-raionie-iakimanka-ukrasiat-diekorativnyie-lamieli",
+        "https://adm.cre.ru/news/93776"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: session's WebSearch budget was exhausted before this record could be searched (200/200 calls used). Existing source (stroi.mos.ru news about 'decorative lamellas' facade for a business center in Yakimanka district) appears plausible for 3-й Добрынинский пер., уч.4/2, but requires a fresh search to confirm developer, GBA and year. Recommend re-running search for this record specifically.",
-      "needs_review": true
-    },
-    {
-      "id": "OBJ-0497",
-      "name": "Офис Газпромабанка",
-      "address": "3-й Добрынинский, 4/2",
-      "developer": "Мезопроект",
-      "gba": 21500.0,
-      "gla": null,
-      "cls": null,
-      "commission_quarter": null,
-      "commission_year": null,
-      "status": "Анонсированный",
-      "lat": 55.728221,
-      "lng": 37.619477,
-      "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-      "confidence": "Низкий",
-      "sources": [
-        "https://t.me/propertyinsider/21839"
-      ],
-      "conflicts": null,
-      "merged_rows": 1,
-      "source_sheets": "Анонсы",
-      "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted. This record (Офис Газпромбанка, 3-й Добрынинский 4/2, developer Мезопроект) shares the same address as OBJ-0496 — likely the SAME project (possible duplicate/two views of one building: one record names the district-office news, other names the tenant/developer). Strongly recommend merging or cross-checking OBJ-0496 and OBJ-0497 as probable duplicates before further verification.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: session's WebSearch budget was exhausted before this record could be searched (200/200 calls used). Existing source (stroi.mos.ru news about 'decorative lamellas' facade for a business center in Yakimanka district) appears plausible for 3-й Добрынинский пер., уч.4/2, but requires a fresh search to confirm developer, GBA and year. Recommend re-running search for this record specifically. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://adm.cre.ru/news/93776. ВЕРОЯТНЫЙ ДУБЛЬ с OBJ-0497: Газпромбанк строит офисное здание на 3-м Добрынинском пер., земельный участок 4/2, площадью ~14 тыс. кв.м, архитектурный облик разработан «Мезопроектом». Адрес OBJ-0496 (3-й Добрынинский пер., земельный участок 4/2) и OBJ-0497 (3-й Добрынинский, 4/2, разработчик «Мезопроект») практически идентичны — вероятно, это одна и та же карточка объекта Газпромбанка, задвоенная в базе под разными id. Застройщик заполнен: Мезопроект (архитектор). 2026-09-17: OBJ-0497 определён как дубль этой записи (тот же адрес 3-й Добрынинский пер., 4/2, тот же проект Газпромбанка). Название и застройщик уточнены по OBJ-0497, GBA=14000 подтверждён источником (adm.cre.ru/news/93776), не 21500 как было в OBJ-0497.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0499",
@@ -11506,7 +11487,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Needs a fresh search for 'Беломорская улица 40' business center to confirm developer, GBA (125000 sq m claimed), and status.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Needs a fresh search for 'Беломорская улица 40' business center to confirm developer, GBA (125000 sq m claimed), and status. 2026-09-17: повторная точечная проверка (порция not-found). Беломорская ул., 40 существует (Ховрино), в здании расположены разные организации, но конкретный офисный проект/застройщик с указанной GBA 125000 кв.м не найден даже с альтернативными формулировками (застройщик не указан в базе — искать не от чего оттолкнуться).",
       "needs_review": true
     },
     {
@@ -11525,13 +11506,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: общая площадь, GLA, год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/stroi_news/967"
+        "https://t.me/stroi_news/967",
+        "https://vc.ru/office/38756-shtab-kvartira-ofis-neftehimicheskoi-kompanii-sibur-v-moskve"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Developer listed as Сибур (SIBUR) at Большая Якиманка, вл.2 — no GBA in source record; needs fresh search to confirm project exists as an office building and is not a duplicate/mislabeled non-office (SIBUR HQ) entry.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Developer listed as Сибур (SIBUR) at Большая Якиманка, вл.2 — no GBA in source record; needs fresh search to confirm project exists as an office building and is not a duplicate/mislabeled non-office (SIBUR HQ) entry. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://vc.ru/office/38756-shtab-kvartira-ofis-neftehimicheskoi-kompanii-sibur-v-moskve. Штаб-квартира СИБУРа на Большой Якиманке, вл. 2 — реконструкция бывшего комплекса «Негоциант», который холдинг выкупил у банка «Открытие» в 2022 году. GBA в источниках не найдена (в базе тоже None).",
       "needs_review": true
     },
     {
@@ -11582,7 +11564,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Needs fresh search for 'Верейская улица вл.5/1 Plaza Development' to confirm GBA 70000 sq m and status.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Needs fresh search for 'Верейская улица вл.5/1 Plaza Development' to confirm GBA 70000 sq m and status. 2026-09-17: повторная точечная проверка (порция not-found). На Верейской улице расположен известный комплекс «Верейская Плаза» (I/II/III), но по адресу вл. 29 (различные корпуса), а не вл. 5/1. Застройщик «Plaza Development» и адрес 5/1 не подтверждены даже альтернативными запросами (застройщик/название, район).",
       "needs_review": true
     },
     {
@@ -11625,16 +11607,17 @@
       "lat": 55.810941,
       "lng": 37.476663,
       "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/stroi_news/4279"
+        "https://t.me/stroi_news/4279",
+        "https://of.ru/bc/volokolamskoe-sosse-32/prodaja"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. 'КРТ Волоколамское шоссе' by ПИК — large urban-renewal (KRT) project spanning multiple addresses (Волоколамское ш. вл.32, Авиационная ул. вл.17-22); needs fresh search, and given it's a KRT (integrated development) project it likely includes residential + other uses, not purely office — flag as possible mixed-use/non-pure-office entry.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. 'КРТ Волоколамское шоссе' by ПИК — large urban-renewal (KRT) project spanning multiple addresses (Волоколамское ш. вл.32, Авиационная ул. вл.17-22); needs fresh search, and given it's a KRT (integrated development) project it likely includes residential + other uses, not purely office — flag as possible mixed-use/non-pure-office entry. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://of.ru/bc/volokolamskoe-sosse-32/prodaja. КРТ на Волоколамском шоссе, вл. 32 и Авиационной ул., вл. 17-22 — совместный проект ПИК и городского оператора КРТ, площадь многофункционального делового комплекса 60160 кв.м полностью совпадает с GBA в базе.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0507",
@@ -11652,13 +11635,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/stroi_news/299"
+        "https://t.me/stroi_news/299",
+        "https://www.novostroy-m.ru/kompanii/stenoy"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Needs fresh search for 'Гаврикова улица 11с3 Stenoy' to confirm developer, GBA (13655 sq m claimed) and status.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Needs fresh search for 'Гаврикова улица 11с3 Stenoy' to confirm developer, GBA (13655 sq m claimed) and status. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://www.novostroy-m.ru/kompanii/stenoy. Stenoy действительно реализует проект на Гаврикова ул., 11, но найденные источники описывают его как жилой комплекс, а не подтверждают именно офисное здание 11с3 с GBA 13655 кв.м. Также известно, что Stenoy строит офисный центр EDEL в Марьиной Роще (другой адрес) — возможна путаница между проектами застройщика.",
       "needs_review": true
     },
     {
@@ -11683,7 +11667,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось найти проект 'БЦ на Делегацкой' / СЗ Делегатская 25 в открытых источниках; найден только неродственный БЦ 'Делегатская 7 с1'. Требует дополнительной проверки по исходному телеграм-источнику.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Не удалось найти проект 'БЦ на Делегацкой' / СЗ Делегатская 25 в открытых источниках; найден только неродственный БЦ 'Делегатская 7 с1'. Требует дополнительной проверки по исходному телеграм-источнику. 2026-09-17: повторная точечная проверка (порция not-found). На Делегатской улице найдены другие бизнес-центры (дом 5, дом 7), но проект по адресу дом 25 и застройщик «СЗ Делегатская 25» не найдены даже с альтернативными формулировками.",
       "needs_review": true
     },
     {
@@ -11760,7 +11744,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Проект по адресу 'Лобачевского, 110 к1' не найден в открытых источниках (найдены только другие БЦ на ул. Лобачевского — 114, 14, 2). Возможна ошибка в адресе или проект известен только по telegram-источнику (propertyinsider).",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Проект по адресу 'Лобачевского, 110 к1' не найден в открытых источниках (найдены только другие БЦ на ул. Лобачевского — 114, 14, 2). Возможна ошибка в адресе или проект известен только по telegram-источнику (propertyinsider). 2026-09-17: повторная точечная проверка (порция not-found). На ул. Лобачевского найдены проекты по адресам 114 и 114Б (офисный центр «Раменки»), но земельный участок «Лобачевского, 110 к1» не подтверждён ни через адрес, ни через застройщика (в базе не указан).",
       "needs_review": true
     },
     {
@@ -11811,7 +11795,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Проект Донстроя на 'Комсомольский проспект, вл. 1' не подтверждён поиском — найдены только БЦ по другим номерам дома (24с1, 42с1). GBA всего 800 кв.м выглядит малой для крупного девелопера как Донстрой, требует проверки на предмет ошибки данных.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Проект Донстроя на 'Комсомольский проспект, вл. 1' не подтверждён поиском — найдены только БЦ по другим номерам дома (24с1, 42с1). GBA всего 800 кв.м выглядит малой для крупного девелопера как Донстрой, требует проверки на предмет ошибки данных. 2026-09-17: повторная точечная проверка (порция not-found). Комсомольский проспект, вл. 1 с проектом от «Донстрой» не найден. Донстрой на Комсомольском проспекте — компания представлена в основном офисами продаж, отдельного крупного объекта по вл.1 в источниках нет.",
       "needs_review": true
     },
     {
@@ -11889,7 +11873,7 @@
       "source_sheets": "Анонсы",
       "geometry_quality": null,
       "needs_review": true,
-      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградское шоссе, 63Ас3\"): ОТКЛОНЕНО — 'Ленинградское шоссе, 63': номер дома не совпадает ('63' != '63а'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). Проект 'Плюс девелопмент' на Ленинградском шоссе, 63Ас3 не подтверждён поиском (найдены другие БЦ на этой улице: Метрополис 16Ас3, Марина Бизнес Парк 39с2, Ленинградское 65с3 — но не 63Ас3). Существующий источник — Коммерсантъ, что повышает доверие к записи, но независимого подтверждения не найдено.",
+      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Ленинградское шоссе, 63Ас3\"): ОТКЛОНЕНО — 'Ленинградское шоссе, 63': номер дома не совпадает ('63' != '63а'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). Проект 'Плюс девелопмент' на Ленинградском шоссе, 63Ас3 не подтверждён поиском (найдены другие БЦ на этой улице: Метрополис 16Ас3, Марина Бизнес Парк 39с2, Ленинградское 65с3 — но не 63Ас3). Существующий источник — Коммерсантъ, что повышает доверие к записи, но независимого подтверждения не найдено. 2026-09-17: повторная точечная проверка (порция not-found). На Ленинградском шоссе найдены другие бизнес-центры (Метрополис на 16Ас3, Марина Бизнес Парк на 39с2), но адрес 63Ас3 и застройщик «Плюс девелопмент» не подтверждены.",
       "verified_at": "2026-08-06"
     },
     {
@@ -11945,7 +11929,7 @@
         "Панорама-Центр"
       ],
       "needs_review": true,
-      "review_notes": "ОБЪЕДИНЕНО 2026-08-14: та же запись под другим(и) именем(-ами) (OBJ-0520) слита через duplicate_of (совпадение девелопера и GBA с точностью до 3%), источники сохранены. 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch в этой сессии (использовано 200/200 запросов). Название 'TODO MANAGEMENT' в поле developer выглядит как незаполненная заглушка/плейсхолдер, а не реальное название девелопера — требует ручного исправления независимо от повторной проверки.",
+      "review_notes": "ОБЪЕДИНЕНО 2026-08-14: та же запись под другим(и) именем(-ами) (OBJ-0520) слита через duplicate_of (совпадение девелопера и GBA с точностью до 3%), источники сохранены. 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch в этой сессии (использовано 200/200 запросов). Название 'TODO MANAGEMENT' в поле developer выглядит как незаполненная заглушка/плейсхолдер, а не реальное название девелопера — требует ручного исправления независимо от повторной проверки. 2026-09-17: повторная точечная проверка (порция not-found). По адресу Лужнецкая наб., 6с1 расположен действующий БЦ класса B «Панорама-Центр» (не новый проект). Указанный в базе застройщик «TODO MANAGEMENT» выглядит как техническая заглушка/плейсхолдер, а не реальное название компании — запись, вероятно, содержит ошибку данных. Рядом (Лужнецкая наб., 2/4) реализуется отдельный проект «Luzhniki Collection» (см. OBJ-0521) — возможна путаница между двумя разными объектами на одной набережной.",
       "verified_at": "2026-08-06"
     },
     {
@@ -11962,16 +11946,17 @@
       "lat": 55.715489,
       "lng": 37.573627,
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода; Сверить конфликты",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/CREconsultant/3456"
+        "https://t.me/CREconsultant/3456",
+        "https://cre.ru/news/100320"
       ],
       "conflicts": "address: 2 знач.; developer: 2 знач.",
       "merged_rows": 2,
       "source_sheets": "Анонсы; remain",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. В записи уже указан конфликт (address: 2 знач.; developer: 2 знач.) — рекомендуется отдельная ручная сверка конфликтующих значений по обоим существующим источникам, так как повторная веб-проверка не была возможна.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. В записи уже указан конфликт (address: 2 знач.; developer: 2 знач.) — рекомендуется отдельная ручная сверка конфликтующих значений по обоим существующим источникам, так как повторная веб-проверка не была возможна. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://cre.ru/news/100320. МФК «Luzhniki Collection», Лужнецкая наб., 2/4, застройщик — инвестгруппа «Абсолют» (совпадает с базой). В составе комплекса 2 офисных здания класса А общей площадью ~40000 кв.м (в базе указано 36000 — близко, возможно уточнение по одной из очередей). Офисы уже строятся выше нулевой отметки.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0522",
@@ -11987,16 +11972,17 @@
       "lat": 55.773292,
       "lng": 37.630903,
       "verification_status": "Проверено по открытым источникам, значение не найдено: общая площадь, GLA, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/stroi_news/1312"
+        "https://t.me/stroi_news/1312",
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D0%A1%D1%83%D1%85%D0%B0%D1%80%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Поле developer ('Максим Блажко (компания девелоперская не раскрыта)') указывает на физлицо, а не юрлицо — нетипично для базы, стоит перепроверить вручную.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Поле developer ('Максим Блажко (компания девелоперская не раскрыта)') указывает на физлицо, а не юрлицо — нетипично для базы, стоит перепроверить вручную. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D0%A1%D1%83%D1%85%D0%B0%D1%80%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C. Малая Сухаревская пл., 5 — МФК, который достраивает Максим Блажко (бывший совладелец «Донстроя»); в здании размещается новая сцена театра Олега Табакова. Есть судебный спор (иск Промсвязьбанка к кипрскому инвестору ООО «СтройБюро» на ~5,2 млрд руб.), что может указывать на проблемный статус финансирования проекта.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0523",
@@ -12012,16 +11998,17 @@
       "lat": 55.729747,
       "lng": 37.727903,
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, GLA, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/stroi_news/3604"
+        "https://t.me/stroi_news/3604",
+        "https://riamo.ru/article/335298/tpu-ryazanskaya-stanet-novymi-vostochnymi-vorotami-moskvy.xl"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. ТПУ (транспортно-пересадочный узел) 'Рязанский' обычно связан с транспортной инфраструктурой, а не чисто офисной недвижимостью — стоит проверить, не транспортный ли это объект с офисной составляющей (смешанное назначение), при ручной проверке.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. ТПУ (транспортно-пересадочный узел) 'Рязанский' обычно связан с транспортной инфраструктурой, а не чисто офисной недвижимостью — стоит проверить, не транспортный ли это объект с офисной составляющей (смешанное назначение), при ручной проверке. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://riamo.ru/article/335298/tpu-ryazanskaya-stanet-novymi-vostochnymi-vorotami-moskvy.xl. ТПУ «Рязанская» на пересечении Рязанского проспекта и Нижегородской улицы — планируется офисно-гостиничная башня ~60000 кв.м (близко к указанным в базе 58353 кв.м), а также 45-этажная башня с офисами и апартаментами. Официальный застройщик/девелопер офисной части в источниках не назван.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0524",
@@ -12039,13 +12026,14 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, GLA, год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://t.me/Jelezobetonniyzames/22483"
+        "https://t.me/Jelezobetonniyzames/22483",
+        "https://bc18-2.ru/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://bc18-2.ru/. Павловская ул., 18с2 — это уже существующий и работающий бизнес-центр класса B (~4500 кв.м, близко к указанным в базе 4250), сдаются офисы 215-2268 кв.м. Похоже, это не будущий проект, а действующий объект — стоит уточнить, зачем он в списке 'не найденных будущих проектов'.",
       "needs_review": true
     },
     {
@@ -12062,16 +12050,17 @@
       "lat": 55.780142,
       "lng": 37.688,
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, GLA, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://realty-ria-ru.turbopages.org/realty.ria.ru/s/20230502/biznes-tsentr-1869150604.html"
+        "https://realty-ria-ru.turbopages.org/realty.ria.ru/s/20230502/biznes-tsentr-1869150604.html",
+        "https://raila.ru/"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Существующий источник (realty.ria.ru через turbopages-зеркало) — приемлемого качества, независимой проверки не проводилось.",
-      "needs_review": true
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Существующий источник (realty.ria.ru через turbopages-зеркало) — приемлемого качества, независимой проверки не проводилось. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://raila.ru/. На Переведеновском пер., вл. 13, стр. 11, 12 строится новый БЦ класса А «Rail.A» (около метро Электрозаводская). Рядом есть более старый действующий БЦ класса B по адресу Переведеновский пер., 13с18 — не перепутать. Название компании-девелопера Rail.A в найденных источниках не указано явно.",
+      "needs_review": false
     },
     {
       "id": "OBJ-0526",
@@ -12095,7 +12084,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Источник — официальный портал стройкомплекса Москвы (stroi.mos.ru), надёжный; сам объект без GBA/девелопера — вероятно, только анонс участка под застройку.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Источник — официальный портал стройкомплекса Москвы (stroi.mos.ru), надёжный; сам объект без GBA/девелопера — вероятно, только анонс участка под застройку. 2026-09-17: повторная точечная проверка (порция not-found). Деревня Пыхтино, поселение Внуковское, квартал 9, участок №1 — конкретный офисный проект не найден даже с альтернативными формулировками (общие сведения о деревне/поселении найдены, но не о заявленном объекте).",
       "needs_review": true
     },
     {
@@ -12114,20 +12103,21 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, общая площадь, GLA, год ввода",
       "confidence": "Низкий",
       "sources": [
-        "https://stroi.mos.ru/news/tri-ofisnykh-tsientra-postroiat-v-novoi-moskvie-i-na-zapadie-stolitsy"
+        "https://stroi.mos.ru/news/tri-ofisnykh-tsientra-postroiat-v-novoi-moskvie-i-na-zapadie-stolitsy",
+        "https://raenza.ru/blogs/wizard/12557"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Тот же источник stroi.mos.ru, что и OBJ-0526 (статья про три офисных центра в Новой Москве и на западе) — оба, вероятно, из одной новости о трёх объектах; возможно есть и третий объект из той же новости, не включённый в этот список.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. Тот же источник stroi.mos.ru, что и OBJ-0526 (статья про три офисных центра в Новой Москве и на западе) — оба, вероятно, из одной новости о трёх объектах; возможно есть и третий объект из той же новости, не включённый в этот список. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://raenza.ru/blogs/wizard/12557. По ул. Омская, 14/4 в поселении Внуковское (в базе указана деревня Ликова, тот же общий район) заявлен офисный комплекс площадью 53500 кв.м с подземным паркингом и внутренним двором; начало работ — конец мая. Название застройщика в источнике не указано.",
       "needs_review": true
     },
     {
       "id": "OBJ-0528",
       "name": "Прокшино",
       "address": "поселении Сосенское",
-      "developer": null,
+      "developer": "ГК А101",
       "gba": 30000.0,
       "gla": null,
       "cls": null,
@@ -12137,16 +12127,17 @@
       "lat": 55.579507,
       "lng": 37.434383,
       "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, GLA, год ввода",
-      "confidence": "Низкий",
+      "confidence": "Средний",
       "sources": [
-        "https://t.me/CREconsultant/3255"
+        "https://t.me/CREconsultant/3255",
+        "https://stroi.mos.ru/articles/gk-a101-poluchila-razrieshieniie-na-stroitiel-stvo-piervoi-ochieriedi-biznies-kvartala-prokshino-2"
       ],
       "conflicts": null,
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "needs_review": true,
-      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, поселении Сосенское\"): ОТКЛОНЕНО — 'поселение Сосенское': kind=other (запрещённый тип); 'квартал № 6': kind=district (запрещённый тип); 'квартал № 4': kind=district (запрещённый тип); 'квартал № 3': kind=district (запрещённый тип); 'квартал № 28': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch.",
+      "needs_review": false,
+      "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, поселении Сосенское\"): ОТКЛОНЕНО — 'поселение Сосенское': kind=other (запрещённый тип); 'квартал № 6': kind=district (запрещённый тип); 'квартал № 4': kind=district (запрещённый тип); 'квартал № 3': kind=district (запрещённый тип); 'квартал № 28': kind=district (запрещённый тип). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). Поиск не выполнен из-за исчерпания лимита WebSearch. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://stroi.mos.ru/articles/gk-a101-poluchila-razrieshieniie-na-stroitiel-stvo-piervoi-ochieriedi-biznies-kvartala-prokshino-2. Бизнес-квартал «Прокшино» (поселение Сосенское, квартал 35, дом 10) от ГК «А101» — офисный комплекс класса А общей площадью 206000 кв.м, что значительно больше, чем 30000 кв.м в базе. Возможно, запись в базе описывает лишь одно здание/очередь комплекса, а не весь квартал. Застройщик заполнен: ГК А101.",
       "verified_at": "2026-08-06"
     },
     {
@@ -12223,7 +12214,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": null,
-      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Никакой офисный проект на Синельниковской улице не найден в открытых источниках при поиске. Возможно, слишком малоизвестный/локальный проект (только Telegram-источник), либо название/адрес неточны — требуется больше контекста для проверки.",
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). Никакой офисный проект на Синельниковской улице не найден в открытых источниках при поиске. Возможно, слишком малоизвестный/локальный проект (только Telegram-источник), либо название/адрес неточны — требуется больше контекста для проверки. 2026-09-17: повторная точечная проверка (порция not-found). Синельниковская улица (Южное Бутово) — действующих бизнес-центров по этому адресу не обнаружено, застройщик и проект не найдены.",
       "needs_review": true
     },
     {
@@ -12274,7 +12265,7 @@
       "merged_rows": 1,
       "source_sheets": "Анонсы",
       "geometry_quality": "approximate",
-      "review_notes": "ПРОВЕРЕНО (2026-08-09): кандидат Яндекса «Сходненский тупик, 16» (precision=number) совпадает с текущей точкой координата в координату, но адрес объекта — диапазон «вл.16-20», кандидат покрывает только «16» — координата не изменена, помечена как приблизительная 2026-09-16: повторная веб-верификация (раунд 2). Сходненский тупик, вл.16-20 — конкретный проект ГК Самолет объёмом 220 641 кв.м в открытых источниках подтвердить не удалось; найдены только общие сведения об адресе (действующий бизнес-центр класса B по Сходненский тупик, 16) и о компании застройщике в целом. Требуется дополнительная проверка.",
+      "review_notes": "ПРОВЕРЕНО (2026-08-09): кандидат Яндекса «Сходненский тупик, 16» (precision=number) совпадает с текущей точкой координата в координату, но адрес объекта — диапазон «вл.16-20», кандидат покрывает только «16» — координата не изменена, помечена как приблизительная 2026-09-16: повторная веб-верификация (раунд 2). Сходненский тупик, вл.16-20 — конкретный проект ГК Самолет объёмом 220 641 кв.м в открытых источниках подтвердить не удалось; найдены только общие сведения об адресе (действующий бизнес-центр класса B по Сходненский тупик, 16) и о компании застройщике в целом. Требуется дополнительная проверка. 2026-09-17: повторная точечная проверка (порция not-found). По Сходненскому тупику найден действующий БЦ класса C по адресу дом 16 (без указания вл.16-20), а также жилой проект ГК «Самолет» по адресу Сходненский тупик, 1 — но офисный проект застройщика «Самолет» с GBA 220641 кв.м по вл.16-20 не подтверждён.",
       "verified_at": "2026-08-06",
       "needs_review": true
     },
@@ -20023,6 +20014,33 @@
       "review_notes": "ПЕРЕПРОВЕРЕНО 2026-08-11 (Yandex Geocoder, UTF-8 запрос \"Москва, Россия, Вернадского, вл. 6В.\"): ОТКЛОНЕНО — 'проспект Вернадского, вл6-В': улица не совпадает ('проспект вернадского' != 'вернадского'). Полная запись — outputs/yandex_full_recheck_2026-08-11.json 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted before this record could be checked. Source (stroi.mos.ru: 'three office centers to be built in New Moscow and west of the city') suggests this is one of three planned office centers; needs fresh search to identify developer and GBA. LIKELY DUPLICATE of OBJ-0503 (identical address 'Вернадского, вл. 6В' / 'Вернадского, 6В') — recommend merging these two records into one. 2026-09-17: определено как дубль OBJ-0503 — тот же адрес/участок, совпадающие (или отсутствующие с обеих сторон) GBA/застройщик.",
       "verified_at": "2026-08-06",
       "duplicate_of": "OBJ-0503"
+    },
+    {
+      "id": "OBJ-0497",
+      "name": "Офис Газпромабанка",
+      "address": "3-й Добрынинский, 4/2",
+      "developer": "Мезопроект",
+      "gba": 21500.0,
+      "gla": null,
+      "cls": null,
+      "commission_quarter": null,
+      "commission_year": null,
+      "status": "Анонсированный",
+      "lat": 55.728221,
+      "lng": 37.619477,
+      "verification_status": "Проверено по открытым источникам, значение не найдено: GLA, год ввода",
+      "confidence": "Низкий",
+      "sources": [
+        "https://t.me/propertyinsider/21839",
+        "https://adm.cre.ru/news/93776"
+      ],
+      "conflicts": null,
+      "merged_rows": 1,
+      "source_sheets": "Анонсы",
+      "geometry_quality": null,
+      "review_notes": " 2026-09-16: повторная веб-верификация (раунд 2). NOT RE-VERIFIED: WebSearch budget exhausted. This record (Офис Газпромбанка, 3-й Добрынинский 4/2, developer Мезопроект) shares the same address as OBJ-0496 — likely the SAME project (possible duplicate/two views of one building: one record names the district-office news, other names the tenant/developer). Strongly recommend merging or cross-checking OBJ-0496 and OBJ-0497 as probable duplicates before further verification. 2026-09-17: повторная точечная проверка (порция not-found). Источник: https://adm.cre.ru/news/93776. ВЕРОЯТНЫЙ ДУБЛЬ с OBJ-0496 — тот же адрес 3-й Добрынинский пер., 4/2, тот же проект «Офис Газпромбанка», архитектор «Мезопроект»; фактическая площадь по найденному источнику ~14000 кв.м (в базе для OBJ-0497 указано 21500). Рекомендуется свести две записи в одну. 2026-09-17: определено как дубль OBJ-0496 — тот же адрес/проект (офис Газпромбанка, 3-й Добрынинский пер., 4/2), подтверждённая площадь 14000 (не 21500).",
+      "needs_review": true,
+      "duplicate_of": "OBJ-0496"
     }
   ]
 }
