@@ -378,6 +378,20 @@ const CODIFIER_COLUMNS = [
   {key:'legacy_ids', label:'Legacy IDs', type:'list', visible:false},
   {key:'latitude', label:'Широта', type:'number', visible:false},
   {key:'longitude', label:'Долгота', type:'number', visible:false},
+  // --- геополя, посчитанные ОДИН РАЗ по координатам самой этой записи
+  // (scripts/recompute_geo.py, тот же point-in-polygon, что index.html
+  // LAYER_CFG) — сохранены прямо в unified_classifier_audited_2026-08-27.json.
+  // В отличие от reg_submarket/reg_zone/reg_bizFormed/reg_bizForming ниже
+  // (join по названию к реестру, покрытие ~80-90 из 644 строк), эти поля
+  // считаются напрямую по lat/lng самой строки — покрытие 637 из 644 (нет
+  // только у записей без координат вообще). Сверено: 0 расхождений с
+  // reg_-версиями на всех 83 строках, где есть обе (2026-09-17).
+  {key:'geo_ao', label:'Округ', type:'text', visible:true},
+  {key:'geo_raion', label:'Район', type:'text', visible:true},
+  {key:'geo_zone', label:'Кольцо', type:'text', visible:false},
+  {key:'geo_submarket', label:'Субрынок', type:'text', visible:false},
+  {key:'geo_bizFormed', label:'Дел. район (сформированный)', type:'text', visible:false},
+  {key:'geo_bizForming', label:'Дел. район (формирующийся)', type:'text', visible:false},
   // --- поля из общего реестра (join по названию) ---
   {key:'reg_canonical_project_id', label:'ID проекта (реестр)', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'reg_submarket', label:'Субрынок (реестр)', type:'text', visible:true},
