@@ -5479,5 +5479,1475 @@
     "matched_project_id": "proj-284",
     "match_basis": "name+address+coordinate, 2026-09-14: registry row created for data/buildings_202606.json id=288; renumbered from colliding UC-OBJ-0791",
     "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-029",
+    "canonical_no": null,
+    "name": "WeWork Роза (Красная Роза)",
+    "address": "Тимура Фрунзе, 11с33",
+    "status": "exact_match",
+    "matched_project_id": "proj-2",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-030",
+    "canonical_no": null,
+    "name": "WeWork Белая площадь (Белая Площадь)",
+    "address": "Лесная улица,5,стр. а-в",
+    "status": "exact_match",
+    "matched_project_id": "proj-3",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-031",
+    "canonical_no": null,
+    "name": "WeWork Аркус (Аркус 3)",
+    "address": "Ленинградский проспект 37Ас4",
+    "status": "exact_match",
+    "matched_project_id": "proj-4",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-032",
+    "canonical_no": null,
+    "name": "WeWork Якиманка (Большая Якиманка 26)",
+    "address": "Большая Якиманка 26",
+    "status": "exact_match",
+    "matched_project_id": "proj-5",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-033",
+    "canonical_no": null,
+    "name": "Регус (Смоленский Пассаж) (Смоленский Пассаж 1)",
+    "address": "Смоленская пл. 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-6",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-034",
+    "canonical_no": null,
+    "name": "Мой Кабинет (Сириус Парк)",
+    "address": "Каширское шоссе 3с1к2",
+    "status": "exact_match",
+    "matched_project_id": "proj-7",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-035",
+    "canonical_no": null,
+    "name": "Apollax Технопарк (Технопарк)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-8",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-036",
+    "canonical_no": null,
+    "name": "Apollax Space (Новосущевский)",
+    "address": "Сущевский Вал, 18",
+    "status": "exact_match",
+    "matched_project_id": "proj-186",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-037",
+    "canonical_no": null,
+    "name": "BusinessClub (Газетный)",
+    "address": "Газетный 17",
+    "status": "exact_match",
+    "matched_project_id": "proj-10",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-038",
+    "canonical_no": null,
+    "name": "BusinessClub (Порта)",
+    "address": "Заречная 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-11",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-039",
+    "canonical_no": null,
+    "name": "BusinessClub (Ходынка)",
+    "address": "Авиаконструктора Микояна",
+    "status": "exact_match",
+    "matched_project_id": "proj-12",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-040",
+    "canonical_no": null,
+    "name": "Рабочая Станция (Black&White) - KW (Black&White)",
+    "address": "Кожевническая ул. 14",
+    "status": "exact_match",
+    "matched_project_id": "proj-15",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-041",
+    "canonical_no": null,
+    "name": "Балчуг Плаза - KW (Балчуг)",
+    "address": "Садовническая наб., 9",
+    "status": "exact_match",
+    "matched_project_id": "proj-16",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-042",
+    "canonical_no": null,
+    "name": "Signature Столешников (Signature Столешников, 11)",
+    "address": "Столешников, 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-242",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-043",
+    "canonical_no": null,
+    "name": "Регус Проспект Мира (Пр. Мира , 40)",
+    "address": "Пр. Мира",
+    "status": "exact_match",
+    "matched_project_id": "proj-18",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-044",
+    "canonical_no": null,
+    "name": "Ключ Сретенка (Сретенский б-р, 5)",
+    "address": "Сретенский б-р, 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-21",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-045",
+    "canonical_no": null,
+    "name": "Apollax Space (Сокольники)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-23",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-046",
+    "canonical_no": null,
+    "name": "BusinessClub Газетный (Газетный)",
+    "address": "Газетный 17",
+    "status": "exact_match",
+    "matched_project_id": "proj-24",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-047",
+    "canonical_no": null,
+    "name": "BusinessClub Porta (Порта)",
+    "address": "Заречная 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-25",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-048",
+    "canonical_no": null,
+    "name": "BusinessClub Ходынка (Ходынка)",
+    "address": "Авиаконструктора Микояна",
+    "status": "exact_match",
+    "matched_project_id": "proj-26",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-049",
+    "canonical_no": null,
+    "name": "Speace Jet Тимура Фрунзе (Красная Роза)",
+    "address": "Тимура Фрунзе, 11с33",
+    "status": "exact_match",
+    "matched_project_id": "proj-27",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-050",
+    "canonical_no": null,
+    "name": "Speace Jet Белая площадь (Белая Площадь)",
+    "address": "Лесная улица,5,стр. а-в",
+    "status": "exact_match",
+    "matched_project_id": "proj-28",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-051",
+    "canonical_no": null,
+    "name": "Speace Jet Аркус (Аркус 3)",
+    "address": "Ленинградский проспект 37Ас4",
+    "status": "exact_match",
+    "matched_project_id": "proj-29",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-052",
+    "canonical_no": null,
+    "name": "Speace Jet Якиманка (Большая Якиманка 26)",
+    "address": "Большая Якиманка 26",
+    "status": "exact_match",
+    "matched_project_id": "proj-30",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-053",
+    "canonical_no": null,
+    "name": "Multispace Галерея Актер",
+    "address": "Тверская ул., 16, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-41",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-054",
+    "canonical_no": null,
+    "name": "СODE Novo 2 (1-й Щемиловский 16с2)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-32",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-055",
+    "canonical_no": null,
+    "name": "Smart Yard (на Волгоградском) (РТС Волгоградский)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-47",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-056",
+    "canonical_no": null,
+    "name": "Порта (Заречная 2/1)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-35",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-057",
+    "canonical_no": null,
+    "name": "AFI Gallery 4 эт",
+    "address": "г. Москва, Тверская Застава пл, д. 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-39",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-058",
+    "canonical_no": null,
+    "name": "AFI Gallery 7 эт",
+    "address": "г. Москва, Тверская Застава пл, д. 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-40",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-059",
+    "canonical_no": null,
+    "name": "Multispace Галерея Актер",
+    "address": "Тверская ул., 16, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-41",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-060",
+    "canonical_no": null,
+    "name": "Атмосфера (Известия) (БЦ Известия)",
+    "address": "Тверская ул., 18",
+    "status": "exact_match",
+    "matched_project_id": "proj-42",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-061",
+    "canonical_no": null,
+    "name": "Атмосфера (РИО на Ленинском) (ТЦ РИО на Ленинском)",
+    "address": "Ленинский пр-т 109",
+    "status": "exact_match",
+    "matched_project_id": "proj-43",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-062",
+    "canonical_no": null,
+    "name": "Атмосфера (Квартал Вэст) (Квартал Вэст)",
+    "address": "Аминьевское шоссе, 6",
+    "status": "exact_match",
+    "matched_project_id": "proj-44",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-063",
+    "canonical_no": null,
+    "name": "Signature Столешников (Signature Столешников, 11)",
+    "address": "Столешников пер., 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-242",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-064",
+    "canonical_no": null,
+    "name": "Регус (Пр. Мира, 40) (Проспект Мира, 40)",
+    "address": "Мира пр-т, 40",
+    "status": "exact_match",
+    "matched_project_id": "proj-219",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-065",
+    "canonical_no": null,
+    "name": "Smart Yard (на Волгоградском) (РТС Волгоградский)",
+    "address": "Волгоградский проспект, 32к31",
+    "status": "exact_match",
+    "matched_project_id": "proj-47",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-066",
+    "canonical_no": null,
+    "name": "Flexity (Павелецкая Плаза (А))",
+    "address": "Павелецкая площадь, 2с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-48",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-067",
+    "canonical_no": null,
+    "name": "Flexity Solo (Павелецкая Плаза (А))",
+    "address": "Павелецкая площадь, 2с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-49",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-068",
+    "canonical_no": null,
+    "name": "Ключ Сретенка (Сретенка)",
+    "address": "Сретенский бульвар, 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-110",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-069",
+    "canonical_no": null,
+    "name": "SOK (SOK Сити (3 и 4 этаж))",
+    "address": "Пресненская наб., 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-51",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-070",
+    "canonical_no": null,
+    "name": "SOK (SOK Арена Парк (Рыбаков Тауэр))",
+    "address": "Ленинградский пр-т, вл. 36 стр. 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-52",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-071",
+    "canonical_no": null,
+    "name": "SOK (SOK Арена Парк 2)",
+    "address": "Ленинградский пр-т, вл. 36",
+    "status": "exact_match",
+    "matched_project_id": "proj-53",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-072",
+    "canonical_no": null,
+    "name": "SOK (SOK Сады Пекина)",
+    "address": "Садовая Большая ул., 5 корп. 1-2",
+    "status": "exact_match",
+    "matched_project_id": "proj-54",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-073",
+    "canonical_no": null,
+    "name": "SOK (SOK Земляной Вал)",
+    "address": "Земляной Вал ул., 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-55",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-074",
+    "canonical_no": null,
+    "name": "Space 1 (Лужники)",
+    "address": "Лкжнецкая набережная",
+    "status": "exact_match",
+    "matched_project_id": "proj-56",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-075",
+    "canonical_no": null,
+    "name": "Apollax Space (Технопарк)",
+    "address": "Проспект Андропова, 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-193",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-076",
+    "canonical_no": null,
+    "name": "Apollax Space (Останкино)",
+    "address": "Огородный пр., 16/1с2",
+    "status": "exact_match",
+    "matched_project_id": "proj-190",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-077",
+    "canonical_no": null,
+    "name": "Apollax Space (Новосущевский)",
+    "address": "ул. Сущёвский Вал, 18",
+    "status": "exact_match",
+    "matched_project_id": "proj-186",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-078",
+    "canonical_no": null,
+    "name": "Apollax Space (Новослободская)",
+    "address": "Новослободская ул., 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-195",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-079",
+    "canonical_no": null,
+    "name": "Grow up (GrowUp на Павелецкой)",
+    "address": "ул. Дубининская, д.53, строение 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-62",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-080",
+    "canonical_no": null,
+    "name": "Газетный (Газетный 17)",
+    "address": "Газетный пер., 17",
+    "status": "exact_match",
+    "matched_project_id": "proj-162",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-081",
+    "canonical_no": null,
+    "name": "Ходынка (Авиаконструктора Микояна)",
+    "address": "ул. Авиакоструктора Микояна, д. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-66",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-082",
+    "canonical_no": null,
+    "name": "Speace  Jet Белая площадь (Белая Площадь)",
+    "address": "Лесная улица,5,стр. а-в",
+    "status": "exact_match",
+    "matched_project_id": "proj-65",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-083",
+    "canonical_no": null,
+    "name": "Ходынка (Авиаконструктора Микояна)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-66",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-084",
+    "canonical_no": null,
+    "name": "Apollax Space (Останкино)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-190",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-085",
+    "canonical_no": null,
+    "name": "Apollax Space (Кузнецкий Мост)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-198",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-086",
+    "canonical_no": null,
+    "name": "Apollax Space (Технопарк)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-193",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-087",
+    "canonical_no": null,
+    "name": "Apollax Space (Новосущевский)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-186",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-088",
+    "canonical_no": null,
+    "name": "Apollax Space (Новослободская)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-195",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-089",
+    "canonical_no": null,
+    "name": "Space 1 (Балчуг)",
+    "address": "Садовническая, 9",
+    "status": "exact_match",
+    "matched_project_id": "proj-74",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-090",
+    "canonical_no": null,
+    "name": "Space Балчуг (Балчуг)",
+    "address": "Садовническая ул., 9А",
+    "status": "exact_match",
+    "matched_project_id": "proj-137",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-091",
+    "canonical_no": null,
+    "name": "Speace  Jet Тимура Фрунзе (Красная Роза)",
+    "address": "Тимура Фрунзе, 11с33",
+    "status": "exact_match",
+    "matched_project_id": "proj-76",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-092",
+    "canonical_no": null,
+    "name": "СODE Delegat (1-й Щемиловский 16с2)",
+    "address": "1-й Щемиловский 16с2",
+    "status": "exact_match",
+    "matched_project_id": "proj-151",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-093",
+    "canonical_no": null,
+    "name": "Multispace Porta (Porta)",
+    "address": "Москва, Заречная улица, 2/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-79",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-094",
+    "canonical_no": null,
+    "name": "SOK Арена Парк 2 (SOK Арена Парк 2)",
+    "address": "Ленинградский пр-т, вл. 36",
+    "status": "exact_match",
+    "matched_project_id": "proj-81",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-095",
+    "canonical_no": null,
+    "name": "SOK Арена Парк (Рыбаков Тауэр) (SOK Арена Парк (Рыбаков Тауэр))",
+    "address": "Ленинградский пр-т, вл. 36 стр. 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-82",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-096",
+    "canonical_no": null,
+    "name": "Manufaqtury Поклонка (Poklonka Place)",
+    "address": "г. Москва, ул. Поклонная, д. 3, корп. 1-4",
+    "status": "exact_match",
+    "matched_project_id": "proj-174",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-097",
+    "canonical_no": null,
+    "name": "Manufaqtury Поклонка (Poklonka Place)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-174",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-098",
+    "canonical_no": null,
+    "name": "Онегин PMG (Онегин)",
+    "address": "Москва, улица Малая Полянка, 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-92",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-099",
+    "canonical_no": null,
+    "name": "Регус (Домников) (Домников)",
+    "address": "Маши Порываевой ул., д. 34",
+    "status": "exact_match",
+    "matched_project_id": "proj-93",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-100",
+    "canonical_no": null,
+    "name": "Регус (Вивальди) (Вивальди Плаза)",
+    "address": "ул. Летниковская, д. 2, стр 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-94",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-101",
+    "canonical_no": null,
+    "name": "Ключ Остоженка (Остоженка)",
+    "address": "Остоженка, д. 25, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-105",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-102",
+    "canonical_no": null,
+    "name": "Ключ Арма (Арма)",
+    "address": "Сусальный Нижний пер., 5 стр. 4",
+    "status": "exact_match",
+    "matched_project_id": "proj-107",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-103",
+    "canonical_no": null,
+    "name": "Ключ Сретенка (Сретенка)",
+    "address": "Сретенский бульвар, 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-110",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-104",
+    "canonical_no": null,
+    "name": "Практик на Пролетарской (ул. Воронцовская, д. 49/28)",
+    "address": "ул. Воронцовская, д. 49/28",
+    "status": "exact_match",
+    "matched_project_id": "proj-111",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-105",
+    "canonical_no": null,
+    "name": "Ключ на Кузнецком мосту (КМ19)",
+    "address": "Кузнецкий Мост ул., 19",
+    "status": "exact_match",
+    "matched_project_id": "proj-114",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-106",
+    "canonical_no": null,
+    "name": "Space 1 (Композиторская)",
+    "address": "Композиторская, 17",
+    "status": "exact_match",
+    "matched_project_id": "proj-116",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-107",
+    "canonical_no": null,
+    "name": "Meeting point (Даниловская Мануфактура)",
+    "address": "Варшавское шоссе, 9",
+    "status": "exact_match",
+    "matched_project_id": "proj-118",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-108",
+    "canonical_no": null,
+    "name": "Meeting point (Гостиница Москва)",
+    "address": "Ул. Охотный ряд, д.2",
+    "status": "exact_match",
+    "matched_project_id": "proj-119",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-109",
+    "canonical_no": null,
+    "name": "Officeless (Милютинский)",
+    "address": "Милютинский 13с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-121",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-110",
+    "canonical_no": null,
+    "name": "Officeless (Полянка)",
+    "address": "Малая Полянка, 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-123",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-111",
+    "canonical_no": null,
+    "name": "Space 1 (Меркурий)",
+    "address": "1-й Красногвардейский пр-д, 15",
+    "status": "exact_match",
+    "matched_project_id": "proj-125",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-112",
+    "canonical_no": null,
+    "name": "Space 1 (Фабрика Станиславского)",
+    "address": "Станиславского 21",
+    "status": "exact_match",
+    "matched_project_id": "proj-127",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-113",
+    "canonical_no": null,
+    "name": "Space 1 (Арбат)",
+    "address": "Арбат ул., 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-130",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-114",
+    "canonical_no": null,
+    "name": "Speace  Jet Аркус (Аркус 3)",
+    "address": "Ленинградский проспект 37Ас4",
+    "status": "exact_match",
+    "matched_project_id": "proj-131",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-115",
+    "canonical_no": null,
+    "name": "Speace  Jet Якиманка (Большая Якиманка 26)",
+    "address": "Большая Якиманка 26",
+    "status": "exact_match",
+    "matched_project_id": "proj-133",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-116",
+    "canonical_no": null,
+    "name": "Speace  Jet Белая площадь (Белая Площадь площадка закрыта)",
+    "address": "Лесная улица,5,стр. а-в",
+    "status": "exact_match",
+    "matched_project_id": "proj-135",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-117",
+    "canonical_no": null,
+    "name": "Space Балчуг (Балчуг)",
+    "address": "Садовническая ул., 9А",
+    "status": "exact_match",
+    "matched_project_id": "proj-137",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-118",
+    "canonical_no": null,
+    "name": "Space Вивальди (Вивальди)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-140",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-119",
+    "canonical_no": null,
+    "name": "Space  Jet Тимура Фрунзе (Красная Роза)",
+    "address": "Тимура Фрунзе, 11с33",
+    "status": "exact_match",
+    "matched_project_id": "proj-142",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-120",
+    "canonical_no": null,
+    "name": "Refolio Достоевский (Refolio Достоевский)",
+    "address": "Институтский пер., 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-143",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-121",
+    "canonical_no": null,
+    "name": "СODE Якиманка (Кадашевская наб., 6)",
+    "address": "Кадашевская наб 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-145",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-122",
+    "canonical_no": null,
+    "name": "СODE Савеловская (МФК Савеловский сити)",
+    "address": "Новодмитровская улица,2,корп. 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-148",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-123",
+    "canonical_no": null,
+    "name": "СODE Novo (Долгоруковская 21)",
+    "address": "Долгоруковская 21",
+    "status": "exact_match",
+    "matched_project_id": "proj-149",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-124",
+    "canonical_no": null,
+    "name": "СODE Delegat (1-й Щемиловский 16с2)",
+    "address": "1-й Щемиловский 16с2",
+    "status": "exact_match",
+    "matched_project_id": "proj-151",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-125",
+    "canonical_no": null,
+    "name": "Multispace Динамо (ВТБ Арена стр 8)",
+    "address": "Ленинградский проспект,36,корп. 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-154",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-126",
+    "canonical_no": null,
+    "name": "Multispace Павелецкая (1 шипковский пер. 5)",
+    "address": "Ленинградский проспект,36,корп. 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-156",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-127",
+    "canonical_no": null,
+    "name": "Multispace Дубинин (Дубинин Скай)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-157",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-128",
+    "canonical_no": null,
+    "name": "Multispace Актер (Галерея Актер)",
+    "address": "Тверская ул., 16, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-160",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-129",
+    "canonical_no": null,
+    "name": "Газетный (Газетный 17)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-162",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-130",
+    "canonical_no": null,
+    "name": "SOK Арена Парк 2 (SOK Арена Парк)",
+    "address": "Ленинградский пр-т, вл. 36 ср.10",
+    "status": "exact_match",
+    "matched_project_id": "proj-163",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-131",
+    "canonical_no": null,
+    "name": "SOK Арена Парк (Рыбаков Тауэр) (SOK Рыбаков Тауэр)",
+    "address": "Ленинградский пр-т, вл. 36 стр. 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-166",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-132",
+    "canonical_no": null,
+    "name": "SOK Земляной Вал (SOK Земляной Вал)",
+    "address": "Земляной Вал ул., 8",
+    "status": "exact_match",
+    "matched_project_id": "proj-167",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-133",
+    "canonical_no": null,
+    "name": "SOK Сады Пекина (SOK Сады Пекина)",
+    "address": "Садовая Большая ул., 5 корп. 1-2",
+    "status": "exact_match",
+    "matched_project_id": "proj-169",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-134",
+    "canonical_no": null,
+    "name": "SOK Сити (3 и 4 этаж) (SOK Сити (3 и 4 этаж))",
+    "address": "Пресненская наб., 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-172",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-135",
+    "canonical_no": null,
+    "name": "Manufaqtury Поклонка (Poklonka Place)",
+    "address": "г. Москва, ул. Поклонная, д. 3, корп.",
+    "status": "exact_match",
+    "matched_project_id": "proj-174",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-136",
+    "canonical_no": null,
+    "name": "AFI GAllery",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-176",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-137",
+    "canonical_no": null,
+    "name": "Deworkacy Савинский (Deworkacy Савинский)",
+    "address": "Саввинский 8 стр.1",
+    "status": "exact_match",
+    "matched_project_id": "proj-178",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-138",
+    "canonical_no": null,
+    "name": "Apollax Space (Империя)",
+    "address": "Пресненская набережная, 6с2",
+    "status": "exact_match",
+    "matched_project_id": "proj-179",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-139",
+    "canonical_no": null,
+    "name": "Apollax Space (Никольская)",
+    "address": "Ветошный пер. 13",
+    "status": "exact_match",
+    "matched_project_id": "proj-182",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-140",
+    "canonical_no": null,
+    "name": "Apollax Space (Федерация (Сити))",
+    "address": "Пресненская наб. 12, башня Федерация, 18 этаж",
+    "status": "exact_match",
+    "matched_project_id": "proj-183",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-141",
+    "canonical_no": null,
+    "name": "Apollax Space (Новосущевский)",
+    "address": "Сущевский вал 18",
+    "status": "exact_match",
+    "matched_project_id": "proj-186",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-142",
+    "canonical_no": null,
+    "name": "Apollax Space (Цветной бульвар)",
+    "address": "Цветной бульвар, 30с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-187",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-143",
+    "canonical_no": null,
+    "name": "Apollax Space (Останкино)",
+    "address": "Огородный проезд, вл 16 стр.4",
+    "status": "exact_match",
+    "matched_project_id": "proj-190",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-144",
+    "canonical_no": null,
+    "name": "Apollax Space (Бригантина)",
+    "address": "Новолесная, 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-191",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-145",
+    "canonical_no": null,
+    "name": "Apollax Space (Технопарк)",
+    "address": "Проспект Андровпова 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-193",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-146",
+    "canonical_no": null,
+    "name": "Apollax Space (Новослободская)",
+    "address": "Новослободская улица 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-195",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-147",
+    "canonical_no": null,
+    "name": "Apollax Space (Кузнецкий Мост)",
+    "address": "Кузнецкий мост 13",
+    "status": "exact_match",
+    "matched_project_id": "proj-198",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-148",
+    "canonical_no": null,
+    "name": "Workki Зубовский (Зубовский 17)",
+    "address": "Зубовский б-р 17 стр.1",
+    "status": "exact_match",
+    "matched_project_id": "proj-199",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-149",
+    "canonical_no": null,
+    "name": "Workki Сити (Федерация (Сити))",
+    "address": "Пресненская наб. 12, башня Федерация, 18 этаж",
+    "status": "exact_match",
+    "matched_project_id": "proj-202",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-150",
+    "canonical_no": null,
+    "name": "Workki Нео Гео (Нео Гео)",
+    "address": "ул. Бутлерова 17",
+    "status": "exact_match",
+    "matched_project_id": "proj-203",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-151",
+    "canonical_no": null,
+    "name": "Workki ФОК (ФОК)",
+    "address": "Новорязанская, д.8А",
+    "status": "exact_match",
+    "matched_project_id": "proj-206",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-152",
+    "canonical_no": null,
+    "name": "Workki Комсомольская (Workki Комсомольская)",
+    "address": "Новорязанская, д.8",
+    "status": "exact_match",
+    "matched_project_id": "proj-207",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-153",
+    "canonical_no": null,
+    "name": "Workki Тульский (На Тульской)",
+    "address": "Б. Тульская стр.19",
+    "status": "exact_match",
+    "matched_project_id": "proj-210",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-154",
+    "canonical_no": null,
+    "name": "F2 (DM Tower)",
+    "address": "Новоданиловская наб. 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-211",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-155",
+    "canonical_no": null,
+    "name": "Рабочая Станция (Парк Горького) (Парк Горького)",
+    "address": "Ленинский пр-т 30А",
+    "status": "exact_match",
+    "matched_project_id": "proj-213",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-156",
+    "canonical_no": null,
+    "name": "Регус (Гринвуд) (Гринвуд)",
+    "address": "72 км МКАД, п/о Путилково, строение 19",
+    "status": "exact_match",
+    "matched_project_id": "proj-215",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-157",
+    "canonical_no": null,
+    "name": "Smart Yard (на Басманной) (на Басманной)",
+    "address": "Бауманская ул. 15",
+    "status": "exact_match",
+    "matched_project_id": "proj-218",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-158",
+    "canonical_no": null,
+    "name": "Регус (Пр. Мира, 40) (Проспект Мира, 40)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-219",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-159",
+    "canonical_no": null,
+    "name": "Регус (Капитолий) (Капитолий Вернадского)",
+    "address": "Вернадского проспект,6",
+    "status": "exact_match",
+    "matched_project_id": "proj-222",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-160",
+    "canonical_no": null,
+    "name": "Регус (Ситидел) (Citydel)",
+    "address": "ул. Земляной Вал, 9",
+    "status": "exact_match",
+    "matched_project_id": "proj-223",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-161",
+    "canonical_no": null,
+    "name": "Регус (Авион) (Авион)",
+    "address": "Ленинградский проспект,47",
+    "status": "exact_match",
+    "matched_project_id": "proj-225",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-162",
+    "canonical_no": null,
+    "name": "F2 - Федерация (Федерация (Сити))",
+    "address": "Пресненская набережная, 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-228",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-163",
+    "canonical_no": null,
+    "name": "Регус (Лесная Плаза) (White Stone)",
+    "address": "4-й Лесной пер., 4",
+    "status": "exact_match",
+    "matched_project_id": "proj-229",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-164",
+    "canonical_no": null,
+    "name": "Коворкинг СОЛЬ (Ролл Холл)",
+    "address": "Холодильный пер. 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-232",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-165",
+    "canonical_no": null,
+    "name": "KW Балчуг (Балчуг)",
+    "address": "Садовническая наб., 9",
+    "status": "exact_match",
+    "matched_project_id": "proj-233",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-166",
+    "canonical_no": null,
+    "name": "KW Павелецкая (Black&White)",
+    "address": "Кожевническая ул. 14",
+    "status": "exact_match",
+    "matched_project_id": "proj-235",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-167",
+    "canonical_no": null,
+    "name": "KW Симонов (Симонов)",
+    "address": "улица Ленинская Слобода, 26с5",
+    "status": "exact_match",
+    "matched_project_id": "proj-238",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-168",
+    "canonical_no": null,
+    "name": "F2 (Фили Град)",
+    "address": "Береговой проезд, 5Ак1",
+    "status": "exact_match",
+    "matched_project_id": "proj-239",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-169",
+    "canonical_no": null,
+    "name": "Signature Столешников (Signature Столешников, 11)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-242",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-170",
+    "canonical_no": null,
+    "name": "Flexity (Риверсайд Тауэрс)",
+    "address": "Космадамианская наб., 52",
+    "status": "exact_match",
+    "matched_project_id": "proj-243",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-171",
+    "canonical_no": null,
+    "name": "Flexity (Садовая Плаза)",
+    "address": "Долгоруковская ул. 7",
+    "status": "exact_match",
+    "matched_project_id": "proj-246",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-172",
+    "canonical_no": null,
+    "name": "Flexity (Овчинниковский)",
+    "address": "Овчинниковская наб., 18",
+    "status": "exact_match",
+    "matched_project_id": "proj-248",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-173",
+    "canonical_no": null,
+    "name": "Flexity SOLO/Flexity (Павелецкая Плаза (В))",
+    "address": "Павелецкая площадь, 2с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-255",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-174",
+    "canonical_no": null,
+    "name": "Flexity SOLO/Flexity (Павелецкая Плаза (А))",
+    "address": "Павелецкая площадь, 2с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-256",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-175",
+    "canonical_no": null,
+    "name": "Flexity SOLO/Flexity (Башня на набережной (В))",
+    "address": "Пресненская наб., 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-257",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
+    "coord_corroborated": true
   }
 ]
