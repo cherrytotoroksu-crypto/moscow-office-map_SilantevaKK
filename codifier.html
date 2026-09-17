@@ -336,18 +336,42 @@ const GEOMETRY_QUALITY_DISPLAY = {
 // — 714 более дробных building-level записей) — cls_matched/reg_matched честно
 // показывает, где пары нет, а не выдумывает значение.
 const CODIFIER_COLUMNS = [
-  // canonical_no — порядковый номер строки в общем кодификаторе (не ID
-  // проекта и не связан с нумерацией на листах Продажа/Аренда/Коворкинги —
-  // тот приходит из отдельного поля canonical_project_id, см. ниже).
-  {key:'canonical_no', label:'№ строки (не ID)', type:'number', visible:true},
+  // Порядок столбцов по запросу пользователя (2026-09-17): ID проекта → SubID
+  // корпуса → ID лота → Девелопер → Название проекта → Название корпуса →
+  // Здание/блок → Класс → Адрес → Квартал ввода → Год ввода → Введён/не
+  // введён → Фаза проекта → площади (проект/корпус x общая/офисная) → Статус.
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
-  {key:'tower_label', label:'Башня/корпус', type:'text', visible:true},
-  {key:'name', label:'Проект', type:'text', visible:true},
-  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'subid', label:'SubID корпуса', type:'text', visible:true},
+  // ID лота — на уровне ЭТОЙ таблицы (проект/корпус) не применимо: лоты живут
+  // в отдельных data/lots_{quarter}.json/rent_lots_{quarter}.json на другом
+  // уровне детализации (один корпус = много лотов) — колонка оставлена по
+  // просьбе для единообразия структуры, но всегда пустая здесь, не гадаем
+  // "один из лотов" произвольно. См. разделы "Продажа"/"Аренда" для лотов.
+  {key:'lot_id_not_applicable', label:'ID лота', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
+  // "Название проекта" — общий префикс имён всех corpus-строк одного
+  // canonical_project_id (computeProjectGroupNames(), см. loadCodifier) —
+  // для однокорпусных проектов совпадает с "Здание/блок". "Название корпуса"
+  // — короткая метка корпуса (tower_label, напр. "K1", "M3.1", "Восточная
+  // лента"). "Здание/блок" — name самой этой строки кодификатора (полное
+  // название, как хранится в data/unified_classifier_audited_2026-08-27.json).
+  {key:'reg_project_name', label:'Название проекта', type:'text', visible:true},
+  {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
+  {key:'name', label:'Здание/блок', type:'text', visible:true},
   {key:'cls', label:'Класс', type:'text', visible:true},
-  {key:'gba', label:'GBA, м²', type:'number', visible:false},
-  {key:'gla', label:'GLA, м²', type:'number', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'commission_quarter', label:'Квартал ввода', type:'number', visible:true},
+  {key:'commission_year', label:'Год ввода', type:'number', visible:true},
+  {key:'is_commissioned', label:'Введён / не введён', type:'bool', visible:true, boolTrueLabel:'введён', boolFalseLabel:'не введён'},
+  // Фаза проекта (начальный этап стройки / монтаж фундамента / монтаж нижних
+  // этажей / монтаж средних этажей / монтаж верхних этажей / фасадные работы
+  // / внутренние работы / сдан) и схема продажи (ДДУ/ДКПБВ/ДКП) — ДАННЫХ ПО
+  // ЭТИМ ПОЛЯМ СЕЙЧАС НЕТ НИ В ОДНОМ ФАЙЛЕ ПРОЕКТА. Колонки добавлены как
+  // плейсхолдер по структуре запроса, всегда пустые — заполнение требует
+  // отдельного сбора данных по каждому зданию (сайты застройщиков/ЕИСЖС),
+  // не выводится ни из чего уже имеющегося. НЕ гадать/не заполнять наугад.
+  {key:'project_phase_todo', label:'Фаза проекта', type:'text', visible:true},
+  {key:'sale_scheme_todo', label:'Схема продажи', type:'text', visible:true},
   // --- площади корпус/проект (join по названию к реестру, см. loadCodifier) ---
   // "Корпус" = сама эта строка кодификатора (здание/башня); "проект" = сумма
   // по всем строкам реестра с тем же canonical_project_id. У однокорпусных
@@ -355,12 +379,16 @@ const CODIFIER_COLUMNS = [
   // может включать неофисные функции МФК (ритейл и т.п.), office_area в
   // реестре заполнено пока для единиц зданий (см. project_future_projects_verification
   // memory) — пусто, а не 0/GLA, там где не подтверждено отдельно.
+  {key:'reg_project_gba', label:'Общая площадь проекта (реестр), м²', type:'number', visible:true},
+  {key:'reg_project_office_area', label:'Площадь офисов проекта (реестр), м²', type:'number', visible:true},
   {key:'reg_corpus_gba', label:'Общая площадь корпуса (реестр), м²', type:'number', visible:true},
   {key:'reg_corpus_office_area', label:'Площадь офисов корпуса (реестр), м²', type:'number', visible:true},
-  {key:'reg_project_gba', label:'Общая площадь проекта (реестр), м²', type:'number', visible:false},
-  {key:'reg_project_office_area', label:'Площадь офисов проекта (реестр), м²', type:'number', visible:false},
   {key:'status', label:'Статус', type:'text', visible:true},
-  {key:'commission_label', label:'Ввод', type:'text', visible:true},
+  // --- прочие поля (порядок ниже не менялся по запросу — только верхний блок) ---
+  {key:'canonical_no', label:'№ строки (не ID)', type:'number', visible:false},
+  {key:'gba', label:'GBA, м²', type:'number', visible:false},
+  {key:'gla', label:'GLA, м²', type:'number', visible:false},
+  {key:'commission_label', label:'Ввод (текстом)', type:'text', visible:false},
   {key:'coords_label', label:'Координаты', type:'text', visible:false},
   {key:'coordinates_status', label:'Точность координат', type:'text', visible:false},
   {key:'market_channel', label:'Канал реализации', type:'list', visible:true, displayMap: MARKET_CHANNEL_DISPLAY},
@@ -647,9 +675,15 @@ async function buildProjectIdCrosswalk() {
   })();
   return projectIdCrosswalkReady;
 }
+// Раньше при промахе кроссвока возвращался СЫРОЙ id реестра ("proj-13") как
+// есть — PROJECT_ID_NUMBER() потом отрезал префикс при отображении, и "13"
+// от НЕподтверждённого сопоставления визуально становилось неотличимо от
+// настоящего единого ID (могло случайно совпасть с номером другого,
+// несвязанного проекта в схеме нумерации кодификатора/buildings_*.json).
+// Без подтверждённого кроссвока — null (пусто в таблице), не гадательное число.
 function unifiedProjectId(rawId) {
   if (rawId == null) return rawId;
-  return projectIdCrosswalk.has(rawId) ? projectIdCrosswalk.get(rawId) : rawId;
+  return projectIdCrosswalk.has(rawId) ? projectIdCrosswalk.get(rawId) : null;
 }
 let currentQuarterId = QUARTERS[0].id;
 let dataMeta = {};
@@ -741,9 +775,21 @@ async function loadCodifier() {
   allProjectsLayer = registryRows;
   await buildProjectIdCrosswalk();
   const projectAreas = projectAreaAggregates(allProjectsLayer);
+  const projectGroupNames = computeProjectGroupNames(allProjectsLayer);
 
   const rows = classifierData.records || [];
   const byName = registryByNameMap();
+  // НЕТ фолбэк-агрегации по собственному canonical_project_id кодификатора:
+  // проверка вживую показала, что unified_classifier_audited_2026-08-27.json
+  // местами содержит НЕОЧИЩЕННЫЕ дубли строк для одного и того же корпуса
+  // (напр. "Бадаевский Восточная лента" (gba=18858, устар.) дублируется
+  // "Бадаевский (Восточная лента)" (gba=11145) под тем же canonical_project_id
+  // 282 — 4 строки на 2 реальных корпуса) — наивная сумма по этому полю даёт
+  // двойной счёт (45429 вместо верных 18858). Без надёжного способа отличить
+  // "несколько реальных корпусов" от "задвоенные строки одного корпуса" на
+  // уровне ДАННЫХ кодификатора, безопаснее НЕ агрегировать самостоятельно —
+  // "Общая площадь проекта" доступна только там, где есть join по имени к
+  // data/all_projects_layer.json (чистый реестр без такого дублирования).
   for (const r of rows) {
     r.commission_label = r.commission_year
       ? (r.commission_quarter ? `Q${r.commission_quarter} ${r.commission_year}` : String(r.commission_year))
@@ -773,12 +819,25 @@ async function loadCodifier() {
     // "Корпус" = эта же строка реестра (может быть проектом целиком, если
     // entity_grain='project' без деления на здания); "проект" = сумма по
     // canonical_project_id из projectAreaAggregates() выше. Без пары в
-    // реестре (reg=null) — все 4 поля пусто, не подставляем 0.
-    r.reg_corpus_gba = reg ? reg.gba : null;
+    // реестре — фолбэк на собственные (уже проаудированные) данные этой же
+    // строки кодификатора, не пусто "на всякий случай": gba у записи есть
+    // всегда, office_area — поле только реестра, фолбэка для него нет.
+    r.reg_corpus_gba = reg ? reg.gba : r.gba;
     r.reg_corpus_office_area = reg ? reg.office_area : null;
     const projArea = reg ? projectAreas.get(reg.canonical_project_id) : null;
     r.reg_project_gba = projArea ? projArea.gba : null;
     r.reg_project_office_area = projArea ? projArea.officeArea : null;
+
+    // "Название проекта" — общий префикс имён по реестру (computeProjectGroupNames,
+    // группировка по ЧИСТОМУ canonical_project_id реестра, без риска дублей,
+    // см. комментарий выше про Бадаевский); без пары в реестре — просто имя
+    // самой этой строки (не пытаемся группировать по canonical_project_id
+    // самого кодификатора, там дубли строк корпусов встречаются).
+    r.reg_project_name = reg ? projectGroupNames.get(reg.canonical_project_id) : r.name;
+
+    // Введён/не введён — по текстовому статусу самой записи (Сданный/Введён
+    // и т.п.); честная бинаризация без домысливания дат для остальных статусов.
+    r.is_commissioned = /сдан|введ/i.test(r.status || '');
   }
   state.codifier.rows = rows;
   dataMeta.codifier = {updated: classifierData.generated_at || classifierData.last_verified_at || null, count: rows.length};
