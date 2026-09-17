@@ -6949,5 +6949,1765 @@
     "matched_project_id": "proj-257",
     "match_basis": "name (source: data/all_projects_layer.json entity_role=coworking_site, добавлено 2026-09-17)",
     "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-176",
+    "canonical_no": null,
+    "name": "STONE Пресня",
+    "address": "г. Москва, Ходынская ул., вл. 2, стр. 9",
+    "status": "exact_match",
+    "matched_project_id": "proj-1",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-177",
+    "canonical_no": null,
+    "name": "Lunar",
+    "address": "Ленинский пр-кт, 38",
+    "status": "exact_match",
+    "matched_project_id": "proj-14",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-178",
+    "canonical_no": null,
+    "name": "БЦ Сколково",
+    "address": "Большой бульвар, 40, Инновационный центр Сколково",
+    "status": "exact_match",
+    "matched_project_id": "proj-22",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-179",
+    "canonical_no": null,
+    "name": "STONE Towers",
+    "address": "г. Москва, Беговой р-н, проезд Бумажный, д. 19",
+    "status": "exact_match",
+    "matched_project_id": "proj-33",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-180",
+    "canonical_no": null,
+    "name": "На берзарина",
+    "address": "Берзарина ул., вл. 32",
+    "status": "exact_match",
+    "matched_project_id": "proj-57",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-181",
+    "canonical_no": null,
+    "name": "Бизнес-центр SEZAR",
+    "address": "Москва, 2-й Силикатный проезд, 13",
+    "status": "exact_match",
+    "matched_project_id": "proj-72",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-182",
+    "canonical_no": null,
+    "name": "БЦ Мещерский",
+    "address": "г. Москва, Боровское шоссе, вл.2",
+    "status": "exact_match",
+    "matched_project_id": "proj-73",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-183",
+    "canonical_no": null,
+    "name": "Lunar модуль В",
+    "address": "Ленинский пр-кт, 38",
+    "status": "exact_match",
+    "matched_project_id": "proj-80",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-184",
+    "canonical_no": null,
+    "name": "Slava",
+    "address": "1-я ул. Ямского Поля, 8, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-87",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-185",
+    "canonical_no": null,
+    "name": "STONE Towers. Tower A",
+    "address": "г. Москва, Бумажный проезд, 19с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-88",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-186",
+    "canonical_no": null,
+    "name": "STONE Towers. Tower D",
+    "address": "г. Москва, Бумажный проезд, 19, стр. 4, 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-89",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-187",
+    "canonical_no": null,
+    "name": "STONE Towers. Towers BC",
+    "address": "г. Москва, Бумажный проезд, 19c2",
+    "status": "exact_match",
+    "matched_project_id": "proj-90",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-188",
+    "canonical_no": null,
+    "name": "STONE Белорусская",
+    "address": "1-я улица Ямского Поля, вл. 30",
+    "status": "exact_match",
+    "matched_project_id": "proj-91",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-189",
+    "canonical_no": null,
+    "name": "Алкон 3",
+    "address": "Ленинградский пр-т, 34",
+    "status": "exact_match",
+    "matched_project_id": "proj-95",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-190",
+    "canonical_no": null,
+    "name": "Королев (Рассвет)",
+    "address": "Столярный пер., 3 корп. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-98",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-191",
+    "canonical_no": null,
+    "name": "Магистральная 12 (бывший — Магистральная ул., 12)",
+    "address": "Москва, ул. Магистральная, 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-99",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-192",
+    "canonical_no": null,
+    "name": "Обсидиан (бывший — BusinessClass Ходынка)",
+    "address": "ул. Авиаконструктора Микояна, 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-100",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-193",
+    "canonical_no": null,
+    "name": "Парк Легенд класс А",
+    "address": "г. Москва, Даниловский р-н, ул. Автозаводская, д. 23А",
+    "status": "exact_match",
+    "matched_project_id": "proj-102",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-194",
+    "canonical_no": null,
+    "name": "Парк Легенд класс В+",
+    "address": "г. Москва, Даниловский р-н, Автозаводская ул., д. 23, стр. 120",
+    "status": "exact_match",
+    "matched_project_id": "proj-103",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-195",
+    "canonical_no": null,
+    "name": "AFI Парк Воронцовский",
+    "address": "ул. Академика Челомея, 1А",
+    "status": "exact_match",
+    "matched_project_id": "proj-106",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-196",
+    "canonical_no": null,
+    "name": "AFI2B Tagilskaya",
+    "address": "Москва, ул. Тагильская, вл. 4",
+    "status": "exact_match",
+    "matched_project_id": "proj-108",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-197",
+    "canonical_no": null,
+    "name": "Air (корпус 1 (20 эт.))",
+    "address": "Москва, ул. Ходынский бульвар, вл. 4/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-112",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-198",
+    "canonical_no": null,
+    "name": "Air (корпус 2 (28 эт.))",
+    "address": "Москва, ул. Ходынский бульвар, вл. 4/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-112",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-199",
+    "canonical_no": null,
+    "name": "ASPACE Хорошевская",
+    "address": "Москва, Хорошёвское шоссе, вл. 39",
+    "status": "exact_match",
+    "matched_project_id": "proj-113",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-200",
+    "canonical_no": null,
+    "name": "Fili Centre",
+    "address": "Промышленный проезд, вл. 5",
+    "status": "exact_match",
+    "matched_project_id": "proj-122",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-201",
+    "canonical_no": null,
+    "name": "Frame",
+    "address": "улица Пресненский Вал, 27с7",
+    "status": "exact_match",
+    "matched_project_id": "proj-126",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-202",
+    "canonical_no": null,
+    "name": "Geolog 2",
+    "address": "ул. Обручева, 23",
+    "status": "exact_match",
+    "matched_project_id": "proj-128",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-203",
+    "canonical_no": null,
+    "name": "iCITY (Time)",
+    "address": "г, Москва, Пресненский р-н, проезд Шмитовский, д, 37, стр 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-129",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-204",
+    "canonical_no": null,
+    "name": "iCITY (Space)",
+    "address": "г, Москва, Пресненский р-н, проезд Шмитовский, д, 37, стр 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-129",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-205",
+    "canonical_no": null,
+    "name": "Jois (CREDO)",
+    "address": "г. Москва, 3-й Силикатный проезд, 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-134",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-206",
+    "canonical_no": null,
+    "name": "Jois (MAST)",
+    "address": "г. Москва, 3-й Силикатный проезд, 10",
+    "status": "exact_match",
+    "matched_project_id": "proj-134",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-207",
+    "canonical_no": null,
+    "name": "K-city",
+    "address": "Бауманская, 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-136",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-208",
+    "canonical_no": null,
+    "name": "Link (RUNE)",
+    "address": "г. Москва, ул. Рябиновая, 44",
+    "status": "exact_match",
+    "matched_project_id": "proj-150",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-209",
+    "canonical_no": null,
+    "name": "Link (NEO)",
+    "address": "г. Москва, ул. Рябиновая, 44",
+    "status": "exact_match",
+    "matched_project_id": "proj-150",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-210",
+    "canonical_no": null,
+    "name": "Nevsky Plaza",
+    "address": "Москва, ул. Выборгская, 18",
+    "status": "exact_match",
+    "matched_project_id": "proj-155",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-211",
+    "canonical_no": null,
+    "name": "Солид (бывший — Nice Tower)",
+    "address": "Скотопрогонная ул, 31, Москва",
+    "status": "exact_match",
+    "matched_project_id": "proj-158",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-212",
+    "canonical_no": null,
+    "name": "Omni Tower",
+    "address": "Москва, ул. Алексея Свиридова, 7",
+    "status": "exact_match",
+    "matched_project_id": "proj-161",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-213",
+    "canonical_no": null,
+    "name": "Opus",
+    "address": "Дербеневская улица, 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-165",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-214",
+    "canonical_no": null,
+    "name": "Plaza Botanica",
+    "address": "г. Москва, Ростокино р-н, ул. Вильгельма Пика, д. 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-170",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-215",
+    "canonical_no": null,
+    "name": "STONE Калужская (K1)",
+    "address": "Москва, Старокалужское шоссе, вл. 64",
+    "status": "exact_match",
+    "matched_project_id": "proj-180",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-216",
+    "canonical_no": null,
+    "name": "STONE Калужская (K2)",
+    "address": "Москва, Старокалужское шоссе, вл. 64",
+    "status": "exact_match",
+    "matched_project_id": "proj-180",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-217",
+    "canonical_no": null,
+    "name": "STONE Калужская (K3)",
+    "address": "Москва, Старокалужское шоссе, вл. 64",
+    "status": "exact_match",
+    "matched_project_id": "proj-180",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-218",
+    "canonical_no": null,
+    "name": "STONE Курская",
+    "address": "Костомаровский пер., 11, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-181",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-219",
+    "canonical_no": null,
+    "name": "STONE Мневники I",
+    "address": "Москва, ул. Нижние Мнёвники, з/у 41",
+    "status": "exact_match",
+    "matched_project_id": "proj-185",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-220",
+    "canonical_no": null,
+    "name": "STONE Мневники II",
+    "address": "Москва, ул. Нижние Мнёвники, з/у 39",
+    "status": "exact_match",
+    "matched_project_id": "proj-188",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-221",
+    "canonical_no": null,
+    "name": "STONE Мневники III (M3.1)",
+    "address": "Москва, ул. Нижние Мневники, з/у 192",
+    "status": "exact_match",
+    "matched_project_id": "proj-189",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-222",
+    "canonical_no": null,
+    "name": "STONE Мневники III (M3.2)",
+    "address": "Москва, ул. Нижние Мневники, з/у 192",
+    "status": "exact_match",
+    "matched_project_id": "proj-189",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-223",
+    "canonical_no": null,
+    "name": "STONE Савеловская (Башня 1)",
+    "address": "Москва, ул. Двинцев, вл. 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-194",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-224",
+    "canonical_no": null,
+    "name": "STONE Савеловская (Башня 2)",
+    "address": "Москва, ул. Двинцев, вл. 3",
+    "status": "exact_match",
+    "matched_project_id": "proj-194",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-225",
+    "canonical_no": null,
+    "name": "STONE Ходынка I",
+    "address": "Москва, Ходынский бульвар, вл. 6/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-196",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-226",
+    "canonical_no": null,
+    "name": "STONE Ходынка II",
+    "address": "Москва, Ходынский бульвар, 20А/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-197",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-227",
+    "canonical_no": null,
+    "name": "STONE Ходынка III",
+    "address": "Москва, Ходынский бульвар, 20А/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-200",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-228",
+    "canonical_no": null,
+    "name": "West Pier",
+    "address": "Причальный проезд, 4к2",
+    "status": "exact_match",
+    "matched_project_id": "proj-212",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-229",
+    "canonical_no": null,
+    "name": "А101 Прокшино",
+    "address": "поселение Сосенское, квартал № 35",
+    "status": "exact_match",
+    "matched_project_id": "proj-216",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-230",
+    "canonical_no": null,
+    "name": "Бадаевский Восточная лента",
+    "address": "г. Москва, пр-кт Кутузовский, д. 12/1, корпус 12/2",
+    "status": "exact_match",
+    "matched_project_id": "badaevsky",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-231",
+    "canonical_no": null,
+    "name": "Башня Рябов",
+    "address": "Москва, Холодильный пер., 3к1с1",
+    "status": "exact_match",
+    "matched_project_id": "proj-220",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-232",
+    "canonical_no": null,
+    "name": "БЦ Варшавская",
+    "address": "г. Москва, Каширский пр-д, 25/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-224",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-233",
+    "canonical_no": null,
+    "name": "БЦ на ул. Эдварда Грига",
+    "address": "Москва, ул. Александры Монаховой, 39Б",
+    "status": "exact_match",
+    "matched_project_id": "proj-226",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-234",
+    "canonical_no": null,
+    "name": "МФК Строгино",
+    "address": "Москва, Строгино, пр-д №607, влд. 21",
+    "status": "exact_match",
+    "matched_project_id": "proj-236",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-235",
+    "canonical_no": null,
+    "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
+    "address": "Берзарина ул., вл. 32/4",
+    "status": "exact_match",
+    "matched_project_id": "proj-237",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-236",
+    "canonical_no": null,
+    "name": "Рублево Бизнес-Парк (Корпус 1)",
+    "address": "Улица Липовой Рощи, 1к4",
+    "status": "exact_match",
+    "matched_project_id": "proj-244",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-237",
+    "canonical_no": null,
+    "name": "Рублево Бизнес-Парк (Корпус 2)",
+    "address": "Улица Липовой Рощи, 1к4",
+    "status": "exact_match",
+    "matched_project_id": "proj-244",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-238",
+    "canonical_no": null,
+    "name": "Сити-4 (Здание А)",
+    "address": "Москва, Пресненская наб., 4",
+    "status": "exact_match",
+    "matched_project_id": "proj-245",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-239",
+    "canonical_no": null,
+    "name": "Сити-4 (Здание Б)",
+    "address": "Москва, Пресненская наб., 4",
+    "status": "exact_match",
+    "matched_project_id": "proj-245",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-240",
+    "canonical_no": null,
+    "name": "Бизнес-парк Раменки (бывший — Огни)",
+    "address": "г. Москва, ул. Лобачевского, 114Б",
+    "status": "exact_match",
+    "matched_project_id": "proj-252",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-241",
+    "canonical_no": null,
+    "name": "Upside Tech Сколково",
+    "address": "г. Москва, Нобеля ул.",
+    "status": "exact_match",
+    "matched_project_id": "proj-254",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-242",
+    "canonical_no": null,
+    "name": "STONE SKY Ходынка (F1)",
+    "address": "Москва, Ходынский бульвар",
+    "status": "exact_match",
+    "matched_project_id": "proj-258",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-243",
+    "canonical_no": null,
+    "name": "STONE SKY Ходынка (F2)",
+    "address": "Москва, Ходынский бульвар",
+    "status": "exact_match",
+    "matched_project_id": "proj-258",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-244",
+    "canonical_no": null,
+    "name": "Set (К1)",
+    "address": "г. Москва, ул. Верейская, д. 29/32Б",
+    "status": "exact_match",
+    "matched_project_id": "proj-261",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-245",
+    "canonical_no": null,
+    "name": "Set (К2)",
+    "address": "г. Москва, ул. Верейская, д. 29/32Б",
+    "status": "exact_match",
+    "matched_project_id": "proj-261",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-246",
+    "canonical_no": null,
+    "name": "LIKOVA",
+    "address": "г. Москва, ул. Омская, земельный участок 14/4",
+    "status": "exact_match",
+    "matched_project_id": "proj-266",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-247",
+    "canonical_no": null,
+    "name": "SEZAR TOWER",
+    "address": "1-й Красногвардейский пр-д, уч. 20",
+    "status": "exact_match",
+    "matched_project_id": "proj-268",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-248",
+    "canonical_no": null,
+    "name": "DIUS",
+    "address": "ул. Академика Ильюшина, вл. 21, Москва",
+    "status": "exact_match",
+    "matched_project_id": "proj-269",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-249",
+    "canonical_no": null,
+    "name": "Бадаевский Западная лента",
+    "address": "пр-кт Кутузовский, д. 12/1, корпус 12/2",
+    "status": "exact_match",
+    "matched_project_id": "badaevsky",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-250",
+    "canonical_no": null,
+    "name": "CHALET Пятницкая 40",
+    "address": "ул. Пятницкая, д. 40",
+    "status": "exact_match",
+    "matched_project_id": "proj-272",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-251",
+    "canonical_no": null,
+    "name": "Останкино (К1)",
+    "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-274",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-252",
+    "canonical_no": null,
+    "name": "Останкино (К2+К3)",
+    "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-274",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-253",
+    "canonical_no": null,
+    "name": "Останкино (К4)",
+    "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-274",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-254",
+    "canonical_no": null,
+    "name": "Останкино (К5)",
+    "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-274",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-255",
+    "canonical_no": null,
+    "name": "Останкино (К6)",
+    "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+    "status": "exact_match",
+    "matched_project_id": "proj-274",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-256",
+    "canonical_no": null,
+    "name": "Квартал Lucky",
+    "address": "2-ая Звенигородская ул., д. 12",
+    "status": "exact_match",
+    "matched_project_id": "proj-275",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-257",
+    "canonical_no": null,
+    "name": "Деловой дуэт",
+    "address": "Шумкина ул., 14с5, с13",
+    "status": "exact_match",
+    "matched_project_id": "proj-277",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-258",
+    "canonical_no": null,
+    "name": "Бизнес-хаб Потапово",
+    "address": "проспект Куприна, 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-278",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-259",
+    "canonical_no": null,
+    "name": "Sydney City",
+    "address": null,
+    "status": "exact_match",
+    "matched_project_id": "remain-only-0003",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-260",
+    "canonical_no": null,
+    "name": "Офисно-торговый центр Нагатинская",
+    "address": "Варшавское шоссе, ТПУ «Нагатинская»",
+    "status": "exact_match",
+    "matched_project_id": "remain-only-0005",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-261",
+    "canonical_no": null,
+    "name": "Федерация (Сити)",
+    "address": "Пресненская наб., 12 (Москва-Сити)",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0002",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-262",
+    "canonical_no": null,
+    "name": "Башня на набережной (В)",
+    "address": "Пресненская наб., 10 (Москва-Сити)",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0003",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-263",
+    "canonical_no": null,
+    "name": "Никольская",
+    "address": "Ветошный пер., 13",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0004",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-264",
+    "canonical_no": null,
+    "name": "Цветной бульвар",
+    "address": "Цветной бул., 30с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0005",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-265",
+    "canonical_no": null,
+    "name": "Новослободская",
+    "address": "Новослободская ул., 16",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0006",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-266",
+    "canonical_no": null,
+    "name": "Технопарк",
+    "address": "просп. Андропова, 10",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0007",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-267",
+    "canonical_no": null,
+    "name": "Бригантина",
+    "address": "Новолесная ул., 2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0008",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-268",
+    "canonical_no": null,
+    "name": "Кузнецкий Мост",
+    "address": "Кузнецкий Мост ул., 13",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0009",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-269",
+    "canonical_no": null,
+    "name": "Балчуг",
+    "address": "Садовническая наб., 9",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0010",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-270",
+    "canonical_no": null,
+    "name": "Симонов",
+    "address": "Ленинская Слобода ул., 26с5",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0011",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-271",
+    "canonical_no": null,
+    "name": "Арма",
+    "address": "Нижний Сусальный пер., 5",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0012",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-272",
+    "canonical_no": null,
+    "name": "Новосущевский",
+    "address": "Сущевский вал ул., 18",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0013",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-273",
+    "canonical_no": null,
+    "name": "Риверсайд Тауэрс",
+    "address": "Космодамианская наб., 52",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0014",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-274",
+    "canonical_no": null,
+    "name": "Садовая Плаза",
+    "address": "Долгоруковская ул., 7",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0015",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-275",
+    "canonical_no": null,
+    "name": "Павелецкая Плаза (А)",
+    "address": "Павелецкая пл., 2с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0016",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-276",
+    "canonical_no": null,
+    "name": "Павелецкая Плаза (В)",
+    "address": "Павелецкая пл., 2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0017",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-277",
+    "canonical_no": null,
+    "name": "Black&White",
+    "address": "Кожевническая ул., 14",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0018",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-278",
+    "canonical_no": null,
+    "name": "Долгоруковская 21",
+    "address": "Долгоруковская ул., 21с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0019",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-279",
+    "canonical_no": null,
+    "name": "МФК Савеловский сити",
+    "address": "Новодмитровская ул., 2к2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0020",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-280",
+    "canonical_no": null,
+    "name": "Зубовский 17",
+    "address": "Зубовский б-р, 17 стр.1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0021",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-281",
+    "canonical_no": null,
+    "name": "Остоженка",
+    "address": "Остоженка ул., 25",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0022",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-282",
+    "canonical_no": null,
+    "name": "Сретенка",
+    "address": "Сретенский бул., 5",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0023",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-283",
+    "canonical_no": null,
+    "name": "КМ19",
+    "address": "Кузнецкий Мост ул., 19с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0024",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-284",
+    "canonical_no": null,
+    "name": "Авион",
+    "address": "Ленинградский просп., 47 стр.2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0025",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-285",
+    "canonical_no": null,
+    "name": "Капитолий Вернадского",
+    "address": "просп. Вернадского, 6",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0026",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-286",
+    "canonical_no": null,
+    "name": "Композиторская",
+    "address": "Композиторская ул., 17",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0027",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-287",
+    "canonical_no": null,
+    "name": "Меркурий",
+    "address": "1-й Красногвардейский пр-д, 15",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0028",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-288",
+    "canonical_no": null,
+    "name": "Citydel",
+    "address": "ул. Земляной Вал, 9",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0029",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-289",
+    "canonical_no": null,
+    "name": "Workki Комсомольская",
+    "address": "Новорязанская ул., 8",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0030",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-290",
+    "canonical_no": null,
+    "name": "Нео Гео",
+    "address": "ул. Бутлерова, 17",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0031",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-291",
+    "canonical_no": null,
+    "name": "На Тульской",
+    "address": "Б. Тульская ул., 19",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0032",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-292",
+    "canonical_no": null,
+    "name": "Галерея Актер",
+    "address": "Тверская ул., 16с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0033",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-293",
+    "canonical_no": null,
+    "name": "Милютинский",
+    "address": "Милютинский пер., 13с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0034",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-294",
+    "canonical_no": null,
+    "name": "Даниловская Мануфактура",
+    "address": "Варшавское ш., 9",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0035",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-295",
+    "canonical_no": null,
+    "name": "Гостиница Москва",
+    "address": "ул. Охотный Ряд, 2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0036",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-296",
+    "canonical_no": null,
+    "name": "SOK Земляной Вал",
+    "address": "ул. Земляной Вал, 8",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0037",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-297",
+    "canonical_no": null,
+    "name": "SOK Сады Пекина",
+    "address": "Большая Садовая ул., 5к1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0038",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-298",
+    "canonical_no": null,
+    "name": "Refolio Достоевский",
+    "address": "Институтский пер., 2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0039",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-299",
+    "canonical_no": null,
+    "name": "Deworkacy Савинский",
+    "address": "Б. Саввинский пер., 8с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0040",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-300",
+    "canonical_no": null,
+    "name": "Фили Град",
+    "address": "Береговой пр-д, 5Ак1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0042",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-301",
+    "canonical_no": null,
+    "name": "ул. Воронцовская, д. 49/28",
+    "address": "Воронцовская ул., 49/28с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0043",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-302",
+    "canonical_no": null,
+    "name": "Парк Горького",
+    "address": "Ленинский просп., 30А",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0044",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-303",
+    "canonical_no": null,
+    "name": "White Stone",
+    "address": "4-й Лесной пер., 4",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0045",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-304",
+    "canonical_no": null,
+    "name": "Проспект Мира, 40",
+    "address": "просп. Мира, 40",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0046",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-305",
+    "canonical_no": null,
+    "name": "Signature Столешников, 11",
+    "address": "Столешников пер., 11",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0047",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-306",
+    "canonical_no": null,
+    "name": "на Басманной",
+    "address": "Спартаковская пл., 16/15с6",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0048",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-307",
+    "canonical_no": null,
+    "name": "Фабрика Станиславского",
+    "address": "ул. Станиславского, 21с1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0049",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-308",
+    "canonical_no": null,
+    "name": "Большая Якиманка 26",
+    "address": "Б. Якиманка ул., 26",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0050",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-309",
+    "canonical_no": null,
+    "name": "Poklonka Place",
+    "address": "Поклонная ул., 3",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0051",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-310",
+    "canonical_no": null,
+    "name": "Ролл Холл",
+    "address": "Холодильный пер., 3",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0052",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-311",
+    "canonical_no": null,
+    "name": "Аркус 3",
+    "address": "Ленинградский просп., 37А стр.4",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0053",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-312",
+    "canonical_no": null,
+    "name": "ФОК",
+    "address": "Новорязанская ул., 8Ас2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0054",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-313",
+    "canonical_no": null,
+    "name": "ВТБ Арена стр 8",
+    "address": "Ленинградский просп., 36с41",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0055",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-314",
+    "canonical_no": null,
+    "name": "SOK Рыбаков Тауэр",
+    "address": "Ленинградский пр-т, вл. 36 стр. 11",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0056",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-315",
+    "canonical_no": null,
+    "name": "SOK Арена Парк",
+    "address": "Ленинградский пр-т, вл. 36 стр. 10",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0057",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-316",
+    "canonical_no": null,
+    "name": "Вивальди",
+    "address": "Летниковская ул., 2 стр.1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0058",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-317",
+    "canonical_no": null,
+    "name": "Дубинин Скай",
+    "address": "Дубининская ул., 39-41",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0059",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-318",
+    "canonical_no": null,
+    "name": "Газетный 17",
+    "address": "Газетный пер., 17",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0060",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-319",
+    "canonical_no": null,
+    "name": "Кадашевская наб., 6",
+    "address": "Кадашевская наб., 6",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-0061",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-320",
+    "canonical_no": null,
+    "name": "1-й Щемиловский 16с2",
+    "address": "1-й Щемиловский 16с2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-699587ab73",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-321",
+    "canonical_no": null,
+    "name": "1 шипковский пер. 5",
+    "address": "1-й Щипковский переулок, 5",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-695ac9fe05",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-322",
+    "canonical_no": null,
+    "name": "GrowUp на Павелецкой",
+    "address": "ул. Дубининская, д.53, строение 5",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-58a9aa2051",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-323",
+    "canonical_no": null,
+    "name": "SOK Арена Парк 2",
+    "address": "Ленинградский пр-т, вл. 36",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-60619d9fa4",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-324",
+    "canonical_no": null,
+    "name": "SOK Арена Парк (Рыбаков Тауэр)",
+    "address": "Ленинградский пр-т, вл. 36 стр. 11",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-0f2198c906",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-325",
+    "canonical_no": null,
+    "name": "SOK Сити (3 и 4 этаж)",
+    "address": "Пресненская наб., 12",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-f0518c325b",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-326",
+    "canonical_no": null,
+    "name": "Авиаконструктора Микояна",
+    "address": "ул. Авиакоструктора Микояна, д. 1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-c087a56535",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-327",
+    "canonical_no": null,
+    "name": "Арбат",
+    "address": "Арбат ул., 10",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-1dbea5db6a",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-328",
+    "canonical_no": null,
+    "name": "Белая Площадь",
+    "address": "Лесная улица,5,стр. а-в",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-5d45ac8941",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-329",
+    "canonical_no": null,
+    "name": "Белая Площадь площадка закрыта",
+    "address": "Лесная улица,5,стр. а-в",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-fc48060d3b",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-330",
+    "canonical_no": null,
+    "name": "БЦ Известия",
+    "address": "Тверская ул., 18",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-8a9770370d",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-331",
+    "canonical_no": null,
+    "name": "Вивальди Плаза",
+    "address": "ул. Летниковская, д. 2, стр 1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-14b3f61ae5",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-332",
+    "canonical_no": null,
+    "name": "Газетный",
+    "address": "Газетный 17",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-fc98f0ea7d",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-333",
+    "canonical_no": null,
+    "name": "Гринвуд",
+    "address": "72 км МКАД, п/о Путилково, строение 19",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-8d69c8b501",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-334",
+    "canonical_no": null,
+    "name": "Домников",
+    "address": "Маши Порываевой ул., д. 34",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-c256850d91",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-335",
+    "canonical_no": null,
+    "name": "Заречная 2/1",
+    "address": "Москва, Заречная улица, 2/1",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-2e3715b7ba",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-336",
+    "canonical_no": null,
+    "name": "Квартал Вэст",
+    "address": "Аминьевское шоссе, 6",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-794e6c15c3",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-337",
+    "canonical_no": null,
+    "name": "Красная Роза",
+    "address": "Тимура Фрунзе, 11с33",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-ee79f38adb",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-338",
+    "canonical_no": null,
+    "name": "Лужники",
+    "address": "Лкжнецкая набережная",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-3a9656e535",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-339",
+    "canonical_no": null,
+    "name": "Овчинниковский",
+    "address": "Овчинниковская наб., 18",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-bc5e1e5c71",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-340",
+    "canonical_no": null,
+    "name": "Онегин",
+    "address": "Москва, улица Малая Полянка, 2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-82914143c2",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-341",
+    "canonical_no": null,
+    "name": "Останкино",
+    "address": "Огородный проезд, вл 16 стр.4",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-61c412c32d",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-342",
+    "canonical_no": null,
+    "name": "Полянка",
+    "address": "Малая Полянка, 3",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-e3bfd3f027",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-343",
+    "canonical_no": null,
+    "name": "Порта",
+    "address": "Заречная 2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-d2e87a98a7",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-344",
+    "canonical_no": null,
+    "name": "Пр. Мира , 40",
+    "address": "Пр. Мира",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-f23c097940",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-345",
+    "canonical_no": null,
+    "name": "РТС Волгоградский",
+    "address": "Волгоградский проспект, 32к31",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-97886a34a7",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-346",
+    "canonical_no": null,
+    "name": "Сириус Парк",
+    "address": "Каширское шоссе 3с1к2",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-3ce001a7ad",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-347",
+    "canonical_no": null,
+    "name": "Смоленский Пассаж 1",
+    "address": "Смоленская пл. 3",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-8188d16e28",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-348",
+    "canonical_no": null,
+    "name": "Сретенский б-р, 5",
+    "address": "Сретенский б-р, 5",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-f256e86d8c",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-349",
+    "canonical_no": null,
+    "name": "ТЦ РИО на Ленинском",
+    "address": "Ленинский пр-т 109",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-1c2bfead46",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-350",
+    "canonical_no": null,
+    "name": "Ходынка",
+    "address": "Авиаконструктора Микояна",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-682333d260",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-351",
+    "canonical_no": null,
+    "name": "AFI Gallery",
+    "address": "пл. Тверская Застава, 3",
+    "status": "exact_match",
+    "matched_project_id": "cwhost-hist-4b033613e3",
+    "match_basis": "name (source: data/all_projects_layer.json entity_role=host_building, добавлено 2026-09-17)",
+    "coord_corroborated": true
   }
 ]

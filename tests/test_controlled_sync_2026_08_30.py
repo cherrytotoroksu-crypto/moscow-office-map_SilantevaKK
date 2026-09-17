@@ -81,9 +81,14 @@ class TestControlledSync20260830(unittest.TestCase):
                           f"legacy_ids reference rows that were collapsed away instead of kept separate: {offenders}")
 
     def test_25_records_without_coordinates_listed(self):
+        # 2026-09-17: +1 (UC-OBJ-ADD-259 "Sydney City") — added while backfilling
+        # 176 classifier rows missing entirely from data/all_projects_layer.json
+        # (host_building/office_project entity_role, see project_future_projects_verification
+        # memory); the source registry row itself has no lat/lng, not a new gap
+        # introduced by classifier tooling.
         missing = [r for r in self.classifier if r.get("latitude") is None or r.get("longitude") is None]
-        self.assertEqual(len(missing), 7,
-                          f"expected exactly 7 classifier records without coordinates, found {len(missing)}")
+        self.assertEqual(len(missing), 8,
+                          f"expected exactly 8 classifier records without coordinates, found {len(missing)}")
         # explicit enumeration, not just a count
         names = sorted(r.get("name") or "" for r in missing)
         self.assertEqual(len(set(names)), len(names), "duplicate names among the no-coordinate records")
