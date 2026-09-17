@@ -632,7 +632,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "697"
+      "canonical_project_id": "697",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0683",
@@ -742,7 +743,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "622"
+      "canonical_project_id": "622",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0012",
@@ -798,7 +800,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "12"
+      "canonical_project_id": "12",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0058",
@@ -850,7 +853,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "58"
+      "canonical_project_id": "58",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0082",
@@ -966,7 +970,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "4"
+      "canonical_project_id": "4",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0075",
@@ -1018,7 +1023,8 @@
       "geo_submarket": "СК Восток",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "75"
+      "canonical_project_id": "75",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0064",
@@ -1194,7 +1200,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "54"
+      "canonical_project_id": "54",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0083",
@@ -1723,7 +1730,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "90"
+      "canonical_project_id": "90",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0727",
@@ -1887,7 +1895,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "315"
+      "canonical_project_id": "315",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0601",
@@ -2003,7 +2012,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0136"
+      "canonical_project_id": "OBJ-0136",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0066",
@@ -3182,7 +3192,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0124"
+      "canonical_project_id": "OBJ-0124",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0080",
@@ -3550,7 +3561,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "698"
+      "canonical_project_id": "698",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0715",
@@ -5432,7 +5444,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "486"
+      "canonical_project_id": "486",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0417",
@@ -5474,7 +5487,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "417"
+      "canonical_project_id": "417",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0605",
@@ -5513,7 +5527,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "605"
+      "canonical_project_id": "605",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0599",
@@ -5554,7 +5569,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "599"
+      "canonical_project_id": "599",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0489",
@@ -5595,7 +5611,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "489"
+      "canonical_project_id": "489",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0490",
@@ -5636,7 +5653,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "490"
+      "canonical_project_id": "490",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0603",
@@ -5677,7 +5695,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "603"
+      "canonical_project_id": "603",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0182",
@@ -5721,7 +5740,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "182"
+      "canonical_project_id": "182",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0429",
@@ -5762,7 +5782,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "429"
+      "canonical_project_id": "429",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0492",
@@ -5803,7 +5824,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "492"
+      "canonical_project_id": "492",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0496",
@@ -5844,7 +5866,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "496"
+      "canonical_project_id": "496",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0184",
@@ -5888,7 +5911,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0184"
+      "canonical_project_id": "OBJ-0184",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0598",
@@ -5929,7 +5953,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "598"
+      "canonical_project_id": "598",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0442",
@@ -5970,7 +5995,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "442"
+      "canonical_project_id": "442",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0408",
@@ -6011,7 +6037,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "408"
+      "canonical_project_id": "408",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0580",
@@ -6050,7 +6077,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "canonical_project_id": "580"
+      "canonical_project_id": "580",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0475",
@@ -6132,7 +6160,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "canonical_project_id": "101"
+      "canonical_project_id": "101",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0186",
@@ -6176,7 +6205,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "186"
+      "canonical_project_id": "186",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0188",
@@ -6219,7 +6249,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0188"
+      "canonical_project_id": "OBJ-0188",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0441",
@@ -6258,7 +6289,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "441"
+      "canonical_project_id": "441",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0702",
@@ -6299,7 +6331,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "702"
+      "canonical_project_id": "702",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0014",
@@ -6342,7 +6375,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "14"
+      "canonical_project_id": "14",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0634",
@@ -6383,7 +6417,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "634"
+      "canonical_project_id": "634",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0190",
@@ -6472,7 +6507,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "191"
+      "canonical_project_id": "191",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0581",
@@ -6511,7 +6547,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "581"
+      "canonical_project_id": "581",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0545",
@@ -6552,7 +6589,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "545"
+      "canonical_project_id": "545",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0019",
@@ -6595,7 +6633,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "19"
+      "canonical_project_id": "19",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0003",
@@ -6636,7 +6675,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "3"
+      "canonical_project_id": "3",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0042",
@@ -6675,7 +6715,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "42"
+      "canonical_project_id": "42",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0195",
@@ -6718,7 +6759,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "195"
+      "canonical_project_id": "195",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0103",
@@ -6762,7 +6804,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "103"
+      "canonical_project_id": "103",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0747",
@@ -6803,7 +6846,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "747"
+      "canonical_project_id": "747",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0737",
@@ -6844,7 +6888,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "canonical_project_id": "737"
+      "canonical_project_id": "737",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0680",
@@ -6885,7 +6930,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "680"
+      "canonical_project_id": "680",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0706",
@@ -6926,7 +6972,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "706"
+      "canonical_project_id": "706",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0655",
@@ -7008,7 +7055,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "649"
+      "canonical_project_id": "649",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0199",
@@ -7052,7 +7100,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "199"
+      "canonical_project_id": "199",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0584",
@@ -7091,7 +7140,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "584"
+      "canonical_project_id": "584",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0621",
@@ -7130,7 +7180,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "621"
+      "canonical_project_id": "621",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0736",
@@ -7171,7 +7222,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "736"
+      "canonical_project_id": "736",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0692",
@@ -7212,7 +7264,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "692"
+      "canonical_project_id": "692",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0602",
@@ -7253,7 +7306,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "602"
+      "canonical_project_id": "602",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0205",
@@ -7297,7 +7351,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0205"
+      "canonical_project_id": "OBJ-0205",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0663",
@@ -7338,7 +7393,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "663"
+      "canonical_project_id": "663",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0574",
@@ -7383,7 +7439,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "574"
+      "canonical_project_id": "574",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0016",
@@ -7425,7 +7482,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "16"
+      "canonical_project_id": "16",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0579",
@@ -7464,7 +7522,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "579"
+      "canonical_project_id": "579",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0745",
@@ -7507,7 +7566,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "745"
+      "canonical_project_id": "745",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0021",
@@ -7548,7 +7608,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "21"
+      "canonical_project_id": "21",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0454",
@@ -7589,7 +7650,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "454"
+      "canonical_project_id": "454",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0378",
@@ -7630,7 +7692,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "378"
+      "canonical_project_id": "378",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0398",
@@ -7671,7 +7734,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "398"
+      "canonical_project_id": "398",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0154",
@@ -7712,7 +7776,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "154"
+      "canonical_project_id": "154",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0153",
@@ -7753,7 +7818,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0153"
+      "canonical_project_id": "OBJ-0153",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0081",
@@ -7837,7 +7903,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "207"
+      "canonical_project_id": "207",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0062",
@@ -7878,7 +7945,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "62"
+      "canonical_project_id": "62",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0732",
@@ -7921,7 +7989,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "732"
+      "canonical_project_id": "732",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0730",
@@ -7964,7 +8033,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "730"
+      "canonical_project_id": "730",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0585",
@@ -8003,7 +8073,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "585"
+      "canonical_project_id": "585",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0752",
@@ -8047,7 +8118,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "752"
+      "canonical_project_id": "752",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0607",
@@ -8086,7 +8158,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "607"
+      "canonical_project_id": "607",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0210",
@@ -8130,7 +8203,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "210"
+      "canonical_project_id": "210",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0476",
@@ -8169,7 +8243,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "476"
+      "canonical_project_id": "476",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0652",
@@ -8251,7 +8326,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "174"
+      "canonical_project_id": "174",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0367",
@@ -8290,7 +8366,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "367"
+      "canonical_project_id": "367",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0037",
@@ -8331,7 +8408,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "37"
+      "canonical_project_id": "37",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0653",
@@ -8372,7 +8450,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "653"
+      "canonical_project_id": "653",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0215",
@@ -8415,7 +8494,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "215"
+      "canonical_project_id": "215",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0570",
@@ -8456,7 +8536,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "570"
+      "canonical_project_id": "570",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0576",
@@ -8497,7 +8578,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "576"
+      "canonical_project_id": "576",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0024",
@@ -8538,7 +8620,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "24"
+      "canonical_project_id": "24",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0079",
@@ -8578,7 +8661,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "79"
+      "canonical_project_id": "79",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0381",
@@ -8676,7 +8760,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0216"
+      "canonical_project_id": "OBJ-0216",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0217",
@@ -8715,7 +8800,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "217"
+      "canonical_project_id": "217",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0669",
@@ -8756,7 +8842,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "669"
+      "canonical_project_id": "669",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0118",
@@ -8795,7 +8882,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "118"
+      "canonical_project_id": "118",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0220",
@@ -8834,7 +8922,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0220"
+      "canonical_project_id": "OBJ-0220",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0221",
@@ -8878,7 +8967,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0221"
+      "canonical_project_id": "OBJ-0221",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0222",
@@ -8922,7 +9012,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "222"
+      "canonical_project_id": "222",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0223",
@@ -8961,7 +9052,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "223"
+      "canonical_project_id": "223",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0696",
@@ -9003,7 +9095,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "696"
+      "canonical_project_id": "696",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0722",
@@ -9045,7 +9138,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "722"
+      "canonical_project_id": "722",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0735",
@@ -9087,7 +9181,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "735"
+      "canonical_project_id": "735",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0100",
@@ -9129,7 +9224,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "100"
+      "canonical_project_id": "100",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0225",
@@ -9172,7 +9268,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "225"
+      "canonical_project_id": "225",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0002",
@@ -9215,7 +9312,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "2"
+      "canonical_project_id": "2",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0227",
@@ -9259,7 +9357,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "OBJ-0227"
+      "canonical_project_id": "OBJ-0227",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0586",
@@ -9298,7 +9397,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "586"
+      "canonical_project_id": "586",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0228",
@@ -9341,7 +9441,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "228"
+      "canonical_project_id": "228",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0034",
@@ -9380,7 +9481,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "34"
+      "canonical_project_id": "34",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0450",
@@ -9421,7 +9523,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "450"
+      "canonical_project_id": "450",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0474",
@@ -9460,7 +9563,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "474"
+      "canonical_project_id": "474",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0613",
@@ -9499,7 +9603,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "613"
+      "canonical_project_id": "613",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0645",
@@ -9538,7 +9643,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "645"
+      "canonical_project_id": "645",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0231",
@@ -9577,7 +9683,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "OBJ-0231"
+      "canonical_project_id": "OBJ-0231",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0436",
@@ -9616,7 +9723,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "436"
+      "canonical_project_id": "436",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0232",
@@ -9660,7 +9768,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "232"
+      "canonical_project_id": "232",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0234",
@@ -9704,7 +9813,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0234"
+      "canonical_project_id": "OBJ-0234",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0495",
@@ -9745,7 +9855,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "495"
+      "canonical_project_id": "495",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0609",
@@ -9784,7 +9895,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "609"
+      "canonical_project_id": "609",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0017",
@@ -9827,7 +9939,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "17"
+      "canonical_project_id": "17",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0011",
@@ -9872,7 +9985,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "11"
+      "canonical_project_id": "11",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0093",
@@ -9911,7 +10025,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "93"
+      "canonical_project_id": "93",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0731",
@@ -9952,7 +10067,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "731"
+      "canonical_project_id": "731",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0236",
@@ -9996,7 +10112,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0236"
+      "canonical_project_id": "OBJ-0236",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0499",
@@ -10037,7 +10154,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "499"
+      "canonical_project_id": "499",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0237",
@@ -10081,7 +10199,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "237"
+      "canonical_project_id": "237",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0395",
@@ -10122,7 +10241,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "395"
+      "canonical_project_id": "395",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0131",
@@ -10165,7 +10285,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "131"
+      "canonical_project_id": "131",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0694",
@@ -10204,7 +10325,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "694"
+      "canonical_project_id": "694",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0691",
@@ -10243,7 +10365,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "691"
+      "canonical_project_id": "691",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0710",
@@ -10282,7 +10405,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "710"
+      "canonical_project_id": "710",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0074",
@@ -10325,7 +10449,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "74"
+      "canonical_project_id": "74",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0418",
@@ -10364,7 +10489,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "418"
+      "canonical_project_id": "418",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0769",
@@ -10403,7 +10529,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "769"
+      "canonical_project_id": "769",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0500",
@@ -10444,7 +10571,8 @@
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "500"
+      "canonical_project_id": "500",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0025",
@@ -10483,7 +10611,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "25"
+      "canonical_project_id": "25",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0047",
@@ -10522,7 +10651,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "47"
+      "canonical_project_id": "47",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0239",
@@ -10566,7 +10696,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "239"
+      "canonical_project_id": "239",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0158",
@@ -10610,7 +10741,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0158"
+      "canonical_project_id": "OBJ-0158",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0240",
@@ -10653,7 +10785,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0240"
+      "canonical_project_id": "OBJ-0240",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0241",
@@ -10697,7 +10830,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0241"
+      "canonical_project_id": "OBJ-0241",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0242",
@@ -10734,7 +10868,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 268,
-      "canonical_project_id": "242"
+      "canonical_project_id": "242",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0244",
@@ -10779,7 +10914,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0244"
+      "canonical_project_id": "OBJ-0244",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0245",
@@ -10816,7 +10952,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 271,
-      "canonical_project_id": "OBJ-0245"
+      "canonical_project_id": "OBJ-0245",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0166",
@@ -10903,7 +11040,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "759"
+      "canonical_project_id": "759",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0405",
@@ -10947,7 +11085,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "405"
+      "canonical_project_id": "405",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0246",
@@ -10984,7 +11123,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 275,
-      "canonical_project_id": "246"
+      "canonical_project_id": "246",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0247",
@@ -11028,7 +11168,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0247"
+      "canonical_project_id": "OBJ-0247",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0248",
@@ -11071,7 +11212,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "248"
+      "canonical_project_id": "248",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0249",
@@ -11115,7 +11257,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0249"
+      "canonical_project_id": "OBJ-0249",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0250",
@@ -11158,7 +11301,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0250"
+      "canonical_project_id": "OBJ-0250",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0251",
@@ -11202,7 +11346,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0251"
+      "canonical_project_id": "OBJ-0251",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0453",
@@ -11243,7 +11388,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "453"
+      "canonical_project_id": "453",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0252",
@@ -11287,7 +11433,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "252"
+      "canonical_project_id": "252",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0253",
@@ -11331,7 +11478,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "OBJ-0253"
+      "canonical_project_id": "OBJ-0253",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0132",
@@ -11375,7 +11523,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0132"
+      "canonical_project_id": "OBJ-0132",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0254",
@@ -11418,7 +11567,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0254"
+      "canonical_project_id": "OBJ-0254",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0137",
@@ -11459,7 +11609,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "137"
+      "canonical_project_id": "137",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0256",
@@ -11496,7 +11647,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 289,
-      "canonical_project_id": "256"
+      "canonical_project_id": "256",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0258",
@@ -11535,7 +11687,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0258"
+      "canonical_project_id": "OBJ-0258",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0718",
@@ -11576,7 +11729,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "718"
+      "canonical_project_id": "718",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0259",
@@ -11620,7 +11774,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0259"
+      "canonical_project_id": "OBJ-0259",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0147",
@@ -11662,7 +11817,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0147"
+      "canonical_project_id": "OBJ-0147",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0637",
@@ -11701,7 +11857,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "637"
+      "canonical_project_id": "637",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0508",
@@ -11742,7 +11899,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "508"
+      "canonical_project_id": "508",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0659",
@@ -11783,7 +11941,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "659"
+      "canonical_project_id": "659",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0261",
@@ -11826,7 +11985,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0261"
+      "canonical_project_id": "OBJ-0261",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0757",
@@ -11867,7 +12027,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "757"
+      "canonical_project_id": "757",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0562",
@@ -11908,7 +12069,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "562"
+      "canonical_project_id": "562",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0766",
@@ -11949,7 +12111,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "766"
+      "canonical_project_id": "766",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0263",
@@ -11993,7 +12156,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0263"
+      "canonical_project_id": "OBJ-0263",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0768",
@@ -12032,7 +12196,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "768"
+      "canonical_project_id": "768",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0076",
@@ -12071,7 +12236,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "76"
+      "canonical_project_id": "76",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0406",
@@ -12110,7 +12276,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "406"
+      "canonical_project_id": "406",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0672",
@@ -12149,7 +12316,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "672"
+      "canonical_project_id": "672",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0414",
@@ -12188,7 +12356,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "414"
+      "canonical_project_id": "414",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0264",
@@ -12232,7 +12401,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0264"
+      "canonical_project_id": "OBJ-0264",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0265",
@@ -12276,7 +12446,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0265"
+      "canonical_project_id": "OBJ-0265",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0777",
@@ -12319,7 +12490,8 @@
       "geo_submarket": "СК Восток",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "777"
+      "canonical_project_id": "777",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0267",
@@ -12362,7 +12534,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0267"
+      "canonical_project_id": "OBJ-0267",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0268",
@@ -12405,7 +12578,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0268"
+      "canonical_project_id": "OBJ-0268",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0269",
@@ -12448,7 +12622,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0269"
+      "canonical_project_id": "OBJ-0269",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0270",
@@ -12491,7 +12666,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0270"
+      "canonical_project_id": "OBJ-0270",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0661",
@@ -12532,7 +12708,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "661"
+      "canonical_project_id": "661",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0432",
@@ -12571,7 +12748,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "432"
+      "canonical_project_id": "432",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0273",
@@ -12616,7 +12794,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0273"
+      "canonical_project_id": "OBJ-0273",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0274",
@@ -12660,7 +12839,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "274"
+      "canonical_project_id": "274",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0091",
@@ -12701,7 +12881,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "91"
+      "canonical_project_id": "91",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0049",
@@ -12740,7 +12921,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "49"
+      "canonical_project_id": "49",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0276",
@@ -12784,7 +12966,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0276"
+      "canonical_project_id": "OBJ-0276",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0502",
@@ -12825,7 +13008,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "502"
+      "canonical_project_id": "502",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0375",
@@ -12866,7 +13050,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "375"
+      "canonical_project_id": "375",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0134",
@@ -12905,7 +13090,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0134"
+      "canonical_project_id": "OBJ-0134",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0505",
@@ -12946,7 +13132,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "505"
+      "canonical_project_id": "505",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0419",
@@ -12987,7 +13174,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "419"
+      "canonical_project_id": "419",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0278",
@@ -13029,7 +13217,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0278"
+      "canonical_project_id": "OBJ-0278",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0155",
@@ -13074,7 +13263,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0155"
+      "canonical_project_id": "OBJ-0155",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0507",
@@ -13115,7 +13305,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "507"
+      "canonical_project_id": "507",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0097",
@@ -13154,7 +13345,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0097"
+      "canonical_project_id": "OBJ-0097",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0128",
@@ -13193,7 +13385,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "OBJ-0128"
+      "canonical_project_id": "OBJ-0128",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0035",
@@ -13232,7 +13425,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "35"
+      "canonical_project_id": "35",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0280",
@@ -13276,7 +13470,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0280"
+      "canonical_project_id": "OBJ-0280",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0281",
@@ -13320,7 +13515,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "281"
+      "canonical_project_id": "281",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0380",
@@ -13359,7 +13555,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "380"
+      "canonical_project_id": "380",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0285",
@@ -13402,7 +13599,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0285"
+      "canonical_project_id": "OBJ-0285",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0681",
@@ -13441,7 +13639,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "681"
+      "canonical_project_id": "681",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0646",
@@ -13482,7 +13681,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "646"
+      "canonical_project_id": "646",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0741",
@@ -13523,7 +13723,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "741"
+      "canonical_project_id": "741",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0743",
@@ -13564,7 +13765,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "743"
+      "canonical_project_id": "743",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0742",
@@ -13605,7 +13807,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "742"
+      "canonical_project_id": "742",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0744",
@@ -13646,7 +13849,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "744"
+      "canonical_project_id": "744",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0740",
@@ -13687,7 +13891,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "740"
+      "canonical_project_id": "740",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0746",
@@ -13728,7 +13933,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "746"
+      "canonical_project_id": "746",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0286",
@@ -13772,7 +13978,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0286"
+      "canonical_project_id": "OBJ-0286",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0772",
@@ -13811,7 +14018,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "772"
+      "canonical_project_id": "772",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0775",
@@ -13850,7 +14058,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "775"
+      "canonical_project_id": "775",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0776",
@@ -13889,7 +14098,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "776"
+      "canonical_project_id": "776",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0771",
@@ -13928,7 +14138,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "771"
+      "canonical_project_id": "771",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0774",
@@ -13967,7 +14178,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "774"
+      "canonical_project_id": "774",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0770",
@@ -14006,7 +14218,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "770"
+      "canonical_project_id": "770",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0670",
@@ -14045,7 +14258,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "670"
+      "canonical_project_id": "670",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0679",
@@ -14086,7 +14300,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "679"
+      "canonical_project_id": "679",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0629",
@@ -14125,7 +14340,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "629"
+      "canonical_project_id": "629",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0720",
@@ -14166,7 +14382,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "720"
+      "canonical_project_id": "720",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0460",
@@ -14205,7 +14422,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "460"
+      "canonical_project_id": "460",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0527",
@@ -14246,7 +14464,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "527"
+      "canonical_project_id": "527",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0526",
@@ -14287,7 +14506,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "526"
+      "canonical_project_id": "526",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0438",
@@ -14328,7 +14548,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "438"
+      "canonical_project_id": "438",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0415",
@@ -14369,7 +14590,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "415"
+      "canonical_project_id": "415",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0018",
@@ -14412,7 +14634,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "18"
+      "canonical_project_id": "18",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0288",
@@ -14456,7 +14679,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "OBJ-0288"
+      "canonical_project_id": "OBJ-0288",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0289",
@@ -14499,7 +14723,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "289"
+      "canonical_project_id": "289",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0553",
@@ -14540,7 +14765,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "553"
+      "canonical_project_id": "553",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0397",
@@ -14581,7 +14807,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "397"
+      "canonical_project_id": "397",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0290",
@@ -14620,7 +14847,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "290"
+      "canonical_project_id": "290",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0543",
@@ -14661,7 +14889,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "543"
+      "canonical_project_id": "543",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0487",
@@ -14702,7 +14931,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "487"
+      "canonical_project_id": "487",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0556",
@@ -14743,7 +14973,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "556"
+      "canonical_project_id": "556",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0555",
@@ -14784,7 +15015,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "555"
+      "canonical_project_id": "555",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0045",
@@ -14827,7 +15059,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "45"
+      "canonical_project_id": "45",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0015",
@@ -14870,7 +15103,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "15"
+      "canonical_project_id": "15",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0575",
@@ -14909,7 +15143,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "575"
+      "canonical_project_id": "575",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0640",
@@ -14950,7 +15185,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "640"
+      "canonical_project_id": "640",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0292",
@@ -14991,7 +15227,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "292"
+      "canonical_project_id": "292",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0512",
@@ -15032,7 +15269,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "512"
+      "canonical_project_id": "512",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0109",
@@ -15075,7 +15313,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "OBJ-0109"
+      "canonical_project_id": "OBJ-0109",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0084",
@@ -15114,7 +15353,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "84"
+      "canonical_project_id": "84",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0513",
@@ -15155,7 +15395,8 @@
       "geo_submarket": "СК Запад",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "513"
+      "canonical_project_id": "513",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0422",
@@ -15194,7 +15435,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "422"
+      "canonical_project_id": "422",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0728",
@@ -15235,7 +15477,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "728"
+      "canonical_project_id": "728",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0293",
@@ -15276,7 +15519,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "293"
+      "canonical_project_id": "293",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0294",
@@ -15317,7 +15561,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "294"
+      "canonical_project_id": "294",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0443",
@@ -15358,7 +15603,8 @@
       "geo_submarket": "СК Запад",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "443"
+      "canonical_project_id": "443",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0006",
@@ -15401,7 +15647,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "6"
+      "canonical_project_id": "6",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0514",
@@ -15442,7 +15689,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "514"
+      "canonical_project_id": "514",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0565",
@@ -15483,7 +15731,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "565"
+      "canonical_project_id": "565",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0721",
@@ -15526,7 +15775,8 @@
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "721"
+      "canonical_project_id": "721",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0295",
@@ -15567,7 +15817,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "295"
+      "canonical_project_id": "295",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0563",
@@ -15608,7 +15859,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "563"
+      "canonical_project_id": "563",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0399",
@@ -15649,7 +15901,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "399"
+      "canonical_project_id": "399",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0296",
@@ -15690,7 +15943,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "296"
+      "canonical_project_id": "296",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0433",
@@ -15731,7 +15985,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "433"
+      "canonical_project_id": "433",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0699",
@@ -15772,7 +16027,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "699"
+      "canonical_project_id": "699",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0560",
@@ -15813,7 +16069,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "560"
+      "canonical_project_id": "560",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0529",
@@ -15854,7 +16111,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "529"
+      "canonical_project_id": "529",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0550",
@@ -15895,7 +16153,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "550"
+      "canonical_project_id": "550",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0425",
@@ -15936,7 +16195,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "425"
+      "canonical_project_id": "425",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0297",
@@ -15971,7 +16231,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 423,
-      "canonical_project_id": "297"
+      "canonical_project_id": "297",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0472",
@@ -16010,7 +16271,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "472"
+      "canonical_project_id": "472",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0411",
@@ -16051,7 +16313,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "411"
+      "canonical_project_id": "411",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0510",
@@ -16092,7 +16355,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "510"
+      "canonical_project_id": "510",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0298",
@@ -16133,7 +16397,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "298"
+      "canonical_project_id": "298",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0469",
@@ -16166,7 +16431,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 429,
-      "canonical_project_id": "469"
+      "canonical_project_id": "469",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0517",
@@ -16207,7 +16473,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "517"
+      "canonical_project_id": "517",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0302",
@@ -16248,7 +16515,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "302"
+      "canonical_project_id": "302",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0303",
@@ -16289,7 +16557,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "303"
+      "canonical_project_id": "303",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0755",
@@ -16330,7 +16599,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "755"
+      "canonical_project_id": "755",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0767",
@@ -16371,7 +16641,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "767"
+      "canonical_project_id": "767",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0750",
@@ -16412,7 +16683,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "750"
+      "canonical_project_id": "750",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0760",
@@ -16453,7 +16725,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "760"
+      "canonical_project_id": "760",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0765",
@@ -16494,7 +16767,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "765"
+      "canonical_project_id": "765",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0754",
@@ -16535,7 +16809,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "754"
+      "canonical_project_id": "754",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0761",
@@ -16576,7 +16851,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "761"
+      "canonical_project_id": "761",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0779",
@@ -16617,7 +16893,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "779"
+      "canonical_project_id": "779",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0764",
@@ -16658,7 +16935,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "764"
+      "canonical_project_id": "764",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0751",
@@ -16699,7 +16977,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "751"
+      "canonical_project_id": "751",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0567",
@@ -16738,7 +17017,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "567"
+      "canonical_project_id": "567",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0033",
@@ -16777,7 +17057,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "33"
+      "canonical_project_id": "33",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0618",
@@ -16816,7 +17097,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "618"
+      "canonical_project_id": "618",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0052",
@@ -16855,7 +17137,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "52"
+      "canonical_project_id": "52",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0519",
@@ -16897,7 +17180,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "519"
+      "canonical_project_id": "519",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0164",
@@ -16936,7 +17220,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0164"
+      "canonical_project_id": "OBJ-0164",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0366",
@@ -16975,7 +17260,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "366"
+      "canonical_project_id": "366",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0522",
@@ -17016,7 +17302,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "522"
+      "canonical_project_id": "522",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0119",
@@ -17055,7 +17342,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "119"
+      "canonical_project_id": "119",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0402",
@@ -17094,7 +17382,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "402"
+      "canonical_project_id": "402",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0304",
@@ -17135,7 +17424,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "304"
+      "canonical_project_id": "304",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0162",
@@ -17178,7 +17468,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "162"
+      "canonical_project_id": "162",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0674",
@@ -17219,7 +17510,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "674"
+      "canonical_project_id": "674",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0386",
@@ -17260,7 +17552,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "386"
+      "canonical_project_id": "386",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0686",
@@ -17301,7 +17594,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "686"
+      "canonical_project_id": "686",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0424",
@@ -17342,7 +17636,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "424"
+      "canonical_project_id": "424",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0008",
@@ -17381,7 +17676,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "8"
+      "canonical_project_id": "8",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0660",
@@ -17420,7 +17716,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "660"
+      "canonical_project_id": "660",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0305",
@@ -17461,7 +17758,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "305"
+      "canonical_project_id": "305",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0306",
@@ -17502,7 +17800,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "306"
+      "canonical_project_id": "306",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0403",
@@ -17543,7 +17842,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "403"
+      "canonical_project_id": "403",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0434",
@@ -17584,7 +17884,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "434"
+      "canonical_project_id": "434",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0636",
@@ -17623,7 +17924,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "636"
+      "canonical_project_id": "636",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0688",
@@ -17664,7 +17966,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "688"
+      "canonical_project_id": "688",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0111",
@@ -17703,7 +18006,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "canonical_project_id": "111"
+      "canonical_project_id": "111",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0096",
@@ -17742,7 +18046,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "96"
+      "canonical_project_id": "96",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0677",
@@ -17783,7 +18088,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "677"
+      "canonical_project_id": "677",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0307",
@@ -17824,7 +18130,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "307"
+      "canonical_project_id": "307",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0308",
@@ -17865,7 +18172,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "308"
+      "canonical_project_id": "308",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0309",
@@ -17906,7 +18214,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "309"
+      "canonical_project_id": "309",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0310",
@@ -17947,7 +18256,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "310"
+      "canonical_project_id": "310",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0117",
@@ -17986,7 +18296,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "OBJ-0117"
+      "canonical_project_id": "OBJ-0117",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0106",
@@ -18025,7 +18336,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0106"
+      "canonical_project_id": "OBJ-0106",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0684",
@@ -18066,7 +18378,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "684"
+      "canonical_project_id": "684",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0641",
@@ -18107,7 +18420,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "641"
+      "canonical_project_id": "641",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0538",
@@ -18148,7 +18462,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "538"
+      "canonical_project_id": "538",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0312",
@@ -18189,7 +18504,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "312"
+      "canonical_project_id": "312",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0313",
@@ -18230,7 +18546,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "313"
+      "canonical_project_id": "313",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0566",
@@ -18269,7 +18586,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "566"
+      "canonical_project_id": "566",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0102",
@@ -18313,7 +18631,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "102"
+      "canonical_project_id": "102",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0043",
@@ -18354,7 +18673,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "43"
+      "canonical_project_id": "43",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0173",
@@ -18393,7 +18713,8 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "OBJ-0173"
+      "canonical_project_id": "OBJ-0173",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0108",
@@ -18436,7 +18757,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0108"
+      "canonical_project_id": "OBJ-0108",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0428",
@@ -18475,7 +18797,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "428"
+      "canonical_project_id": "428",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0671",
@@ -18519,7 +18842,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "671"
+      "canonical_project_id": "671",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0725",
@@ -18558,7 +18882,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "725"
+      "canonical_project_id": "725",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0112",
@@ -18601,7 +18926,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0112"
+      "canonical_project_id": "OBJ-0112",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0427",
@@ -18640,7 +18966,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "427"
+      "canonical_project_id": "427",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0063",
@@ -18679,7 +19006,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "63"
+      "canonical_project_id": "63",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0456",
@@ -18718,7 +19046,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "456"
+      "canonical_project_id": "456",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0316",
@@ -18759,7 +19088,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "316"
+      "canonical_project_id": "316",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0160",
@@ -18803,7 +19133,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "canonical_project_id": "160"
+      "canonical_project_id": "160",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0627",
@@ -18842,7 +19173,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "627"
+      "canonical_project_id": "627",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0178",
@@ -18885,7 +19217,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "178"
+      "canonical_project_id": "178",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0317",
@@ -18926,7 +19259,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "317"
+      "canonical_project_id": "317",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0059",
@@ -18965,7 +19299,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "59"
+      "canonical_project_id": "59",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0773",
@@ -19006,7 +19341,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "773"
+      "canonical_project_id": "773",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0546",
@@ -19047,7 +19383,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "546"
+      "canonical_project_id": "546",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0318",
@@ -19088,7 +19425,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "318"
+      "canonical_project_id": "318",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0447",
@@ -19129,7 +19467,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "447"
+      "canonical_project_id": "447",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0159",
@@ -19172,7 +19511,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0159"
+      "canonical_project_id": "OBJ-0159",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0457",
@@ -19211,7 +19551,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "canonical_project_id": "457"
+      "canonical_project_id": "457",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0588",
@@ -19252,7 +19593,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "588"
+      "canonical_project_id": "588",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0319",
@@ -19293,7 +19635,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "319"
+      "canonical_project_id": "319",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0320",
@@ -19334,7 +19677,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "320"
+      "canonical_project_id": "320",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0321",
@@ -19375,7 +19719,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "321"
+      "canonical_project_id": "321",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0030",
@@ -19414,7 +19759,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "30"
+      "canonical_project_id": "30",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0628",
@@ -19453,7 +19799,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "628"
+      "canonical_project_id": "628",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0658",
@@ -19494,7 +19841,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "658"
+      "canonical_project_id": "658",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0583",
@@ -19533,7 +19881,8 @@
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "583"
+      "canonical_project_id": "583",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0322",
@@ -19574,7 +19923,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "322"
+      "canonical_project_id": "322",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0467",
@@ -19613,7 +19963,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "467"
+      "canonical_project_id": "467",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0600",
@@ -19654,7 +20005,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "600"
+      "canonical_project_id": "600",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0324",
@@ -19695,7 +20047,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "324"
+      "canonical_project_id": "324",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0568",
@@ -19734,7 +20087,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "568"
+      "canonical_project_id": "568",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0005",
@@ -19773,7 +20127,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "5"
+      "canonical_project_id": "5",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0007",
@@ -19812,7 +20167,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "7"
+      "canonical_project_id": "7",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0582",
@@ -19851,7 +20207,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "582"
+      "canonical_project_id": "582",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0610",
@@ -19890,7 +20247,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "610"
+      "canonical_project_id": "610",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0612",
@@ -19929,7 +20287,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "612"
+      "canonical_project_id": "612",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0029",
@@ -19968,7 +20327,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "29"
+      "canonical_project_id": "29",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0620",
@@ -20007,7 +20367,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "620"
+      "canonical_project_id": "620",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0055",
@@ -20046,7 +20407,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "55"
+      "canonical_project_id": "55",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0497",
@@ -20087,7 +20449,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "497"
+      "canonical_project_id": "497",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0141",
@@ -20131,7 +20494,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0141"
+      "canonical_project_id": "OBJ-0141",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0146",
@@ -20174,7 +20538,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0146"
+      "canonical_project_id": "OBJ-0146",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0644",
@@ -20215,7 +20580,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "644"
+      "canonical_project_id": "644",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0156",
@@ -20259,7 +20625,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "156"
+      "canonical_project_id": "156",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0673",
@@ -20298,7 +20665,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "673"
+      "canonical_project_id": "673",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0148",
@@ -20342,7 +20710,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "148"
+      "canonical_project_id": "148",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0700",
@@ -20383,7 +20752,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "700"
+      "canonical_project_id": "700",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0448",
@@ -20424,7 +20794,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "448"
+      "canonical_project_id": "448",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0630",
@@ -20465,7 +20836,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "630"
+      "canonical_project_id": "630",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0325",
@@ -20506,7 +20878,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "325"
+      "canonical_project_id": "325",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0509",
@@ -20547,7 +20920,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "509"
+      "canonical_project_id": "509",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0326",
@@ -20588,7 +20962,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "326"
+      "canonical_project_id": "326",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0524",
@@ -20629,7 +21004,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "524"
+      "canonical_project_id": "524",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0013",
@@ -20672,7 +21048,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "13"
+      "canonical_project_id": "13",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0711",
@@ -20713,7 +21090,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "711"
+      "canonical_project_id": "711",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0748",
@@ -20754,7 +21132,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "748"
+      "canonical_project_id": "748",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0695",
@@ -20795,7 +21174,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "695"
+      "canonical_project_id": "695",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0778",
@@ -20836,7 +21216,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "778"
+      "canonical_project_id": "778",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0022",
@@ -20875,7 +21256,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "22"
+      "canonical_project_id": "22",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0001",
@@ -20914,7 +21296,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "1"
+      "canonical_project_id": "1",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0125",
@@ -20953,7 +21336,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "125"
+      "canonical_project_id": "125",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0327",
@@ -20994,7 +21378,8 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "327"
+      "canonical_project_id": "327",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0525",
@@ -21035,7 +21420,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "525"
+      "canonical_project_id": "525",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0157",
@@ -21079,7 +21465,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "157"
+      "canonical_project_id": "157",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0452",
@@ -21120,7 +21507,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "452"
+      "canonical_project_id": "452",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0328",
@@ -21213,7 +21601,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "451"
+      "canonical_project_id": "451",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0382",
@@ -21254,7 +21643,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "382"
+      "canonical_project_id": "382",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0440",
@@ -21297,7 +21687,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "440"
+      "canonical_project_id": "440",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0409",
@@ -21338,7 +21729,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "409"
+      "canonical_project_id": "409",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0461",
@@ -21377,7 +21769,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "461"
+      "canonical_project_id": "461",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0400",
@@ -21418,7 +21811,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "400"
+      "canonical_project_id": "400",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0431",
@@ -21459,7 +21853,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "431"
+      "canonical_project_id": "431",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0528",
@@ -21500,7 +21895,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "528"
+      "canonical_project_id": "528",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0329",
@@ -21541,7 +21937,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "329"
+      "canonical_project_id": "329",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0330",
@@ -21582,7 +21979,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "330"
+      "canonical_project_id": "330",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0468",
@@ -21621,7 +22019,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "468"
+      "canonical_project_id": "468",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0331",
@@ -21662,7 +22061,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "331"
+      "canonical_project_id": "331",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0368",
@@ -21703,7 +22103,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "368"
+      "canonical_project_id": "368",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0089",
@@ -21742,7 +22143,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "89"
+      "canonical_project_id": "89",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0332",
@@ -21783,7 +22185,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "332"
+      "canonical_project_id": "332",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0466",
@@ -21822,7 +22225,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "466"
+      "canonical_project_id": "466",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0175",
@@ -21863,7 +22267,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "OBJ-0175"
+      "canonical_project_id": "OBJ-0175",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0753",
@@ -21902,7 +22307,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "753"
+      "canonical_project_id": "753",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0713",
@@ -21941,7 +22347,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "713"
+      "canonical_project_id": "713",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0714",
@@ -21980,7 +22387,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "714"
+      "canonical_project_id": "714",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0724",
@@ -22019,7 +22427,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "724"
+      "canonical_project_id": "724",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0723",
@@ -22058,7 +22467,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "723"
+      "canonical_project_id": "723",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0333",
@@ -22099,7 +22509,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "333"
+      "canonical_project_id": "333",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0708",
@@ -22140,7 +22551,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "708"
+      "canonical_project_id": "708",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0404",
@@ -22179,7 +22591,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "404"
+      "canonical_project_id": "404",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0036",
@@ -22218,7 +22631,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "36"
+      "canonical_project_id": "36",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0632",
@@ -22261,7 +22675,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "632"
+      "canonical_project_id": "632",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0110",
@@ -22300,7 +22715,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "110"
+      "canonical_project_id": "110",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0041",
@@ -22339,7 +22755,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "41"
+      "canonical_project_id": "41",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0458",
@@ -22378,7 +22795,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "458"
+      "canonical_project_id": "458",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0068",
@@ -22417,7 +22835,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "68"
+      "canonical_project_id": "68",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0334",
@@ -22458,7 +22877,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "334"
+      "canonical_project_id": "334",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0335",
@@ -22499,7 +22919,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "335"
+      "canonical_project_id": "335",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0336",
@@ -22540,7 +22961,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "336"
+      "canonical_project_id": "336",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0071",
@@ -22579,7 +23001,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "71"
+      "canonical_project_id": "71",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0072",
@@ -22618,7 +23041,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "72"
+      "canonical_project_id": "72",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0070",
@@ -22657,7 +23081,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "70"
+      "canonical_project_id": "70",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0098",
@@ -22696,7 +23121,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "98"
+      "canonical_project_id": "98",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0172",
@@ -22735,7 +23161,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "172"
+      "canonical_project_id": "172",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0337",
@@ -22774,7 +23201,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "337"
+      "canonical_project_id": "337",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0171",
@@ -22813,7 +23241,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0171"
+      "canonical_project_id": "OBJ-0171",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0338",
@@ -22854,7 +23283,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "338"
+      "canonical_project_id": "338",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0048",
@@ -22893,7 +23323,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "48"
+      "canonical_project_id": "48",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0339",
@@ -22934,7 +23365,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "339"
+      "canonical_project_id": "339",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0726",
@@ -22975,7 +23407,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "726"
+      "canonical_project_id": "726",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0518",
@@ -23016,7 +23449,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "518"
+      "canonical_project_id": "518",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0435",
@@ -23057,7 +23491,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "435"
+      "canonical_project_id": "435",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0430",
@@ -23098,7 +23533,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "430"
+      "canonical_project_id": "430",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0531",
@@ -23139,7 +23575,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "531"
+      "canonical_project_id": "531",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0473",
@@ -23178,7 +23615,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "473"
+      "canonical_project_id": "473",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0140",
@@ -23217,7 +23655,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "140"
+      "canonical_project_id": "140",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0423",
@@ -23258,7 +23697,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "423"
+      "canonical_project_id": "423",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0536",
@@ -23299,7 +23739,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "536"
+      "canonical_project_id": "536",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0532",
@@ -23340,7 +23781,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "532"
+      "canonical_project_id": "532",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0564",
@@ -23375,7 +23817,8 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 620,
-      "canonical_project_id": "564"
+      "canonical_project_id": "564",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0026",
@@ -23414,7 +23857,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "26"
+      "canonical_project_id": "26",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0484",
@@ -23455,7 +23899,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "484"
+      "canonical_project_id": "484",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0479",
@@ -23496,7 +23941,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "479"
+      "canonical_project_id": "479",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0446",
@@ -23537,7 +23983,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "446"
+      "canonical_project_id": "446",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0342",
@@ -23578,7 +24025,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "342"
+      "canonical_project_id": "342",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0437",
@@ -23619,7 +24067,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "437"
+      "canonical_project_id": "437",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0161",
@@ -23661,7 +24110,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0161"
+      "canonical_project_id": "OBJ-0161",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0343",
@@ -23702,7 +24152,8 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "343"
+      "canonical_project_id": "343",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0416",
@@ -23743,7 +24194,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "416"
+      "canonical_project_id": "416",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0344",
@@ -23782,7 +24234,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "344"
+      "canonical_project_id": "344",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0120",
@@ -23823,7 +24276,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0120"
+      "canonical_project_id": "OBJ-0120",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0385",
@@ -23864,7 +24318,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "385"
+      "canonical_project_id": "385",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0383",
@@ -23905,7 +24360,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "383"
+      "canonical_project_id": "383",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0346",
@@ -23944,7 +24400,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "346"
+      "canonical_project_id": "346",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0412",
@@ -23985,7 +24442,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "412"
+      "canonical_project_id": "412",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0533",
@@ -24026,7 +24484,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "533"
+      "canonical_project_id": "533",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0534",
@@ -24067,7 +24526,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "534"
+      "canonical_project_id": "534",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0407",
@@ -24106,7 +24566,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "407"
+      "canonical_project_id": "407",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0477",
@@ -24145,7 +24606,8 @@
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "477"
+      "canonical_project_id": "477",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0459",
@@ -24184,7 +24646,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "459"
+      "canonical_project_id": "459",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0348",
@@ -24225,7 +24688,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "348"
+      "canonical_project_id": "348",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0537",
@@ -24266,7 +24730,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "537"
+      "canonical_project_id": "537",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0349",
@@ -24305,7 +24770,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "349"
+      "canonical_project_id": "349",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0396",
@@ -24346,7 +24812,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "396"
+      "canonical_project_id": "396",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0376",
@@ -24387,7 +24854,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "376"
+      "canonical_project_id": "376",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0144",
@@ -24426,7 +24894,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0144"
+      "canonical_project_id": "OBJ-0144",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0657",
@@ -24465,7 +24934,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "657"
+      "canonical_project_id": "657",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0712",
@@ -24504,7 +24974,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "712"
+      "canonical_project_id": "712",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0057",
@@ -24543,7 +25014,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "57"
+      "canonical_project_id": "57",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0027",
@@ -24582,7 +25054,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "27"
+      "canonical_project_id": "27",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0351",
@@ -24623,7 +25096,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "351"
+      "canonical_project_id": "351",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0169",
@@ -24662,7 +25136,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "169"
+      "canonical_project_id": "169",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0491",
@@ -24703,7 +25178,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "491"
+      "canonical_project_id": "491",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0561",
@@ -24744,7 +25220,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "561"
+      "canonical_project_id": "561",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0353",
@@ -24785,7 +25262,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "353"
+      "canonical_project_id": "353",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0354",
@@ -24824,7 +25302,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "354"
+      "canonical_project_id": "354",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0355",
@@ -24863,7 +25342,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "355"
+      "canonical_project_id": "355",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0356",
@@ -24905,7 +25385,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "356"
+      "canonical_project_id": "356",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0462",
@@ -24944,7 +25425,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "462"
+      "canonical_project_id": "462",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0465",
@@ -24983,7 +25465,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "465"
+      "canonical_project_id": "465",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0631",
@@ -25022,7 +25505,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "631"
+      "canonical_project_id": "631",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0463",
@@ -25061,7 +25545,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "463"
+      "canonical_project_id": "463",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0464",
@@ -25100,7 +25585,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "464"
+      "canonical_project_id": "464",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0643",
@@ -25141,7 +25627,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "643"
+      "canonical_project_id": "643",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0676",
@@ -25182,7 +25669,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "676"
+      "canonical_project_id": "676",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0393",
@@ -25223,7 +25711,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "393"
+      "canonical_project_id": "393",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0642",
@@ -25264,7 +25753,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "642"
+      "canonical_project_id": "642",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0449",
@@ -25305,7 +25795,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "449"
+      "canonical_project_id": "449",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0539",
@@ -25346,7 +25837,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "539"
+      "canonical_project_id": "539",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0540",
@@ -25387,7 +25879,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "540"
+      "canonical_project_id": "540",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0401",
@@ -25428,7 +25921,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "401"
+      "canonical_project_id": "401",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0358",
@@ -25467,7 +25961,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "canonical_project_id": "358"
+      "canonical_project_id": "358",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0544",
@@ -25508,7 +26003,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "544"
+      "canonical_project_id": "544",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0439",
@@ -25549,7 +26045,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "439"
+      "canonical_project_id": "439",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0180",
@@ -25593,7 +26090,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0180"
+      "canonical_project_id": "OBJ-0180",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0547",
@@ -25634,7 +26132,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "547"
+      "canonical_project_id": "547",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0549",
@@ -25675,7 +26174,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "549"
+      "canonical_project_id": "549",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0551",
@@ -25716,7 +26216,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "551"
+      "canonical_project_id": "551",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0552",
@@ -25757,7 +26258,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "552"
+      "canonical_project_id": "552",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0359",
@@ -25796,7 +26298,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "359"
+      "canonical_project_id": "359",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0410",
@@ -25837,7 +26340,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "410"
+      "canonical_project_id": "410",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0734",
@@ -25880,7 +26384,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "734"
+      "canonical_project_id": "734",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0426",
@@ -25921,7 +26426,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "426"
+      "canonical_project_id": "426",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0483",
@@ -25962,7 +26468,8 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "483"
+      "canonical_project_id": "483",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0647",
@@ -26003,7 +26510,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "647"
+      "canonical_project_id": "647",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0554",
@@ -26044,7 +26552,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "554"
+      "canonical_project_id": "554",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0470",
@@ -26083,7 +26592,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "470"
+      "canonical_project_id": "470",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0361",
@@ -26126,7 +26636,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "361"
+      "canonical_project_id": "361",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0444",
@@ -26167,7 +26678,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "444"
+      "canonical_project_id": "444",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0557",
@@ -26208,7 +26720,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "557"
+      "canonical_project_id": "557",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0130",
@@ -26251,7 +26764,8 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "130"
+      "canonical_project_id": "130",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0038",
@@ -26290,7 +26804,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "38"
+      "canonical_project_id": "38",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0445",
@@ -26331,7 +26846,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "445"
+      "canonical_project_id": "445",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0471",
@@ -26370,7 +26886,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "471"
+      "canonical_project_id": "471",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0569",
@@ -26409,7 +26926,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "569"
+      "canonical_project_id": "569",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-0625",
@@ -26448,7 +26966,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "625"
+      "canonical_project_id": "625",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-001",
@@ -26544,7 +27063,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "allprojects-praim-taim"
+      "canonical_project_id": "allprojects-praim-taim",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-003",
@@ -26593,7 +27113,8 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "allprojects-korolev"
+      "canonical_project_id": "allprojects-korolev",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-004",
@@ -26743,7 +27264,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "allprojects-plaza-technopark"
+      "canonical_project_id": "allprojects-plaza-technopark",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-007",
@@ -26844,7 +27366,8 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "allprojects-stone-towers-tower-a"
+      "canonical_project_id": "allprojects-stone-towers-tower-a",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-009",
@@ -26934,7 +27457,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "780"
+      "canonical_project_id": "780",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-011",
@@ -26974,7 +27498,8 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "781"
+      "canonical_project_id": "781",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-012",
@@ -27014,7 +27539,8 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "canonical_project_id": "782"
+      "canonical_project_id": "782",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-013",
@@ -27054,7 +27580,8 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0783"
+      "canonical_project_id": "OBJ-0783",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-014",
@@ -27094,7 +27621,8 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0784"
+      "canonical_project_id": "OBJ-0784",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-015",
@@ -27134,7 +27662,8 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0785"
+      "canonical_project_id": "OBJ-0785",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-016",
@@ -27174,7 +27703,8 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0786"
+      "canonical_project_id": "OBJ-0786",
+      "subid": "01"
     },
     {
       "unified_id": "UC-OBJ-ADD-019",

@@ -342,12 +342,6 @@ const CODIFIER_COLUMNS = [
   // введён → Фаза проекта → площади (проект/корпус x общая/офисная) → Статус.
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'subid', label:'SubID корпуса', type:'text', visible:true},
-  // ID лота — на уровне ЭТОЙ таблицы (проект/корпус) не применимо: лоты живут
-  // в отдельных data/lots_{quarter}.json/rent_lots_{quarter}.json на другом
-  // уровне детализации (один корпус = много лотов) — колонка оставлена по
-  // просьбе для единообразия структуры, но всегда пустая здесь, не гадаем
-  // "один из лотов" произвольно. См. разделы "Продажа"/"Аренда" для лотов.
-  {key:'lot_id_not_applicable', label:'ID лота', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
   // "Название проекта" — общий префикс имён всех corpus-строк одного
   // canonical_project_id (computeProjectGroupNames(), см. loadCodifier) —
