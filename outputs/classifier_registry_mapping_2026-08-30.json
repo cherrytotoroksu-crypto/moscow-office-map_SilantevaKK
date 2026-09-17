@@ -370,32 +370,6 @@
     "coord_corroborated": false
   },
   {
-    "unified_id": "UC-OBJ-0165",
-    "canonical_no": 38,
-    "name": "Бадаевский Восточная лента",
-    "address": "г. Москва, Кутузовский проспект, 12с3",
-    "status": "probable_match",
-    "candidate_project_id": "badaevsky",
-    "mismatch": [
-      "address",
-      "corpus"
-    ],
-    "coord_corroborated": false
-  },
-  {
-    "unified_id": "UC-OBJ-0763",
-    "canonical_no": 39,
-    "name": "Бадаевский Западная лента",
-    "address": "Кутузовский пр-кт, вл. 12",
-    "status": "probable_match",
-    "candidate_project_id": "badaevsky",
-    "mismatch": [
-      "address",
-      "corpus"
-    ],
-    "coord_corroborated": true
-  },
-  {
     "unified_id": "UC-OBJ-0066",
     "canonical_no": 40,
     "name": "БЦ Сколковский",
