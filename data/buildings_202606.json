@@ -455,7 +455,7 @@
     "start": "",
     "weight": 0,
     "id": 134,
-    "unified_id": "UC-OBJ-0113",
+    "unified_id": "UC-OBJ-ADD-205",
     "canonical_project_id": "134",
     "subid": "01",
     "tower_label": "CREDO"
@@ -482,7 +482,7 @@
     "start": "",
     "weight": 0,
     "id": 298,
-    "unified_id": "UC-OBJ-0113",
+    "unified_id": "UC-OBJ-ADD-206",
     "canonical_project_id": "134",
     "subid": "02",
     "tower_label": "MAST"
@@ -2156,7 +2156,7 @@
     "start": "",
     "weight": 0,
     "id": 245,
-    "unified_id": "UC-OBJ-0341",
+    "unified_id": "UC-OBJ-ADD-238",
     "canonical_project_id": "245",
     "subid": "01",
     "tower_label": "Здание А"
@@ -2183,7 +2183,7 @@
     "start": "",
     "weight": 0,
     "id": 303,
-    "unified_id": "UC-OBJ-0341",
+    "unified_id": "UC-OBJ-ADD-239",
     "canonical_project_id": "245",
     "subid": "02",
     "tower_label": "Здание Б"
@@ -2507,7 +2507,7 @@
     "start": "",
     "weight": 0,
     "id": 261,
-    "unified_id": "UC-OBJ-0211",
+    "unified_id": "UC-OBJ-ADD-244",
     "canonical_project_id": "261",
     "subid": "01",
     "tower_label": "К1"
@@ -2534,7 +2534,7 @@
     "start": "",
     "weight": 0,
     "id": 261,
-    "unified_id": "UC-OBJ-0211",
+    "unified_id": "UC-OBJ-ADD-245",
     "canonical_project_id": "261",
     "subid": "02",
     "tower_label": "К2"
