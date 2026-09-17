@@ -7141,16 +7141,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-ADD-195",
-    "canonical_no": null,
-    "name": "AFI Парк Воронцовский",
-    "address": "ул. Академика Челомея, 1А",
-    "status": "exact_match",
-    "matched_project_id": "proj-106",
-    "match_basis": "name (source: data/all_projects_layer.json entity_role=office_project, добавлено 2026-09-17)",
-    "coord_corroborated": true
-  },
-  {
     "unified_id": "UC-OBJ-ADD-196",
     "canonical_no": null,
     "name": "AFI2B Tagilskaya",
