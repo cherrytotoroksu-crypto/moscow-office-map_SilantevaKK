@@ -348,6 +348,17 @@ const CODIFIER_COLUMNS = [
   {key:'cls', label:'Класс', type:'text', visible:true},
   {key:'gba', label:'GBA, м²', type:'number', visible:false},
   {key:'gla', label:'GLA, м²', type:'number', visible:true},
+  // --- площади корпус/проект (join по названию к реестру, см. loadCodifier) ---
+  // "Корпус" = сама эта строка кодификатора (здание/башня); "проект" = сумма
+  // по всем строкам реестра с тем же canonical_project_id. У однокорпусных
+  // проектов корпус=проект (числа совпадают). "Площадь офисов" ≠ GLA — GLA
+  // может включать неофисные функции МФК (ритейл и т.п.), office_area в
+  // реестре заполнено пока для единиц зданий (см. project_future_projects_verification
+  // memory) — пусто, а не 0/GLA, там где не подтверждено отдельно.
+  {key:'reg_corpus_gba', label:'Общая площадь корпуса (реестр), м²', type:'number', visible:true},
+  {key:'reg_corpus_office_area', label:'Площадь офисов корпуса (реестр), м²', type:'number', visible:true},
+  {key:'reg_project_gba', label:'Общая площадь проекта (реестр), м²', type:'number', visible:false},
+  {key:'reg_project_office_area', label:'Площадь офисов проекта (реестр), м²', type:'number', visible:false},
   {key:'status', label:'Статус', type:'text', visible:true},
   {key:'commission_label', label:'Ввод', type:'text', visible:true},
   {key:'coords_label', label:'Координаты', type:'text', visible:false},
@@ -684,6 +695,30 @@ function computeProjectGroupNames(rows) {
 // раньше), b) дополнительные reg_-колонки поверх классификатора — join по
 // названию, совпадает не для каждой строки (реестр строит по проектам,
 // классификатор — более дробно, по зданиям/корпусам), нет пары — поля пустые.
+// Сумма gba/office_area по всем строкам реестра с одним canonical_project_id —
+// "площадь проекта" для новых колонок кодификатора. Null-safe: если ни одна
+// строка группы не заполнена, сумма тоже null (не 0 — это не "нулевая
+// площадь", а "не посчитана"), не гадаем среднее/оценку по недостающим.
+function projectAreaAggregates(layer) {
+  const byProject = new Map();
+  for (const r of layer) {
+    const pid = r.canonical_project_id;
+    if (!pid) continue;
+    if (!byProject.has(pid)) byProject.set(pid, {gbaSum: 0, gbaN: 0, officeSum: 0, officeN: 0});
+    const acc = byProject.get(pid);
+    if (r.gba != null && isFinite(r.gba)) { acc.gbaSum += Number(r.gba); acc.gbaN += 1; }
+    if (r.office_area != null && isFinite(r.office_area)) { acc.officeSum += Number(r.office_area); acc.officeN += 1; }
+  }
+  const result = new Map();
+  for (const [pid, acc] of byProject) {
+    result.set(pid, {
+      gba: acc.gbaN ? acc.gbaSum : null,
+      officeArea: acc.officeN ? acc.officeSum : null,
+    });
+  }
+  return result;
+}
+
 async function loadCodifier() {
   const [registryRows, classifierData] = await Promise.all([
     fetchJSON('data/all_projects_layer.json'),
@@ -691,6 +726,7 @@ async function loadCodifier() {
   ]);
   allProjectsLayer = registryRows;
   await buildProjectIdCrosswalk();
+  const projectAreas = projectAreaAggregates(allProjectsLayer);
 
   const rows = classifierData.records || [];
   const byName = registryByNameMap();
@@ -719,6 +755,16 @@ async function loadCodifier() {
     r.sales_start_year = reg ? reg.sales_start_year : null;
     r.input_year = reg ? reg.input_year : null;
     r.observed_market_channels = reg ? reg.observed_market_channels : null;
+
+    // "Корпус" = эта же строка реестра (может быть проектом целиком, если
+    // entity_grain='project' без деления на здания); "проект" = сумма по
+    // canonical_project_id из projectAreaAggregates() выше. Без пары в
+    // реестре (reg=null) — все 4 поля пусто, не подставляем 0.
+    r.reg_corpus_gba = reg ? reg.gba : null;
+    r.reg_corpus_office_area = reg ? reg.office_area : null;
+    const projArea = reg ? projectAreas.get(reg.canonical_project_id) : null;
+    r.reg_project_gba = projArea ? projArea.gba : null;
+    r.reg_project_office_area = projArea ? projArea.officeArea : null;
   }
   state.codifier.rows = rows;
   dataMeta.codifier = {updated: classifierData.generated_at || classifierData.last_verified_at || null, count: rows.length};
