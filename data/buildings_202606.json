@@ -105,7 +105,7 @@
     "unified_id": null,
     "canonical_project_id": "112",
     "subid": "01",
-    "tower_label": "корпус 1 (20 эт.)"
+    "tower_label": "корпус 1"
   },
   {
     "name": "Air (корпус 2 (28 эт.))",
@@ -132,7 +132,7 @@
     "unified_id": null,
     "canonical_project_id": "112",
     "subid": "02",
-    "tower_label": "корпус 2 (28 эт.)"
+    "tower_label": "корпус 2"
   },
   {
     "name": "ASPACE Хорошевская",

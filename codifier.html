@@ -451,7 +451,8 @@ const CODIFIER_COLUMNS = [
 // --- Продажа офисов ---
 const SALE_BUILDINGS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
-  {key:'tower_label', label:'Башня/корпус', type:'text', visible:true},
+  {key:'project_name', label:'Название проекта', type:'text', visible:true},
+  {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'name', label:'Здание', type:'text', visible:true},
   {key:'name_orig', label:'Прежнее название', type:'text', visible:false},
   {key:'address', label:'Адрес', type:'text', visible:true, format: STRIP_MOSCOW_PREFIX},
@@ -494,6 +495,8 @@ const SALE_DEVELOPERS_COLUMNS = [
 ];
 const SALE_LOTS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'project_name', label:'Название проекта', type:'text', visible:true},
+  {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
@@ -502,7 +505,7 @@ const SALE_LOTS_COLUMNS = [
   {key:'price', label:'Цена, руб/кв.м', type:'number', visible:true},
   {key:'total', label:'Итого, руб', type:'number', visible:true},
   {key:'scheme', label:'Планировка', type:'text', visible:true},
-  {key:'block', label:'Корпус', type:'text', visible:false},
+  {key:'block', label:'Корпус (сырое поле лота)', type:'text', visible:false},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -514,6 +517,8 @@ const SALE_LOTS_COLUMNS = [
 // исходные файлы не меняются, чисел не выдумываем.
 const RENT_BUILDINGS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'project_name', label:'Название проекта', type:'text', visible:true},
+  {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'building', label:'Объект', type:'text', visible:true},
   {key:'developer', label:'Девелопер (реестр)', type:'text', visible:true},
   {key:'cls', label:'Класс (реестр)', type:'text', visible:true},
@@ -537,6 +542,8 @@ const RENT_LANDLORDS_COLUMNS = [
 ];
 const RENT_LOTS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'project_name', label:'Название проекта', type:'text', visible:true},
+  {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'building', label:'Здание', type:'text', visible:true},
   {key:'market_channel', label:'Сегмент рынка', type:'text', visible:true},
   {key:'floor', label:'Этаж', type:'text', visible:true},
@@ -546,7 +553,7 @@ const RENT_LOTS_COLUMNS = [
   {key:'opex', label:'Опекс', type:'number', visible:true},
   {key:'nds', label:'НДС', type:'text', visible:false},
   {key:'finish', label:'Отделка', type:'text', visible:true},
-  {key:'block', label:'Корпус', type:'text', visible:false},
+  {key:'block', label:'Корпус (сырое поле лота)', type:'text', visible:false},
   {key:'reg_source', label:'Источник (реестр)', type:'text', visible:false},
 ];
 
@@ -566,6 +573,7 @@ const FLEX_OPERATORS_COLUMNS = [
 ];
 const FLEX_LOTS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'project_name', label:'Название проекта', type:'text', visible:true},
   // id/prev_id — id объекта в самом coworking_{quarter}.json. Часть строк
   // была переномерована в аудите координат (см. scripts/fix_coworking_
   // 202606_geocoding.py, current_state_audit.md): у них id новый
@@ -647,6 +655,7 @@ function defaultColumnWidth(col) {
   if (col.type === 'number') return 100;
   if (col.key === 'name' || col.key === 'project_name' || col.key === 'address'
       || col.key === 'layer_qa_notes' || col.key === 'classification_note') return 220;
+  if (col.key === 'tower_label') return 170;
   return 140;
 }
 
@@ -700,6 +709,17 @@ const state = {
   golden_report: makeTableState(GOLDEN_REPORT_COLUMNS),
 };
 let allProjectsLayer = [];
+// canonical_project_id -> project_name, запечённый в кодификаторе
+// (scripts/bake_project_names.py, общий для всех корпусов одного проекта —
+// см. commit "baked project_name field"). Единый источник для ВСЕХ вкладок
+// (Продажа/Аренда/Гибкие офисы тоже), чтобы "Название проекта" не расползалось
+// по-разному в разных таблицах для одного и того же canonical_project_id.
+// Заполняется в loadCodifier() при старте (грузится всегда, не только на
+// вкладке "Общий кодификатор" — см. init()).
+let projectNameById = new Map();
+function lookupProjectName(canonicalProjectId) {
+  return canonicalProjectId != null ? (projectNameById.get(String(canonicalProjectId)) || null) : null;
+}
 // Кроссвок all_projects_layer.canonical_project_id ("proj-108") -> наш
 // единый ID проекта ("108", "badaevsky", "280" — та же нумерация, что в
 // data/buildings_{quarter}.json и в едином кодификаторе). Без него
@@ -755,34 +775,6 @@ function isColumnShown(col) {
 // ============================================================
 //  ЗАГРУЗКА ДАННЫХ
 // ============================================================
-// Разграничение "проект" vs "здание/корпус" в общем кодификаторе — без
-// выдумывания текста: там где у одного canonical_project_id несколько
-// building-строк (напр. Бадаевский Восточная/Западная), берём общий для
-// них префикс слов из УЖЕ существующих canonical_name как имя проекта.
-// Не трогает GLA/GBA/подсчёты — они по-прежнему считаются через area_scope
-// (см. computeTotals), это чисто текстовая группировка для отображения.
-function computeProjectGroupNames(rows) {
-  const byProject = new Map();
-  for (const r of rows) {
-    if (!r.canonical_project_id) continue;
-    if (!byProject.has(r.canonical_project_id)) byProject.set(r.canonical_project_id, []);
-    byProject.get(r.canonical_project_id).push(r.canonical_name || '');
-  }
-  const groupName = new Map();
-  for (const [pid, names] of byProject) {
-    if (names.length === 1) { groupName.set(pid, names[0]); continue; }
-    const wordLists = names.map(n => n.split(/\s+/));
-    const minLen = Math.min(...wordLists.map(w => w.length));
-    const common = [];
-    for (let i = 0; i < minLen; i++) {
-      const w = wordLists[0][i];
-      if (wordLists.every(wl => wl[i] === w)) common.push(w); else break;
-    }
-    groupName.set(pid, common.length ? common.join(' ') : names[0]);
-  }
-  return groupName;
-}
-
 // "Общий кодификатор" = ВЕСЬ unified-классификатор (data/unified_classifier_audited,
 // 714 записей — тот же файл, что открывает отдельный classifier.html; здесь
 // не подмножество и не другой снимок, а те же строки). Реестр
@@ -825,6 +817,12 @@ async function loadCodifier() {
   const projectAreas = projectAreaAggregates(allProjectsLayer);
 
   const rows = classifierData.records || [];
+  projectNameById = new Map();
+  for (const r of rows) {
+    if (r.canonical_project_id && r.project_name && !projectNameById.has(String(r.canonical_project_id))) {
+      projectNameById.set(String(r.canonical_project_id), r.project_name);
+    }
+  }
   const byName = registryByNameMap();
   // НЕТ фолбэк-агрегации по собственному canonical_project_id кодификатора:
   // проверка вживую показала, что unified_classifier_audited_2026-08-27.json
@@ -965,6 +963,9 @@ function applyRegistryMatch(row, match) {
   // Гибкие офисы — те же строки, что joined к реестру, должны подсвечиваться
   // так же, как в общем кодификаторе, а не только там (см. rowClass в render()).
   row.reg_qa_status = match ? match.qa_status : null;
+  // Название проекта — то же для всех таблиц (Продажа/Аренда/Гибкие офисы),
+  // не собственное поле каждой вкладки (см. projectNameById выше).
+  row.project_name = lookupProjectName(row.canonical_project_id);
   return match;
 }
 function joinRegistryFields(row, byName, nameKey, nameOrigKey) {
@@ -1017,6 +1018,25 @@ async function fetchBuildingsWithJoin(quarterId) {
     row.sales_start_quarter = ss.quarter;
   }
   return rows;
+}
+
+// tower_label ("Название корпуса") хранится только в data/buildings_{quarter}.json
+// (не в реестре all_projects_layer) — нужен отдельный по-именной поиск для
+// вкладок, которые НЕ читают buildings_*.json напрямую (Аренда/лоты продажи
+// и аренды идут из lots_*.json / rent_lots_*.json, ключ там — тоже имя здания).
+let buildingInfoByNameCache = new Map(); // quarterId -> Map(имя -> строка buildings_*.json)
+async function buildingInfoByName(quarterId) {
+  if (buildingInfoByNameCache.has(quarterId)) return buildingInfoByNameCache.get(quarterId);
+  let rows;
+  try { rows = await fetchJSON(`data/buildings_${quarterId}.json`); }
+  catch (e) { rows = []; }
+  const map = new Map();
+  for (const r of rows) {
+    if (r.name) map.set(r.name, r);
+    if (r.name_orig) map.set(r.name_orig, r);
+  }
+  buildingInfoByNameCache.set(quarterId, map);
+  return map;
 }
 
 // --- Продажа офисов ---
@@ -1091,9 +1111,11 @@ async function loadSaleLots(quarterId) {
     rows = []; // не у каждого квартала есть файл — пустая таблица, не ошибка
   }
   const byName = registryByNameMap();
+  const buildingInfo = await buildingInfoByName(quarterId);
   for (const row of rows) {
     row.market_channel = SEGMENT_LABEL.sale; // явное, константное поле — вся вкладка = один сегмент рынка
     joinRegistryFields(row, byName, 'building', null);
+    row.tower_label = buildingInfo.get(row.building)?.tower_label ?? null;
     // Подозрение (не подтверждено по каждой строке): единичный "лот" такого
     // размера обычно на практике — остаток продаж по зданию/блоку целиком,
     // выложенный застройщиком одной строкой, а не индивидуальный лот (см.
@@ -1117,14 +1139,19 @@ async function fetchRentLotsRaw(quarterId) {
 async function loadRentBuildings(quarterId) {
   const raw = await fetchRentLotsRaw(quarterId);
   const byName = registryByNameMap();
+  const buildingInfo = await buildingInfoByName(quarterId);
   const byBuilding = new Map();
   for (const [building, lotRows] of Object.entries(raw)) {
     const match = byName.get(building);
+    const info = buildingInfo.get(building);
     if (!byBuilding.has(building)) {
+      const canonicalProjectId = match ? unifiedProjectId(match.canonical_project_id) : (info?.canonical_project_id ?? null);
       byBuilding.set(building, {
         building, developer: match ? match.developer : null, cls: match ? match.cls : null,
         zone: match ? match.zone : null, submarket: match ? match.submarket : null,
-        canonical_project_id: match ? unifiedProjectId(match.canonical_project_id) : null,
+        canonical_project_id: canonicalProjectId,
+        project_name: lookupProjectName(canonicalProjectId),
+        tower_label: info?.tower_label ?? null,
         reg_source: match ? match.source : null,
         // GLA/GBA здания — атрибут самого здания (из реестра), не сумма по
         // лотам аренды: площадь предложений аренды (areaSum ниже) — отдельная
@@ -1142,7 +1169,8 @@ async function loadRentBuildings(quarterId) {
   }
   const rows = [...byBuilding.values()].map(acc => ({
     building: acc.building, developer: acc.developer, cls: acc.cls, zone: acc.zone, submarket: acc.submarket,
-    canonical_project_id: acc.canonical_project_id, reg_source: acc.reg_source,
+    canonical_project_id: acc.canonical_project_id, project_name: acc.project_name, tower_label: acc.tower_label,
+    reg_source: acc.reg_source,
     reg_gla: acc.reg_gla, reg_gba: acc.reg_gba,
     lotsCount: acc.lotsCount || null,
     areaSum: acc.areaSum || null,
@@ -1190,9 +1218,11 @@ async function loadRentLots(quarterId) {
     for (const lot of lotRows) rows.push({building, ...lot});
   }
   const byName = registryByNameMap();
+  const buildingInfo = await buildingInfoByName(quarterId);
   for (const row of rows) {
     row.market_channel = SEGMENT_LABEL.rent;
     joinRegistryFields(row, byName, 'building', null);
+    row.tower_label = buildingInfo.get(row.building)?.tower_label ?? null;
   }
   state.rent_lots.rows = rows;
   if (!suppressURLSync) { state.rent_lots.filters = {}; state.rent_lots.sort = {key:null, dir:1}; state.rent_lots.page = 1; }
