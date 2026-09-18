@@ -57,10 +57,19 @@
   .fp-condition-row { display:flex; gap:6px; align-items:center; }
   .fp-condition-row input { margin-bottom:0; }
   .table-wrap { overflow:auto; background:#fff; margin:0 16px 16px; border:1px solid var(--nf-line); border-radius:6px; max-height:calc(100vh - 190px); }
-  table { border-collapse:collapse; width:100%; font-size:12px; }
-  th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left; white-space:nowrap; }
+  /* table-layout:fixed — ширину столбцов задаёт colgroup (render()), иначе
+     перетаскивание границы ни на что не влияет (auto-layout сам решает
+     ширину по содержимому, полностью игнорируя col.style.width). */
+  table { border-collapse:collapse; width:100%; font-size:12px; table-layout:fixed; }
+  th, td { padding:6px 10px; border-bottom:1px solid #eee; border-right:1px solid #f2f2f2; text-align:left;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   td.num-cell, th.num-cell { text-align:right; font-variant-numeric:tabular-nums; }
   th { background:var(--nf-navy); color:#fff; position:sticky; top:0; z-index:2; user-select:none; padding:0; text-transform:uppercase; font-size:10.5px; letter-spacing:.3px; }
+  /* Перетаскиваемая граница столбца — как в Excel: узкая полоса на правом
+     краю заголовка, курсор col-resize, подсветка при наведении/перетаскивании. */
+  .col-resize-handle { position:absolute; top:0; right:0; width:7px; height:100%; cursor:col-resize; z-index:3; touch-action:none; }
+  .col-resize-handle:hover, .col-resize-handle.resizing { background:rgba(255,255,255,.35); }
+  body.col-resizing { cursor:col-resize !important; user-select:none; }
   th:first-child, td:first-child { position:sticky; left:0; background:#fff; z-index:1; box-shadow:2px 0 3px rgba(0,0,0,.04); }
   th:first-child { z-index:3; background:var(--nf-navy); }
   tr:nth-child(even) td { background:rgba(27,42,74,0.025); }
@@ -191,7 +200,7 @@
   <span style="margin-left:6px;">· уголок в ячейке (наведите) — спорный момент по этому полю</span>
 </div>
 <div class="status-row" id="totalsRow" aria-live="polite" style="font-weight:600;"></div>
-<div class="table-wrap" id="tableWrap" aria-busy="false"><table id="mainTable"><thead></thead><tbody></tbody></table></div>
+<div class="table-wrap" id="tableWrap" aria-busy="false"><table id="mainTable"><colgroup></colgroup><thead></thead><tbody></tbody></table></div>
 <div class="status-row" id="pagerRow" style="display:flex; align-items:center; gap:8px;">
   <button class="btn" id="btnPrevPage">← Пред.</button>
   <span id="pagerLabel"></span>
@@ -343,13 +352,14 @@ const CODIFIER_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
   {key:'subid', label:'SubID корпуса', type:'text', visible:true},
   {key:'developer', label:'Девелопер', type:'text', visible:true},
-  // "Название проекта" — общий префикс имён всех corpus-строк одного
-  // canonical_project_id (computeProjectGroupNames(), см. loadCodifier) —
-  // для однокорпусных проектов совпадает с "Здание/блок". "Название корпуса"
-  // — короткая метка корпуса (tower_label, напр. "K1", "M3.1", "Восточная
-  // лента"). "Здание/блок" — name самой этой строки кодификатора (полное
-  // название, как хранится в data/unified_classifier_audited_2026-08-27.json).
-  {key:'reg_project_name', label:'Название проекта', type:'text', visible:true},
+  // "Название проекта" (project_name) запечено в самом файле данных —
+  // общий префикс имён всех corpus-строк одного canonical_project_id, без
+  // корпусной части (scripts/bake_project_names.py) — одинаково у всех
+  // строк одного id, для однокорпусных проектов совпадает с "Здание/блок".
+  // "Название корпуса" — короткая метка корпуса (tower_label, напр. "K1",
+  // "M3.1", "Восточная лента"). "Здание/блок" — полное name строки (как
+  // хранится в data/unified_classifier_audited_2026-08-27.json).
+  {key:'project_name', label:'Название проекта', type:'text', visible:true},
   {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'name', label:'Здание/блок', type:'text', visible:true},
   {key:'cls', label:'Класс', type:'text', visible:true},
@@ -626,7 +636,51 @@ function makeTableState(columns) {
     sort: {key:null, dir:1},
     globalSearch: '',
     page: 1,
+    columnWidths: {},   // key -> px, заполняется при первом рендере/при перетаскивании границы
   };
+}
+// Ширина колонки по умолчанию (px) — до того, как пользователь потянул
+// границу вручную. Текст, значит и bool — уже, номера — совсем узкие,
+// остальной текст — шире (застройщик/адрес и т.п. читаемы без переполнения).
+function defaultColumnWidth(col) {
+  if (col.type === 'bool') return 90;
+  if (col.type === 'number') return 100;
+  if (col.key === 'name' || col.key === 'project_name' || col.key === 'address'
+      || col.key === 'layer_qa_notes' || col.key === 'classification_note') return 220;
+  return 140;
+}
+
+const MIN_COL_WIDTH = 60;
+
+// Excel-style drag-to-resize: тянем правую границу th, ширину пишем в
+// ts.columnWidths и в <col> напрямую (без полного render(), иначе drag дёргается).
+function bindColumnResize(ts) {
+  document.querySelectorAll('#mainTable thead .col-resize-handle').forEach(handle => {
+    handle.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      const key = handle.dataset.resizeKey;
+      const th = handle.closest('th');
+      const colIdx = Array.prototype.indexOf.call(th.parentElement.children, th);
+      const col = document.querySelectorAll('#mainTable colgroup col')[colIdx];
+      const startX = e.clientX;
+      const startWidth = th.getBoundingClientRect().width;
+      handle.classList.add('resizing');
+      document.body.classList.add('col-resizing');
+      function onMove(ev) {
+        const w = Math.max(MIN_COL_WIDTH, Math.round(startWidth + (ev.clientX - startX)));
+        col.style.width = w + 'px';
+      }
+      function onUp() {
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+        handle.classList.remove('resizing');
+        document.body.classList.remove('col-resizing');
+        ts.columnWidths[key] = parseInt(col.style.width, 10);
+      }
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  });
 }
 
 let currentSection = 'codifier';
@@ -769,7 +823,6 @@ async function loadCodifier() {
   allProjectsLayer = registryRows;
   await buildProjectIdCrosswalk();
   const projectAreas = projectAreaAggregates(allProjectsLayer);
-  const projectGroupNames = computeProjectGroupNames(allProjectsLayer);
 
   const rows = classifierData.records || [];
   const byName = registryByNameMap();
@@ -822,12 +875,11 @@ async function loadCodifier() {
     r.reg_project_gba = projArea ? projArea.gba : null;
     r.reg_project_office_area = projArea ? projArea.officeArea : null;
 
-    // "Название проекта" — общий префикс имён по реестру (computeProjectGroupNames,
-    // группировка по ЧИСТОМУ canonical_project_id реестра, без риска дублей,
-    // см. комментарий выше про Бадаевский); без пары в реестре — просто имя
-    // самой этой строки (не пытаемся группировать по canonical_project_id
-    // самого кодификатора, там дубли строк корпусов встречаются).
-    r.reg_project_name = reg ? projectGroupNames.get(reg.canonical_project_id) : r.name;
+    // "Название проекта" (project_name) теперь ЗАПЕЧЕНО в самом файле
+    // data/unified_classifier_audited_2026-08-27.json (scripts/bake_project_names.py,
+    // группировка по canonical_project_id САМОГО кодификатора после дедупа
+    // по имени — см. коммит c88b969) — не вычисляется здесь заново, это
+    // гарантирует одно и то же название проекта у всех строк одного id.
 
     // Введён/не введён — по текстовому статусу самой записи (Сданный/Введён
     // и т.п.); честная бинаризация без домысливания дат для остальных статусов.
@@ -1632,6 +1684,14 @@ function render() {
   ts.page = Math.min(Math.max(1, ts.page || 1), totalPages);
   const pageRows = showAll ? filteredRows : filteredRows.slice((ts.page - 1) * pageSize, ts.page * pageSize);
 
+  // colgroup задаёт фактическую ширину столбцов (table-layout:fixed) —
+  // без него перетаскивание границы визуально ничего не меняет.
+  const colgroup = document.querySelector('#mainTable colgroup');
+  colgroup.innerHTML = (showCard ? '<col style="width:34px">' : '') + cols.map(col => {
+    const w = ts.columnWidths[col.key] || defaultColumnWidth(col);
+    return `<col style="width:${w}px">`;
+  }).join('');
+
   const thead = document.querySelector('#mainTable thead');
   thead.innerHTML = '<tr>' + (showCard ? '<th class="card-th" title="Источник и проверка">ℹ</th>' : '') + cols.map(col => {
     const isSorted = ts.sort.key === col.key;
@@ -1642,8 +1702,9 @@ function render() {
       + `<span class="th-label" data-sort-key="${col.key}" title="Сортировать">${escapeHtml(col.label)}${sortInd}</span>`
       + `<button type="button" class="filter-btn${hasFilter ? ' active' : ''}" data-filter-key="${col.key}" `
       + `aria-label="Фильтр по столбцу «${escapeHtml(col.label)}»"${hasFilter ? ' aria-pressed="true"' : ''} title="Фильтр">▾</button>`
-      + `</div></th>`;
+      + `</div><span class="col-resize-handle" data-resize-key="${col.key}" title="Потянуть, чтобы изменить ширину"></span></th>`;
   }).join('') + '</tr>';
+  bindColumnResize(ts);
 
   const tbody = document.querySelector('#mainTable tbody');
   if (pageRows.length === 0) {
