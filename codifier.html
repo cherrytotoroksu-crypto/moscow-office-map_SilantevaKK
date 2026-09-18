@@ -451,6 +451,7 @@ const CODIFIER_COLUMNS = [
 // --- Продажа офисов ---
 const SALE_BUILDINGS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'subid', label:'SubID корпуса', type:'text', visible:true},
   {key:'project_name', label:'Название проекта', type:'text', visible:true},
   {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'name', label:'Здание', type:'text', visible:true},
@@ -495,6 +496,7 @@ const SALE_DEVELOPERS_COLUMNS = [
 ];
 const SALE_LOTS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'subid', label:'SubID корпуса', type:'text', visible:true},
   {key:'project_name', label:'Название проекта', type:'text', visible:true},
   {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'building', label:'Здание', type:'text', visible:true},
@@ -517,6 +519,7 @@ const SALE_LOTS_COLUMNS = [
 // исходные файлы не меняются, чисел не выдумываем.
 const RENT_BUILDINGS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'subid', label:'SubID корпуса', type:'text', visible:true},
   {key:'project_name', label:'Название проекта', type:'text', visible:true},
   {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'building', label:'Объект', type:'text', visible:true},
@@ -542,6 +545,7 @@ const RENT_LANDLORDS_COLUMNS = [
 ];
 const RENT_LOTS_COLUMNS = [
   {key:'canonical_project_id', label:'ID проекта', type:'text', visible:true, format: PROJECT_ID_NUMBER},
+  {key:'subid', label:'SubID корпуса', type:'text', visible:true},
   {key:'project_name', label:'Название проекта', type:'text', visible:true},
   {key:'tower_label', label:'Название корпуса', type:'text', visible:true},
   {key:'building', label:'Здание', type:'text', visible:true},
@@ -656,6 +660,7 @@ function defaultColumnWidth(col) {
   if (col.key === 'name' || col.key === 'project_name' || col.key === 'address'
       || col.key === 'layer_qa_notes' || col.key === 'classification_note') return 220;
   if (col.key === 'tower_label') return 170;
+  if (col.key === 'subid') return 90;
   return 140;
 }
 
@@ -1116,6 +1121,7 @@ async function loadSaleLots(quarterId) {
     row.market_channel = SEGMENT_LABEL.sale; // явное, константное поле — вся вкладка = один сегмент рынка
     joinRegistryFields(row, byName, 'building', null);
     row.tower_label = buildingInfo.get(row.building)?.tower_label ?? null;
+    row.subid = buildingInfo.get(row.building)?.subid ?? null;
     // Подозрение (не подтверждено по каждой строке): единичный "лот" такого
     // размера обычно на практике — остаток продаж по зданию/блоку целиком,
     // выложенный застройщиком одной строкой, а не индивидуальный лот (см.
@@ -1152,6 +1158,7 @@ async function loadRentBuildings(quarterId) {
         canonical_project_id: canonicalProjectId,
         project_name: lookupProjectName(canonicalProjectId),
         tower_label: info?.tower_label ?? null,
+        subid: info?.subid ?? null,
         reg_source: match ? match.source : null,
         // GLA/GBA здания — атрибут самого здания (из реестра), не сумма по
         // лотам аренды: площадь предложений аренды (areaSum ниже) — отдельная
@@ -1170,7 +1177,7 @@ async function loadRentBuildings(quarterId) {
   const rows = [...byBuilding.values()].map(acc => ({
     building: acc.building, developer: acc.developer, cls: acc.cls, zone: acc.zone, submarket: acc.submarket,
     canonical_project_id: acc.canonical_project_id, project_name: acc.project_name, tower_label: acc.tower_label,
-    reg_source: acc.reg_source,
+    subid: acc.subid, reg_source: acc.reg_source,
     reg_gla: acc.reg_gla, reg_gba: acc.reg_gba,
     lotsCount: acc.lotsCount || null,
     areaSum: acc.areaSum || null,
@@ -1223,6 +1230,7 @@ async function loadRentLots(quarterId) {
     row.market_channel = SEGMENT_LABEL.rent;
     joinRegistryFields(row, byName, 'building', null);
     row.tower_label = buildingInfo.get(row.building)?.tower_label ?? null;
+    row.subid = buildingInfo.get(row.building)?.subid ?? null;
   }
   state.rent_lots.rows = rows;
   if (!suppressURLSync) { state.rent_lots.filters = {}; state.rent_lots.sort = {key:null, dir:1}; state.rent_lots.page = 1; }
