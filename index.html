@@ -3049,6 +3049,10 @@ const MARKET_CHANNEL_LABEL = { sale: 'Продажа', rent: 'Аренда', cow
 function mapAllProjectsLayerRecord(r) {
   return {
     id: r.canonical_project_id,
+    project_no: r.project_no,
+    project_name: r.project_name,
+    subid: r.subid,
+    tower_label: r.tower_label,
     name: r.raw_name,
     canonical_name: r.canonical_name,
     address: r.address,
@@ -3513,7 +3517,11 @@ function fpPopupHtml(p) {
     ? `<div style="margin:4px 0 6px;padding:3px 6px;background:#f0fdf4;border-left:3px solid #16a34a;font-size:10px;color:#14532d;">✓ Дополнено из текущего свода (${escapeHtml(p.enriched_from)}): ${(p.enriched_fields || []).map(escapeHtml).join(', ')}</div>`
     : '';
   const rows = [
-    ['ID', p.id],
+    ['ID проекта', p.project_no],
+    ['Название проекта', p.project_name],
+    ['SubID корпуса', p.subid],
+    ['Название корпуса', p.tower_label],
+    ['ID записи реестра', p.id],
     ['Каноническое название', p.canonical_name],
     ['Адрес', p.address],
     ['Координаты', coordsCell(p)],

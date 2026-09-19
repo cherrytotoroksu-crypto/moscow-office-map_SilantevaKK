@@ -54,7 +54,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "622",
+    "project_name": "Stone Пресня",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-2",
@@ -114,7 +118,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1075",
+    "project_name": "WeWork Роза",
+    "subid": "01",
+    "tower_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-3",
@@ -174,7 +182,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1076",
+    "project_name": "WeWork Белая площадь",
+    "subid": "01",
+    "tower_label": "Белая Площадь"
   },
   {
     "canonical_project_id": "proj-4",
@@ -234,7 +246,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1077",
+    "project_name": "WeWork Аркус",
+    "subid": "01",
+    "tower_label": "Аркус 3"
   },
   {
     "canonical_project_id": "proj-5",
@@ -294,7 +310,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1078",
+    "project_name": "WeWork Якиманка",
+    "subid": "01",
+    "tower_label": "Большая Якиманка 26"
   },
   {
     "canonical_project_id": "proj-6",
@@ -354,7 +374,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1079",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Смоленский Пассаж 1"
   },
   {
     "canonical_project_id": "proj-7",
@@ -414,7 +438,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1080",
+    "project_name": "Мой Кабинет",
+    "subid": "01",
+    "tower_label": "Сириус Парк"
   },
   {
     "canonical_project_id": "proj-8",
@@ -474,7 +502,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1081",
+    "project_name": "Apollax Технопарк",
+    "subid": "01",
+    "tower_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-9",
@@ -546,7 +578,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9",
+    "project_name": "Apollax Space",
+    "subid": "02",
+    "tower_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-10",
@@ -605,7 +641,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "10",
+    "project_name": "BusinessClub",
+    "subid": "01",
+    "tower_label": "Газетный"
   },
   {
     "canonical_project_id": "proj-11",
@@ -664,7 +704,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1082",
+    "project_name": "BusinessClub",
+    "subid": "01",
+    "tower_label": "Порта"
   },
   {
     "canonical_project_id": "proj-12",
@@ -723,7 +767,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1083",
+    "project_name": "BusinessClub",
+    "subid": "01",
+    "tower_label": "Ходынка"
   },
   {
     "canonical_project_id": "proj-13",
@@ -786,7 +834,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "697",
+    "project_name": "Fly Tower",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-14",
@@ -852,7 +904,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2021,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "745",
+    "project_name": "LUNAR",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-15",
@@ -914,7 +970,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1084",
+    "project_name": "Рабочая Станция",
+    "subid": "01",
+    "tower_label": "Black&White"
   },
   {
     "canonical_project_id": "proj-16",
@@ -976,7 +1036,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1085",
+    "project_name": "Балчуг Плаза - KW",
+    "subid": "01",
+    "tower_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-17",
@@ -1047,7 +1111,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9102",
+    "project_name": "Signature Столешников",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-18",
@@ -1109,7 +1177,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1086",
+    "project_name": "Регус Проспект Мира",
+    "subid": "01",
+    "tower_label": "Пр. Мира , 40"
   },
   {
     "canonical_project_id": "proj-19",
@@ -1174,7 +1246,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "75",
+    "project_name": "Берников",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-20",
@@ -1238,7 +1314,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "58",
+    "project_name": "БЦ Серебряный Фонтан",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-21",
@@ -1305,7 +1385,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1087",
+    "project_name": "Ключ Сретенка",
+    "subid": "01",
+    "tower_label": "Сретенский б-р, 5"
   },
   {
     "canonical_project_id": "proj-22",
@@ -1372,7 +1456,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1137",
+    "project_name": "БЦ Сколково",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-23",
@@ -1440,7 +1528,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "23",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Сокольники"
   },
   {
     "canonical_project_id": "proj-24",
@@ -1499,7 +1591,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1088",
+    "project_name": "BusinessClub Газетный",
+    "subid": "01",
+    "tower_label": "Газетный"
   },
   {
     "canonical_project_id": "proj-25",
@@ -1558,7 +1654,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1089",
+    "project_name": "BusinessClub Porta",
+    "subid": "01",
+    "tower_label": "Порта"
   },
   {
     "canonical_project_id": "proj-26",
@@ -1617,7 +1717,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1090",
+    "project_name": "BusinessClub Ходынка",
+    "subid": "01",
+    "tower_label": "Ходынка"
   },
   {
     "canonical_project_id": "proj-27",
@@ -1678,7 +1782,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1091",
+    "project_name": "Speace Jet Тимура Фрунзе",
+    "subid": "01",
+    "tower_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-28",
@@ -1743,7 +1851,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "28",
+    "project_name": "Speace Jet Белая площадь",
+    "subid": "01",
+    "tower_label": "Белая Площадь"
   },
   {
     "canonical_project_id": "proj-29",
@@ -1808,7 +1920,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1092",
+    "project_name": "Speace Jet Аркус",
+    "subid": "01",
+    "tower_label": "Аркус 3"
   },
   {
     "canonical_project_id": "proj-30",
@@ -1873,7 +1989,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1093",
+    "project_name": "Speace Jet Якиманка",
+    "subid": "01",
+    "tower_label": "Большая Якиманка 26"
   },
   {
     "canonical_project_id": "proj-31",
@@ -1933,7 +2053,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "31",
+    "project_name": "Multispace Галерея Актер",
+    "subid": "02",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-32",
@@ -1992,7 +2116,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "32",
+    "project_name": "СODE Novo 2",
+    "subid": "01",
+    "tower_label": "1-й Щемиловский 16с2"
   },
   {
     "canonical_project_id": "proj-33",
@@ -2062,7 +2190,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1138",
+    "project_name": "STONE Towers",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-34",
@@ -2122,7 +2254,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9103",
+    "project_name": "Smart Yard",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-35",
@@ -2181,7 +2317,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1094",
+    "project_name": "Порта",
+    "subid": "01",
+    "tower_label": "Заречная 2/1"
   },
   {
     "canonical_project_id": "proj-39",
@@ -2238,7 +2378,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "39",
+    "project_name": "AFI Gallery 4 эт",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-40",
@@ -2295,7 +2439,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "40",
+    "project_name": "AFI Gallery 7 эт",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-41",
@@ -2353,7 +2501,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "31",
+    "project_name": "Multispace Галерея Актер",
+    "subid": "02",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-42",
@@ -2417,7 +2569,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1095",
+    "project_name": "Атмосфера",
+    "subid": "01",
+    "tower_label": "БЦ Известия"
   },
   {
     "canonical_project_id": "proj-43",
@@ -2481,7 +2637,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1096",
+    "project_name": "Атмосфера",
+    "subid": "01",
+    "tower_label": "ТЦ РИО на Ленинском"
   },
   {
     "canonical_project_id": "proj-44",
@@ -2545,7 +2705,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "44",
+    "project_name": "Атмосфера",
+    "subid": "01",
+    "tower_label": "Квартал Вэст"
   },
   {
     "canonical_project_id": "proj-45",
@@ -2613,7 +2777,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9102",
+    "project_name": "Signature Столешников",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-46",
@@ -2679,7 +2847,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "46",
+    "project_name": "Регус",
+    "subid": "02",
+    "tower_label": "Проспект Мира, 40"
   },
   {
     "canonical_project_id": "proj-47",
@@ -2741,7 +2913,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9103",
+    "project_name": "Smart Yard",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-48",
@@ -2809,7 +2985,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1097",
+    "project_name": "Flexity",
+    "subid": "01",
+    "tower_label": "Павелецкая Плаза"
   },
   {
     "canonical_project_id": "proj-49",
@@ -2868,7 +3048,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1098",
+    "project_name": "Flexity Solo",
+    "subid": "01",
+    "tower_label": "Павелецкая Плаза"
   },
   {
     "canonical_project_id": "proj-50",
@@ -2937,7 +3121,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "50",
+    "project_name": "Ключ Сретенка",
+    "subid": "02",
+    "tower_label": "Сретенка"
   },
   {
     "canonical_project_id": "proj-51",
@@ -3001,7 +3189,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "51",
+    "project_name": "SOK",
+    "subid": "01",
+    "tower_label": "SOK Сити"
   },
   {
     "canonical_project_id": "proj-52",
@@ -3065,7 +3257,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1099",
+    "project_name": "SOK",
+    "subid": "01",
+    "tower_label": "SOK Арена Парк"
   },
   {
     "canonical_project_id": "proj-53",
@@ -3129,7 +3325,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "53",
+    "project_name": "SOK",
+    "subid": "01",
+    "tower_label": "SOK Арена Парк 2"
   },
   {
     "canonical_project_id": "proj-54",
@@ -3193,7 +3393,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1100",
+    "project_name": "SOK",
+    "subid": "01",
+    "tower_label": "SOK Сады Пекина"
   },
   {
     "canonical_project_id": "proj-55",
@@ -3257,7 +3461,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1101",
+    "project_name": "SOK",
+    "subid": "01",
+    "tower_label": "SOK Земляной Вал"
   },
   {
     "canonical_project_id": "proj-56",
@@ -3325,7 +3533,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "56",
+    "project_name": "Space 1",
+    "subid": "01",
+    "tower_label": "Лужники"
   },
   {
     "canonical_project_id": "proj-57",
@@ -3388,7 +3600,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "315",
+    "project_name": "На Берзарина",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-58",
@@ -3456,7 +3672,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1102",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-59",
@@ -3524,7 +3744,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1103",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Останкино"
   },
   {
     "canonical_project_id": "proj-60",
@@ -3592,7 +3816,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9",
+    "project_name": "Apollax Space",
+    "subid": "02",
+    "tower_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-61",
@@ -3660,7 +3888,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "61",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Новослободская"
   },
   {
     "canonical_project_id": "proj-62",
@@ -3724,7 +3956,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1104",
+    "project_name": "Grow up",
+    "subid": "01",
+    "tower_label": "GrowUp на Павелецкой"
   },
   {
     "canonical_project_id": "proj-63",
@@ -3790,7 +4026,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9104",
+    "project_name": "Газетный",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-64",
@@ -3854,7 +4094,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "64",
+    "project_name": "Ходынка",
+    "subid": "02",
+    "tower_label": "Авиаконструктора Микояна"
   },
   {
     "canonical_project_id": "proj-65",
@@ -3917,7 +4161,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "28",
+    "project_name": "Speace Jet Белая площадь",
+    "subid": "01",
+    "tower_label": "Белая Площадь"
   },
   {
     "canonical_project_id": "proj-66",
@@ -3979,7 +4227,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "64",
+    "project_name": "Ходынка",
+    "subid": "02",
+    "tower_label": "Авиаконструктора Микояна"
   },
   {
     "canonical_project_id": "proj-67",
@@ -4047,7 +4299,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1103",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Останкино"
   },
   {
     "canonical_project_id": "proj-68",
@@ -4117,7 +4373,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9105",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-69",
@@ -4185,7 +4445,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1102",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-70",
@@ -4253,7 +4517,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9",
+    "project_name": "Apollax Space",
+    "subid": "02",
+    "tower_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-71",
@@ -4321,7 +4589,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "61",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Новослободская"
   },
   {
     "canonical_project_id": "proj-72",
@@ -4379,7 +4651,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1139",
+    "project_name": "Бизнес-центр SEZAR",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-73",
@@ -4438,7 +4714,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1008",
+    "project_name": "Мещерский Лес",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-74",
@@ -4506,7 +4786,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1105",
+    "project_name": "Space 1",
+    "subid": "01",
+    "tower_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-75",
@@ -4569,7 +4853,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9101",
+    "project_name": "Space Балчуг",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-76",
@@ -4631,7 +4919,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1091",
+    "project_name": "Speace Jet Тимура Фрунзе",
+    "subid": "01",
+    "tower_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-77",
@@ -4697,7 +4989,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "54",
+    "project_name": "Lakes",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-78",
@@ -4762,7 +5058,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "78",
+    "project_name": "СODE Delegat",
+    "subid": "02",
+    "tower_label": "1-й Щемиловский 16с2"
   },
   {
     "canonical_project_id": "proj-79",
@@ -4823,7 +5123,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1106",
+    "project_name": "Multispace Porta",
+    "subid": "01",
+    "tower_label": "Porta"
   },
   {
     "canonical_project_id": "proj-80",
@@ -4885,7 +5189,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "745",
+    "project_name": "LUNAR",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-81",
@@ -4947,7 +5255,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "81",
+    "project_name": "SOK Арена Парк 2",
+    "subid": "01",
+    "tower_label": "SOK Арена Парк 2"
   },
   {
     "canonical_project_id": "proj-82",
@@ -5009,7 +5321,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "82",
+    "project_name": "SOK Арена Парк",
+    "subid": "01",
+    "tower_label": "SOK Арена Парк"
   },
   {
     "canonical_project_id": "proj-83",
@@ -5080,7 +5396,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "83",
+    "project_name": "Manufaqtury Поклонка",
+    "subid": "02",
+    "tower_label": "Poklonka Place"
   },
   {
     "canonical_project_id": "proj-84",
@@ -5148,7 +5468,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "83",
+    "project_name": "Manufaqtury Поклонка",
+    "subid": "02",
+    "tower_label": "Poklonka Place"
   },
   {
     "canonical_project_id": "proj-85",
@@ -5219,7 +5543,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1069",
+    "project_name": "Plaza Technopark",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-86",
@@ -5288,7 +5616,11 @@
     "construction_start_year": 2023,
     "construction_start_quarter": 1,
     "sales_start_year": 2023,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "285",
+    "project_name": "Porta Forma",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-87",
@@ -5351,7 +5683,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "87",
+    "project_name": "Slava",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-88",
@@ -5410,7 +5746,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1070",
+    "project_name": "STONE Towers, Tower A",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-89",
@@ -5469,7 +5809,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 1,
     "sales_start_year": 2022,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "698",
+    "project_name": "STONE Towers",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-90",
@@ -5528,7 +5872,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "570",
+    "project_name": "STONE Towers",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-91",
@@ -5593,7 +5941,11 @@
     "construction_start_year": 2024,
     "construction_start_quarter": 1,
     "sales_start_year": 2023,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "1013",
+    "project_name": "Stone Белорусская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-92",
@@ -5652,7 +6004,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "92",
+    "project_name": "Онегин PMG",
+    "subid": "01",
+    "tower_label": "Онегин"
   },
   {
     "canonical_project_id": "proj-93",
@@ -5718,7 +6074,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1107",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Домников"
   },
   {
     "canonical_project_id": "proj-94",
@@ -5785,7 +6145,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "94",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Вивальди Плаза"
   },
   {
     "canonical_project_id": "proj-95",
@@ -5853,7 +6217,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "12",
+    "project_name": "Алкон III",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-96",
@@ -5921,7 +6289,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "90",
+    "project_name": "БЦ Рябовская Мануфактура",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-97",
@@ -5979,7 +6351,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "97",
+    "project_name": "Звенигородская от Гранель",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-98",
@@ -6042,7 +6418,11 @@
     "construction_start_year": 2023,
     "construction_start_quarter": 3,
     "sales_start_year": 2022,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "1068",
+    "project_name": "Королёв",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-99",
@@ -6106,7 +6486,11 @@
     "construction_start_year": 2024,
     "construction_start_quarter": 4,
     "sales_start_year": 2024,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "99",
+    "project_name": "Магистральная 12",
+    "subid": "01",
+    "tower_label": "бывший — Магистральная ул., 12"
   },
   {
     "canonical_project_id": "proj-100",
@@ -6174,7 +6558,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1140",
+    "project_name": "Обсидиан",
+    "subid": "01",
+    "tower_label": "бывший — BusinessClass Ходынка"
   },
   {
     "canonical_project_id": "proj-101",
@@ -6243,7 +6631,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "4",
+    "project_name": "Orbital",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-102",
@@ -6316,7 +6708,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1141",
+    "project_name": "Парк Легенд класс А",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-103",
@@ -6387,7 +6783,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1142",
+    "project_name": "Парк Легенд класс В+",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-104",
@@ -6459,7 +6859,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1067",
+    "project_name": "Прайм Тайм",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-105",
@@ -6526,7 +6930,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "105",
+    "project_name": "Ключ Остоженка",
+    "subid": "01",
+    "tower_label": "Остоженка"
   },
   {
     "canonical_project_id": "proj-106",
@@ -6590,7 +6998,11 @@
     "construction_start_year": 2021,
     "construction_start_quarter": 1,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "106",
+    "project_name": "AFI Воронцовский Park",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-107",
@@ -6657,7 +7069,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "107",
+    "project_name": "Ключ Арма",
+    "subid": "01",
+    "tower_label": "Арма"
   },
   {
     "canonical_project_id": "proj-108",
@@ -6721,7 +7137,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "108",
+    "project_name": "AFI2B Tagilskaya",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-109",
@@ -6791,7 +7211,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "109",
+    "project_name": "Ahead",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-110",
@@ -6858,7 +7282,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "50",
+    "project_name": "Ключ Сретенка",
+    "subid": "02",
+    "tower_label": "Сретенка"
   },
   {
     "canonical_project_id": "proj-111",
@@ -6925,7 +7353,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1108",
+    "project_name": "Практик на Пролетарской",
+    "subid": "01",
+    "tower_label": "ул. Воронцовская, д. 49/28"
   },
   {
     "canonical_project_id": "proj-112",
@@ -6989,7 +7421,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 2,
     "sales_start_year": 2025,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "112",
+    "project_name": "Air",
+    "subid": "01",
+    "tower_label": "корпус 1"
   },
   {
     "canonical_project_id": "proj-112",
@@ -7053,7 +7489,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 2,
     "sales_start_year": 2025,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "112",
+    "project_name": "Air",
+    "subid": "02",
+    "tower_label": "корпус 2"
   },
   {
     "canonical_project_id": "proj-113",
@@ -7112,7 +7552,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2025,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "113",
+    "project_name": "Aspace Хорошевская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-114",
@@ -7179,7 +7623,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "114",
+    "project_name": "Ключ на Кузнецком мосту",
+    "subid": "01",
+    "tower_label": "КМ19"
   },
   {
     "canonical_project_id": "proj-115",
@@ -7240,7 +7688,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "115",
+    "project_name": "Avium",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-116",
@@ -7308,7 +7760,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "116",
+    "project_name": "Space 1",
+    "subid": "01",
+    "tower_label": "Композиторская"
   },
   {
     "canonical_project_id": "proj-117",
@@ -7369,7 +7825,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "117",
+    "project_name": "Bell",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-118",
@@ -7437,7 +7897,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1109",
+    "project_name": "Meeting point",
+    "subid": "01",
+    "tower_label": "Даниловская Мануфактура"
   },
   {
     "canonical_project_id": "proj-119",
@@ -7505,7 +7969,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1110",
+    "project_name": "Meeting point",
+    "subid": "01",
+    "tower_label": "Гостиница Москва"
   },
   {
     "canonical_project_id": "proj-120",
@@ -7564,7 +8032,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "120",
+    "project_name": "Edel",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-121",
@@ -7632,7 +8104,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "121",
+    "project_name": "Officeless",
+    "subid": "01",
+    "tower_label": "Милютинский"
   },
   {
     "canonical_project_id": "proj-122",
@@ -7699,7 +8175,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "122",
+    "project_name": "Фили Центр",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-123",
@@ -7767,7 +8247,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "123",
+    "project_name": "Officeless",
+    "subid": "01",
+    "tower_label": "Полянка"
   },
   {
     "canonical_project_id": "proj-124",
@@ -7829,7 +8313,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "124",
+    "project_name": "Fili residence",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-125",
@@ -7897,7 +8385,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1111",
+    "project_name": "Space 1",
+    "subid": "01",
+    "tower_label": "Меркурий"
   },
   {
     "canonical_project_id": "proj-126",
@@ -7961,7 +8453,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "126",
+    "project_name": "Frame",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-127",
@@ -8029,7 +8525,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "127",
+    "project_name": "Space 1",
+    "subid": "01",
+    "tower_label": "Фабрика Станиславского"
   },
   {
     "canonical_project_id": "proj-128",
@@ -8094,7 +8594,11 @@
     "construction_start_year": 2023,
     "construction_start_quarter": 4,
     "sales_start_year": 2025,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "128",
+    "project_name": "GEOLOG 2",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-129",
@@ -8172,7 +8676,11 @@
     "construction_start_year": 2020,
     "construction_start_quarter": 3,
     "sales_start_year": 2022,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "129",
+    "project_name": "iCITY",
+    "subid": "01",
+    "tower_label": "Time"
   },
   {
     "canonical_project_id": "proj-129",
@@ -8250,7 +8758,11 @@
     "construction_start_year": 2020,
     "construction_start_quarter": 3,
     "sales_start_year": 2022,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "129",
+    "project_name": "iCITY",
+    "subid": "02",
+    "tower_label": "Space"
   },
   {
     "canonical_project_id": "proj-130",
@@ -8318,7 +8830,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1112",
+    "project_name": "Space 1",
+    "subid": "01",
+    "tower_label": "Арбат"
   },
   {
     "canonical_project_id": "proj-131",
@@ -8381,7 +8897,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1092",
+    "project_name": "Speace Jet Аркус",
+    "subid": "01",
+    "tower_label": "Аркус 3"
   },
   {
     "canonical_project_id": "proj-132",
@@ -8441,7 +8961,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "132",
+    "project_name": "Jenga",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-133",
@@ -8504,7 +9028,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1093",
+    "project_name": "Speace Jet Якиманка",
+    "subid": "01",
+    "tower_label": "Большая Якиманка 26"
   },
   {
     "canonical_project_id": "proj-134",
@@ -8567,7 +9095,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2023,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "134",
+    "project_name": "Jois",
+    "subid": "01",
+    "tower_label": "CREDO"
   },
   {
     "canonical_project_id": "proj-134",
@@ -8630,7 +9162,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2023,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "134",
+    "project_name": "Jois",
+    "subid": "02",
+    "tower_label": "MAST"
   },
   {
     "canonical_project_id": "proj-135",
@@ -8693,7 +9229,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "135",
+    "project_name": "Speace  Jet Белая площадь",
+    "subid": "01",
+    "tower_label": "Белая Площадь площадка закрыта"
   },
   {
     "canonical_project_id": "proj-136",
@@ -8755,7 +9295,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 2,
     "sales_start_year": 2025,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "136",
+    "project_name": "K-City",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-137",
@@ -8816,7 +9360,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9101",
+    "project_name": "Space Балчуг",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-138",
@@ -8883,7 +9431,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2024,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "138",
+    "project_name": "Upside Кунцево",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-139",
@@ -8943,7 +9495,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 3,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "139",
+    "project_name": "Lakes 2",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-140",
@@ -9004,7 +9560,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1113",
+    "project_name": "Space Вивальди",
+    "subid": "01",
+    "tower_label": "Вивальди"
   },
   {
     "canonical_project_id": "proj-141",
@@ -9064,7 +9624,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "141",
+    "project_name": "Lavin",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-142",
@@ -9123,7 +9687,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "142",
+    "project_name": "Space  Jet Тимура Фрунзе",
+    "subid": "01",
+    "tower_label": "Красная Роза"
   },
   {
     "canonical_project_id": "proj-143",
@@ -9182,7 +9750,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "143",
+    "project_name": "Refolio Достоевский",
+    "subid": "01",
+    "tower_label": "Refolio Достоевский"
   },
   {
     "canonical_project_id": "proj-144",
@@ -9247,7 +9819,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "144",
+    "project_name": "Level Воронцовская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-145",
@@ -9315,7 +9891,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "145",
+    "project_name": "СODE Якиманка",
+    "subid": "01",
+    "tower_label": "Кадашевская наб., 6"
   },
   {
     "canonical_project_id": "proj-146",
@@ -9374,7 +9954,11 @@
     "construction_start_year": 2022,
     "construction_start_quarter": 1,
     "sales_start_year": 2022,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "146",
+    "project_name": "Level Южнопортовая",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-147",
@@ -9438,7 +10022,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "147",
+    "project_name": "Light City",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-148",
@@ -9506,7 +10094,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1114",
+    "project_name": "СODE Савеловская",
+    "subid": "01",
+    "tower_label": "МФК Савеловский сити"
   },
   {
     "canonical_project_id": "proj-149",
@@ -9576,7 +10168,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "149",
+    "project_name": "СODE Novo",
+    "subid": "01",
+    "tower_label": "Долгоруковская 21"
   },
   {
     "canonical_project_id": "proj-150",
@@ -9639,7 +10235,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "150",
+    "project_name": "Link",
+    "subid": "01",
+    "tower_label": "RUNE"
   },
   {
     "canonical_project_id": "proj-150",
@@ -9702,7 +10302,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "150",
+    "project_name": "Link",
+    "subid": "02",
+    "tower_label": "NEO"
   },
   {
     "canonical_project_id": "proj-151",
@@ -9765,7 +10369,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "78",
+    "project_name": "СODE Delegat",
+    "subid": "02",
+    "tower_label": "1-й Щемиловский 16с2"
   },
   {
     "canonical_project_id": "proj-152",
@@ -9826,7 +10434,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "152",
+    "project_name": "Mind",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-153",
@@ -9886,7 +10498,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "153",
+    "project_name": "Mount",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-154",
@@ -9954,7 +10570,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1115",
+    "project_name": "Multispace Динамо",
+    "subid": "01",
+    "tower_label": "ВТБ Арена стр 8"
   },
   {
     "canonical_project_id": "proj-155",
@@ -10019,7 +10639,11 @@
     "construction_start_year": 2023,
     "construction_start_quarter": 1,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "155",
+    "project_name": "NEVSKY PLAZA",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-156",
@@ -10080,7 +10704,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1116",
+    "project_name": "Multispace Павелецкая",
+    "subid": "01",
+    "tower_label": "1 шипковский пер. 5"
   },
   {
     "canonical_project_id": "proj-157",
@@ -10142,7 +10770,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1117",
+    "project_name": "Multispace Дубинин",
+    "subid": "01",
+    "tower_label": "Дубинин Скай"
   },
   {
     "canonical_project_id": "proj-158",
@@ -10209,7 +10841,11 @@
     "construction_start_year": 2021,
     "construction_start_quarter": 4,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "158",
+    "project_name": "Солид",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-159",
@@ -10271,7 +10907,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "159",
+    "project_name": "NOON",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-160",
@@ -10333,7 +10973,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1118",
+    "project_name": "Multispace Актер",
+    "subid": "01",
+    "tower_label": "Галерея Актер"
   },
   {
     "canonical_project_id": "proj-161",
@@ -10392,7 +11036,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "161",
+    "project_name": "Omni tower",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-162",
@@ -10456,7 +11104,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9104",
+    "project_name": "Газетный",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-163",
@@ -10518,7 +11170,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "163",
+    "project_name": "SOK Арена Парк 2",
+    "subid": "01",
+    "tower_label": "SOK Арена Парк"
   },
   {
     "canonical_project_id": "proj-164",
@@ -10580,7 +11236,11 @@
     "construction_start_year": 2019,
     "construction_start_quarter": 3,
     "sales_start_year": 2025,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "164",
+    "project_name": "One Tower",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-165",
@@ -10651,7 +11311,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "165",
+    "project_name": "OPUS",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-166",
@@ -10713,7 +11377,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "166",
+    "project_name": "SOK Арена Парк",
+    "subid": "01",
+    "tower_label": "SOK Рыбаков Тауэр"
   },
   {
     "canonical_project_id": "proj-167",
@@ -10775,7 +11443,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "167",
+    "project_name": "SOK Земляной Вал",
+    "subid": "01",
+    "tower_label": "SOK Земляной Вал"
   },
   {
     "canonical_project_id": "proj-168",
@@ -10836,7 +11508,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "168",
+    "project_name": "Orbital-2",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-169",
@@ -10898,7 +11574,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1119",
+    "project_name": "SOK Сады Пекина",
+    "subid": "01",
+    "tower_label": "SOK Сады Пекина"
   },
   {
     "canonical_project_id": "proj-170",
@@ -10971,7 +11651,11 @@
     "construction_start_year": 2022,
     "construction_start_quarter": 1,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "170",
+    "project_name": "Plaza Botanica",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-171",
@@ -11036,7 +11720,11 @@
     "construction_start_year": 2024,
     "construction_start_quarter": 1,
     "sales_start_year": 2023,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "171",
+    "project_name": "QOOB",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-172",
@@ -11098,7 +11786,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1120",
+    "project_name": "SOK Сити",
+    "subid": "01",
+    "tower_label": "SOK Сити"
   },
   {
     "canonical_project_id": "proj-173",
@@ -11159,7 +11851,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "173",
+    "project_name": "Rail.A",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-174",
@@ -11227,7 +11923,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "83",
+    "project_name": "Manufaqtury Поклонка",
+    "subid": "02",
+    "tower_label": "Poklonka Place"
   },
   {
     "canonical_project_id": "proj-175",
@@ -11286,7 +11986,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "175",
+    "project_name": "Solo",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-176",
@@ -11346,7 +12050,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "176",
+    "project_name": "AFI GAllery",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-177",
@@ -11416,7 +12124,11 @@
     "construction_start_year": 2024,
     "construction_start_quarter": 2,
     "sales_start_year": 2025,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "177",
+    "project_name": "STONE Дмитровская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-178",
@@ -11484,7 +12196,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1121",
+    "project_name": "Deworkacy Савинский",
+    "subid": "01",
+    "tower_label": "Deworkacy Савинский"
   },
   {
     "canonical_project_id": "proj-179",
@@ -11552,7 +12268,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "179",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Империя"
   },
   {
     "canonical_project_id": "proj-180",
@@ -11621,7 +12341,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2024,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "180",
+    "project_name": "STONE Калужская",
+    "subid": "01",
+    "tower_label": "K1"
   },
   {
     "canonical_project_id": "proj-180",
@@ -11690,7 +12414,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2024,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "180",
+    "project_name": "STONE Калужская",
+    "subid": "02",
+    "tower_label": "K2"
   },
   {
     "canonical_project_id": "proj-180",
@@ -11759,7 +12487,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2024,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "180",
+    "project_name": "STONE Калужская",
+    "subid": "03",
+    "tower_label": "K3"
   },
   {
     "canonical_project_id": "proj-181",
@@ -11834,7 +12566,11 @@
     "construction_start_year": 2022,
     "construction_start_quarter": 2,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "181",
+    "project_name": "Stone Курская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-182",
@@ -11902,7 +12638,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1122",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Никольская"
   },
   {
     "canonical_project_id": "proj-183",
@@ -11970,7 +12710,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "183",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Федерация"
   },
   {
     "canonical_project_id": "proj-184",
@@ -12044,7 +12788,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "184",
+    "project_name": "STONE Ленинский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-185",
@@ -12104,7 +12852,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2024,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "185",
+    "project_name": "STONE Мневники 1",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-186",
@@ -12172,7 +12924,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9",
+    "project_name": "Apollax Space",
+    "subid": "02",
+    "tower_label": "Новосущевский"
   },
   {
     "canonical_project_id": "proj-187",
@@ -12240,7 +12996,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "187",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Цветной бульвар"
   },
   {
     "canonical_project_id": "proj-188",
@@ -12302,7 +13062,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2024,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "188",
+    "project_name": "STONE Мневники II",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-189",
@@ -12363,7 +13127,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "189",
+    "project_name": "STONE Мневники III",
+    "subid": "01",
+    "tower_label": "M3.1"
   },
   {
     "canonical_project_id": "proj-189",
@@ -12424,7 +13192,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "189",
+    "project_name": "STONE Мневники III",
+    "subid": "02",
+    "tower_label": "M3.2"
   },
   {
     "canonical_project_id": "proj-190",
@@ -12492,7 +13264,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1103",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Останкино"
   },
   {
     "canonical_project_id": "proj-191",
@@ -12560,7 +13336,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1123",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Бригантина"
   },
   {
     "canonical_project_id": "proj-192",
@@ -12624,7 +13404,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "192",
+    "project_name": "STONE Римская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-193",
@@ -12692,7 +13476,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1102",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Технопарк"
   },
   {
     "canonical_project_id": "proj-194",
@@ -12769,7 +13557,11 @@
     "construction_start_year": 2021,
     "construction_start_quarter": 1,
     "sales_start_year": 2021,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "194",
+    "project_name": "STONE Савеловская",
+    "subid": "01",
+    "tower_label": "Башня 1"
   },
   {
     "canonical_project_id": "proj-194",
@@ -12846,7 +13638,11 @@
     "construction_start_year": 2021,
     "construction_start_quarter": 1,
     "sales_start_year": 2021,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "194",
+    "project_name": "STONE Савеловская",
+    "subid": "02",
+    "tower_label": "Башня 2"
   },
   {
     "canonical_project_id": "proj-195",
@@ -12914,7 +13710,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "61",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": "Новослободская"
   },
   {
     "canonical_project_id": "proj-196",
@@ -12984,7 +13784,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2023,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "196",
+    "project_name": "STONE Ходынка I",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-197",
@@ -13049,7 +13853,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 3,
     "sales_start_year": 2025,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "197",
+    "project_name": "STONE Ходынка II",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-198",
@@ -13117,7 +13925,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9105",
+    "project_name": "Apollax Space",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-199",
@@ -13185,7 +13997,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1124",
+    "project_name": "Workki Зубовский",
+    "subid": "01",
+    "tower_label": "Зубовский 17"
   },
   {
     "canonical_project_id": "proj-200",
@@ -13246,7 +14062,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "200",
+    "project_name": "Stone Ходынка 3",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-201",
@@ -13320,7 +14140,11 @@
     "construction_start_year": 2022,
     "construction_start_quarter": 1,
     "sales_start_year": 2022,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "201",
+    "project_name": "Taller",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-202",
@@ -13388,7 +14212,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "202",
+    "project_name": "Workki Сити",
+    "subid": "01",
+    "tower_label": "Федерация"
   },
   {
     "canonical_project_id": "proj-203",
@@ -13456,7 +14284,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "203",
+    "project_name": "Workki Нео Гео",
+    "subid": "01",
+    "tower_label": "Нео Гео"
   },
   {
     "canonical_project_id": "proj-204",
@@ -13515,7 +14347,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 4,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "204",
+    "project_name": "Top Tower",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-205",
@@ -13582,7 +14418,11 @@
     "construction_start_year": 2023,
     "construction_start_quarter": 2,
     "sales_start_year": 2023,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "205",
+    "project_name": "Twist",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-206",
@@ -13650,7 +14490,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "206",
+    "project_name": "Workki ФОК",
+    "subid": "01",
+    "tower_label": "ФОК"
   },
   {
     "canonical_project_id": "proj-207",
@@ -13718,7 +14562,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1125",
+    "project_name": "Workki Комсомольская",
+    "subid": "01",
+    "tower_label": "Workki Комсомольская"
   },
   {
     "canonical_project_id": "proj-208",
@@ -13777,7 +14625,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "208",
+    "project_name": "Upside Ямская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-209",
@@ -13839,7 +14691,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "209",
+    "project_name": "Valtri",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-210",
@@ -13907,7 +14763,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1126",
+    "project_name": "Workki Тульский",
+    "subid": "01",
+    "tower_label": "На Тульской"
   },
   {
     "canonical_project_id": "proj-211",
@@ -13975,7 +14835,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "211",
+    "project_name": "F2",
+    "subid": "01",
+    "tower_label": "DM Tower"
   },
   {
     "canonical_project_id": "proj-212",
@@ -14037,7 +14901,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "212",
+    "project_name": "БЦ WEST PIER",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-213",
@@ -14105,7 +14973,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "213",
+    "project_name": "Рабочая Станция",
+    "subid": "01",
+    "tower_label": "Парк Горького"
   },
   {
     "canonical_project_id": "proj-214",
@@ -14164,7 +15036,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "214",
+    "project_name": "Минто",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-215",
@@ -14232,7 +15108,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1127",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Гринвуд"
   },
   {
     "canonical_project_id": "proj-216",
@@ -14306,7 +15186,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "216",
+    "project_name": "А101 Прокшино",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "badaevsky",
@@ -14372,7 +15256,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "282",
+    "project_name": "Бадаевский",
+    "subid": "01",
+    "tower_label": "Восточная лента"
   },
   {
     "canonical_project_id": "proj-218",
@@ -14440,7 +15328,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "218",
+    "project_name": "Smart Yard",
+    "subid": "01",
+    "tower_label": "на Басманной"
   },
   {
     "canonical_project_id": "proj-219",
@@ -14504,7 +15396,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "46",
+    "project_name": "Регус",
+    "subid": "02",
+    "tower_label": "Проспект Мира, 40"
   },
   {
     "canonical_project_id": "proj-220",
@@ -14569,7 +15465,11 @@
     "construction_start_year": 2026,
     "construction_start_quarter": 2,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "220",
+    "project_name": "Башня Рябов",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-221",
@@ -14630,7 +15530,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "221",
+    "project_name": "Бизнес-парк Переделкино",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-222",
@@ -14698,7 +15602,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1128",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Капитолий Вернадского"
   },
   {
     "canonical_project_id": "proj-223",
@@ -14766,7 +15674,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1129",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Citydel"
   },
   {
     "canonical_project_id": "proj-224",
@@ -14826,7 +15738,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "224",
+    "project_name": "БЦ «Варшавская»",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-225",
@@ -14894,7 +15810,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1130",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "Авион"
   },
   {
     "canonical_project_id": "proj-226",
@@ -14953,7 +15873,11 @@
     "construction_start_year": 2023,
     "construction_start_quarter": 2,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "226",
+    "project_name": "А101 на улице Эдварда Грига",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-227",
@@ -15017,7 +15941,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "227",
+    "project_name": "БЦ Сколковский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-228",
@@ -15085,7 +16013,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1131",
+    "project_name": "F2 - Федерация",
+    "subid": "01",
+    "tower_label": "Федерация"
   },
   {
     "canonical_project_id": "proj-229",
@@ -15153,7 +16085,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "229",
+    "project_name": "Регус",
+    "subid": "01",
+    "tower_label": "White Stone"
   },
   {
     "canonical_project_id": "proj-230",
@@ -15212,7 +16148,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2025,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "230",
+    "project_name": "ВАРСТ",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-231",
@@ -15273,7 +16213,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "231",
+    "project_name": "Дом Правды",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-232",
@@ -15341,7 +16285,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1132",
+    "project_name": "Коворкинг СОЛЬ",
+    "subid": "01",
+    "tower_label": "Ролл Холл"
   },
   {
     "canonical_project_id": "proj-233",
@@ -15405,7 +16353,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "233",
+    "project_name": "KW Балчуг",
+    "subid": "01",
+    "tower_label": "Балчуг"
   },
   {
     "canonical_project_id": "proj-234",
@@ -15465,7 +16417,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "234",
+    "project_name": "МФК Юг",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-235",
@@ -15529,7 +16485,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "235",
+    "project_name": "KW Павелецкая",
+    "subid": "01",
+    "tower_label": "Black&White"
   },
   {
     "canonical_project_id": "proj-236",
@@ -15591,7 +16551,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2025,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "236",
+    "project_name": "Strogino by PARADE.Pro",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-237",
@@ -15653,7 +16617,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "237",
+    "project_name": "Октябрьское поле",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-238",
@@ -15714,7 +16682,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "238",
+    "project_name": "KW Симонов",
+    "subid": "01",
+    "tower_label": "Симонов"
   },
   {
     "canonical_project_id": "proj-239",
@@ -15782,7 +16754,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1133",
+    "project_name": "F2",
+    "subid": "01",
+    "tower_label": "Фили Град"
   },
   {
     "canonical_project_id": "proj-240",
@@ -15842,7 +16818,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "240",
+    "project_name": "Ольховая SKY",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-241",
@@ -15904,7 +16884,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "241",
+    "project_name": "Родина Парк",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-242",
@@ -15972,7 +16956,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "9102",
+    "project_name": "Signature Столешников",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-243",
@@ -16040,7 +17028,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "243",
+    "project_name": "Flexity",
+    "subid": "01",
+    "tower_label": "Риверсайд Тауэрс"
   },
   {
     "canonical_project_id": "proj-244",
@@ -16117,7 +17109,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2020,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "244",
+    "project_name": "Рублево Бизнес-Парк",
+    "subid": "01",
+    "tower_label": "Корпус 1"
   },
   {
     "canonical_project_id": "proj-244",
@@ -16194,7 +17190,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2020,
-    "sales_start_quarter": 4
+    "sales_start_quarter": 4,
+    "project_no": "244",
+    "project_name": "Рублево Бизнес-Парк",
+    "subid": "02",
+    "tower_label": "Корпус 2"
   },
   {
     "canonical_project_id": "proj-245",
@@ -16255,7 +17255,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 1,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "245",
+    "project_name": "Сити-4",
+    "subid": "01",
+    "tower_label": "Здание А"
   },
   {
     "canonical_project_id": "proj-245",
@@ -16316,7 +17320,11 @@
     "construction_start_year": 2025,
     "construction_start_quarter": 1,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "245",
+    "project_name": "Сити-4",
+    "subid": "02",
+    "tower_label": "Здание Б"
   },
   {
     "canonical_project_id": "proj-246",
@@ -16384,7 +17392,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1134",
+    "project_name": "Flexity",
+    "subid": "01",
+    "tower_label": "Садовая Плаза"
   },
   {
     "canonical_project_id": "proj-247",
@@ -16445,7 +17457,11 @@
     "construction_start_year": 2024,
     "construction_start_quarter": 2,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "247",
+    "project_name": "Технопарк Густав",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-248",
@@ -16513,7 +17529,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1135",
+    "project_name": "Flexity",
+    "subid": "01",
+    "tower_label": "Овчинниковский"
   },
   {
     "canonical_project_id": "proj-249",
@@ -16572,7 +17592,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "249",
+    "project_name": "Цетлин",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-250",
@@ -16643,7 +17667,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2022,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "250",
+    "project_name": "Эйлер",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-251",
@@ -16701,7 +17729,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "251",
+    "project_name": "KORP. Молодежная",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-252",
@@ -16760,7 +17792,11 @@
     "construction_start_year": 2018,
     "construction_start_quarter": 2,
     "sales_start_year": 2019,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "252",
+    "project_name": "Бизнес-парк Раменки",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-253",
@@ -16818,7 +17854,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "253",
+    "project_name": "Upside Останкино",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-254",
@@ -16876,7 +17916,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "254",
+    "project_name": "Upside Tech Сколково",
+    "subid": "02",
+    "tower_label": "фаза Альфа"
   },
   {
     "canonical_project_id": "proj-255",
@@ -16938,7 +17982,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "255",
+    "project_name": "Flexity SOLO/Flexity",
+    "subid": "01",
+    "tower_label": "Павелецкая Плаза"
   },
   {
     "canonical_project_id": "proj-256",
@@ -17000,7 +18048,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1136",
+    "project_name": "Flexity SOLO/Flexity",
+    "subid": "01",
+    "tower_label": "Павелецкая Плаза"
   },
   {
     "canonical_project_id": "proj-257",
@@ -17062,7 +18114,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "257",
+    "project_name": "Flexity SOLO/Flexity",
+    "subid": "01",
+    "tower_label": "Башня на набережной"
   },
   {
     "canonical_project_id": "proj-258",
@@ -17123,7 +18179,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "258",
+    "project_name": "STONE SKY Ходынка",
+    "subid": "01",
+    "tower_label": "F1"
   },
   {
     "canonical_project_id": "proj-258",
@@ -17184,7 +18244,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "258",
+    "project_name": "STONE SKY Ходынка",
+    "subid": "02",
+    "tower_label": "F2"
   },
   {
     "canonical_project_id": "proj-259",
@@ -17242,7 +18306,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "259",
+    "project_name": "Aurus",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-260",
@@ -17302,7 +18370,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "260",
+    "project_name": "Север.Сити",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-261",
@@ -17362,7 +18434,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "261",
+    "project_name": "Set",
+    "subid": "01",
+    "tower_label": "К1"
   },
   {
     "canonical_project_id": "proj-261",
@@ -17422,7 +18498,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "261",
+    "project_name": "Set",
+    "subid": "02",
+    "tower_label": "К2"
   },
   {
     "canonical_project_id": "proj-262",
@@ -17480,7 +18560,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "262",
+    "project_name": "Emotion",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-263",
@@ -17537,7 +18621,11 @@
     "construction_start_year": 2024,
     "construction_start_quarter": 1,
     "sales_start_year": 2024,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "263",
+    "project_name": "Cityzen",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-264",
@@ -17595,7 +18683,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "264",
+    "project_name": "Энтузиаст",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-265",
@@ -17653,7 +18745,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "265",
+    "project_name": "Руновский 14",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-266",
@@ -17711,7 +18807,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "266",
+    "project_name": "Ликова",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-267",
@@ -17768,7 +18868,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "267",
+    "project_name": "Level Нижегородская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-268",
@@ -17825,7 +18929,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "268",
+    "project_name": "Sezar Tower",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-269",
@@ -17882,7 +18990,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "269",
+    "project_name": "Dius",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-270",
@@ -17939,7 +19051,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "270",
+    "project_name": "Мануфактура XIX",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "badaevsky",
@@ -18005,7 +19121,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "282",
+    "project_name": "Бадаевский",
+    "subid": "02",
+    "tower_label": "Западная лента"
   },
   {
     "canonical_project_id": "proj-272",
@@ -18062,7 +19182,11 @@
     "construction_start_year": 2026,
     "construction_start_quarter": 1,
     "sales_start_year": 2026,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "272",
+    "project_name": "CHALET Пятницкая 40",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-273",
@@ -18121,7 +19245,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "273",
+    "project_name": "Плэйн",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-274",
@@ -18200,7 +19328,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "274",
+    "project_name": "Останкино",
+    "subid": "01",
+    "tower_label": "К1"
   },
   {
     "canonical_project_id": "proj-274",
@@ -18279,7 +19411,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "274",
+    "project_name": "Останкино",
+    "subid": "02",
+    "tower_label": "К2+К3"
   },
   {
     "canonical_project_id": "proj-274",
@@ -18358,7 +19494,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "274",
+    "project_name": "Останкино",
+    "subid": "03",
+    "tower_label": "К4"
   },
   {
     "canonical_project_id": "proj-274",
@@ -18437,7 +19577,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "274",
+    "project_name": "Останкино",
+    "subid": "04",
+    "tower_label": "К5"
   },
   {
     "canonical_project_id": "proj-274",
@@ -18516,7 +19660,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "274",
+    "project_name": "Останкино",
+    "subid": "05",
+    "tower_label": "К6"
   },
   {
     "canonical_project_id": "proj-275",
@@ -18590,7 +19738,11 @@
     "construction_start_year": 2018,
     "construction_start_quarter": 2,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "275",
+    "project_name": "Квартал Lucky",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-276",
@@ -18653,7 +19805,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2025,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "276",
+    "project_name": "Dream Riva",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-277",
@@ -18720,7 +19876,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "277",
+    "project_name": "Деловой Дуэт",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-278",
@@ -18778,7 +19938,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 1
+    "sales_start_quarter": 1,
+    "project_no": "278",
+    "project_name": "Бизнес-хаб «Потапово»",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-279",
@@ -18835,7 +19999,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "279",
+    "project_name": "River Park Коломенское",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "remain-only-0001",
@@ -18886,7 +20054,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "671",
+    "project_name": "МФК Центральный Телеграф",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "remain-only-0002",
@@ -18937,7 +20109,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "640",
+    "project_name": "ЗИЛАРТ GRAND",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "remain-only-0003",
@@ -18988,7 +20164,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1143",
+    "project_name": "Sydney City",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "remain-only-0004",
@@ -19039,7 +20219,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "21",
+    "project_name": "Moscow Towers",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "remain-only-0005",
@@ -19090,7 +20274,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1144",
+    "project_name": "Офисно-торговый центр Нагатинская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0001",
@@ -19143,7 +20331,11 @@
     "construction_start_year": 2006,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "783",
+    "project_name": "Империя",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0002",
@@ -19196,7 +20388,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1145",
+    "project_name": "Федерация",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0003",
@@ -19249,7 +20445,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1146",
+    "project_name": "Башня на набережной",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0004",
@@ -19302,7 +20502,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1147",
+    "project_name": "Никольская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0005",
@@ -19355,7 +20559,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1148",
+    "project_name": "Цветной бульвар",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0006",
@@ -19408,7 +20616,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1149",
+    "project_name": "Новослободская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0007",
@@ -19461,7 +20673,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1150",
+    "project_name": "Технопарк",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0008",
@@ -19514,7 +20730,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1151",
+    "project_name": "Бригантина",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0009",
@@ -19567,7 +20787,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1152",
+    "project_name": "Кузнецкий Мост",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0010",
@@ -19620,7 +20844,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1153",
+    "project_name": "Балчуг",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0011",
@@ -19673,7 +20901,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1154",
+    "project_name": "Симонов",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0012",
@@ -19726,7 +20958,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1155",
+    "project_name": "Арма",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0013",
@@ -19779,7 +21015,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1156",
+    "project_name": "Новосущевский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0014",
@@ -19832,7 +21072,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1157",
+    "project_name": "Риверсайд Тауэрс",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0015",
@@ -19885,7 +21129,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1158",
+    "project_name": "Садовая Плаза",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0016",
@@ -19938,7 +21186,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1159",
+    "project_name": "Павелецкая Плаза",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0017",
@@ -19989,7 +21241,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1160",
+    "project_name": "Павелецкая Плаза",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0018",
@@ -20042,7 +21298,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1161",
+    "project_name": "Black&White",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0019",
@@ -20095,7 +21355,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1162",
+    "project_name": "Долгоруковская 21",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0020",
@@ -20148,7 +21412,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "20",
+    "project_name": "МФК Савеловский сити",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0021",
@@ -20201,7 +21469,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1163",
+    "project_name": "Зубовский 17",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0022",
@@ -20254,7 +21526,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1164",
+    "project_name": "Остоженка",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0023",
@@ -20307,7 +21583,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1165",
+    "project_name": "Сретенка",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0024",
@@ -20360,7 +21640,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1166",
+    "project_name": "КМ19",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0025",
@@ -20413,7 +21697,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1167",
+    "project_name": "Авион",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0026",
@@ -20464,7 +21752,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1168",
+    "project_name": "Капитолий Вернадского",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0027",
@@ -20517,7 +21809,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1169",
+    "project_name": "Композиторская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0028",
@@ -20570,7 +21866,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1170",
+    "project_name": "Меркурий",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0029",
@@ -20623,7 +21923,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1171",
+    "project_name": "Citydel",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0030",
@@ -20676,7 +21980,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1172",
+    "project_name": "Workki Комсомольская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0031",
@@ -20729,7 +22037,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1173",
+    "project_name": "Нео Гео",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0032",
@@ -20782,7 +22094,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1174",
+    "project_name": "На Тульской",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0033",
@@ -20835,7 +22151,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1175",
+    "project_name": "Галерея Актер",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0034",
@@ -20888,7 +22208,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1176",
+    "project_name": "Милютинский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0035",
@@ -20939,7 +22263,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1177",
+    "project_name": "Даниловская Мануфактура",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0036",
@@ -20990,7 +22318,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1178",
+    "project_name": "Гостиница Москва",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0037",
@@ -21043,7 +22375,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1179",
+    "project_name": "SOK Земляной Вал",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0038",
@@ -21096,7 +22432,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1180",
+    "project_name": "SOK Сады Пекина",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0039",
@@ -21149,7 +22489,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1181",
+    "project_name": "Refolio Достоевский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0040",
@@ -21202,7 +22546,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1182",
+    "project_name": "Deworkacy Савинский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0041",
@@ -21255,7 +22603,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "3",
+    "project_name": "DM Tower",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0042",
@@ -21308,7 +22660,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1183",
+    "project_name": "Фили Град",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0043",
@@ -21361,7 +22717,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1184",
+    "project_name": "ул. Воронцовская, д. 49/28",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0044",
@@ -21412,7 +22772,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1185",
+    "project_name": "Парк Горького",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0045",
@@ -21465,7 +22829,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1186",
+    "project_name": "White Stone",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0046",
@@ -21518,7 +22886,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1187",
+    "project_name": "Проспект Мира, 40",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0047",
@@ -21571,7 +22943,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1188",
+    "project_name": "Signature Столешников, 11",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0048",
@@ -21622,7 +22998,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1189",
+    "project_name": "на Басманной",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0049",
@@ -21675,7 +23055,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1190",
+    "project_name": "Фабрика Станиславского",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0050",
@@ -21728,7 +23112,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1191",
+    "project_name": "Большая Якиманка 26",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0051",
@@ -21781,7 +23169,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1192",
+    "project_name": "Poklonka Place",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0052",
@@ -21834,7 +23226,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1193",
+    "project_name": "Ролл Холл",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0053",
@@ -21887,7 +23283,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1194",
+    "project_name": "Аркус 3",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0054",
@@ -21940,7 +23340,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1195",
+    "project_name": "ФОК",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0055",
@@ -21993,7 +23397,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1196",
+    "project_name": "ВТБ Арена стр 8",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0056",
@@ -22046,7 +23454,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1197",
+    "project_name": "SOK Рыбаков Тауэр",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0057",
@@ -22099,7 +23511,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1198",
+    "project_name": "SOK Арена Парк",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0058",
@@ -22152,7 +23568,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1199",
+    "project_name": "Вивальди",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0059",
@@ -22205,7 +23625,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1200",
+    "project_name": "Дубинин Скай",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0060",
@@ -22258,7 +23682,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1201",
+    "project_name": "Газетный 17",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-0061",
@@ -22311,7 +23739,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "1202",
+    "project_name": "Кадашевская наб., 6",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-699587ab73",
@@ -22364,7 +23796,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1203",
+    "project_name": "1-й Щемиловский 16с2",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-695ac9fe05",
@@ -22417,7 +23853,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1204",
+    "project_name": "1 шипковский пер. 5",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-58a9aa2051",
@@ -22470,7 +23910,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "2051",
+    "project_name": "GrowUp на Павелецкой",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-60619d9fa4",
@@ -22523,7 +23967,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1205",
+    "project_name": "SOK Арена Парк 2",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-0f2198c906",
@@ -22576,7 +24024,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "906",
+    "project_name": "SOK Арена Парк",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-f0518c325b",
@@ -22629,7 +24081,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1206",
+    "project_name": "SOK Сити",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-c087a56535",
@@ -22684,7 +24140,11 @@
     "duplicate_of": null,
     "legacy_ids": [
       "cwhost-hist-682333d260"
-    ]
+    ],
+    "project_no": "56535",
+    "project_name": "Авиаконструктора Микояна",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-1dbea5db6a",
@@ -22737,7 +24197,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1207",
+    "project_name": "Арбат",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-5d45ac8941",
@@ -22790,7 +24254,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "8941",
+    "project_name": "Белая Площадь",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-fc48060d3b",
@@ -22843,7 +24311,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1208",
+    "project_name": "Белая Площадь площадка закрыта",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-8a9770370d",
@@ -22896,7 +24368,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1209",
+    "project_name": "БЦ Известия",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-14b3f61ae5",
@@ -22949,7 +24425,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1210",
+    "project_name": "Вивальди Плаза",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-fc98f0ea7d",
@@ -23002,7 +24482,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1211",
+    "project_name": "Газетный",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-8d69c8b501",
@@ -23055,7 +24539,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "501",
+    "project_name": "Гринвуд",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-c256850d91",
@@ -23108,7 +24596,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1212",
+    "project_name": "Домников",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-2e3715b7ba",
@@ -23163,7 +24655,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1213",
+    "project_name": "Заречная 2/1",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-794e6c15c3",
@@ -23216,7 +24712,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1214",
+    "project_name": "Квартал Вэст",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-ee79f38adb",
@@ -23269,7 +24769,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1215",
+    "project_name": "Красная Роза",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-3a9656e535",
@@ -23322,7 +24826,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "535",
+    "project_name": "Лужники",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-bc5e1e5c71",
@@ -23375,7 +24883,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1216",
+    "project_name": "Овчинниковский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-82914143c2",
@@ -23428,7 +24940,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1217",
+    "project_name": "Онегин",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-61c412c32d",
@@ -23481,7 +24997,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1218",
+    "project_name": "Останкино",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-e3bfd3f027",
@@ -23534,7 +25054,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1219",
+    "project_name": "Полянка",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-d2e87a98a7",
@@ -23587,7 +25111,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1220",
+    "project_name": "Порта",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-f23c097940",
@@ -23640,7 +25168,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "97940",
+    "project_name": "Пр. Мира , 40",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-97886a34a7",
@@ -23693,7 +25225,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1221",
+    "project_name": "РТС Волгоградский",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-3ce001a7ad",
@@ -23746,7 +25282,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1222",
+    "project_name": "Сириус Парк",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-8188d16e28",
@@ -23799,7 +25339,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1223",
+    "project_name": "Смоленский Пассаж 1",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-f256e86d8c",
@@ -23852,7 +25396,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1224",
+    "project_name": "Сретенский б-р, 5",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-1c2bfead46",
@@ -23905,7 +25453,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1225",
+    "project_name": "ТЦ РИО на Ленинском",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-682333d260",
@@ -23958,7 +25510,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": "cwhost-hist-c087a56535",
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "1226",
+    "project_name": "Ходынка",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "cwhost-hist-4b033613e3",
@@ -24011,7 +25567,11 @@
     "last_verified_at": "2026-08-22",
     "source_count": 1,
     "duplicate_of": null,
-    "legacy_ids": []
+    "legacy_ids": [],
+    "project_no": "176",
+    "project_name": "AFI GAllery",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "pole",
@@ -24068,7 +25628,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "280",
+    "project_name": "Поле",
+    "subid": "01",
+    "tower_label": "Башня А"
   },
   {
     "canonical_project_id": "pole",
@@ -24125,7 +25689,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "280",
+    "project_name": "Поле",
+    "subid": "02",
+    "tower_label": "Башня Б"
   },
   {
     "canonical_project_id": "proj-281",
@@ -24182,7 +25750,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "284",
+    "project_name": "Мираполис",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-282",
@@ -24239,7 +25811,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "286",
+    "project_name": "БЦ «Север»",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-283",
@@ -24296,7 +25872,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "287",
+    "project_name": "БЦ «Северный Порт»",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-284",
@@ -24353,7 +25933,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": null,
-    "sales_start_quarter": null
+    "sales_start_quarter": null,
+    "project_no": "288",
+    "project_name": "БЦ «РЕ:ПОРТ»",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-285",
@@ -24410,7 +25994,11 @@
     "construction_start_year": 2027,
     "construction_start_quarter": 1,
     "sales_start_year": 2026,
-    "sales_start_quarter": 2
+    "sales_start_quarter": 2,
+    "project_no": "283",
+    "project_name": "STONE Towers E",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-add-split-20260917",
@@ -24465,7 +26053,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "1227",
+    "project_name": "Сплит",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-add-prime-life-varshavskaya-20260917",
@@ -24524,7 +26116,11 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "1228",
+    "project_name": "Прайм Лайф Варшавская",
+    "subid": "01",
+    "tower_label": null
   },
   {
     "canonical_project_id": "proj-add-krekshino-20260917",
@@ -24581,6 +26177,10 @@
     "construction_start_year": null,
     "construction_start_quarter": null,
     "sales_start_year": 2026,
-    "sales_start_quarter": 3
+    "sales_start_quarter": 3,
+    "project_no": "1229",
+    "project_name": "МФК Крёкшино",
+    "subid": "01",
+    "tower_label": null
   }
 ]

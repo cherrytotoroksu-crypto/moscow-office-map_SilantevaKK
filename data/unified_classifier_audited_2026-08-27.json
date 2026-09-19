@@ -135,76 +135,6 @@
       "project_name": "STONE Ленинский"
     },
     {
-      "unified_id": "UC-OBJ-0654",
-      "source_id": "OBJ-0654",
-      "name": "STONE Савёловская (Башня 1 и Башня 2)",
-      "address": "ул. Двинцев, вл. 3",
-      "developer": "STONE",
-      "gba": 92000.0,
-      "gla": 69000.0,
-      "cls": "A",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строящийся",
-      "latitude": 55.7927112,
-      "longitude": 37.6002884,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-194"
-      ],
-      "quarter_offer_refs": [
-        "202105",
-        "202112",
-        "202207",
-        "202212",
-        "202305",
-        "202308",
-        "202311",
-        "202403",
-        "202407",
-        "202410",
-        "202412",
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale",
-        "rent"
-      ],
-      "layer_status": "Введён",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone савеловская'; underlying source and its check date remain in that record (2026-08-01).",
-      "source_links": [
-        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D1%83%D0%BB.%20%D0%94%D0%B2%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%2C%20%D0%B2%D0%BB.%203%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода Слито с OBJ-0039 2026-09-04: дубликат того же проекта (общий legacy_id proj-194, адрес ул. Двинцев вл. 3) — историческая запись без разбивки по башням.",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "sales_start_date": "2021-04",
-      "sales_start_confidence": "needs_review",
-      "sales_start_source": "audit batch1-26; see work/claude_verification_result_*.md",
-      "canonical_no": 4,
-      "canonical_project_id": "194",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Северо-Восточный",
-      "geo_raion": "Марьина Роща",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Север",
-      "geo_bizFormed": null,
-      "geo_bizForming": "Савеловский деловой район",
-      "project_name": "STONE Савёловская"
-    },
-    {
       "unified_id": "UC-OBJ-0046",
       "source_id": "OBJ-0046",
       "name": "Taller",
@@ -324,7 +254,7 @@
       "review_reason": null,
       "canonical_no": 6,
       "canonical_project_id": "216",
-      "subid": "01",
+      "subid": "02",
       "tower_label": "1-я очередь",
       "geo_ao": "Новомосковский",
       "geo_raion": "Сосенское",
@@ -332,7 +262,7 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "project_name": "А101 Прокшино Бизнес-центр"
+      "project_name": "А101 Прокшино"
     },
     {
       "unified_id": "UC-OBJ-0085",
@@ -387,7 +317,7 @@
       "review_reason": null,
       "canonical_no": 7,
       "canonical_project_id": "216",
-      "subid": "02",
+      "subid": "03",
       "tower_label": "2-я очередь",
       "geo_ao": "Новомосковский",
       "geo_raion": "Сосенское",
@@ -395,7 +325,7 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "project_name": "А101 Прокшино Бизнес-центр"
+      "project_name": "А101 Прокшино"
     },
     {
       "unified_id": "UC-OBJ-0167",
@@ -452,7 +382,7 @@
       "review_reason": null,
       "canonical_no": 8,
       "canonical_project_id": "216",
-      "subid": "03",
+      "subid": "04",
       "tower_label": "3-я очередь",
       "geo_ao": "Новомосковский",
       "geo_raion": "Сосенское",
@@ -460,71 +390,7 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "project_name": "А101 Прокшино Бизнес-центр"
-    },
-    {
-      "unified_id": "UC-OBJ-0571",
-      "source_id": "OBJ-0571",
-      "name": "МФК Lucky",
-      "address": "2-ая Звенигородская ул., д. 12",
-      "developer": "Vesper",
-      "gba": 31230.2371541502,
-      "gla": 25284.0,
-      "cls": "A",
-      "commission_year": 2023,
-      "commission_quarter": 2,
-      "status": "Строящийся",
-      "latitude": 55.761261,
-      "longitude": 37.556187,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-275"
-      ],
-      "quarter_offer_refs": [
-        "202105",
-        "202112",
-        "202207",
-        "202212",
-        "202305",
-        "202308",
-        "202311",
-        "202403",
-        "202410",
-        "202412",
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale",
-        "rent"
-      ],
-      "layer_status": "Введён",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='квартал lucky'; underlying source and its check date remain in that record (2026-07-13).",
-      "source_links": [],
-      "verification_status": "Проверено Слито с OBJ-0010 2026-09-04: дубликат того же проекта (общий legacy_id proj-275, идентичные координаты) — building-level запись без дополнительных данных сверх project-level.",
-      "confidence": "Средний",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 9,
-      "canonical_project_id": "275",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Центральный",
-      "geo_raion": "Пресненский",
-      "geo_zone": "СК-ТТК",
-      "geo_submarket": "ТТК Запад",
-      "geo_bizFormed": null,
-      "geo_bizForming": "Большой Сити",
-      "project_name": "МФК Lucky"
+      "project_name": "А101 Прокшино"
     },
     {
       "unified_id": "UC-OBJ-0061",
@@ -1403,129 +1269,6 @@
       "project_name": "QOOB"
     },
     {
-      "unified_id": "UC-OBJ-0114",
-      "source_id": "OBJ-0114",
-      "name": "Stone Калужская",
-      "address": "Старокалужское шоссе, 64",
-      "developer": "STONE",
-      "gba": 83000.0,
-      "gla": 58000.0,
-      "cls": "A",
-      "commission_year": 2028,
-      "commission_quarter": 3,
-      "status": "Проектный",
-      "latitude": 55.658855,
-      "longitude": 37.534496,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-180"
-      ],
-      "quarter_offer_refs": [
-        "202407",
-        "202410",
-        "202412",
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale",
-        "rent"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py.",
-      "source_links": [],
-      "verification_status": "Сверить конфликты",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "sales_start_date": "2024-Q2",
-      "sales_start_confidence": "needs_review",
-      "sales_start_source": "data/building_dates.json key=stone калужская; checked 2026-09-07; IBC Real Estate Office Market Q2 2024 (STONE Калужская указана в разделе проектов со стартом продаж во II квартале 2024 года); https://ibcrealestate.ru/upload/iblock/f86/31ml8xl0nu3dc86qw6u79g72if6eiw8o/OFFICE-MARKET-Q2-2024_2pdf.com_edit_metadata.pdf; дополнительное подтверждение презентацией STONE: https://stone-s3.storage.yandexcloud.net/Idealnye_teksty_dlya_reklamy_bc04ab99cd.pdf",
-      "canonical_no": 27,
-      "canonical_project_id": "180",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Юго-Западный",
-      "geo_raion": "Обручевский",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Юго-Запад",
-      "geo_bizFormed": null,
-      "geo_bizForming": "Калужский деловой район",
-      "project_name": "Stone Калужская"
-    },
-    {
-      "unified_id": "UC-OBJ-0115",
-      "source_id": "OBJ-0115",
-      "name": "STONE Ходынка 2",
-      "address": "Москва, Ходынский бульвар, 20а/2",
-      "developer": "STONE",
-      "gba": 87000,
-      "gla": 53000.0,
-      "cls": "A",
-      "commission_year": 2028,
-      "commission_quarter": 3,
-      "status": "Строящийся",
-      "latitude": 55.789255,
-      "longitude": 37.524964,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-197"
-      ],
-      "quarter_offer_refs": [
-        "202407",
-        "202410",
-        "202412",
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone ходынка ii'; underlying source and its check date remain in that record (2026-07-14).",
-      "source_links": [
-        "https://t.me/CREconsultant/3490",
-        "https://stone.ru/commercial/hodinka2",
-        "https://archi.ru/projects/russia/19108/stone-hodynka"
-      ],
-      "verification_status": "Каноническая карточка трёх башен G1–G3; объект активно строится, готовность заявлена на 2028 год",
-      "confidence": "Высокий",
-      "entity_type": "office_project_candidate",
-      "classification_note": "2026-09-17: UC-OBJ-0126 \"Stone Ходынка 3\" выделен под отдельный canonical_project_id — это разные проекты STONE (разные адреса), не корпуса одного.",
-      "needs_review": false,
-      "review_reason": null,
-      "sales_start_date": "2025-Q1",
-      "sales_start_confidence": "needs_review",
-      "sales_start_source": "data/building_dates.json key=stone ходынка ii; checked 2026-07-14; cre.ru/news/94248, realty.rbc.ru, stone.ru — старт продаж март 2025, начало строительства июль 2025 (фундаменты трёх башен); срок сдачи расходится (Q1 2028 vs Q3 2028 на офиц. сайте) — взят более поздний/осторожный вариант, подтверждения РНВ не нашла",
-      "canonical_no": 28,
-      "canonical_project_id": "197",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Северный",
-      "geo_raion": "Хорошёвский",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Северо-Запад",
-      "geo_bizFormed": "Ленинградский",
-      "geo_bizForming": "Ходынка",
-      "project_name": "STONE Ходынка 2"
-    },
-    {
       "unified_id": "UC-OBJ-0126",
       "source_id": "OBJ-0126",
       "name": "Stone Ходынка 3",
@@ -1576,7 +1319,7 @@
       "sales_start_confidence": "needs_review",
       "sales_start_source": "data/building_dates.json key=stone ходынка ii; checked 2026-07-14; cre.ru/news/94248, realty.rbc.ru, stone.ru — старт продаж март 2025, начало строительства июль 2025 (фундаменты трёх башен); срок сдачи расходится (Q1 2028 vs Q3 2028 на офиц. сайте) — взят более поздний/осторожный вариант, подтверждения РНВ не нашла",
       "canonical_no": 29,
-      "canonical_project_id": "OBJ-0126",
+      "canonical_project_id": "200",
       "subid": "01",
       "tower_label": "",
       "geo_ao": "Северный",
@@ -1585,7 +1328,8 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Stone Ходынка 3"
+      "project_name": "Stone Ходынка 3",
+      "registry_project_id": "OBJ-0126"
     },
     {
       "unified_id": "UC-OBJ-0088",
@@ -1761,65 +1505,6 @@
       "canonical_project_id": "90",
       "subid": "01",
       "project_name": "БЦ Рябовская Мануфактура"
-    },
-    {
-      "unified_id": "UC-OBJ-0727",
-      "source_id": "OBJ-0727",
-      "name": "Башня Рябов (Рябовская Мануфактура)",
-      "address": "Холодильный пер., 3к1с1",
-      "developer": "ООО ГОНЧАР",
-      "gba": 23800.0,
-      "gla": 16000.0,
-      "cls": "A",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строящийся",
-      "latitude": 55.7083375,
-      "longitude": 37.6244252,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-220"
-      ],
-      "quarter_offer_refs": [
-        "202407",
-        "202410",
-        "202412",
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='башня рябов'; underlying source and its check date remain in that record (2026-08-01).",
-      "source_links": [
-        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80.%2C%203%D0%BA1%D1%811%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-        "https://www.press-release.ru/branches/realestate/__29_06_2026_13_59/"
-      ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 33,
-      "canonical_project_id": "220",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Южный",
-      "geo_raion": "Даниловский",
-      "geo_zone": "СК-ТТК",
-      "geo_submarket": "ТТК Юг",
-      "geo_bizFormed": null,
-      "geo_bizForming": null,
-      "project_name": "Башня Рябов"
     },
     {
       "unified_id": "UC-OBJ-0053",
@@ -2045,9 +1730,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0136",
+      "canonical_project_id": "1013",
       "subid": "01",
-      "project_name": "Stone Белорусская"
+      "project_name": "Stone Белорусская",
+      "registry_project_id": "OBJ-0136"
     },
     {
       "unified_id": "UC-OBJ-0066",
@@ -2157,62 +1843,6 @@
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
       "project_name": "AFI Воронцовский Park"
-    },
-    {
-      "unified_id": "UC-OBJ-0373",
-      "source_id": "OBJ-0373",
-      "name": "Air",
-      "address": "Ходынское поле",
-      "developer": "Tekta",
-      "gba": 130000.0,
-      "gla": 79500.0,
-      "cls": "A",
-      "commission_year": 2029,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.788629,
-      "longitude": 37.530002,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-112"
-      ],
-      "quarter_offer_refs": [
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='air'; underlying source and its check date remain in that record (2026-07-16). Input year rechecked 2026-08-23: official AIR project page (https://air--bc.ru/) and Fortex listing (https://fortexgroup.ru/bc/air/prodazha-ofisa/77-1327773/) both state commissioning in 2028; quarter not specified.",
-      "source_links": [],
-      "verification_status": "Сверить конфликты",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "sales_start_date": "2025-Q2",
-      "sales_start_confidence": "needs_review",
-      "sales_start_source": "data/building_dates.json key=air; checked 2026-07-16; tekta.ru, rg.ru — разрешение на строительство от Мосгосстройнадзора 10.06.2025, старт продаж анонсирован тем же летом 2025; ввод — план 2028 (не подтверждён РНВ, не проставлять)",
-      "canonical_no": 43,
-      "canonical_project_id": "112",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Северный",
-      "geo_raion": "Хорошёвский",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Северо-Запад",
-      "geo_bizFormed": "Ленинградский",
-      "geo_bizForming": "Ходынка",
-      "project_name": "Air"
     },
     {
       "unified_id": "UC-OBJ-0196",
@@ -2435,62 +2065,6 @@
       "geo_bizFormed": null,
       "geo_bizForming": null,
       "project_name": "NOON"
-    },
-    {
-      "unified_id": "UC-OBJ-0218",
-      "source_id": "OBJ-0218",
-      "name": "Stone Мневники 2",
-      "address": "ул. Нижние Мнёвники , з/у 39",
-      "developer": "STONE",
-      "gba": 54900.0,
-      "gla": 33900.0,
-      "cls": "A",
-      "commission_year": 2029,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.754029,
-      "longitude": 37.456837,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-188"
-      ],
-      "quarter_offer_refs": [
-        "202503",
-        "202506",
-        "202509",
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone мневники ii'; underlying source and its check date remain in that record (2026-07-16).",
-      "source_links": [],
-      "verification_status": "Сверить конфликты",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "sales_start_date": "2024-Q4",
-      "sales_start_confidence": "needs_review",
-      "sales_start_source": "data/building_dates.json key=stone мневники ii; checked 2026-07-16; forbes.ru — разрешение на строительство «STONE Мнёвники 2» получено, GBA источника 54300 — почти точное совпадение с нашим 54900 (~1.1%); продажи стартовали поздней осенью 2024 вместе с очередью 1",
-      "canonical_no": 48,
-      "canonical_project_id": "188",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Северо-Западный",
-      "geo_raion": "Хорошёво-Мнёвники",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Запад",
-      "geo_bizFormed": null,
-      "geo_bizForming": "Большой Сити",
-      "project_name": "Stone Мневники 2"
     },
     {
       "unified_id": "UC-OBJ-0116",
@@ -3137,9 +2711,10 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0124",
+      "canonical_project_id": "1008",
       "subid": "01",
-      "project_name": "Мещерский Лес"
+      "project_name": "Мещерский Лес",
+      "registry_project_id": "OBJ-0124"
     },
     {
       "unified_id": "UC-OBJ-0080",
@@ -3997,56 +3572,6 @@
       "geo_bizFormed": null,
       "geo_bizForming": null,
       "project_name": "Solo"
-    },
-    {
-      "unified_id": "UC-OBJ-0219",
-      "source_id": "OBJ-0219",
-      "name": "Stone Мневники 3",
-      "address": "ул. Нижние Мнёвники, зу 192",
-      "developer": "STONE",
-      "gba": 69000.0,
-      "gla": 54000.0,
-      "cls": "A",
-      "commission_year": 2030,
-      "commission_quarter": 4,
-      "status": "Проектный",
-      "latitude": 55.749374,
-      "longitude": 37.444334,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-189"
-      ],
-      "quarter_offer_refs": [
-        "202512",
-        "202603",
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": "Строится",
-      "layer_offer_status": "В продаже",
-      "layer_source": "classifier.html",
-      "layer_source_date": "2026-07-31",
-      "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py.",
-      "source_links": [],
-      "verification_status": "Проверено",
-      "confidence": "Средний",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": false,
-      "review_reason": null,
-      "canonical_no": 81,
-      "canonical_project_id": "189",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Северо-Западный",
-      "geo_raion": "Хорошёво-Мнёвники",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Запад",
-      "geo_bizFormed": null,
-      "geo_bizForming": "Большой Сити",
-      "project_name": "Stone Мневники 3"
     },
     {
       "unified_id": "UC-OBJ-0370",
@@ -5703,9 +5228,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0184",
+      "canonical_project_id": "1027",
       "subid": "01",
-      "project_name": "3-й Силикатный 1к1"
+      "project_name": "3-й Силикатный 1к1",
+      "registry_project_id": "OBJ-0184"
     },
     {
       "unified_id": "UC-OBJ-0598",
@@ -5878,50 +5404,6 @@
       "project_name": "AFI square"
     },
     {
-      "unified_id": "UC-OBJ-0475",
-      "source_id": "OBJ-0475",
-      "name": "AFI Tagilskaya",
-      "address": "Тагильская улица, вл.4",
-      "developer": "AFI Development",
-      "gba": 60740.0,
-      "gla": 32186.0,
-      "cls": "B+",
-      "commission_year": 2026,
-      "commission_quarter": 3,
-      "status": "Проектный",
-      "latitude": 55.818338,
-      "longitude": 37.746973,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-108"
-      ],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [],
-      "verification_status": "Проверено",
-      "confidence": "Средний",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 132,
-      "canonical_project_id": "108",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Восточный",
-      "geo_raion": "Метрогородок",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Восток",
-      "geo_bizFormed": null,
-      "geo_bizForming": null,
-      "project_name": "AFI Tagilskaya"
-    },
-    {
       "unified_id": "UC-OBJ-0101",
       "source_id": "OBJ-0101",
       "name": "AFI Галерея",
@@ -6049,9 +5531,10 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0188",
+      "canonical_project_id": "1028",
       "subid": "01",
-      "project_name": "ASPACE Кузнецкий мост"
+      "project_name": "ASPACE Кузнецкий мост",
+      "registry_project_id": "OBJ-0188"
     },
     {
       "unified_id": "UC-OBJ-0441",
@@ -6224,52 +5707,6 @@
       "canonical_project_id": "634",
       "subid": "01",
       "project_name": "Capital Towers"
-    },
-    {
-      "unified_id": "UC-OBJ-0190",
-      "source_id": "OBJ-0190",
-      "name": "Chalet",
-      "address": "Пятницкая улица, 40с1",
-      "developer": "Hitech Development",
-      "gba": 3732.0,
-      "gla": 2096.0,
-      "cls": "A",
-      "commission_year": 2027,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.738318,
-      "longitude": 37.62793,
-      "coordinates_status": "unverified",
-      "legacy_ids": [
-        "proj-272"
-      ],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://t.me/stroi_news/8697"
-      ],
-      "verification_status": "Сверить конфликты",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 140,
-      "canonical_project_id": "272",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Центральный",
-      "geo_raion": "Замоскворечье",
-      "geo_zone": "БК-СК",
-      "geo_submarket": "СК Юг",
-      "geo_bizFormed": "ЦДР",
-      "geo_bizForming": null,
-      "project_name": "Chalet"
     },
     {
       "unified_id": "UC-OBJ-0191",
@@ -6794,50 +6231,6 @@
       "project_name": "GRANARD Белорусская"
     },
     {
-      "unified_id": "UC-OBJ-0655",
-      "source_id": "OBJ-0655",
-      "name": "iCITY (Башня Space)",
-      "address": "Шмитовский пр-д, 37",
-      "developer": "MR Group",
-      "gba": 91397.0,
-      "gla": 89416.0,
-      "cls": "A",
-      "commission_year": null,
-      "commission_quarter": null,
-      "status": "Строящийся",
-      "latitude": 55.754578,
-      "longitude": 37.53058,
-      "coordinates_status": "centroid",
-      "legacy_ids": [
-        "proj-129"
-      ],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [],
-      "verification_status": "Точка квартала подтверждена геокодированием 2026-08-11 (не корпуса): улица, номер дома и корпус (если указан) совпадают, регион — Москва, kind=house | ВНИМАНИЕ: адрес общий для нескольких корпусов/башен (iCITY (общий адрес Шмитовский пр-д 37, без разбивки Time/Space)),",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 158,
-      "canonical_project_id": "129",
-      "subid": "01",
-      "tower_label": "",
-      "geo_ao": "Центральный",
-      "geo_raion": "Пресненский",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "Москва-Сити",
-      "geo_bizFormed": "Москва-Сити",
-      "geo_bizForming": "Москва-Сити",
-      "project_name": "iCITY"
-    },
-    {
       "unified_id": "UC-OBJ-0649",
       "source_id": "OBJ-0649",
       "name": "iCITY (Башня Time)",
@@ -7177,9 +6570,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0205",
+      "canonical_project_id": "1029",
       "subid": "01",
-      "project_name": "Level Стрелецкая"
+      "project_name": "Level Стрелецкая",
+      "registry_project_id": "OBJ-0205"
     },
     {
       "unified_id": "UC-OBJ-0663",
@@ -7655,9 +7049,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0153",
+      "canonical_project_id": "1017",
       "subid": "01",
-      "project_name": "MYPRIORITY Мневники"
+      "project_name": "MYPRIORITY Мневники",
+      "registry_project_id": "OBJ-0153"
     },
     {
       "unified_id": "UC-OBJ-0081",
@@ -8580,9 +7975,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0216",
+      "canonical_project_id": "1030",
       "subid": "01",
-      "project_name": "STONE Вернадского"
+      "project_name": "STONE Вернадского",
+      "registry_project_id": "OBJ-0216"
     },
     {
       "unified_id": "UC-OBJ-0217",
@@ -8746,9 +8142,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0220",
+      "canonical_project_id": "1031",
       "subid": "01",
-      "project_name": "Stone Мневники 4"
+      "project_name": "Stone Мневники 4",
+      "registry_project_id": "OBJ-0220"
     },
     {
       "unified_id": "UC-OBJ-0221",
@@ -8792,9 +8189,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0221",
+      "canonical_project_id": "1032",
       "subid": "01",
-      "project_name": "STONE Москва-Сити"
+      "project_name": "STONE Москва-Сити",
+      "registry_project_id": "OBJ-0221"
     },
     {
       "unified_id": "UC-OBJ-0222",
@@ -9191,9 +8589,10 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "OBJ-0227",
+      "canonical_project_id": "1033",
       "subid": "01",
-      "project_name": "Touch АДЦ Коммунарка"
+      "project_name": "Touch АДЦ Коммунарка",
+      "registry_project_id": "OBJ-0227"
     },
     {
       "unified_id": "UC-OBJ-0586",
@@ -9525,9 +8924,10 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "OBJ-0231",
+      "canonical_project_id": "1034",
       "subid": "01",
-      "project_name": "Адмирал"
+      "project_name": "Адмирал",
+      "registry_project_id": "OBJ-0231"
     },
     {
       "unified_id": "UC-OBJ-0436",
@@ -9658,9 +9058,10 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0234",
+      "canonical_project_id": "1035",
       "subid": "01",
-      "project_name": "Академика Янгеля, 12"
+      "project_name": "Академика Янгеля, 12",
+      "registry_project_id": "OBJ-0234"
     },
     {
       "unified_id": "UC-OBJ-0495",
@@ -9923,9 +9324,10 @@
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0236",
+      "canonical_project_id": "1036",
       "subid": "01",
-      "project_name": "Бевард"
+      "project_name": "Бевард",
+      "registry_project_id": "OBJ-0236"
     },
     {
       "unified_id": "UC-OBJ-0499",
@@ -10012,9 +9414,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "237",
+      "canonical_project_id": "1037",
       "subid": "01",
-      "project_name": "Белорусский жилой и деловой кварталы"
+      "project_name": "Белорусский жилой и деловой кварталы",
+      "registry_project_id": "237"
     },
     {
       "unified_id": "UC-OBJ-0395",
@@ -10567,9 +9970,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0158",
+      "canonical_project_id": "1019",
       "subid": "01",
-      "project_name": "Бумажный пр-д, 2/2"
+      "project_name": "Бумажный пр-д, 2/2",
+      "registry_project_id": "OBJ-0158"
     },
     {
       "unified_id": "UC-OBJ-0240",
@@ -10612,9 +10016,10 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0240",
+      "canonical_project_id": "1038",
       "subid": "01",
-      "project_name": "БЦ Artel"
+      "project_name": "БЦ Artel",
+      "registry_project_id": "OBJ-0240"
     },
     {
       "unified_id": "UC-OBJ-0241",
@@ -10658,9 +10063,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0241",
+      "canonical_project_id": "1039",
       "subid": "01",
-      "project_name": "Берёзка 10"
+      "project_name": "Берёзка 10",
+      "registry_project_id": "OBJ-0241"
     },
     {
       "unified_id": "UC-OBJ-0242",
@@ -10744,9 +10150,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0244",
+      "canonical_project_id": "1040",
       "subid": "01",
-      "project_name": "БЦ Springs"
+      "project_name": "БЦ Springs",
+      "registry_project_id": "OBJ-0244"
     },
     {
       "unified_id": "UC-OBJ-0245",
@@ -10783,9 +10190,10 @@
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 271,
-      "canonical_project_id": "OBJ-0245",
+      "canonical_project_id": "1041",
       "subid": "01",
-      "project_name": "БЦ «Новые решения»"
+      "project_name": "БЦ «Новые решения»",
+      "registry_project_id": "OBJ-0245"
     },
     {
       "unified_id": "UC-OBJ-0166",
@@ -11004,9 +10412,10 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0247",
+      "canonical_project_id": "1042",
       "subid": "01",
-      "project_name": "БЦ в Beside"
+      "project_name": "БЦ в Beside",
+      "registry_project_id": "OBJ-0247"
     },
     {
       "unified_id": "UC-OBJ-0248",
@@ -11095,9 +10504,10 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0249",
+      "canonical_project_id": "1043",
       "subid": "01",
-      "project_name": "БЦ в Лужниках"
+      "project_name": "БЦ в Лужниках",
+      "registry_project_id": "OBJ-0249"
     },
     {
       "unified_id": "UC-OBJ-0250",
@@ -11140,9 +10550,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0250",
+      "canonical_project_id": "1044",
       "subid": "01",
-      "project_name": "БЦ в Марьиной Роще"
+      "project_name": "БЦ в Марьиной Роще",
+      "registry_project_id": "OBJ-0250"
     },
     {
       "unified_id": "UC-OBJ-0251",
@@ -11186,9 +10597,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0251",
+      "canonical_project_id": "1045",
       "subid": "01",
-      "project_name": "БЦ в Очаково-Матвеевском"
+      "project_name": "БЦ в Очаково-Матвеевском",
+      "registry_project_id": "OBJ-0251"
     },
     {
       "unified_id": "UC-OBJ-0453",
@@ -11275,9 +10687,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "252",
+      "canonical_project_id": "1046",
       "subid": "01",
-      "project_name": "БЦ в Филях"
+      "project_name": "БЦ в Филях",
+      "registry_project_id": "252"
     },
     {
       "unified_id": "UC-OBJ-0253",
@@ -11321,9 +10734,10 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "OBJ-0253",
+      "canonical_project_id": "1047",
       "subid": "01",
-      "project_name": "БЦ в Южном порту"
+      "project_name": "БЦ в Южном порту",
+      "registry_project_id": "OBJ-0253"
     },
     {
       "unified_id": "UC-OBJ-0132",
@@ -11367,9 +10781,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "canonical_project_id": "OBJ-0132",
+      "canonical_project_id": "1011",
       "subid": "01",
-      "project_name": "БЦ Ермакова Роща"
+      "project_name": "БЦ Ермакова Роща",
+      "registry_project_id": "OBJ-0132"
     },
     {
       "unified_id": "UC-OBJ-0254",
@@ -11412,9 +10827,10 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0254",
+      "canonical_project_id": "1048",
       "subid": "01",
-      "project_name": "БЦ Жуков проезд, 19"
+      "project_name": "БЦ Жуков проезд, 19",
+      "registry_project_id": "OBJ-0254"
     },
     {
       "unified_id": "UC-OBJ-0137",
@@ -11535,9 +10951,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0258",
+      "canonical_project_id": "1049",
       "subid": "01",
-      "project_name": "БЦ Монс"
+      "project_name": "БЦ Монс",
+      "registry_project_id": "OBJ-0258"
     },
     {
       "unified_id": "UC-OBJ-0718",
@@ -11624,9 +11041,10 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0259",
+      "canonical_project_id": "1050",
       "subid": "01",
-      "project_name": "БЦ на Авиамоторной"
+      "project_name": "БЦ на Авиамоторной",
+      "registry_project_id": "OBJ-0259"
     },
     {
       "unified_id": "UC-OBJ-0637",
@@ -11796,9 +11214,10 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0261",
+      "canonical_project_id": "1051",
       "subid": "01",
-      "project_name": "БЦ на Духовской"
+      "project_name": "БЦ на Духовской",
+      "registry_project_id": "OBJ-0261"
     },
     {
       "unified_id": "UC-OBJ-0757",
@@ -11971,9 +11390,10 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0263",
+      "canonical_project_id": "1052",
       "subid": "01",
-      "project_name": "БЦ на Курской"
+      "project_name": "БЦ на Курской",
+      "registry_project_id": "OBJ-0263"
     },
     {
       "unified_id": "UC-OBJ-0768",
@@ -12222,9 +11642,10 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0264",
+      "canonical_project_id": "1053",
       "subid": "01",
-      "project_name": "БЦ на Текстильщиков"
+      "project_name": "БЦ на Текстильщиков",
+      "registry_project_id": "OBJ-0264"
     },
     {
       "unified_id": "UC-OBJ-0265",
@@ -12268,9 +11689,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0265",
+      "canonical_project_id": "1054",
       "subid": "01",
-      "project_name": "БЦ на Трифоновской улице"
+      "project_name": "БЦ на Трифоновской улице",
+      "registry_project_id": "OBJ-0265"
     },
     {
       "unified_id": "UC-OBJ-0777",
@@ -12358,9 +11780,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0267",
+      "canonical_project_id": "1055",
       "subid": "01",
-      "project_name": "БЦ на ул. Малахитовой"
+      "project_name": "БЦ на ул. Малахитовой",
+      "registry_project_id": "OBJ-0267"
     },
     {
       "unified_id": "UC-OBJ-0268",
@@ -12403,9 +11826,10 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0268",
+      "canonical_project_id": "1056",
       "subid": "01",
-      "project_name": "БЦ на ул. Нижегородская"
+      "project_name": "БЦ на ул. Нижегородская",
+      "registry_project_id": "OBJ-0268"
     },
     {
       "unified_id": "UC-OBJ-0269",
@@ -12448,9 +11872,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0269",
+      "canonical_project_id": "1057",
       "subid": "01",
-      "project_name": "БЦ на ул. Угличская"
+      "project_name": "БЦ на ул. Угличская",
+      "registry_project_id": "OBJ-0269"
     },
     {
       "unified_id": "UC-OBJ-0270",
@@ -12495,12 +11920,13 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0270",
+      "canonical_project_id": "1058",
       "subid": "01",
       "project_name": "Риф",
       "aliases": [
         "БЦ по КРТ в Марьиной Роще"
-      ]
+      ],
+      "registry_project_id": "OBJ-0270"
     },
     {
       "unified_id": "UC-OBJ-0661",
@@ -12629,9 +12055,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0273",
+      "canonical_project_id": "1059",
       "subid": "01",
-      "project_name": "БЦ у ВДНХ"
+      "project_name": "БЦ у ВДНХ",
+      "registry_project_id": "OBJ-0273"
     },
     {
       "unified_id": "UC-OBJ-0274",
@@ -12675,9 +12102,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "274",
+      "canonical_project_id": "1060",
       "subid": "01",
-      "project_name": "БЦ у Океании"
+      "project_name": "БЦ у Океании",
+      "registry_project_id": "274"
     },
     {
       "unified_id": "UC-OBJ-0091",
@@ -12805,9 +12233,10 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0276",
+      "canonical_project_id": "1061",
       "subid": "01",
-      "project_name": "Варшавское, 37"
+      "project_name": "Варшавское, 37",
+      "registry_project_id": "OBJ-0276"
     },
     {
       "unified_id": "UC-OBJ-0502",
@@ -12932,9 +12361,10 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0134",
+      "canonical_project_id": "1012",
       "subid": "01",
-      "project_name": "Вернадского 39"
+      "project_name": "Вернадского 39",
+      "registry_project_id": "OBJ-0134"
     },
     {
       "unified_id": "UC-OBJ-0505",
@@ -13062,9 +12492,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0278",
+      "canonical_project_id": "1062",
       "subid": "01",
-      "project_name": "Вперед"
+      "project_name": "Вперед",
+      "registry_project_id": "OBJ-0278"
     },
     {
       "unified_id": "UC-OBJ-0155",
@@ -13109,9 +12540,10 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0155",
+      "canonical_project_id": "1018",
       "subid": "01",
-      "project_name": "г. Москва, Тюменская ул., вл. 5"
+      "project_name": "г. Москва, Тюменская ул., вл. 5",
+      "registry_project_id": "OBJ-0155"
     },
     {
       "unified_id": "UC-OBJ-0507",
@@ -13193,9 +12625,10 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0097",
+      "canonical_project_id": "1001",
       "subid": "01",
-      "project_name": "Гагаринский"
+      "project_name": "Гагаринский",
+      "registry_project_id": "OBJ-0097"
     },
     {
       "unified_id": "UC-OBJ-0128",
@@ -13234,9 +12667,10 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "OBJ-0128",
+      "canonical_project_id": "1010",
       "subid": "01",
-      "project_name": "Галс Багратион"
+      "project_name": "Галс Багратион",
+      "registry_project_id": "OBJ-0128"
     },
     {
       "unified_id": "UC-OBJ-0035",
@@ -13321,9 +12755,10 @@
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0280",
+      "canonical_project_id": "1063",
       "subid": "01",
-      "project_name": "Георгиевский, 3/2"
+      "project_name": "Георгиевский, 3/2",
+      "registry_project_id": "OBJ-0280"
     },
     {
       "unified_id": "UC-OBJ-0281",
@@ -13453,9 +12888,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0285",
+      "canonical_project_id": "1064",
       "subid": "01",
-      "project_name": "Гульден"
+      "project_name": "Гульден",
+      "registry_project_id": "OBJ-0285"
     },
     {
       "unified_id": "UC-OBJ-0681",
@@ -13841,9 +13277,10 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0286",
+      "canonical_project_id": "1065",
       "subid": "01",
-      "project_name": "Деловой квартал у Курского вокзала"
+      "project_name": "Деловой квартал у Курского вокзала",
+      "registry_project_id": "OBJ-0286"
     },
     {
       "unified_id": "UC-OBJ-0772",
@@ -14559,9 +13996,10 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "canonical_project_id": "OBJ-0288",
+      "canonical_project_id": "1066",
       "subid": "01",
-      "project_name": "Дом Солнца БЦ в Коммунарке"
+      "project_name": "Дом Солнца БЦ в Коммунарке",
+      "registry_project_id": "OBJ-0288"
     },
     {
       "unified_id": "UC-OBJ-0289",
@@ -15208,9 +14646,10 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "OBJ-0109",
+      "canonical_project_id": "1004",
       "subid": "01",
-      "project_name": "Империя-2"
+      "project_name": "Империя-2",
+      "registry_project_id": "OBJ-0109"
     },
     {
       "unified_id": "UC-OBJ-0084",
@@ -17161,9 +16600,10 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0164",
+      "canonical_project_id": "1022",
       "subid": "01",
-      "project_name": "Лужники Collection"
+      "project_name": "Лужники Collection",
+      "registry_project_id": "OBJ-0164"
     },
     {
       "unified_id": "UC-OBJ-0366",
@@ -18263,9 +17703,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "canonical_project_id": "OBJ-0117",
+      "canonical_project_id": "1006",
       "subid": "01",
-      "project_name": "МФК Верейская"
+      "project_name": "МФК Верейская",
+      "registry_project_id": "OBJ-0117"
     },
     {
       "unified_id": "UC-OBJ-0106",
@@ -18304,9 +17745,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0106",
+      "canonical_project_id": "1002",
       "subid": "01",
-      "project_name": "МФК Мануфактура"
+      "project_name": "МФК Мануфактура",
+      "registry_project_id": "OBJ-0106"
     },
     {
       "unified_id": "UC-OBJ-0684",
@@ -18690,9 +18132,10 @@
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "canonical_project_id": "OBJ-0173",
+      "canonical_project_id": "1024",
       "subid": "01",
-      "project_name": "МФК Сити 20"
+      "project_name": "МФК Сити 20",
+      "registry_project_id": "OBJ-0173"
     },
     {
       "unified_id": "UC-OBJ-0108",
@@ -18735,9 +18178,10 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0108",
+      "canonical_project_id": "1003",
       "subid": "01",
-      "project_name": "МФК Тушинская"
+      "project_name": "МФК Тушинская",
+      "registry_project_id": "OBJ-0108"
     },
     {
       "unified_id": "UC-OBJ-0428",
@@ -18908,9 +18352,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0112",
+      "canonical_project_id": "1005",
       "subid": "01",
-      "project_name": "МФК Ямского Поля"
+      "project_name": "МФК Ямского Поля",
+      "registry_project_id": "OBJ-0112"
     },
     {
       "unified_id": "UC-OBJ-0427",
@@ -19507,9 +18952,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0159",
+      "canonical_project_id": "1020",
       "subid": "01",
-      "project_name": "Нижняя Масловка, 3"
+      "project_name": "Нижняя Масловка, 3",
+      "registry_project_id": "OBJ-0159"
     },
     {
       "unified_id": "UC-OBJ-0457",
@@ -20514,9 +19960,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0141",
+      "canonical_project_id": "1014",
       "subid": "01",
-      "project_name": "Офис на ул. Менжинского"
+      "project_name": "Офис на ул. Менжинского",
+      "registry_project_id": "OBJ-0141"
     },
     {
       "unified_id": "UC-OBJ-0146",
@@ -20559,9 +20006,10 @@
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0146",
+      "canonical_project_id": "1016",
       "subid": "01",
-      "project_name": "Офисно-складской комплекс на 60-летия Октября"
+      "project_name": "Офисно-складской комплекс на 60-летия Октября",
+      "registry_project_id": "OBJ-0146"
     },
     {
       "unified_id": "UC-OBJ-0644",
@@ -22329,9 +21777,10 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Северный речной порт",
-      "canonical_project_id": "OBJ-0175",
+      "canonical_project_id": "1025",
       "subid": "01",
-      "project_name": "Ре:Порт"
+      "project_name": "Ре:Порт",
+      "registry_project_id": "OBJ-0175"
     },
     {
       "unified_id": "UC-OBJ-0753",
@@ -23327,9 +22776,10 @@
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0171",
+      "canonical_project_id": "1023",
       "subid": "01",
-      "project_name": "СберСити"
+      "project_name": "СберСити",
+      "registry_project_id": "OBJ-0171"
     },
     {
       "unified_id": "UC-OBJ-0338",
@@ -23454,7 +22904,7 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "339",
+      "canonical_project_id": "260",
       "subid": "01",
       "project_name": "Север.Сити"
     },
@@ -24217,9 +23667,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "OBJ-0161",
+      "canonical_project_id": "1021",
       "subid": "01",
-      "project_name": "Станколит"
+      "project_name": "Станколит",
+      "registry_project_id": "OBJ-0161"
     },
     {
       "unified_id": "UC-OBJ-0343",
@@ -24387,9 +23838,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0120",
+      "canonical_project_id": "1007",
       "subid": "01",
-      "project_name": "Строгино Сити"
+      "project_name": "Строгино Сити",
+      "registry_project_id": "OBJ-0120"
     },
     {
       "unified_id": "UC-OBJ-0385",
@@ -25020,9 +24472,10 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0144",
+      "canonical_project_id": "1015",
       "subid": "01",
-      "project_name": "Технопарк \"Алкон Север\""
+      "project_name": "Технопарк \"Алкон Север\"",
+      "registry_project_id": "OBJ-0144"
     },
     {
       "unified_id": "UC-OBJ-0657",
@@ -26245,9 +25698,10 @@
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0180",
+      "canonical_project_id": "1026",
       "subid": "01",
-      "project_name": "улица Лобачевского, 138"
+      "project_name": "улица Лобачевского, 138",
+      "registry_project_id": "OBJ-0180"
     },
     {
       "unified_id": "UC-OBJ-0547",
@@ -27241,9 +26695,10 @@
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "canonical_project_id": "allprojects-praim-taim",
+      "canonical_project_id": "1067",
       "subid": "01",
-      "project_name": "Прайм Тайм"
+      "project_name": "Прайм Тайм",
+      "registry_project_id": "allprojects-praim-taim"
     },
     {
       "unified_id": "UC-OBJ-ADD-003",
@@ -27300,9 +26755,10 @@
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "allprojects-korolev",
+      "canonical_project_id": "1068",
       "subid": "01",
-      "project_name": "Королёв"
+      "project_name": "Королёв",
+      "registry_project_id": "allprojects-korolev"
     },
     {
       "unified_id": "UC-OBJ-ADD-004",
@@ -27454,9 +26910,10 @@
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "canonical_project_id": "allprojects-plaza-technopark",
+      "canonical_project_id": "1069",
       "subid": "01",
-      "project_name": "Plaza Technopark"
+      "project_name": "Plaza Technopark",
+      "registry_project_id": "allprojects-plaza-technopark"
     },
     {
       "unified_id": "UC-OBJ-ADD-007",
@@ -27562,9 +27019,10 @@
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "canonical_project_id": "allprojects-stone-towers-tower-a",
+      "canonical_project_id": "1070",
       "subid": "01",
-      "project_name": "STONE Towers, Tower A"
+      "project_name": "STONE Towers, Tower A",
+      "registry_project_id": "allprojects-stone-towers-tower-a"
     },
     {
       "unified_id": "UC-OBJ-ADD-009",
@@ -27781,9 +27239,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0783",
+      "canonical_project_id": "1071",
       "subid": "01",
-      "project_name": "Дмитровское шоссе, 49к1"
+      "project_name": "Дмитровское шоссе, 49к1",
+      "registry_project_id": "OBJ-0783"
     },
     {
       "unified_id": "UC-OBJ-ADD-014",
@@ -27823,9 +27282,10 @@
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0784",
+      "canonical_project_id": "1072",
       "subid": "01",
-      "project_name": "Авиамоторная улица, 24"
+      "project_name": "Авиамоторная улица, 24",
+      "registry_project_id": "OBJ-0784"
     },
     {
       "unified_id": "UC-OBJ-ADD-015",
@@ -27865,9 +27325,10 @@
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0785",
+      "canonical_project_id": "1073",
       "subid": "01",
-      "project_name": "МФК на Верхней Сыромятнической"
+      "project_name": "МФК на Верхней Сыромятнической",
+      "registry_project_id": "OBJ-0785"
     },
     {
       "unified_id": "UC-OBJ-ADD-016",
@@ -27908,12 +27369,13 @@
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0786",
+      "canonical_project_id": "1074",
       "subid": "01",
       "project_name": "БЦ Павелецкая от Гранель",
       "aliases": [
         "Гранель (Дубининская, 17)"
-      ]
+      ],
+      "registry_project_id": "OBJ-0786"
     },
     {
       "unified_id": "UC-OBJ-ADD-019",
@@ -28432,14 +27894,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Красная Роза",
-      "canonical_project_id": "proj-2",
+      "canonical_project_id": "1075",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "WeWork Роза"
+      "project_name": "WeWork Роза",
+      "registry_project_id": "proj-2"
     },
     {
       "unified_id": "UC-OBJ-ADD-030",
@@ -28482,14 +27945,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Белая Площадь",
-      "canonical_project_id": "proj-3",
+      "canonical_project_id": "1076",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "project_name": "WeWork Белая площадь"
+      "project_name": "WeWork Белая площадь",
+      "registry_project_id": "proj-3"
     },
     {
       "unified_id": "UC-OBJ-ADD-031",
@@ -28532,14 +27996,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Аркус 3",
-      "canonical_project_id": "proj-4",
+      "canonical_project_id": "1077",
       "geo_ao": "Северный",
       "geo_raion": "Беговой",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Большой Сити",
-      "project_name": "WeWork Аркус"
+      "project_name": "WeWork Аркус",
+      "registry_project_id": "proj-4"
     },
     {
       "unified_id": "UC-OBJ-ADD-032",
@@ -28582,14 +28047,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Большая Якиманка 26",
-      "canonical_project_id": "proj-5",
+      "canonical_project_id": "1078",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "WeWork Якиманка"
+      "project_name": "WeWork Якиманка",
+      "registry_project_id": "proj-5"
     },
     {
       "unified_id": "UC-OBJ-ADD-033",
@@ -28632,14 +28098,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Смоленский Пассаж 1",
-      "canonical_project_id": "proj-6",
+      "canonical_project_id": "1079",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Регус"
+      "project_name": "Регус",
+      "registry_project_id": "proj-6"
     },
     {
       "unified_id": "UC-OBJ-ADD-034",
@@ -28682,14 +28149,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Сириус Парк",
-      "canonical_project_id": "proj-7",
+      "canonical_project_id": "1080",
       "geo_ao": "Южный",
       "geo_raion": "Нагатино-Садовники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Мой Кабинет"
+      "project_name": "Мой Кабинет",
+      "registry_project_id": "proj-7"
     },
     {
       "unified_id": "UC-OBJ-ADD-035",
@@ -28732,14 +28200,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Технопарк",
-      "canonical_project_id": "proj-8",
+      "canonical_project_id": "1081",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "project_name": "Apollax Технопарк"
+      "project_name": "Apollax Технопарк",
+      "registry_project_id": "proj-8"
     },
     {
       "unified_id": "UC-OBJ-ADD-037",
@@ -28830,14 +28299,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Порта",
-      "canonical_project_id": "proj-11",
+      "canonical_project_id": "1082",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "BusinessClub"
+      "project_name": "BusinessClub",
+      "registry_project_id": "proj-11"
     },
     {
       "unified_id": "UC-OBJ-ADD-039",
@@ -28879,14 +28349,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Ходынка",
-      "canonical_project_id": "proj-12",
+      "canonical_project_id": "1083",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "BusinessClub"
+      "project_name": "BusinessClub",
+      "registry_project_id": "proj-12"
     },
     {
       "unified_id": "UC-OBJ-ADD-040",
@@ -28931,14 +28402,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Black&White",
-      "canonical_project_id": "proj-15",
+      "canonical_project_id": "1084",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Рабочая Станция"
+      "project_name": "Рабочая Станция",
+      "registry_project_id": "proj-15"
     },
     {
       "unified_id": "UC-OBJ-ADD-041",
@@ -28983,14 +28455,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Балчуг",
-      "canonical_project_id": "proj-16",
+      "canonical_project_id": "1085",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Балчуг Плаза - KW"
+      "project_name": "Балчуг Плаза - KW",
+      "registry_project_id": "proj-16"
     },
     {
       "unified_id": "UC-OBJ-ADD-042",
@@ -29095,14 +28568,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Пр. Мира , 40",
-      "canonical_project_id": "proj-18",
+      "canonical_project_id": "1086",
       "geo_ao": "Центральный",
       "geo_raion": "Мещанский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Регус Проспект Мира"
+      "project_name": "Регус Проспект Мира",
+      "registry_project_id": "proj-18"
     },
     {
       "unified_id": "UC-OBJ-ADD-044",
@@ -29152,14 +28626,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Сретенский б-р, 5",
-      "canonical_project_id": "proj-21",
+      "canonical_project_id": "1087",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Ключ Сретенка"
+      "project_name": "Ключ Сретенка",
+      "registry_project_id": "proj-21"
     },
     {
       "unified_id": "UC-OBJ-ADD-045",
@@ -29258,14 +28733,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Газетный",
-      "canonical_project_id": "proj-24",
+      "canonical_project_id": "1088",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "BusinessClub Газетный"
+      "project_name": "BusinessClub Газетный",
+      "registry_project_id": "proj-24"
     },
     {
       "unified_id": "UC-OBJ-ADD-047",
@@ -29307,14 +28783,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Порта",
-      "canonical_project_id": "proj-25",
+      "canonical_project_id": "1089",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "BusinessClub Porta"
+      "project_name": "BusinessClub Porta",
+      "registry_project_id": "proj-25"
     },
     {
       "unified_id": "UC-OBJ-ADD-048",
@@ -29356,14 +28833,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Ходынка",
-      "canonical_project_id": "proj-26",
+      "canonical_project_id": "1090",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "BusinessClub Ходынка"
+      "project_name": "BusinessClub Ходынка",
+      "registry_project_id": "proj-26"
     },
     {
       "unified_id": "UC-OBJ-ADD-049",
@@ -29412,14 +28890,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Красная Роза",
-      "canonical_project_id": "proj-27",
+      "canonical_project_id": "1091",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Speace Jet Тимура Фрунзе"
+      "project_name": "Speace Jet Тимура Фрунзе",
+      "registry_project_id": "proj-27"
     },
     {
       "unified_id": "UC-OBJ-ADD-050",
@@ -29526,14 +29005,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Аркус 3",
-      "canonical_project_id": "proj-29",
+      "canonical_project_id": "1092",
       "geo_ao": "Северный",
       "geo_raion": "Беговой",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Большой Сити",
-      "project_name": "Speace Jet Аркус"
+      "project_name": "Speace Jet Аркус",
+      "registry_project_id": "proj-29"
     },
     {
       "unified_id": "UC-OBJ-ADD-052",
@@ -29583,14 +29063,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Большая Якиманка 26",
-      "canonical_project_id": "proj-30",
+      "canonical_project_id": "1093",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Speace Jet Якиманка"
+      "project_name": "Speace Jet Якиманка",
+      "registry_project_id": "proj-30"
     },
     {
       "unified_id": "UC-OBJ-ADD-054",
@@ -29732,14 +29213,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Заречная 2/1",
-      "canonical_project_id": "proj-35",
+      "canonical_project_id": "1094",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Порта"
+      "project_name": "Порта",
+      "registry_project_id": "proj-35"
     },
     {
       "unified_id": "UC-OBJ-ADD-057",
@@ -29932,14 +29414,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "БЦ Известия",
-      "canonical_project_id": "proj-42",
+      "canonical_project_id": "1095",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Атмосфера"
+      "project_name": "Атмосфера",
+      "registry_project_id": "proj-42"
     },
     {
       "unified_id": "UC-OBJ-ADD-061",
@@ -29986,14 +29469,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "ТЦ РИО на Ленинском",
-      "canonical_project_id": "proj-43",
+      "canonical_project_id": "1096",
       "geo_ao": "Юго-Западный",
       "geo_raion": "Обручевский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Атмосфера"
+      "project_name": "Атмосфера",
+      "registry_project_id": "proj-43"
     },
     {
       "unified_id": "UC-OBJ-ADD-062",
@@ -30097,15 +29581,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Павелецкая Плаза (А)",
-      "canonical_project_id": "proj-48",
+      "tower_label": "Павелецкая Плаза",
+      "canonical_project_id": "1097",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Flexity"
+      "project_name": "Flexity",
+      "registry_project_id": "proj-48"
     },
     {
       "unified_id": "UC-OBJ-ADD-067",
@@ -30146,15 +29631,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Павелецкая Плаза (А)",
-      "canonical_project_id": "proj-49",
+      "tower_label": "Павелецкая Плаза",
+      "canonical_project_id": "1098",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Flexity Solo"
+      "project_name": "Flexity Solo",
+      "registry_project_id": "proj-49"
     },
     {
       "unified_id": "UC-OBJ-ADD-069",
@@ -30200,7 +29686,7 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "SOK Сити (3 и 4 этаж)",
+      "tower_label": "SOK Сити",
       "canonical_project_id": "51",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
@@ -30254,15 +29740,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "SOK Арена Парк (Рыбаков Тауэр)",
-      "canonical_project_id": "proj-52",
+      "tower_label": "SOK Арена Парк",
+      "canonical_project_id": "1099",
       "geo_ao": "Северный",
       "geo_raion": "Аэропорт",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "project_name": "SOK"
+      "project_name": "SOK",
+      "registry_project_id": "proj-52"
     },
     {
       "unified_id": "UC-OBJ-ADD-071",
@@ -30363,14 +29850,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "SOK Сады Пекина",
-      "canonical_project_id": "proj-54",
+      "canonical_project_id": "1100",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "SOK"
+      "project_name": "SOK",
+      "registry_project_id": "proj-54"
     },
     {
       "unified_id": "UC-OBJ-ADD-073",
@@ -30417,14 +29905,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "SOK Земляной Вал",
-      "canonical_project_id": "proj-55",
+      "canonical_project_id": "1101",
       "geo_ao": "Центральный",
       "geo_raion": "Таганский",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Восток",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "SOK"
+      "project_name": "SOK",
+      "registry_project_id": "proj-55"
     },
     {
       "unified_id": "UC-OBJ-ADD-074",
@@ -30535,14 +30024,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Технопарк",
-      "canonical_project_id": "proj-58",
+      "canonical_project_id": "1102",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "project_name": "Apollax Space"
+      "project_name": "Apollax Space",
+      "registry_project_id": "proj-58"
     },
     {
       "unified_id": "UC-OBJ-ADD-076",
@@ -30595,14 +30085,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Останкино",
-      "canonical_project_id": "proj-59",
+      "canonical_project_id": "1103",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Apollax Space"
+      "project_name": "Apollax Space",
+      "registry_project_id": "proj-59"
     },
     {
       "unified_id": "UC-OBJ-ADD-077",
@@ -30770,14 +30261,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "GrowUp на Павелецкой",
-      "canonical_project_id": "proj-62",
+      "canonical_project_id": "1104",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Grow up"
+      "project_name": "Grow up",
+      "registry_project_id": "proj-62"
     },
     {
       "unified_id": "UC-OBJ-ADD-080",
@@ -30995,14 +30487,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Балчуг",
-      "canonical_project_id": "proj-74",
+      "canonical_project_id": "1105",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Space 1"
+      "project_name": "Space 1",
+      "registry_project_id": "proj-74"
     },
     {
       "unified_id": "UC-OBJ-ADD-090",
@@ -31097,14 +30590,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Porta",
-      "canonical_project_id": "proj-79",
+      "canonical_project_id": "1106",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Multispace Porta"
+      "project_name": "Multispace Porta",
+      "registry_project_id": "proj-79"
     },
     {
       "unified_id": "UC-OBJ-ADD-094",
@@ -31200,7 +30694,7 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "SOK Арена Парк (Рыбаков Тауэр)",
+      "tower_label": "SOK Арена Парк",
       "canonical_project_id": "82",
       "geo_ao": "Северный",
       "geo_raion": "Аэропорт",
@@ -31366,14 +30860,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Домников",
-      "canonical_project_id": "proj-93",
+      "canonical_project_id": "1107",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Регус"
+      "project_name": "Регус",
+      "registry_project_id": "proj-93"
     },
     {
       "unified_id": "UC-OBJ-ADD-100",
@@ -31652,14 +31147,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "ул. Воронцовская, д. 49/28",
-      "canonical_project_id": "proj-111",
+      "canonical_project_id": "1108",
       "geo_ao": "Центральный",
       "geo_raion": "Таганский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Практик на Пролетарской"
+      "project_name": "Практик на Пролетарской",
+      "registry_project_id": "proj-111"
     },
     {
       "unified_id": "UC-OBJ-ADD-105",
@@ -31824,14 +31320,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Даниловская Мануфактура",
-      "canonical_project_id": "proj-118",
+      "canonical_project_id": "1109",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Meeting point"
+      "project_name": "Meeting point",
+      "registry_project_id": "proj-118"
     },
     {
       "unified_id": "UC-OBJ-ADD-108",
@@ -31881,14 +31378,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Гостиница Москва",
-      "canonical_project_id": "proj-119",
+      "canonical_project_id": "1110",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Meeting point"
+      "project_name": "Meeting point",
+      "registry_project_id": "proj-119"
     },
     {
       "unified_id": "UC-OBJ-ADD-109",
@@ -32055,14 +31553,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Меркурий",
-      "canonical_project_id": "proj-125",
+      "canonical_project_id": "1111",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Space 1"
+      "project_name": "Space 1",
+      "registry_project_id": "proj-125"
     },
     {
       "unified_id": "UC-OBJ-ADD-112",
@@ -32171,14 +31670,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Арбат",
-      "canonical_project_id": "proj-130",
+      "canonical_project_id": "1112",
       "geo_ao": "Центральный",
       "geo_raion": "Арбат",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Запад",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Space 1"
+      "project_name": "Space 1",
+      "registry_project_id": "proj-130"
     },
     {
       "unified_id": "UC-OBJ-ADD-116",
@@ -32275,14 +31775,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Вивальди",
-      "canonical_project_id": "proj-140",
+      "canonical_project_id": "1113",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Space Вивальди"
+      "project_name": "Space Вивальди",
+      "registry_project_id": "proj-140"
     },
     {
       "unified_id": "UC-OBJ-ADD-119",
@@ -32489,14 +31990,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "МФК Савеловский сити",
-      "canonical_project_id": "proj-148",
+      "canonical_project_id": "1114",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "project_name": "СODE Савеловская"
+      "project_name": "СODE Савеловская",
+      "registry_project_id": "proj-148"
     },
     {
       "unified_id": "UC-OBJ-ADD-123",
@@ -32659,14 +32161,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "ВТБ Арена стр 8",
-      "canonical_project_id": "proj-154",
+      "canonical_project_id": "1115",
       "geo_ao": "Северный",
       "geo_raion": "Аэропорт",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "project_name": "Multispace Динамо"
+      "project_name": "Multispace Динамо",
+      "registry_project_id": "proj-154"
     },
     {
       "unified_id": "UC-OBJ-ADD-126",
@@ -32710,14 +32213,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "1 шипковский пер. 5",
-      "canonical_project_id": "proj-156",
+      "canonical_project_id": "1116",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Multispace Павелецкая"
+      "project_name": "Multispace Павелецкая",
+      "registry_project_id": "proj-156"
     },
     {
       "unified_id": "UC-OBJ-ADD-127",
@@ -32762,14 +32266,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Дубинин Скай",
-      "canonical_project_id": "proj-157",
+      "canonical_project_id": "1117",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Multispace Дубинин"
+      "project_name": "Multispace Дубинин",
+      "registry_project_id": "proj-157"
     },
     {
       "unified_id": "UC-OBJ-ADD-128",
@@ -32814,14 +32319,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Галерея Актер",
-      "canonical_project_id": "proj-160",
+      "canonical_project_id": "1118",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Multispace Актер"
+      "project_name": "Multispace Актер",
+      "registry_project_id": "proj-160"
     },
     {
       "unified_id": "UC-OBJ-ADD-130",
@@ -33022,14 +32528,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "SOK Сады Пекина",
-      "canonical_project_id": "proj-169",
+      "canonical_project_id": "1119",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "SOK Сады Пекина"
+      "project_name": "SOK Сады Пекина",
+      "registry_project_id": "proj-169"
     },
     {
       "unified_id": "UC-OBJ-ADD-134",
@@ -33073,15 +32580,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "SOK Сити (3 и 4 этаж)",
-      "canonical_project_id": "proj-172",
+      "tower_label": "SOK Сити",
+      "canonical_project_id": "1120",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "SOK Сити"
+      "project_name": "SOK Сити",
+      "registry_project_id": "proj-172"
     },
     {
       "unified_id": "UC-OBJ-ADD-136",
@@ -33185,14 +32693,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Deworkacy Савинский",
-      "canonical_project_id": "proj-178",
+      "canonical_project_id": "1121",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Deworkacy Савинский"
+      "project_name": "Deworkacy Савинский",
+      "registry_project_id": "proj-178"
     },
     {
       "unified_id": "UC-OBJ-ADD-138",
@@ -33301,14 +32810,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Никольская",
-      "canonical_project_id": "proj-182",
+      "canonical_project_id": "1122",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Apollax Space"
+      "project_name": "Apollax Space",
+      "registry_project_id": "proj-182"
     },
     {
       "unified_id": "UC-OBJ-ADD-140",
@@ -33358,7 +32868,7 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Федерация (Сити)",
+      "tower_label": "Федерация",
       "canonical_project_id": "183",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
@@ -33475,14 +32985,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Бригантина",
-      "canonical_project_id": "proj-191",
+      "canonical_project_id": "1123",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Apollax Space"
+      "project_name": "Apollax Space",
+      "registry_project_id": "proj-191"
     },
     {
       "unified_id": "UC-OBJ-ADD-148",
@@ -33533,14 +33044,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Зубовский 17",
-      "canonical_project_id": "proj-199",
+      "canonical_project_id": "1124",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Workki Зубовский"
+      "project_name": "Workki Зубовский",
+      "registry_project_id": "proj-199"
     },
     {
       "unified_id": "UC-OBJ-ADD-149",
@@ -33590,7 +33102,7 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Федерация (Сити)",
+      "tower_label": "Федерация",
       "canonical_project_id": "202",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
@@ -33765,14 +33277,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Workki Комсомольская",
-      "canonical_project_id": "proj-207",
+      "canonical_project_id": "1125",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Workki Комсомольская"
+      "project_name": "Workki Комсомольская",
+      "registry_project_id": "proj-207"
     },
     {
       "unified_id": "UC-OBJ-ADD-153",
@@ -33823,14 +33336,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "На Тульской",
-      "canonical_project_id": "proj-210",
+      "canonical_project_id": "1126",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Workki Тульский"
+      "project_name": "Workki Тульский",
+      "registry_project_id": "proj-210"
     },
     {
       "unified_id": "UC-OBJ-ADD-154",
@@ -33996,14 +33510,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Гринвуд",
-      "canonical_project_id": "proj-215",
+      "canonical_project_id": "1127",
       "geo_ao": null,
       "geo_raion": null,
       "geo_zone": null,
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Регус"
+      "project_name": "Регус",
+      "registry_project_id": "proj-215"
     },
     {
       "unified_id": "UC-OBJ-ADD-157",
@@ -34165,14 +33680,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Капитолий Вернадского",
-      "canonical_project_id": "proj-222",
+      "canonical_project_id": "1128",
       "geo_ao": "Западный",
       "geo_raion": "Раменки",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Регус"
+      "project_name": "Регус",
+      "registry_project_id": "proj-222"
     },
     {
       "unified_id": "UC-OBJ-ADD-160",
@@ -34223,14 +33739,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Citydel",
-      "canonical_project_id": "proj-223",
+      "canonical_project_id": "1129",
       "geo_ao": "Центральный",
       "geo_raion": "Басманный",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Регус"
+      "project_name": "Регус",
+      "registry_project_id": "proj-223"
     },
     {
       "unified_id": "UC-OBJ-ADD-161",
@@ -34281,14 +33798,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Авион",
-      "canonical_project_id": "proj-225",
+      "canonical_project_id": "1130",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Регус"
+      "project_name": "Регус",
+      "registry_project_id": "proj-225"
     },
     {
       "unified_id": "UC-OBJ-ADD-162",
@@ -34338,15 +33856,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Федерация (Сити)",
-      "canonical_project_id": "proj-228",
+      "tower_label": "Федерация",
+      "canonical_project_id": "1131",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "F2 - Федерация"
+      "project_name": "F2 - Федерация",
+      "registry_project_id": "proj-228"
     },
     {
       "unified_id": "UC-OBJ-ADD-163",
@@ -34455,14 +33974,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Ролл Холл",
-      "canonical_project_id": "proj-232",
+      "canonical_project_id": "1132",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Коворкинг СОЛЬ"
+      "project_name": "Коворкинг СОЛЬ",
+      "registry_project_id": "proj-232"
     },
     {
       "unified_id": "UC-OBJ-ADD-165",
@@ -34672,14 +34192,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Фили Град",
-      "canonical_project_id": "proj-239",
+      "canonical_project_id": "1133",
       "geo_ao": "Западный",
       "geo_raion": "Филёвский Парк",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "F2"
+      "project_name": "F2",
+      "registry_project_id": "proj-239"
     },
     {
       "unified_id": "UC-OBJ-ADD-170",
@@ -34788,14 +34309,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Садовая Плаза",
-      "canonical_project_id": "proj-246",
+      "canonical_project_id": "1134",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Flexity"
+      "project_name": "Flexity",
+      "registry_project_id": "proj-246"
     },
     {
       "unified_id": "UC-OBJ-ADD-172",
@@ -34846,14 +34368,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Овчинниковский",
-      "canonical_project_id": "proj-248",
+      "canonical_project_id": "1135",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Flexity"
+      "project_name": "Flexity",
+      "registry_project_id": "proj-248"
     },
     {
       "unified_id": "UC-OBJ-ADD-173",
@@ -34896,7 +34419,7 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Павелецкая Плаза (В)",
+      "tower_label": "Павелецкая Плаза",
       "canonical_project_id": "255",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
@@ -34948,15 +34471,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Павелецкая Плаза (А)",
-      "canonical_project_id": "proj-256",
+      "tower_label": "Павелецкая Плаза",
+      "canonical_project_id": "1136",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Flexity SOLO/Flexity"
+      "project_name": "Flexity SOLO/Flexity",
+      "registry_project_id": "proj-256"
     },
     {
       "unified_id": "UC-OBJ-ADD-175",
@@ -35000,7 +34524,7 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "Башня на набережной (В)",
+      "tower_label": "Башня на набережной",
       "canonical_project_id": "257",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
@@ -35057,14 +34581,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-22",
+      "canonical_project_id": "1137",
       "geo_ao": "Западный",
       "geo_raion": "Можайский",
       "geo_zone": "за МКАД",
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "БЦ Сколково"
+      "project_name": "БЦ Сколково",
+      "registry_project_id": "proj-22"
     },
     {
       "unified_id": "UC-OBJ-ADD-179",
@@ -35117,14 +34642,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-33",
+      "canonical_project_id": "1138",
       "geo_ao": "Северный",
       "geo_raion": "Беговой",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "project_name": "STONE Towers"
+      "project_name": "STONE Towers",
+      "registry_project_id": "proj-33"
     },
     {
       "unified_id": "UC-OBJ-ADD-181",
@@ -35166,14 +34692,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-72",
+      "canonical_project_id": "1139",
       "geo_ao": "Северо-Западный",
       "geo_raion": "Хорошёво-Мнёвники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "Бизнес-центр SEZAR"
+      "project_name": "Бизнес-центр SEZAR",
+      "registry_project_id": "proj-72"
     },
     {
       "unified_id": "UC-OBJ-ADD-184",
@@ -35328,14 +34855,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "бывший — BusinessClass Ходынка",
-      "canonical_project_id": "proj-100",
+      "canonical_project_id": "1140",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Обсидиан"
+      "project_name": "Обсидиан",
+      "registry_project_id": "proj-100"
     },
     {
       "unified_id": "UC-OBJ-ADD-193",
@@ -35391,14 +34919,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-102",
+      "canonical_project_id": "1141",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "project_name": "Парк Легенд класс А"
+      "project_name": "Парк Легенд класс А",
+      "registry_project_id": "proj-102"
     },
     {
       "unified_id": "UC-OBJ-ADD-194",
@@ -35453,14 +34982,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-103",
+      "canonical_project_id": "1142",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "project_name": "Парк Легенд класс В+"
+      "project_name": "Парк Легенд класс В+",
+      "registry_project_id": "proj-103"
     },
     {
       "unified_id": "UC-OBJ-ADD-196",
@@ -35478,7 +35008,8 @@
       "longitude": 37.752868,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-108"
+        "proj-108",
+        "OBJ-0475"
       ],
       "quarter_offer_refs": [
         "202503",
@@ -35501,20 +35032,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-108).",
       "confidence": "medium",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0475 (AFI Tagilskaya) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 108); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-108",
+      "canonical_project_id": "108",
       "geo_ao": "Восточный",
       "geo_raion": "Метрогородок",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "AFI2B Tagilskaya"
+      "project_name": "AFI2B Tagilskaya",
+      "registry_project_id": "proj-108"
     },
     {
       "unified_id": "UC-OBJ-ADD-197",
@@ -35533,7 +35065,8 @@
       "coordinates_status": "unverified",
       "legacy_ids": [
         "proj-112",
-        "air-k1"
+        "air-k1",
+        "OBJ-0373"
       ],
       "quarter_offer_refs": [
         "202503",
@@ -35555,20 +35088,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-112).",
       "confidence": "low",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0373 (Air) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 112); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
-      "tower_label": "корпус 1 (20 эт.)",
-      "canonical_project_id": "proj-112",
+      "tower_label": "корпус 1",
+      "canonical_project_id": "112",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Air"
+      "project_name": "Air",
+      "registry_project_id": "proj-112"
     },
     {
       "unified_id": "UC-OBJ-ADD-198",
@@ -35614,15 +35148,16 @@
       "review_reason": null,
       "canonical_no": null,
       "subid": "02",
-      "tower_label": "корпус 2 (28 эт.)",
-      "canonical_project_id": "proj-112",
+      "tower_label": "корпус 2",
+      "canonical_project_id": "112",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Air"
+      "project_name": "Air",
+      "registry_project_id": "proj-112"
     },
     {
       "unified_id": "UC-OBJ-ADD-201",
@@ -35696,7 +35231,8 @@
       "coordinates_status": "unverified",
       "legacy_ids": [
         "proj-129",
-        "icity-time"
+        "icity-time",
+        "OBJ-0655"
       ],
       "quarter_offer_refs": [
         "202105",
@@ -35730,20 +35266,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-129).",
       "confidence": "low",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0655 (iCITY (Башня Space)) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 129); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Time",
-      "canonical_project_id": "proj-129",
+      "canonical_project_id": "129",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "iCITY"
+      "project_name": "iCITY",
+      "registry_project_id": "proj-129"
     },
     {
       "unified_id": "UC-OBJ-ADD-204",
@@ -35802,14 +35339,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "Space",
-      "canonical_project_id": "proj-129",
+      "canonical_project_id": "129",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "iCITY"
+      "project_name": "iCITY",
+      "registry_project_id": "proj-129"
     },
     {
       "unified_id": "UC-OBJ-ADD-205",
@@ -35855,14 +35393,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "CREDO",
-      "canonical_project_id": "proj-134",
+      "canonical_project_id": "134",
       "geo_ao": "Северо-Западный",
       "geo_raion": "Хорошёво-Мнёвники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "Jois"
+      "project_name": "Jois",
+      "registry_project_id": "proj-134"
     },
     {
       "unified_id": "UC-OBJ-ADD-206",
@@ -35908,14 +35447,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "MAST",
-      "canonical_project_id": "proj-134",
+      "canonical_project_id": "134",
       "geo_ao": "Северо-Западный",
       "geo_raion": "Хорошёво-Мнёвники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "Jois"
+      "project_name": "Jois",
+      "registry_project_id": "proj-134"
     },
     {
       "unified_id": "UC-OBJ-ADD-208",
@@ -35961,14 +35501,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "RUNE",
-      "canonical_project_id": "proj-150",
+      "canonical_project_id": "150",
       "geo_ao": "Западный",
       "geo_raion": "Очаково-Матвеевское",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Link"
+      "project_name": "Link",
+      "registry_project_id": "proj-150"
     },
     {
       "unified_id": "UC-OBJ-ADD-209",
@@ -36014,14 +35555,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "NEO",
-      "canonical_project_id": "proj-150",
+      "canonical_project_id": "150",
       "geo_ao": "Западный",
       "geo_raion": "Очаково-Матвеевское",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Link"
+      "project_name": "Link",
+      "registry_project_id": "proj-150"
     },
     {
       "unified_id": "UC-OBJ-ADD-214",
@@ -36104,7 +35646,8 @@
       "coordinates_status": "unverified",
       "legacy_ids": [
         "proj-180",
-        "stone-kaluzh-k1"
+        "stone-kaluzh-k1",
+        "OBJ-0114"
       ],
       "quarter_offer_refs": [
         "202407",
@@ -36130,20 +35673,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-180).",
       "confidence": "medium",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0114 (Stone Калужская) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 180); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "K1",
-      "canonical_project_id": "proj-180",
+      "canonical_project_id": "180",
       "geo_ao": "Юго-Западный",
       "geo_raion": "Обручевский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "project_name": "STONE Калужская"
+      "project_name": "STONE Калужская",
+      "registry_project_id": "proj-180"
     },
     {
       "unified_id": "UC-OBJ-ADD-216",
@@ -36194,14 +35738,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "K2",
-      "canonical_project_id": "proj-180",
+      "canonical_project_id": "180",
       "geo_ao": "Юго-Западный",
       "geo_raion": "Обручевский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "project_name": "STONE Калужская"
+      "project_name": "STONE Калужская",
+      "registry_project_id": "proj-180"
     },
     {
       "unified_id": "UC-OBJ-ADD-217",
@@ -36252,14 +35797,15 @@
       "canonical_no": null,
       "subid": "03",
       "tower_label": "K3",
-      "canonical_project_id": "proj-180",
+      "canonical_project_id": "180",
       "geo_ao": "Юго-Западный",
       "geo_raion": "Обручевский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "project_name": "STONE Калужская"
+      "project_name": "STONE Калужская",
+      "registry_project_id": "proj-180"
     },
     {
       "unified_id": "UC-OBJ-ADD-220",
@@ -36277,7 +35823,8 @@
       "longitude": 37.456532,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-188"
+        "proj-188",
+        "OBJ-0218"
       ],
       "quarter_offer_refs": [
         "202503",
@@ -36299,20 +35846,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-188).",
       "confidence": "high",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0218 (Stone Мневники 2) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 188); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-188",
+      "canonical_project_id": "188",
       "geo_ao": "Северо-Западный",
       "geo_raion": "Хорошёво-Мнёвники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "STONE Мневники II"
+      "project_name": "STONE Мневники II",
+      "registry_project_id": "proj-188"
     },
     {
       "unified_id": "UC-OBJ-ADD-221",
@@ -36331,7 +35879,8 @@
       "coordinates_status": "unverified",
       "legacy_ids": [
         "proj-189",
-        "stone-mnevniki3-t1"
+        "stone-mnevniki3-t1",
+        "OBJ-0219"
       ],
       "quarter_offer_refs": [
         "202512",
@@ -36350,20 +35899,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-189).",
       "confidence": "low",
       "entity_type": "office_project_candidate",
-      "classification_note": "2026-09-17: заменяет устаревшую слитую запись UC-OBJ-0678 (STONE Мневники 3 (Башня 1 и Башня 2) -> M3.1/M3.2) — площади по корпусам подтверждены в этой сессии в data/all_projects_layer.json.",
+      "classification_note": "2026-09-17: заменяет устаревшую слитую запись UC-OBJ-0678 (STONE Мневники 3 (Башня 1 и Башня 2) -> M3.1/M3.2) — площади по корпусам подтверждены в этой сессии в data/all_projects_layer.json. 2026-09-19: слито с UC-OBJ-0219 (Stone Мневники 3) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 189); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "M3.1",
-      "canonical_project_id": "proj-189",
+      "canonical_project_id": "189",
       "geo_ao": "Северо-Западный",
       "geo_raion": "Хорошёво-Мнёвники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "STONE Мневники III"
+      "project_name": "STONE Мневники III",
+      "registry_project_id": "proj-189"
     },
     {
       "unified_id": "UC-OBJ-ADD-222",
@@ -36407,14 +35957,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "M3.2",
-      "canonical_project_id": "proj-189",
+      "canonical_project_id": "189",
       "geo_ao": "Северо-Западный",
       "geo_raion": "Хорошёво-Мнёвники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "STONE Мневники III"
+      "project_name": "STONE Мневники III",
+      "registry_project_id": "proj-189"
     },
     {
       "unified_id": "UC-OBJ-ADD-223",
@@ -36433,7 +35984,8 @@
       "coordinates_status": "unverified",
       "legacy_ids": [
         "proj-194",
-        "stone-savel-t1"
+        "stone-savel-t1",
+        "OBJ-0654"
       ],
       "quarter_offer_refs": [
         "202105",
@@ -36463,24 +36015,27 @@
       "layer_source": "classifier.html",
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone савеловская'; underlying source and its check date remain in that record (2026-08-01). 2026-09-14: разбит на 2 записи по башням (обе по 24 этажа/~100м, объединены стилобатом), STONE, ул. Двинцев, 3 — whitewill.ru/savelovskaya, archi.ru/projects/russia/17388 (зафиксировано в раннем аудите больших проектов). Источник даёт подтверждённые офисные площади по башням: Башня 1 — 30000 кв.м, Башня 2 — 40000 кв.м (сумма 70000 против прежней проектной GLA=68300, расхождение 1700, 2.5% — в пределах погрешности округления между источниками, использую эти числа как GLA напрямую). GBA (101100) разделена ПРОПОРЦИОНАЛЬНО этому же соотношению 30:40, т.к. этажность у башен одинакова и не различает их. confidence=low на обеих записях.",
-      "source_links": [],
+      "source_links": [
+        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D1%83%D0%BB.%20%D0%94%D0%B2%D0%B8%D0%BD%D1%86%D0%B5%D0%B2%2C%20%D0%B2%D0%BB.%203%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
+      ],
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-194).",
       "confidence": "low",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0654 (STONE Савёловская (Башня 1 и Башня 2)) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 194); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Башня 1",
-      "canonical_project_id": "proj-194",
+      "canonical_project_id": "194",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Марьина Роща",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "project_name": "STONE Савеловская"
+      "project_name": "STONE Савеловская",
+      "registry_project_id": "proj-194"
     },
     {
       "unified_id": "UC-OBJ-ADD-224",
@@ -36539,14 +36094,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "Башня 2",
-      "canonical_project_id": "proj-194",
+      "canonical_project_id": "194",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Марьина Роща",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "project_name": "STONE Савеловская"
+      "project_name": "STONE Савеловская",
+      "registry_project_id": "proj-194"
     },
     {
       "unified_id": "UC-OBJ-ADD-225",
@@ -36624,7 +36180,8 @@
       "longitude": 37.525082,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-197"
+        "proj-197",
+        "OBJ-0115"
       ],
       "quarter_offer_refs": [
         "202407",
@@ -36645,24 +36202,29 @@
       "layer_source": "classifier.html",
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone ходынка ii'; underlying source and its check date remain in that record (2026-07-14).",
-      "source_links": [],
+      "source_links": [
+        "https://t.me/CREconsultant/3490",
+        "https://stone.ru/commercial/hodinka2",
+        "https://archi.ru/projects/russia/19108/stone-hodynka"
+      ],
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-197).",
       "confidence": "medium",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0115 (STONE Ходынка 2) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 197); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-197",
+      "canonical_project_id": "197",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "STONE Ходынка II"
+      "project_name": "STONE Ходынка II",
+      "registry_project_id": "proj-197"
     },
     {
       "unified_id": "UC-OBJ-ADD-229",
@@ -36718,14 +36280,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-216",
+      "canonical_project_id": "216",
       "geo_ao": "Новомосковский",
       "geo_raion": "Сосенское",
       "geo_zone": "за МКАД",
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": "Новая Москва",
-      "project_name": "А101 Прокшино"
+      "project_name": "А101 Прокшино",
+      "registry_project_id": "proj-216"
     },
     {
       "unified_id": "UC-OBJ-ADD-230",
@@ -36802,7 +36365,8 @@
       "longitude": 37.626809,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-220"
+        "proj-220",
+        "OBJ-0727"
       ],
       "quarter_offer_refs": [
         "202407",
@@ -36823,24 +36387,28 @@
       "layer_source": "classifier.html",
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='башня рябов'; underlying source and its check date remain in that record (2026-08-01).",
-      "source_links": [],
+      "source_links": [
+        "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=ru&q=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B5%D1%80.%2C%203%D0%BA1%D1%811%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+        "https://www.press-release.ru/branches/realestate/__29_06_2026_13_59/"
+      ],
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-220).",
       "confidence": "medium",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0727 (Башня Рябов (Рябовская Мануфактура)) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 220); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-220",
+      "canonical_project_id": "220",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Башня Рябов"
+      "project_name": "Башня Рябов",
+      "registry_project_id": "proj-220"
     },
     {
       "unified_id": "UC-OBJ-ADD-236",
@@ -36899,14 +36467,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Корпус 1",
-      "canonical_project_id": "proj-244",
+      "canonical_project_id": "244",
       "geo_ao": null,
       "geo_raion": null,
       "geo_zone": null,
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Рублево Бизнес-Парк"
+      "project_name": "Рублево Бизнес-Парк",
+      "registry_project_id": "proj-244"
     },
     {
       "unified_id": "UC-OBJ-ADD-237",
@@ -36965,14 +36534,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "Корпус 2",
-      "canonical_project_id": "proj-244",
+      "canonical_project_id": "244",
       "geo_ao": null,
       "geo_raion": null,
       "geo_zone": null,
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Рублево Бизнес-Парк"
+      "project_name": "Рублево Бизнес-Парк",
+      "registry_project_id": "proj-244"
     },
     {
       "unified_id": "UC-OBJ-ADD-238",
@@ -37016,14 +36586,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "Здание А",
-      "canonical_project_id": "proj-245",
+      "canonical_project_id": "245",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Сити-4"
+      "project_name": "Сити-4",
+      "registry_project_id": "proj-245"
     },
     {
       "unified_id": "UC-OBJ-ADD-239",
@@ -37067,14 +36638,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "Здание Б",
-      "canonical_project_id": "proj-245",
+      "canonical_project_id": "245",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Сити-4"
+      "project_name": "Сити-4",
+      "registry_project_id": "proj-245"
     },
     {
       "unified_id": "UC-OBJ-ADD-240",
@@ -37117,14 +36689,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-252",
+      "canonical_project_id": "252",
       "geo_ao": "Западный",
       "geo_raion": "Раменки",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Бизнес-парк Раменки"
+      "project_name": "Бизнес-парк Раменки",
+      "registry_project_id": "proj-252"
     },
     {
       "unified_id": "UC-OBJ-ADD-242",
@@ -37167,14 +36740,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "F1",
-      "canonical_project_id": "proj-258",
+      "canonical_project_id": "258",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "STONE SKY Ходынка"
+      "project_name": "STONE SKY Ходынка",
+      "registry_project_id": "proj-258"
     },
     {
       "unified_id": "UC-OBJ-ADD-243",
@@ -37217,14 +36791,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "F2",
-      "canonical_project_id": "proj-258",
+      "canonical_project_id": "258",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "STONE SKY Ходынка"
+      "project_name": "STONE SKY Ходынка",
+      "registry_project_id": "proj-258"
     },
     {
       "unified_id": "UC-OBJ-ADD-244",
@@ -37267,14 +36842,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "К1",
-      "canonical_project_id": "proj-261",
+      "canonical_project_id": "261",
       "geo_ao": "Западный",
       "geo_raion": "Можайский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "project_name": "Set"
+      "project_name": "Set",
+      "registry_project_id": "proj-261"
     },
     {
       "unified_id": "UC-OBJ-ADD-245",
@@ -37317,14 +36893,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "К2",
-      "canonical_project_id": "proj-261",
+      "canonical_project_id": "261",
       "geo_ao": "Западный",
       "geo_raion": "Можайский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "project_name": "Set"
+      "project_name": "Set",
+      "registry_project_id": "proj-261"
     },
     {
       "unified_id": "UC-OBJ-ADD-249",
@@ -37403,7 +36980,8 @@
       "longitude": 37.627041,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-272"
+        "proj-272",
+        "OBJ-0190"
       ],
       "quarter_offer_refs": [
         "202606"
@@ -37416,24 +36994,27 @@
       "layer_source": "classifier.html",
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22. Приоритетный актуальный источник: официальный сайт проекта https://chalet40.ru/ — плановый ввод II квартал 2028; проверено 2026-08-24. Fortex https://fortexgroup.ru/bc/chalet/ (I кв. 2027) и публикация HITECH Development https://t.me/s/startyprodazh/16020 (IV кв. 2027) сохранены как конфликтующие/устаревшие источники и не используются для текущего значения.",
-      "source_links": [],
+      "source_links": [
+        "https://t.me/stroi_news/8697"
+      ],
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-272).",
       "confidence": "medium",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0190 (Chalet) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 272); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-272",
+      "canonical_project_id": "272",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "CHALET Пятницкая 40"
+      "project_name": "CHALET Пятницкая 40",
+      "registry_project_id": "proj-272"
     },
     {
       "unified_id": "UC-OBJ-ADD-251",
@@ -37493,14 +37074,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "К1",
-      "canonical_project_id": "proj-274",
+      "canonical_project_id": "274",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Останкино"
+      "project_name": "Останкино",
+      "registry_project_id": "proj-274"
     },
     {
       "unified_id": "UC-OBJ-ADD-252",
@@ -37560,14 +37142,15 @@
       "canonical_no": null,
       "subid": "02",
       "tower_label": "К2+К3",
-      "canonical_project_id": "proj-274",
+      "canonical_project_id": "274",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Останкино"
+      "project_name": "Останкино",
+      "registry_project_id": "proj-274"
     },
     {
       "unified_id": "UC-OBJ-ADD-253",
@@ -37627,14 +37210,15 @@
       "canonical_no": null,
       "subid": "03",
       "tower_label": "К4",
-      "canonical_project_id": "proj-274",
+      "canonical_project_id": "274",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Останкино"
+      "project_name": "Останкино",
+      "registry_project_id": "proj-274"
     },
     {
       "unified_id": "UC-OBJ-ADD-254",
@@ -37694,14 +37278,15 @@
       "canonical_no": null,
       "subid": "04",
       "tower_label": "К5",
-      "canonical_project_id": "proj-274",
+      "canonical_project_id": "274",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Останкино"
+      "project_name": "Останкино",
+      "registry_project_id": "proj-274"
     },
     {
       "unified_id": "UC-OBJ-ADD-255",
@@ -37761,14 +37346,15 @@
       "canonical_no": null,
       "subid": "05",
       "tower_label": "К6",
-      "canonical_project_id": "proj-274",
+      "canonical_project_id": "274",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Останкино"
+      "project_name": "Останкино",
+      "registry_project_id": "proj-274"
     },
     {
       "unified_id": "UC-OBJ-ADD-256",
@@ -37777,7 +37363,7 @@
       "address": "2-ая Звенигородская ул., д. 12",
       "developer": "Vesper",
       "gba": 34067.0,
-      "gla": null,
+      "gla": 25284.0,
       "cls": "A",
       "commission_year": 2023,
       "commission_quarter": 3,
@@ -37786,7 +37372,8 @@
       "longitude": 37.556909,
       "coordinates_status": "unverified",
       "legacy_ids": [
-        "proj-275"
+        "proj-275",
+        "OBJ-0571"
       ],
       "quarter_offer_refs": [
         "202105",
@@ -37819,20 +37406,21 @@
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=office_project, canonical_project_id=proj-275).",
       "confidence": "medium",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: слито с UC-OBJ-0571 (МФК Lucky) — та же сущность под другим написанием либо устаревшая агрегатная строка (единый ID проекта 275); вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-275",
+      "canonical_project_id": "275",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "Квартал Lucky"
+      "project_name": "Квартал Lucky",
+      "registry_project_id": "proj-275"
     },
     {
       "unified_id": "UC-OBJ-ADD-259",
@@ -37869,14 +37457,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "remain-only-0003",
+      "canonical_project_id": "1143",
       "geo_ao": null,
       "geo_raion": null,
       "geo_zone": null,
       "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Sydney City"
+      "project_name": "Sydney City",
+      "registry_project_id": "remain-only-0003"
     },
     {
       "unified_id": "UC-OBJ-ADD-260",
@@ -37913,14 +37502,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "remain-only-0005",
+      "canonical_project_id": "1144",
       "geo_ao": "Южный",
       "geo_raion": "Нагорный",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Офисно-торговый центр Нагатинская"
+      "project_name": "Офисно-торговый центр Нагатинская",
+      "registry_project_id": "remain-only-0005"
     },
     {
       "unified_id": "UC-OBJ-ADD-261",
@@ -37958,14 +37548,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0002",
+      "canonical_project_id": "1145",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Федерация"
+      "project_name": "Федерация",
+      "registry_project_id": "cwhost-0002"
     },
     {
       "unified_id": "UC-OBJ-ADD-262",
@@ -38003,14 +37594,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0003",
+      "canonical_project_id": "1146",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Башня на набережной"
+      "project_name": "Башня на набережной",
+      "registry_project_id": "cwhost-0003"
     },
     {
       "unified_id": "UC-OBJ-ADD-263",
@@ -38048,14 +37640,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0004",
+      "canonical_project_id": "1147",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Никольская"
+      "project_name": "Никольская",
+      "registry_project_id": "cwhost-0004"
     },
     {
       "unified_id": "UC-OBJ-ADD-264",
@@ -38093,14 +37686,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0005",
+      "canonical_project_id": "1148",
       "geo_ao": "Центральный",
       "geo_raion": "Мещанский",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Цветной бульвар"
+      "project_name": "Цветной бульвар",
+      "registry_project_id": "cwhost-0005"
     },
     {
       "unified_id": "UC-OBJ-ADD-265",
@@ -38138,14 +37732,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0006",
+      "canonical_project_id": "1149",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Новослободская"
+      "project_name": "Новослободская",
+      "registry_project_id": "cwhost-0006"
     },
     {
       "unified_id": "UC-OBJ-ADD-266",
@@ -38183,14 +37778,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0007",
+      "canonical_project_id": "1150",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "project_name": "Технопарк"
+      "project_name": "Технопарк",
+      "registry_project_id": "cwhost-0007"
     },
     {
       "unified_id": "UC-OBJ-ADD-267",
@@ -38228,14 +37824,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0008",
+      "canonical_project_id": "1151",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Бригантина"
+      "project_name": "Бригантина",
+      "registry_project_id": "cwhost-0008"
     },
     {
       "unified_id": "UC-OBJ-ADD-268",
@@ -38273,14 +37870,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0009",
+      "canonical_project_id": "1152",
       "geo_ao": "Центральный",
       "geo_raion": "Мещанский",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Кузнецкий Мост"
+      "project_name": "Кузнецкий Мост",
+      "registry_project_id": "cwhost-0009"
     },
     {
       "unified_id": "UC-OBJ-ADD-269",
@@ -38318,14 +37916,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0010",
+      "canonical_project_id": "1153",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Балчуг"
+      "project_name": "Балчуг",
+      "registry_project_id": "cwhost-0010"
     },
     {
       "unified_id": "UC-OBJ-ADD-270",
@@ -38363,14 +37962,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0011",
+      "canonical_project_id": "1154",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Симонов"
+      "project_name": "Симонов",
+      "registry_project_id": "cwhost-0011"
     },
     {
       "unified_id": "UC-OBJ-ADD-271",
@@ -38408,14 +38008,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0012",
+      "canonical_project_id": "1155",
       "geo_ao": "Центральный",
       "geo_raion": "Басманный",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Арма"
+      "project_name": "Арма",
+      "registry_project_id": "cwhost-0012"
     },
     {
       "unified_id": "UC-OBJ-ADD-272",
@@ -38453,14 +38054,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0013",
+      "canonical_project_id": "1156",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Марьина Роща",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": "Савеловский деловой район",
-      "project_name": "Новосущевский"
+      "project_name": "Новосущевский",
+      "registry_project_id": "cwhost-0013"
     },
     {
       "unified_id": "UC-OBJ-ADD-273",
@@ -38498,14 +38100,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0014",
+      "canonical_project_id": "1157",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Риверсайд Тауэрс"
+      "project_name": "Риверсайд Тауэрс",
+      "registry_project_id": "cwhost-0014"
     },
     {
       "unified_id": "UC-OBJ-ADD-274",
@@ -38543,14 +38146,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0015",
+      "canonical_project_id": "1158",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Садовая Плаза"
+      "project_name": "Садовая Плаза",
+      "registry_project_id": "cwhost-0015"
     },
     {
       "unified_id": "UC-OBJ-ADD-275",
@@ -38588,14 +38192,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0016",
+      "canonical_project_id": "1159",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Павелецкая Плаза"
+      "project_name": "Павелецкая Плаза",
+      "registry_project_id": "cwhost-0016"
     },
     {
       "unified_id": "UC-OBJ-ADD-276",
@@ -38633,14 +38238,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0017",
+      "canonical_project_id": "1160",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Павелецкая Плаза"
+      "project_name": "Павелецкая Плаза",
+      "registry_project_id": "cwhost-0017"
     },
     {
       "unified_id": "UC-OBJ-ADD-277",
@@ -38678,14 +38284,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0018",
+      "canonical_project_id": "1161",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Black&White"
+      "project_name": "Black&White",
+      "registry_project_id": "cwhost-0018"
     },
     {
       "unified_id": "UC-OBJ-ADD-278",
@@ -38723,14 +38330,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0019",
+      "canonical_project_id": "1162",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Долгоруковская 21"
+      "project_name": "Долгоруковская 21",
+      "registry_project_id": "cwhost-0019"
     },
     {
       "unified_id": "UC-OBJ-ADD-279",
@@ -38813,14 +38421,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0021",
+      "canonical_project_id": "1163",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Зубовский 17"
+      "project_name": "Зубовский 17",
+      "registry_project_id": "cwhost-0021"
     },
     {
       "unified_id": "UC-OBJ-ADD-281",
@@ -38858,14 +38467,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0022",
+      "canonical_project_id": "1164",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Запад",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Остоженка"
+      "project_name": "Остоженка",
+      "registry_project_id": "cwhost-0022"
     },
     {
       "unified_id": "UC-OBJ-ADD-282",
@@ -38903,14 +38513,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0023",
+      "canonical_project_id": "1165",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Сретенка"
+      "project_name": "Сретенка",
+      "registry_project_id": "cwhost-0023"
     },
     {
       "unified_id": "UC-OBJ-ADD-283",
@@ -38948,14 +38559,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0024",
+      "canonical_project_id": "1166",
       "geo_ao": "Центральный",
       "geo_raion": "Мещанский",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "КМ19"
+      "project_name": "КМ19",
+      "registry_project_id": "cwhost-0024"
     },
     {
       "unified_id": "UC-OBJ-ADD-284",
@@ -38993,14 +38605,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0025",
+      "canonical_project_id": "1167",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Авион"
+      "project_name": "Авион",
+      "registry_project_id": "cwhost-0025"
     },
     {
       "unified_id": "UC-OBJ-ADD-285",
@@ -39038,14 +38651,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0026",
+      "canonical_project_id": "1168",
       "geo_ao": "Западный",
       "geo_raion": "Раменки",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Капитолий Вернадского"
+      "project_name": "Капитолий Вернадского",
+      "registry_project_id": "cwhost-0026"
     },
     {
       "unified_id": "UC-OBJ-ADD-286",
@@ -39083,14 +38697,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0027",
+      "canonical_project_id": "1169",
       "geo_ao": "Центральный",
       "geo_raion": "Арбат",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Запад",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Композиторская"
+      "project_name": "Композиторская",
+      "registry_project_id": "cwhost-0027"
     },
     {
       "unified_id": "UC-OBJ-ADD-287",
@@ -39128,14 +38743,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0028",
+      "canonical_project_id": "1170",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Меркурий"
+      "project_name": "Меркурий",
+      "registry_project_id": "cwhost-0028"
     },
     {
       "unified_id": "UC-OBJ-ADD-288",
@@ -39173,14 +38789,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0029",
+      "canonical_project_id": "1171",
       "geo_ao": "Центральный",
       "geo_raion": "Басманный",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Citydel"
+      "project_name": "Citydel",
+      "registry_project_id": "cwhost-0029"
     },
     {
       "unified_id": "UC-OBJ-ADD-289",
@@ -39218,14 +38835,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0030",
+      "canonical_project_id": "1172",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Workki Комсомольская"
+      "project_name": "Workki Комсомольская",
+      "registry_project_id": "cwhost-0030"
     },
     {
       "unified_id": "UC-OBJ-ADD-290",
@@ -39263,14 +38881,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0031",
+      "canonical_project_id": "1173",
       "geo_ao": "Юго-Западный",
       "geo_raion": "Коньково",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Калужский деловой район",
-      "project_name": "Нео Гео"
+      "project_name": "Нео Гео",
+      "registry_project_id": "cwhost-0031"
     },
     {
       "unified_id": "UC-OBJ-ADD-291",
@@ -39308,14 +38927,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0032",
+      "canonical_project_id": "1174",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "На Тульской"
+      "project_name": "На Тульской",
+      "registry_project_id": "cwhost-0032"
     },
     {
       "unified_id": "UC-OBJ-ADD-292",
@@ -39353,14 +38973,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0033",
+      "canonical_project_id": "1175",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Галерея Актер"
+      "project_name": "Галерея Актер",
+      "registry_project_id": "cwhost-0033"
     },
     {
       "unified_id": "UC-OBJ-ADD-293",
@@ -39398,14 +39019,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0034",
+      "canonical_project_id": "1176",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Милютинский"
+      "project_name": "Милютинский",
+      "registry_project_id": "cwhost-0034"
     },
     {
       "unified_id": "UC-OBJ-ADD-294",
@@ -39443,14 +39065,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0035",
+      "canonical_project_id": "1177",
       "geo_ao": "Южный",
       "geo_raion": "Донской",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Даниловская Мануфактура"
+      "project_name": "Даниловская Мануфактура",
+      "registry_project_id": "cwhost-0035"
     },
     {
       "unified_id": "UC-OBJ-ADD-295",
@@ -39488,14 +39111,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0036",
+      "canonical_project_id": "1178",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Гостиница Москва"
+      "project_name": "Гостиница Москва",
+      "registry_project_id": "cwhost-0036"
     },
     {
       "unified_id": "UC-OBJ-ADD-296",
@@ -39533,14 +39157,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0037",
+      "canonical_project_id": "1179",
       "geo_ao": "Центральный",
       "geo_raion": "Таганский",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Восток",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "SOK Земляной Вал"
+      "project_name": "SOK Земляной Вал",
+      "registry_project_id": "cwhost-0037"
     },
     {
       "unified_id": "UC-OBJ-ADD-297",
@@ -39578,14 +39203,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0038",
+      "canonical_project_id": "1180",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "SOK Сады Пекина"
+      "project_name": "SOK Сады Пекина",
+      "registry_project_id": "cwhost-0038"
     },
     {
       "unified_id": "UC-OBJ-ADD-298",
@@ -39623,14 +39249,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0039",
+      "canonical_project_id": "1181",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Марьина Роща",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Refolio Достоевский"
+      "project_name": "Refolio Достоевский",
+      "registry_project_id": "cwhost-0039"
     },
     {
       "unified_id": "UC-OBJ-ADD-299",
@@ -39668,14 +39295,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0040",
+      "canonical_project_id": "1182",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Deworkacy Савинский"
+      "project_name": "Deworkacy Савинский",
+      "registry_project_id": "cwhost-0040"
     },
     {
       "unified_id": "UC-OBJ-ADD-300",
@@ -39713,14 +39341,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0042",
+      "canonical_project_id": "1183",
       "geo_ao": "Западный",
       "geo_raion": "Филёвский Парк",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Большой Сити",
-      "project_name": "Фили Град"
+      "project_name": "Фили Град",
+      "registry_project_id": "cwhost-0042"
     },
     {
       "unified_id": "UC-OBJ-ADD-301",
@@ -39758,14 +39387,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0043",
+      "canonical_project_id": "1184",
       "geo_ao": "Центральный",
       "geo_raion": "Таганский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "ул. Воронцовская, д. 49/28"
+      "project_name": "ул. Воронцовская, д. 49/28",
+      "registry_project_id": "cwhost-0043"
     },
     {
       "unified_id": "UC-OBJ-ADD-302",
@@ -39803,14 +39433,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0044",
+      "canonical_project_id": "1185",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Парк Горького"
+      "project_name": "Парк Горького",
+      "registry_project_id": "cwhost-0044"
     },
     {
       "unified_id": "UC-OBJ-ADD-303",
@@ -39848,14 +39479,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0045",
+      "canonical_project_id": "1186",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "project_name": "White Stone"
+      "project_name": "White Stone",
+      "registry_project_id": "cwhost-0045"
     },
     {
       "unified_id": "UC-OBJ-ADD-304",
@@ -39893,14 +39525,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0046",
+      "canonical_project_id": "1187",
       "geo_ao": "Центральный",
       "geo_raion": "Мещанский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Проспект Мира, 40"
+      "project_name": "Проспект Мира, 40",
+      "registry_project_id": "cwhost-0046"
     },
     {
       "unified_id": "UC-OBJ-ADD-305",
@@ -39938,14 +39571,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0047",
+      "canonical_project_id": "1188",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Signature Столешников, 11"
+      "project_name": "Signature Столешников, 11",
+      "registry_project_id": "cwhost-0047"
     },
     {
       "unified_id": "UC-OBJ-ADD-306",
@@ -39983,14 +39617,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0048",
+      "canonical_project_id": "1189",
       "geo_ao": "Центральный",
       "geo_raion": "Басманный",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "на Басманной"
+      "project_name": "на Басманной",
+      "registry_project_id": "cwhost-0048"
     },
     {
       "unified_id": "UC-OBJ-ADD-307",
@@ -40028,14 +39663,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0049",
+      "canonical_project_id": "1190",
       "geo_ao": "Центральный",
       "geo_raion": "Таганский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Фабрика Станиславского"
+      "project_name": "Фабрика Станиславского",
+      "registry_project_id": "cwhost-0049"
     },
     {
       "unified_id": "UC-OBJ-ADD-308",
@@ -40073,14 +39709,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0050",
+      "canonical_project_id": "1191",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Большая Якиманка 26"
+      "project_name": "Большая Якиманка 26",
+      "registry_project_id": "cwhost-0050"
     },
     {
       "unified_id": "UC-OBJ-ADD-309",
@@ -40118,14 +39755,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0051",
+      "canonical_project_id": "1192",
       "geo_ao": "Западный",
       "geo_raion": "Дорогомилово",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": "Кутузовский деловой район",
-      "project_name": "Poklonka Place"
+      "project_name": "Poklonka Place",
+      "registry_project_id": "cwhost-0051"
     },
     {
       "unified_id": "UC-OBJ-ADD-310",
@@ -40163,14 +39801,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0052",
+      "canonical_project_id": "1193",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Ролл Холл"
+      "project_name": "Ролл Холл",
+      "registry_project_id": "cwhost-0052"
     },
     {
       "unified_id": "UC-OBJ-ADD-311",
@@ -40208,14 +39847,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0053",
+      "canonical_project_id": "1194",
       "geo_ao": "Северный",
       "geo_raion": "Беговой",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Большой Сити",
-      "project_name": "Аркус 3"
+      "project_name": "Аркус 3",
+      "registry_project_id": "cwhost-0053"
     },
     {
       "unified_id": "UC-OBJ-ADD-312",
@@ -40253,14 +39893,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0054",
+      "canonical_project_id": "1195",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "ФОК"
+      "project_name": "ФОК",
+      "registry_project_id": "cwhost-0054"
     },
     {
       "unified_id": "UC-OBJ-ADD-313",
@@ -40298,14 +39939,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0055",
+      "canonical_project_id": "1196",
       "geo_ao": "Северный",
       "geo_raion": "Аэропорт",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "project_name": "ВТБ Арена стр 8"
+      "project_name": "ВТБ Арена стр 8",
+      "registry_project_id": "cwhost-0055"
     },
     {
       "unified_id": "UC-OBJ-ADD-314",
@@ -40343,14 +39985,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0056",
+      "canonical_project_id": "1197",
       "geo_ao": "Южный",
       "geo_raion": "Даниловский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": "Южный порт",
-      "project_name": "SOK Рыбаков Тауэр"
+      "project_name": "SOK Рыбаков Тауэр",
+      "registry_project_id": "cwhost-0056"
     },
     {
       "unified_id": "UC-OBJ-ADD-315",
@@ -40388,14 +40031,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0057",
+      "canonical_project_id": "1198",
       "geo_ao": "Северный",
       "geo_raion": "Аэропорт",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "project_name": "SOK Арена Парк"
+      "project_name": "SOK Арена Парк",
+      "registry_project_id": "cwhost-0057"
     },
     {
       "unified_id": "UC-OBJ-ADD-316",
@@ -40433,14 +40077,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0058",
+      "canonical_project_id": "1199",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Вивальди"
+      "project_name": "Вивальди",
+      "registry_project_id": "cwhost-0058"
     },
     {
       "unified_id": "UC-OBJ-ADD-317",
@@ -40478,14 +40123,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0059",
+      "canonical_project_id": "1200",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Дубинин Скай"
+      "project_name": "Дубинин Скай",
+      "registry_project_id": "cwhost-0059"
     },
     {
       "unified_id": "UC-OBJ-ADD-318",
@@ -40523,14 +40169,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0060",
+      "canonical_project_id": "1201",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Газетный 17"
+      "project_name": "Газетный 17",
+      "registry_project_id": "cwhost-0060"
     },
     {
       "unified_id": "UC-OBJ-ADD-319",
@@ -40568,14 +40215,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-0061",
+      "canonical_project_id": "1202",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Кадашевская наб., 6"
+      "project_name": "Кадашевская наб., 6",
+      "registry_project_id": "cwhost-0061"
     },
     {
       "unified_id": "UC-OBJ-ADD-320",
@@ -40613,14 +40261,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-699587ab73",
+      "canonical_project_id": "1203",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "1-й Щемиловский 16с2"
+      "project_name": "1-й Щемиловский 16с2",
+      "registry_project_id": "cwhost-hist-699587ab73"
     },
     {
       "unified_id": "UC-OBJ-ADD-321",
@@ -40658,14 +40307,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-695ac9fe05",
+      "canonical_project_id": "1204",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "1 шипковский пер. 5"
+      "project_name": "1 шипковский пер. 5",
+      "registry_project_id": "cwhost-hist-695ac9fe05"
     },
     {
       "unified_id": "UC-OBJ-ADD-322",
@@ -40748,14 +40398,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-60619d9fa4",
+      "canonical_project_id": "1205",
       "geo_ao": "Северный",
       "geo_raion": "Аэропорт",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": null,
-      "project_name": "SOK Арена Парк 2"
+      "project_name": "SOK Арена Парк 2",
+      "registry_project_id": "cwhost-hist-60619d9fa4"
     },
     {
       "unified_id": "UC-OBJ-ADD-324",
@@ -40838,14 +40489,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-f0518c325b",
+      "canonical_project_id": "1206",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "SOK Сити"
+      "project_name": "SOK Сити",
+      "registry_project_id": "cwhost-hist-f0518c325b"
     },
     {
       "unified_id": "UC-OBJ-ADD-326",
@@ -40928,14 +40580,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-1dbea5db6a",
+      "canonical_project_id": "1207",
       "geo_ao": "Центральный",
       "geo_raion": "Арбат",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Запад",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Арбат"
+      "project_name": "Арбат",
+      "registry_project_id": "cwhost-hist-1dbea5db6a"
     },
     {
       "unified_id": "UC-OBJ-ADD-328",
@@ -41018,14 +40671,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-fc48060d3b",
+      "canonical_project_id": "1208",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
-      "project_name": "Белая Площадь площадка закрыта"
+      "project_name": "Белая Площадь площадка закрыта",
+      "registry_project_id": "cwhost-hist-fc48060d3b"
     },
     {
       "unified_id": "UC-OBJ-ADD-330",
@@ -41063,14 +40717,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-8a9770370d",
+      "canonical_project_id": "1209",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "БЦ Известия"
+      "project_name": "БЦ Известия",
+      "registry_project_id": "cwhost-hist-8a9770370d"
     },
     {
       "unified_id": "UC-OBJ-ADD-331",
@@ -41108,14 +40763,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-14b3f61ae5",
+      "canonical_project_id": "1210",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
-      "project_name": "Вивальди Плаза"
+      "project_name": "Вивальди Плаза",
+      "registry_project_id": "cwhost-hist-14b3f61ae5"
     },
     {
       "unified_id": "UC-OBJ-ADD-332",
@@ -41153,14 +40809,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-fc98f0ea7d",
+      "canonical_project_id": "1211",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
       "geo_zone": "Центральное ядро (БК)",
       "geo_submarket": "БК",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Газетный"
+      "project_name": "Газетный",
+      "registry_project_id": "cwhost-hist-fc98f0ea7d"
     },
     {
       "unified_id": "UC-OBJ-ADD-333",
@@ -41243,14 +40900,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-c256850d91",
+      "canonical_project_id": "1212",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Домников"
+      "project_name": "Домников",
+      "registry_project_id": "cwhost-hist-c256850d91"
     },
     {
       "unified_id": "UC-OBJ-ADD-335",
@@ -41288,14 +40946,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-2e3715b7ba",
+      "canonical_project_id": "1213",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Заречная 2/1"
+      "project_name": "Заречная 2/1",
+      "registry_project_id": "cwhost-hist-2e3715b7ba"
     },
     {
       "unified_id": "UC-OBJ-ADD-336",
@@ -41333,14 +40992,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-794e6c15c3",
+      "canonical_project_id": "1214",
       "geo_ao": "Западный",
       "geo_raion": "Очаково-Матвеевское",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Квартал Вэст"
+      "project_name": "Квартал Вэст",
+      "registry_project_id": "cwhost-hist-794e6c15c3"
     },
     {
       "unified_id": "UC-OBJ-ADD-337",
@@ -41378,14 +41038,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-ee79f38adb",
+      "canonical_project_id": "1215",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Красная Роза"
+      "project_name": "Красная Роза",
+      "registry_project_id": "cwhost-hist-ee79f38adb"
     },
     {
       "unified_id": "UC-OBJ-ADD-338",
@@ -41468,14 +41129,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-bc5e1e5c71",
+      "canonical_project_id": "1216",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Овчинниковский"
+      "project_name": "Овчинниковский",
+      "registry_project_id": "cwhost-hist-bc5e1e5c71"
     },
     {
       "unified_id": "UC-OBJ-ADD-340",
@@ -41513,14 +41175,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-82914143c2",
+      "canonical_project_id": "1217",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Онегин"
+      "project_name": "Онегин",
+      "registry_project_id": "cwhost-hist-82914143c2"
     },
     {
       "unified_id": "UC-OBJ-ADD-341",
@@ -41558,14 +41221,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-61c412c32d",
+      "canonical_project_id": "1218",
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Бутырский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Останкино"
+      "project_name": "Останкино",
+      "registry_project_id": "cwhost-hist-61c412c32d"
     },
     {
       "unified_id": "UC-OBJ-ADD-342",
@@ -41603,14 +41267,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-e3bfd3f027",
+      "canonical_project_id": "1219",
       "geo_ao": "Центральный",
       "geo_raion": "Якиманка",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Юг",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Полянка"
+      "project_name": "Полянка",
+      "registry_project_id": "cwhost-hist-e3bfd3f027"
     },
     {
       "unified_id": "UC-OBJ-ADD-343",
@@ -41648,14 +41313,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-d2e87a98a7",
+      "canonical_project_id": "1220",
       "geo_ao": "Центральный",
       "geo_raion": "Пресненский",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "Москва-Сити",
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
-      "project_name": "Порта"
+      "project_name": "Порта",
+      "registry_project_id": "cwhost-hist-d2e87a98a7"
     },
     {
       "unified_id": "UC-OBJ-ADD-344",
@@ -41738,14 +41404,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-97886a34a7",
+      "canonical_project_id": "1221",
       "geo_ao": "Юго-Восточный",
       "geo_raion": "Кузьминки",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Восток",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "РТС Волгоградский"
+      "project_name": "РТС Волгоградский",
+      "registry_project_id": "cwhost-hist-97886a34a7"
     },
     {
       "unified_id": "UC-OBJ-ADD-346",
@@ -41783,14 +41450,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-3ce001a7ad",
+      "canonical_project_id": "1222",
       "geo_ao": "Южный",
       "geo_raion": "Нагатино-Садовники",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Сириус Парк"
+      "project_name": "Сириус Парк",
+      "registry_project_id": "cwhost-hist-3ce001a7ad"
     },
     {
       "unified_id": "UC-OBJ-ADD-347",
@@ -41828,14 +41496,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-8188d16e28",
+      "canonical_project_id": "1223",
       "geo_ao": "Центральный",
       "geo_raion": "Хамовники",
       "geo_zone": "СК-ТТК",
       "geo_submarket": "ТТК Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Смоленский Пассаж 1"
+      "project_name": "Смоленский Пассаж 1",
+      "registry_project_id": "cwhost-hist-8188d16e28"
     },
     {
       "unified_id": "UC-OBJ-ADD-348",
@@ -41873,14 +41542,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-f256e86d8c",
+      "canonical_project_id": "1224",
       "geo_ao": "Центральный",
       "geo_raion": "Красносельский",
       "geo_zone": "БК-СК",
       "geo_submarket": "СК Север",
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
-      "project_name": "Сретенский б-р, 5"
+      "project_name": "Сретенский б-р, 5",
+      "registry_project_id": "cwhost-hist-f256e86d8c"
     },
     {
       "unified_id": "UC-OBJ-ADD-349",
@@ -41918,14 +41588,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "cwhost-hist-1c2bfead46",
+      "canonical_project_id": "1225",
       "geo_ao": "Юго-Западный",
       "geo_raion": "Обручевский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юго-Запад",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "ТЦ РИО на Ленинском"
+      "project_name": "ТЦ РИО на Ленинском",
+      "registry_project_id": "cwhost-hist-1c2bfead46"
     },
     {
       "unified_id": "UC-OBJ-ADD-350",
@@ -41963,14 +41634,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "260",
+      "canonical_project_id": "1226",
       "geo_ao": "Северный",
       "geo_raion": "Хорошёвский",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Северо-Запад",
       "geo_bizFormed": "Ленинградский",
       "geo_bizForming": "Ходынка",
-      "project_name": "Ходынка"
+      "project_name": "Ходынка",
+      "registry_project_id": "260"
     },
     {
       "unified_id": "UC-OBJ-ADD-352",
@@ -42010,14 +41682,15 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-add-split-20260917",
+      "canonical_project_id": "1227",
       "geo_ao": "Южный",
       "geo_raion": "Москворечье-Сабурово",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Юг",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Сплит"
+      "project_name": "Сплит",
+      "registry_project_id": "proj-add-split-20260917"
     },
     {
       "unified_id": "UC-OBJ-ADD-353",
@@ -42059,7 +41732,7 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-add-prime-life-varshavskaya-20260917",
+      "canonical_project_id": "1228",
       "geo_ao": "Южный",
       "geo_raion": "Нагорный",
       "geo_zone": "ТТК-МКАД",
@@ -42069,7 +41742,8 @@
       "project_name": "Прайм Лайф Варшавская",
       "aliases": [
         "ЭОН"
-      ]
+      ],
+      "registry_project_id": "proj-add-prime-life-varshavskaya-20260917"
     },
     {
       "unified_id": "UC-OBJ-ADD-354",
@@ -42110,14 +41784,62 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "proj-add-krekshino-20260917",
+      "canonical_project_id": "1229",
       "geo_ao": "Новомосковский",
       "geo_raion": "Марушкинское",
       "geo_zone": "за МКАД",
       "geo_submarket": "Новая Москва",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "МФК Крёкшино"
+      "project_name": "МФК Крёкшино",
+      "registry_project_id": "proj-add-krekshino-20260917"
+    },
+    {
+      "unified_id": "UC-OBJ-ADD-355",
+      "source_id": "buildings_202606-237",
+      "canonical_project_id": "237",
+      "subid": "01",
+      "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
+      "project_name": "Октябрьское поле",
+      "aliases": [
+        "Общественно-деловой центр «Октябрьское поле»"
+      ],
+      "address": "Берзарина ул., вл. 32/4",
+      "developer": "РГ-Девелопмент",
+      "gba": 11894,
+      "gla": 7315,
+      "cls": "A",
+      "commission_year": 2024,
+      "commission_quarter": null,
+      "status": "Введён",
+      "latitude": 55.789725,
+      "longitude": 37.471039,
+      "coordinates_status": "from_quarterly_buildings",
+      "legacy_ids": [],
+      "quarter_offer_refs": [
+        "202606"
+      ],
+      "market_channel": [
+        "sale"
+      ],
+      "layer_status": null,
+      "layer_offer_status": null,
+      "layer_source": "buildings_202606",
+      "layer_source_date": "2026-06-30",
+      "layer_qa_notes": null,
+      "source_links": [],
+      "verification_status": "Запись создана из квартального файла продаж (data/buildings_202606.json): в кодификаторе отсутствовала, хотя присутствует в таблице «Продажа офисов». Независимая веб-проверка не проводилась.",
+      "confidence": "Средний",
+      "entity_type": "office_project_candidate",
+      "needs_review": true,
+      "review_reason": "added_from_quarterly_buildings",
+      "classification_note": "2026-09-19: добавлено для синхронизации кодификатора с таблицей «Продажа офисов» (тот же ID проекта 237). Площади, класс, девелопер и год ввода взяты из квартального файла.",
+      "geo_ao": "Северо-Западный",
+      "geo_raion": "Щукино",
+      "geo_zone": "ТТК-МКАД",
+      "geo_submarket": "ТТК-МКАД Запад",
+      "geo_bizFormed": "",
+      "geo_bizForming": ""
     }
   ]
 }

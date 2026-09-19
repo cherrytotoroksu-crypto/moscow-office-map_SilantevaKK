@@ -24,14 +24,6 @@
     "coord_corroborated": true
   },
   {
-    "unified_id": "UC-OBJ-0654",
-    "canonical_no": 4,
-    "name": "STONE Савёловская (Башня 1 и Башня 2)",
-    "address": "ул. Двинцев, вл. 3",
-    "status": "new_record",
-    "reason": "no registry row with matching name or nearby coordinates"
-  },
-  {
     "unified_id": "UC-OBJ-0046",
     "canonical_no": 5,
     "name": "Taller",
@@ -67,14 +59,6 @@
       "proj-216"
     ],
     "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
-    "unified_id": "UC-OBJ-0571",
-    "canonical_no": 9,
-    "name": "МФК Lucky",
-    "address": "2-ая Звенигородская ул., д. 12",
-    "status": "new_record",
-    "reason": "no registry row with matching name or nearby coordinates"
   },
   {
     "unified_id": "UC-OBJ-0061",
@@ -248,29 +232,6 @@
     "coord_corroborated": false
   },
   {
-    "unified_id": "UC-OBJ-0114",
-    "canonical_no": 27,
-    "name": "Stone Калужская",
-    "address": "Старокалужское шоссе, 64",
-    "status": "probable_match",
-    "candidate_project_id": "proj-180",
-    "mismatch": [
-      "address"
-    ],
-    "coord_corroborated": false
-  },
-  {
-    "unified_id": "UC-OBJ-0115",
-    "canonical_no": 28,
-    "name": "STONE Ходынка 2",
-    "address": "Москва, Ходынский бульвар, 20а/2",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-197"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
-  },
-  {
     "unified_id": "UC-OBJ-0126",
     "canonical_no": 29,
     "name": "Stone Ходынка 3",
@@ -312,17 +273,6 @@
     "matched_project_id": "proj-96",
     "match_basis": "name+address",
     "coord_corroborated": true
-  },
-  {
-    "unified_id": "UC-OBJ-0727",
-    "canonical_no": 33,
-    "name": "Башня Рябов (Рябовская Мануфактура)",
-    "address": "Холодильный пер., 3к1с1",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-96"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
   },
   {
     "unified_id": "UC-OBJ-0053",
@@ -393,18 +343,6 @@
     "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
   },
   {
-    "unified_id": "UC-OBJ-0373",
-    "canonical_no": 43,
-    "name": "Air",
-    "address": "Ходынское поле",
-    "status": "probable_match",
-    "candidate_project_id": "proj-112",
-    "mismatch": [
-      "address"
-    ],
-    "coord_corroborated": true
-  },
-  {
     "unified_id": "UC-OBJ-0196",
     "canonical_no": 44,
     "name": "Fili residence",
@@ -449,18 +387,6 @@
       "address"
     ],
     "coord_corroborated": true
-  },
-  {
-    "unified_id": "UC-OBJ-0218",
-    "canonical_no": 48,
-    "name": "Stone Мневники 2",
-    "address": "ул. Нижние Мнёвники , з/у 39",
-    "status": "conflict",
-    "candidate_project_ids": [
-      "proj-188",
-      "proj-189"
-    ],
-    "reason": "no name match, but coordinates are within ~110m of registry row(s) - needs human review"
   },
   {
     "unified_id": "UC-OBJ-0116",
@@ -792,14 +718,6 @@
       "address"
     ],
     "coord_corroborated": true
-  },
-  {
-    "unified_id": "UC-OBJ-0219",
-    "canonical_no": 81,
-    "name": "Stone Мневники 3",
-    "address": "ул. Нижние Мнёвники, зу 192",
-    "status": "new_record",
-    "reason": "no registry row with matching name or nearby coordinates"
   },
   {
     "unified_id": "UC-OBJ-0370",
@@ -1162,14 +1080,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0475",
-    "canonical_no": 132,
-    "name": "AFI Tagilskaya",
-    "address": "Тагильская улица, вл.4",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0101",
     "canonical_no": 133,
     "name": "AFI Галерея",
@@ -1222,14 +1132,6 @@
     "canonical_no": 139,
     "name": "Capital Towers (Park Tower)",
     "address": "Краснопресненская наб., 14Ак2",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0190",
-    "canonical_no": 140,
-    "name": "Chalet",
-    "address": "Пятницкая улица, 40с1",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -1326,14 +1228,6 @@
     "canonical_no": 157,
     "name": "GRANARD Белорусская",
     "address": "1-я ул. Ямского Поля, вл. 30",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
-    "unified_id": "UC-OBJ-0655",
-    "canonical_no": 158,
-    "name": "iCITY (Башня Space)",
-    "address": "Шмитовский пр-д, 37",
     "status": "excluded_from_quarterly_layer",
     "reason": "no active quarterly market_channel"
   },
@@ -8017,6 +7911,16 @@
     "status": "new_record",
     "matched_project_id": null,
     "match_basis": "manual web verification (user-requested classifier addition, 2026-09-17)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-355",
+    "canonical_no": null,
+    "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
+    "address": "Берзарина ул., вл. 32/4",
+    "status": "new_record",
+    "matched_project_id": null,
+    "match_basis": "created from data/buildings_202606.json (2026-09-19)",
     "coord_corroborated": false
   }
 ]
