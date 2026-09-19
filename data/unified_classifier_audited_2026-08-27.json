@@ -1388,7 +1388,10 @@
       "geo_submarket": "ТТК-МКАД Север",
       "geo_bizFormed": null,
       "geo_bizForming": null,
-      "project_name": "Twist"
+      "project_name": "Twist",
+      "aliases": [
+        "БЦ Twist"
+      ]
     },
     {
       "unified_id": "UC-OBJ-0050",
@@ -1504,7 +1507,10 @@
       "geo_bizForming": null,
       "canonical_project_id": "90",
       "subid": "01",
-      "project_name": "БЦ Рябовская Мануфактура"
+      "project_name": "БЦ Рябовская Мануфактура",
+      "aliases": [
+        "Башня Власов"
+      ]
     },
     {
       "unified_id": "UC-OBJ-0053",

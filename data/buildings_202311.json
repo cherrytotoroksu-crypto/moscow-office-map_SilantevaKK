@@ -21,7 +21,10 @@
     "start": "",
     "weight": 19510047400.7,
     "id": 129,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "129",
+    "subid": "02",
+    "tower_label": "Space"
   },
   {
     "name": "Эйлер",
@@ -45,7 +48,9 @@
     "start": "",
     "weight": 1048479370.8230978,
     "id": 250,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "250",
+    "subid": "01"
   },
   {
     "name": "Lunar",
@@ -69,7 +74,9 @@
     "start": "",
     "weight": 1185043350.0,
     "id": 14,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "745",
+    "subid": "01"
   },
   {
     "name": "Taller",
@@ -93,7 +100,9 @@
     "start": "",
     "weight": 3910649519.085801,
     "id": 201,
-    "unified_id": "UC-OBJ-0046"
+    "unified_id": "UC-OBJ-0046",
+    "canonical_project_id": "201",
+    "subid": "01"
   },
   {
     "name": "STONE Ленинский",
@@ -141,7 +150,9 @@
     "start": "",
     "weight": 13293690000.0,
     "id": 196,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "196",
+    "subid": "01"
   },
   {
     "name": "Opus",
@@ -165,7 +176,9 @@
     "start": "",
     "weight": 1192565375.7,
     "id": 165,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "165",
+    "subid": "01"
   },
   {
     "name": "STONE Towers",
@@ -213,7 +226,9 @@
     "start": "",
     "weight": 756743287.9599999,
     "id": 170,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "170",
+    "subid": "01"
   },
   {
     "name": "Ahead",
@@ -237,7 +252,9 @@
     "start": "",
     "weight": 3790335000.0,
     "id": 109,
-    "unified_id": "UC-OBJ-0061"
+    "unified_id": "UC-OBJ-0061",
+    "canonical_project_id": "109",
+    "subid": "01"
   },
   {
     "name": "Парк Легенд класс А",
@@ -261,7 +278,9 @@
     "start": "",
     "weight": 7707700000.0,
     "id": 102,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "1141",
+    "subid": "01"
   },
   {
     "name": "STONE Савеловская",
@@ -285,7 +304,8 @@
     "start": "",
     "weight": 15626251600.000002,
     "id": 194,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "194"
   },
   {
     "name": "Берников",
@@ -309,7 +329,9 @@
     "start": "",
     "weight": 5500000000.0,
     "id": 19,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "75",
+    "subid": "01"
   },
   {
     "name": "STONE Курская",
@@ -333,7 +355,9 @@
     "start": "",
     "weight": 5304000000.0,
     "id": 181,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "181",
+    "subid": "01"
   },
   {
     "name": "STONE Дмитровская",
@@ -357,7 +381,9 @@
     "start": "",
     "weight": 7697848000.0,
     "id": 177,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "177",
+    "subid": "01"
   },
   {
     "name": "Рублево Бизнес-Парк",
@@ -381,7 +407,8 @@
     "start": "",
     "weight": 5799747350.630001,
     "id": 244,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "244"
   },
   {
     "name": "Парк Легенд класс В+",
@@ -405,7 +432,9 @@
     "start": "",
     "weight": 6625000000.0,
     "id": 103,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "1142",
+    "subid": "01"
   },
   {
     "name": "БЦ Серебряный Фонтан",
@@ -429,7 +458,9 @@
     "start": "",
     "weight": 5200005719.999999,
     "id": 20,
-    "unified_id": "UC-OBJ-0058"
+    "unified_id": "UC-OBJ-0058",
+    "canonical_project_id": "58",
+    "subid": "01"
   },
   {
     "name": "Останкино",
@@ -477,7 +508,9 @@
     "start": "",
     "weight": 969586596.1,
     "id": 216,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "216",
+    "subid": "01"
   },
   {
     "name": "Квартал Lucky",
@@ -501,7 +534,9 @@
     "start": "",
     "weight": 0.0,
     "id": 275,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "275",
+    "subid": "01"
   },
   {
     "name": "Fly Tower",
@@ -525,7 +560,9 @@
     "start": "",
     "weight": 0.0,
     "id": 13,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "697",
+    "subid": "01"
   },
   {
     "name": "Plaza Technopark",
@@ -549,7 +586,9 @@
     "start": "",
     "weight": 0.0,
     "id": 85,
-    "unified_id": "UC-OBJ-ADD-006"
+    "unified_id": "UC-OBJ-ADD-006",
+    "canonical_project_id": "1069",
+    "subid": "01"
   },
   {
     "name": "Алкон 3",
@@ -573,7 +612,9 @@
     "start": "",
     "weight": 0.0,
     "id": 95,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "12",
+    "subid": "01"
   },
   {
     "name": "Прайм Тайм",
@@ -597,7 +638,9 @@
     "start": "",
     "weight": 0.0,
     "id": 104,
-    "unified_id": "UC-OBJ-ADD-002"
+    "unified_id": "UC-OBJ-ADD-002",
+    "canonical_project_id": "1067",
+    "subid": "01"
   },
   {
     "name": "Orbital",
@@ -621,6 +664,8 @@
     "start": "",
     "weight": 0.0,
     "id": 101,
-    "unified_id": "UC-OBJ-0004"
+    "unified_id": "UC-OBJ-0004",
+    "canonical_project_id": "4",
+    "subid": "01"
   }
 ]

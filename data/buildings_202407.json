@@ -21,7 +21,9 @@
     "start": "",
     "weight": 0,
     "id": 109,
-    "unified_id": "UC-OBJ-0061"
+    "unified_id": "UC-OBJ-0061",
+    "canonical_project_id": "109",
+    "subid": "01"
   },
   {
     "name": "Обсидиан (бывший — BusinessClass Ходынка)",
@@ -45,7 +47,10 @@
     "start": "",
     "weight": 0,
     "id": 100,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "1140",
+    "subid": "01",
+    "tower_label": "бывший — BusinessClass Ходынка"
   },
   {
     "name": "Fili Centre",
@@ -69,7 +74,9 @@
     "start": "",
     "weight": 0,
     "id": 122,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "122",
+    "subid": "01"
   },
   {
     "name": "Geolog 2",
@@ -93,7 +100,9 @@
     "start": "",
     "weight": 0,
     "id": 128,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "128",
+    "subid": "01"
   },
   {
     "name": "iCITY (Space)",
@@ -117,7 +126,10 @@
     "start": "",
     "weight": 0,
     "id": 129,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "129",
+    "subid": "02",
+    "tower_label": "Space"
   },
   {
     "name": "Lakes",
@@ -141,7 +153,9 @@
     "start": "",
     "weight": 0,
     "id": 77,
-    "unified_id": "UC-OBJ-0054"
+    "unified_id": "UC-OBJ-0054",
+    "canonical_project_id": "54",
+    "subid": "01"
   },
   {
     "name": "Level Воронцовская",
@@ -165,7 +179,9 @@
     "start": "",
     "weight": 0,
     "id": 144,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "144",
+    "subid": "01"
   },
   {
     "name": "Lunar модуль В",
@@ -189,7 +205,9 @@
     "start": "",
     "weight": 0,
     "id": 80,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "745",
+    "subid": "01"
   },
   {
     "name": "Nevsky Plaza",
@@ -213,7 +231,9 @@
     "start": "",
     "weight": 0,
     "id": 155,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "155",
+    "subid": "01"
   },
   {
     "name": "Солид (бывший — Nice Tower)",
@@ -237,7 +257,9 @@
     "start": "",
     "weight": 0,
     "id": 158,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "158",
+    "subid": "01"
   },
   {
     "name": "Opus",
@@ -261,7 +283,9 @@
     "start": "",
     "weight": 0,
     "id": 165,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "165",
+    "subid": "01"
   },
   {
     "name": "Plaza Botanica",
@@ -285,7 +309,9 @@
     "start": "",
     "weight": 0,
     "id": 170,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "170",
+    "subid": "01"
   },
   {
     "name": "Porta Forma",
@@ -309,7 +335,9 @@
     "start": "",
     "weight": 0,
     "id": 86,
-    "unified_id": "UC-OBJ-ADD-007"
+    "unified_id": "UC-OBJ-ADD-007",
+    "canonical_project_id": "285",
+    "subid": "01"
   },
   {
     "name": "QOOB",
@@ -357,7 +385,8 @@
     "start": "",
     "weight": 0,
     "id": 194,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "194"
   },
   {
     "name": "STONE Towers",
@@ -405,7 +434,9 @@
     "start": "",
     "weight": 0,
     "id": 177,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "177",
+    "subid": "01"
   },
   {
     "name": "STONE Курская",
@@ -429,7 +460,9 @@
     "start": "",
     "weight": 0,
     "id": 181,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "181",
+    "subid": "01"
   },
   {
     "name": "STONE Ленинский",
@@ -477,7 +510,9 @@
     "start": "",
     "weight": 0,
     "id": 196,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "196",
+    "subid": "01"
   },
   {
     "name": "STONE Ходынка II",
@@ -501,7 +536,9 @@
     "start": "",
     "weight": 0,
     "id": 197,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "197",
+    "subid": "01"
   },
   {
     "name": "Taller",
@@ -525,7 +562,9 @@
     "start": "",
     "weight": 0,
     "id": 201,
-    "unified_id": "UC-OBJ-0046"
+    "unified_id": "UC-OBJ-0046",
+    "canonical_project_id": "201",
+    "subid": "01"
   },
   {
     "name": "Upside Кунцево",
@@ -549,7 +588,9 @@
     "start": "",
     "weight": 0,
     "id": 138,
-    "unified_id": "UC-OBJ-0050"
+    "unified_id": "UC-OBJ-0050",
+    "canonical_project_id": "138",
+    "subid": "01"
   },
   {
     "name": "Frame",
@@ -573,7 +614,9 @@
     "start": "",
     "weight": 0,
     "id": 126,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "126",
+    "subid": "01"
   },
   {
     "name": "А101 Прокшино",
@@ -597,7 +640,9 @@
     "start": "",
     "weight": 0,
     "id": 216,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "216",
+    "subid": "01"
   },
   {
     "name": "Берников",
@@ -621,7 +666,9 @@
     "start": "",
     "weight": 0,
     "id": 19,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "75",
+    "subid": "01"
   },
   {
     "name": "Twist",
@@ -645,7 +692,9 @@
     "start": "",
     "weight": 0,
     "id": 205,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "205",
+    "subid": "01"
   },
   {
     "name": "БЦ Серебряный Фонтан",
@@ -669,7 +718,9 @@
     "start": "",
     "weight": 0,
     "id": 20,
-    "unified_id": "UC-OBJ-0058"
+    "unified_id": "UC-OBJ-0058",
+    "canonical_project_id": "58",
+    "subid": "01"
   },
   {
     "name": "БЦ Сколково",
@@ -693,7 +744,9 @@
     "start": "",
     "weight": 0,
     "id": 22,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "1137",
+    "subid": "01"
   },
   {
     "name": "Деловой дуэт",
@@ -717,7 +770,9 @@
     "start": "",
     "weight": 0,
     "id": 277,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "277",
+    "subid": "01"
   },
   {
     "name": "На Берзарина",
@@ -741,7 +796,9 @@
     "start": "",
     "weight": 0,
     "id": 57,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "315",
+    "subid": "01"
   },
   {
     "name": "Останкино",
@@ -789,7 +846,8 @@
     "start": "",
     "weight": 0,
     "id": 244,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "244"
   },
   {
     "name": "Эйлер",
@@ -813,7 +871,9 @@
     "start": "",
     "weight": 0,
     "id": 250,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "250",
+    "subid": "01"
   },
   {
     "name": "STONE Калужская",
@@ -837,7 +897,8 @@
     "start": "",
     "weight": 0,
     "id": 180,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "180"
   },
   {
     "name": "Башня Власов",
@@ -861,7 +922,9 @@
     "start": "",
     "weight": 0,
     "id": 96,
-    "unified_id": "UC-OBJ-0090"
+    "unified_id": "UC-OBJ-0090",
+    "canonical_project_id": "90",
+    "subid": "01"
   },
   {
     "name": "Башня Рябов",
