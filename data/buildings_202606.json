@@ -2864,12 +2864,12 @@
     "name_orig": "Плэйн (бывший — Workplace Авиационная)",
     "lat": 55.810719,
     "lng": 37.476501,
-    "volume": 0,
-    "price": 0,
+    "volume": 15984.0,
+    "price": 299764,
     "cls": "A",
     "status": "Строится",
-    "on_sale": "нет",
-    "lots": 0,
+    "on_sale": "да",
+    "lots": 1,
     "gba": 15984,
     "gla": 13908,
     "zone": "ТТК-МКАД",
@@ -2883,8 +2883,7 @@
     "unified_id": "UC-OBJ-ADD-005",
     "canonical_project_id": "273",
     "subid": "01",
-    "tower_label": "",
-    "volume_note": "по своду Q2 (29.07) не в продаже / лоты не учитываются"
+    "tower_label": ""
   },
   {
     "name": "Останкино (К1)",
@@ -3081,12 +3080,12 @@
     "name_orig": "Деловой дуэт",
     "lat": 55.788479,
     "lng": 37.666701,
-    "volume": 0,
-    "price": 0,
+    "volume": 28750.0,
+    "price": 260000,
     "cls": "B+",
     "status": "Построен",
-    "on_sale": "нет",
-    "lots": 0,
+    "on_sale": "да",
+    "lots": 2,
     "gba": 28750,
     "gla": 23671,
     "zone": "СК-ТТК",
@@ -3100,8 +3099,7 @@
     "unified_id": null,
     "canonical_project_id": "277",
     "subid": "01",
-    "tower_label": "",
-    "volume_note": "по своду Q2 (29.07) не в продаже / лоты не учитываются"
+    "tower_label": ""
   },
   {
     "name": "Бизнес-хаб Потапово",
