@@ -75,7 +75,7 @@
     "weight": 1185043350.0,
     "id": 14,
     "unified_id": null,
-    "canonical_project_id": "745",
+    "canonical_project_id": "594",
     "subid": "01"
   },
   {
@@ -279,7 +279,7 @@
     "weight": 7707700000.0,
     "id": 102,
     "unified_id": null,
-    "canonical_project_id": "1141",
+    "canonical_project_id": "767",
     "subid": "01"
   },
   {
@@ -330,7 +330,7 @@
     "weight": 5500000000.0,
     "id": 19,
     "unified_id": null,
-    "canonical_project_id": "75",
+    "canonical_project_id": "52",
     "subid": "01"
   },
   {
@@ -433,7 +433,7 @@
     "weight": 6625000000.0,
     "id": 103,
     "unified_id": null,
-    "canonical_project_id": "1142",
+    "canonical_project_id": "768",
     "subid": "01"
   },
   {
@@ -459,7 +459,7 @@
     "weight": 5200005719.999999,
     "id": 20,
     "unified_id": "UC-OBJ-0058",
-    "canonical_project_id": "58",
+    "canonical_project_id": "43",
     "subid": "01"
   },
   {
@@ -561,7 +561,7 @@
     "weight": 0.0,
     "id": 13,
     "unified_id": null,
-    "canonical_project_id": "697",
+    "canonical_project_id": "561",
     "subid": "01"
   },
   {
@@ -587,7 +587,7 @@
     "weight": 0.0,
     "id": 85,
     "unified_id": "UC-OBJ-ADD-006",
-    "canonical_project_id": "1069",
+    "canonical_project_id": "626",
     "subid": "01"
   },
   {
@@ -613,7 +613,7 @@
     "weight": 0.0,
     "id": 95,
     "unified_id": null,
-    "canonical_project_id": "12",
+    "canonical_project_id": "10",
     "subid": "01"
   },
   {
@@ -639,7 +639,7 @@
     "weight": 0.0,
     "id": 104,
     "unified_id": "UC-OBJ-ADD-002",
-    "canonical_project_id": "1067",
+    "canonical_project_id": "624",
     "subid": "01"
   },
   {

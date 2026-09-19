@@ -48,7 +48,7 @@
     "name_orig": "Обсидиан",
     "lots": 0,
     "unified_id": null,
-    "canonical_project_id": "1140",
+    "canonical_project_id": "766",
     "subid": "01",
     "tower_label": "бывший — BusinessClass Ходынка"
   },
@@ -101,7 +101,7 @@
     "name_orig": "Fly Tower",
     "lots": 0,
     "unified_id": null,
-    "canonical_project_id": "697",
+    "canonical_project_id": "561",
     "subid": "01"
   },
   {
@@ -180,7 +180,7 @@
     "name_orig": "Lakes",
     "lots": 16,
     "unified_id": "UC-OBJ-0054",
-    "canonical_project_id": "54",
+    "canonical_project_id": "40",
     "subid": "01"
   },
   {
@@ -232,7 +232,7 @@
     "name_orig": "Lunar",
     "lots": 18,
     "unified_id": null,
-    "canonical_project_id": "745",
+    "canonical_project_id": "594",
     "subid": "01"
   },
   {
@@ -362,7 +362,7 @@
     "name_orig": "Plaza Technopark",
     "lots": 0,
     "unified_id": "UC-OBJ-ADD-006",
-    "canonical_project_id": "1069",
+    "canonical_project_id": "626",
     "subid": "01"
   },
   {
@@ -511,7 +511,7 @@
     "name_orig": "STONE Белорусская",
     "lots": 0,
     "unified_id": "UC-OBJ-0136",
-    "canonical_project_id": "1013",
+    "canonical_project_id": "83",
     "subid": "01"
   },
   {
@@ -769,7 +769,7 @@
     "name_orig": "Алкон 3",
     "lots": 0,
     "unified_id": null,
-    "canonical_project_id": "12",
+    "canonical_project_id": "10",
     "subid": "01"
   },
   {
@@ -795,7 +795,7 @@
     "name_orig": "Берников",
     "lots": 2,
     "unified_id": null,
-    "canonical_project_id": "75",
+    "canonical_project_id": "52",
     "subid": "01"
   },
   {
@@ -847,7 +847,7 @@
     "name_orig": "БЦ Серебряный Фонтан",
     "lots": 2,
     "unified_id": "UC-OBJ-0058",
-    "canonical_project_id": "58",
+    "canonical_project_id": "43",
     "subid": "01"
   },
   {
@@ -925,7 +925,7 @@
     "name_orig": "Королев (Рассвет)",
     "lots": 0,
     "unified_id": "UC-OBJ-ADD-003",
-    "canonical_project_id": "1068",
+    "canonical_project_id": "625",
     "subid": "01"
   },
   {
@@ -951,7 +951,7 @@
     "name_orig": "На берзарина",
     "lots": 2,
     "unified_id": null,
-    "canonical_project_id": "315",
+    "canonical_project_id": "296",
     "subid": "01"
   },
   {
@@ -1027,7 +1027,7 @@
     "name_orig": "Парк Легенд класс А",
     "lots": 0,
     "unified_id": null,
-    "canonical_project_id": "1141",
+    "canonical_project_id": "767",
     "subid": "01"
   },
   {
@@ -1053,7 +1053,7 @@
     "name_orig": "Парк Легенд класс В+",
     "lots": 0,
     "unified_id": null,
-    "canonical_project_id": "1142",
+    "canonical_project_id": "768",
     "subid": "01"
   },
   {
@@ -1079,7 +1079,7 @@
     "name_orig": "Прайм Тайм",
     "lots": 0,
     "unified_id": "UC-OBJ-ADD-002",
-    "canonical_project_id": "1067",
+    "canonical_project_id": "624",
     "subid": "01"
   },
   {
@@ -1235,7 +1235,7 @@
     "name_orig": "Башня Власов",
     "lots": 2,
     "unified_id": "UC-OBJ-0090",
-    "canonical_project_id": "90",
+    "canonical_project_id": "57",
     "subid": "01"
   },
   {
@@ -1285,7 +1285,7 @@
     "name_orig": "БЦ Сколковский",
     "lots": 2,
     "unified_id": null,
-    "canonical_project_id": "1137",
+    "canonical_project_id": "761",
     "subid": "01"
   }
 ]
