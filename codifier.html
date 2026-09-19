@@ -1121,7 +1121,7 @@ async function loadSaleDevelopers(quarterId) {
   for (const b of buildings) {
     const dev = b.developer || '—';
     if (!byDev.has(dev)) {
-      byDev.set(dev, {developer: dev, projectIds: new Set(), buildings: 0, glaSum: 0, glaCount: 0, gbaSum: 0, volumeSum: 0, lotsSum: 0, priceWeighted: 0, classes: new Set()});
+      byDev.set(dev, {developer: dev, projectIds: new Set(), buildings: 0, glaSum: 0, glaCount: 0, gbaSum: 0, volumeSum: 0, lotsSum: 0, priceWeighted: 0, priceVolume: 0, classes: new Set()});
     }
     const acc = byDev.get(dev);
     acc.projectIds.add(b.canonical_project_id || b.name);
@@ -1130,7 +1130,7 @@ async function loadSaleDevelopers(quarterId) {
     if (b.gba != null) acc.gbaSum += Number(b.gba);
     if (b.volume != null) acc.volumeSum += Number(b.volume);
     if (b.lots != null) acc.lotsSum += Number(b.lots);
-    if (b.price != null && b.volume != null) acc.priceWeighted += Number(b.price) * Number(b.volume);
+    if (b.price > 0 && b.volume > 0) { acc.priceWeighted += Number(b.price) * Number(b.volume); acc.priceVolume += Number(b.volume); }
     if (b.cls) acc.classes.add(b.cls);
   }
   const rows = [...byDev.values()].map(acc => ({
@@ -1144,7 +1144,7 @@ async function loadSaleDevelopers(quarterId) {
     gbaSum: acc.gbaSum || null,
     volumeSum: acc.volumeSum || null,
     lotsSum: acc.lotsSum || null,
-    weightedPrice: acc.volumeSum ? Math.round(acc.priceWeighted / acc.volumeSum) : null,
+    weightedPrice: acc.priceVolume ? Math.round(acc.priceWeighted / acc.priceVolume) : null,
     classes: [...acc.classes].sort().join(', '),
   }));
   state.sale_developers.rows = rows;
@@ -1665,16 +1665,15 @@ function uniqueCount(rows, keyFn) {
 // выше), и каждая непустая формула начинается с явной метки сегмента.
 // Официальный контрольный итог Q2 (Golden File) — показываем рядом с расчётом
 // по строкам данных: методики разные, расчёт по зданиям/лотам с ним не равен.
-// Ср.взв. цена продажи по рынку: официальная цифра Golden File (507 000 за Q2
-// 2026), если она есть для квартала; иначе расчёт по строкам данных.
+// Ср.взв. цена продажи — расчёт по строкам данных; официальный итог Golden
+// File показывается рядом как контрольный (только для невыфильтрованной
+// выборки: Golden — итог по всему рынку, а не по выбранным строкам).
 function salePriceTotal(computed, shownRows) {
   const g = goldenReferenceCache[currentQuarterId];
   const wholeMarket = shownRows == null || shownRows === (state[currentView]?.rows || []).length;
-  // Golden — итог по всему рынку: при фильтрации выборки показываем расчёт по ней.
-  if (wholeMarket && g && g.sale && g.sale.weighted_price_rub_per_sqm != null) {
-    return `Ср.взв. цена (Golden File): ${fmtNum(g.sale.weighted_price_rub_per_sqm)} руб/м²`;
-  }
-  return `Ср.взв. цена по данным: ${fmtNum(computed)}`;
+  const ctrl = wholeMarket && g && g.sale && g.sale.weighted_price_rub_per_sqm != null
+    ? ` (Golden File, контрольно: ${fmtNum(g.sale.weighted_price_rub_per_sqm)})` : '';
+  return `Ср.взв. цена по данным: ${fmtNum(computed)}${ctrl}`;
 }
 function goldenAreaNote(shownRows) {
   const g = goldenReferenceCache[currentQuarterId];
@@ -1705,7 +1704,8 @@ function computeTotals(view, rows) {
     const gba = sumField(rows, 'gba');
     const volume = sumField(rows, 'volume');
     const lots = sumField(rows, 'lots');
-    const priceRows = rows.filter(r => r.price != null && r.volume != null);
+    // price=0 — заглушка «цены нет», не цена: в средневзвешенную не входит (иначе разбавляет её)
+    const priceRows = rows.filter(r => r.price > 0 && r.volume > 0);
     const weighted = priceRows.length ? priceRows.reduce((s,r)=>s+r.price*r.volume,0) / priceRows.reduce((s,r)=>s+r.volume,0) : null;
     return prefix + `Уникальных проектов: ${fmtNum(projects)} · Зданий: ${rows.length} · Лотов (сумма): ${fmtNum(lots.sum)} · `
       + `GLA зданий (сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · GBA (справочно): ${fmtSum(gba)} м² · `
