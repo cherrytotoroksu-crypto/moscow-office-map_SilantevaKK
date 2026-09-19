@@ -12455,10 +12455,10 @@
     {
       "unified_id": "UC-OBJ-0270",
       "source_id": "OBJ-0270",
-      "name": "БЦ по КРТ в Марьиной Роще",
+      "name": "Риф",
       "address": "ул. 2-я Ямская, вл. 2",
-      "developer": null,
-      "gba": null,
+      "developer": "Донстрой",
+      "gba": 10000,
       "gla": null,
       "cls": null,
       "commission_year": null,
@@ -12478,14 +12478,16 @@
       "source_links": [
         "https://stroi.mos.ru/news/biznies-tsientr-v-mar-inoi-roshchie-oformiat-aliumokompozitnymi-3d-panieliami",
         "https://dzen.ru/a/aJCWfM1QrmetPGIq",
-        "https://msknovosti.ru/news/realty/biznes-tsentr-v-marinoy-rosche-oblitsuyut-alyumokompozitnymi-3d-panelyami/"
+        "https://msknovosti.ru/news/realty/biznes-tsentr-v-marinoy-rosche-oblitsuyut-alyumokompozitnymi-3d-panelyami/",
+        "https://t.me/officesmokingroom/1434",
+        "https://t.me/officesmokingroom/1440"
       ],
-      "verification_status": "Проверено по открытым источникам, значение не найдено: девелопер, общая площадь, GLA, год ввода",
+      "verification_status": "Название, адрес и ориентировочная площадь подтверждены публикацией Telegram-канала «Офисная курилка» (посты 1434 и 1440, июль 2026); застройщик официально не подтверждён.",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: объект называется «Риф» (ранее — «БЦ по КРТ в Марьиной Роще»). По публикации «Офисной курилки»: земельный участок 2-я Ямская, вл. 2 (Марьина Роща), небольшой офисный центр около 10 тыс. кв. м; разрешение на строительство получено давно, но строительство и продажи не начаты; согласованная архитектура — «коробочная», отличается от маркетинговых рендеров. Застройщик в публикации не назван — со ссылкой на «СиТ» им может быть Донстрой или связанные структуры (в кодификаторе указан Донстрой по этой версии, не подтверждено). Соседний участок — Upside Ямская (вл. 9). Площадь ~10 тыс. кв. м названа без уточнения (общая или офисная) и внесена как общая (GBA) ориентировочно.",
       "needs_review": true,
-      "review_reason": "no conservative layer match",
+      "review_reason": "developer_unconfirmed",
       "canonical_no": 323,
       "geo_ao": "Северо-Восточный",
       "geo_raion": "Марьина Роща",
@@ -12495,7 +12497,10 @@
       "geo_bizForming": "Савеловский деловой район",
       "canonical_project_id": "OBJ-0270",
       "subid": "01",
-      "project_name": "БЦ по КРТ в Марьиной Роще"
+      "project_name": "Риф",
+      "aliases": [
+        "БЦ по КРТ в Марьиной Роще"
+      ]
     },
     {
       "unified_id": "UC-OBJ-0661",
