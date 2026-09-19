@@ -2220,14 +2220,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0147",
-    "canonical_no": 296,
-    "name": "БЦ на Варшавском шоссе",
-    "address": "г. Москва, Варшавское шоссе, вл. 36.",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0637",
     "canonical_no": 297,
     "name": "БЦ на Войковской",
@@ -5282,7 +5274,7 @@
   {
     "unified_id": "UC-OBJ-ADD-016",
     "canonical_no": 721,
-    "name": "Гранель",
+    "name": "БЦ Павелецкая от Гранель",
     "address": "Дубининская, 17",
     "status": "new_record",
     "reason": "imported 2026-09-11 from user xlsx, no registry row exists (no name/coordinate match against all_projects_layer.json)"

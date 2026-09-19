@@ -5386,7 +5386,7 @@
       "verification_status": "Проверено по открытым источникам, значение не найдено: год ввода",
       "confidence": "Низкий",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: адрес совпадает с БЦ «Сезар» (UC-OBJ-0367, Silica), координаты в ~40 м; GBA 211 000 несопоставима с 15,8 тыс. м² здания. Не объединено автоматически (кластер 2-го Силикатного не сливается без сверки).",
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 116,
@@ -8162,7 +8162,7 @@
       "verification_status": "Проверено",
       "confidence": "Средний",
       "entity_type": "office_project_candidate",
-      "classification_note": null,
+      "classification_note": "2026-09-19: это БЦ «Сезар» (Sezar Group) на 2-м Силикатном пр-де, 13 — 9 этажей, ~15,8 тыс. м², класс A (официальный сайт silikatny-13.ru, bc-sezarsilica.ru); в реестре — proj-72. Запись UC-OBJ-0489 с тем же адресом (GBA 211 000 — вероятно, площадь всего кластера/участка) не объединена, требует сверки.",
       "needs_review": true,
       "review_reason": "no conservative layer match",
       "canonical_no": 199,
@@ -8174,7 +8174,12 @@
       "geo_bizForming": "Большой Сити",
       "canonical_project_id": "367",
       "subid": "01",
-      "project_name": "Silica"
+      "project_name": "Silica",
+      "aliases": [
+        "2-й Силикатный проезд, 13",
+        "БЦ SEZAR",
+        "БЦ Сезар"
+      ]
     },
     {
       "unified_id": "UC-OBJ-0037",
@@ -11622,50 +11627,6 @@
       "canonical_project_id": "OBJ-0259",
       "subid": "01",
       "project_name": "БЦ на Авиамоторной"
-    },
-    {
-      "unified_id": "UC-OBJ-0147",
-      "source_id": "OBJ-0147",
-      "name": "БЦ на Варшавском шоссе",
-      "address": "г. Москва, Варшавское шоссе, вл. 36.",
-      "developer": "Prime Life Development",
-      "gba": 123610.0,
-      "gla": 57000.0,
-      "cls": "A",
-      "commission_year": 2029,
-      "commission_quarter": null,
-      "status": "Проектный",
-      "latitude": 55.679057,
-      "longitude": 37.624004,
-      "coordinates_status": "unverified",
-      "legacy_ids": [],
-      "quarter_offer_refs": [],
-      "market_channel": [],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": null,
-      "layer_source_date": null,
-      "layer_qa_notes": null,
-      "source_links": [
-        "https://t.me/stroi_news/5757",
-        "https://t.me/commercialrealestatemoscow/2224"
-      ],
-      "verification_status": "Сверить конфликты",
-      "confidence": "Низкий",
-      "entity_type": "office_project_candidate",
-      "classification_note": null,
-      "needs_review": true,
-      "review_reason": "no conservative layer match",
-      "canonical_no": 296,
-      "geo_ao": "Южный",
-      "geo_raion": "Нагорный",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Юг",
-      "geo_bizFormed": null,
-      "geo_bizForming": null,
-      "canonical_project_id": "OBJ-0147",
-      "subid": "01",
-      "project_name": "БЦ на Варшавском шоссе"
     },
     {
       "unified_id": "UC-OBJ-0637",
@@ -27906,14 +27867,14 @@
     {
       "unified_id": "UC-OBJ-ADD-016",
       "source_id": "OBJ-0786",
-      "name": "Гранель",
+      "name": "БЦ Павелецкая от Гранель",
       "address": "Дубининская, 17",
-      "developer": "ТПО «Резерв»",
-      "gba": 21000,
-      "gla": 64768,
-      "cls": null,
-      "commission_year": null,
-      "commission_quarter": null,
+      "developer": "Гранель",
+      "gba": 20800,
+      "gla": null,
+      "cls": "A",
+      "commission_year": 2029,
+      "commission_quarter": 4,
       "status": "Проектный",
       "latitude": 55.727268,
       "longitude": 37.63897,
@@ -27925,16 +27886,17 @@
       "layer_offer_status": null,
       "layer_source": null,
       "layer_source_date": null,
-      "layer_qa_notes": null,
       "source_links": [
+        "https://realty.ria.ru/20260731/granel-2108112096.html",
+        "https://www.mskagency.ru/materials/3559623",
         "https://max.ru/propertyinsider/AZ_07kX_cwo"
       ],
-      "verification_status": "Добавлено 2026-09-11 из выгрузки пользователя «Будущие_проекты_final.xlsx» (лист ОСНОВНАЯ) — самостоятельная веб-проверка не проводилась.",
+      "verification_status": "Параметры подтверждены пресс-службой Гранель (РИА Недвижимость, АГН «Москва», 31.07.2026): класс A, ~20,8 тыс. м², 11 наземных этажей + 1 подземный, ввод IV кв. 2029, архитектор ТПО «Резерв»; архитектурное решение одобрено в конце июля 2026.",
       "confidence": "Средний",
       "entity_type": "office_project_candidate",
-      "classification_note": "2026-09-17: физически невозможное соотношение GLA (64768) > GBA (21000) — полезная площадь не может превышать общую. Не исправляем наугад, какая из двух цифр верна — требуется сверка с первоисточником. 2026-09-17: Веб-проверка подтверждает более раннюю находку (см. future_projects.json OBJ-0786 верификации, 2026-09-16): адрес Дубининская, 17 — действующий офисный центр компании «Резерв», НЕ «Гранель». «ТПО Резерв» в данных — архитектурная студия, а не девелопер. Точная площадь «Резерва» в открытых источниках не найдена (похожий по названию отдельный проект «Квартал Сити» на той же улице — 22500 кв.м, но это другой объект). Само название/застройщик записи, вероятно, ошибочны — площадь чинить рано, сначала нужно установить, что это вообще за объект.",
+      "classification_note": "2026-09-19: запись переименована из «Гранель» и исправлена. Ранее в поле застройщика стояла архитектурная студия ТПО «Резерв», а GLA (64768) превышала GBA. По пресс-релизу Гранель объект — административно-деловой комплекс класса A на Дубининской ул. у м. Павелецкая: общая площадь ~20 800 м² (наземная 17 500, подземная ~3 300), офисы на 2–10 этажах, ввод IV кв. 2029. GLA в источниках не названа — оставлена пустой. Точный адрес в пресс-релизе не указан; адрес «Дубининская, 17» и координаты из исходной выгрузки не подтверждены отдельно (рядом — ЖК MyPriority Павелецкая по тому же адресу), поэтому запись остаётся на проверке.",
       "needs_review": true,
-      "review_reason": "gla_exceeds_gba",
+      "review_reason": "address_unconfirmed",
       "geo_ao": "Центральный",
       "geo_raion": "Замоскворечье",
       "geo_zone": "СК-ТТК",
@@ -27943,7 +27905,10 @@
       "geo_bizForming": null,
       "canonical_project_id": "OBJ-0786",
       "subid": "01",
-      "project_name": "Гранель"
+      "project_name": "БЦ Павелецкая от Гранель",
+      "aliases": [
+        "Гранель (Дубининская, 17)"
+      ]
     },
     {
       "unified_id": "UC-OBJ-ADD-019",
@@ -42064,7 +42029,9 @@
       "latitude": 55.679057,
       "longitude": 37.624004,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "OBJ-0147"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -42081,7 +42048,7 @@
       "verification_status": "Подтверждено страницей коммерческой недвижимости Prime Life и актуальной карточкой предложения офисов на Варшавском шоссе 36.",
       "confidence": "medium",
       "entity_type": "office_project",
-      "classification_note": "На официальной странице Prime Life проект расположен по адресу Варшавское шоссе, 36 и описан как ЭОН: класс A, 121 000 м², 65 000 м² офисных площадей, ввод 2029. В классификаторе сохранено пользовательское имя «Прайм Лайф Варшавская»; «ЭОН» добавлен как официальный alias.",
+      "classification_note": "На официальной странице Prime Life проект расположен по адресу Варшавское шоссе, 36 и описан как ЭОН: класс A, 121 000 м², 65 000 м² офисных площадей, ввод 2029. В классификаторе сохранено пользовательское имя «Прайм Лайф Варшавская»; «ЭОН» добавлен как официальный alias. 2026-09-19: слито с UC-OBJ-0147 («БЦ на Варшавском шоссе») — идентичные координаты, адрес Варшавское шоссе, 36, тот же девелопер и год ввода 2029; вторая запись удалена.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": null,
