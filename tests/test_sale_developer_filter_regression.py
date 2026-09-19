@@ -30,7 +30,9 @@ class SaleDeveloperFilterRegressionTests(unittest.TestCase):
         rows = [row for row in self.buildings if row.get("status") == "Строится"]
         developers = {row.get("developer") or "—" for row in rows}
         self.assertEqual(len(rows), 101)
-        self.assertEqual(len(developers), 53)
+        # 2026-09-19: 53 -> 49 — слиты разные написания одного девелопера
+        # (Forma/FORMA, Гранель/ГК Гранель, Основа/ГК Основа).
+        self.assertEqual(len(developers), 49)
 
     def test_developer_loader_filters_source_buildings_before_grouping(self):
         match = re.search(

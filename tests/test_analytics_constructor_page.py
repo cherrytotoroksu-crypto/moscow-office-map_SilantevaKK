@@ -103,7 +103,8 @@ class AnalyticsConstructorPageTest(unittest.TestCase):
         # зданий из commit b948753/a5d1fb5/e111839 (см. тот же счётчик в
         # test_sale_developer_filter_regression); rent_developers не
         # затронут (эти здания не в файле аренды).
-        self.assertEqual(len(all_developers), 61)
+        # 2026-09-19: 61 -> 57 — слиты разные написания одного девелопера (Forma/FORMA и т.п.)
+        self.assertEqual(len(all_developers), 57)
         self.assertEqual(len(rent_developers), 14)
         self.assertLess(rent_developers, all_developers)
 

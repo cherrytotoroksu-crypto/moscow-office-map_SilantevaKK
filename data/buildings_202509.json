@@ -2,7 +2,7 @@
   {
     "name": "AFI Парк Воронцовский",
     "address": "ул. Академика Челомея, 1А",
-    "developer": "AFI Девелопмент",
+    "developer": "AFI Development",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -28,7 +28,7 @@
   {
     "name": "AFI2B Tagilskaya",
     "address": "Москва, ул. Тагильская, вл. 4",
-    "developer": "AFI Девелопмент",
+    "developer": "AFI Development",
     "status": "Строится",
     "year": "2026",
     "start": "Q1 2025",
@@ -131,7 +131,7 @@
   {
     "name": "Останкино",
     "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
-    "developer": "ГК Пионер",
+    "developer": "Пионер",
     "status": "Построен",
     "year": "2025",
     "start": "",
@@ -569,7 +569,7 @@
   {
     "name": "Level Воронцовская",
     "address": "Москва, ул. Академика Семинихина,вл. 2",
-    "developer": "Level",
+    "developer": "Level Group",
     "status": "Строится",
     "year": "2026",
     "start": "",
@@ -595,7 +595,7 @@
   {
     "name": "Light City",
     "address": "2-я Магистральная ул., д. 3, стр. 1",
-    "developer": "АО «Проспект»",
+    "developer": "Проспект",
     "status": "Строится",
     "year": "2028",
     "start": "",
@@ -853,7 +853,7 @@
   {
     "name": "Opus",
     "address": "Дербеневская улица, 1",
-    "developer": "ГК Пионер",
+    "developer": "Пионер",
     "status": "Строится",
     "year": "2026",
     "start": "",
@@ -931,7 +931,7 @@
   {
     "name": "Plaza Botanica",
     "address": "г. Москва, Ростокино р-н, ул. Леонова 1-я, д. 1",
-    "developer": "ГК Пионер",
+    "developer": "Пионер",
     "status": "Построен",
     "year": "2024",
     "start": "",
@@ -1341,7 +1341,7 @@
   {
     "name": "Twist",
     "address": "Бутырская ул,, уч1, Москва",
-    "developer": "Sminex-Интеко",
+    "developer": "Sminex",
     "status": "Строится",
     "year": "2026",
     "start": "",
@@ -1419,7 +1419,7 @@
   {
     "name": "А101 Прокшино",
     "address": "поселение Сосенское, квартал № 35",
-    "developer": "A101",
+    "developer": "А101",
     "status": "Строится",
     "year": "2027",
     "start": "",
@@ -1521,7 +1521,7 @@
   {
     "name": "БЦ Варшавская",
     "address": "г. Москва, Каширский пр-д, 25/2",
-    "developer": "ГК Пионер",
+    "developer": "Пионер",
     "status": "Строится",
     "year": "2028",
     "start": "Q3 2025",
@@ -1806,7 +1806,7 @@
   {
     "name": "Ольховая SKY",
     "address": "г. Москва, п. Сосенское",
-    "developer": "ГК Гранель",
+    "developer": "Гранель",
     "status": "Строится",
     "year": "2027",
     "start": "Q3 2025",
@@ -1886,7 +1886,7 @@
   {
     "name": "Родина Парк",
     "address": "Москва, ул. Верейская, 12",
-    "developer": "ГК Родина",
+    "developer": "Родина",
     "status": "Строится",
     "year": "2028",
     "start": "Q1 2025",
@@ -1912,7 +1912,7 @@
   {
     "name": "Рублево Бизнес-Парк",
     "address": "Улица Липовой Рощи, 1к4",
-    "developer": "ГК Пионер",
+    "developer": "Пионер",
     "status": "Строится",
     "year": "2025",
     "start": "",
@@ -2041,7 +2041,7 @@
   {
     "name": "Plaza Technopark",
     "address": "г. Москва, Даниловский р-н, Андропова пр-кт, влд 10",
-    "developer": "ГК Пионер",
+    "developer": "Пионер",
     "status": "Построен",
     "year": "2021",
     "start": "",
