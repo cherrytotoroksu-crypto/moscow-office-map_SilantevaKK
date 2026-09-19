@@ -726,6 +726,15 @@ let allProjectsLayer = [];
 // Заполняется в loadCodifier() при старте (грузится всегда, не только на
 // вкладке "Общий кодификатор" — см. init()).
 let projectNameById = new Map();
+// Лоты многокорпусных проектов приходят под общим названием проекта
+// ("Air", "Jois", "Set") без корпуса — сопоставляем по project_name, если
+// оно однозначно; корпус/subid при этом остаются пустыми (не угадываем).
+let projectIdByProjectName = new Map();
+function fillProjectFromName(row, nameKey) {
+  if (row.canonical_project_id != null) return;
+  const id = projectIdByProjectName.get(normNameKey(row[nameKey]));
+  if (id) { row.canonical_project_id = id; row.project_name = lookupProjectName(id); }
+}
 function lookupProjectName(canonicalProjectId) {
   return canonicalProjectId != null ? (projectNameById.get(String(canonicalProjectId)) || null) : null;
 }
@@ -827,6 +836,23 @@ async function loadCodifier() {
 
   const rows = classifierData.records || [];
   projectNameById = new Map();
+  projectIdByProjectName = new Map();
+  const pnIds = new Map();
+  for (const r of rows) {
+    if (r.canonical_project_id && r.project_name) {
+      const k = normNameKey(r.project_name);
+      if (!pnIds.has(k)) pnIds.set(k, new Set());
+      pnIds.get(k).add(String(r.canonical_project_id));
+    }
+  }
+  for (const r of rows) {
+    for (const al of (r.aliases || [])) {
+      const k = normNameKey(al);
+      if (!pnIds.has(k)) pnIds.set(k, new Set());
+      pnIds.get(k).add(String(r.canonical_project_id));
+    }
+  }
+  for (const [k, ids] of pnIds) if (ids.size === 1) projectIdByProjectName.set(k, [...ids][0]);
   for (const r of rows) {
     if (r.canonical_project_id && r.project_name && !projectNameById.has(String(r.canonical_project_id))) {
       projectNameById.set(String(r.canonical_project_id), r.project_name);
@@ -1078,6 +1104,7 @@ async function buildingInfoByName(quarterId) {
 // --- Продажа офисов ---
 async function loadSaleBuildings(quarterId) {
   const rows = await fetchBuildingsWithJoin(quarterId);
+  await loadGoldenReference(quarterId);
   state.sale_buildings.rows = rows;
   if (!suppressURLSync) state.sale_buildings.page = 1;
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
@@ -1151,6 +1178,7 @@ async function loadSaleLots(quarterId) {
   for (const row of rows) {
     row.market_channel = SEGMENT_LABEL.sale; // явное, константное поле — вся вкладка = один сегмент рынка
     joinRegistryFields(row, byName, 'building', null);
+    fillProjectFromName(row, 'building');
     row.tower_label = buildingInfo.get(row.building)?.tower_label ?? null;
     row.subid = buildingInfo.get(row.building)?.subid ?? null;
     // Подозрение (не подтверждено по каждой строке): единичный "лот" такого
@@ -1261,9 +1289,11 @@ async function loadRentLots(quarterId) {
   for (const row of rows) {
     row.market_channel = SEGMENT_LABEL.rent;
     joinRegistryFields(row, byName, 'building', null);
+    fillProjectFromName(row, 'building');
     row.tower_label = buildingInfo.get(row.building)?.tower_label ?? null;
     row.subid = buildingInfo.get(row.building)?.subid ?? null;
   }
+  await loadGoldenReference(quarterId);
   state.rent_lots.rows = rows;
   if (!suppressURLSync) { state.rent_lots.filters = {}; state.rent_lots.sort = {key:null, dir:1}; state.rent_lots.page = 1; }
   const label = QUARTERS.find(q => q.id === quarterId)?.label || quarterId;
@@ -1631,6 +1661,16 @@ function uniqueCount(rows, keyFn) {
 // Итоги каждого раздела считаются только по его собственному сегменту рынка
 // (rows всегда приходят из ОДНОГО файла-источника этого view — см. загрузку
 // выше), и каждая непустая формула начинается с явной метки сегмента.
+// Официальный контрольный итог Q2 (Golden File) — показываем рядом с расчётом
+// по строкам данных: методики разные, расчёт по зданиям/лотам с ним не равен.
+function goldenSaleNote() {
+  const g = goldenReferenceCache[currentQuarterId];
+  return g && g.sale ? ` · Golden File (контрольно): ${fmtNum(g.sale.available_area_sqm)} м², ср.взв. цена ${fmtNum(g.sale.weighted_price_rub_per_sqm)} руб/м²` : '';
+}
+function goldenRentNote() {
+  const g = goldenReferenceCache[currentQuarterId];
+  return g && g.rent ? ` · Golden File (контрольно): класс A+Prime ${fmtNum(Math.round(g.rent.rate_class_a_plus_prime_rub_sqm_year))} руб/м²/год, свободно ${fmtNum(Math.round(g.rent.available_area_sqm))} м²` : '';
+}
 function computeTotals(view, rows) {
   const section = VIEWS[view].section;
   const segmentLabel = SEGMENT_LABEL[section];
@@ -1655,7 +1695,7 @@ function computeTotals(view, rows) {
     const weighted = priceRows.length ? priceRows.reduce((s,r)=>s+r.price*r.volume,0) / priceRows.reduce((s,r)=>s+r.volume,0) : null;
     return prefix + `Уникальных проектов: ${fmtNum(projects)} · Зданий: ${rows.length} · Лотов (сумма): ${fmtNum(lots.sum)} · `
       + `GLA зданий (сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · GBA (справочно): ${fmtSum(gba)} м² · `
-      + `Площадь лотов в продаже (сумма): ${fmtNum(volume.sum)} м² · Ср.взв. цена: ${fmtNum(weighted)}`;
+      + `Площадь лотов в продаже (сумма): ${fmtNum(volume.sum)} м² · Ср.взв. цена по данным зданий: ${fmtNum(weighted)}${goldenSaleNote()}`;
   }
   if (view === 'sale_developers') {
     const gla = sumField(rows, 'glaSum');
@@ -1698,7 +1738,7 @@ function computeTotals(view, rows) {
     const area = sumField(rows, 'area');
     const rateRows = rows.filter(r => r.rate != null && r.area != null);
     const weighted = rateRows.length ? rateRows.reduce((s,r)=>s+r.rate*r.area,0) / rateRows.reduce((s,r)=>s+r.area,0) : null;
-    return prefix + `Предложений: ${rows.length} · Объектов (уникальных): ${buildings} · Площадь предложений аренды (сумма): ${fmtNum(area.sum)} м² · Ср.взв. ставка: ${fmtNum(weighted)}`;
+    return prefix + `Предложений: ${rows.length} · Объектов (уникальных): ${buildings} · Площадь предложений аренды (сумма): ${fmtNum(area.sum)} м² · Ср.взв. ставка по данным: ${fmtNum(weighted)}${goldenRentNote()}`;
   }
   if (view === 'flex_operators') {
     const seats = sumField(rows, 'seatsSum');

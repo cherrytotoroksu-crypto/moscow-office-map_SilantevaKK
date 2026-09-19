@@ -1,0 +1,1266 @@
+[
+ {
+  "name": "STONE Пресня",
+  "unified_id": "UC-OBJ-0622",
+  "registry_id": "proj-1",
+  "field": "gba",
+  "classifier": 15000.0,
+  "registry": 16277
+ },
+ {
+  "name": "STONE Пресня",
+  "unified_id": "UC-OBJ-0622",
+  "registry_id": "proj-1",
+  "field": "gla",
+  "classifier": 14000.0,
+  "registry": 13338
+ },
+ {
+  "name": "STONE Пресня",
+  "unified_id": "UC-OBJ-0622",
+  "registry_id": "proj-1",
+  "field": "address",
+  "classifier": "Ходынская ул., вл. 2, стр. 9",
+  "registry": "г. Москва, Ходынская ул., вл. 2, стр. 9"
+ },
+ {
+  "name": "Apollax Space (Новосущевский)",
+  "unified_id": "UC-OBJ-ADD-077",
+  "registry_id": "proj-9",
+  "field": "address",
+  "classifier": "ул. Сущёвский Вал, 18",
+  "registry": "Сущевский Вал, 18"
+ },
+ {
+  "name": "Fly Tower",
+  "unified_id": "UC-OBJ-0697",
+  "registry_id": "proj-13",
+  "field": "gba",
+  "classifier": 41319.0,
+  "registry": 30000.0
+ },
+ {
+  "name": "Fly Tower",
+  "unified_id": "UC-OBJ-0697",
+  "registry_id": "proj-13",
+  "field": "address",
+  "classifier": "Ленинградский пр-кт, 37к3",
+  "registry": "Ленинградский пр-т, 37 корп. 3"
+ },
+ {
+  "name": "Берников",
+  "unified_id": "UC-OBJ-0075",
+  "registry_id": "proj-19",
+  "field": "cls",
+  "classifier": "B+",
+  "registry": "A"
+ },
+ {
+  "name": "Берников",
+  "unified_id": "UC-OBJ-0075",
+  "registry_id": "proj-19",
+  "field": "address",
+  "classifier": "Николоямская ул., 12 стр. 2",
+  "registry": "Москва, ул. Николоямская, д. 11, стр 2"
+ },
+ {
+  "name": "Signature Столешников (Signature Столешников, 11)",
+  "unified_id": "UC-OBJ-ADD-042",
+  "registry_id": "proj-45",
+  "field": "address",
+  "classifier": "Столешников, 11",
+  "registry": "Столешников пер., 11"
+ },
+ {
+  "name": "Регус (Пр. Мира, 40) (Проспект Мира, 40)",
+  "unified_id": "UC-OBJ-ADD-158",
+  "registry_id": "proj-46",
+  "field": "address",
+  "classifier": "Москва, проспект Мира, дом 40",
+  "registry": "Мира пр-т, 40"
+ },
+ {
+  "name": "Smart Yard (на Волгоградском) (РТС Волгоградский)",
+  "unified_id": "UC-OBJ-ADD-055",
+  "registry_id": "proj-47",
+  "field": "address",
+  "classifier": "Москва, Волгоградский проспект, дом 32, корпус 31",
+  "registry": "Волгоградский проспект, 32к31"
+ },
+ {
+  "name": "На берзарина",
+  "unified_id": "UC-OBJ-0315",
+  "registry_id": "proj-57",
+  "field": "gba",
+  "classifier": 11894.0,
+  "registry": 12000.0
+ },
+ {
+  "name": "На берзарина",
+  "unified_id": "UC-OBJ-0315",
+  "registry_id": "proj-57",
+  "field": "address",
+  "classifier": "Берзарина ул., 32",
+  "registry": "Берзарина ул., вл. 32"
+ },
+ {
+  "name": "Ходынка (Авиаконструктора Микояна)",
+  "unified_id": "UC-OBJ-ADD-083",
+  "registry_id": "proj-64",
+  "field": "address",
+  "classifier": "Москва, улица Авиаконструктора Микояна, дом 1",
+  "registry": "ул. Авиакоструктора Микояна, д. 1"
+ },
+ {
+  "name": "Lakes",
+  "unified_id": "UC-OBJ-0054",
+  "registry_id": "proj-77",
+  "field": "developer",
+  "classifier": "ПИК",
+  "registry": "Forma"
+ },
+ {
+  "name": "Lakes",
+  "unified_id": "UC-OBJ-0054",
+  "registry_id": "proj-77",
+  "field": "gla",
+  "classifier": 18951.0,
+  "registry": 42570.0
+ },
+ {
+  "name": "Lakes",
+  "unified_id": "UC-OBJ-0054",
+  "registry_id": "proj-77",
+  "field": "cls",
+  "classifier": "B+",
+  "registry": "A"
+ },
+ {
+  "name": "Lakes",
+  "unified_id": "UC-OBJ-0054",
+  "registry_id": "proj-77",
+  "field": "address",
+  "classifier": "ул. Озёрная вл.42",
+  "registry": "Москва, ул. Озёрная вл.42"
+ },
+ {
+  "name": "Manufaqtury Поклонка (Poklonka Place)",
+  "unified_id": "UC-OBJ-ADD-097",
+  "registry_id": "proj-83",
+  "field": "address",
+  "classifier": "Москва, Поклонная улица, дом 3",
+  "registry": "г. Москва, ул. Поклонная, д. 3, корп. 1-4"
+ },
+ {
+  "name": "STONE Towers. Tower D",
+  "unified_id": "UC-OBJ-0698",
+  "registry_id": "proj-89",
+  "field": "gba",
+  "classifier": 40000.0,
+  "registry": 47000.0
+ },
+ {
+  "name": "STONE Towers. Tower D",
+  "unified_id": "UC-OBJ-0698",
+  "registry_id": "proj-89",
+  "field": "address",
+  "classifier": "Бумажный пр-д, вл. 19, стр. 4,5",
+  "registry": "г. Москва, Бумажный проезд, 19, стр. 4, 5"
+ },
+ {
+  "name": "STONE Белорусская",
+  "unified_id": "UC-OBJ-0136",
+  "registry_id": "proj-91",
+  "field": "gba",
+  "classifier": 34300.0,
+  "registry": 34700.0
+ },
+ {
+  "name": "STONE Белорусская",
+  "unified_id": "UC-OBJ-0136",
+  "registry_id": "proj-91",
+  "field": "gla",
+  "classifier": 26400.0,
+  "registry": 22900.0
+ },
+ {
+  "name": "БЦ Рябовская Мануфактура",
+  "unified_id": "UC-OBJ-0090",
+  "registry_id": "proj-96",
+  "field": "developer",
+  "classifier": "ООО ГОНЧАР/ООО Товарищество Рябовской Мануфактуры",
+  "registry": "Товарищество Рябовской Мануфактуры"
+ },
+ {
+  "name": "Orbital",
+  "unified_id": "UC-OBJ-0004",
+  "registry_id": "proj-101",
+  "field": "developer",
+  "classifier": "КЕНМЕР?",
+  "registry": "Ultima Development"
+ },
+ {
+  "name": "Orbital",
+  "unified_id": "UC-OBJ-0004",
+  "registry_id": "proj-101",
+  "field": "gla",
+  "classifier": 24034.0,
+  "registry": 24014.0
+ },
+ {
+  "name": "Orbital",
+  "unified_id": "UC-OBJ-0004",
+  "registry_id": "proj-101",
+  "field": "address",
+  "classifier": "3-я Магистральная ул., 10",
+  "registry": "3-Я МАГИСТРАЛЬНАЯ УЛИЦА, 10"
+ },
+ {
+  "name": "Ahead",
+  "unified_id": "UC-OBJ-0061",
+  "registry_id": "proj-109",
+  "field": "gla",
+  "classifier": 10000.0,
+  "registry": 10677
+ },
+ {
+  "name": "ASPACE Хорошевская",
+  "unified_id": "UC-OBJ-0189",
+  "registry_id": "proj-113",
+  "field": "developer",
+  "classifier": "Aspace",
+  "registry": "ASPACE Development"
+ },
+ {
+  "name": "ASPACE Хорошевская",
+  "unified_id": "UC-OBJ-0189",
+  "registry_id": "proj-113",
+  "field": "gla",
+  "classifier": 31920.0,
+  "registry": 23070
+ },
+ {
+  "name": "ASPACE Хорошевская",
+  "unified_id": "UC-OBJ-0189",
+  "registry_id": "proj-113",
+  "field": "address",
+  "classifier": "Хорошевское ш., 39",
+  "registry": "Москва, Хорошёвское шоссе, вл. 39"
+ },
+ {
+  "name": "Avium",
+  "unified_id": "UC-OBJ-0121",
+  "registry_id": "proj-115",
+  "field": "developer",
+  "classifier": "Capital Alliance",
+  "registry": "Alias Group"
+ },
+ {
+  "name": "Edel",
+  "unified_id": "UC-OBJ-0193",
+  "registry_id": "proj-120",
+  "field": "address",
+  "classifier": "17-й проезд Марьиной рощи, 9",
+  "registry": "17-й Марьиной Рощи пр-д, вл. 9"
+ },
+ {
+  "name": "Fili residence",
+  "unified_id": "UC-OBJ-0196",
+  "registry_id": "proj-124",
+  "field": "developer",
+  "classifier": "н/д",
+  "registry": "ООО СЗ ФИЛИ ГАРДЕН"
+ },
+ {
+  "name": "Geolog 2",
+  "unified_id": "UC-OBJ-0719",
+  "registry_id": "proj-128",
+  "field": "address",
+  "classifier": "ул. Обручева, вл. 23",
+  "registry": "ул. Обручева, 23"
+ },
+ {
+  "name": "Jenga",
+  "unified_id": "UC-OBJ-0200",
+  "registry_id": "proj-132",
+  "field": "gba",
+  "classifier": 59885.0,
+  "registry": 59969
+ },
+ {
+  "name": "Jenga",
+  "unified_id": "UC-OBJ-0200",
+  "registry_id": "proj-132",
+  "field": "gla",
+  "classifier": 48482.89600000001,
+  "registry": 42588
+ },
+ {
+  "name": "Jenga",
+  "unified_id": "UC-OBJ-0200",
+  "registry_id": "proj-132",
+  "field": "address",
+  "classifier": "Поллеский проезд",
+  "registry": "г. Москва, Полесский пр-д, 14"
+ },
+ {
+  "name": "K-city",
+  "unified_id": "UC-OBJ-0123",
+  "registry_id": "proj-136",
+  "field": "gba",
+  "classifier": 59839.0,
+  "registry": 59800
+ },
+ {
+  "name": "K-city",
+  "unified_id": "UC-OBJ-0123",
+  "registry_id": "proj-136",
+  "field": "gla",
+  "classifier": 48199.0,
+  "registry": 13800
+ },
+ {
+  "name": "K-city",
+  "unified_id": "UC-OBJ-0123",
+  "registry_id": "proj-136",
+  "field": "address",
+  "classifier": "г. Москва, Бауманская ул., 11",
+  "registry": "Бауманская, 11"
+ },
+ {
+  "name": "Upside Кунцево",
+  "unified_id": "UC-OBJ-0050",
+  "registry_id": "proj-138",
+  "field": "address",
+  "classifier": "Молдавская ул., 1",
+  "registry": "Москва, Молдавская ул., 1"
+ },
+ {
+  "name": "Lakes 2",
+  "unified_id": "UC-OBJ-0202",
+  "registry_id": "proj-139",
+  "field": "gba",
+  "classifier": 34908.0,
+  "registry": 35013
+ },
+ {
+  "name": "Lakes 2",
+  "unified_id": "UC-OBJ-0202",
+  "registry_id": "proj-139",
+  "field": "gla",
+  "classifier": 25180.0,
+  "registry": 24741
+ },
+ {
+  "name": "Lakes 2",
+  "unified_id": "UC-OBJ-0202",
+  "registry_id": "proj-139",
+  "field": "address",
+  "classifier": "ул. Озёрная",
+  "registry": "ул. Озёрная, ЗУ 44Б"
+ },
+ {
+  "name": "Lavin",
+  "unified_id": "UC-OBJ-0203",
+  "registry_id": "proj-141",
+  "field": "gba",
+  "classifier": 68798.0,
+  "registry": 25445
+ },
+ {
+  "name": "Lavin",
+  "unified_id": "UC-OBJ-0203",
+  "registry_id": "proj-141",
+  "field": "gla",
+  "classifier": 55698.8608,
+  "registry": 17873
+ },
+ {
+  "name": "Lavin",
+  "unified_id": "UC-OBJ-0203",
+  "registry_id": "proj-141",
+  "field": "cls",
+  "classifier": "А",
+  "registry": "A"
+ },
+ {
+  "name": "Lavin",
+  "unified_id": "UC-OBJ-0203",
+  "registry_id": "proj-141",
+  "field": "address",
+  "classifier": "Ильменский проезд, земельный участок 13/8",
+  "registry": "г. Москва, Ильменский пр-д, 13/8"
+ },
+ {
+  "name": "Level Воронцовская",
+  "unified_id": "UC-OBJ-0083",
+  "registry_id": "proj-144",
+  "field": "developer",
+  "classifier": "Level Group",
+  "registry": "Level"
+ },
+ {
+  "name": "Level Воронцовская",
+  "unified_id": "UC-OBJ-0083",
+  "registry_id": "proj-144",
+  "field": "address",
+  "classifier": "Академика Семенихина ул., 2",
+  "registry": "Москва, ул. Академика Семинихина,вл. 2"
+ },
+ {
+  "name": "Level Южнопортовая",
+  "unified_id": "UC-OBJ-0177",
+  "registry_id": "proj-146",
+  "field": "developer",
+  "classifier": "Level Group",
+  "registry": "Level"
+ },
+ {
+  "name": "Level Южнопортовая",
+  "unified_id": "UC-OBJ-0177",
+  "registry_id": "proj-146",
+  "field": "gba",
+  "classifier": 3097.0,
+  "registry": 2295
+ },
+ {
+  "name": "Level Южнопортовая",
+  "unified_id": "UC-OBJ-0177",
+  "registry_id": "proj-146",
+  "field": "cls",
+  "classifier": "А",
+  "registry": "B+"
+ },
+ {
+  "name": "Level Южнопортовая",
+  "unified_id": "UC-OBJ-0177",
+  "registry_id": "proj-146",
+  "field": "address",
+  "classifier": "ЖК Левел Южнопортовая, 4",
+  "registry": "Москва, ул. Южнопортовая, 4"
+ },
+ {
+  "name": "Light City",
+  "unified_id": "UC-OBJ-0099",
+  "registry_id": "proj-147",
+  "field": "developer",
+  "classifier": "Проспект",
+  "registry": "АО «Проспект»"
+ },
+ {
+  "name": "Mind",
+  "unified_id": "UC-OBJ-0151",
+  "registry_id": "proj-152",
+  "field": "gba",
+  "classifier": 33000.0,
+  "registry": 33289
+ },
+ {
+  "name": "Mind",
+  "unified_id": "UC-OBJ-0151",
+  "registry_id": "proj-152",
+  "field": "address",
+  "classifier": "г. Москва, ул. Серегина вл.5-7",
+  "registry": "Москва, ул. Серегина, 5-7"
+ },
+ {
+  "name": "Mount",
+  "unified_id": "UC-OBJ-0206",
+  "registry_id": "proj-153",
+  "field": "gla",
+  "classifier": 30160.8384,
+  "registry": 28187
+ },
+ {
+  "name": "Nevsky Plaza",
+  "unified_id": "UC-OBJ-0717",
+  "registry_id": "proj-155",
+  "field": "gla",
+  "classifier": 17000.0,
+  "registry": 13158
+ },
+ {
+  "name": "Nevsky Plaza",
+  "unified_id": "UC-OBJ-0717",
+  "registry_id": "proj-155",
+  "field": "cls",
+  "classifier": "В+",
+  "registry": "B+"
+ },
+ {
+  "name": "Nevsky Plaza",
+  "unified_id": "UC-OBJ-0717",
+  "registry_id": "proj-155",
+  "field": "address",
+  "classifier": "Выборгская ул., 18с1",
+  "registry": "Москва, ул. Выборгская, 18"
+ },
+ {
+  "name": "Солид (бывший — Nice Tower)",
+  "unified_id": "UC-OBJ-0081",
+  "registry_id": "proj-158",
+  "field": "gla",
+  "classifier": 19500.0,
+  "registry": 15336
+ },
+ {
+  "name": "Солид (бывший — Nice Tower)",
+  "unified_id": "UC-OBJ-0081",
+  "registry_id": "proj-158",
+  "field": "address",
+  "classifier": "Скотопрогонная ул. 31Ас1",
+  "registry": "Скотопрогонная ул, 31, Москва"
+ },
+ {
+  "name": "NOON",
+  "unified_id": "UC-OBJ-0094",
+  "registry_id": "proj-159",
+  "field": "gba",
+  "classifier": 16400.0,
+  "registry": 16471
+ },
+ {
+  "name": "NOON",
+  "unified_id": "UC-OBJ-0094",
+  "registry_id": "proj-159",
+  "field": "gla",
+  "classifier": 13277.44,
+  "registry": 10198
+ },
+ {
+  "name": "NOON",
+  "unified_id": "UC-OBJ-0094",
+  "registry_id": "proj-159",
+  "field": "address",
+  "classifier": "Окская ул., вл. 9",
+  "registry": "Москва, ул. Окская, вл. 9"
+ },
+ {
+  "name": "Omni Tower",
+  "unified_id": "UC-OBJ-0209",
+  "registry_id": "proj-161",
+  "field": "address",
+  "classifier": "Алексея Свиридова, 7",
+  "registry": "Москва, ул. Алексея Свиридова, 7"
+ },
+ {
+  "name": "One Tower",
+  "unified_id": "UC-OBJ-0127",
+  "registry_id": "proj-164",
+  "field": "gba",
+  "classifier": 294000.0,
+  "registry": 281608
+ },
+ {
+  "name": "One Tower",
+  "unified_id": "UC-OBJ-0127",
+  "registry_id": "proj-164",
+  "field": "gla",
+  "classifier": 65000.0,
+  "registry": 56000
+ },
+ {
+  "name": "One Tower",
+  "unified_id": "UC-OBJ-0127",
+  "registry_id": "proj-164",
+  "field": "address",
+  "classifier": "1-й Красногвардейский проезд, 13",
+  "registry": "г. Москва, 1-ый Красногвардейский пр-д, 13"
+ },
+ {
+  "name": "Opus",
+  "unified_id": "UC-OBJ-0082",
+  "registry_id": "proj-165",
+  "field": "developer",
+  "classifier": "Пионер",
+  "registry": "ГК Пионер"
+ },
+ {
+  "name": "Opus",
+  "unified_id": "UC-OBJ-0082",
+  "registry_id": "proj-165",
+  "field": "gba",
+  "classifier": 36800.0,
+  "registry": 34493
+ },
+ {
+  "name": "Opus",
+  "unified_id": "UC-OBJ-0082",
+  "registry_id": "proj-165",
+  "field": "address",
+  "classifier": "Дербеневская набережная, 1",
+  "registry": "Дербеневская улица, 1"
+ },
+ {
+  "name": "Orbital-2",
+  "unified_id": "UC-OBJ-0104",
+  "registry_id": "proj-168",
+  "field": "gba",
+  "classifier": 50211.0,
+  "registry": 57967
+ },
+ {
+  "name": "Orbital-2",
+  "unified_id": "UC-OBJ-0104",
+  "registry_id": "proj-168",
+  "field": "gla",
+  "classifier": 40650.8256,
+  "registry": 39667
+ },
+ {
+  "name": "QOOB",
+  "unified_id": "UC-OBJ-0056",
+  "registry_id": "proj-171",
+  "field": "developer",
+  "classifier": "Доминанта",
+  "registry": "Dominanta"
+ },
+ {
+  "name": "QOOB",
+  "unified_id": "UC-OBJ-0056",
+  "registry_id": "proj-171",
+  "field": "gba",
+  "classifier": 21450.0,
+  "registry": 21485
+ },
+ {
+  "name": "QOOB",
+  "unified_id": "UC-OBJ-0056",
+  "registry_id": "proj-171",
+  "field": "address",
+  "classifier": "Свиридова ул., 9/3 и 17",
+  "registry": "Алексея Свиридовая ул., вл. 17"
+ },
+ {
+  "name": "Rail.A",
+  "unified_id": "UC-OBJ-0168",
+  "registry_id": "proj-173",
+  "field": "gla",
+  "classifier": 11590.0,
+  "registry": 2518
+ },
+ {
+  "name": "Rail.A",
+  "unified_id": "UC-OBJ-0168",
+  "registry_id": "proj-173",
+  "field": "address",
+  "classifier": "г. Москва, Переведеновский пер., вл. 13с11, 12",
+  "registry": "Переведеновский переулок, 13"
+ },
+ {
+  "name": "Manufaqtury Поклонка (Poklonka Place)",
+  "unified_id": "UC-OBJ-ADD-097",
+  "registry_id": "proj-174",
+  "field": "address",
+  "classifier": "Москва, Поклонная улица, дом 3",
+  "registry": "г. Москва, ул. Поклонная, д. 3, корп."
+ },
+ {
+  "name": "Solo",
+  "unified_id": "UC-OBJ-0214",
+  "registry_id": "proj-175",
+  "field": "address",
+  "classifier": "Солженицына, 27",
+  "registry": "Москва, ул. Александра Солженицына, 27"
+ },
+ {
+  "name": "STONE Дмитровская",
+  "unified_id": "UC-OBJ-0683",
+  "registry_id": "proj-177",
+  "field": "gba",
+  "classifier": 49000.0,
+  "registry": 48400
+ },
+ {
+  "name": "STONE Дмитровская",
+  "unified_id": "UC-OBJ-0683",
+  "registry_id": "proj-177",
+  "field": "gla",
+  "classifier": 31000.0,
+  "registry": 30400
+ },
+ {
+  "name": "STONE Дмитровская",
+  "unified_id": "UC-OBJ-0683",
+  "registry_id": "proj-177",
+  "field": "address",
+  "classifier": "Дмитровский пр-д, вл. 1Г",
+  "registry": "Москва, Дмитровский проезд, вл. 1г"
+ },
+ {
+  "name": "STONE Курская",
+  "unified_id": "UC-OBJ-0060",
+  "registry_id": "proj-181",
+  "field": "gba",
+  "classifier": 15600.0,
+  "registry": 15700
+ },
+ {
+  "name": "STONE Курская",
+  "unified_id": "UC-OBJ-0060",
+  "registry_id": "proj-181",
+  "field": "gla",
+  "classifier": 12629.76,
+  "registry": 10900
+ },
+ {
+  "name": "STONE Курская",
+  "unified_id": "UC-OBJ-0060",
+  "registry_id": "proj-181",
+  "field": "cls",
+  "classifier": "A",
+  "registry": "Prime"
+ },
+ {
+  "name": "STONE Курская",
+  "unified_id": "UC-OBJ-0060",
+  "registry_id": "proj-181",
+  "field": "address",
+  "classifier": "Костомаровский пер, д. 11, стр. 1",
+  "registry": "Костомаровский пер., 11, стр. 1"
+ },
+ {
+  "name": "STONE Ленинский",
+  "unified_id": "UC-OBJ-0073",
+  "registry_id": "proj-184",
+  "field": "address",
+  "classifier": "ул. Вавилова, вл. 11, 13а",
+  "registry": "Москва, ул. Вавилова, 11"
+ },
+ {
+  "name": "Apollax Space (Новосущевский)",
+  "unified_id": "UC-OBJ-ADD-077",
+  "registry_id": "proj-186",
+  "field": "address",
+  "classifier": "ул. Сущёвский Вал, 18",
+  "registry": "Сущевский вал 18"
+ },
+ {
+  "name": "Apollax Space (Останкино)",
+  "unified_id": "UC-OBJ-ADD-076",
+  "registry_id": "proj-190",
+  "field": "address",
+  "classifier": "Огородный пр., 16/1с2",
+  "registry": "Огородный проезд, вл 16 стр.4"
+ },
+ {
+  "name": "STONE Римская",
+  "unified_id": "UC-OBJ-0116",
+  "registry_id": "proj-192",
+  "field": "gba",
+  "classifier": 72100,
+  "registry": 85900
+ },
+ {
+  "name": "STONE Римская",
+  "unified_id": "UC-OBJ-0116",
+  "registry_id": "proj-192",
+  "field": "gla",
+  "classifier": 49500.0,
+  "registry": 51200
+ },
+ {
+  "name": "STONE Римская",
+  "unified_id": "UC-OBJ-0116",
+  "registry_id": "proj-192",
+  "field": "address",
+  "classifier": "Москва, ул. Золоторожский Вал, вл. 11А/1",
+  "registry": "Москва, ул. Золоторожский Вал, 11А/1"
+ },
+ {
+  "name": "Apollax Space (Технопарк)",
+  "unified_id": "UC-OBJ-ADD-075",
+  "registry_id": "proj-193",
+  "field": "address",
+  "classifier": "Проспект Андропова, 10",
+  "registry": "Проспект Андровпова 10"
+ },
+ {
+  "name": "Apollax Space (Новослободская)",
+  "unified_id": "UC-OBJ-ADD-078",
+  "registry_id": "proj-195",
+  "field": "address",
+  "classifier": "Новослободская ул., 16",
+  "registry": "Новослободская улица 16"
+ },
+ {
+  "name": "Apollax Space (Кузнецкий Мост)",
+  "unified_id": "UC-OBJ-ADD-085",
+  "registry_id": "proj-198",
+  "field": "address",
+  "classifier": "Москва, Кузнецкий Мост, дом 13/9, строение 1",
+  "registry": "Кузнецкий мост 13"
+ },
+ {
+  "name": "Taller",
+  "unified_id": "UC-OBJ-0046",
+  "registry_id": "proj-201",
+  "field": "gba",
+  "classifier": 37500.0,
+  "registry": 46134
+ },
+ {
+  "name": "Twist",
+  "unified_id": "UC-OBJ-0088",
+  "registry_id": "proj-205",
+  "field": "developer",
+  "classifier": "Sminex",
+  "registry": "Sminex-Интеко"
+ },
+ {
+  "name": "Twist",
+  "unified_id": "UC-OBJ-0088",
+  "registry_id": "proj-205",
+  "field": "gba",
+  "classifier": 19000.0,
+  "registry": 19112
+ },
+ {
+  "name": "Twist",
+  "unified_id": "UC-OBJ-0088",
+  "registry_id": "proj-205",
+  "field": "address",
+  "classifier": "Бутырская ул., 1",
+  "registry": "Бутырская ул,, уч1, Москва"
+ },
+ {
+  "name": "Upside Ямская",
+  "unified_id": "UC-OBJ-0370",
+  "registry_id": "proj-208",
+  "field": "gba",
+  "classifier": 29500.0,
+  "registry": 33070
+ },
+ {
+  "name": "Upside Ямская",
+  "unified_id": "UC-OBJ-0370",
+  "registry_id": "proj-208",
+  "field": "gla",
+  "classifier": 23883.2,
+  "registry": 19707
+ },
+ {
+  "name": "Upside Ямская",
+  "unified_id": "UC-OBJ-0370",
+  "registry_id": "proj-208",
+  "field": "address",
+  "classifier": "2-я Ямская ул., вл. 9",
+  "registry": "Москва, ул. 2-я Ямская, 9"
+ },
+ {
+  "name": "Valtri",
+  "unified_id": "UC-OBJ-0163",
+  "registry_id": "proj-209",
+  "field": "gba",
+  "classifier": 35187.0,
+  "registry": 35200
+ },
+ {
+  "name": "Valtri",
+  "unified_id": "UC-OBJ-0163",
+  "registry_id": "proj-209",
+  "field": "cls",
+  "classifier": "A",
+  "registry": "Prime"
+ },
+ {
+  "name": "Valtri",
+  "unified_id": "UC-OBJ-0163",
+  "registry_id": "proj-209",
+  "field": "address",
+  "classifier": "г. Моква, ул. Грузинский Вал, 3с9",
+  "registry": "ул. Грузинский Вал, 3"
+ },
+ {
+  "name": "Бизнес-парк Переделкино",
+  "unified_id": "UC-OBJ-0690",
+  "registry_id": "proj-221",
+  "field": "gla",
+  "classifier": 26717.0,
+  "registry": 26617
+ },
+ {
+  "name": "Бизнес-парк Переделкино",
+  "unified_id": "UC-OBJ-0690",
+  "registry_id": "proj-221",
+  "field": "address",
+  "classifier": "пос. Внуковское, кв-л 9, з/у 1",
+  "registry": "Москва, пос. Внуковское, кв-л 9, з/у 1"
+ },
+ {
+  "name": "БЦ Варшавская",
+  "unified_id": "UC-OBJ-0262",
+  "registry_id": "proj-224",
+  "field": "developer",
+  "classifier": "PIONEER",
+  "registry": "ГК Пионер"
+ },
+ {
+  "name": "БЦ Варшавская",
+  "unified_id": "UC-OBJ-0262",
+  "registry_id": "proj-224",
+  "field": "address",
+  "classifier": "г. Москва, Каширский проезд,25/2",
+  "registry": "г. Москва, Каширский пр-д, 25/2"
+ },
+ {
+  "name": "БЦ Сколковский",
+  "unified_id": "UC-OBJ-0066",
+  "registry_id": "proj-227",
+  "field": "cls",
+  "classifier": "A",
+  "registry": "B+"
+ },
+ {
+  "name": "БЦ Сколковский",
+  "unified_id": "UC-OBJ-0066",
+  "registry_id": "proj-227",
+  "field": "address",
+  "classifier": "Большой бульвар, 40, Инновационный центр Сколково",
+  "registry": "Кулибина ул., д. 8 стр. 1"
+ },
+ {
+  "name": "ВАРСТ",
+  "unified_id": "UC-OBJ-0275",
+  "registry_id": "proj-230",
+  "field": "gla",
+  "classifier": 9738.59744,
+  "registry": 5000
+ },
+ {
+  "name": "ВАРСТ",
+  "unified_id": "UC-OBJ-0275",
+  "registry_id": "proj-230",
+  "field": "address",
+  "classifier": "улица Сущёвский Вал, 43с2, Москва",
+  "registry": "Москва, Сущёвский вал, 43, с 2"
+ },
+ {
+  "name": "Дом Правды",
+  "unified_id": "UC-OBJ-0287",
+  "registry_id": "proj-231",
+  "field": "developer",
+  "classifier": "ГК DARS",
+  "registry": "Metropolis"
+ },
+ {
+  "name": "Дом Правды",
+  "unified_id": "UC-OBJ-0287",
+  "registry_id": "proj-231",
+  "field": "gba",
+  "classifier": 16000.0,
+  "registry": 15845
+ },
+ {
+  "name": "Дом Правды",
+  "unified_id": "UC-OBJ-0287",
+  "registry_id": "proj-231",
+  "field": "gla",
+  "classifier": 12953.6,
+  "registry": 13100
+ },
+ {
+  "name": "Дом Правды",
+  "unified_id": "UC-OBJ-0287",
+  "registry_id": "proj-231",
+  "field": "address",
+  "classifier": "ул. Правды, 24, стр. 2, Москва",
+  "registry": "Москва, ул. Правды, 24"
+ },
+ {
+  "name": "МФК Юг",
+  "unified_id": "UC-OBJ-0709",
+  "registry_id": "proj-234",
+  "field": "gla",
+  "classifier": 24399.0,
+  "registry": 24300
+ },
+ {
+  "name": "Ольховая SKY",
+  "unified_id": "UC-OBJ-0323",
+  "registry_id": "proj-240",
+  "field": "developer",
+  "classifier": "Гранель",
+  "registry": "ГК Гранель"
+ },
+ {
+  "name": "Ольховая SKY",
+  "unified_id": "UC-OBJ-0323",
+  "registry_id": "proj-240",
+  "field": "address",
+  "classifier": "район Коммунарка, квартал 150",
+  "registry": "г. Москва, п. Сосенское"
+ },
+ {
+  "name": "Родина Парк",
+  "unified_id": "UC-OBJ-0122",
+  "registry_id": "proj-241",
+  "field": "gba",
+  "classifier": 30600.0,
+  "registry": 24947
+ },
+ {
+  "name": "Родина Парк",
+  "unified_id": "UC-OBJ-0122",
+  "registry_id": "proj-241",
+  "field": "gla",
+  "classifier": 24000.0,
+  "registry": 16168
+ },
+ {
+  "name": "Родина Парк",
+  "unified_id": "UC-OBJ-0122",
+  "registry_id": "proj-241",
+  "field": "address",
+  "classifier": "г. Москва, ул. Верейская, вл. 12",
+  "registry": "Москва, ул. Верейская, 12"
+ },
+ {
+  "name": "Технопарк Густав",
+  "unified_id": "UC-OBJ-0080",
+  "registry_id": "proj-247",
+  "field": "developer",
+  "classifier": "ПИК",
+  "registry": "Forma"
+ },
+ {
+  "name": "Технопарк Густав",
+  "unified_id": "UC-OBJ-0080",
+  "registry_id": "proj-247",
+  "field": "gba",
+  "classifier": 36284.0,
+  "registry": 56000
+ },
+ {
+  "name": "Технопарк Густав",
+  "unified_id": "UC-OBJ-0080",
+  "registry_id": "proj-247",
+  "field": "gla",
+  "classifier": 28083.816,
+  "registry": 10292
+ },
+ {
+  "name": "Технопарк Густав",
+  "unified_id": "UC-OBJ-0080",
+  "registry_id": "proj-247",
+  "field": "cls",
+  "classifier": "A",
+  "registry": "B+"
+ },
+ {
+  "name": "Технопарк Густав",
+  "unified_id": "UC-OBJ-0080",
+  "registry_id": "proj-247",
+  "field": "address",
+  "classifier": "Москва, Складочная ул., 6с36",
+  "registry": "Складочная ул., 6С36"
+ },
+ {
+  "name": "Цетлин",
+  "unified_id": "UC-OBJ-0360",
+  "registry_id": "proj-249",
+  "field": "gba",
+  "classifier": 27400.0,
+  "registry": 27365
+ },
+ {
+  "name": "Цетлин",
+  "unified_id": "UC-OBJ-0360",
+  "registry_id": "proj-249",
+  "field": "cls",
+  "classifier": "А",
+  "registry": "Prime"
+ },
+ {
+  "name": "Цетлин",
+  "unified_id": "UC-OBJ-0360",
+  "registry_id": "proj-249",
+  "field": "address",
+  "classifier": "г. Москва, улица Неверовского, 10с3",
+  "registry": "ул. Неверовского, 10с3"
+ },
+ {
+  "name": "KORP. Молодежная",
+  "unified_id": "UC-OBJ-0201",
+  "registry_id": "proj-251",
+  "field": "developer",
+  "classifier": "Аквилон",
+  "registry": "Группа Аквилон"
+ },
+ {
+  "name": "Emotion",
+  "unified_id": "UC-OBJ-0194",
+  "registry_id": "proj-262",
+  "field": "developer",
+  "classifier": "Основа",
+  "registry": "ГК Основа"
+ },
+ {
+  "name": "Энтузиаст",
+  "unified_id": "UC-OBJ-0389",
+  "registry_id": "proj-264",
+  "field": "developer",
+  "classifier": "ТЭН",
+  "registry": "Объект Гарант"
+ },
+ {
+  "name": "Энтузиаст",
+  "unified_id": "UC-OBJ-0389",
+  "registry_id": "proj-264",
+  "field": "address",
+  "classifier": "Москва, шоссе Энтузиастов, 12",
+  "registry": "шоссе Энтузиастов, 12"
+ },
+ {
+  "name": "Level Нижегородская",
+  "unified_id": "UC-OBJ-0204",
+  "registry_id": "proj-267",
+  "field": "developer",
+  "classifier": "Level Group",
+  "registry": "Level"
+ },
+ {
+  "name": "Level Нижегородская",
+  "unified_id": "UC-OBJ-0204",
+  "registry_id": "proj-267",
+  "field": "cls",
+  "classifier": "B+",
+  "registry": "A"
+ },
+ {
+  "name": "SEZAR TOWER",
+  "unified_id": "UC-OBJ-0213",
+  "registry_id": "proj-268",
+  "field": "cls",
+  "classifier": "A",
+  "registry": "Prime"
+ },
+ {
+  "name": "SEZAR TOWER",
+  "unified_id": "UC-OBJ-0213",
+  "registry_id": "proj-268",
+  "field": "address",
+  "classifier": "г. Москва, Краснопресненская наб., уч. 4",
+  "registry": "1-й Красногвардейский пр-д, уч. 20"
+ },
+ {
+  "name": "DIUS",
+  "unified_id": "UC-OBJ-0192",
+  "registry_id": "proj-269",
+  "field": "gba",
+  "classifier": 65140.0,
+  "registry": 19025
+ },
+ {
+  "name": "DIUS",
+  "unified_id": "UC-OBJ-0192",
+  "registry_id": "proj-269",
+  "field": "gla",
+  "classifier": 52737.344,
+  "registry": 12500
+ },
+ {
+  "name": "DIUS",
+  "unified_id": "UC-OBJ-0192",
+  "registry_id": "proj-269",
+  "field": "cls",
+  "classifier": "А",
+  "registry": "A"
+ },
+ {
+  "name": "Dream Riva",
+  "unified_id": "UC-OBJ-0087",
+  "registry_id": "proj-276",
+  "field": "gba",
+  "classifier": 18500.0,
+  "registry": 22751.0
+ },
+ {
+  "name": "Dream Riva",
+  "unified_id": "UC-OBJ-0087",
+  "registry_id": "proj-276",
+  "field": "address",
+  "classifier": "Проспект Андропова",
+  "registry": "просп. Андропова, 11Г"
+ },
+ {
+  "name": "Деловой дуэт",
+  "unified_id": "UC-OBJ-0053",
+  "registry_id": "proj-277",
+  "field": "address",
+  "classifier": "Шумкина ул., 14с13",
+  "registry": "Шумкина ул., 14с5, с13"
+ },
+ {
+  "name": "Бизнес-хаб Потапово",
+  "unified_id": "UC-OBJ-0238",
+  "registry_id": "proj-278",
+  "field": "developer",
+  "classifier": "А101",
+  "registry": "A101"
+ },
+ {
+  "name": "ЗИЛАРТ GRAND (Дом 18)",
+  "unified_id": "UC-OBJ-0640",
+  "registry_id": "remain-only-0002",
+  "field": "gba",
+  "classifier": 187706.0,
+  "registry": 35600
+ },
+ {
+  "name": "Moscow Towers",
+  "unified_id": "UC-OBJ-0021",
+  "registry_id": "remain-only-0004",
+  "field": "developer",
+  "classifier": "Гранд Сити",
+  "registry": "ООО «Гранд Сити»"
+ },
+ {
+  "name": "Moscow Towers",
+  "unified_id": "UC-OBJ-0021",
+  "registry_id": "remain-only-0004",
+  "field": "gba",
+  "classifier": 400000.0,
+  "registry": 411147
+ },
+ {
+  "name": "DM Tower",
+  "unified_id": "UC-OBJ-0003",
+  "registry_id": "cwhost-0041",
+  "field": "address",
+  "classifier": "Новоданиловская наб., 12",
+  "registry": "Новоданиловская наб., 10А"
+ },
+ {
+  "name": "AFI Gallery",
+  "unified_id": "UC-OBJ-ADD-136",
+  "registry_id": "cwhost-hist-4b033613e3",
+  "field": "address",
+  "classifier": "Москва, ул. Академика Челомея, 1А (бизнес-центр AFI Park Воронцовский, Обручевский район)",
+  "registry": "пл. Тверская Застава, 3"
+ },
+ {
+  "name": "Поле (Башня А)",
+  "unified_id": "UC-OBJ-0328",
+  "registry_id": "pole",
+  "field": "address",
+  "classifier": "Ленинградский просп., 37Б, Москва",
+  "registry": "Ленинградский просп., 37Б"
+ },
+ {
+  "name": "Поле (Башня Б)",
+  "unified_id": "UC-OBJ-ADD-019",
+  "registry_id": "pole",
+  "field": "address",
+  "classifier": "Ленинградский просп., 37Б, Москва",
+  "registry": "Ленинградский просп., 37Б"
+ },
+ {
+  "name": "STONE Towers E",
+  "unified_id": "UC-OBJ-0381",
+  "registry_id": "proj-285",
+  "field": "address",
+  "classifier": "г. Москва,ул. Нижняя Масловка, 3",
+  "registry": "Москва, Белорусско-Савёловский деловой кластер, рядом с ТТК"
+ }
+]
