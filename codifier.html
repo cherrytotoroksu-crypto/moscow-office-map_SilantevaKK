@@ -1665,9 +1665,21 @@ function uniqueCount(rows, keyFn) {
 // выше), и каждая непустая формула начинается с явной метки сегмента.
 // Официальный контрольный итог Q2 (Golden File) — показываем рядом с расчётом
 // по строкам данных: методики разные, расчёт по зданиям/лотам с ним не равен.
-function goldenSaleNote() {
+// Ср.взв. цена продажи по рынку: официальная цифра Golden File (507 000 за Q2
+// 2026), если она есть для квартала; иначе расчёт по строкам данных.
+function salePriceTotal(computed, shownRows) {
   const g = goldenReferenceCache[currentQuarterId];
-  return g && g.sale ? ` · Golden File (контрольно): ${fmtNum(g.sale.available_area_sqm)} м², ср.взв. цена ${fmtNum(g.sale.weighted_price_rub_per_sqm)} руб/м²` : '';
+  const wholeMarket = shownRows == null || shownRows === (state[currentView]?.rows || []).length;
+  // Golden — итог по всему рынку: при фильтрации выборки показываем расчёт по ней.
+  if (wholeMarket && g && g.sale && g.sale.weighted_price_rub_per_sqm != null) {
+    return `Ср.взв. цена (Golden File): ${fmtNum(g.sale.weighted_price_rub_per_sqm)} руб/м²`;
+  }
+  return `Ср.взв. цена по данным: ${fmtNum(computed)}`;
+}
+function goldenAreaNote(shownRows) {
+  const g = goldenReferenceCache[currentQuarterId];
+  const wholeMarket = shownRows == null || shownRows === (state[currentView]?.rows || []).length;
+  return wholeMarket && g && g.sale ? ` · Golden File (контрольно): площадь ${fmtNum(g.sale.available_area_sqm)} м²` : '';
 }
 function goldenRentNote() {
   const g = goldenReferenceCache[currentQuarterId];
@@ -1697,7 +1709,7 @@ function computeTotals(view, rows) {
     const weighted = priceRows.length ? priceRows.reduce((s,r)=>s+r.price*r.volume,0) / priceRows.reduce((s,r)=>s+r.volume,0) : null;
     return prefix + `Уникальных проектов: ${fmtNum(projects)} · Зданий: ${rows.length} · Лотов (сумма): ${fmtNum(lots.sum)} · `
       + `GLA зданий (сумма по ${gla.n} из ${rows.length}): ${fmtSum(gla)} м² · GBA (справочно): ${fmtSum(gba)} м² · `
-      + `Площадь лотов в продаже (сумма): ${fmtNum(volume.sum)} м² · Ср.взв. цена по данным зданий: ${fmtNum(weighted)}${goldenSaleNote()}`;
+      + `Площадь лотов в продаже (сумма): ${fmtNum(volume.sum)} м² · ${salePriceTotal(weighted, rows.length)}${goldenAreaNote(rows.length)}`;
   }
   if (view === 'sale_developers') {
     const gla = sumField(rows, 'glaSum');
@@ -1714,12 +1726,9 @@ function computeTotals(view, rows) {
     const total = sumField(rows, 'total');
     const weighted = total.sum && area.sum ? total.sum / area.sum : null;
     const golden = goldenReferenceCache[currentQuarterId];
-    const goldenNote = golden && golden.sale
-      ? ` · Golden File (контрольно): ${fmtNum(golden.sale.available_area_sqm)} м², ${fmtNum(golden.sale.weighted_price_rub_per_sqm)} руб/м²`
-      : '';
     return prefix + `Лотов: ${rows.length}${flagged ? ` (из них ${flagged} флаг ⚠ подозрение на агрегат)` : ''} · Зданий (уникальных): ${buildings} · `
       + `Площадь лотов по данным (сумма, без исключений): ${fmtNum(area.sum)} м² · `
-      + `Стоимость (сумма): ${fmtNum(total.sum)} · Ср.взв. цена по данным: ${fmtNum(weighted)}${goldenNote}`;
+      + `Стоимость (сумма): ${fmtNum(total.sum)} · ${salePriceTotal(weighted, rows.length)}${goldenAreaNote(rows.length)}`;
   }
   if (view === 'rent_buildings') {
     const gla = sumField(rows, 'reg_gla');
