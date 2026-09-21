@@ -7912,15 +7912,5 @@
     "matched_project_id": null,
     "match_basis": "manual web verification (user-requested classifier addition, 2026-09-17)",
     "coord_corroborated": false
-  },
-  {
-    "unified_id": "UC-OBJ-ADD-355",
-    "canonical_no": null,
-    "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
-    "address": "Берзарина ул., вл. 32/4",
-    "status": "new_record",
-    "matched_project_id": null,
-    "match_basis": "created from data/buildings_202606.json (2026-09-19)",
-    "coord_corroborated": false
   }
 ]

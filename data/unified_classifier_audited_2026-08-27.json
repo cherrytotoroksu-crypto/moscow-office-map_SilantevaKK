@@ -1573,7 +1573,7 @@
       "unified_id": "UC-OBJ-0315",
       "source_id": "OBJ-0315",
       "name": "На Берзарина",
-      "address": "Берзарина ул., 32",
+      "address": "Берзарина ул., 32, стр. 4",
       "developer": "РГ-Девелопмент",
       "gba": 11894.0,
       "gla": 7372.0,
@@ -1581,9 +1581,9 @@
       "commission_year": 2024,
       "commission_quarter": 4,
       "status": "Сданный",
-      "latitude": 55.789725,
-      "longitude": 37.471039,
-      "coordinates_status": "unverified",
+      "latitude": 55.790762,
+      "longitude": 37.472216,
+      "coordinates_status": "geocoded_yandex_house",
       "legacy_ids": [
         "proj-57",
         "proj-237"
@@ -1593,7 +1593,8 @@
         "202410",
         "202412",
         "202503",
-        "202506"
+        "202506",
+        "202606"
       ],
       "market_channel": [
         "sale"
@@ -1603,11 +1604,15 @@
       "layer_source": "classifier.html",
       "layer_source_date": "2026-07-31",
       "layer_qa_notes": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py.",
-      "source_links": [],
+      "source_links": [
+        "https://berzarina32.ru/",
+        "https://kf.expert/office/business-center/oktyabrskoe-pole-os47929",
+        "https://rg-dev.ru/press/news/2022/798/"
+      ],
       "verification_status": "Проверено",
       "confidence": "Средний",
       "entity_type": "office_project_candidate",
-      "classification_note": "2026-09-17: UC-OBJ-ADD-180 удалён как дубль этой записи (На берзарина / На Берзарина). 2026-09-17: UC-OBJ-ADD-235 удалён как дубль этой записи (Октябрьское поле (бывший ...) / На Берзарина — сама запись помечена как прежнее название этого же здания).",
+      "classification_note": "2026-09-17: UC-OBJ-ADD-180 удалён как дубль этой записи (На берзарина / На Берзарина). 2026-09-17: UC-OBJ-ADD-235 удалён как дубль этой записи (Октябрьское поле (бывший ...) / На Берзарина — сама запись помечена как прежнее название этого же здания). 2026-09-21: запись «Октябрьское поле» (UC-OBJ-ADD-355) добавлена ошибочно как новая — это то же здание (БЦ «Технопарк Октябрьское поле», Берзарина ул., 32, стр. 4, РГ-Девелопмент, GBA 11 894); слита сюда, единый ID проекта 237. Координаты уточнены по адресу (Яндекс.Геокодер, уровень дома): прежняя точка стояла ~150 м юго-западнее здания.",
       "needs_review": false,
       "review_reason": null,
       "canonical_no": 35,
@@ -1615,11 +1620,16 @@
       "geo_raion": "Щукино",
       "geo_zone": "ТТК-МКАД",
       "geo_submarket": "ТТК-МКАД Запад",
-      "geo_bizFormed": null,
-      "geo_bizForming": null,
-      "canonical_project_id": "296",
+      "geo_bizFormed": "",
+      "geo_bizForming": "",
+      "canonical_project_id": "237",
       "subid": "01",
-      "project_name": "На Берзарина"
+      "project_name": "На Берзарина",
+      "aliases": [
+        "Октябрьское поле",
+        "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
+        "Технопарк Октябрьское поле"
+      ]
     },
     {
       "unified_id": "UC-OBJ-0601",
@@ -41862,7 +41872,7 @@
       "canonical_no": null,
       "subid": "01",
       "tower_label": "",
-      "canonical_project_id": "863",
+      "canonical_project_id": "296",
       "geo_ao": "Новомосковский",
       "geo_raion": "Марушкинское",
       "geo_zone": "за МКАД",
@@ -41871,53 +41881,6 @@
       "geo_bizForming": null,
       "project_name": "МФК Крёкшино",
       "registry_project_id": "proj-add-krekshino-20260917"
-    },
-    {
-      "unified_id": "UC-OBJ-ADD-355",
-      "source_id": "buildings_202606-237",
-      "canonical_project_id": "237",
-      "subid": "01",
-      "name": "Октябрьское поле (бывший — Общественно-деловой центр \"Октябрьское поле\")",
-      "project_name": "Октябрьское поле",
-      "aliases": [
-        "Общественно-деловой центр «Октябрьское поле»"
-      ],
-      "address": "Берзарина ул., вл. 32/4",
-      "developer": "РГ-Девелопмент",
-      "gba": 11894,
-      "gla": 7315,
-      "cls": "A",
-      "commission_year": 2024,
-      "commission_quarter": null,
-      "status": "Введён",
-      "latitude": 55.789725,
-      "longitude": 37.471039,
-      "coordinates_status": "from_quarterly_buildings",
-      "legacy_ids": [],
-      "quarter_offer_refs": [
-        "202606"
-      ],
-      "market_channel": [
-        "sale"
-      ],
-      "layer_status": null,
-      "layer_offer_status": null,
-      "layer_source": "buildings_202606",
-      "layer_source_date": "2026-06-30",
-      "layer_qa_notes": null,
-      "source_links": [],
-      "verification_status": "Запись создана из квартального файла продаж (data/buildings_202606.json): в кодификаторе отсутствовала, хотя присутствует в таблице «Продажа офисов». Независимая веб-проверка не проводилась.",
-      "confidence": "Средний",
-      "entity_type": "office_project_candidate",
-      "needs_review": true,
-      "review_reason": "added_from_quarterly_buildings",
-      "classification_note": "2026-09-19: добавлено для синхронизации кодификатора с таблицей «Продажа офисов» (тот же ID проекта 237). Площади, класс, девелопер и год ввода взяты из квартального файла.",
-      "geo_ao": "Северо-Западный",
-      "geo_raion": "Щукино",
-      "geo_zone": "ТТК-МКАД",
-      "geo_submarket": "ТТК-МКАД Запад",
-      "geo_bizFormed": "",
-      "geo_bizForming": ""
     }
   ]
 }

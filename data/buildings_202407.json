@@ -777,8 +777,8 @@
   {
     "name": "На Берзарина",
     "name_orig": "На Берзарина",
-    "lat": 55.789725,
-    "lng": 37.471039,
+    "lat": 55.790762,
+    "lng": 37.472216,
     "volume": 12000.0,
     "price": 350000,
     "cls": "A",
@@ -797,7 +797,7 @@
     "weight": 0,
     "id": 57,
     "unified_id": null,
-    "canonical_project_id": "296",
+    "canonical_project_id": "237",
     "subid": "01"
   },
   {
