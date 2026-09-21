@@ -3146,14 +3146,6 @@
     "reason": "no active quarterly market_channel"
   },
   {
-    "unified_id": "UC-OBJ-0366",
-    "canonical_no": 452,
-    "name": "Магистральная 12",
-    "address": "г. Москва, 5-я Магистральная ул., 4, стр. 9",
-    "status": "excluded_from_quarterly_layer",
-    "reason": "no active quarterly market_channel"
-  },
-  {
     "unified_id": "UC-OBJ-0522",
     "canonical_no": 453,
     "name": "Малая Сухаревская площадь, дом 5",

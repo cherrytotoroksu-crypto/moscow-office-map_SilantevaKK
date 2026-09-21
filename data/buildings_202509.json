@@ -1566,7 +1566,9 @@
     "id": 99,
     "name_orig": "Магистральная 12",
     "lots": 0,
-    "unified_id": null
+    "unified_id": null,
+    "canonical_project_id": "332",
+    "subid": "01"
   },
   {
     "name": "Башня Власов",
