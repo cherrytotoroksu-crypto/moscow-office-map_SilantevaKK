@@ -419,6 +419,8 @@
     }
     .coord-copy-btn:hover { background: #eee; }
     .coord-copy-btn.copied { background: #dcfce7; border-color: #86efac; }
+    .radius-label { background: #2563eb; color: #fff; font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; border: none; box-shadow: 0 1px 3px rgba(0,0,0,.3); white-space: nowrap; }
+    .radius-label::before { display: none; }
   </style>
 </head>
 <body>
@@ -661,7 +663,10 @@
 
   <hr>
   <h3>Рисование и выгрузка</h3>
+  <label class="check-row"><input type="checkbox" id="ovRuler"> Линейка (расстояние)</label>
+  <div id="rulerStatus" style="font-size:11px;color:#777;margin:2px 0 4px;"></div>
   <label class="check-row"><input type="checkbox" id="ovDraw"> Режим рисования</label>
+  <div style="font-size:10.5px;color:#999;margin:-2px 0 4px;">Полигон или круг — круг выгружает объекты в заданном радиусе.</div>
   <button class="upload-btn" id="exportGeo" style="margin-top:5px; display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгрузить GeoJSON</button>
   <button class="upload-btn" id="exportXlsx" style="margin-top:4px; background:#C9525E; display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгрузить Excel</button>
   <button class="upload-btn" id="openDrawnDynamics" style="margin-top:4px; background:var(--nf-navy); display:flex; align-items:center; justify-content:center; gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>Сравнить область по кварталам</button>
@@ -3830,15 +3835,83 @@ document.getElementById('lotsModalDownload').addEventListener('click', async fun
 });
 
 // ============================================================
+//  ЛИНЕЙКА — измерение расстояния кликами по карте
+// ============================================================
+const rulerLayer = new L.FeatureGroup();
+let rulerPoints = [];
+let rulerActive = false;
+
+function fmtDist(m) {
+  return m >= 1000 ? (m / 1000).toLocaleString('ru-RU', { maximumFractionDigits: 2 }) + ' км'
+                    : Math.round(m) + ' м';
+}
+
+function rulerRedraw() {
+  rulerLayer.clearLayers();
+  if (!rulerPoints.length) {
+    document.getElementById('rulerStatus').textContent = 'Кликай по карте, чтобы измерить расстояние. Двойной клик — закончить.';
+    return;
+  }
+  rulerPoints.forEach(p => L.circleMarker(p, { radius: 4, color: '#2563eb', weight: 2, fillOpacity: 1 }).addTo(rulerLayer));
+  let total = 0;
+  for (let i = 1; i < rulerPoints.length; i++) {
+    const seg = map.distance(rulerPoints[i - 1], rulerPoints[i]);
+    total += seg;
+    L.polyline([rulerPoints[i - 1], rulerPoints[i]], { color: '#2563eb', weight: 2, dashArray: '6 4' }).addTo(rulerLayer);
+  }
+  if (rulerPoints.length > 1) {
+    L.marker(rulerPoints[rulerPoints.length - 1], {
+      icon: L.divIcon({ className: 'radius-label', html: `<div>${fmtDist(total)}</div>`, iconSize: [0, 0] })
+    }).addTo(rulerLayer);
+  }
+  document.getElementById('rulerStatus').textContent = rulerPoints.length > 1
+    ? `Расстояние: ${fmtDist(total)} (точек: ${rulerPoints.length}) · двойной клик — сброс`
+    : 'Кликни вторую точку.';
+}
+
+function rulerOnClick(e) { rulerPoints.push(e.latlng); rulerRedraw(); }
+function rulerOnDblClick(e) {
+  L.DomEvent.stop(e);
+  rulerPoints = [];
+  rulerRedraw();
+}
+
+document.getElementById('ovRuler').addEventListener('change', function() {
+  rulerActive = this.checked;
+  if (rulerActive) {
+    map.addLayer(rulerLayer);
+    map.on('click', rulerOnClick);
+    map.on('dblclick', rulerOnDblClick);
+    map.doubleClickZoom.disable();
+    rulerRedraw();
+  } else {
+    map.off('click', rulerOnClick);
+    map.off('dblclick', rulerOnDblClick);
+    map.doubleClickZoom.enable();
+    map.removeLayer(rulerLayer);
+    rulerPoints = [];
+    document.getElementById('rulerStatus').textContent = '';
+  }
+});
+
+// ============================================================
 //  РИСОВАНИЕ РАЙОНОВ (обводилка) + выгрузка GeoJSON / Excel
 // ============================================================
 const drawnItems = new L.FeatureGroup();
 let drawControl = null;
 
 function updateDrawStatus() {
-  const n = drawnItems.getLayers().length;
-  document.getElementById('drawStatus').textContent =
-    n ? `Нарисовано полигонов: ${n}` : 'Включи режим, обведи область — потом выгрузи.';
+  const layers = drawnItems.getLayers();
+  const circles = layers.filter(l => l instanceof L.Circle);
+  const polys = layers.length - circles.length;
+  if (!layers.length) {
+    document.getElementById('drawStatus').textContent = 'Включи режим, обведи область или нарисуй круг — потом выгрузи.';
+    return;
+  }
+  const parts = [];
+  if (polys) parts.push(`полигонов: ${polys}`);
+  if (circles.length) parts.push(`кругов: ${circles.length} (${circles.map(c => fmtDist(c.getRadius())).join(', ')})`);
+  document.getElementById('drawStatus').textContent = 'Нарисовано — ' + parts.join(', ');
 }
 
 let drawEventsBound = false;
@@ -3848,13 +3921,20 @@ document.getElementById('ovDraw').addEventListener('change', async function() {
     if (!drawEventsBound) {
       map.on(L.Draw.Event.CREATED, function(e) {
         const layer = e.layer;
-        const name = prompt('Название области (например, Белорусский):', '');
-        if (name === null) return;
-        layer.feature = { type: 'Feature', properties: { name: name || '' } };
-        layer.bindTooltip(name || '—', { sticky: true });
+        if (layer instanceof L.Circle) {
+          const name = prompt('Название точки отсчёта (необязательно):', '') || '';
+          layer.feature = { type: 'Feature', properties: { name, radius: Math.round(layer.getRadius()) } };
+          layer.bindTooltip(`${name ? name + ' · ' : ''}R = ${fmtDist(layer.getRadius())}`, { sticky: true, permanent: true, direction: 'top', className: 'radius-label' });
+        } else {
+          const name = prompt('Название области (например, Белорусский):', '');
+          if (name === null) return;
+          layer.feature = { type: 'Feature', properties: { name: name || '' } };
+          layer.bindTooltip(name || '—', { sticky: true });
+        }
         drawnItems.addLayer(layer);
         updateDrawStatus();
       });
+      map.on(L.Draw.Event.EDITED, updateDrawStatus);
       drawEventsBound = true;
     }
     map.addLayer(drawnItems);
@@ -3862,7 +3942,8 @@ document.getElementById('ovDraw').addEventListener('change', async function() {
       edit: { featureGroup: drawnItems, remove: true },
       draw: {
         polygon: { allowIntersection: false, shapeOptions: { color: '#e11d48', weight: 2 } },
-        polyline: false, rectangle: false, circle: false, marker: false, circlemarker: false
+        circle: { shapeOptions: { color: '#2563eb', weight: 2 } },
+        polyline: false, rectangle: false, marker: false, circlemarker: false
       }
     });
     map.addControl(drawControl);
@@ -3872,24 +3953,24 @@ document.getElementById('ovDraw').addEventListener('change', async function() {
   }
 });
 
-// здания внутри нарисованных полигонов
-function buildingsInDrawn() {
-  const polys = [];
-  drawnItems.eachLayer(l => polys.push(l.toGeoJSON()));
-  if (!polys.length) return null;
-  const inside = buildingsData.filter(b =>
-    isFinite(b.lat) && isFinite(b.lng) &&
-    polys.some(p => pointInFeature(b.lng, b.lat, p)));
-  return inside;
+// точка внутри нарисованной области — полигон (point-in-polygon) ИЛИ круг (расстояние <= радиус)
+function insideAnyDrawn(lat, lng) {
+  for (const l of drawnItems.getLayers()) {
+    if (l instanceof L.Circle) {
+      if (map.distance(l.getLatLng(), L.latLng(lat, lng)) <= l.getRadius()) return true;
+    } else if (pointInFeature(lng, lat, l.toGeoJSON())) return true;
+  }
+  return false;
 }
-// коворкинги внутри нарисованных полигонов
+// здания внутри нарисованных полигонов/кругов
+function buildingsInDrawn() {
+  if (!drawnItems.getLayers().length) return null;
+  return buildingsData.filter(b => isFinite(b.lat) && isFinite(b.lng) && insideAnyDrawn(b.lat, b.lng));
+}
+// коворкинги внутри нарисованных полигонов/кругов
 function coworkingInDrawn() {
-  const polys = [];
-  drawnItems.eachLayer(l => polys.push(l.toGeoJSON()));
-  if (!polys.length) return null;
-  return getFilteredCoworking().filter(c =>
-    isFinite(c.lat) && isFinite(c.lng) &&
-    polys.some(p => pointInFeature(c.lng, c.lat, p)));
+  if (!drawnItems.getLayers().length) return null;
+  return getFilteredCoworking().filter(c => isFinite(c.lat) && isFinite(c.lng) && insideAnyDrawn(c.lat, c.lng));
 }
 // имя файла из названия первого полигона (транслит) + квартал
 function drawnFileBase() {
