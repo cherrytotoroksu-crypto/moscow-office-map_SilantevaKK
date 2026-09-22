@@ -157,6 +157,7 @@
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="sale">Продажа офисов</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="rent">Аренда офисов</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="flex">Гибкие офисы</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bc2gis">БЦ 2ГИС</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</button>
 </div>
 <div class="subtabs" id="viewTabs" role="tablist" aria-label="Вкладки раздела" style="display:none;"></div>
@@ -252,6 +253,7 @@ const SECTIONS = [
   {id:'sale',     label:'Продажа офисов',    views:['sale_buildings','sale_developers','sale_lots']},
   {id:'rent',     label:'Аренда офисов',     views:['rent_buildings','rent_landlords','rent_lots']},
   {id:'flex',     label:'Гибкие офисы',      views:['flex_operators','flex_lots']},
+  {id:'bc2gis',   label:'БЦ 2ГИС',           views:['bc2gis_list']},
 ];
 const VIEWS = {
   codifier:        {section:'codifier', label:'Общий кодификатор'},
@@ -265,6 +267,7 @@ const VIEWS = {
   flex_operators:  {section:'flex',     label:'Операторы и объекты'},
   flex_lots:       {section:'flex',     label:'Все гибкие предложения'},
   compare_segments:{section:'compare',  label:'Сравнение сегментов'},
+  bc2gis_list:     {section:'bc2gis',   label:'Бизнес-центры (2ГИС)'},
 };
 // Пользовательское название — "Сегмент рынка" (не "Канал", технический
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
@@ -638,6 +641,31 @@ const GOLDEN_REPORT_COLUMNS = [
   {key:'metric', label:'Показатель', type:'text', visible:true},
 ];
 
+// БЦ 2ГИС — сырая выгрузка бизнес-центров из 2ГИС (data/bc_2gis_2026-09-23.json,
+// импортирована из бц_2гис.csv), отдельно от кодификатора: это внешний
+// справочник, не сверенный с реестром/классификатором. Сжатый набор колонок
+// в таблице + полная карточка (все поля CSV — телефоны/сайты/соцсети/часы
+// работы/рейтинг) по кнопке "ℹ", как у остальных источников.
+const BC2GIS_COLUMNS = [
+  {key:'name', label:'Название', type:'text', visible:true},
+  {key:'category', label:'Рубрики', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'district', label:'Район', type:'text', visible:true},
+  {key:'rating', label:'Рейтинг', type:'number', visible:true},
+  {key:'reviews_count', label:'Отзывов', type:'number', visible:true},
+  {key:'phone1', label:'Телефон', type:'text', visible:true},
+  {key:'website1', label:'Сайт', type:'text', visible:true},
+  {key:'hours', label:'Часы работы', type:'text', visible:false},
+  {key:'postal_code', label:'Индекс', type:'text', visible:false},
+  {key:'microdistrict', label:'Микрорайон', type:'text', visible:false},
+  {key:'okrug', label:'Округ', type:'text', visible:false},
+  {key:'email', label:'E-mail', type:'text', visible:false},
+  {key:'entry_type', label:'Тип записи (2ГИС)', type:'text', visible:false},
+  {key:'lat', label:'Широта', type:'number', visible:true},
+  {key:'lng', label:'Долгота', type:'number', visible:true},
+  {key:'url_2gis', label:'Ссылка 2ГИС', type:'text', visible:false},
+];
+
 // ============================================================
 //  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для всех вкладок)
 // ============================================================
@@ -713,6 +741,7 @@ const state = {
   flex_lots: makeTableState(FLEX_LOTS_COLUMNS),
   compare_segments: makeTableState(COMPARE_COLUMNS),
   golden_report: makeTableState(GOLDEN_REPORT_COLUMNS),
+  bc2gis_list: makeTableState(BC2GIS_COLUMNS),
 };
 let allProjectsLayer = [];
 // canonical_project_id -> project_name, запечённый в кодификаторе
@@ -1470,6 +1499,20 @@ async function loadGoldenReport() {
   render();
 }
 
+let bc2gisLoaded = false;
+async function loadBc2gis() {
+  if (!bc2gisLoaded) {
+    let data;
+    try { data = await fetchJSON('data/bc_2gis_2026-09-23.json'); }
+    catch (e) { data = {items: [], imported_at: null}; }
+    state.bc2gis_list.rows = data.items;
+    dataMeta.bc2gis_list = {updated: data.imported_at, count: data.items.length};
+    bc2gisLoaded = true;
+  }
+  if (!suppressURLSync) state.bc2gis_list.page = 1;
+  render();
+}
+
 // ============================================================
 //  ФИЛЬТРАЦИЯ / СОРТИРОВКА
 // ============================================================
@@ -1786,13 +1829,14 @@ const VIEW_SOURCE_LABEL = {
   flex_lots: () => `data/coworking_${currentQuarterId}.json`,
   compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
   golden_report: () => 'data/qa/golden_report_full.json (лист "отчет деление А и прайм" из Golden File)',
+  bc2gis_list: () => 'data/bc_2gis_2026-09-23.json (импорт бц_2гис.csv из 2ГИС, не сверено с реестром)',
 };
 
 // Виды, где строка соответствует ровно одной записи общего кодификатора
 // (сама запись либо надёжно joined через canonical_project_id) — там есть
 // смысл в кнопке "Источник и проверка". Агрегаты (девелоперы/арендодатели/
 // операторы) и сравнение сегментов — не привязаны к одной записи, кнопки нет.
-const SOURCE_CARD_VIEWS = new Set(['codifier', 'sale_buildings', 'sale_lots', 'rent_buildings', 'rent_lots', 'flex_lots']);
+const SOURCE_CARD_VIEWS = new Set(['codifier', 'sale_buildings', 'sale_lots', 'rent_buildings', 'rent_lots', 'flex_lots', 'bc2gis_list']);
 
 function render() {
   const ts = state[currentView];
@@ -1929,7 +1973,61 @@ function resolveRegistryRecord(row) {
   return null;
 }
 
+// Полная карточка объекта 2ГИС — все поля исходного CSV, а не только то,
+// что видно в таблице (телефоны/сайты/соцсети/часы работы/рейтинг вынесены
+// сюда, чтобы не раздувать саму таблицу десятком почти всегда пустых колонок).
+function openBc2gisCard(row) {
+  closePanels();
+  const panel = document.createElement('div');
+  panel.className = 'filter-panel source-card';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', 'Карточка объекта 2ГИС');
+  const link = (url) => url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(url)}</a>` : null;
+  const fields = [
+    ['Рубрики', row.category],
+    ['Описание', row.description],
+    ['Адрес', row.address],
+    ['Комментарий к адресу', row.address_comment],
+    ['Почтовый индекс', row.postal_code],
+    ['Микрорайон', row.microdistrict],
+    ['Район', row.district],
+    ['Округ', row.okrug],
+    ['Город / регион', [row.city, row.region].filter(Boolean).join(', ')],
+    ['Часы работы', row.hours],
+    ['Рейтинг', row.rating != null ? `${row.rating} (${row.reviews_count ?? 0} отзывов)` : null],
+    ['Телефон 1', row.phone1], ['Телефон 2', row.phone2], ['Телефон 3', row.phone3],
+    ['E-mail', row.email],
+    ['Сайт 1', link(row.website1)], ['Сайт 2', link(row.website2)], ['Сайт 3', link(row.website3)],
+    ['ВКонтакте', link(row.vk)],
+    ['WhatsApp 1', row.whatsapp1], ['WhatsApp 2', row.whatsapp2],
+    ['Viber', row.viber],
+    ['Telegram 1', row.telegram1], ['Telegram 2', row.telegram2],
+    ['YouTube', link(row.youtube)],
+    ['Координаты', (row.lat != null && row.lng != null) ? `${row.lat}, ${row.lng}` : null],
+    ['Ссылка 2ГИС', link(row.url_2gis)],
+    ['Тип записи (2ГИС)', row.entry_type],
+  ];
+  panel.innerHTML = `<div class="fp-header"><span class="fp-title">${escapeHtml(row.name || 'Объект 2ГИС')}</span><span class="fp-close" id="scClose">×</span></div>`
+    + fields.map(([label, value]) => `<div class="sc-row"><b>${escapeHtml(label)}</b>${value == null || value === '' ? '—' : (typeof value === 'string' && value.startsWith('<a ') ? value : escapeHtml(String(value)))}</div>`).join('');
+  document.body.appendChild(panel);
+  const left = Math.max(8, (window.innerWidth - panel.offsetWidth) / 2);
+  const top = Math.max(8, (window.innerHeight - panel.offsetHeight) / 2);
+  panel.style.left = left + 'px';
+  panel.style.top = top + 'px';
+  function cancel() { closePanels(); }
+  panel.querySelector('#scClose').onclick = cancel;
+  setTimeout(() => {
+    document.addEventListener('click', function onDocClick(ev) {
+      if (!panel.contains(ev.target)) { cancel(); document.removeEventListener('click', onDocClick); }
+    });
+    document.addEventListener('keydown', function onEsc(ev) {
+      if (ev.key === 'Escape') { cancel(); document.removeEventListener('keydown', onEsc); }
+    });
+  }, 0);
+}
+
 function openSourceCard(row) {
+  if (currentView === 'bc2gis_list') return openBc2gisCard(row);
   closePanels();
   const record = resolveRegistryRecord(row);
   const panel = document.createElement('div');
@@ -2583,6 +2681,7 @@ function loadCurrentView() {
     case 'flex_lots': return loadFlexLots(currentQuarterId);
     case 'compare_segments': return loadCompareSegments(currentQuarterId);
     case 'golden_report': return loadGoldenReport();
+    case 'bc2gis_list': return loadBc2gis();
     default: render(); return Promise.resolve();
   }
 }
