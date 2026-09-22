@@ -685,6 +685,12 @@
   <label class="check-row"><input type="checkbox" id="ovBizForming"> Дел. районы (формир.)</label>
 
   <hr>
+  <h3>Внешние источники БЦ</h3>
+  <div style="font-size:10.5px;color:#999;margin:-2px 0 4px;">Справочники 2ГИС/MosPrimeOffice — не сверены с реестром выше, отдельные точки.</div>
+  <label class="check-row"><input type="checkbox" id="ovBc2gis"> БЦ 2ГИС (<span id="bc2gisCount">1090</span>)</label>
+  <label class="check-row"><input type="checkbox" id="ovBcMosprime"> БЦ MosPrimeOffice (<span id="bcMosprimeCount">1429</span>)</label>
+
+  <hr>
   <h3>Подложка</h3>
   <label class="radio-row"><input type="radio" name="basemap" value="carto" checked> CARTO (светлая)</label>
   <label class="radio-row"><input type="radio" name="basemap" value="maptiler"> MapTiler (светлая)</label>
@@ -3904,6 +3910,83 @@ document.getElementById('ovRuler').addEventListener('change', function() {
     map.removeLayer(rulerLayer);
     rulerPoints = [];
     document.getElementById('rulerStatus').textContent = '';
+  }
+});
+
+// ============================================================
+//  ВНЕШНИЕ ИСТОЧНИКИ БЦ (2ГИС / MosPrimeOffice) — отдельные, не сверенные
+//  с основным реестром точки; загружаются лениво по первому включению
+//  чекбокса, кластеризуются (те же 2 источника, что и вкладки "БЦ 2ГИС" /
+//  "БЦ MosPrimeOffice" в codifier.html — тот же файл данных).
+// ============================================================
+let bc2gisLayer = null, bc2gisData = null;
+let bcMosprimeLayer = null, bcMosprimeData = null;
+
+function bcPopupHtml(title, rows, sourceUrl) {
+  const body = rows.filter(([,v]) => v != null && v !== '')
+    .map(([l,v]) => `<div class="prow"><span class="plabel">${l}</span><span class="pval">${escapeHtml(String(v))}</span></div>`).join('');
+  const src = sourceUrl ? `<div class="prow" style="display:block;margin-top:4px;"><a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" style="color:var(--nf-red);font-size:11px;">Открыть источник →</a></div>` : '';
+  return `<b>${escapeHtml(title)}</b>${body}${src}`;
+}
+
+async function ensureBc2gisData() {
+  if (bc2gisData) return bc2gisData;
+  const d = await fetchJSON('data/bc_2gis_2026-09-23.json');
+  bc2gisData = d.items || [];
+  document.getElementById('bc2gisCount').textContent = bc2gisData.length;
+  return bc2gisData;
+}
+async function ensureBcMosprimeData() {
+  if (bcMosprimeData) return bcMosprimeData;
+  const d = await fetchJSON('data/mosprimeoffice_bc_2026-09-23.json');
+  bcMosprimeData = d.items || [];
+  document.getElementById('bcMosprimeCount').textContent = bcMosprimeData.length;
+  return bcMosprimeData;
+}
+
+document.getElementById('ovBc2gis').addEventListener('change', async function() {
+  if (this.checked) {
+    const items = await ensureBc2gisData();
+    if (!bc2gisLayer) {
+      bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16 });
+      items.forEach(it => {
+        if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
+        const m = L.circleMarker([it.lat, it.lng], { radius: 5, color: '#16a34a', weight: 1, fillColor: '#16a34a', fillOpacity: 0.8 });
+        m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (2ГИС)', [
+          ['Рубрики', it.category], ['Адрес', it.address], ['Район', it.district],
+          ['Рейтинг', it.rating != null ? `${it.rating} (${it.reviews_count ?? 0} отзывов)` : null],
+          ['Телефон', it.phone1], ['Сайт', it.website1],
+        ], it.url_2gis));
+        bc2gisLayer.addLayer(m);
+      });
+    }
+    map.addLayer(bc2gisLayer);
+  } else if (bc2gisLayer) {
+    map.removeLayer(bc2gisLayer);
+  }
+});
+
+document.getElementById('ovBcMosprime').addEventListener('change', async function() {
+  if (this.checked) {
+    const items = await ensureBcMosprimeData();
+    if (!bcMosprimeLayer) {
+      bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16 });
+      items.forEach(it => {
+        if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
+        const m = L.circleMarker([it.lat, it.lng], { radius: 5, color: '#2563eb', weight: 1, fillColor: '#2563eb', fillOpacity: 0.8 });
+        m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (MosPrimeOffice)', [
+          ['Адрес', it.address], ['Район', it.district], ['Округ', it.okrug],
+          ['Год постройки', it.year], ['Этажей', it.floors],
+          ['Общая площадь', it.total_area_label], ['Тип здания', it.building_type],
+          ['Рейтинг', it.rating != null ? `${it.rating} (место ${it.rating_place ?? '—'})` : null],
+          ['Свободных предложений', it.offers_available_count],
+        ], it.source_url));
+        bcMosprimeLayer.addLayer(m);
+      });
+    }
+    map.addLayer(bcMosprimeLayer);
+  } else if (bcMosprimeLayer) {
+    map.removeLayer(bcMosprimeLayer);
   }
 });
 
