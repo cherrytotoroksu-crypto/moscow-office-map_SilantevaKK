@@ -456,6 +456,7 @@
     <button class="mode-btn" id="modeRent" onclick="setMode('rent')">Аренда</button>
     <button class="mode-btn" id="modeCoworking" onclick="setMode('coworking')">Коворкинги</button>
     <button class="mode-btn" id="modeProjects" onclick="setMode('projects')">Все проекты</button>
+    <button class="mode-btn" id="modeBc" onclick="setMode('bc')">БЦ (2ГИС/MosPrime)</button>
   </div>
   <div id="rentNote" style="display:none;font-size:11px;color:#6b7280;margin-top:4px;">Данные аренды: <span id="rentQuarterLabel">—</span> · <span id="rentBldgCount">0</span> зданий</div>
   <button class="upload-btn" id="copyLinkBtn" style="margin-top:4px; background:#555; display:flex; align-items:center; justify-content:center; gap:6px;">
@@ -641,6 +642,20 @@
     <button class="upload-btn" id="fpNoCoordsBtn" style="margin-top:8px;background:#6b7280;">Объекты без координат</button>
   </div>
 
+  <div id="bcControls" style="display:none;">
+    <hr>
+    <h3>БЦ — внешние справочники</h3>
+    <div style="font-size:10px;color:#767676;margin-bottom:6px;">2ГИС и MosPrimeOffice — сырые выгрузки, класс не указан, не сверено с кодификатором/реестром (полные карточки — вкладки «БЦ 2ГИС»/«БЦ MosPrimeOffice» в <a href="codifier.html" target="_blank" rel="noopener">кодификаторе</a>).</div>
+    <div id="bcStatus" role="status" aria-live="polite" style="font-size:11px;color:#767676;">Загрузка…</div>
+
+    <h3 style="margin-top:8px;">Источник</h3>
+    <label class="check-row"><input type="checkbox" id="bcSrc2gis" checked> <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#c026d3;margin-right:3px;"></span>БЦ 2ГИС (<span id="bc2gisCount">—</span>)</label>
+    <label class="check-row"><input type="checkbox" id="bcSrcMosprime" checked> <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#ea580c;margin-right:3px;"></span>БЦ MosPrimeOffice (<span id="bcMosprimeCount">—</span>)</label>
+
+    <h3 style="margin-top:8px;">Поиск</h3>
+    <input type="search" id="bcSearch" placeholder="Название или адрес..." style="width:100%;font-size:11px;padding:4px;box-sizing:border-box;">
+  </div>
+
   <div id="choroplethControls">
   <hr>
   <h3>Деление для расчёта</h3>
@@ -683,12 +698,6 @@
   <label class="check-row"><input type="checkbox" id="ovSub"> Субрынки</label>
   <label class="check-row"><input type="checkbox" id="ovBizFormed"> Дел. районы (сформир.)</label>
   <label class="check-row"><input type="checkbox" id="ovBizForming"> Дел. районы (формир.)</label>
-
-  <hr>
-  <h3>Внешние источники БЦ</h3>
-  <div style="font-size:10.5px;color:#999;margin:-2px 0 4px;">Справочники 2ГИС/MosPrimeOffice — отдельный слой, класс не указан, не сверено с реестром выше.</div>
-  <label class="check-row"><input type="checkbox" id="ovBc2gis"> <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#c026d3;margin-right:3px;"></span>БЦ 2ГИС (<span id="bc2gisCount">1090</span>)</label>
-  <label class="check-row"><input type="checkbox" id="ovBcMosprime"> <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#ea580c;margin-right:3px;"></span>БЦ MosPrimeOffice (<span id="bcMosprimeCount">1429</span>)</label>
 
   <hr>
   <h3>Подложка</h3>
@@ -934,6 +943,7 @@ let lotsData = {};   // { "Название здания": [ {block,floor,area,p
 let rentLotsData = {};  // { "Название здания": [ {block,floor,area,rate,opex,nds,size}, ... ] }
 let rentMode = false;   // true = режим аренды
 let projectsMode = false; // true = режим «Все проекты» (справочник, вне квартальных срезов)
+let bcMode = false; // true = режим «БЦ (2ГИС/MosPrime)» — внешние справочники, отдельная вкладка
 
 // ============================================================
 //  КОНФИГ СЛОЁВ
@@ -2012,6 +2022,10 @@ function fmt(n) {
 // Данные ведутся вручную внутри команды, а не пользователями сайта, поэтому
 // это защита "на всякий случай" (defense in depth), а не заплатка от
 // конкретной найденной уязвимости.
+function debounce(fn, ms) {
+  let t = null;
+  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
 function escapeHtml(s) {
   if (s == null) return s;
   return String(s)
@@ -3746,22 +3760,38 @@ window.setMode = async function(mode) {
   coworkingMode = (mode === 'coworking');
   rentMode = (mode === 'rent');
   projectsMode = (mode === 'projects');
+  bcMode = (mode === 'bc');
   document.getElementById('modeSale').classList.toggle('active', mode === 'sale');
   document.getElementById('modeRent').classList.toggle('active', mode === 'rent');
   document.getElementById('modeCoworking').classList.toggle('active', mode === 'coworking');
   document.getElementById('modeProjects').classList.toggle('active', mode === 'projects');
+  document.getElementById('modeBc').classList.toggle('active', mode === 'bc');
   document.getElementById('rentNote').style.display = mode === 'rent' ? 'block' : 'none';
-  document.getElementById('salerentControls').style.display = (coworkingMode || projectsMode) ? 'none' : 'block';
+  document.getElementById('salerentControls').style.display = (coworkingMode || projectsMode || bcMode) ? 'none' : 'block';
   document.getElementById('coworkingControls').style.display = coworkingMode ? 'block' : 'none';
   document.getElementById('projectsControls').style.display = projectsMode ? 'block' : 'none';
+  document.getElementById('bcControls').style.display = bcMode ? 'block' : 'none';
   // картограмма и её метрики считаются по квартальному срезу предложения —
-  // к справочнику проектов неприменимы, поэтому в этом режиме блок скрыт
-  document.getElementById('choroplethControls').style.display = projectsMode ? 'none' : 'block';
+  // к справочнику проектов/БЦ неприменимы, в этих режимах блок скрыт
+  document.getElementById('choroplethControls').style.display = (projectsMode || bcMode) ? 'none' : 'block';
   // слой проектов живёт только в своём режиме: без явного снятия он оставался
   // видимым поверх продажи/аренды/коворкингов при переключении обратно
   if (!projectsMode && futureLayer && map.hasLayer(futureLayer)) {
     map.removeLayer(futureLayer);
     futureLayer = null;
+  }
+  // то же самое для слоёв БЦ — живут только в своём режиме
+  if (!bcMode) bcRemoveLayers();
+
+  if (bcMode) {
+    if (buildingsLayer && map.hasLayer(buildingsLayer)) map.removeLayer(buildingsLayer);
+    if (coworkingLayer && map.hasLayer(coworkingLayer)) map.removeLayer(coworkingLayer);
+    if (choroplethLayer && map.hasLayer(choroplethLayer)) map.removeLayer(choroplethLayer);
+    if (futureLayer && map.hasLayer(futureLayer)) { map.removeLayer(futureLayer); futureLayer = null; }
+    document.getElementById('mapSearch').value = '';
+    await renderBc();
+    syncURL();
+    return;
   }
 
   if (projectsMode) {
@@ -3920,10 +3950,10 @@ document.getElementById('ovRuler').addEventListener('change', function() {
 });
 
 // ============================================================
-//  ВНЕШНИЕ ИСТОЧНИКИ БЦ (2ГИС / MosPrimeOffice) — отдельные, не сверенные
-//  с основным реестром точки; загружаются лениво по первому включению
-//  чекбокса, кластеризуются (те же 2 источника, что и вкладки "БЦ 2ГИС" /
-//  "БЦ MosPrimeOffice" в codifier.html — тот же файл данных).
+//  РЕЖИМ "БЦ (2ГИС/MosPrime)" — отдельная вкладка-режим (как Продажа/
+//  Аренда/Коворкинги/Все проекты), не оверлей поверх других слоёв. Те же
+//  2 источника, что и вкладки "БЦ 2ГИС"/"БЦ MosPrimeOffice" в
+//  codifier.html (те же файлы данных, не сверены с реестром/кодификатором).
 // ============================================================
 let bc2gisLayer = null, bc2gisData = null;
 let bcMosprimeLayer = null, bcMosprimeData = null;
@@ -3950,51 +3980,71 @@ async function ensureBcMosprimeData() {
   return bcMosprimeData;
 }
 
-document.getElementById('ovBc2gis').addEventListener('change', async function() {
-  if (this.checked) {
-    const items = await ensureBc2gisData();
-    if (!bc2gisLayer) {
-      bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
-      items.forEach(it => {
-        if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
-        const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#c026d3', weight: 1, fillColor: '#c026d3', fillOpacity: 0.55 });
-        m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (2ГИС)', [
-          ['Рубрики', it.category], ['Адрес', it.address], ['Район', it.district],
-          ['Рейтинг', it.rating != null ? `${it.rating} (${it.reviews_count ?? 0} отзывов)` : null],
-          ['Телефон', it.phone1], ['Сайт', it.website1],
-        ], it.url_2gis));
-        bc2gisLayer.addLayer(m);
-      });
-    }
-    map.addLayer(bc2gisLayer);
-  } else if (bc2gisLayer) {
-    map.removeLayer(bc2gisLayer);
-  }
-});
+function bcMatchesSearch(name, address, q) {
+  if (!q) return true;
+  const hay = `${name || ''} ${address || ''}`.toLowerCase();
+  return hay.includes(q);
+}
 
-document.getElementById('ovBcMosprime').addEventListener('change', async function() {
-  if (this.checked) {
-    const items = await ensureBcMosprimeData();
-    if (!bcMosprimeLayer) {
-      bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
-      items.forEach(it => {
-        if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
-        const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#ea580c', weight: 1, fillColor: '#ea580c', fillOpacity: 0.55 });
-        m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (MosPrimeOffice)', [
-          ['Адрес', it.address], ['Район', it.district], ['Округ', it.okrug],
-          ['Год постройки', it.year], ['Этажей', it.floors],
-          ['Общая площадь', it.total_area_label], ['Тип здания', it.building_type],
-          ['Рейтинг', it.rating != null ? `${it.rating} (место ${it.rating_place ?? '—'})` : null],
-          ['Свободных предложений', it.offers_available_count],
-        ], it.source_url));
-        bcMosprimeLayer.addLayer(m);
-      });
-    }
-    map.addLayer(bcMosprimeLayer);
-  } else if (bcMosprimeLayer) {
-    map.removeLayer(bcMosprimeLayer);
+// Строит/перестраивает оба кластер-слоя заново с учётом чекбоксов
+// источника и текущего поиска — вызывается при входе в режим и при любом
+// изменении фильтров панели bcControls.
+async function renderBc() {
+  if (!bcMode) return;
+  const status = document.getElementById('bcStatus');
+  status.textContent = 'Загрузка…';
+  const [gisItems, mpItems] = await Promise.all([ensureBc2gisData(), ensureBcMosprimeData()]);
+  const q = (document.getElementById('bcSearch').value || '').trim().toLowerCase();
+  const showGis = document.getElementById('bcSrc2gis').checked;
+  const showMp = document.getElementById('bcSrcMosprime').checked;
+
+  if (bc2gisLayer) { map.removeLayer(bc2gisLayer); bc2gisLayer = null; }
+  if (bcMosprimeLayer) { map.removeLayer(bcMosprimeLayer); bcMosprimeLayer = null; }
+
+  let shownGis = 0, shownMp = 0;
+  if (showGis) {
+    bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
+    gisItems.forEach(it => {
+      if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
+      if (!bcMatchesSearch(it.name, it.address, q)) return;
+      shownGis++;
+      const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#c026d3', weight: 1, fillColor: '#c026d3', fillOpacity: 0.6 });
+      m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (2ГИС)', [
+        ['Рубрики', it.category], ['Адрес', it.address], ['Район', it.district],
+        ['Рейтинг', it.rating != null ? `${it.rating} (${it.reviews_count ?? 0} отзывов)` : null],
+        ['Телефон', it.phone1], ['Сайт', it.website1],
+      ], it.url_2gis));
+      bc2gisLayer.addLayer(m);
+    });
+    map.addLayer(bc2gisLayer);
   }
-});
+  if (showMp) {
+    bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
+    mpItems.forEach(it => {
+      if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
+      if (!bcMatchesSearch(it.name, it.address, q)) return;
+      shownMp++;
+      const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#ea580c', weight: 1, fillColor: '#ea580c', fillOpacity: 0.6 });
+      m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (MosPrimeOffice)', [
+        ['Адрес', it.address], ['Район', it.district], ['Округ', it.okrug],
+        ['Год постройки', it.year], ['Этажей', it.floors],
+        ['Общая площадь', it.total_area_label], ['Тип здания', it.building_type],
+        ['Рейтинг', it.rating != null ? `${it.rating} (место ${it.rating_place ?? '—'})` : null],
+        ['Свободных предложений', it.offers_available_count],
+      ], it.source_url));
+      bcMosprimeLayer.addLayer(m);
+    });
+    map.addLayer(bcMosprimeLayer);
+  }
+  status.textContent = `Показано: 2ГИС ${shownGis} из ${gisItems.length} · MosPrimeOffice ${shownMp} из ${mpItems.length}`;
+}
+document.getElementById('bcSrc2gis').addEventListener('change', renderBc);
+document.getElementById('bcSrcMosprime').addEventListener('change', renderBc);
+document.getElementById('bcSearch').addEventListener('input', debounce(renderBc, 250));
+function bcRemoveLayers() {
+  if (bc2gisLayer) { map.removeLayer(bc2gisLayer); bc2gisLayer = null; }
+  if (bcMosprimeLayer) { map.removeLayer(bcMosprimeLayer); bcMosprimeLayer = null; }
+}
 
 // ============================================================
 //  РИСОВАНИЕ РАЙОНОВ (обводилка) + выгрузка GeoJSON / Excel
