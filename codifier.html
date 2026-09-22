@@ -158,6 +158,7 @@
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="rent">Аренда офисов</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="flex">Гибкие офисы</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bc2gis">БЦ 2ГИС</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bcmosprime">БЦ MosPrimeOffice</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</button>
 </div>
 <div class="subtabs" id="viewTabs" role="tablist" aria-label="Вкладки раздела" style="display:none;"></div>
@@ -254,6 +255,7 @@ const SECTIONS = [
   {id:'rent',     label:'Аренда офисов',     views:['rent_buildings','rent_landlords','rent_lots']},
   {id:'flex',     label:'Гибкие офисы',      views:['flex_operators','flex_lots']},
   {id:'bc2gis',   label:'БЦ 2ГИС',           views:['bc2gis_list']},
+  {id:'bcmosprime', label:'БЦ MosPrimeOffice', views:['bcmosprime_list']},
 ];
 const VIEWS = {
   codifier:        {section:'codifier', label:'Общий кодификатор'},
@@ -268,6 +270,7 @@ const VIEWS = {
   flex_lots:       {section:'flex',     label:'Все гибкие предложения'},
   compare_segments:{section:'compare',  label:'Сравнение сегментов'},
   bc2gis_list:     {section:'bc2gis',   label:'Бизнес-центры (2ГИС)'},
+  bcmosprime_list: {section:'bcmosprime', label:'Бизнес-центры (MosPrimeOffice)'},
 };
 // Пользовательское название — "Сегмент рынка" (не "Канал", технический
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
@@ -666,6 +669,35 @@ const BC2GIS_COLUMNS = [
   {key:'url_2gis', label:'Ссылка 2ГИС', type:'text', visible:false},
 ];
 
+// БЦ MosPrimeOffice — data/mosprimeoffice_bc_2026-09-23.json, собрано с
+// mosprimeoffice.ru/bc-map (карточка каждого БЦ: /business-centers/{slug}).
+// Как и "БЦ 2ГИС" — внешний справочник, не сверен с реестром/классификатором.
+// matched_2gis/matched_classifier проставлены сопоставлением по названию и
+// координатам (см. scratchpad scrape/match скрипты, 2026-09-23) — для
+// ориентира, не источник истины: помечает вероятное совпадение с уже
+// имеющимся объектом, а не подтверждает его.
+const BCMOSPRIME_COLUMNS = [
+  {key:'name', label:'Название', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'district', label:'Район', type:'text', visible:true},
+  {key:'okrug', label:'Округ', type:'text', visible:true},
+  {key:'year', label:'Год постройки', type:'number', visible:true},
+  {key:'floors', label:'Этажей', type:'number', visible:true},
+  {key:'total_area', label:'Общая площадь, кв.м', type:'number', visible:true},
+  {key:'building_type', label:'Тип здания', type:'text', visible:true},
+  {key:'rating', label:'Рейтинг', type:'number', visible:true},
+  {key:'offers_available_count', label:'Свободных предложений', type:'number', visible:true},
+  {key:'matched_2gis', label:'Есть в БЦ 2ГИС', type:'bool', visible:true, boolTrueLabel:'да', boolFalseLabel:'нет'},
+  {key:'matched_classifier', label:'Есть в кодификаторе/реестре', type:'bool', visible:true, boolTrueLabel:'да', boolFalseLabel:'нет'},
+  {key:'purpose', label:'Назначение', type:'text', visible:false},
+  {key:'postcode', label:'Индекс', type:'text', visible:false},
+  {key:'rating_place', label:'Место в рейтинге', type:'number', visible:false},
+  {key:'offers_count', label:'Предложений всего', type:'number', visible:false},
+  {key:'lat', label:'Широта', type:'number', visible:true},
+  {key:'lng', label:'Долгота', type:'number', visible:true},
+  {key:'source_url', label:'Ссылка на карточку', type:'text', visible:false},
+];
+
 // ============================================================
 //  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для всех вкладок)
 // ============================================================
@@ -742,6 +774,7 @@ const state = {
   compare_segments: makeTableState(COMPARE_COLUMNS),
   golden_report: makeTableState(GOLDEN_REPORT_COLUMNS),
   bc2gis_list: makeTableState(BC2GIS_COLUMNS),
+  bcmosprime_list: makeTableState(BCMOSPRIME_COLUMNS),
 };
 let allProjectsLayer = [];
 // canonical_project_id -> project_name, запечённый в кодификаторе
@@ -1513,6 +1546,20 @@ async function loadBc2gis() {
   render();
 }
 
+let bcmosprimeLoaded = false;
+async function loadBcMosprime() {
+  if (!bcmosprimeLoaded) {
+    let data;
+    try { data = await fetchJSON('data/mosprimeoffice_bc_2026-09-23.json'); }
+    catch (e) { data = {items: [], imported_at: null}; }
+    state.bcmosprime_list.rows = data.items;
+    dataMeta.bcmosprime_list = {updated: data.imported_at, count: data.items.length};
+    bcmosprimeLoaded = true;
+  }
+  if (!suppressURLSync) state.bcmosprime_list.page = 1;
+  render();
+}
+
 // ============================================================
 //  ФИЛЬТРАЦИЯ / СОРТИРОВКА
 // ============================================================
@@ -1830,13 +1877,14 @@ const VIEW_SOURCE_LABEL = {
   compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
   golden_report: () => 'data/qa/golden_report_full.json (лист "отчет деление А и прайм" из Golden File)',
   bc2gis_list: () => 'data/bc_2gis_2026-09-23.json (импорт бц_2гис.csv из 2ГИС, не сверено с реестром)',
+  bcmosprime_list: () => 'data/mosprimeoffice_bc_2026-09-23.json (mosprimeoffice.ru/bc-map, не сверено с реестром)',
 };
 
 // Виды, где строка соответствует ровно одной записи общего кодификатора
 // (сама запись либо надёжно joined через canonical_project_id) — там есть
 // смысл в кнопке "Источник и проверка". Агрегаты (девелоперы/арендодатели/
 // операторы) и сравнение сегментов — не привязаны к одной записи, кнопки нет.
-const SOURCE_CARD_VIEWS = new Set(['codifier', 'sale_buildings', 'sale_lots', 'rent_buildings', 'rent_lots', 'flex_lots', 'bc2gis_list']);
+const SOURCE_CARD_VIEWS = new Set(['codifier', 'sale_buildings', 'sale_lots', 'rent_buildings', 'rent_lots', 'flex_lots', 'bc2gis_list', 'bcmosprime_list']);
 
 function render() {
   const ts = state[currentView];
@@ -2026,8 +2074,53 @@ function openBc2gisCard(row) {
   }, 0);
 }
 
+// Карточка объекта MosPrimeOffice — паспорт здания плюс список офисных
+// предложений (если есть), как на самой карточке БЦ на сайте-источнике.
+function openBcMosprimeCard(row) {
+  closePanels();
+  const panel = document.createElement('div');
+  panel.className = 'filter-panel source-card';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', 'Карточка объекта MosPrimeOffice');
+  const fields = [
+    ['Адрес', row.address],
+    ['Район', row.district], ['Округ', row.okrug], ['Индекс', row.postcode],
+    ['Год постройки', row.year], ['Этажей', row.floors],
+    ['Общая площадь', row.total_area_label], ['Тип здания', row.building_type],
+    ['Назначение', row.purpose],
+    ['Рейтинг', row.rating != null ? `${row.rating} (место ${row.rating_place ?? '—'})` : null],
+    ['Координаты', (row.lat != null && row.lng != null) ? `${row.lat}, ${row.lng}` : null],
+    ['Есть в БЦ 2ГИС (по имени/координатам)', row.matched_2gis ? 'да' : 'нет'],
+    ['Есть в кодификаторе/реестре (по имени/координатам)', row.matched_classifier ? 'да' : 'нет'],
+    ['Источник', row.source_url ? `<a href="${escapeHtml(row.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.source_url)}</a>` : null],
+  ];
+  const offersHtml = (row.offers && row.offers.length)
+    ? `<div class="fp-header" style="margin-top:10px;"><span class="fp-title" style="font-size:12px;">Офисы в этом бизнес-центре (${row.offers.length})</span></div>`
+      + row.offers.map(o => `<div class="sc-row"><b>${escapeHtml(o.availability_status === 'available' ? 'Свободно' : 'Сдано')}</b>${escapeHtml(`${o.area ?? '—'} м² · ${o.rate_per_sqm != null ? o.rate_per_sqm.toLocaleString('ru-RU') + ' ₽/м²/год' : '—'} · ${o.monthly_rent != null ? o.monthly_rent.toLocaleString('ru-RU') + ' ₽/мес' : '—'}`)}</div>`).join('')
+    : `<div class="sc-row" style="color:#888;">Свободных предложений в базе сейчас нет.</div>`;
+  panel.innerHTML = `<div class="fp-header"><span class="fp-title">${escapeHtml(row.name || 'Объект MosPrimeOffice')}</span><span class="fp-close" id="scClose">×</span></div>`
+    + fields.map(([label, value]) => `<div class="sc-row"><b>${escapeHtml(label)}</b>${value == null || value === '' ? '—' : (typeof value === 'string' && value.startsWith('<a ') ? value : escapeHtml(String(value)))}</div>`).join('')
+    + offersHtml;
+  document.body.appendChild(panel);
+  const left = Math.max(8, (window.innerWidth - panel.offsetWidth) / 2);
+  const top = Math.max(8, (window.innerHeight - panel.offsetHeight) / 2);
+  panel.style.left = left + 'px';
+  panel.style.top = top + 'px';
+  function cancel() { closePanels(); }
+  panel.querySelector('#scClose').onclick = cancel;
+  setTimeout(() => {
+    document.addEventListener('click', function onDocClick(ev) {
+      if (!panel.contains(ev.target)) { cancel(); document.removeEventListener('click', onDocClick); }
+    });
+    document.addEventListener('keydown', function onEsc(ev) {
+      if (ev.key === 'Escape') { cancel(); document.removeEventListener('keydown', onEsc); }
+    });
+  }, 0);
+}
+
 function openSourceCard(row) {
   if (currentView === 'bc2gis_list') return openBc2gisCard(row);
+  if (currentView === 'bcmosprime_list') return openBcMosprimeCard(row);
   closePanels();
   const record = resolveRegistryRecord(row);
   const panel = document.createElement('div');
@@ -2682,6 +2775,7 @@ function loadCurrentView() {
     case 'compare_segments': return loadCompareSegments(currentQuarterId);
     case 'golden_report': return loadGoldenReport();
     case 'bc2gis_list': return loadBc2gis();
+    case 'bcmosprime_list': return loadBcMosprime();
     default: render(); return Promise.resolve();
   }
 }
