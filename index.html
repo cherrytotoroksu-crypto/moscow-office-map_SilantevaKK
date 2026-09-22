@@ -3789,6 +3789,14 @@ window.setMode = async function(mode) {
     if (choroplethLayer && map.hasLayer(choroplethLayer)) map.removeLayer(choroplethLayer);
     if (futureLayer && map.hasLayer(futureLayer)) { map.removeLayer(futureLayer); futureLayer = null; }
     document.getElementById('mapSearch').value = '';
+    // Легенда цены и легенда класса зданий относятся к слою продажи — в
+    // режиме БЦ (нет ни цены, ни класса у этих точек) они не нужны и
+    // только вводят в заблуждение; cвои цветные метки уже есть у чекбоксов
+    // источника в bcControls.
+    document.getElementById('legend').style.display = 'none';
+    document.getElementById('buildingsLegend').style.display = 'none';
+    document.getElementById('buildingsLegend').innerHTML = '';
+    hideStatsTable();
     await renderBc();
     syncURL();
     return;
@@ -3965,6 +3973,19 @@ function bcPopupHtml(title, rows, sourceUrl) {
   return `<b>${escapeHtml(title)}</b>${body}${src}`;
 }
 
+
+// Кастомная иконка кластера — цвет источника (маджента/оранжевый), а не
+// стандартная жёлто-оранжевая заливка Leaflet.markercluster: иначе при
+// отдалённом масштабе, где тысячи точек схлопываются в десяток кластеров,
+// они визуально неотличимы от прочей карты и создают впечатление "точек
+// почти нет".
+function bcClusterIcon(color) {
+  return (cluster) => L.divIcon({
+    html: `<div style="background:${color};opacity:.85;color:#fff;font-weight:700;font-size:12px;width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff;">${cluster.getChildCount()}</div>`,
+    className: 'bc-cluster-icon', iconSize: L.point(36, 36),
+  });
+}
+
 async function ensureBc2gisData() {
   if (bc2gisData) return bc2gisData;
   const d = await fetchJSON('data/bc_2gis_2026-09-23.json');
@@ -4003,7 +4024,7 @@ async function renderBc() {
 
   let shownGis = 0, shownMp = 0;
   if (showGis) {
-    bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
+    bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane', iconCreateFunction: bcClusterIcon('#c026d3') });
     gisItems.forEach(it => {
       if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
       if (!bcMatchesSearch(it.name, it.address, q)) return;
@@ -4019,7 +4040,7 @@ async function renderBc() {
     map.addLayer(bc2gisLayer);
   }
   if (showMp) {
-    bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
+    bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane', iconCreateFunction: bcClusterIcon('#ea580c') });
     mpItems.forEach(it => {
       if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
       if (!bcMatchesSearch(it.name, it.address, q)) return;
