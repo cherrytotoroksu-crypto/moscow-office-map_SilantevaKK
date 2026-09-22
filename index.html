@@ -686,9 +686,9 @@
 
   <hr>
   <h3>Внешние источники БЦ</h3>
-  <div style="font-size:10.5px;color:#999;margin:-2px 0 4px;">Справочники 2ГИС/MosPrimeOffice — не сверены с реестром выше, отдельные точки.</div>
-  <label class="check-row"><input type="checkbox" id="ovBc2gis"> БЦ 2ГИС (<span id="bc2gisCount">1090</span>)</label>
-  <label class="check-row"><input type="checkbox" id="ovBcMosprime"> БЦ MosPrimeOffice (<span id="bcMosprimeCount">1429</span>)</label>
+  <div style="font-size:10.5px;color:#999;margin:-2px 0 4px;">Справочники 2ГИС/MosPrimeOffice — отдельный слой, класс не указан, не сверено с реестром выше.</div>
+  <label class="check-row"><input type="checkbox" id="ovBc2gis"> <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#c026d3;margin-right:3px;"></span>БЦ 2ГИС (<span id="bc2gisCount">1090</span>)</label>
+  <label class="check-row"><input type="checkbox" id="ovBcMosprime"> <span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#ea580c;margin-right:3px;"></span>БЦ MosPrimeOffice (<span id="bcMosprimeCount">1429</span>)</label>
 
   <hr>
   <h3>Подложка</h3>
@@ -1088,6 +1088,12 @@ const overlayLayers = {};   // key -> L.geoJSON
 //  КАРТА
 // ============================================================
 const map = L.map('map', { zoomControl: true }).setView([55.75, 37.62], 10);
+// Отдельная панель НИЖЕ overlayPane (там точки продажи/аренды/коворкингов/
+// проектов) для внешних источников БЦ (2ГИС/MosPrimeOffice) — они не должны
+// перекрывать и не должны визуально смешиваться с основным слоем, поэтому
+// у них своя, более низкая по z-index панель, а не общий overlayPane.
+map.createPane('externalBcPane');
+map.getPane('externalBcPane').style.zIndex = 350;
 
 const basemaps = {
   carto: L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
@@ -3948,10 +3954,10 @@ document.getElementById('ovBc2gis').addEventListener('change', async function() 
   if (this.checked) {
     const items = await ensureBc2gisData();
     if (!bc2gisLayer) {
-      bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16 });
+      bc2gisLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
       items.forEach(it => {
         if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
-        const m = L.circleMarker([it.lat, it.lng], { radius: 5, color: '#16a34a', weight: 1, fillColor: '#16a34a', fillOpacity: 0.8 });
+        const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#c026d3', weight: 1, fillColor: '#c026d3', fillOpacity: 0.55 });
         m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (2ГИС)', [
           ['Рубрики', it.category], ['Адрес', it.address], ['Район', it.district],
           ['Рейтинг', it.rating != null ? `${it.rating} (${it.reviews_count ?? 0} отзывов)` : null],
@@ -3970,10 +3976,10 @@ document.getElementById('ovBcMosprime').addEventListener('change', async functio
   if (this.checked) {
     const items = await ensureBcMosprimeData();
     if (!bcMosprimeLayer) {
-      bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16 });
+      bcMosprimeLayer = L.markerClusterGroup({ maxClusterRadius: 45, spiderfyOnMaxZoom: true, showCoverageOnHover: false, disableClusteringAtZoom: 16, clusterPane: 'externalBcPane' });
       items.forEach(it => {
         if (it.lat == null || it.lng == null || !isFinite(it.lat) || !isFinite(it.lng)) return;
-        const m = L.circleMarker([it.lat, it.lng], { radius: 5, color: '#2563eb', weight: 1, fillColor: '#2563eb', fillOpacity: 0.8 });
+        const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#ea580c', weight: 1, fillColor: '#ea580c', fillOpacity: 0.55 });
         m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (MosPrimeOffice)', [
           ['Адрес', it.address], ['Район', it.district], ['Округ', it.okrug],
           ['Год постройки', it.year], ['Этажей', it.floors],
