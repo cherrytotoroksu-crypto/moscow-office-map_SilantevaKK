@@ -4000,6 +4000,43 @@ document.getElementById('exportGeo').addEventListener('click', function() {
 
 document.getElementById('exportXlsx').addEventListener('click', async function() {
   await ensureXLSX();
+  if (projectsMode) {
+    const layers = drawnItems.getLayers();
+    if (!layers.length) { alert('Сначала обведи область (режим рисования).'); return; }
+    const inside = getFilteredFuture().filter(p => isFinite(p.lat) && isFinite(p.lng) && layersContainPoint(layers, p.lat, p.lng));
+    if (!inside.length) { alert('Внутри области нет проектов (с учётом текущих фильтров «Все проекты»).'); return; }
+
+    const withGba = inside.filter(p => p.gba != null);
+    const summary = [
+      ['Показатель', 'Значение'],
+      ['Срез', 'Все проекты'],
+      ['Проектов, шт.', inside.length],
+      ['Суммарная GBA, кв.м', Math.round(withGba.reduce((s,p)=>s+p.gba,0))],
+      ['Из них требуют проверки, шт.', inside.filter(p => p.needs_review).length],
+    ];
+    // паспорт объекта — те же поля, что в карточке на карте (fpPopupHtml), плюс координаты
+    const rows = inside.map(p => ({
+      'ID проекта': p.project_no, 'SubID корпуса': p.subid, 'Название проекта': p.project_name,
+      'Название корпуса': p.tower_label, 'Здание': p.name, 'Каноническое название': p.canonical_name,
+      'Адрес': p.address, 'Девелопер': p.developer,
+      'GBA, кв.м': p.gba, 'GLA, кв.м': p.gla, 'Класс': p.cls,
+      'Квартал ввода': p.commission_quarter, 'Год ввода': p.commission_year, 'Статус': p.status,
+      'Каналы рынка': (p.market_channel || []).map(c => MARKET_CHANNEL_LABEL[c] || c).join(', '),
+      'Статус предложения': p.offer_status,
+      'Точность координат': GEOMETRY_QUALITY_LABEL[p.geometry_quality] || p.geometry_quality,
+      'Источник координат': p.coordinates_source || p.coord_fix_source,
+      'Уровень доверия': p.confidence, 'Статус проверки': p.verification_status,
+      'Требует проверки': p.needs_review === true ? 'Да' : (p.needs_review === false ? 'Нет' : ''),
+      'Примечание проверки': p.review_notes, 'Конфликты': p.conflicts,
+      'Широта': p.lat, 'Долгота': p.lng,
+    }));
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows), 'Проекты');
+    XLSX.writeFile(wb, `${drawnFileBase()}_projects.xlsx`);
+    return;
+  }
   if (coworkingMode) {
     const insideCw = coworkingInDrawn();
     if (!insideCw) { alert('Сначала обведи область (режим рисования).'); return; }
