@@ -1285,6 +1285,19 @@ function pointInFeature(lng, lat, feature) {
   }
   return false;
 }
+// Точка внутри одного из нарисованных слоёв — L.Circle (расстояние до центра
+// <= радиуса) или полигон/прямоугольник (pointInFeature). Общая проверка для
+// выгрузки GeoJSON/Excel и для "Сравнить область по кварталам" — иначе круг
+// без явной обработки даёт Point-геометрию в toGeoJSON(), и point-in-polygon
+// тест по нему всегда возвращает false (объекты внутри круга "не находятся").
+function layersContainPoint(layers, lat, lng) {
+  for (const l of layers) {
+    if (l instanceof L.Circle) {
+      if (map.distance(l.getLatLng(), L.latLng(lat, lng)) <= l.getRadius()) return true;
+    } else if (pointInFeature(lng, lat, l.toGeoJSON())) return true;
+  }
+  return false;
+}
 
 function computeStats(layerKey, geojson, blds, useRent, rentSource) {
   const cfg = LAYER_CFG[layerKey];
@@ -1421,13 +1434,13 @@ function computeCoworkingStats(layerKey, geojson, cwList) {
 // Статистика (продажа/аренда) по НЕИМЕНОВАННОМУ набору полигонов (обводилка на
 // карте) — та же логика сложения, что в computeStats, но без разбивки по
 // названиям слоя: один агрегат на весь набор нарисованных полигонов.
-function computeDrawnSaleStats(blds, polys, useRent, rentSource) {
-  if (!polys.length) return null;
+function computeDrawnSaleStats(blds, layers, useRent, rentSource) {
+  if (!layers.length) return null;
   const rentLots = rentSource || rentLotsData;
   const s = { sumPriceArea: 0, sumArea: 0, sumPrice: 0, count: 0, validCount: 0, lots: 0 };
   for (const b of blds) {
     if (!isFinite(b.lat) || !isFinite(b.lng)) continue;
-    if (!polys.some(p => pointInFeature(b.lng, b.lat, p))) continue;
+    if (!layersContainPoint(layers, b.lat, b.lng)) continue;
     let area, price, lots;
     if (useRent) {
       const rLots = rentLots[b.name] || rentLots[b.name_orig] || [];
@@ -1458,12 +1471,12 @@ function computeDrawnSaleStats(blds, polys, useRent, rentSource) {
   };
 }
 // То же для коворкингов — набор площадок внутри нарисованных полигонов.
-function computeDrawnCoworkingStats(cwList, polys) {
-  if (!polys.length) return null;
+function computeDrawnCoworkingStats(cwList, layers) {
+  if (!layers.length) return null;
   const r = { sumRateSeats: 0, sumSeats: 0, sumRate: 0, validRate: 0, count: 0, vacancy: 0, seats: 0 };
   for (const c of cwList) {
     if (!isFinite(c.lat) || !isFinite(c.lng)) continue;
-    if (!polys.some(p => pointInFeature(c.lng, c.lat, p))) continue;
+    if (!layersContainPoint(layers, c.lat, c.lng)) continue;
     r.count += 1;
     r.vacancy += (c.vacancy || 0);
     r.seats += (c.seats || 0);
@@ -3953,24 +3966,17 @@ document.getElementById('ovDraw').addEventListener('change', async function() {
   }
 });
 
-// точка внутри нарисованной области — полигон (point-in-polygon) ИЛИ круг (расстояние <= радиус)
-function insideAnyDrawn(lat, lng) {
-  for (const l of drawnItems.getLayers()) {
-    if (l instanceof L.Circle) {
-      if (map.distance(l.getLatLng(), L.latLng(lat, lng)) <= l.getRadius()) return true;
-    } else if (pointInFeature(lng, lat, l.toGeoJSON())) return true;
-  }
-  return false;
-}
 // здания внутри нарисованных полигонов/кругов
 function buildingsInDrawn() {
-  if (!drawnItems.getLayers().length) return null;
-  return buildingsData.filter(b => isFinite(b.lat) && isFinite(b.lng) && insideAnyDrawn(b.lat, b.lng));
+  const layers = drawnItems.getLayers();
+  if (!layers.length) return null;
+  return buildingsData.filter(b => isFinite(b.lat) && isFinite(b.lng) && layersContainPoint(layers, b.lat, b.lng));
 }
 // коворкинги внутри нарисованных полигонов/кругов
 function coworkingInDrawn() {
-  if (!drawnItems.getLayers().length) return null;
-  return getFilteredCoworking().filter(c => isFinite(c.lat) && isFinite(c.lng) && insideAnyDrawn(c.lat, c.lng));
+  const layers = drawnItems.getLayers();
+  if (!layers.length) return null;
+  return getFilteredCoworking().filter(c => isFinite(c.lat) && isFinite(c.lng) && layersContainPoint(layers, c.lat, c.lng));
 }
 // имя файла из названия первого полигона (транслит) + квартал
 function drawnFileBase() {
@@ -4402,13 +4408,12 @@ async function renderDynamics() {
         borderColor: CHART_COLORS[i%CHART_COLORS.length], backgroundColor:'transparent', tension:0.2, spanGaps:false });
     });
   } else if (level === 'drawn') {
-    const polys = [];
-    drawnItems.eachLayer(l => polys.push(l.toGeoJSON()));
-    if (polys.length) {
+    const layers = drawnItems.getLayers();
+    if (layers.length) {
       const values = qs.map(q => {
         const stat = coworkingMode
-          ? computeDrawnCoworkingStats(allCoworking[q.id] || [], polys)
-          : computeDrawnSaleStats(allBuildings[q.id] || [], polys, rentMode, rentMode ? allRentLots[q.id] : null);
+          ? computeDrawnCoworkingStats(allCoworking[q.id] || [], layers)
+          : computeDrawnSaleStats(allBuildings[q.id] || [], layers, rentMode, rentMode ? allRentLots[q.id] : null);
         return stat ? stat[metric] : null;
       });
       datasets.push({ label: 'Нарисованная область',
