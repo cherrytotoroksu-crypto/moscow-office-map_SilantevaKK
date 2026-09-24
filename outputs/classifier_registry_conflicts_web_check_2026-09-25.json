@@ -1,0 +1,730 @@
+{
+ "generated": "2026-09-25",
+ "note": "Веб-проверка существенных расхождений классификатор vs реестр. Данные проекта НЕ изменены — только рекомендации.",
+ "items": [
+  {
+   "name": "Fly Tower",
+   "registry_id": "proj-13",
+   "classifier": 41319.0,
+   "registry": 30000.0,
+   "unified_id": "UC-OBJ-0697",
+   "field": "gba",
+   "verdict": "neither",
+   "correct_value": null,
+   "explanation": "Ни 41319, ни 30000 в открытых источниках не найдено. of.ru (страница прочитана) даёт общую площадь МФК 52 149 кв. м; cre.ru ~45 850 кв. м; агрегаторы пишут ~48 тыс. кв. м офисов+апартаментов (башня 34 эт. в ранних анонсах, теперь 22 эт.). Числа сильно расходятся по скоупу (башня / МФК с Авиатором / офисы+апартаменты). Одно из них надо сверять с проектной декларацией на наш.дом.рф (ссылка есть на domex.ru, саму декларацию не открывал).",
+   "sources": [
+    "https://of.ru/bc/12480",
+    "https://cre.ru/news/87580",
+    "https://www.domex.ru/novostroyki/fly-tower/",
+    "https://tower-fly.ru/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Берников",
+   "registry_id": "proj-19",
+   "classifier": "B+",
+   "registry": "A",
+   "unified_id": "UC-OBJ-0075",
+   "field": "cls",
+   "verdict": "registry",
+   "correct_value": "A",
+   "explanation": "Три источника (caos.ru, of.ru-подобные карточки, kf.expert) называют БЦ Берников классом A (реконструкция 2023). Оговорка: адрес во всех источниках Николоямская, 11 стр. 2, а не 12 - стоит проверить адрес в базе. Заметка: GBA 15 927 (caos) vs 14 500 (другая карточка) тоже расходятся, GLA ~12 111 vs 11 000.",
+   "sources": [
+    "https://caos.ru/bc/bc-bernikov/",
+    "https://kf.expert/office/business-center/bernikov-os7574",
+    "https://realty-guide.ru/offices/objects/d1880e53-81d4-4d61-bd8b-ce96379e5287/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name": "Lakes",
+   "registry_id": "proj-77",
+   "classifier": "ПИК",
+   "registry": "Forma",
+   "unified_id": "UC-OBJ-0054",
+   "field": "developer",
+   "verdict": "different_scope",
+   "correct_value": "Forma (девелоперский бренд группы ПИК)",
+   "explanation": "Официальный сайт lakes.moscow подписан Forma; есть и сайт с упоминанием ПИК. Это не конфликт по факту: Forma - бренд/подразделение ПИК по офисной и коммерческой недвижимости. Для карточки лучше писать 'Forma (ПИК)'. Связь Forma-ПИК я по открытым страницам в этой сессии не перепроверял отдельно (известно из общих знаний), поэтому уверенность средняя.",
+   "sources": [
+    "https://lakes.moscow/",
+    "https://xn----9sbzed2b4azd.xn--80adxhks/",
+    "https://archi.ru/projects/russia/20579/biznes-centr-lakes"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Lakes",
+   "registry_id": "proj-77",
+   "classifier": 18951.0,
+   "registry": 42570.0,
+   "unified_id": "UC-OBJ-0054",
+   "field": "gla",
+   "verdict": "classifier",
+   "correct_value": 18951,
+   "explanation": "Источник (Intermark/агрегаторы): общая площадь 57 300 кв. м, из них 24 136 ритейл и 18 951 офисы. Значит 18951 - именно офисная часть. 42570 в открытых источниках не найдено, возможно общая надземная/иной скоуп, но подтвердить не удалось.",
+   "sources": [
+    "https://intermark.ru/objects/ofis-bc-lakes-151802",
+    "https://archi.ru/projects/russia/20579/biznes-centr-lakes"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Lakes",
+   "registry_id": "proj-77",
+   "classifier": "B+",
+   "registry": "A",
+   "unified_id": "UC-OBJ-0054",
+   "field": "cls",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Открытые источники расходятся: bc.moscow называет Lakes классом B+, другой агрегатор - A. Официальное название класса на lakes.moscow (Forma) в этой сессии не удалось прочитать. Конфликт фиксируем, не выбираем.",
+   "sources": [
+    "https://bc.moscow/biznes-centr-lakes",
+    "https://intermark.ru/objects/ofis-bc-lakes-151802",
+    "https://lakes.moscow/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "STONE Towers. Tower D",
+   "registry_id": "proj-89",
+   "classifier": 40000.0,
+   "registry": 47000.0,
+   "unified_id": "UC-OBJ-0698",
+   "field": "gba",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Площадь именно башни D в открытых источниках не найдена. Известно: квартал из 4 башен 102 000 кв. м, башня B 41 000 кв. м. Страница whitewill по башням не разбивает. 40000 и 47000 не подтверждены; нужно открыть stone.ru/commercial/towerD или проектную декларацию.",
+   "sources": [
+    "https://freedome-realty.ru/nedvizhimost/bc/stone-towers/",
+    "https://whitewill.ru/stone-towers",
+    "https://stone.ru/commercial/towerD"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "STONE Белорусская",
+   "registry_id": "proj-91",
+   "classifier": 26400.0,
+   "registry": 22900.0,
+   "unified_id": "UC-OBJ-0136",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Ни 26400, ни 22900 не подтверждены. Поисковая выдача по stone.ru/of.ru называет 34 500 кв. м (другой источник ~36 000), причём неясно, GLA это или общая. Сам stone.ru вернул 404, поэтому официальная цифра не прочитана.",
+   "sources": [
+    "https://stone.ru/commercial/belorusskaya",
+    "https://of.ru/bc/10485",
+    "https://brightrich.moscow/biznes-centry/stone-belorusskaya/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Orbital",
+   "registry_id": "proj-101",
+   "classifier": "КЕНМЕР?",
+   "registry": "Ultima Development",
+   "unified_id": "UC-OBJ-0004",
+   "field": "developer",
+   "verdict": "registry",
+   "correct_value": "Ultima Development",
+   "explanation": "Несколько источников (archi.ru, cian, РБК Недвижимость, 1build) называют девелопером Orbital Ultima Development. 'КЕНМЕР?' в открытых источниках не найден. Примечание: в 2023 Ведомости писали о покупке здания структурой Ротенберга и ВЭБ.РФ - это собственник, а не девелопер.",
+   "sources": [
+    "https://archi.ru/projects/russia/17068/bc-orbital",
+    "https://realty.rbc.ru/news/640b25109a7947983a73bc10",
+    "https://www.vedomosti.ru/realty/articles/2023/08/16/990305-kompaniya-rotenberga-i-vebrf-pokupaet-biznes-tsentr-orbital",
+    "https://orbital.moscow/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name": "ASPACE Хорошевская",
+   "registry_id": "proj-113",
+   "classifier": 31920.0,
+   "registry": 23070,
+   "unified_id": "UC-OBJ-0189",
+   "field": "gla",
+   "verdict": "registry",
+   "correct_value": 23070,
+   "explanation": "Официальные данные (aspacegroup, cian): общая 41 210 кв. м, из них офисы 23 070, ритейл/кафе 2 830 и 940, террасы 4 440. 23070 - офисная площадь. 31920 не подтверждено (возможно, иной скоуп, напр. с паркингом/техническими помещениями).",
+   "sources": [
+    "https://aspacegroup.ru/projects/khoroshevskaya/",
+    "https://www.cian.ru/delovoy-centr-aspace-horoshevskaya-moskva-346664/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Avium",
+   "registry_id": "proj-115",
+   "classifier": "Capital Alliance",
+   "registry": "Alias Group",
+   "unified_id": "UC-OBJ-0121",
+   "field": "developer",
+   "verdict": "different_scope",
+   "correct_value": "Capital Alliance (СП Alias Group и Capital Group)",
+   "explanation": "Capital Alliance - совместная структура холдингов Alias Group и Capital Group (avium.ru, Московская перспектива). Оба значения верны на разных уровнях: Capital Alliance - оператор проекта, Alias Group - один из партнёров. Записывать лучше 'Capital Alliance (Alias Group + Capital Group)'.",
+   "sources": [
+    "https://mperspektiva.ru/topics/start-prodazh-v-biznes-tsentre-avium/",
+    "https://avium.ru/news/start-prodazh-v-biznes-tsentre-avium/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name": "Jenga",
+   "registry_id": "proj-132",
+   "classifier": 48482.89600000001,
+   "registry": 42588,
+   "unified_id": "UC-OBJ-0200",
+   "field": "gla",
+   "verdict": "registry",
+   "correct_value": 42588,
+   "explanation": "Две карточки (novostroy-m/vsngroup) дают офисную площадь ~42 588; третья ~42 707; общая 59 969-60 368 (надземная 54 645). 48 482 не найдено, вероятно другой скоуп (часть надземной/с ритейлом). Разброс 42 588 vs 42 707 небольшой.",
+   "sources": [
+    "https://jenga.vsngroup.ru/",
+    "https://www.novostroy-m.ru/baza/biznestsentr_jenga_djenga",
+    "https://brightrich.moscow/biznes-centry/jenga/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "K-city",
+   "registry_id": "proj-136",
+   "classifier": 48199.0,
+   "registry": 13800,
+   "unified_id": "UC-OBJ-0123",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Источники расходятся: один пишет 'общая офисная площадь более 13 800' (совпадает с registry), другой - арендопригодная 53 820 при общей 59 800 (59 787). 48199 не подтверждено. Возможно 13 800 - только офисы в башне, 53 820 - весь МФК с театром/ритейлом. Подтвердить по декларации/сайту October Group.",
+   "sources": [
+    "https://brightrich.moscow/biznes-centry/k-city/",
+    "https://rosretail.com/k-city",
+    "https://k-city.moscow/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Lavin",
+   "registry_id": "proj-141",
+   "classifier": 68798.0,
+   "registry": 25445,
+   "unified_id": "UC-OBJ-0203",
+   "field": "gba",
+   "verdict": "different_scope",
+   "correct_value": "68 798 = весь комплекс (1-я очередь 27 532 + 2-я 35 376 и др.); ~25 400 = отдельный 10-этажный корпус",
+   "explanation": "Источники по Lavin называют 68 798 как общую площадь комплекса и отдельно ~25 400 кв. м для 10-этажного здания. Это разный скоуп: classifier - весь комплекс, registry - одно здание/очередь.",
+   "sources": [
+    "https://lavin.moscow/",
+    "https://brightrich.moscow/biznes-centry/lavin/",
+    "https://www.cian.ru/biznes-centr-lavin-vorkpleys-moskva-339760/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Lavin",
+   "registry_id": "proj-141",
+   "classifier": 55698.8608,
+   "registry": 17873,
+   "unified_id": "UC-OBJ-0203",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Прямых источников на 55 698 и 17 873 не найдено. Оба числа выглядят производными от GBA (classifier ~81% от 68 798, registry ~70% от 25 445), так что скоуп следует за GBA: комплекс vs один корпус. Подтвердить нельзя.",
+   "sources": [
+    "https://workplace.forma.ru/projects/lavin",
+    "https://lavin.moscow/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Level Южнопортовая",
+   "registry_id": "proj-146",
+   "classifier": 3097.0,
+   "registry": 2295,
+   "unified_id": "UC-OBJ-0177",
+   "field": "gba",
+   "verdict": "registry",
+   "correct_value": 2295,
+   "explanation": "Официальный Level Group: офисный центр в подиуме 3 очереди ЖК, 4 этажа, общая площадь 2 295 кв. м (76,2+1086,2+566,8+566,7). 3097 не найдено; возможно включает иные помещения/этажи или весь подиум.",
+   "sources": [
+    "https://business.level.ru/projects/southport/",
+    "https://level.ru/news/start-prodazh-kommercheskih-pomeshenij-sp/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Nevsky Plaza",
+   "registry_id": "proj-155",
+   "classifier": 17000.0,
+   "registry": 13158,
+   "unified_id": "UC-OBJ-0717",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Ни 17 000, ни 13 158 в открытых источниках не найдено. Сайт bcnevskyplaza.ru называет 28 725 кв. м «площадью офисных помещений» (класс B+, 2 башни 20-25 эт.); другие агрегаторы дают 28 000 и 38 000 кв. м как общую. Девелопер - Концерн КРОСТ (krost.ru), но цифр площади на странице нет. Скоуп не подтверждён ни одним источником, выбирать нельзя.",
+   "sources": [
+    "https://bcnevskyplaza.ru/",
+    "https://krost.ru/commercial/projects/nevsky-plaza",
+    "https://www.novostroy-m.ru/baza/apartkompleks_nevskiy_18"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Солид (бывший — Nice Tower)",
+   "registry_id": "proj-158",
+   "classifier": 19500.0,
+   "registry": 15336,
+   "unified_id": "UC-OBJ-0081",
+   "field": "gla",
+   "verdict": "different_scope",
+   "correct_value": null,
+   "explanation": "Для N'ice Tower (Скотопрогонная 31А) realty-guide даёт: общая 35 485,5; полезная 22 188,8; продаваемая офисная 21 500; ритейл 625 кв. м. Ни 19 500, ни 15 336 не совпадает. Страница coldy.city/projects/solid (Солид) даёт общую 29 213 и офисную 15 935, но с адресом Автомобильный пр., 2 - это расхождение по адресу надо проверить (возможно, другой объект/переименование с пересчётом проекта). 15 336 ближе к 15 935 (площадь офисов Солид), 19 500 - к продаваемой части Nice Tower, т.е. это разные версии проекта/скоупы. Не выбираю.",
+   "sources": [
+    "https://realty-guide.ru/offices/objects/69f7aba2-72dc-4228-b5a8-fb163f1541e5/",
+    "https://coldy.city/projects/solid",
+    "https://skotoprogonnayah-ulitca-31a.pvt.ru/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "NOON",
+   "registry_id": "proj-159",
+   "classifier": 13277.44,
+   "registry": 10198,
+   "unified_id": "UC-OBJ-0094",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Общая площадь NOON 16 400 кв. м (archi.ru, девелопер Dominanta / D'MINANTA, архитектор SREDAA, класс B+/B). Арендопригодная/офисная площадь в открытых источниках не указана (d-a.ru даёт только минимальный лот от 72,6 кв. м). Ни 13 277,44, ни 10 198 проверить нельзя.",
+   "sources": [
+    "https://archi.ru/projects/russia/18611/biznes-centr-noon",
+    "https://d-a.ru/projects/offices/noon/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "One Tower",
+   "registry_id": "proj-164",
+   "classifier": 65000.0,
+   "registry": 56000,
+   "unified_id": "UC-OBJ-0127",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Комплекс One Tower (MR / Мосинжпроект) - мультифункциональный, общая площадь ~295,7 тыс. кв. м вместе с жильём. Офисная часть (этажи 5-30): «более 40 000 кв. м» (logistics.ru, towers.city). Оба значения (65 000 и 56 000) выше публикуемого «более 40 тыс.», но это нижняя граница, опровергнуть нельзя; точного GLA нет. Проверить по проектной декларации ЕИСЖС (не открылась: CAPTCHA на ЦИАН).",
+   "sources": [
+    "https://logistics.ru/upravlenie-logistikoy-i-kompaniey/one-v-moskva-siti-bolee-40-tys-m2-premialnykh-ofisov-v-novom",
+    "https://en.wikipedia.org/wiki/One_Tower_(Moscow)"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Orbital-2",
+   "registry_id": "proj-168",
+   "classifier": 50211.0,
+   "registry": 57967,
+   "unified_id": "UC-OBJ-0104",
+   "field": "gba",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Объект «Orbital-2» (3-я Магистральная, вл. 12) в открытых источниках не найден. Orbital (вл. 10): общая 27 081-27 271 кв. м, аренда 20 495-24 034. Соседний БЦ «Магистральная 12» (ФСК): общая 18 746, коммерческая 14 827. Ни 50 211, ни 57 967 не подтверждается; возможно, это суммарный скоуп нескольких корпусов - но это догадка.",
+   "sources": [
+    "https://of.ru/bc/12330",
+    "https://magistralnaya-12.ru/",
+    "https://morrowgroup.ru/biznescentr/orbital/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Rail.A",
+   "registry_id": "proj-173",
+   "classifier": 11590.0,
+   "registry": 2518,
+   "unified_id": "UC-OBJ-0168",
+   "field": "gla",
+   "verdict": "neither",
+   "correct_value": null,
+   "explanation": "11 590 кв. м у Nikoliers обозначено как GBA (общая), а не GLA; raila.ru/raila.amo.ru дают общую ~12 000; максимальный лот 3 434 кв. м, всего в продаже 7 153,7 кв. м. Значение классификатора 11 590 - по сути общая площадь, а не арендопригодная. Значение реестра 2 518 подтверждения не нашло (возможно, остаток свободных площадей на дату). Девелопер по raila.ru - ORTIGA Development, класс A.",
+   "sources": [
+    "https://nikoliers.ru/offices/rail-a/",
+    "https://raila.amo.ru/",
+    "https://raila.ru/about"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "STONE Курская",
+   "registry_id": "proj-181",
+   "classifier": 12629.76,
+   "registry": 10900,
+   "unified_id": "UC-OBJ-0060",
+   "field": "gla",
+   "verdict": "classifier",
+   "correct_value": 12630,
+   "explanation": "Поисковый агрегат (сниппет, без открытия страницы) даёт для STONE Курская: общая 17 153, арендопригодная 12 631 кв. м - совпадает с классификатором (12 629,76). Официальный stone.ru указывает только общую 17 150 кв. м и отдельной GLA не даёт. Значение реестра 10 900 не подтверждено. Уверенность ограничена: один неофициальный сниппет.",
+   "sources": [
+    "https://stone.ru/commercial/kurskaya",
+    "https://of.ru/bc/12281"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "STONE Курская",
+   "registry_id": "proj-181",
+   "classifier": "A",
+   "registry": "Prime",
+   "unified_id": "UC-OBJ-0060",
+   "field": "cls",
+   "verdict": "registry",
+   "correct_value": "Prime",
+   "explanation": "Официальный сайт девелопера STONE (АО «СТОУНХЕДЖ») называет здание «офисное здание класса Прайм». Зафиксировано как назван у девелопера; правило про Bell к этому объекту не относится.",
+   "sources": [
+    "https://stone.ru/commercial/kurskaya"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name": "STONE Римская",
+   "registry_id": "proj-192",
+   "classifier": 72100,
+   "registry": 85900,
+   "unified_id": "UC-OBJ-0116",
+   "field": "gba",
+   "verdict": "different_scope",
+   "correct_value": null,
+   "explanation": "stone.ru: наземная площадь 72 100 кв. м (класс A); РБК/другие - «общая наземная 70,5 тыс.» (более ранняя версия проекта). Значение классификатора 72 100 = наземная. 85 900 (реестр) в открытых источниках не найдено; вероятно, включает подземную часть/паркинг, но это предположение. Числа означают разное: надземная vs, возможно, полная с подземной.",
+   "sources": [
+    "https://stone.ru/commercial/rimskaya",
+    "https://realty.rbc.ru/news/675929339a794702a3c39e5a"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Taller",
+   "registry_id": "proj-201",
+   "classifier": 37500.0,
+   "registry": 46134,
+   "unified_id": "UC-OBJ-0046",
+   "field": "gba",
+   "verdict": "different_scope",
+   "correct_value": null,
+   "explanation": "Три версии у открытых источников: 37 500 «общая площадь» (taller-bc.ru, Colday-сайты, 2ГИС), ~46 000 для двух корпусов (coldy.info), 53 876 «общая площадь объекта» (coldy.city, официальный девелопер ТАЛЬВЕН/КОЛДИ СИТИ; там же офисы 64-7 300 кв. м, класс A+). 46 134 (реестр) близко к 46 000 у coldy.info. Разные скоупы (надземная/с подземной/весь комплекс), выбирать нельзя. Класс у девелопера - A+.",
+   "sources": [
+    "https://taller-bc.ru/",
+    "https://coldy.city/projects/taller",
+    "https://coldy.info/projects/taller"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Upside Ямская",
+   "registry_id": "proj-208",
+   "classifier": 29500.0,
+   "registry": 33070,
+   "unified_id": "UC-OBJ-0370",
+   "field": "gba",
+   "verdict": "registry",
+   "correct_value": 33070,
+   "explanation": "ЦИАН: общая 33 070, офисы 19 707. Официальный upside.ru: общая площадь проекта 33 710 (расхождение в цифрах 33 070 vs 33 710 - возможно, опечатка/редакция) и площадь БЦ 25 000. 29 500 (классификатор) нигде не найдено. Ближе всего реестр, но официальный сайт называет 33 710 - зафиксировать расхождение.",
+   "sources": [
+    "https://www.cian.ru/biznes-centr-upside-yamskaya-moskva-339407/",
+    "https://www.upside.ru/projects/upside-yamskaya/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Upside Ямская",
+   "registry_id": "proj-208",
+   "classifier": 23883.2,
+   "registry": 19707,
+   "unified_id": "UC-OBJ-0370",
+   "field": "gla",
+   "verdict": "registry",
+   "correct_value": 19707,
+   "explanation": "ЦИАН: офисные помещения 19 707 кв. м. 23 883,2 (классификатор) в источниках нет. Официально девелопер называет 25 000 кв. м «площадь БЦ» (иной скоуп, возможно с ритейлом/общими зонами).",
+   "sources": [
+    "https://www.cian.ru/biznes-centr-upside-yamskaya-moskva-339407/",
+    "https://www.upside.ru/projects/upside-yamskaya/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Valtri",
+   "registry_id": "proj-209",
+   "classifier": "A",
+   "registry": "Prime",
+   "unified_id": "UC-OBJ-0163",
+   "field": "cls",
+   "verdict": "registry",
+   "correct_value": "Prime",
+   "explanation": "РБК Недвижимость: VALTRI - класс Prime, подтверждён Moscow Research Forum (март 2025), девелопер ESVE Group. Официальный сайт valtri-office.ru формулирует лишь «премиум-класса» без слова Prime/A. Итог: реестр (Prime), в официальных материалах - «премиум».",
+   "sources": [
+    "https://realty.rbc.ru/news/68711f789a79479dd9881e9b",
+    "https://valtri-office.ru/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "БЦ Сколковский",
+   "registry_id": "proj-227",
+   "classifier": "A",
+   "registry": "B+",
+   "unified_id": "UC-OBJ-0066",
+   "field": "cls",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "По адресу Большой бульвар, 40 в открытых источниках числится «Стратос/Амальтея» - класс A (kf.expert; общая 82 000, для аренды до 32 500). Технопарк Сколково (Б. бульвар 42с1) - класс B. Объект с названием «БЦ Сколковский» и классом B+ не найден. Привязка записи к конкретному зданию не подтверждена; A вероятно верен лишь если это Стратос.",
+   "sources": [
+    "https://kf.expert/office/business-center/stratos-innovatsionnyj-tsentr-skolkovo-os35508",
+    "https://www.cian.ru/tehnopark-na-bolshom-bulvare42s1-moskva-220197/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "ВАРСТ",
+   "registry_id": "proj-230",
+   "classifier": 9738.59744,
+   "registry": 5000,
+   "unified_id": "UC-OBJ-0275",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "ВАРСТ (Сущёвский Вал 43с2, класс B+): общая 10 474 (wwgroup.ru), 12 028,9 (другой источник), ~11 000. Арендопригодная площадь нигде не указана. 9 738,6 правдоподобно как GLA при общей ~10,5 тыс., 5 000 - нет подтверждения; но проверено только косвенно.",
+   "sources": [
+    "https://wwgroup.ru/varst",
+    "https://of.ru/bc/2621",
+    "https://brightrich.moscow/biznes-centry/varst/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Дом Правды",
+   "registry_id": "proj-231",
+   "classifier": "ГК DARS",
+   "registry": "Metropolis",
+   "unified_id": "UC-OBJ-0287",
+   "field": "developer",
+   "verdict": "registry",
+   "correct_value": "Metropolis",
+   "explanation": "WeWall (эксклюзивный консультант проекта) и его обзор указывают девелопера METROPOLIS, архитектор Ginsburg Architects. DARS упоминается в выдаче только у соседнего жилого МФК на ул. Правды, 24 (novostroy-m), это не подтверждено для офисного проекта Дом Правды. Официальный сайт dom-pravda.ru девелопера не называет. of.ru указывает лишь управляющую компанию ООО Технологии недвижимости. Двух независимых источников нет, WeWall - брокер.",
+   "sources": [
+    "https://wewall.ru/projects/dom-pravdy/",
+    "https://of.ru/bc/1472/prodaja",
+    "https://dom-pravda.ru/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Родина Парк",
+   "registry_id": "proj-241",
+   "classifier": 30600.0,
+   "registry": 24947,
+   "unified_id": "UC-OBJ-0122",
+   "field": "gba",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Родина Парк - смешанный комплекс (около 110 тыс. кв. м всего, жилая часть отдельно). По WeWall офисная часть 24 000 кв. м + ритейл 7 500 кв. м = около 31 500 (близко к 30 600 классификатора). Значение 24 947 реестра подтвердить не удалось (проектная декларация наш.дом.рф не открылась через выдачу). Скоуп чисел не восстановлен.",
+   "sources": [
+    "https://wewall.ru/projects/rodina-park/",
+    "https://office.rodinagroup.com/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Родина Парк",
+   "registry_id": "proj-241",
+   "classifier": 24000.0,
+   "registry": 16168,
+   "unified_id": "UC-OBJ-0122",
+   "field": "gla",
+   "verdict": "classifier",
+   "correct_value": 24000,
+   "explanation": "WeWall указывает 24 000 кв. м офисной части (без 7 500 ритейла). Число 16 168 реестра подтверждения не нашло; возможно, это другой скоуп (продаваемая часть/только одна очередь). Источник один и брокерский, поэтому уверенность низкая. Класс A подтверждается и сайтом девелопера office.rodinagroup.com.",
+   "sources": [
+    "https://wewall.ru/projects/rodina-park/",
+    "https://office.rodinagroup.com/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Технопарк Густав",
+   "registry_id": "proj-247",
+   "classifier": "ПИК",
+   "registry": "Forma",
+   "unified_id": "UC-OBJ-0080",
+   "field": "developer",
+   "verdict": "different_scope",
+   "correct_value": "Forma (бренд/дочерняя компания группы ПИК)",
+   "explanation": "Оба верны на разных уровнях: Novostroy-M пишет, что проект ведёт FORMA, входящая в ГК ПИК; ПИК завершал перенос исторических зданий (пресс-релиз). Для карты корректнее бренд-девелопер Forma с пометкой группа ПИК.",
+   "sources": [
+    "https://www.novostroy-m.ru/baza/bts_tehnopark_kreativnodelovoy_klaster",
+    "https://gustav.business/",
+    "https://mperspektiva.ru/topics/pik-zavershaet-peremeshchenie-zdaniy-xix-veka-dlya-budushchego-tekhnoparka-gustav-v-marinoy-roshche/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name": "Технопарк Густав",
+   "registry_id": "proj-247",
+   "classifier": 36284.0,
+   "registry": 56000,
+   "unified_id": "UC-OBJ-0080",
+   "field": "gba",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Источники дают разные числа: 59 922 (общая БЦ, выдача), 57 731 (площадь кластера), 46 538 (Novostroy-M, весь кластер), 33 857 (IPG.Estate). Ни 36 284, ни 56 000 напрямую не подтверждены. Разница, судя по всему, в скоупе (весь кластер с историческими зданиями и паркингом против отдельных корпусов). Выбирать нельзя.",
+   "sources": [
+    "https://www.novostroy-m.ru/baza/bts_tehnopark_kreativnodelovoy_klaster",
+    "https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/tehnopark-gustav",
+    "https://www.cian.ru/tehnopark-kreativno-proizvodstvennyy-klaster-gustav-moskva-294370/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Технопарк Густав",
+   "registry_id": "proj-247",
+   "classifier": 28083.816,
+   "registry": 10292,
+   "unified_id": "UC-OBJ-0080",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Novostroy-M: 35 077 кв. м под офисы (из 46 538 всего); IPG: лоты 165-9 834 кв. м. Ни 28 083,8, ни 10 292 не подтверждены; 10 292 похоже на остаток в продаже, а не GLA проекта.",
+   "sources": [
+    "https://www.novostroy-m.ru/baza/bts_tehnopark_kreativnodelovoy_klaster",
+    "https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/tehnopark-gustav"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Технопарк Густав",
+   "registry_id": "proj-247",
+   "classifier": "A",
+   "registry": "B+",
+   "unified_id": "UC-OBJ-0080",
+   "field": "cls",
+   "verdict": "unclear",
+   "correct_value": "A (по названию девелопера/брокера) - зафиксировать конфликт",
+   "explanation": "gustav.business (Forma) и IPG называют класс A (выдача: креативно-деловой кластер бизнес-класса A). Novostroy-M и ЦИАН-сводка называют класс B. Значения B+ не найдено нигде. Конфликт источников, официальная страница Forma по WebFetch отдала 403 и прочитана только через сниппет.",
+   "sources": [
+    "https://gustav.business/",
+    "https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/tehnopark-gustav",
+    "https://www.novostroy-m.ru/baza/bts_tehnopark_kreativnodelovoy_klaster"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Энтузиаст",
+   "registry_id": "proj-264",
+   "classifier": "ТЭН",
+   "registry": "Объект Гарант",
+   "unified_id": "UC-OBJ-0389",
+   "field": "developer",
+   "verdict": "registry",
+   "correct_value": "Объект Гарант (ООО СЗ Объект Гарант)",
+   "explanation": "Официальный сайт БЦ bc-enthusiast.ru указывает застройщика ООО Специализированный застройщик Объект Гарант, раскрытие на наш.дом.рф. ТЭН подтверждения не нашёл (возможно, генподрядчик/прежний собственник). Заметка: сайт называет класс B+, общая площадь 43 821 кв. м.",
+   "sources": [
+    "https://bc-enthusiast.ru/",
+    "https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "Level Нижегородская",
+   "registry_id": "proj-267",
+   "classifier": "B+",
+   "registry": "A",
+   "unified_id": "UC-OBJ-0204",
+   "field": "cls",
+   "verdict": "registry",
+   "correct_value": "A",
+   "explanation": "Сайт девелопера Level Group: Level work Нижегородская - многофункциональный бизнес-центр класса А (офисы 63-1 574 кв. м, 12 этажей, отель AZIMUT, ритейл-галерея). Подтверждено ещё одним агрегатором (Rentagram/выдача).",
+   "sources": [
+    "https://business.level.ru/projects/work-nizhegorodskaya/",
+    "https://rentagram.ru/objects/3526156/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name": "SEZAR TOWER",
+   "registry_id": "proj-268",
+   "classifier": "A",
+   "registry": "Prime",
+   "unified_id": "UC-OBJ-0213",
+   "field": "cls",
+   "verdict": "registry",
+   "correct_value": "Prime",
+   "explanation": "Официальный сайт sezartower.ru назван Офисный комплекс PRIME-класса (по заголовку выдачи, сама страница отдала 403). В некоторых листингах встречается A. Фиксируем название у девелопера: Prime. Установка пользователя про Bell (A, не Prime) к Sezar не относится и здесь не применялась.",
+   "sources": [
+    "https://sezartower.ru/",
+    "https://ww.estate/sezar-tower"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "DIUS",
+   "registry_id": "proj-269",
+   "classifier": 65140.0,
+   "registry": 19025,
+   "unified_id": "UC-OBJ-0192",
+   "field": "gba",
+   "verdict": "different_scope",
+   "correct_value": "65 140 кв. м - весь МФК (офисный корпус + апартаменты 20 эт. + ритейл-центр); 19 025 - вероятно один корпус, не подтверждено",
+   "explanation": "Novostroy-M и выдача: площадь БЦ/комплекса около 65 тыс. кв. м; комплекс состоит из 14-этажного БЦ, 20-этажного жилого корпуса и 4-этажного ритейла. Число 19 025 реестра подтвердить не удалось - похоже на скоуп одного корпуса. Класс по Novostroy-M B+, по описанию МФК - A.",
+   "sources": [
+    "https://www.novostroy-m.ru/baza/biznestsentr_dius_dius",
+    "https://dvizhenie.ru/media/6261/biznes-tsentr-riteil-i-apartamenty-mfk-dius-gotov-na-23"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "DIUS",
+   "registry_id": "proj-269",
+   "classifier": 52737.344,
+   "registry": 12500,
+   "unified_id": "UC-OBJ-0192",
+   "field": "gla",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "Нет источника с GLA: 105 офисов 41-313 кв. м (Novostroy-M) дают максимум около 33 тыс. кв. м по верхней границе, что несовместимо с 52 737 классификатора (GLA 81 процент от 65 140 - похоже на расчётный коэффициент, включает апартаменты/ритейл). 12 500 тоже не подтверждено.",
+   "sources": [
+    "https://www.novostroy-m.ru/baza/biznestsentr_dius_dius"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name": "Dream Riva",
+   "registry_id": "proj-276",
+   "classifier": 18500.0,
+   "registry": 22751.0,
+   "unified_id": "UC-OBJ-0087",
+   "field": "gba",
+   "verdict": "different_scope",
+   "correct_value": "22 751 кв. м общая площадь; 20 466 кв. м надземная часть",
+   "explanation": "Пресс-релиз о вводе БЦ Рива (Regions Development, через cre.ru/выдачу): общая площадь 22 751 кв. м, из них надземная 20 466. Реестр = общая (с подземной частью), поле GBA по определению - надземная, то есть 20 466. 18 500 классификатора не подтверждено. Сайт девелопера: класс A, 18 этажей, 1 042,6 кв. м на этаж; amo.ru называет B+.",
+   "sources": [
+    "https://cre.ru/news/101480",
+    "https://bcriva.ru/",
+    "https://dream-riva.amo.ru/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name": "ЗИЛАРТ GRAND (Дом 18)",
+   "registry_id": "remain-only-0002",
+   "classifier": 187706.0,
+   "registry": 35600,
+   "unified_id": "UC-OBJ-0640",
+   "field": "gba",
+   "verdict": "unclear",
+   "correct_value": null,
+   "explanation": "ЗИЛАРТ GRAND (Дом 18) - жилой 30-этажный дом ЛСР (129 квартир), не офис. 187 706 похоже на площадь всего ЗИЛАРТ (весь квартал), 35 600 - на один дом, но проектная декларация не открылась и ни одно из чисел не подтверждено. Объект в офисной базе сомнителен.",
+   "sources": [
+    "https://www.lsr.ru/msk/zhilye-kompleksy/zilart-grand/"
+   ],
+   "confidence": "low"
+  }
+ ]
+}
