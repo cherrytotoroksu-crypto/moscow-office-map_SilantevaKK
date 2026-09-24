@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-09-24",
+  "scope": "host_building input_year gaps matched against bc_base_classes_2026-09-24.json",
+  "rules": [
+    "exact normalized address and coordinates within 150 m",
+    "project_id plus building_id identify the target row",
+    "year requires two agreeing sources",
+    "areas and developer are never copied automatically from this source"
+  ],
+  "accepted": [
+    {
+      "canonical_project_id": "cwhost-0007",
+      "canonical_building_id": "cwhost-0007-bld",
+      "input_year": 2021,
+      "sources": [
+        "https://pioneer.ru/project/technopark",
+        "https://mosprimeoffice.ru/business-centers/technopark-plaza"
+      ]
+    },
+    {
+      "canonical_project_id": "cwhost-0026",
+      "canonical_building_id": "cwhost-0026-bld",
+      "input_year": 2006,
+      "sources": [
+        "https://enkatc.com/ru/business-development/tc-kapitolii-vernadskogo",
+        "https://mosprimeoffice.ru/business-centers/kapitoliy"
+      ]
+    },
+    {
+      "canonical_project_id": "cwhost-0027",
+      "canonical_building_id": "cwhost-0027-bld",
+      "input_year": 2006,
+      "sources": [
+        "https://kf.expert/office/business-center/space-1-kompozitorskaya-os2235",
+        "https://mosprimeoffice.ru/business-centers/space-1"
+      ]
+    },
+    {
+      "canonical_project_id": "cwhost-0029",
+      "canonical_building_id": "cwhost-0029-bld",
+      "input_year": 2008,
+      "sources": [
+        "https://sitidel.ru/",
+        "https://mosprimeoffice.ru/business-centers/sitidel"
+      ]
+    },
+    {
+      "canonical_project_id": "cwhost-0036",
+      "canonical_building_id": "cwhost-0036-bld",
+      "input_year": 2012,
+      "sources": [
+        "https://www.mos.ru/upload/documents/oiv/2012112201.pdf",
+        "https://mosprimeoffice.ru/business-centers/moskva"
+      ]
+    },
+    {
+      "canonical_project_id": "cwhost-0051",
+      "canonical_building_id": "cwhost-0051-bld",
+      "input_year": 2014,
+      "sources": [
+        "https://kfk-sistem.ru/produkchiya/biznes-centr-poklonka-place-gk-tashir",
+        "https://mosprimeoffice.ru/business-centers/poklonka-place"
+      ]
+    },
+    {
+      "canonical_project_id": "cwhost-0058",
+      "canonical_building_id": "cwhost-0058-bld",
+      "input_year": 2009,
+      "sources": [
+        "https://vivaljdi-plaza.pvt.ru/",
+        "https://mosprimeoffice.ru/business-centers/vivaldi-plaza"
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "canonical_project_id": "cwhost-0003",
+      "canonical_building_id": "cwhost-0003-bld",
+      "fields": ["input_year"],
+      "reason": "The source row is a generic business-centre card at the same Moscow-City address and does not identify Tower on the Embankment block B."
+    },
+    {
+      "canonical_project_id": "cwhost-0058",
+      "canonical_building_id": "cwhost-0058-bld",
+      "fields": ["gba", "gla"],
+      "reason": "Source-grain conflict: consolidated base has 100609/69000 m2 while the live Vivaldi Plaza building card reports 26383 m2."
+    }
+  ]
+}

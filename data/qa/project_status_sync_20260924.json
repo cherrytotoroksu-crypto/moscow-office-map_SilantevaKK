@@ -1,0 +1,10 @@
+{
+  "checked_on": "2026-09-24",
+  "scope": "office projects with confirmed commissioning dates but stale lifecycle status",
+  "accepted": [
+    {"canonical_project_id": "proj-14", "canonical_name": "Lunar", "from": "Строится", "to": "Введён", "source": "https://www.lunar-center.ru/"},
+    {"canonical_project_id": "proj-20", "canonical_name": "БЦ Серебряный Фонтан", "from": "Строится", "to": "Введён", "source": "https://etalongroup.ru/msk/news/gruppa-etalon-zavershila-sdelku-po-prodazhe-delovogo-kvartala-v-sostave-kompleksa-serebryanyy-fontan"},
+    {"canonical_project_id": "proj-129", "canonical_name": "iCITY (Space)", "from": "Строится", "to": "Введён", "source": "data/building_dates.json"},
+    {"canonical_project_id": "proj-279", "canonical_name": "River Park Коломенское", "from": "Строится", "to": "Введён", "source": "https://m.river-park.ru/info/news/27693/"}
+  ]
+}

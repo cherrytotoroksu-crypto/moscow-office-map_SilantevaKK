@@ -1,0 +1,48 @@
+{
+  "checked_on": "2026-09-24",
+  "policy": {
+    "blank_only_for_historical_metrics": true,
+    "historical_rates_copied_between_periods": false,
+    "unconfirmed_values_remain_null": true
+  },
+  "accepted": [
+    {
+      "records": "AFI Gallery in coworking_202506..202606 and canonical rows proj-176/cwhost-hist-4b033613e3",
+      "fields": ["address", "lat", "lng"],
+      "value": ["пл. Тверская Застава, 4", 55.775682, 37.581191],
+      "evidence": [
+        "https://www.afigallery.ru/contacts/",
+        "coworking_202506.json: two floor records already shared the building point"
+      ],
+      "reason": "Official address and stable building point; the previous 55.663329/37.538188 point belongs to another AFI project."
+    },
+    {
+      "records": "Manufaqtury Поклонка id=84 tariff rows in 202512 and 202603",
+      "fields": ["seats"],
+      "value": 843,
+      "evidence": ["ten populated rows for the exact same site in adjacent quarterly snapshots"],
+      "reason": "Capacity is a site-level value shared by tariff rows; every observed value agrees."
+    },
+    {
+      "records": "Multispace Дубинин id=157 in 202606 and canonical row proj-157",
+      "fields": ["address", "seats", "rate"],
+      "value": ["ул. Дубининская, вл. 39–41", 650, 70000],
+      "evidence": [
+        "https://dubininsky.multispace.ru/",
+        "https://kf.expert/office/pomeschenie/dubinin-sky-bashnya-b-ol48826"
+      ],
+      "reason": "Current operator page confirms the site/capacity and current NF Group listing provides the September 2026 asking rate."
+    }
+  ],
+  "unresolved": [
+    {
+      "record": "coworking_202412.json id=23 Apollax Space / Сокольники",
+      "field": "address",
+      "reason": "The stored coordinate is only the generic Sokolnicheskaya Square geocoder point; no authoritative site address was found."
+    },
+    {
+      "records": "remaining historical rate and seat blanks",
+      "reason": "Rates are time-varying; the remaining capacities lack repeated agreeing evidence or are floor-specific AFI values."
+    }
+  ]
+}
