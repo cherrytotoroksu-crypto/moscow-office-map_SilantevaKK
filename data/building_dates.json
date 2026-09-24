@@ -111,19 +111,21 @@
     "construction_start_q": null,
     "start_q": "202411",
     "commission_q": null,
-    "source": "kommersant.ru — «STONE приступает к строительству... STONE Мнёвники 1» (точный квартал начала стройки не указан); продажи (обе очереди 1+2) стартовали поздней осенью 2024",
-    "last_checked": "2026-07-16",
+    "source": "Official STONE project page: https://stone.ru/commercial/mnevniki",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-185",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2028
   },
   "stone мневники ii": {
     "construction_start_q": null,
     "start_q": "202411",
     "commission_q": null,
-    "source": "forbes.ru — разрешение на строительство «STONE Мнёвники 2» получено, GBA источника 54300 — почти точное совпадение с нашим 54900 (~1.1%); продажи стартовали поздней осенью 2024 вместе с очередью 1",
-    "last_checked": "2026-07-16",
+    "source": "Official STONE project page: https://stone.ru/commercial/mnevniki",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-188",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2029
   },
   "мфк строгино": {
     "construction_start_q": null,
@@ -138,10 +140,11 @@
     "construction_start_q": "202512",
     "start_q": null,
     "commission_q": null,
-    "source": "moscow-city.guide, mr-group.ru — период строительства Q4 2025 - Q4 2029 (вторая очередь iCITY в Шелепихе); класс здания уточнён на Prime (fluffywhite.moscow: «офисы класса PRIME от MR Group») — исправлено в data (было A)",
-    "last_checked": "2026-07-16",
+    "source": "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-204",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2029
   },
   "aurus": {
     "construction_start_q": null,
@@ -209,11 +212,12 @@
   "one tower": {
     "construction_start_q": "201907",
     "start_q": "202509",
-    "commission_q": null,
-    "source": "разрешение на строительство от 30.06.2018, стройка началась июль 2019 (проект изначально вёл Мосинжпроект, с конца 2023 — MR Group, что совпадает с нашим девелопером); официальный старт продаж планировался сентябрь-октябрь 2025 (умеренная уверенность — формулировка «планируется»); план сдачи Q2 2030 (точно совпадает с нашим year=2030)",
-    "last_checked": "2026-07-16",
+    "commission_q": "203006",
+    "source": "Current project/developer source: https://city.mr-group.ru/",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-164",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2030
   },
   "lakes 2": {
     "construction_start_q": "202509",
@@ -228,8 +232,8 @@
     "construction_start_q": "202504",
     "start_q": "202501",
     "commission_q": null,
-    "source": "cre.ru/news/99415, talkprimorye.ru — разрешение на строительство Q2 2025, старт продаж январь 2025, стройка начата апрель 2025; план сдачи конец 2028",
-    "last_checked": "2026-07-16",
+    "source": "Unresolved commissioning conflict: official https://kobzon.city/ says Q2 2028; https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716 says Q4 2028.",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-136",
     "canonical_building_id": null
   },
@@ -246,10 +250,11 @@
     "construction_start_q": null,
     "start_q": "202103",
     "commission_q": null,
-    "source": "realty.rbc.ru — разрешение на начало продаж (эскроу) получено в марте 2021; ввод самого модуля отдельно не подтверждён (не путать с «Lunar модуль В», у которого свой РНВ сентябрь 2024)",
-    "last_checked": "2026-07-16",
+    "source": "lunar-center.ru reports the Lunar office building commissioned in 2023; MosPrimeOffice corroborates identity/address.",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-14",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2023
   },
   "porta forma": {
     "construction_start_q": "202301",
@@ -263,11 +268,12 @@
   "lakes": {
     "construction_start_q": null,
     "start_q": null,
-    "commission_q": null,
-    "source": "lakes-office.ru/office-news.ru — «готовность IV кв. 2025, продажи открыты», формулировка неоднозначна (факт или прогноз на момент публикации) — явного «введён в эксплуатацию» не нашла, не проставляю. GBA 55378 (24136 ритейл + 18951 офис по этому источнику) — точно совпадает с нашими данными.",
-    "last_checked": "2026-07-16",
+    "commission_q": "202603",
+    "source": "Official FORMA Workplace news dated 2026-01-23 confirms the operating permit; current project page gives Q1 2026.",
+    "last_checked": "2026-09-24",
     "canonical_project_id": "proj-77",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2026
   },
   "lunar модуль в": {
     "construction_start_q": null,
@@ -859,5 +865,25 @@
     "last_checked": "2026-08-22",
     "canonical_project_id": "proj-1",
     "canonical_building_id": null
+  },
+  "stone мневники iii": {
+    "canonical_project_id": "proj-189",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2030,
+    "source": "Official STONE project page: https://stone.ru/commercial/mnevniki3",
+    "last_checked": "2026-09-24"
+  },
+  "stone римская": {
+    "canonical_project_id": "proj-192",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2028,
+    "source": "Official STONE project page: https://stone.ru/commercial/rimskaya",
+    "last_checked": "2026-09-24"
   }
 }

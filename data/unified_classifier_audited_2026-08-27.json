@@ -40636,9 +40636,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Введён",
-      "latitude": 55.755819,
-      "longitude": 37.617644,
-      "coordinates_status": "unverified",
+      "latitude": 55.7778039613667,
+      "longitude": 37.5866961479187,
+      "coordinates_status": "verified",
       "legacy_ids": [
         "cwhost-hist-5d45ac8941",
         "cwhost-hist-5d45ac8941-bld"
@@ -40651,10 +40651,12 @@
       "layer_source_date": "2026-08-22",
       "layer_qa_notes": "Historical coworking host restored 2026-08-22; source: data/coworking_202512.json id=65, exact bc='Белая Площадь'. Identity is based on exact bc, not nearest coordinates. Class/areas/dates remain missing until two-source verification. entity_role=host_building assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. 2026-09-14: подтверждено вторым независимым источником. Источник: БЦ «Белая площадь» (White Square), Лесная 5, комплекс из 3 корпусов — площадь агрегатная по всему комплексу, не по конкретному строению а-в.",
       "source_links": [
-        "https://archi.ru/projects/russia/470/kommercheskii-delovoi-centr-belaya-ploschad"
+        "https://archi.ru/projects/russia/470/kommercheskii-delovoi-centr-belaya-ploschad",
+        "https://realty-guide.ru/offices/objects/2b78b525-795b-4f66-95c0-fc922719722a/",
+        "https://yandex.com/maps/213/moscow/house/lesnaya_ulitsa_5/Z04Ycw9mQU0BQFtvfXt2dntrZw%3D%3D/"
       ],
       "verification_status": "Создано 2026-09-17 — строка отсутствовала в кодификаторе, добавлена из data/all_projects_layer.json (entity_role=host_building, canonical_project_id=cwhost-hist-5d45ac8941).",
-      "confidence": "medium",
+      "confidence": "high",
       "entity_type": "host_building_candidate",
       "classification_note": "2026-09-21: девелопер здания указан по открытым источникам (https://archi.ru/projects/russia/470/kommercheskii-delovoi-centr-belaya-ploschad). Застройщик ООО Квартал 674-675 (структура O1 Properties, владелец БЦ). Уверенность средняя.",
       "needs_review": false,
@@ -40665,9 +40667,9 @@
       "canonical_project_id": "838",
       "geo_ao": "Центральный",
       "geo_raion": "Тверской",
-      "geo_zone": "Центральное ядро (БК)",
-      "geo_submarket": "БК",
-      "geo_bizFormed": "ЦДР",
+      "geo_zone": "СК-ТТК",
+      "geo_submarket": "ТТК Север",
+      "geo_bizFormed": "Белорусский",
       "geo_bizForming": null,
       "project_name": "Белая Площадь"
     },
@@ -41844,7 +41846,7 @@
       "geo_ao": "Новомосковский",
       "geo_raion": "Марушкинское",
       "geo_zone": "за МКАД",
-      "geo_submarket": "Новая Москва",
+      "geo_submarket": null,
       "geo_bizFormed": null,
       "geo_bizForming": null,
       "project_name": "МФК Крёкшино",
