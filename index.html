@@ -4051,7 +4051,7 @@ async function renderBc() {
       m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (MosPrimeOffice)', [
         ['Класс (MRF)', it.mrf_class], ['Девелопер', it.developer],
         ['Адрес', it.address], ['Район', it.district], ['Округ', it.okrug],
-        ['Год постройки', it.year], ['Этажей', it.floors],
+        ['Год постройки', it.year ?? (it.year_web ? `${it.year_web} (проверено по открытым источникам)` : null)], ['Этажей', it.floors],
         ['Общая площадь', it.total_area_label], ['Тип здания', it.building_type],
         ['Рейтинг', it.rating != null ? `${it.rating} (место ${it.rating_place ?? '—'})` : null],
         ['Свободных предложений', it.offers_available_count],
