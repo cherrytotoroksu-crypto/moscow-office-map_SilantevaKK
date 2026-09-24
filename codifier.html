@@ -2142,7 +2142,7 @@ function openBcMosprimeCard(row) {
     ['Класс (MRF)', row.mrf_class], ['Девелопер', row.developer],
     ['Адрес', row.address],
     ['Район', row.district], ['Округ', row.okrug], ['Индекс', row.postcode],
-    ['Год постройки', row.year], ['Год (веб-проверка)', row.year_web ? `${row.year_web} (${row.year_web_confidence === 'high' ? 'высокая' : 'средняя'} надёжность)` : (row.year_web_low ? `${row.year_web_low} (слабый источник, не подтверждён)` : null)],
+    ['Год постройки', row.year], ['Год (веб-проверка)', row.year_web ? `${row.year_web}${row.year_web_kind && row.year_web_kind !== 'ввод' ? ' — ' + row.year_web_kind : ''} (${row.year_web_confidence === 'high' ? 'высокая' : 'средняя'} надёжность)` : (row.year_web_low ? `${row.year_web_low} (слабый источник, не подтверждён)` : null)],
     ['Комментарий проверки года', row.year_web_note], ['Этажей', row.floors],
     ['Общая площадь', row.total_area_label], ['Тип здания', row.building_type],
     ['Назначение', row.purpose],
