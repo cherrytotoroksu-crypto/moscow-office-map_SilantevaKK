@@ -385,12 +385,12 @@
     "network": "AFI",
     "district": "Белорусский",
     "bc": "AFI Gallery",
-    "address": "пл. Тверская Застава, 4",
+    "address": "пл. Тверская Застава, 3",
     "vacancy": 100.0,
     "seats": 1200,
     "rate": 86400.0,
-    "lat": 55.775682,
-    "lng": 37.581191,
+    "lat": null,
+    "lng": null,
     "id": 176
   },
   {

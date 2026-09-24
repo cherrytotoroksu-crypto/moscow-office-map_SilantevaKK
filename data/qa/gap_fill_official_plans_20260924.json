@@ -1,9 +1,0 @@
-{
-  "checked_on": "2026-09-24",
-  "scope": "current official developer commissioning plans",
-  "accepted": [
-    {"canonical_project_id": "proj-136", "canonical_name": "K-city", "input_year": 2028, "input_quarter": 2, "source": "https://kobzon.city/"},
-    {"canonical_project_id": "proj-164", "canonical_name": "One Tower", "input_year": 2030, "input_quarter": 2, "source": "https://city.mr-group.ru/"},
-    {"canonical_project_id": "proj-204", "canonical_name": "Top Tower", "input_year": 2029, "input_quarter": null, "source": "https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti"}
-  ]
-}
