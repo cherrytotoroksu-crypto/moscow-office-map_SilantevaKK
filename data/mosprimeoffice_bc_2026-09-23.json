@@ -489,11 +489,15 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Дубль/ошибочная запись по адресу Садовническая 82 стр.2; год по корпусу не подтверждён.",
+   "year_web_note": "Аврора Бизнес Парк (Садовническая 82 с2), очереди введены 2003/2005/2011 (morrowgroup) либо 2003/2005/2015 (поисковая сводка, of.ru: 2015 у bazametrov-подобной сводки). ЦИАН помечает адрес 82С2 как 'II очередь' - отсюда 2005, но соответствие стр.2 = II очереди по одному косвенному признаку; конфликт 2011/2015 по III очереди. Девелопер не найден на прочитанных страницах.",
    "year_web_sources": [
-    "https://caos.ru/bc/avrora/"
+    "https://caos.ru/bc/avrora/",
+    "https://morrowgroup.ru/biznescentr/avrora/",
+    "https://of.ru/bc/1451",
+    "https://www.cian.ru/biznes-centr-ii-ochered-moskva-3298/"
    ],
-   "web_class": "A"
+   "web_class": "A",
+   "year_web_low": 2005
   },
   {
    "id": 1161,
@@ -748,13 +752,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1932,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); of.ru: год 1932 для БП Агат (Б.Семёновская 40) в целом, не для стр.13; другой источник: полная реконструкция 2006. Год именно стр.13 не подтверждён. Слабый год 1932 не подтверждён.",
+   "year_web_note": "Комплекс Б.Семёновская 40: здания конца XX в. (1980 по morrowgroup), полностью обновлены в 2006. Год именно стр.13 не подтверждён; 1932 (of.ru, из prev_note) конфликтует. Прочитана одна страница + сводка поиска.",
    "year_web_sources": [
     "https://agat.bc-moscow.ru/",
+    "https://morrowgroup.ru/biznescentr/agat/",
     "https://of.ru/bc/2139"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2006,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция"
   },
   {
    "id": 1341,
@@ -782,7 +789,11 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Рябиновая 55 с32: 7-этажное здание, год и название Аграм на страницах не указаны. Для стр.1 комплекса fortex даёт 1966 - к стр.32 не относится.",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/ryabinovaya-55-s1/",
+    "https://www.mega-realty.ru/ryabinovaya_ulitsa_55s32_b33278.htm"
+   ]
   },
   {
    "id": 1000,
@@ -1374,7 +1385,7 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Плеханова 8: по адресу/названию БЦ Альтернатива источников не найдено (соседние Плеханова 7 - 1989, Восток 15А - 1973, Юникон 4а - 2010 - другие здания)."
   },
   {
    "id": 1395,
@@ -1621,11 +1632,14 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1932,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); of.ru: ОСК 1-я Фрезерная 2/1 (с54) - 1932, класс C; строение из списка (2/1к2) не подтверждено. Слабый год 1932 не подтверждён.",
+   "year_web_note": "1-я Фрезерная 2/1к2: 9 этажей, класс C; год для к2 не указан. Для других строений 1932 (of.ru) и 1954 (с11, ЦИАН) - к2 не подтверждено.",
    "year_web_sources": [
-    "https://of.ru/bc/2425"
+    "https://bcfrezer.ru/",
+    "https://of.ru/bc/2425",
+    "https://www.mega-realty.ru/1-ya_frezernaya_ulitsa_2_1k2_b20392.htm"
    ],
-   "web_class": "C"
+   "web_class": "C",
+   "developer": "УК ООО ЦКН Столица (управляющая, не подтверждён как девелопер)"
   },
   {
    "id": 362,
@@ -2021,7 +2035,11 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Комсомольский 42 стр.4: год не найден. У стр.3 упоминалась реконструкция 2012 - другое строение, не подставлено. ЦИАН отдал капчу.",
+   "year_web_sources": [
+    "https://bazametrov.ru/bc/ars"
+   ],
+   "web_class": "B"
   },
   {
    "id": 119,
@@ -3298,7 +3316,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Берёзка, Берёзовая аллея 14Б (стр.1-4, класс B+): год не указан ни на одной странице.",
+   "year_web_sources": [
+    "https://www.mega-realty.ru/berezovaya_alleya_14bs2_b12246.htm"
+   ],
+   "web_class": "B+"
   },
   {
    "id": 1407,
@@ -3383,8 +3405,11 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1950,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); ЦИАН (по сводке поиска): 1950, класс B; один источник. Слабый год 1950 не подтверждён.",
+   "year_web_note": "КОНФЛИКТ: of.ru и realty-guide - 2005; fortex - реконструкция 2008; ЦИАН (из prev_note) - 1950. Возможно здание 1950 г. перестроено в 2005-2008 (гипотеза, не подтверждена). 2005 выставлен как наиболее частый, без уверенности.",
    "year_web_sources": [
+    "https://fortexgroup.ru/bc/berezovaya-alleya/",
+    "https://of.ru/bc/288",
+    "https://realty-guide.ru/offices/objects/9a54777b-920c-4ca0-9071-e346176eda99/",
     "https://www.cian.ru/biznes-centr-berezovaya-alleya-moskva-14998/"
    ],
    "web_class": "B"
@@ -3698,12 +3723,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 2008,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); ЦИАН (сводка поиска): корпус Б 2008 г.; страница ЦИАН отдаёт капчу, не читал. Девелопер не найден. Слабый год 2008 не подтверждён.",
+   "year_web_note": "Корпус Б: 2008 (ЦИАН по сводке поиска, fortex для парка в целом); парк из шести корпусов 2008-2012. Страница ЦИАН недоступна (капча). Девелопер не найден.",
    "year_web_sources": [
+    "https://fortexgroup.ru/bc/rumyantsevo/",
     "https://www.cian.ru/biznes-park-korpus-b-moskva-31248/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 2008,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод"
   },
   {
    "id": 1147,
@@ -3758,11 +3786,16 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1974,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); ЦИАН (сводка): 3-этажное здание 1974 г.; один источник. Слабый год 1974 не подтверждён.",
+   "year_web_note": "Чуксин тупик 9 (ОСЗ / Чуксин 9): 3 этажа, 1974 - of.ru и fortex совпадают; площадь 2900 vs 3200 м2. Здание позднее 1974 не реконструировалось по данным источников (не проверено).",
    "year_web_sources": [
+    "https://fortexgroup.ru/bc/chuksin-9/",
+    "https://of.ru/bc/12417",
     "https://www.cian.ru/ofisnoe-zdanie-v-chuksinom-tupike9-moskva-77852/"
-   ]
+   ],
+   "year_web": 1974,
+   "year_web_confidence": "high",
+   "year_web_kind": "постройка",
+   "web_class": "B"
   },
   {
    "id": 124,
@@ -3925,7 +3958,13 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Конфликт: of.ru 1959 (10 эт., 9166 м2); сниппет ЦИАН 1959 (11 эт., 20139 м2); layton.ru 1954 (10 эт., 23277 м2). Площади тоже расходятся - возможно разные корпуса/строения. Год не выбран; кандидаты 1959 (2 источника) и 1954. Это старая постройка, не ввод БЦ.",
+   "year_web_sources": [
+    "https://of.ru/bc/2148",
+    "https://www.cian.ru/ofisno-zhiloy-kompleks-na-semenovskoy-naberezhnoy2-1s1-moskva-228443/",
+    "https://www.layton.ru/rent/semenovskaya-nab-2-1-str-1-4436/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 943,
@@ -3980,7 +4019,14 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "fortexgroup: 1969, 9 эт., 3025 м2, кл. B. Сниппет поиска упоминает другой источник с 1987 - конфликт не разрешён. Второй независимый источник не подтверждён (2GIS/Яндекс не дали года).",
+   "year_web": 1969,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/begovaya-9a/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 970,
@@ -4094,7 +4140,12 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Год 1830 взят из сниппета поиска по странице Маросейка 8 (2-3 эт., 6336 м2); при прямом чтении страницы fortex года не показала. Историческое здание, год реконструкции под БЦ не найден. Один источник.",
+   "year_web_low": 1830,
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/maroseyka-8/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 1187,
@@ -4149,13 +4200,17 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 2007,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Сводка поиска: 15 этажей, 2007; класс B/B+ в разных источниках. Слабый год 2007 не подтверждён.",
+   "year_web_note": "of.ru и biz-cen.ru: 2007, 15 эт. Класс B (biz-cen) / B+ (of.ru). Площадь 25000-26950 м2. Агрегаторы могут копировать друг друга; девелопер не указан.",
    "year_web_sources": [
+    "https://of.ru/bc/843",
+    "https://www.biz-cen.ru/msk/julebino/",
     "https://www.cian.ru/biznes-centr-zhulebino-moskva-5653/",
     "https://zhulebino.pvt.ru/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 2007,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод"
   },
   {
    "id": 1287,
@@ -4455,7 +4510,12 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Электродная 2с13 (бывший НИИ, бизнес-парк): of.ru 1947 (4 эт., 2700 м2); realty-guide (комплекс стр. 12-14) 1958. Конфликт, не выбран. Год переделки под бизнес-парк не найден. ЦИАН заблокирован капчей.",
+   "year_web_sources": [
+    "https://of.ru/bc/152",
+    "https://realty-guide.ru/offices/objects/2591/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 946,
@@ -4540,12 +4600,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1992,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Сводка поиска: Митинская 40к2 построен 1992, класс B; один источник. Слабый год 1992 не подтверждён.",
+   "year_web_note": "Митинская 40к2: layton.ru 1992, 5 эт., 4914 м2; сниппет ЦИАН (40к2) 1992, 6 эт., 4870 м2. Оба агрегаторы, официального источника нет.",
    "year_web_sources": [
-    "https://of.ru/bc/2347"
+    "https://of.ru/bc/2347",
+    "https://www.cian.ru/biznes-centr-na-ulmitinskaya30s1-moskva-7747/",
+    "https://www.layton.ru/rent/mitinskaya-ulitsa-dom-57-6143/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 1992,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка"
   },
   {
    "id": 1054,
@@ -4795,10 +4859,11 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 2007,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Смирновский (ул.Смирновская 25, шесть корпусов) 2007; адрес в списке Смирновская 2 стр.1 - отдельный объект (ОСК), соответствие не подтверждено. Слабый год 2007 не подтверждён.",
+   "year_web_note": "Смирновская 2с1: сниппет ЦИАН - 1935, 2 эт., 5921 м2 (офисно-складской, автосервис). Это НЕ бизнес-парк Смирновский (Смирновская 25, 2007) - отдельный объект. Один источник, fortex-страница года не даёт.",
    "year_web_sources": [
     "https://of.ru/bc/1688",
-    "https://smirnovsky2.ru/"
+    "https://smirnovsky2.ru/",
+    "https://www.cian.ru/ofisno-skladskoy-kompleks-na-ulsmirnovskaya2s1-moskva-112449/"
    ],
    "web_class": "B"
   },
@@ -5234,7 +5299,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "БЦ На Спасской, Б. Сухаревская пл. 9 (особняк, 4 эт.): капремонт/реконструкция 2007 (realty-guide, сниппет поиска); of.ru указывает 2008 как год. Расхождение 2007/2008. Класс B+ (of.ru), у realty-guide 'E'. Первоначальная постройка особняка не найдена.",
+   "year_web": 2007,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция",
+   "year_web_sources": [
+    "https://2gis.ru/moscow/firm/70000001006941194",
+    "https://of.ru/bc/1562",
+    "https://realty-guide.ru/offices/objects/9a8738a8-15c7-4e06-a41a-d0f4866d600d/"
+   ],
+   "web_class": "B+"
   },
   {
    "id": 446,
@@ -5565,7 +5639,15 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "of.ru и fortexgroup: 1991, 2 эт., 2561 м2, класс B. Оба агрегаторы.",
+   "year_web": 1991,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/9-ya-radialnaya-2/",
+    "https://of.ru/bc/2004"
+   ],
+   "web_class": "B"
   },
   {
    "id": 592,
@@ -5863,7 +5945,15 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "fortexgroup: 1993 (3 эт.); ЦИАН (сниппет): 1996, 4585 м2. Конфликт 1993/1996, выбрано 1993 как значение прямо прочитанной страницы - низкая уверенность в выборе.",
+   "year_web": 1993,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/volgogradskiy-4a/",
+    "https://www.cian.ru/ofisnoe-zdanie-na-volgogradskom-prospekte4a-moskva-35081/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 742,
@@ -5999,7 +6089,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Здание 1935 г., 5 эт., ~4143 кв.м (of.ru и fortex совпадают, возможна общая база). Год реконструкции под офисы не найден.",
+   "year_web": 1935,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://2gis.ru/moscow/firm/70000001046434807",
+    "https://fortexgroup.ru/bc/streletskaya-6/",
+    "https://of.ru/bc/1498"
+   ],
+   "web_class": "C/B (источники расходятся: of.ru — C, fortex — B)"
   },
   {
    "id": 839,
@@ -6027,7 +6126,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "БЦ 2-я Карпатская вл4: 3 эт., 1200 кв.м, класс B, Солнцево. Год не указан ни на fortex, ни в других найденных источниках.",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/2-ya-karpatskaya-vl4/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 830,
@@ -6055,7 +6158,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Особняк 1893 г. постройки (неоклассика), капремонт 2018 г. (фасадное освещение, двор). Подтверждено одним источником (сайт УК); 2018 — капремонт, а не точно перепрофилирование, поэтому year=2018 условно; постройка 1893.",
+   "year_web": 2018,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция",
+   "year_web_sources": [
+    "https://fortexgroup.ru/biznes-centr/sredniy-karetnyy-pereulok/",
+    "https://wwgroup.ru/sredniy-karetnyy"
+   ],
+   "web_class": "B",
+   "developer": "West Wind Group (управление/аренда)"
   },
   {
    "id": 843,
@@ -6083,7 +6195,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Азовская 24к3 — торговый (торгово-развлекательный) центр «Азовский» с кинотеатром, а не офисный БЦ; год ввода в источниках не указан. Кандидат на пересмотр категории объекта.",
+   "year_web_sources": [
+    "https://icx.ru/bc/azovskaya-24k3/",
+    "https://zoon.ru/msk/street/azovskaya_ulitsa/bld/24_k_3/"
+   ]
   },
   {
    "id": 862,
@@ -6111,7 +6227,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Сущёвский Вал 16с3: год не найден. БЦ Минаевский (2001, B+) — это 16с6, а не с3; не переносить. Другие строения 16с5 — 2006 (сниппет), к с3 не относится.",
+   "year_web_sources": [
+    "https://yandex.com/maps/org/biznes_tsentr/92602893019/"
+   ],
+   "web_class": "A (по отзыву на Яндекс.Картах, не подтверждено)"
   },
   {
    "id": 863,
@@ -6166,7 +6286,15 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Двухэтажный кирпичный особняк 1912 г., ~1100 кв.м. Год реконструкции не найден. realty-guide (1975, 8 эт., 5100 кв.м) относится к другому зданию (Скаковая 32 общ.) — не использовано.",
+   "year_web": 1912,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/skakovaya-32-s1/",
+    "https://m.biz-cen.ru/msk/skakovaya_32_str._1/amp/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 882,
@@ -6194,7 +6322,13 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "2000 г. — из поисковой выдачи ЦИАН (страницу прочитать не удалось, капча); caos подтверждает B+, 2867 кв.м, но год не указывает. fortex 'Волгоградский 42' (2008, 7200 кв.м) — другое здание.",
+   "year_web_low": 2000,
+   "year_web_sources": [
+    "https://caos.ru/bc/volgogradskiy-pr-t-42-korp-42a/",
+    "https://www.cian.ru/biznes-centr-na-volgogradskom-prospekte42k42a-moskva-59563/"
+   ],
+   "web_class": "B+"
   },
   {
    "id": 907,
@@ -6222,7 +6356,15 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "9 эт., 7400 кв.м, год 1962 (fortex, а также в выдаче по of.ru/realty-guide). Реконструкция под БЦ не найдена.",
+   "year_web": 1962,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://biznes-centr-komsomolskij-42c1.ru/",
+    "https://fortexgroup.ru/bc/komsomolskiy-42-s1/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 923,
@@ -6250,7 +6392,13 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "КОНФЛИКТ: of.ru — 1972 (4 эт., 3890 кв.м); kf.expert — 2002 (4 эт., 4993 кв.м); fortex — реконструкция 2012 (4000 кв.м). Вероятная версия: постройка 1972, реконструкция 2012, но не выбрано.",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/dubininskaya-33b/",
+    "https://kf.expert/office/business-center/dubininskaya-ulitsa-d-33b-os1930",
+    "https://of.ru/bc/2535"
+   ],
+   "web_class": "B / B+ (расходятся)"
   },
   {
    "id": 938,
@@ -6442,7 +6590,7 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "д. Кузнецово (Раменский р-н МО), Центральная ул., 1: по адресу в источниках найдено только Кузнецовское территориальное управление (zoon), БЦ не обнаружен. Возможно ошибочная привязка."
   },
   {
    "id": 1105,
@@ -6865,7 +7013,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Здания по адресу Грина, 26 в БЦ-каталогах (fortex, of.ru, поиск) не найдено; данных нет.",
+   "year_web_sources": [
+    "https://fortexgroup.ru/biznes-centr/ulitsa-grina/",
+    "https://of.ru/bc/ul-grina-11b"
+   ]
   },
   {
    "id": 1309,
@@ -7570,12 +7722,17 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1997,
-   "year_web_note": "Не найдено надёжных данных во втором проходе (ограниченный бюджет); ЦИАН (сводка): Зенит-Интер III 1997, IV - 2000. Адрес в списке: 7Б стр.1 (по 2ГИС там Зенит-Интер IV) - возможная путаница III/IV, проверить. Слабый год 1997 не подтверждён.",
+   "year_web_note": "Адрес 1-я линия Хор. Серебряного Бора 7Б стр.1 = Зенит-Интер-IV (fortex, страница /zenit-inter-lll/ фактически описывает 'Особняк Зенит-Интер IV': 2000, класс B, ~2000 кв.м, 3 этажа). Есть расхождение: в одной выдаче IV = 1999. Зенит-Интер-III (7с1) по ЦИАН-сводке 1997 - другое здание/адрес. Год 2000 относится к зданию по адресу 7Б с1; слаг назван III - возможна путаница названия.",
    "year_web_sources": [
-    "https://www.cian.ru/osobnyak-zenit-interiii-moskva-12489/"
+    "https://2gis.ru/moscow/firm/4504127920739550",
+    "https://fortexgroup.ru/bc/zenit-inter-lll/",
+    "https://www.cian.ru/osobnyak-zenit-interiii-moskva-12489/",
+    "https://www.cian.ru/osobnyak-zenit-interiv-moskva-12490/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 2000,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод"
   },
   {
    "id": 606,
@@ -7630,11 +7787,16 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Историческое здание сер. XIX в., реконструкция 2007; год ввода как БЦ 2007 (реконструкция) - не год постройки, не записываю как year.",
+   "year_web_note": "Историческое здание (сер. XIX в. / 1950-е по разным описаниям), реконструкция 2007 с надстройкой 2 этажей; arendator указывает 2007 как год. Год постройки исходного здания в источниках расходится.",
    "year_web_sources": [
+    "https://move.ru/business_centers/biznes-centr_krymskiy_val_3/",
+    "https://www.arendator.ru/objects/9133-krymskij_val/",
     "https://www.cian.ru/biznes-centr-krymskiy-val-3-moskva-60167/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 2007,
+   "year_web_confidence": "high",
+   "year_web_kind": "реконструкция"
   },
   {
    "id": 876,
@@ -7662,11 +7824,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Конфликт: построено 1970, реконструкция 2008 (в части источников как год постройки 2008). Не выбираю.",
+   "year_web_note": "restate: в основе здание 1970-х, реконструкция 2008. of.ru: год постройки 1980 (иначе 1970 в других выдачах; в одном - 1870-е). Год постройки конфликтует (1970/1980), реконструкция 2008 - единственное согласованное событие.",
    "year_web_sources": [
-    "https://of.ru/bc/1591"
+    "https://of.ru/bc/1591",
+    "https://www.restate.ru/office/mosfinans-749.html"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2008,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция"
   },
   {
    "id": 65,
@@ -7721,7 +7887,12 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Не исследовано / не найдено; название общее или источников по адресу нет."
+   "year_web_note": "Проект 'Бизнес-центр на Ижорской' (Ижорская 19/13 стр.10): проект 2014, строительство 2015 с сохранением недостроенного админ. здания 1980-х + две новые башни; год ввода не указан. Адрес Лобненская 19А в каталогах не найден - соответствие не подтверждено. Год ввода не выбираю (вероятно ~2015-2016, не подтверждено).",
+   "year_web_sources": [
+    "http://topproekt.com/business-tsentr-izhorskaya",
+    "https://fortexgroup.ru/biznes-centr/izhorskaya-ulitsa/"
+   ],
+   "developer": "ООО Доходный дом"
   },
   {
    "id": 348,
@@ -7994,11 +8165,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Комплекс из 22 строений разных лет (1931, 1939, 1985...); единого года нет.",
+   "year_web_note": "Бизнес-парк из 22-24 строений; realty-guide: 2007 (реконструкция), выдача: основное здание 1931. Единого года постройки нет; 2007 - год ввода как БЦ-парка.",
    "year_web_sources": [
+    "https://cian.ru/biznes-centr-rapira-moskva-5247/",
+    "https://realty-guide.ru/offices/objects/408a2837-caec-411a-af71-0aebbe65b7e4/",
     "https://www.cian.ru/biznes-centr-rapira-moskva-5247/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2007,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция"
   },
   {
    "id": 1332,
@@ -8297,10 +8473,13 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Источники описывают ЖК Богородский (жилой, 2012), не офисный БЦ; год БЦ не подтверждён.",
+   "year_web_note": "Это ЖК Богородский (жилой, 2011-2012; 30-этажное монолитное здание 2012 по caos.ru) с офисными помещениями, не отдельный БЦ. Год офисного БЦ не установлен; справочно жилой ввод 2011/2012 (источники расходятся).",
    "year_web_sources": [
-    "https://caos.ru/bc/bogorodskiy/"
-   ]
+    "https://caos.ru/bc/bogorodskiy/",
+    "https://caos.ru/bc/bogorodskiy/kupit-ofis/",
+    "https://of.ru/bc/3339"
+   ],
+   "web_class": "A (ЖК)"
   },
   {
    "id": 892,
@@ -8744,7 +8923,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Данных не найдено."
+   "year_web_note": "4 этажа, 3000 кв.м, 2010 в обоих источниках. of.ru даёт адрес 'МКАД 44 км, внешняя сторона, д.5 стр.1' (в записи д.1) - точное совпадение строения не подтверждено; источники агрегаторные.",
+   "year_web": 2010,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод",
+   "year_web_sources": [
+    "https://of.ru/bc/2540",
+    "https://realty-guide.ru/offices/objects/731/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 507,
@@ -8799,8 +8986,10 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; КОНФЛИКТ: of.ru (прочитано) 1983; поисковая сводка по ЦИАН/др. 2000. Год не выбран.",
+   "year_web_note": "КОНФЛИКТ: of.ru - 1983 (комплекс 61 673 кв.м, 15-этажный корпус + 5-этажный); biz-cen/поиск - 2000; caos (к.2, гостиница) год не указан. Не выбираю.",
    "year_web_sources": [
+    "https://caos.ru/bc/bc-gostinica-berlin/",
+    "https://m.biz-cen.ru/msk/berlin/amp/",
     "https://of.ru/bc/gostinichnyy-kompleks-berlin",
     "https://www.cian.ru/biznes-centr-berlin-moskva-198974/"
    ],
@@ -8832,11 +9021,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Fortex: реконструкция 2007; год постройки неоднозначен (1896 / 1988 в выдаче). Год ввода не установлен.",
+   "year_web_note": "Fortex: реконструкция 2007; в выдаче realty-guide - 20 построек 1988 г., реконструкция 2007 (в др. источнике 1896). Год постройки конфликтует, реконструкция 2007 согласована.",
    "year_web_sources": [
-    "https://fortexgroup.ru/bc/bolshaya-pochtovaya-34/"
+    "https://fortexgroup.ru/bc/bolshaya-pochtovaya-34/",
+    "https://realty-guide.ru/offices/objects/83dc0ba4-5925-4552-bb9e-a3109bc27fdb/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2007,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция"
   },
   {
    "id": 1408,
@@ -9357,7 +9550,7 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Найден только стр. 1 (2004, 2 этажа, класс B); стр. 7 не найдено - не переносим.",
+   "year_web_note": "Стр. 7 по Сторожевой 4 не найдено ни в одном источнике (Яндекс.Карты — только карточка без года). Стр. 1 (2004) не переносим.",
    "year_web_sources": [
     "https://fortexgroup.ru/bc/storozhevaya-4-s1/"
    ],
@@ -9624,7 +9817,17 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; БЦ по адресу Щепкина 33 - это Etmia II (класс A, 2009 по выдаче), но связь с 'Бэст Прайс' (Fix Price) не подтверждена. Не присваиваем."
+   "year_web_note": "Бэст Прайс (Fix Price) с янв. 2024 в БЦ Etmia (II) на Щепкина 33 - связь подтверждена новостями (Ведомости, Состав); по сводке поиска БЦ построен в 2009, >12 тыс. кв.м, 8 этажей. Тексты статей напрямую не прочитаны (403), данные из выдачи поиска.",
+   "year_web": 2009,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод",
+   "year_web_sources": [
+    "https://fix-price.com/about/press/fix-price-v-rossii-pereedet-v-zdanie-novogo-ofisa",
+    "https://www.sostav.ru/publication/fix-price-65475.html",
+    "https://www.vedomosti.ru/realty/articles/2024/01/12/1014716-fix-price-okazalsya-vladeltsem-krupnogo-ofisa"
+   ],
+   "web_class": "A",
+   "developer": "SRV Group + Стримино (Striminvest)"
   },
   {
    "id": 83,
@@ -9873,7 +10076,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Вега Измайлово - гостиничный комплекс ГК Измайлово, БЦ-данных для корп. В не найдено."
+   "year_web_note": "Вега Измайлово - отель и конгресс-центр ГК Измайлово, Измайловское ш. 71 к3В; года ввода нет. БЦ на Измайловском 71 стр.8 (2008) - другое здание, не присваиваем.",
+   "year_web_sources": [
+    "https://2gis.ru/moscow/firm/4504127908375254"
+   ],
+   "developer": "ГК Измайлово (гостиничный комплекс)"
   },
   {
    "id": 79,
@@ -10437,9 +10644,10 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Донская 32: КОНФЛИКТ - of.ru (прочитано) 1960 класс C; другой источник 1991 класс B. Название 'Влакра (ошибка)' - привязка сомнительна.",
+   "year_web_note": "КОНФЛИКТ, прочитаны обе страницы: of.ru - 1960, класс C, 4 эт., 1678 кв.м; fortexgroup - 1991, класс B, 3 эт., 6225 кв.м (характеристики разные, возможно разные объекты/строения или 1991 = реконструкция). Влакра по Донской 32 не подтверждена (у Влакры в ЦИАН адрес Малая Калужская 15с1).",
    "year_web_sources": [
     "https://fortexgroup.ru/bc/donskaya-32/",
+    "https://fortexgroup.ru/bc/donskaya-32/-/",
     "https://of.ru/bc/2074"
    ],
    "web_class": "B"
@@ -11075,9 +11283,11 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; КОНФЛИКТ: 1978 vs 1983.",
+   "year_web_note": "КОНФЛИКТ: 1978 (fortexgroup, прочитано; 8 эт.) vs 1983 (по выдаче поиска, страница ЦИАН закрыта капчей). realty-guide и layton года не указывают. Не выбираю.",
    "year_web_sources": [
     "https://bazametrov.ru/bc/veldan",
+    "https://fortexgroup.ru/bc/signalnyy-19/",
+    "https://realty-guide.ru/offices/objects/640",
     "https://www.cian.ru/ofisnyy-centr-veldan-moskva-59703/"
    ],
    "web_class": "B"
@@ -11288,10 +11498,16 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; КОНФЛИКТ: 1971 vs 1982-1994; реконструкция под Газпром 2009. Год не выбран.",
+   "year_web_note": "23 эт., 46 828 кв.м; здание построено 1982-1994 для КБ 'Винт' Минсудпрома, с 2001 офис РАО ЕЭС, торжественное открытие Энерго дома Газпрома - июнь 2009 (пресс-релиз Газпрома). 2009 = год открытия после реконструкции/перепрофилирования; год исходной постройки - период 1982-1994 (в прошлом проходе также 1971, не подтверждено).",
    "year_web_sources": [
+    "http://www.gazprom.ru/press/news/2009/june/article66382/",
+    "http://www.intomoscow.ru/zdanie-gazproma-byvshee-glavnoe-zdanie-rao-ees.html",
     "https://www.cian.ru/biznes-centr-gazprom-energo-dom-moskva-140436/"
-   ]
+   ],
+   "year_web": 2009,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция",
+   "developer": "Газпром (ранее РАО ЕЭС)"
   },
   {
    "id": 463,
@@ -11541,7 +11757,13 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Гжельский пер. 15 не найден (найдены только 13А и 20)."
+   "year_web_note": "Для БЦ 'Гжельский' по выдаче (13А с1): комплекс 1940 г., реконструкция 2013-14, класс B. Привязка к Гжельскому 15 НЕ подтверждена (fortex: в списке нет №15; Яндекс/Zoon показывают 15 стр.1 как 'БЦ Гжельский', около м. Площадь Ильича). Реком.: не переносить без проверки адреса; если 15 = тот же комплекс, то реконструкция 2013-14.",
+   "year_web_low": 1940,
+   "year_web_sources": [
+    "https://fortexgroup.ru/biznes-centr/gzhelskiy-pereulok/",
+    "https://realty-guide.ru/offices/objects/1179/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 303,
@@ -12563,11 +12785,14 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Класс B, 4 этажа; год постройки нигде не указан.",
+   "year_web_note": "По выдаче поиска: стр. 1-1А 1910, кирпич, 3 эт.+мансарда, 5117,7 кв.м (стр. 2 - 1948); fortexgroup года не даёт (4 эт., класс B). Страницы года напрямую не прочитаны; год реконструкции под офис не найден.",
    "year_web_sources": [
-    "https://fortexgroup.ru/bc/malaya-andronevskaya-20-8s1-1a/"
+    "https://aovm.ru/bc-malaya-andronevskaya-ulica-20-8s1-1a/",
+    "https://fortexgroup.ru/bc/malaya-andronevskaya-20-8s1-1a/",
+    "https://of.ru/bc/3079"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web_low": 1910
   },
   {
    "id": 306,
@@ -14587,7 +14812,10 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Найден БЦ Западные ворота на Беловежской 4 (2009, A), но адрес Беловежская 63 (МКАД 53 км) не совпал - не присваиваем."
+   "year_web_note": "Беловежская 63 не найдена ни в одном источнике; БЦ Западные ворота - Беловежская 4/4А/4В (2009, A) - другой адрес, не присваиваем.",
+   "year_web_sources": [
+    "https://www.cian.ru/biznes-centr-zapadnye-vorota-moskva-5435/"
+   ]
   },
   {
    "id": 958,
@@ -15056,11 +15284,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Чайка Плаза 1; год не найден (2009 - год основания компании, не здания).",
+   "year_web_note": "Чайка Плаза 1 (Зубаревский), Зубарев пер. 15 к1: of.ru (прочитано) - в характеристиках 1997, в тексте 'сдано в эксплуатацию в 1998'; по выдаче также реконструкция 2009. 18 000 кв.м, 9 эт. Итог: ввод 1998 (постройка 1997).",
    "year_web_sources": [
-    "https://of.ru/bc/2159"
+    "https://of.ru/bc/2159",
+    "https://www.cian.ru/biznes-centr-chayka-plaza-1-moskva-6062/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 1998,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод",
+   "developer": "Корпорация А.Н.Д. (Сафмар)"
   },
   {
    "id": 654,
@@ -15169,11 +15402,17 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; КОНФЛИКТ: of.ru (прочитано) 1980; другие источники 2008.",
+   "year_web_note": "Три агрегатора (realty-guide, layton, biz-cen) дают 2008, 6 этажей, B+. Прежний конфликт: of.ru 1980 - относится к другой карточке (of.ru/bc/4480 - Измайловское ш. 71А, ТЦ), адрес не совпадает; не использовано. Независимых от агрегаторов источников нет.",
    "year_web_sources": [
-    "https://of.ru/bc/2484"
+    "https://of.ru/bc/2484",
+    "https://realty-guide.ru/offices/objects/939/",
+    "https://www.biz-cen.ru/msk/izmaylovo/",
+    "https://www.layton.ru/rent/izmajlovo-2221/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 2008,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод"
   },
   {
    "id": 227,
@@ -15894,11 +16133,14 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Историческое здание (~1810 по выдаче), год ввода в эксплуатацию БЦ неизвестен.",
+   "year_web_note": "of.ru и ЦИАН: 1810 (условная дата исторического здания, 2 этажа, ~830-1420 м2, B). Год реконструкции/ввода как БЦ не найден. Справочно: здание конца XVIII - 1-й пол. XIX в., перестраивалось в 1876, 1886 (В. Шер) и 1911 (А. Антонов) - по выдаче поиска, страница-первоисточник не открыта. caos.ru дают адрес Никитский бул. 10/5 стр.2-3 (расхождение адреса).",
    "year_web_sources": [
-    "https://of.ru/bc/3808"
+    "https://caos.ru/bc/bc-kalashnyy-pereulok-5/",
+    "https://of.ru/bc/3808",
+    "https://www.cian.ru/biznes-centr-kalashnyy-moskva-30662/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web_low": 1810
   },
   {
    "id": 1170,
@@ -16365,11 +16607,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; КОНФЛИКТ: 1973 (реконструкция 2007) vs 1982.",
+   "year_web_note": "КОНФЛИКТ по постройке: 1973 (реконструкция 2007, сайт БЦ/выдача) vs 1982 vs 1970 vs 1928 (fortex, прочитано, 10 эт.). Реконструкция 2007 фигурирует в описании БЦ, но страницу kvant-n.ru целиком не подтвердил. Выбран 2007 как год превращения в БЦ; исходная постройка не определена.",
    "year_web_sources": [
-    "https://bazametrov.ru/bc/kvant--n"
+    "https://bazametrov.ru/bc/kvant--n",
+    "https://fortexgroup.ru/bc/kvant-n/",
+    "https://kvant-n.ru/o-kompanii.html",
+    "https://www.cian.ru/biznes-centr-stroenie-60-moskva-69561/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web_low": 2007
   },
   {
    "id": 213,
@@ -16424,7 +16670,14 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Солянский пр. 1 не идентифицирован (найден Соляной Двор, Солянка 1/2, 1914) - не присваиваем."
+   "year_web_note": "Яндекс.Карты: БЦ Китай Город по адресу Солянский пр., 1 (вх. 8), у метро Китай-город. Реестры (realty-guide, ЦИАН) ведут его как Лубянский пр., 27/1с1: 2009, 5 эт., 11000 м2, особняк 1850 г. реконструирован в 2009 (по выдаче ЦИАН). Тождество Солянский 1 = Лубянский 27/1с1 (угловой комплекс) не доказано документально. Класс: A (realty-guide) vs B (ЦИАН). Соляной Двор (Солянка 1/2, 1914/рек.2014) - ",
+   "year_web_low": 2009,
+   "year_web_sources": [
+    "https://realty-guide.ru/offices/objects/7cb181a4-059a-469f-957e-a43a2f1d6ce5/",
+    "https://www.cian.ru/delovoy-centr-kitay-gorod-moskva-3785/",
+    "https://yandex.com/maps/org/kitay_gorod/1129905067/"
+   ],
+   "web_class": "A"
   },
   {
    "id": 1381,
@@ -16683,8 +16936,12 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Во втором проходе не исследовано глубже; Фридриха Энгельса 75 с3: 3 этажа, класс B; год не найден.",
-   "web_class": "B"
+   "year_web_note": "Ф. Энгельса 75 стр.3: 3 эт., 3000 м2, класс B; год не указан ни на одной прочитанной странице (layton, 2gis-сниппет). Не найден.",
+   "web_class": "B",
+   "year_web_sources": [
+    "https://2gis.ru/moscow/firm/4504127915941219",
+    "https://www.layton.ru/rent/fridrikha-engelsa-75-str-3-5061/"
+   ]
   },
   {
    "id": 178,
@@ -17345,11 +17602,13 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не перепроверялось. КОНФЛИКТ прежнего прохода: корп.2 - 1979; комплекс - 1988, реконструкция 2012.",
+   "year_web_note": "КОНФЛИКТ сохранён: корп.2 - 1979 (ЦИАН по корпусу, 7118 м2, 6 эт.); комплекс из 3 корпусов - 1988, реконструкция 2012. Для корп.2 предпочтительно 1979, но это одиночный источник по корпусу; страницы читал только по выдаче поиска.",
    "year_web_sources": [
+    "https://realty-guide.ru/offices/objects/aee4974f-aabd-4ecb-99cc-5409483aca1f/",
     "https://www.cian.ru/biznes-centr-29k2-moskva-57047/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web_low": 1979
   },
   {
    "id": 431,
@@ -17432,11 +17691,13 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1975,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: 1975 (реконструкция с конца 1990-х) по выдаче.",
+   "year_web_note": "of.ru (прочитано): 1975, реконструкция с конца 1990-х (пристроен двухуровневый остеклённый объём), 10 эт., 10435 м2. Другой источник в выдаче: 1968 (10408 м2, 11 эт.) - КОНФЛИКТ. Год именно реконструкции не определён.",
    "year_web_sources": [
+    "https://bazametrov.ru/bc/marksistskaya-34k8",
     "https://of.ru/bc/823",
-    "https://bazametrov.ru/bc/marksistskaya-34k8"
-   ]
+    "https://www.cian.ru/ofisnyy-centr-na-ulmarksistskaya34k8-moskva-64260/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 899,
@@ -18385,12 +18646,17 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1929,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: ЦИАН (сниппет): Малая Пироговская 10/12 - 1929, класс B, 7048 м2. Одна ссылка. caos.ru даёт 1917/B+ для БЦ Луч на Б. Пироговской 27 стр1 - другой адрес, не использовано.",
+   "year_web_note": "Бывшие винные склады №3 (1899-1901, арх. А.И. Рупп), затем завод Яблочкова/Электролуч. Реконструкция всех зданий завершена в 2012 по проекту Aurora Group (по выдаче поиска; страницы redeveloper/progulki не открылись/не перечитаны). ЦИАН для 10/12: 1929, B, 7048 м2 - конфликт с исторической датой. Класс: B (ЦИАН) vs A (описание). Тождество 10/12 со строением комплекса (Б.Пироговская 27) вероятно, н",
    "year_web_sources": [
+    "https://progulkipomoskve.ru/publ/doma/bolshaja_pirogovskaja_27_vinokurennye_sklady_i_biznes_centr_luch/39-1-0-2123",
+    "https://redeveloper.ru/redeveloperskie-proekty/realise_actual/biznes-tsentr-luch-moskva-rossiya/",
     "https://www.cian.ru/ofisnoe-zdanie-stroenie-10-12-moskva-131047/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2012,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция",
+   "developer": "Aurora Group"
   },
   {
    "id": 1307,
@@ -18621,12 +18887,17 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 2014,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Сниппет поиска (ЦИАН): 2014, B+, 20734 м2; страницу открыть не удалось (капча). Одна ссылка.",
+   "year_web_note": "2014, 20734 м2, 7 эт., B+ по выдаче ЦИАН/kf.expert; сами страницы не открылись (капча/403). Девелопер не найден.",
    "year_web_sources": [
-    "https://www.cian.ru/biznes-centr-11s21-moskva-12750/"
+    "https://kf.expert/office/business-center/maksima-plaza-id33001",
+    "https://wikimetria.ru/vao/arenda-ofisa/metro-Aviamotornaya/Maksima-Plaza-493.html",
+    "https://www.cian.ru/biznes-centr-11s21-moskva-12750/",
+    "https://www.cian.ru/biznes-centr-maximaplaza-moskva-5666/"
    ],
-   "web_class": "B+"
+   "web_class": "B+",
+   "year_web": 2014,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод"
   },
   {
    "id": 1328,
@@ -18735,7 +19006,7 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Неглинная 21 не подтверждён; Марокко на Петровке 20/1 (1997, B+, fortex) - другой адрес, не используется.",
+   "year_web_note": "Здание по адресу Неглинная 21 не идентифицировано ни в одном источнике. БЦ Марокко (Петровка 20/1, 1997, B+) - другой адрес, не присвоено.",
    "year_web_sources": [
     "https://fortexgroup.ru/bc/marokko/"
    ],
@@ -19029,10 +19300,13 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1917,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Сниппет: год постройки 1917, 1429 м2 (историческое здание). Одна ссылка, ввод БЦ не подтверждён.",
+   "year_web_note": "caos.ru: год постройки 1917, класс B, 1 строение 1429 кв.м, адрес указан как Журавлева пл. 10 стр.4 (у нас без стр.). Год реконструкции под БЦ не найден; независимого второго источника года нет.",
    "year_web_sources": [
-    "https://2gis.ru/moscow/firm/70000001038004865/tab/info"
-   ]
+    "https://2gis.ru/moscow/firm/70000001038004865",
+    "https://2gis.ru/moscow/firm/70000001038004865/tab/info",
+    "https://caos.ru/bc/bc-mega-ekspo/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 329,
@@ -19604,7 +19878,10 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Год не найден. Прежде: Не найден (в выдаче лишь Чайка Плаза 6 по этому адресу; связь с названием не подтверждена)."
+   "year_web_note": "Название Миулл Гейт не найдено ни в одном источнике. По адресу Коробейников пер., 24 в выдаче только БЦ Чайка Плаза 6 (класс A), без года; связь с Миулл Гейт не подтверждена.",
+   "year_web_sources": [
+    "https://www.apex-realty.ru/bc/chayka-plaza-6/"
+   ]
   },
   {
    "id": 237,
@@ -19686,10 +19963,13 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Год не найден. Прежде: БЦ Михайловский (Михайловский пр., 1 стр.1), 7 этажей, 22400 м2; год не найден.",
+   "year_web_note": "Fortex: год реконструкции 2015, B+, 7 этажей, ~22400 кв.м. kf.expert: класс B, 7 эт., 29368 кв.м, год не указан (площади расходятся). 2GIS показывает по адресу Михайловский пр. 1с1 название 'Графит'. Одна ссылка на 2015, второй независимый источник не подтвердил; исходный год постройки здания не найден.",
    "year_web_sources": [
+    "https://fortexgroup.ru/bc/mihaylovskiy/",
     "https://kf.expert/office/business-center/mikhajlovskij-os36805"
-   ]
+   ],
+   "year_web_low": 2015,
+   "web_class": "B+"
   },
   {
    "id": 936,
@@ -20591,12 +20871,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1995,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: 3-й Красносельский, 21с1: построен 1995, реконструкция 2011, класс B (сниппет). Название МСК не подтверждено.",
+   "year_web_note": "3-й Красносельский 21с1: of.ru - построен 1995 (класс B-, 6 эт., 9698 кв.м); в поисковой выдаче (ЦИАН/др.) - 1995 и полная реконструкция 2011, класс B. Название 'МСК' нигде не подтверждено, привязка по адресу. Постройка 1995, реконструкция 2011.",
    "year_web_sources": [
-    "https://of.ru/bc/4433"
+    "https://of.ru/bc/4433",
+    "https://www.cian.ru/ofisnoe-zdanie-v-3-m-krasnoselskom-pereulke21s1-moskva-15763/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2011,
+   "year_web_confidence": "medium",
+   "year_web_kind": "реконструкция"
   },
   {
    "id": 1001,
@@ -20978,10 +21261,12 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Найдена только организация ООО \"Бизнес Центр на Каланчевке\" по адресу Каланчевская 6с3; год здания нет.",
+   "year_web_note": "Fortex: БЦ 'Каланчевская дом 6 стр 3', класс B, год не указан. Rusprofile: ООО 'Бизнес Центр на Каланчевке' зарегистрировано 07.11.2012 по этому адресу (не год ввода здания). Год не найден.",
    "year_web_sources": [
+    "https://fortexgroup.ru/biznes-centr/kalanchevskaya-ulitsa/",
     "https://www.rusprofile.ru/id/8522513"
-   ]
+   ],
+   "web_class": "B"
   },
   {
    "id": 452,
@@ -21597,9 +21882,11 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Год не найден. Прежде: Комплекс Шаболовка 34 (7 зданий 1953-1962); для стр.6 конкретный год не найден (стр.2,3,5 - 1954).",
+   "year_web_note": "Комплекс Шаболовка 34: 7 кирпичных зданий 1953-1962; стр.2 и стр.3 - 1954. Для стр.6 год не найден (страница ЦИАН комплекса закрыта капчей). Realty-guide 'На Шаболовке' - другой объект (Шаболовка 31, 2011) - не использовать.",
    "year_web_sources": [
-    "https://of.ru/bc/2044"
+    "https://of.ru/bc/2044",
+    "https://www.cian.ru/torgovo-delovoy-kompleks-34s2-moskva-67815/",
+    "https://www.cian.ru/torgovo-delovoy-kompleks-34s3-moskva-67816/"
    ]
   },
   {
@@ -21793,9 +22080,11 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 2021,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Это ТРЦ Небо, ул. Авиаторов, 3А (открыт в 4 кв. 2021), не классический БЦ; адрес 3Б не подтверждён.",
+   "year_web_note": "Ул. Авиаторов 3Б - вторая очередь комплекса Небо (ТРЦ 3А открыт в дек. 2020/2021): 4 этажа, 2 эт. офисы, 3 эт. фитнес/спа. Возобновление строительства март 2024, фитнес начал работу летом 2025 (сниппеты; страницы полностью не прочитаны). Год 2025 ориентировочный; это многофункциональное здание/ОДЦ, не классический БЦ.",
    "year_web_sources": [
-    "https://nebo-moscow.ru/novosti/novosti/trts-nebo-ofitsialno-otkryt/"
+    "https://nebo-moscow.ru/novosti/novosti/trts-nebo-ofitsialno-otkryt/",
+    "https://raenza.ru/u/wizard/192868/",
+    "https://yandex.com/maps/org/nebo/16649719353/reviews/"
    ]
   },
   {
@@ -21824,7 +22113,15 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Найдены БЦ Неглинная 17 (1895, реконструкция 2009), для 27 - нет данных."
+   "year_web_note": "Википедия: Неглинная 27/26/2, стр.2 - доходный дом Г.П. Лазарика, 1876, арх. М.А. Арсеньев, перестройки 1960-х-1990-х; стр.3 - 1876 и 1933 (Моргулис). Наш адрес без строения - неясно, какое именно (стр.2 или 3). icx.ru: БЦ класса B, год не указан. Год реконструкции под БЦ не найден.",
+   "year_web": 1876,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка",
+   "year_web_sources": [
+    "https://icx.ru/bc/neglinnaya-27/",
+    "https://ru.wikipedia.org/wiki/Неглинная_улица"
+   ],
+   "web_class": "B"
   },
   {
    "id": 117,
@@ -22297,10 +22594,12 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Год не найден. Прежде: Год ввода не найден (ОАО Новомосковский Технопарк, работает с 1994; локация - 175-й квартал).",
+   "year_web_note": "Технопарк по адресу 175-й квартал, вл.1 ст.1 (Филимонковское). Год 2016, найденный поиском, относится к БЦ 'Новомосковский' (пос. Московский, ул. Хабарова 2, класс B, 117227 кв.м) - другой объект, не использован. Год технопарка не найден.",
    "year_web_sources": [
-    "https://2gis.ru/moscow/firm/70000001023920453"
-   ]
+    "https://2gis.ru/moscow/firm/70000001023920453",
+    "https://e-disclosure.ru/portal/company.aspx?id=3708"
+   ],
+   "developer": "ОАО Новомосковский технопарк"
   },
   {
    "id": 1416,
@@ -23721,11 +24020,13 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Год не найден. Прежде: Название не найдено; по адресу Сущёвский Вал 16с5 - админздание класса C, год не найден.",
+   "year_web_note": "БЦ Сущёвский Вал 16с5: год 2006, класс C (одна ссылка, страница прочитана). Название 'Остериоон' не найдено; adm. здание. Второй источник года не найден.",
    "year_web_sources": [
+    "https://www.kovorkingi.ru/business-centers/sushhyovskii-val-16s5/5701",
     "https://yandex.com/maps/org/biznes_tsentr/92602893019/"
    ],
-   "web_class": "C"
+   "web_class": "C",
+   "year_web_low": 2006
   },
   {
    "id": 183,
@@ -23998,12 +24299,16 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1999,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Розанова 10с1: 1999, класс B, 4420 м2 (сниппет); связь с названием Вобис не подтверждена.",
+   "year_web_note": "Розанова 10с1: 1957 на двух прочитанных страницах (5 эт., B, 4000-4300 м2). Прежняя находка 1999 (сниппет) не подтвердилась - конфликт. Связь с названием Вобис не подтверждена; год реконструкции под БЦ не найден.",
    "year_web_sources": [
-    "https://brightrich.moscow/biznes-centry/rozanova-10s1/"
+    "https://brightrich.moscow/biznes-centry/rozanova-10s1/",
+    "https://fortexgroup.ru/bc/rozanova-10-s1/",
+    "https://www.layton.ru/rent/rozanova-10-str-1-4206/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 1957,
+   "year_web_confidence": "medium",
+   "year_web_kind": "постройка"
   },
   {
    "id": 1114,
@@ -24086,10 +24391,12 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1950,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Огородный пр., 8: 1950, 3 этажа, 4477 м2 (сниппет).",
+   "year_web_note": "БЦ Огородный 8 (Огородный пр., 8, стр.1): 1950, 3 эт., 4477 м2, B; независимого второго источника не найдено. Год реконструкции неизвестен.",
    "year_web_sources": [
-    "http://koegelic.ru/biznes-centr/ogorodnyy-8"
-   ]
+    "http://koegelic.ru/biznes-centr/ogorodnyy-8",
+    "https://fortexgroup.ru/bc/ogorodnyy-8/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 1110,
@@ -24260,7 +24567,7 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1908,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Найдено только для Таганской пл., 12с5 (торговый комплекс, 1908); стр. может не совпадать.",
+   "year_web_note": "Для Таганской пл., 12 (без стр.) год не найден. Найдено только 12с5 (торгово-офисный, 1908, 3 эт., 4150 м2); соответствие адресу не подтверждено, не присваиваю.",
    "year_web_sources": [
     "https://www.cian.ru/torgovo-ofisnyy-kompleks-na-taganskoy-ploshcadi12s5-moskva-68594/"
    ]
@@ -24432,12 +24739,16 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1976,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Б. Переяславская 46с2: 1976, фасад обновлён 2014, класс B (сниппет).",
+   "year_web_note": "БЦ Политех (Б. Переяславская 46с2): 2004 на двух прочитанных страницах (realty-guide, fortex; 5 эт., 7106 м2, B); в сниппетах ещё реконструкция 2014. КОНФЛИКТ: caos.ru даёт 1976 (B+, 1883 м2), сниппет cian 1976 (4 эт., 6373 м2). Выбрано 2004 как совпадающее у двух источников с одной площадью/этажностью; 1976 возможно относится к прежней постройке.",
    "year_web_sources": [
+    "https://fortexgroup.ru/bc/bolshaya-pereyaslavskaya-46-s2/",
+    "https://realty-guide.ru/offices/objects/492c87c4-097f-44c3-a9e0-76915af5f3e7/",
     "https://www.cian.ru/administrativnoe-zdanie-na-ulbolshaya-pereyaslavskaya46s2-moskva-16736/"
    ],
-   "web_class": "B"
+   "web_class": "B",
+   "year_web": 2004,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод"
   },
   {
    "id": 937,
@@ -24492,7 +24803,10 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Год не найден. Прежде: Для пр. Серебрякова 14Б стр 6 не найден (найдены только Серебрякова 6 - 2006 и 14Б стр 4 Silver - другие здания)."
+   "year_web_note": "Пр. Серебрякова 14Б стр.6: адрес существует (офисные арендаторы по zoon), но год не найден ни в одном источнике. Silver Stone (14Б с4) и Серебрякова 6 (2006) - другие здания.",
+   "year_web_sources": [
+    "https://zoon.ru/msk/street/serebryakova_proezd/bld/14_str_6/"
+   ]
   },
   {
    "id": 1027,
@@ -24682,7 +24996,13 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Поиск по Ольминского 5 не дал БЦ (только проезд Ольминского)."
+   "year_web_note": "Пр. Ольминского 5 по 2ГИС = '5 / 3а ст3', административное здание 9 эт. (совпадает с БЦ Ольминского 3Ас3): 1958, класс C, 10494 м2 (of.ru). Второй источник по году не найден; realty-guide для 'Ольминского, 3' даёт 1981, 2872 м2 (возможно другое здание/конфликт). Тождество адреса 5 = 3Ас3 по 2ГИС, не официально подтверждено.",
+   "year_web_low": 1958,
+   "year_web_sources": [
+    "https://2gis.ru/moscow/geo/4504235282568518",
+    "https://of.ru/bc/3710"
+   ],
+   "web_class": "C"
   },
   {
    "id": 1121,
@@ -24765,8 +25085,10 @@
    "matched_classifier": false,
    "scope": "нет года — проверить",
    "year_web_low": 1993,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Акад. Королёва 13: 1993 по паспорту здания, другой источник - 1902 (конфликт); адрес стр.4 не подтверждён.",
+   "year_web_note": "Ак. Королёва 13 (БЦ Мосавто, 13с1): 1993 (of.ru, 8 эт., 74531 м2, B; год 1993 и в сниппете 2ГИС/паспорте) против 1980 (fortex, 9 эт., 50000 м2) - конфликт, ранее ещё 1902. Строение 4 не подтверждено ни в одном источнике. Год не выбран; наиболее вероятный кандидат 1993.",
    "year_web_sources": [
+    "https://fortexgroup.ru/bc/akademika-koroleva-13/",
+    "https://of.ru/bc/265",
     "https://prawdom.ru/dom.php?hm=akademikakoroleva77_13"
    ],
    "web_class": "B"
@@ -26401,11 +26723,15 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_low": 1998,
-   "year_web_note": "Не перепроверялось в этом проходе (упор на объекты без года). Прежняя находка: Преображенская пл., 7А с1: 1998, 6051 м2, 6 эт. (сниппет).",
+   "year_web_note": "Преображенская пл., 7Ас1: 1998 (ipg-estate читал; cian по сниппету), 6 эт., ~6051-6072 м2, B. Конфликт: restate.ru даёт 1990.",
    "year_web_sources": [
+    "https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/administrativnoe-zdanie-preobrajenskaya-ploshchad-7as1",
     "https://www.cian.ru/ofisnoe-zdanie-na-preobrazhenskoy-ploshcadi7as1-moskva-110727/"
-   ]
+   ],
+   "year_web": 1998,
+   "year_web_confidence": "medium",
+   "year_web_kind": "ввод",
+   "web_class": "B"
   },
   {
    "id": 1159,
@@ -26630,7 +26956,12 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "На Причальном пр. найден только БЦ Якорь (пр. 2, 2019) - другой адрес."
+   "year_web_note": "of.ru: 'ОСЗ Причальный проезд 6к1,а' - 1917, 2 эт., 5142 м2, класс C. Адрес 6А соответствует 6к1,а предположительно; единственный источник. Не БЦ Якорь (пр. 2).",
+   "year_web_low": 1917,
+   "year_web_sources": [
+    "https://of.ru/bc/9951"
+   ],
+   "web_class": "C"
   },
   {
    "id": 541,
@@ -28462,10 +28793,12 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Страницы с годом не найдено (2ГИС/Яндекс без года).",
+   "year_web_note": "Краснобогатырская 13 (ТЦ/БЦ Сапфир, Технопарк Сапфир): 1930, 4 эт., 10000 м2 по сниппету cian (страница закрыта капчей, не прочитана); второй источник не найден (icx.ru, 2ГИС/Яндекс без года). Вероятно старое промздание, год реконструкции неизвестен.",
    "year_web_sources": [
+    "https://www.cian.ru/torgovo-delovoy-kompleks-sapfir-moskva-83534/",
     "https://yandex.ru/maps/org/sapfir/100868745689/ (не прочитан)"
-   ]
+   ],
+   "year_web_low": 1930
   },
   {
    "id": 7,
@@ -30500,7 +30833,11 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Адрес Доброслободская 2 не сопоставлен."
+   "year_web_note": "Здание по адресу Доброслободская 2 ни в одном каталоге не найдено. Рядом БЦ Басманов (Доброслободская 3, 2008) - другое здание, не приписывать. Данных нет.",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/basmanov/",
+    "https://of.ru/bc/339"
+   ]
   },
   {
    "id": 1233,
@@ -30876,7 +31213,10 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Данных не найдено."
+   "year_web_note": "По адресу пл. Академика Доллежаля 1 стр. 7 найдена лишь регистрация юрлица ООО Строй Инвест Проект; в каталогах БЦ (of.ru, cian, fortex, kf.expert) здания нет, год ввода не найден. Поиск по 'Доллежаля' выдаёт Подольск (другой адрес).",
+   "year_web_sources": [
+    "https://www.rusprofile.ru/id/876611"
+   ]
   },
   {
    "id": 1019,
@@ -31121,7 +31461,10 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Данных не найдено."
+   "year_web_note": "По адресу 1-й Электрозаводский пер. 2 найдено только юрлицо ООО СФК (стр. 2, оф. 4, с 2005); карточки БЦ с годом нет. Год ввода не найден.",
+   "year_web_sources": [
+    "https://www.rusprofile.ru/id/3089534"
+   ]
   },
   {
    "id": 575,
@@ -32557,7 +32900,13 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Адрес не подтверждён."
+   "year_web_note": "Адрес Сходненский тупик 4 подтверждён: офисное здание кл. B, 5 этажей, без лифтов и кондиционирования, ИФНС №33; год постройки в источниках не указан. БЦ Тушино с годом 2005 (caos.ru, cian) находится по адресу Походный пр., 4к1 (15 052 кв. м, 7 эт.) - другое здание, не применять. Название 'Тушино' на этом адресе вероятно ошибочно.",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/shodnenskiy-4/",
+    "https://fortexgroup.ru/biznes-centr/shodnenskiy-tupik/",
+    "https://www.mega-realty.ru/skhodnenskij_tupik_4_b7556.htm"
+   ],
+   "web_class": "B"
   },
   {
    "id": 202,
@@ -34431,7 +34780,14 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Не подтверждено; fortex Мясницкий 2/1 = 1892 не привязан."
+   "year_web_note": "Мясницкий пр. 2/1: 3 этажа, 6 647 кв. м, кл. B, год 1892 (fortex; ранее уже был известен) - это голая старая постройка. Shanti Place - культурное пространство/арендатор в здании, привязка к адресу подтверждена 2ГИС/Zoon. Года реконструкции под БЦ не найдено. Подтверждение только одним агрегатором (fortex, officenavigator дублирует), поэтому low.",
+   "year_web_low": 1892,
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/myasnitskiy-2-1/",
+    "https://officenavigator.ru/biznes-tsentr/myasnitskiy_pr_d_2_1/",
+    "https://shantiplace.org/"
+   ],
+   "web_class": "B"
   },
   {
    "id": 247,
@@ -38849,7 +39205,14 @@
    "matched_2gis": false,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "Адрес неоднозначен."
+   "year_web_note": "КОНФЛИКТ/неоднозначность адреса. River Place по каталогам - Кожевнический пр., 1: fortex - год 1914 (5 эт., 6 500 кв. м, B+), apex/icx - полная реконструкция 1998 (4 эт.). Отдельно Кожевническая ул., 7 стр. 1 (officenavigator, rentnow) - БЦ 'Кожевническая 7', 1996, 8 эт., кл. B, без упоминания River Place. Нужно сверить координаты (55.7299, 37.6457) с Кожевническим пр. 1 и не выбирать год: кандида",
+   "year_web_sources": [
+    "https://fortexgroup.ru/bc/river-pleys/",
+    "https://icx.ru/bc/river-plehjs/",
+    "https://officenavigator.ru/biznes-tsentr/kozhevnicheskaya_ul_7_str_1/",
+    "https://www.apex-realty.ru/bc/River-Place/"
+   ],
+   "web_class": "B/B+"
   },
   {
    "id": 132,
