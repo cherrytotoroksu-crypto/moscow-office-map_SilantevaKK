@@ -194,11 +194,12 @@
   "плэйн (бывший — workplace авиационная)": {
     "construction_start_q": null,
     "start_q": "202602",
-    "commission_q": null,
-    "source": "mirkvartir.ru (новость от 17.02.2026), mperspektiva.ru — старт продаж вместе с «Минто» как парная новая площадка FORMA workplace на Волоколамском/Авиационная; план ввода Q4 2028. GBA источник даёт ТОЧНОЕ совпадение с нашим — 15984 м²",
-    "last_checked": "2026-07-16",
+    "commission_q": "202812",
+    "source": "Verified sources: https://workplace.forma.ru/projects/plane",
+    "last_checked": "2026-09-25",
     "canonical_project_id": "proj-273",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2028
   },
   "минто (бывший — workplace волоколамское)": {
     "construction_start_q": null,
@@ -885,5 +886,25 @@
     "commission_year": 2028,
     "source": "Official STONE project page: https://stone.ru/commercial/rimskaya",
     "last_checked": "2026-09-24"
+  },
+  "light city": {
+    "canonical_project_id": "proj-147",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2028,
+    "source": "Verified sources: https://light-city-bc.ru/, https://2gis.ru/moscow/firm/70000001101640147, https://cre.ru/content/upload/journal/item/file/17670920440124.pdf",
+    "last_checked": "2026-09-25"
+  },
+  "level нижегородская": {
+    "canonical_project_id": "proj-267",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202809",
+    "commission_year": 2028,
+    "source": "Verified sources: https://business.level.ru/projects/work-nizhegorodskaya/, https://work-nizhegorodskaya.level.ru/",
+    "last_checked": "2026-09-25"
   }
 }
