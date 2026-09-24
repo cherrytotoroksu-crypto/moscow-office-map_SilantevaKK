@@ -26,6 +26,7 @@ QA-011 (minimal version) — блокирующие проверки classifier.
 """
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +39,32 @@ KNOWN_PLACEHOLDER_COORDS = [
 ]
 
 GEO_FIELDS = ["ao", "raion", "zone", "submarket", "bizFormed", "bizForming"]
+
+
+def load_classifier_records(html):
+    """Load records from the legacy embedded payload or current DATA_URL."""
+    if "const RAW_DATA" in html:
+        raw_data_text = extract_balanced(html, "RAW_DATA", "[", "]")
+        return json.loads(raw_data_text), "embedded RAW_DATA", True
+
+    match = re.search(r'const\s+DATA_URL\s*=\s*["\']([^"\']+)["\']', html)
+    if not match:
+        raise ValueError("neither embedded RAW_DATA nor DATA_URL was found")
+    data_path = os.path.join(os.path.dirname(CLASSIFIER_PATH), *match.group(1).split("/"))
+    with open(data_path, encoding="utf-8") as f:
+        payload = json.load(f)
+    records = payload.get("records") if isinstance(payload, dict) else payload
+    if not isinstance(records, list):
+        raise ValueError(f"{match.group(1)} has no records array")
+    return records, match.group(1), False
+
+
+def coordinates(rec):
+    return rec.get("lat", rec.get("latitude")), rec.get("lng", rec.get("longitude"))
+
+
+def geo_value(rec, field, embedded):
+    return rec.get(field if embedded else f"geo_{field}")
 
 
 def extract_balanced(html, name, open_ch, close_ch):
@@ -129,30 +156,32 @@ def main():
     with open(CLASSIFIER_PATH, encoding="utf-8") as f:
         html = f.read()
 
-    # 1. JSON validity
+    # 1. JSON validity. The current page loads a unified JSON file; legacy
+    # classifier versions embedded RAW_DATA and COLORMAP directly in HTML.
     try:
-        raw_data_text = extract_balanced(html, "RAW_DATA", "[", "]")
-        raw_data = json.loads(raw_data_text)
+        raw_data, data_source, embedded = load_classifier_records(html)
     except Exception as e:
-        problems.append(f"RAW_DATA does not parse as JSON: {e}")
+        problems.append(f"classifier data does not parse as JSON: {e}")
         raw_data = []
+        data_source = "unavailable"
+        embedded = False
 
-    try:
-        colormap_text = extract_balanced(html, "COLORMAP", "{", "}")
-        colormap = json.loads(colormap_text)
-    except Exception as e:
-        problems.append(f"COLORMAP does not parse as JSON: {e}")
-        colormap = {"green": {}, "yellow": {}, "red": {}}
-
-    # 2. Duplicate keys within a color block
-    for block in ("green", "yellow", "red"):
-        dupes = find_duplicate_keys_in_block(html, block)
-        for key, n in dupes:
-            problems.append(f"COLORMAP.{block} has duplicate key {key!r} ({n} occurrences) — earlier entry is silently lost by JS")
+    # 2. Duplicate keys within a legacy color block. The unified classifier
+    # has no COLORMAP, so this check is intentionally inapplicable there.
+    if embedded:
+        try:
+            colormap_text = extract_balanced(html, "COLORMAP", "{", "}")
+            json.loads(colormap_text)
+            for block in ("green", "yellow", "red"):
+                dupes = find_duplicate_keys_in_block(html, block)
+                for key, n in dupes:
+                    problems.append(f"COLORMAP.{block} has duplicate key {key!r} ({n} occurrences) — earlier entry is silently lost by JS")
+        except Exception as e:
+            problems.append(f"COLORMAP does not parse as JSON: {e}")
 
     # 3. Known placeholder coordinates
     for rec in raw_data:
-        lat, lng = rec.get("lat"), rec.get("lng")
+        lat, lng = coordinates(rec)
         for plat, plng in KNOWN_PLACEHOLDER_COORDS:
             if lat == plat and lng == plng:
                 problems.append(f"{rec.get('name')!r} still on known placeholder coordinate ({plat},{plng})")
@@ -164,7 +193,7 @@ def main():
     for name, recs in by_name.items():
         if len(recs) < 2:
             continue
-        coords = {(r.get("lat"), r.get("lng")) for r in recs}
+        coords = {coordinates(r) for r in recs}
         addrs = {r.get("address") for r in recs}
         if len(coords) > 1 or len(addrs) > 1:
             warnings.append(f"{name!r}: {len(recs)} rows share this display name but differ in lat/lng or address — a COLORMAP entry for this name colors ALL of them")
@@ -176,20 +205,21 @@ def main():
     # retroactively fail anything already accepted — it only guards against new
     # regressions from here on.)
     for rec in raw_data:
-        lat, lng = rec.get("lat"), rec.get("lng")
+        lat, lng = coordinates(rec)
         if lat is None or lng is None:
             continue
         computed = compute_geo(lat, lng)
         mismatches = []
         for field in GEO_FIELDS:
-            stored = rec.get(field) or ""
+            stored = geo_value(rec, field, embedded) or ""
             expect = computed.get(field) or ""
             if stored != expect:
                 mismatches.append(f"{field}: stored={stored!r} expected={expect!r}")
         if mismatches:
-            problems.append(f"{rec.get('name')!r} geo drift: " + "; ".join(mismatches))
+            record_id = rec.get("unified_id") or rec.get("id") or "unknown-id"
+            problems.append(f"{record_id} {rec.get('name')!r} geo drift: " + "; ".join(mismatches))
 
-    print(f"=== RAW_DATA rows: {len(raw_data)} ===")
+    print(f"=== classifier rows: {len(raw_data)} ({data_source}) ===")
     print(f"=== PROBLEMS (blocking): {len(problems)} ===")
     for p in problems:
         print("  ERROR:", p)

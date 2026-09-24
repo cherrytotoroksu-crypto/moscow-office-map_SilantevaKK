@@ -34,9 +34,17 @@ def append_note(record, note):
 
 def synchronize_dates(layer, dates):
     index = defaultdict(list)
+    by_identity = {}
+    by_project = defaultdict(list)
     for record in layer:
         if record.get("entity_role") != "office_project":
             continue
+        identity = (
+            record.get("canonical_project_id"),
+            record.get("canonical_building_id"),
+        )
+        by_identity[identity] = record
+        by_project[record.get("canonical_project_id")].append(record)
         for value in [record.get("canonical_name"), record.get("raw_name"), *(record.get("aliases") or [])]:
             if norm(value):
                 index[norm(value)].append(record)
@@ -44,7 +52,22 @@ def synchronize_dates(layer, dates):
     matched = 0
     unmatched = []
     for key, date_record in dates.items():
-        candidates = {r["canonical_project_id"]: r for r in index.get(norm(key), [])}
+        project_id = date_record.get("canonical_project_id")
+        building_id = date_record.get("canonical_building_id")
+        if project_id and building_id:
+            candidates = [by_identity.get((project_id, building_id))]
+            candidates = [record for record in candidates if record]
+        elif project_id:
+            # A project-level date must never be assigned to an arbitrary
+            # building when the project contains multiple building rows.
+            candidates = by_project.get(project_id, [])
+        else:
+            candidates = index.get(norm(key), [])
+
+        candidates = {
+            (r.get("canonical_project_id"), r.get("canonical_building_id")): r
+            for r in candidates
+        }
         if len(candidates) != 1:
             unmatched.append(key)
             continue

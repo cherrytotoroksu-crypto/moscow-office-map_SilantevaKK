@@ -28,7 +28,7 @@ OUT_DIR = os.path.join(REPO_ROOT, "_site")
 # (это про одно поле одного файла данных, отдельно от вопроса про
 # classifier.html/QA-документы ниже — пользователь про это не просил).
 BUILDING_DATES_PUBLIC_FIELDS = {
-    "construction_start_q", "start_q", "commission_q", "stage", "stage_as_of",
+    "construction_start_q", "start_q", "commission_q", "commission_year", "stage", "stage_as_of",
 }
 
 # Регексы имён файлов в data/, которые нужны карте (см. index.html: QUARTERS,

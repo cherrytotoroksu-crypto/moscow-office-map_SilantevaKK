@@ -1,9 +1,22 @@
 import json
+import importlib.util
+import sys
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_migration_module():
+    path = ROOT / "scripts" / "migrate_all_projects_dates.py"
+    scripts_path = str(path.parent)
+    if scripts_path not in sys.path:
+        sys.path.insert(0, scripts_path)
+    spec = importlib.util.spec_from_file_location("migrate_all_projects_dates", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 class AllProjectsDatesMigrationTests(unittest.TestCase):
@@ -31,6 +44,43 @@ class AllProjectsDatesMigrationTests(unittest.TestCase):
         self.assertEqual(dates["commission_year"], 2011)
         self.assertIsNone(dates["commission_q"])
         self.assertIsNone(dates["construction_start_q"])
+
+    def test_project_level_date_does_not_collapse_multi_building_project(self):
+        migration = load_migration_module()
+        layer = [
+            {
+                "entity_role": "office_project",
+                "canonical_project_id": "proj-multi",
+                "canonical_building_id": "building-a",
+                "canonical_name": "Проект (А)",
+                "raw_name": "Проект",
+                "aliases": [],
+            },
+            {
+                "entity_role": "office_project",
+                "canonical_project_id": "proj-multi",
+                "canonical_building_id": "building-b",
+                "canonical_name": "Проект (Б)",
+                "raw_name": "Проект",
+                "aliases": [],
+            },
+        ]
+        dates = {
+            "проект": {
+                "canonical_project_id": "proj-multi",
+                "canonical_building_id": None,
+                "construction_start_q": "202001",
+                "start_q": None,
+                "commission_q": None,
+                "last_checked": "2026-09-24",
+            }
+        }
+
+        matched, unmatched = migration.synchronize_dates(layer, dates)
+
+        self.assertEqual(matched, 0)
+        self.assertEqual(unmatched, ["проект"])
+        self.assertTrue(all(row["construction_start_year"] is None for row in layer))
 
 
 if __name__ == "__main__":

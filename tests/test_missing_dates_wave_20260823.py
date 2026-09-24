@@ -65,11 +65,15 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("https://afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu", row["qa_notes"])
         self.assertIn("https://afi-v-park.ru/news/zaversheny-krovelnye-raboty-biznes-tsentra-vorontsovskiy", row["qa_notes"])
 
-    def test_lunar_missing_date_is_explicitly_documented(self):
+    def test_lunar_commissioning_year_is_confirmed_by_two_sources(self):
         row = self.by_id["proj-14"]
-        self.assertIsNone(row["input_year"])
+        self.assertEqual(row["input_year"], 2023)
+        self.assertIsNone(row["input_quarter"])
+        self.assertEqual(row["input_date_kind"], "confirmed")
         self.assertIn("https://hutton.ru/offices/lunar", row["qa_notes"])
         self.assertIn("no commissioning date", row["qa_notes"])
+        self.assertIn("https://www.lunar-center.ru/", row["qa_notes"])
+        self.assertIn("https://mosprimeoffice.ru/business-centers/lunar", row["qa_notes"])
 
     def test_bernikov_date_conflict_is_visible_and_not_normalized(self):
         row = self.by_id["proj-19"]

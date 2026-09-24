@@ -24,3 +24,12 @@ Thumbs.db
 *.key
 __pycache__/
 _site/
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# Локальные настройки и случайные пустые файлы инструментов.
+/.claude/settings.local.json
+/.ignore
+/30
+/32000
