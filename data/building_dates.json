@@ -39,19 +39,21 @@
     "construction_start_q": "202402",
     "start_q": "202311",
     "commission_q": null,
-    "source": "cre.ru/news/93770 — разрешение на строительство февраль 2024, строительство с начала 2024; старт продаж ноябрь 2023 (продажа единым лотом институциональному инвестору закрыта в конце 2023) — монолит завершён 23.07.2025, ввод в эксплуатацию ещё не подтверждён",
-    "last_checked": "2026-07-16",
+    "source": "Verified sources: https://stone-s3.storage.yandexcloud.net/STONE_Premialnaya_ofisnaya_nedvizhimost_4cd86e13fb.pdf, https://www.kommersant.ru/doc/8861301",
+    "last_checked": "2026-09-25",
     "canonical_project_id": "proj-91",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2027
   },
   "магистральная 12 (бывший — магистральная ул., 12)": {
     "construction_start_q": "202412",
     "start_q": "202409",
     "commission_q": null,
-    "source": "fsk.ru — разрешение на строительство 10.12.2024, строительство начато на его основании; старт продаж «в начале сентября» (pulsprodaj.ru) — год не указан явно, вероятно 2024 (до разрешения — обычная практика ранней брони), не 100% уверенность. Ввод — план Q1 2026, не подтверждён постфактум.",
-    "last_checked": "2026-07-16",
+    "source": "Verified sources: https://fsk.ru/about/news/gk-fsk-poluchila-razreshenie-na-stroitel-stvo-biznes-czentra-magistral-naya-12, https://fsk.ru/about/news/gk-fsk-nachala-montazh-fasadov-v-bcz-na-magistral-noj, https://fsk.ru/about/news/gk-fsk-prodala-bcz-magistral-naya-12",
+    "last_checked": "2026-09-25",
     "canonical_project_id": "proj-99",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2026
   },
   "королев (рассвет)": {
     "construction_start_q": "202307",

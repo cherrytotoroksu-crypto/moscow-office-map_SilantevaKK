@@ -1,0 +1,87 @@
+{
+  "checked_on": "2026-09-25",
+  "scope": "second wave of current commissioning-plan verification",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-91",
+      "canonical_name": "STONE Белорусская",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2027, "input_quarter": null, "input_date_kind": "planned"},
+      "sources": [
+        "https://stone-s3.storage.yandexcloud.net/STONE_Premialnaya_ofisnaya_nedvizhimost_4cd86e13fb.pdf",
+        "https://www.kommersant.ru/doc/8861301"
+      ],
+      "reliability": "high",
+      "decision": "The current official STONE office brochure states readiness in 2027, and STONE's August 2026 company statement says commissioning is planned for the following year. No quarter is published."
+    },
+    {
+      "canonical_project_id": "proj-99",
+      "canonical_name": "Магистральная 12 (бывший — Магистральная ул., 12)",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2026, "input_quarter": null, "input_date_kind": "planned"},
+      "sources": [
+        "https://fsk.ru/about/news/gk-fsk-poluchila-razreshenie-na-stroitel-stvo-biznes-czentra-magistral-naya-12",
+        "https://fsk.ru/about/news/gk-fsk-nachala-montazh-fasadov-v-bcz-na-magistral-noj",
+        "https://fsk.ru/about/news/gk-fsk-prodala-bcz-magistral-naya-12"
+      ],
+      "reliability": "high",
+      "decision": "Official FSK publications consistently state 2026. Earlier pages specify Q1, while the latest publication broadens the plan to the first half of 2026; only the year is accepted."
+    }
+  ],
+  "rejected": [
+    {
+      "canonical_project_id": "proj-96",
+      "canonical_name": "БЦ Рябовская Мануфактура",
+      "reason": "Sources describe Q4 2026, while the newer internal verification for the similarly named Башня Рябов records construction starting in June 2026 and a Q1 2029 plan under a different canonical project id. The entity/grain conflict must be resolved first.",
+      "sources": [
+        "https://cre.ru/news/97800",
+        "https://intermark.ru/objects/ofis-holodilnyy-pereulok-3-3240",
+        "data/building_dates.json key=башня рябов"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-98",
+      "canonical_name": "Королев (Рассвет)",
+      "reason": "Published dates conflict: 2024 and 2026 appear in older sources, while a current market page says the commissioning timeline will be known after purchase. No current official date was found.",
+      "sources": [
+        "https://www.rusdevelopers.ru/lenta_novostej/kr-properties-postroit-novyi-bc-korolev",
+        "https://ibcrealestate.ru/upload/iblock/ae0/bspoiuv446rh7bj4i7fxz360o1x31b0h/IBC-Real-Estate_Loft-_prostranstva-Moskvy_july-2023.pdf",
+        "https://rosretail.com/rassvet"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-173",
+      "canonical_name": "Rail.A",
+      "reason": "The project page still shows a lapsed end-2025 plan, while the developer reported active construction in April 2026 without a replacement commissioning date.",
+      "sources": [
+        "https://rail-a.ru/",
+        "https://ortiga.ru/news/019daa42-1454-4f91-a08e-69b8f1c2f65c"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-234",
+      "canonical_name": "МФК Юг",
+      "reason": "Current listings conflict between Q3 2026 and Q3 2028; no direct official project page resolves the difference.",
+      "sources": [
+        "https://invest7.ru/lots/879482",
+        "https://www.cian.ru/kupit-pomeshenie-moskva-2-y-horoshevskiy-proezd-022369/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-260",
+      "canonical_name": "Север.Сити",
+      "reason": "The current project page confirms the identity and scope but publishes no commissioning date.",
+      "sources": ["https://severcity.moscow/"]
+    },
+    {
+      "canonical_project_id": "proj-add-krekshino-20260917",
+      "canonical_name": "МФК Крёкшино",
+      "reason": "The official project page links a declaration but does not publish the date in page content; third-party pages indicate Q3 2026, but their full pages could not be read reliably in this review.",
+      "sources": [
+        "https://xn----jtbjfbbwikdr3f.xn--p1ai/",
+        "https://s5d.ru/object/154084",
+        "https://move.ru/objects/prodaetsya_novoe_zdanie_8564_m2_9272515808/"
+      ]
+    }
+  ]
+}
