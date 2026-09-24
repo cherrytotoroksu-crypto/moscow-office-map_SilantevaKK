@@ -1,0 +1,11 @@
+{
+  "checked_on": "2026-09-24",
+  "method": "scripts/recompute_geo.py point-in-polygon; fill empty fields only. White Square was derived only after its placeholder coordinate was replaced from two explicit building-point sources.",
+  "rows_updated": 102,
+  "field_counts": {
+    "bizFormed": 58,
+    "bizForming": 18,
+    "submarket": 92,
+    "zone": 92
+  }
+}

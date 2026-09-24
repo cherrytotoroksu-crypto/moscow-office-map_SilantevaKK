@@ -1,0 +1,3766 @@
+{
+  "checked_on": "2026-09-24",
+  "baseline": "HEAD",
+  "all_projects_layer": {
+    "dates_and_statuses": {
+      "rows": 26,
+      "field_counts": {
+        "input_year": 23,
+        "input_date_kind": 22,
+        "project_status": 4,
+        "input_quarter": 4
+      },
+      "changes": [
+        {
+          "canonical_project_id": "proj-14",
+          "canonical_building_id": null,
+          "canonical_name": "Lunar",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2023
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            },
+            "project_status": {
+              "before": "Строится",
+              "after": "Введён"
+            }
+          },
+          "sources": [
+            "https://www.lunar-center.ru/",
+            "https://mosprimeoffice.ru/business-centers/lunar",
+            "https://hutton.ru/offices/lunar",
+            "https://lunar.moscow/location",
+            "https://mosprimeoffice.ru/business-centers/lunar.",
+            "https://www.lunar-center.ru/.",
+            "lunar-center.ru reports the Lunar office building commissioned in 2023; MosPrimeOffice corroborates identity/address."
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-20",
+          "canonical_building_id": null,
+          "canonical_name": "БЦ Серебряный Фонтан",
+          "changes": {
+            "project_status": {
+              "before": "Строится",
+              "after": "Введён"
+            }
+          },
+          "sources": [
+            "https://etalongroup.ru/msk/news/gruppa-etalon-zavershila-sdelku-po-prodazhe-delovogo-kvartala-v-sostave-kompleksa-serebryanyy-fontan",
+            "https://gazeta-alekseevsky.ru/poslednij-korpus-zhk-na-novoalekseevskoj-vveli-v-ekspluatatsiyu/",
+            "https://etalongroup.ru/msk/news/gruppa-etalon-zavershila-sdelku-po-prodazhe-delovogo-kvartala-v-sostave-kompleksa-serebryanyy-fontan."
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-77",
+          "canonical_building_id": null,
+          "canonical_name": "Lakes",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2026
+            },
+            "input_quarter": {
+              "before": null,
+              "after": 1
+            }
+          },
+          "sources": [
+            "https://workplace.forma.ru/new/lakes-workplace-poluchil-razreshenie-na-vvod-v-ekspluataciyu",
+            "https://workplace.forma.ru/projects/lakes",
+            "https://workplace.forma.ru/projects/lakes.",
+            "Official FORMA Workplace news dated 2026-01-23 confirms the operating permit; current project page gives Q1 2026."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "proj-129",
+          "canonical_building_id": "icity-space",
+          "canonical_name": "iCITY (Space)",
+          "changes": {
+            "project_status": {
+              "before": "Строится",
+              "after": "Введён"
+            }
+          },
+          "sources": [
+            "data/building_dates.json",
+            "УТОЧНЕНО (2026-08-01): cre.ru/news/99147 — Мосгосстройнадзор выдал РНВ на 61-этажную башню Space Tower (iCity, 2-я очередь, 112,7 тыс. м² с атриумом) 05.08.2025 (отличается от башни Time, введённой раньше); сдвинуто с оценки Q4 2025 на подтверждённый Q3 2025"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-164",
+          "canonical_building_id": null,
+          "canonical_name": "One Tower",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2030
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            },
+            "input_quarter": {
+              "before": null,
+              "after": 2
+            }
+          },
+          "sources": [
+            "https://city.mr-group.ru/",
+            "https://city.mr-group.ru/.",
+            "Current project/developer source: https://city.mr-group.ru/"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-185",
+          "canonical_building_id": null,
+          "canonical_name": "STONE Мневники I",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2028
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            }
+          },
+          "sources": [
+            "https://stone.ru/commercial/mnevniki",
+            "Official STONE project page: https://stone.ru/commercial/mnevniki"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-188",
+          "canonical_building_id": null,
+          "canonical_name": "STONE Мневники II",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2029
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            }
+          },
+          "sources": [
+            "https://stone.ru/commercial/mnevniki",
+            "Official STONE project page: https://stone.ru/commercial/mnevniki"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-189",
+          "canonical_building_id": "stone-mnevniki3-t1",
+          "canonical_name": "STONE Мневники III (M3.1)",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2030
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            }
+          },
+          "sources": [
+            "https://stone.ru/commercial/mnevniki3",
+            "Official STONE project page: https://stone.ru/commercial/mnevniki3"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-189",
+          "canonical_building_id": "stone-mnevniki3-t2",
+          "canonical_name": "STONE Мневники III (M3.2)",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2030
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            }
+          },
+          "sources": [
+            "https://stone.ru/commercial/mnevniki3",
+            "Official STONE project page: https://stone.ru/commercial/mnevniki3"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-192",
+          "canonical_building_id": null,
+          "canonical_name": "STONE Римская",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2028
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            }
+          },
+          "sources": [
+            "https://stone.ru/commercial/rimskaya",
+            "Official STONE project page: https://stone.ru/commercial/rimskaya"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-204",
+          "canonical_building_id": null,
+          "canonical_name": "Top Tower",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2029
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "planned"
+            }
+          },
+          "sources": [
+            "https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti",
+            "https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti.",
+            "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti"
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "proj-279",
+          "canonical_building_id": null,
+          "canonical_name": "River Park Коломенское",
+          "changes": {
+            "project_status": {
+              "before": "Строится",
+              "after": "Введён"
+            }
+          },
+          "sources": [
+            "https://m.river-park.ru/info/news/27693/",
+            "https://xn--80az8a.xn--d1aqf1ai/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D1%8B/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BA/%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82/51930",
+            "https://m.river-park.ru/info/news/27693/."
+          ],
+          "reliability": "high: official/current primary source reviewed on page"
+        },
+        {
+          "canonical_project_id": "cwhost-0007",
+          "canonical_building_id": "cwhost-0007-bld",
+          "canonical_name": "Технопарк",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2021
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://pioneer.ru/project/technopark",
+            "https://mosprimeoffice.ru/business-centers/technopark-plaza",
+            "https://mosprimeoffice.ru/business-centers/technopark-plaza."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0013",
+          "canonical_building_id": "cwhost-0013-bld",
+          "canonical_name": "Новосущевский",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2006
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://novosuschevsky.ru/",
+            "https://novo.pvt.ru/",
+            "https://novo.pvt.ru/."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0015",
+          "canonical_building_id": "cwhost-0015-bld",
+          "canonical_name": "Садовая Плаза",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2002
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://sadovaya-plaza.pvt.ru/",
+            "https://caos.ru/bc/bc-sadovaya-plaza/",
+            "https://mosprimeoffice.ru/business-centers/sadovaya-plaza",
+            "https://mosprimeoffice.ru/business-centers/sadovaya-plaza."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0025",
+          "canonical_building_id": "cwhost-0025-bld",
+          "canonical_name": "Авион",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 1964
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://rentavik.ru/business-center/avion-stroenie-2/",
+            "https://mosprimeoffice.ru/business-centers/avion",
+            "https://mosprimeoffice.ru/business-centers/avion."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0026",
+          "canonical_building_id": "cwhost-0026-bld",
+          "canonical_name": "Капитолий Вернадского",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2006
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://enkatc.com/ru/business-development/tc-kapitolii-vernadskogo",
+            "https://mosprimeoffice.ru/business-centers/kapitoliy",
+            "https://mosprimeoffice.ru/business-centers/kapitoliy."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0027",
+          "canonical_building_id": "cwhost-0027-bld",
+          "canonical_name": "Композиторская",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2006
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://kf.expert/office/business-center/space-1-kompozitorskaya-os2235",
+            "https://mosprimeoffice.ru/business-centers/space-1",
+            "https://mosprimeoffice.ru/business-centers/space-1."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0029",
+          "canonical_building_id": "cwhost-0029-bld",
+          "canonical_name": "Citydel",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2008
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://sitidel.ru/",
+            "https://mosprimeoffice.ru/business-centers/sitidel",
+            "https://mosprimeoffice.ru/business-centers/sitidel."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0036",
+          "canonical_building_id": "cwhost-0036-bld",
+          "canonical_name": "Гостиница Москва",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2012
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://www.mos.ru/upload/documents/oiv/2012112201.pdf",
+            "https://mosprimeoffice.ru/business-centers/moskva",
+            "https://mosprimeoffice.ru/business-centers/moskva."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0041",
+          "canonical_building_id": "cwhost-0041-bld",
+          "canonical_name": "DM Tower",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2023
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            },
+            "input_quarter": {
+              "before": null,
+              "after": 2
+            }
+          },
+          "sources": [
+            "https://ricci.ru/upload/iblock/841/h1hrta8vnblz9otbvrdkkfypqefmh7lx/Ricci-Office-market-report_2023.pdf",
+            "https://nikoliers.ru/upload/iblock/051/4fhwix4n7vzflhd11fee20eqk863n5um.pdf",
+            "https://nikoliers.ru/upload/iblock/051/4fhwix4n7vzflhd11fee20eqk863n5um.pdf."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0042",
+          "canonical_building_id": "cwhost-0042-bld",
+          "canonical_name": "Фили Град",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2017
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            },
+            "input_quarter": {
+              "before": null,
+              "after": 3
+            }
+          },
+          "sources": [
+            "https://content.knightfrank.com/research/597/documents/ru/-2017-5211.pdf",
+            "https://stroygaz.ru/news/commercial/v-moskve-vveli-pervyy-v-2017-godu-biznes-tsentr-/",
+            "https://stroygaz.ru/news/commercial/v-moskve-vveli-pervyy-v-2017-godu-biznes-tsentr-/."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0045",
+          "canonical_building_id": "cwhost-0045-bld",
+          "canonical_name": "White Stone",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2005
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://www.standard.bz/assets/white-stone/",
+            "https://arenda.o1properties.ru/objects/biznes-centr-white-stone",
+            "https://mosprimeoffice.ru/business-centers/white-stone",
+            "https://mosprimeoffice.ru/business-centers/white-stone."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0051",
+          "canonical_building_id": "cwhost-0051-bld",
+          "canonical_name": "Poklonka Place",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2014
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://kfk-sistem.ru/produkchiya/biznes-centr-poklonka-place-gk-tashir",
+            "https://mosprimeoffice.ru/business-centers/poklonka-place",
+            "https://mosprimeoffice.ru/business-centers/poklonka-place."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-0058",
+          "canonical_building_id": "cwhost-0058-bld",
+          "canonical_name": "Вивальди",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2009
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://vivaljdi-plaza.pvt.ru/",
+            "https://mosprimeoffice.ru/business-centers/vivaldi-plaza",
+            "https://mosprimeoffice.ru/business-centers/vivaldi-plaza."
+          ],
+          "reliability": "high: at least two cited sources"
+        },
+        {
+          "canonical_project_id": "cwhost-hist-5d45ac8941",
+          "canonical_building_id": "cwhost-hist-5d45ac8941-bld",
+          "canonical_name": "Белая Площадь",
+          "changes": {
+            "input_year": {
+              "before": null,
+              "after": 2009
+            },
+            "input_date_kind": {
+              "before": "unknown",
+              "after": "confirmed"
+            }
+          },
+          "sources": [
+            "https://www.enka.com/ru/portfolio-item/white-square-office-center/",
+            "https://www.o1properties.ru/wp-content/uploads/2021/06/%D0%91%D1%80%D0%BE%D1%88%D1%8E%D1%80%D0%B0-O1-Properties-%D0%BD%D0%B0-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%BC-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B5-%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8C-2020.pdf",
+            "https://realty-guide.ru/offices/objects/2b78b525-795b-4f66-95c0-fc922719722a/",
+            "https://yandex.com/maps/213/moscow/house/lesnaya_ulitsa_5/Z04Ycw9mQU0BQFtvfXt2dntrZw%3D%3D/",
+            "https://www.o1properties.ru/wp-content/uploads/2021/06/%D0%91%D1%80%D0%BE%D1%88%D1%8E%D1%80%D0%B0-O1-Properties-%D0%BD%D0%B0-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%BC-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B5-%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8C-2020.pdf."
+          ],
+          "reliability": "high: at least two cited sources"
+        }
+      ],
+      "needs_review": []
+    },
+    "derived_geography": {
+      "rule": "Fill previously empty values only, using scripts/recompute_geo.py point-in-polygon and existing coordinates.",
+      "rows": 102,
+      "field_counts": {
+        "bizFormed": 58,
+        "zone": 92,
+        "submarket": 92,
+        "bizForming": 18
+      },
+      "all_changes_match_rule": true,
+      "errors": [],
+      "sample_10": [
+        {
+          "canonical_project_id": "proj-15",
+          "canonical_building_id": "cwhost-0018-bld",
+          "canonical_name": "Рабочая Станция (Black&White) - KW (Black&White)",
+          "coordinates": [
+            55.728023,
+            37.645375
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-48",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Flexity (Павелецкая Плаза (А))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-49",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Flexity Solo (Павелецкая Плаза (А))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-79",
+          "canonical_building_id": "cwhost-hist-2e3715b7ba-bld",
+          "canonical_name": "Multispace Porta (Porta)",
+          "coordinates": [
+            55.75048,
+            37.53953
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-119",
+          "canonical_building_id": null,
+          "canonical_name": "Meeting point (Гостиница Москва)",
+          "coordinates": [
+            55.757131,
+            37.617114
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-166",
+          "canonical_building_id": "cwhost-0056-bld",
+          "canonical_name": "SOK Арена Парк (Рыбаков Тауэр) (SOK Рыбаков Тауэр)",
+          "coordinates": [
+            55.788353,
+            37.567931
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-176",
+          "canonical_building_id": "cwhost-hist-4b033613e3-bld",
+          "canonical_name": "AFI GAllery",
+          "coordinates": [
+            55.775682,
+            37.581191
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Белорусский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-235",
+          "canonical_building_id": "cwhost-0018-bld",
+          "canonical_name": "KW Павелецкая (Black&White)",
+          "coordinates": [
+            55.728023,
+            37.645375
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-255",
+          "canonical_building_id": null,
+          "canonical_name": "Flexity SOLO/Flexity (Павелецкая Плаза (В))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-256",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Flexity SOLO/Flexity (Павелецкая Плаза (А))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        }
+      ],
+      "changes": [
+        {
+          "canonical_project_id": "proj-15",
+          "canonical_building_id": "cwhost-0018-bld",
+          "canonical_name": "Рабочая Станция (Black&White) - KW (Black&White)",
+          "coordinates": [
+            55.728023,
+            37.645375
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-48",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Flexity (Павелецкая Плаза (А))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-49",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Flexity Solo (Павелецкая Плаза (А))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-79",
+          "canonical_building_id": "cwhost-hist-2e3715b7ba-bld",
+          "canonical_name": "Multispace Porta (Porta)",
+          "coordinates": [
+            55.75048,
+            37.53953
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-119",
+          "canonical_building_id": null,
+          "canonical_name": "Meeting point (Гостиница Москва)",
+          "coordinates": [
+            55.757131,
+            37.617114
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-166",
+          "canonical_building_id": "cwhost-0056-bld",
+          "canonical_name": "SOK Арена Парк (Рыбаков Тауэр) (SOK Рыбаков Тауэр)",
+          "coordinates": [
+            55.788353,
+            37.567931
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-176",
+          "canonical_building_id": "cwhost-hist-4b033613e3-bld",
+          "canonical_name": "AFI GAllery",
+          "coordinates": [
+            55.775682,
+            37.581191
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Белорусский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-235",
+          "canonical_building_id": "cwhost-0018-bld",
+          "canonical_name": "KW Павелецкая (Black&White)",
+          "coordinates": [
+            55.728023,
+            37.645375
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-255",
+          "canonical_building_id": null,
+          "canonical_name": "Flexity SOLO/Flexity (Павелецкая Плаза (В))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "proj-256",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Flexity SOLO/Flexity (Павелецкая Плаза (А))",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0001",
+          "canonical_building_id": "cwhost-0001-bld",
+          "canonical_name": "Империя",
+          "coordinates": [
+            55.748154,
+            37.540236
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0002",
+          "canonical_building_id": "cwhost-0002-bld",
+          "canonical_name": "Федерация (Сити)",
+          "coordinates": [
+            55.749633,
+            37.537434
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0003",
+          "canonical_building_id": "cwhost-0003-bld",
+          "canonical_name": "Башня на набережной (В)",
+          "coordinates": [
+            55.746593,
+            37.53738
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0004",
+          "canonical_building_id": "cwhost-0004-bld",
+          "canonical_name": "Никольская",
+          "coordinates": [
+            55.757192,
+            37.622522
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0005",
+          "canonical_building_id": "cwhost-0005-bld",
+          "canonical_name": "Цветной бульвар",
+          "coordinates": [
+            55.770476,
+            37.622217
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0006",
+          "canonical_building_id": "cwhost-0006-bld",
+          "canonical_name": "Новослободская",
+          "coordinates": [
+            55.785787,
+            37.594917
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0007",
+          "canonical_building_id": "cwhost-0007-bld",
+          "canonical_name": "Технопарк",
+          "coordinates": [
+            55.693931,
+            37.664428
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юг"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Южный порт"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0008",
+          "canonical_building_id": "cwhost-0008-bld",
+          "canonical_name": "Бригантина",
+          "coordinates": [
+            55.781737,
+            37.592384
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0009",
+          "canonical_building_id": "cwhost-0009-bld",
+          "canonical_name": "Кузнецкий Мост",
+          "coordinates": [
+            55.761913,
+            37.621507
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0010",
+          "canonical_building_id": "cwhost-0010-bld",
+          "canonical_name": "Балчуг",
+          "coordinates": [
+            55.746441,
+            37.629053
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0011",
+          "canonical_building_id": "cwhost-0011-bld",
+          "canonical_name": "Симонов",
+          "coordinates": [
+            55.711316,
+            37.652777
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0012",
+          "canonical_building_id": "cwhost-0012-bld",
+          "canonical_name": "Арма",
+          "coordinates": [
+            55.760206,
+            37.663889
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0013",
+          "canonical_building_id": "cwhost-0013-bld",
+          "canonical_name": "Новосущевский",
+          "coordinates": [
+            55.789851,
+            37.606972
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Савеловский деловой район"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0014",
+          "canonical_building_id": "cwhost-0014-bld",
+          "canonical_name": "Риверсайд Тауэрс",
+          "coordinates": [
+            55.732063,
+            37.647244
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0015",
+          "canonical_building_id": "cwhost-0015-bld",
+          "canonical_name": "Садовая Плаза",
+          "coordinates": [
+            55.773849,
+            37.603541
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0016",
+          "canonical_building_id": "cwhost-0016-bld",
+          "canonical_name": "Павелецкая Плаза (А)",
+          "coordinates": [
+            55.730426,
+            37.634793
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0017",
+          "canonical_building_id": "cwhost-0017-bld",
+          "canonical_name": "Павелецкая Плаза (В)",
+          "coordinates": [
+            55.713228,
+            37.64736
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0018",
+          "canonical_building_id": "cwhost-0018-bld",
+          "canonical_name": "Black&White",
+          "coordinates": [
+            55.728652,
+            37.645578
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0019",
+          "canonical_building_id": "code-novo-dolgorukovskaya-21",
+          "canonical_name": "Долгоруковская 21",
+          "coordinates": [
+            55.774932,
+            37.599579
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0020",
+          "canonical_building_id": "cwhost-0020-bld",
+          "canonical_name": "МФК Савеловский сити",
+          "coordinates": [
+            55.803788,
+            37.590964
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Север"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Савеловский деловой район"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0021",
+          "canonical_building_id": "cwhost-0021-bld",
+          "canonical_name": "Зубовский 17",
+          "coordinates": [
+            55.736311,
+            37.590497
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0022",
+          "canonical_building_id": "cwhost-0022-bld",
+          "canonical_name": "Остоженка",
+          "coordinates": [
+            55.740867,
+            37.598061
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0023",
+          "canonical_building_id": "cwhost-0023-bld",
+          "canonical_name": "Сретенка",
+          "coordinates": [
+            55.766866,
+            37.633526
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0024",
+          "canonical_building_id": "cwhost-0024-bld",
+          "canonical_name": "КМ19",
+          "coordinates": [
+            55.762308,
+            37.625837
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0025",
+          "canonical_building_id": "cwhost-0025-bld",
+          "canonical_name": "Авион",
+          "coordinates": [
+            55.799907,
+            37.531316
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Ходынка"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0026",
+          "canonical_building_id": "cwhost-0026-bld",
+          "canonical_name": "Капитолий Вернадского",
+          "coordinates": [
+            55.692387,
+            37.529017
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0027",
+          "canonical_building_id": "cwhost-0027-bld",
+          "canonical_name": "Композиторская",
+          "coordinates": [
+            55.751447,
+            37.586571
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0028",
+          "canonical_building_id": "cwhost-0028-bld",
+          "canonical_name": "Меркурий",
+          "coordinates": [
+            55.75051,
+            37.539455
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0029",
+          "canonical_building_id": "cwhost-0029-bld",
+          "canonical_name": "Citydel",
+          "coordinates": [
+            55.761691,
+            37.658536
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0030",
+          "canonical_building_id": "cwhost-0030-bld",
+          "canonical_name": "Workki Комсомольская",
+          "coordinates": [
+            55.770968,
+            37.655589
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0031",
+          "canonical_building_id": "cwhost-0031-bld",
+          "canonical_name": "Нео Гео",
+          "coordinates": [
+            55.649992,
+            37.539572
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юго-Запад"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Калужский деловой район"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0032",
+          "canonical_building_id": "cwhost-0032-bld",
+          "canonical_name": "На Тульской",
+          "coordinates": [
+            55.706457,
+            37.617581
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0033",
+          "canonical_building_id": "cwhost-0033-bld",
+          "canonical_name": "Галерея Актер",
+          "coordinates": [
+            55.764551,
+            37.606406
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0034",
+          "canonical_building_id": "cwhost-0034-bld",
+          "canonical_name": "Милютинский",
+          "coordinates": [
+            55.763645,
+            37.632044
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0035",
+          "canonical_building_id": "cwhost-0035-bld",
+          "canonical_name": "Даниловская Мануфактура",
+          "coordinates": [
+            55.699467,
+            37.625595
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0036",
+          "canonical_building_id": "cwhost-0036-bld",
+          "canonical_name": "Гостиница Москва",
+          "coordinates": [
+            55.757718,
+            37.617069
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0037",
+          "canonical_building_id": "cwhost-0037-bld",
+          "canonical_name": "SOK Земляной Вал",
+          "coordinates": [
+            55.753301,
+            37.656272
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Восток"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0038",
+          "canonical_building_id": "cwhost-0038-bld",
+          "canonical_name": "SOK Сады Пекина",
+          "coordinates": [
+            55.768942,
+            37.592339
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0039",
+          "canonical_building_id": "cwhost-0039-bld",
+          "canonical_name": "Refolio Достоевский",
+          "coordinates": [
+            55.784384,
+            37.614626
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0040",
+          "canonical_building_id": "cwhost-0040-bld",
+          "canonical_name": "Deworkacy Савинский",
+          "coordinates": [
+            55.734395,
+            37.566611
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0041",
+          "canonical_building_id": "cwhost-0041-bld",
+          "canonical_name": "DM Tower",
+          "coordinates": [
+            55.696007,
+            37.625513
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0042",
+          "canonical_building_id": "cwhost-0042-bld",
+          "canonical_name": "Фили Град",
+          "coordinates": [
+            55.755657,
+            37.509173
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Запад"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Большой Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0043",
+          "canonical_building_id": "cwhost-0043-bld",
+          "canonical_name": "ул. Воронцовская, д. 49/28",
+          "coordinates": [
+            55.732808,
+            37.666531
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0044",
+          "canonical_building_id": "cwhost-0044-bld",
+          "canonical_name": "Парк Горького",
+          "coordinates": [
+            55.711687,
+            37.581632
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0045",
+          "canonical_building_id": "cwhost-0045-bld",
+          "canonical_name": "White Stone",
+          "coordinates": [
+            55.779069,
+            37.586931
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Белорусский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0046",
+          "canonical_building_id": "cwhost-0046-bld",
+          "canonical_name": "Проспект Мира, 40",
+          "coordinates": [
+            55.780233,
+            37.63376
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0047",
+          "canonical_building_id": "cwhost-0047-bld",
+          "canonical_name": "Signature Столешников, 11",
+          "coordinates": [
+            55.763432,
+            37.615857
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0048",
+          "canonical_building_id": "cwhost-0048-bld",
+          "canonical_name": "на Басманной",
+          "coordinates": [
+            55.776527,
+            37.679404
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0049",
+          "canonical_building_id": "cwhost-0049-bld",
+          "canonical_name": "Фабрика Станиславского",
+          "coordinates": [
+            55.745443,
+            37.663117
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0050",
+          "canonical_building_id": "cwhost-0050-bld",
+          "canonical_name": "Большая Якиманка 26",
+          "coordinates": [
+            55.735961,
+            37.612057
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0051",
+          "canonical_building_id": "cwhost-0051-bld",
+          "canonical_name": "Poklonka Place",
+          "coordinates": [
+            55.736179,
+            37.533194
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Запад"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Кутузовский деловой район"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0052",
+          "canonical_building_id": "cwhost-0052-bld",
+          "canonical_name": "Ролл Холл",
+          "coordinates": [
+            55.708317,
+            37.625454
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0053",
+          "canonical_building_id": "cwhost-0053-bld",
+          "canonical_name": "Аркус 3",
+          "coordinates": [
+            55.790838,
+            37.550459
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Большой Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0054",
+          "canonical_building_id": "cwhost-0054-bld",
+          "canonical_name": "ФОК",
+          "coordinates": [
+            55.771631,
+            37.65682
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0055",
+          "canonical_building_id": "cwhost-0055-bld",
+          "canonical_name": "ВТБ Арена стр 8",
+          "coordinates": [
+            55.789451,
+            37.568336
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0056",
+          "canonical_building_id": "cwhost-0056-bld",
+          "canonical_name": "SOK Рыбаков Тауэр",
+          "coordinates": [
+            55.69899,
+            37.640758
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юг"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Южный порт"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0057",
+          "canonical_building_id": "cwhost-0057-bld",
+          "canonical_name": "SOK Арена Парк",
+          "coordinates": [
+            55.789451,
+            37.568336
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0058",
+          "canonical_building_id": "cwhost-0058-bld",
+          "canonical_name": "Вивальди",
+          "coordinates": [
+            55.728626,
+            37.6448
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0059",
+          "canonical_building_id": "cwhost-0059-bld",
+          "canonical_name": "Дубинин Скай",
+          "coordinates": [
+            55.759684,
+            37.575073
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0060",
+          "canonical_building_id": "cwhost-0060-bld",
+          "canonical_name": "Газетный 17",
+          "coordinates": [
+            55.758965,
+            37.610619
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-0061",
+          "canonical_building_id": "cwhost-0061-bld",
+          "canonical_name": "Кадашевская наб., 6",
+          "coordinates": [
+            55.742737,
+            37.617788
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-699587ab73",
+          "canonical_building_id": "cwhost-hist-699587ab73-bld",
+          "canonical_name": "1-й Щемиловский 16с2",
+          "coordinates": [
+            55.779089,
+            37.607197
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-695ac9fe05",
+          "canonical_building_id": "cwhost-hist-695ac9fe05-bld",
+          "canonical_name": "1 шипковский пер. 5",
+          "coordinates": [
+            55.722593,
+            37.632035
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-58a9aa2051",
+          "canonical_building_id": "cwhost-hist-58a9aa2051-bld",
+          "canonical_name": "GrowUp на Павелецкой",
+          "coordinates": [
+            55.730781,
+            37.638512
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-60619d9fa4",
+          "canonical_building_id": "cwhost-hist-60619d9fa4-bld",
+          "canonical_name": "SOK Арена Парк 2",
+          "coordinates": [
+            55.787857,
+            37.564841
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-0f2198c906",
+          "canonical_building_id": "cwhost-hist-0f2198c906-bld",
+          "canonical_name": "SOK Арена Парк (Рыбаков Тауэр)",
+          "coordinates": [
+            55.788353,
+            37.567931
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-f0518c325b",
+          "canonical_building_id": "cwhost-hist-f0518c325b-bld",
+          "canonical_name": "SOK Сити (3 и 4 этаж)",
+          "coordinates": [
+            55.749633,
+            37.537434
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-c087a56535",
+          "canonical_building_id": "cwhost-hist-c087a56535-bld",
+          "canonical_name": "Авиаконструктора Микояна",
+          "coordinates": [
+            55.791268,
+            37.534397
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Ходынка"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-1dbea5db6a",
+          "canonical_building_id": "cwhost-hist-1dbea5db6a-bld",
+          "canonical_name": "Арбат",
+          "coordinates": [
+            55.749491,
+            37.591512
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-5d45ac8941",
+          "canonical_building_id": "cwhost-hist-5d45ac8941-bld",
+          "canonical_name": "Белая Площадь",
+          "coordinates": [
+            55.7778039613667,
+            37.5866961479187
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Белорусский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-fc48060d3b",
+          "canonical_building_id": "cwhost-hist-fc48060d3b-bld",
+          "canonical_name": "Белая Площадь площадка закрыта",
+          "coordinates": [
+            55.777942,
+            37.586801
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Белорусский"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-8a9770370d",
+          "canonical_building_id": "cwhost-hist-8a9770370d-bld",
+          "canonical_name": "БЦ Известия",
+          "coordinates": [
+            55.766101,
+            37.604315
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-14b3f61ae5",
+          "canonical_building_id": "cwhost-hist-14b3f61ae5-bld",
+          "canonical_name": "Вивальди Плаза",
+          "coordinates": [
+            55.728626,
+            37.6448
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Павелецкий"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-fc98f0ea7d",
+          "canonical_building_id": "cwhost-hist-fc98f0ea7d-bld",
+          "canonical_name": "Газетный",
+          "coordinates": [
+            55.757931,
+            37.609227
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "Центральное ядро (БК)"
+            },
+            "submarket": {
+              "before": null,
+              "after": "БК"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-c256850d91",
+          "canonical_building_id": "cwhost-hist-c256850d91-bld",
+          "canonical_name": "Домников",
+          "coordinates": [
+            55.772168,
+            37.648465
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-2e3715b7ba",
+          "canonical_building_id": "cwhost-hist-2e3715b7ba-bld",
+          "canonical_name": "Заречная 2/1",
+          "coordinates": [
+            55.75048,
+            37.53953
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-794e6c15c3",
+          "canonical_building_id": "cwhost-hist-794e6c15c3-bld",
+          "canonical_name": "Квартал Вэст",
+          "coordinates": [
+            55.707299,
+            37.456828
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-ee79f38adb",
+          "canonical_building_id": "cwhost-hist-ee79f38adb-bld",
+          "canonical_name": "Красная Роза",
+          "coordinates": [
+            55.734233,
+            37.587721
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-3a9656e535",
+          "canonical_building_id": "cwhost-hist-3a9656e535-bld",
+          "canonical_name": "Лужники",
+          "coordinates": [
+            55.71913,
+            37.557834
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-bc5e1e5c71",
+          "canonical_building_id": "cwhost-hist-bc5e1e5c71-bld",
+          "canonical_name": "Овчинниковский",
+          "coordinates": [
+            55.743578,
+            37.62996
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-82914143c2",
+          "canonical_building_id": "cwhost-hist-82914143c2-bld",
+          "canonical_name": "Онегин",
+          "coordinates": [
+            55.728358,
+            37.615048
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-61c412c32d",
+          "canonical_building_id": "cwhost-hist-61c412c32d-bld",
+          "canonical_name": "Останкино",
+          "coordinates": [
+            55.814897,
+            37.60098
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-e3bfd3f027",
+          "canonical_building_id": "cwhost-hist-e3bfd3f027-bld",
+          "canonical_name": "Полянка",
+          "coordinates": [
+            55.736194,
+            37.619405
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Юг"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-d2e87a98a7",
+          "canonical_building_id": "cwhost-hist-d2e87a98a7-bld",
+          "canonical_name": "Порта",
+          "coordinates": [
+            55.75048,
+            37.53953
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Москва-Сити"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Москва-Сити"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-f23c097940",
+          "canonical_building_id": "cwhost-hist-f23c097940-bld",
+          "canonical_name": "Пр. Мира , 40",
+          "coordinates": [
+            55.780233,
+            37.63376
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-97886a34a7",
+          "canonical_building_id": "cwhost-hist-97886a34a7-bld",
+          "canonical_name": "РТС Волгоградский",
+          "coordinates": [
+            55.707674,
+            37.749283
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Восток"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-3ce001a7ad",
+          "canonical_building_id": "cwhost-hist-3ce001a7ad-bld",
+          "canonical_name": "Сириус Парк",
+          "coordinates": [
+            55.671676,
+            37.630203
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юг"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-8188d16e28",
+          "canonical_building_id": "cwhost-hist-8188d16e28-bld",
+          "canonical_name": "Смоленский Пассаж 1",
+          "coordinates": [
+            55.738921,
+            37.584649
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-f256e86d8c",
+          "canonical_building_id": "cwhost-hist-f256e86d8c-bld",
+          "canonical_name": "Сретенский б-р, 5",
+          "coordinates": [
+            55.766866,
+            37.633526
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "БК-СК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "СК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "ЦДР"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-1c2bfead46",
+          "canonical_building_id": "cwhost-hist-1c2bfead46-bld",
+          "canonical_name": "ТЦ РИО на Ленинском",
+          "coordinates": [
+            55.663843,
+            37.511445
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Юго-Запад"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-682333d260",
+          "canonical_building_id": "cwhost-hist-682333d260-bld",
+          "canonical_name": "Ходынка",
+          "coordinates": [
+            55.784865,
+            37.53164
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "ТТК-МКАД"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК-МКАД Северо-Запад"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Ленинградский"
+            },
+            "bizForming": {
+              "before": null,
+              "after": "Ходынка"
+            }
+          },
+          "matches_point_in_polygon": true
+        },
+        {
+          "canonical_project_id": "cwhost-hist-4b033613e3",
+          "canonical_building_id": "cwhost-hist-4b033613e3-bld",
+          "canonical_name": "AFI Gallery",
+          "coordinates": [
+            55.775682,
+            37.581191
+          ],
+          "changes": {
+            "zone": {
+              "before": null,
+              "after": "СК-ТТК"
+            },
+            "submarket": {
+              "before": null,
+              "after": "ТТК Север"
+            },
+            "bizFormed": {
+              "before": null,
+              "after": "Белорусский"
+            }
+          },
+          "matches_point_in_polygon": true
+        }
+      ]
+    },
+    "other_layer_fields": {
+      "rows": 28,
+      "changes": [
+        {
+          "canonical_project_id": "proj-14",
+          "canonical_building_id": null,
+          "canonical_name": "Lunar",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            },
+            "source_count": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-22",
+          "canonical_building_id": null,
+          "canonical_name": "БЦ Сколково",
+          "changes": {
+            "confidence": {
+              "before": "high",
+              "after": "low"
+            },
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            },
+            "qa_status": {
+              "before": "ok",
+              "after": "conflict"
+            },
+            "verification_status": {
+              "before": "accepted",
+              "after": "under_review"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-77",
+          "canonical_building_id": null,
+          "canonical_name": "Lakes",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            },
+            "source_count": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-136",
+          "canonical_building_id": null,
+          "canonical_name": "K-city",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-157",
+          "canonical_building_id": "cwhost-0059-bld",
+          "canonical_name": "Multispace Дубинин (Дубинин Скай)",
+          "changes": {
+            "address": {
+              "before": "",
+              "after": "ул. Дубининская, вл. 39–41"
+            },
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            },
+            "rate": {
+              "before": null,
+              "after": 70000.0
+            },
+            "seats": {
+              "before": null,
+              "after": 650
+            },
+            "source_count": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-164",
+          "canonical_building_id": null,
+          "canonical_name": "One Tower",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-176",
+          "canonical_building_id": "cwhost-hist-4b033613e3-bld",
+          "canonical_name": "AFI GAllery",
+          "changes": {
+            "address": {
+              "before": "Москва, ул. Академика Челомея, 1А (бизнес-центр AFI Park Воронцовский, Обручевский район)",
+              "after": "пл. Тверская Застава, 4"
+            },
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            },
+            "latitude": {
+              "before": 55.663329,
+              "after": 55.775682
+            },
+            "longitude": {
+              "before": 37.538188,
+              "after": 37.581191
+            },
+            "source_count": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-185",
+          "canonical_building_id": null,
+          "canonical_name": "STONE Мневники I",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-188",
+          "canonical_building_id": null,
+          "canonical_name": "STONE Мневники II",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-189",
+          "canonical_building_id": "stone-mnevniki3-t1",
+          "canonical_name": "STONE Мневники III (M3.1)",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-189",
+          "canonical_building_id": "stone-mnevniki3-t2",
+          "canonical_name": "STONE Мневники III (M3.2)",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-192",
+          "canonical_building_id": null,
+          "canonical_name": "STONE Римская",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "proj-204",
+          "canonical_building_id": null,
+          "canonical_name": "Top Tower",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-07-31",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0007",
+          "canonical_building_id": "cwhost-0007-bld",
+          "canonical_name": "Технопарк",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0013",
+          "canonical_building_id": "cwhost-0013-bld",
+          "canonical_name": "Новосущевский",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0015",
+          "canonical_building_id": "cwhost-0015-bld",
+          "canonical_name": "Садовая Плаза",
+          "changes": {
+            "gba": {
+              "before": null,
+              "after": 16250
+            },
+            "gla": {
+              "before": null,
+              "after": 11978
+            },
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            },
+            "source_count": {
+              "before": 2,
+              "after": 3
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0025",
+          "canonical_building_id": "cwhost-0025-bld",
+          "canonical_name": "Авион",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0026",
+          "canonical_building_id": "cwhost-0026-bld",
+          "canonical_name": "Капитолий Вернадского",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0027",
+          "canonical_building_id": "cwhost-0027-bld",
+          "canonical_name": "Композиторская",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0029",
+          "canonical_building_id": "cwhost-0029-bld",
+          "canonical_name": "Citydel",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0036",
+          "canonical_building_id": "cwhost-0036-bld",
+          "canonical_name": "Гостиница Москва",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0041",
+          "canonical_building_id": "cwhost-0041-bld",
+          "canonical_name": "DM Tower",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0042",
+          "canonical_building_id": "cwhost-0042-bld",
+          "canonical_name": "Фили Град",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0045",
+          "canonical_building_id": "cwhost-0045-bld",
+          "canonical_name": "White Stone",
+          "changes": {
+            "gba": {
+              "before": null,
+              "after": 49520
+            },
+            "gla": {
+              "before": null,
+              "after": 39698
+            },
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            },
+            "source_count": {
+              "before": 2,
+              "after": 3
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0051",
+          "canonical_building_id": "cwhost-0051-bld",
+          "canonical_name": "Poklonka Place",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-0058",
+          "canonical_building_id": "cwhost-0058-bld",
+          "canonical_name": "Вивальди",
+          "changes": {
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-hist-5d45ac8941",
+          "canonical_building_id": "cwhost-hist-5d45ac8941-bld",
+          "canonical_name": "Белая Площадь",
+          "changes": {
+            "confidence": {
+              "before": "medium",
+              "after": "high"
+            },
+            "geometry_quality": {
+              "before": "geocoded_approx",
+              "after": "house_exact"
+            },
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            },
+            "latitude": {
+              "before": 55.755819,
+              "after": 55.7778039613667
+            },
+            "longitude": {
+              "before": 37.617644,
+              "after": 37.5866961479187
+            },
+            "source_count": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "canonical_project_id": "cwhost-hist-4b033613e3",
+          "canonical_building_id": "cwhost-hist-4b033613e3-bld",
+          "canonical_name": "AFI Gallery",
+          "changes": {
+            "address": {
+              "before": "пл. Тверская Застава, 3",
+              "after": "пл. Тверская Застава, 4"
+            },
+            "last_verified_at": {
+              "before": "2026-08-22",
+              "after": "2026-09-24"
+            },
+            "latitude": {
+              "before": 55.663329,
+              "after": 55.775682
+            },
+            "longitude": {
+              "before": 37.538188,
+              "after": 37.581191
+            },
+            "source_count": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        }
+      ]
+    }
+  },
+  "coworking_snapshots": {
+    "changed_rows": 7,
+    "changes": [
+      {
+        "file": "coworking_202506.json",
+        "row_index": 5,
+        "id": 39,
+        "name": "AFI Gallery 4 эт",
+        "bc": "AFI Gallery",
+        "changes": {
+          "address": {
+            "before": "г. Москва, Тверская Застава пл, д. 3",
+            "after": "пл. Тверская Застава, 4"
+          }
+        }
+      },
+      {
+        "file": "coworking_202506.json",
+        "row_index": 6,
+        "id": 40,
+        "name": "AFI Gallery 7 эт",
+        "bc": "AFI Gallery",
+        "changes": {
+          "address": {
+            "before": "г. Москва, Тверская Застава пл, д. 3",
+            "after": "пл. Тверская Застава, 4"
+          }
+        }
+      },
+      {
+        "file": "coworking_202509.json",
+        "row_index": 29,
+        "id": 176,
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "changes": {
+          "address": {
+            "before": "пл. Тверская Застава, 3",
+            "after": "пл. Тверская Застава, 4"
+          },
+          "lat": {
+            "before": null,
+            "after": 55.775682
+          },
+          "lng": {
+            "before": null,
+            "after": 37.581191
+          }
+        }
+      },
+      {
+        "file": "coworking_202512.json",
+        "row_index": 40,
+        "id": 176,
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "changes": {
+          "address": {
+            "before": "пл. Тверская Застава, 3",
+            "after": "пл. Тверская Застава, 4"
+          },
+          "lat": {
+            "before": 55.663329,
+            "after": 55.775682
+          },
+          "lng": {
+            "before": 37.538188,
+            "after": 37.581191
+          }
+        }
+      },
+      {
+        "file": "coworking_202603.json",
+        "row_index": 38,
+        "id": 176,
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "changes": {
+          "address": {
+            "before": "пл. Тверская Застава, 3",
+            "after": "пл. Тверская Застава, 4"
+          },
+          "lat": {
+            "before": 55.663329,
+            "after": 55.775682
+          },
+          "lng": {
+            "before": 37.538188,
+            "after": 37.581191
+          }
+        }
+      },
+      {
+        "file": "coworking_202606.json",
+        "row_index": 26,
+        "id": 157,
+        "name": "Multispace Дубинин",
+        "bc": "Дубинин Скай",
+        "changes": {
+          "rate": {
+            "before": null,
+            "after": 70000.0
+          },
+          "seats": {
+            "before": 600,
+            "after": 650
+          }
+        }
+      },
+      {
+        "file": "coworking_202606.json",
+        "row_index": 35,
+        "id": 176,
+        "name": "AFI GAllery",
+        "bc": "AFI Gallery",
+        "changes": {
+          "address": {
+            "before": "пл. Тверская Застава, 3",
+            "after": "пл. Тверская Застава, 4"
+          },
+          "lat": {
+            "before": 55.663329,
+            "after": 55.775682
+          },
+          "lng": {
+            "before": 37.538188,
+            "after": 37.581191
+          }
+        }
+      }
+    ],
+    "duplicate_ids_84_256_changed": [],
+    "q2_2026_vacancy_gt_seats": [
+      {
+        "id": 9001,
+        "name": "Meeting point",
+        "bc": "Даниловская Мануфактура",
+        "vacancy": 773.0,
+        "seats": 500.0,
+        "vacancy_or_seats_changed": false
+      },
+      {
+        "id": 127,
+        "name": "Space 1",
+        "bc": "Фабрика Станиславского",
+        "vacancy": 230.0,
+        "seats": 111.0,
+        "vacancy_or_seats_changed": false
+      },
+      {
+        "id": 160,
+        "name": "Multispace Актер",
+        "bc": "Галерея Актер",
+        "vacancy": 420.0,
+        "seats": 360,
+        "vacancy_or_seats_changed": false
+      }
+    ],
+    "protected_issues_unchanged": true
+  },
+  "building_dates": {
+    "rows": 9,
+    "changes": [
+      {
+        "key": "k-city",
+        "changes": {
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "cre.ru/news/99415, talkprimorye.ru — разрешение на строительство Q2 2025, старт продаж январь 2025, стройка начата апрель 2025; план сдачи конец 2028",
+            "after": "Unresolved commissioning conflict: official https://kobzon.city/ says Q2 2028; https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716 says Q4 2028."
+          }
+        }
+      },
+      {
+        "key": "lakes",
+        "changes": {
+          "commission_q": {
+            "before": null,
+            "after": "202603"
+          },
+          "commission_year": {
+            "before": null,
+            "after": 2026
+          },
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "lakes-office.ru/office-news.ru — «готовность IV кв. 2025, продажи открыты», формулировка неоднозначна (факт или прогноз на момент публикации) — явного «введён в эксплуатацию» не нашла, не проставляю. GBA 55378 (24136 ритейл + 18951 офис по этому источнику) — точно совпадает с нашими данными.",
+            "after": "Official FORMA Workplace news dated 2026-01-23 confirms the operating permit; current project page gives Q1 2026."
+          }
+        }
+      },
+      {
+        "key": "lunar",
+        "changes": {
+          "commission_year": {
+            "before": null,
+            "after": 2023
+          },
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "realty.rbc.ru — разрешение на начало продаж (эскроу) получено в марте 2021; ввод самого модуля отдельно не подтверждён (не путать с «Lunar модуль В», у которого свой РНВ сентябрь 2024)",
+            "after": "lunar-center.ru reports the Lunar office building commissioned in 2023; MosPrimeOffice corroborates identity/address."
+          }
+        }
+      },
+      {
+        "key": "one tower",
+        "changes": {
+          "commission_q": {
+            "before": null,
+            "after": "203006"
+          },
+          "commission_year": {
+            "before": null,
+            "after": 2030
+          },
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "разрешение на строительство от 30.06.2018, стройка началась июль 2019 (проект изначально вёл Мосинжпроект, с конца 2023 — MR Group, что совпадает с нашим девелопером); официальный старт продаж планировался сентябрь-октябрь 2025 (умеренная уверенность — формулировка «планируется»); план сдачи Q2 2030 (точно совпадает с нашим year=2030)",
+            "after": "Current project/developer source: https://city.mr-group.ru/"
+          }
+        }
+      },
+      {
+        "key": "stone мневники i",
+        "changes": {
+          "commission_year": {
+            "before": null,
+            "after": 2028
+          },
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "kommersant.ru — «STONE приступает к строительству... STONE Мнёвники 1» (точный квартал начала стройки не указан); продажи (обе очереди 1+2) стартовали поздней осенью 2024",
+            "after": "Official STONE project page: https://stone.ru/commercial/mnevniki"
+          }
+        }
+      },
+      {
+        "key": "stone мневники ii",
+        "changes": {
+          "commission_year": {
+            "before": null,
+            "after": 2029
+          },
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "forbes.ru — разрешение на строительство «STONE Мнёвники 2» получено, GBA источника 54300 — почти точное совпадение с нашим 54900 (~1.1%); продажи стартовали поздней осенью 2024 вместе с очередью 1",
+            "after": "Official STONE project page: https://stone.ru/commercial/mnevniki"
+          }
+        }
+      },
+      {
+        "key": "stone мневники iii",
+        "changes": {
+          "canonical_project_id": {
+            "before": null,
+            "after": "proj-189"
+          },
+          "commission_year": {
+            "before": null,
+            "after": 2030
+          },
+          "last_checked": {
+            "before": null,
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": null,
+            "after": "Official STONE project page: https://stone.ru/commercial/mnevniki3"
+          }
+        }
+      },
+      {
+        "key": "stone римская",
+        "changes": {
+          "canonical_project_id": {
+            "before": null,
+            "after": "proj-192"
+          },
+          "commission_year": {
+            "before": null,
+            "after": 2028
+          },
+          "last_checked": {
+            "before": null,
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": null,
+            "after": "Official STONE project page: https://stone.ru/commercial/rimskaya"
+          }
+        }
+      },
+      {
+        "key": "top tower",
+        "changes": {
+          "commission_year": {
+            "before": null,
+            "after": 2029
+          },
+          "last_checked": {
+            "before": "2026-07-16",
+            "after": "2026-09-24"
+          },
+          "source": {
+            "before": "moscow-city.guide, mr-group.ru — период строительства Q4 2025 - Q4 2029 (вторая очередь iCITY в Шелепихе); класс здания уточнён на Prime (fluffywhite.moscow: «офисы класса PRIME от MR Group») — исправлено в data (было A)",
+            "after": "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti"
+          }
+        }
+      }
+    ]
+  }
+}

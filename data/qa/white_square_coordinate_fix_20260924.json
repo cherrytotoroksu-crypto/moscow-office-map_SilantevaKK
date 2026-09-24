@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-09-24",
+  "accepted": [
+    {
+      "canonical_project_id": "cwhost-hist-5d45ac8941",
+      "canonical_name": "Белая Площадь",
+      "before": [55.755819, 37.617644],
+      "after": [55.7778039613667, 37.5866961479187],
+      "sources": [
+        "https://realty-guide.ru/offices/objects/2b78b525-795b-4f66-95c0-fc922719722a/",
+        "https://yandex.com/maps/213/moscow/house/lesnaya_ulitsa_5/Z04Ycw9mQU0BQFtvfXt2dntrZw%3D%3D/"
+      ],
+      "reliability": "high: explicit GPS/GLONASS point, independently corroborated by the Yandex house page"
+    }
+  ]
+}
