@@ -287,7 +287,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/aviator",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "СтройМир"
   },
   {
    "id": 521,
@@ -313,7 +316,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/aviator-horoshevskiy",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Алкон"
   },
   {
    "id": 60,
@@ -766,7 +772,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/aden-metal",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 631,
@@ -792,7 +800,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/akademik",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 764,
@@ -818,7 +829,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/akademik-oshibka",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 523,
@@ -907,7 +920,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/akvamarin",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 182,
@@ -1115,7 +1130,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/alkon-begovoy",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Alcon Group"
   },
   {
    "id": 1419,
@@ -1245,7 +1263,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/alterkom",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Aurix"
   },
   {
    "id": 569,
@@ -1375,7 +1394,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/amalteya",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 417,
@@ -1687,7 +1708,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/argunovskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "SVARGO group"
   },
   {
    "id": 374,
@@ -1817,7 +1841,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/arrey-invest",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 444,
@@ -2077,7 +2103,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/atv",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 375,
@@ -2103,7 +2131,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/atnk-invest",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "НИИ Экран"
   },
   {
    "id": 720,
@@ -2181,7 +2212,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/afi-galereya",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "AFI Development"
   },
   {
    "id": 378,
@@ -2207,7 +2241,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/aerodom",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 4,
@@ -2519,7 +2556,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/basmannyy-park",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 241,
@@ -2701,7 +2740,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bashnya-imperiya",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 897,
@@ -2779,7 +2820,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bashnya-vtb-evraziya",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "id": 1301,
@@ -2805,7 +2849,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bashnya-sankt-peterburg",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Sezar Group"
   },
   {
    "id": 1314,
@@ -2862,7 +2909,10 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/federaciya",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "id": 660,
@@ -2888,7 +2938,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bashnya-evolyutsiya",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Галс-Девелопмент"
   },
   {
    "id": 522,
@@ -2966,7 +3019,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/belaya-ploschad",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "O1 Properties"
   },
   {
    "id": 560,
@@ -2992,7 +3048,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/belye-sady",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Регус"
   },
   {
    "id": 298,
@@ -3096,7 +3153,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/berezka-v-luzhnikah",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 510,
@@ -3185,7 +3244,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bernikov",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 413,
@@ -3705,7 +3766,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-970",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 991,
@@ -3731,7 +3794,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-butyrskiy",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ГК Пионер"
   },
   {
    "id": 1058,
@@ -3887,7 +3953,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-zemelnyy",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 409,
@@ -4147,7 +4215,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-kvartal-prokshino",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "А101"
   },
   {
    "id": 481,
@@ -4355,7 +4426,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-park-peredelkino-stroitsya",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Абсолют"
   },
   {
    "id": 404,
@@ -4407,7 +4481,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-territoriya-pangaea",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 861,
@@ -4641,7 +4717,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-sokolinaya-gora",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "developer": "Ферн Девелопмент"
   },
   {
    "id": 349,
@@ -5005,7 +5082,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-485",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 486,
@@ -5083,7 +5162,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-ryazanskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 527,
@@ -5109,7 +5190,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-tverskoy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 555,
@@ -5837,7 +5920,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-938",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 941,
@@ -6227,7 +6312,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-1183",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 1204,
@@ -6264,7 +6352,10 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-1204",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Flexity"
   },
   {
    "id": 1208,
@@ -6810,7 +6901,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-10",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1111,
@@ -7226,7 +7319,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/biznes-tsentr-na-haritonevskom",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 153,
@@ -7720,7 +7815,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bk-na-rusakovskoy-ofisno-delovoy-tsentr",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Новая эра"
   },
   {
    "id": 873,
@@ -7954,7 +8050,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/borodino",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Новая эра"
   },
   {
    "id": 868,
@@ -8110,7 +8209,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/burakova-29",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 478,
@@ -8240,7 +8341,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bts-butik-ofis",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 543,
@@ -8474,7 +8577,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bts-orshanskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аквилон"
   },
   {
    "id": 196,
@@ -8656,7 +8762,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bts-simonovskiy-val",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1091,
@@ -8760,7 +8868,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bts-air-stroitsya",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Tekta"
   },
   {
    "id": 993,
@@ -8864,7 +8975,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bts-light-tower",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1221,
@@ -9202,7 +9315,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/velka",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 127,
@@ -9332,7 +9447,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/vereyskaya-plaza-3",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 506,
@@ -9410,7 +9527,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/vivaldi-plaza",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1151,
@@ -9540,7 +9659,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/viktori-plaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Развитие активов"
   },
   {
    "id": 563,
@@ -9644,7 +9764,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/vishnevyy-sad",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 36,
@@ -10034,7 +10156,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/vorobevskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 721,
@@ -10424,7 +10548,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/vyatka",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 709,
@@ -10450,7 +10576,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/gazfild",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton Development"
   },
   {
    "id": 906,
@@ -10580,7 +10709,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/geolog",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton"
   },
   {
    "id": 1041,
@@ -10606,7 +10738,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/geolog2",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton Development"
   },
   {
    "id": 166,
@@ -11048,7 +11183,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/golutvinskiy-dvor",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "СИБУР"
   },
   {
    "id": 642,
@@ -11100,7 +11236,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/goncharnaya-21",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "НИИ Экран"
   },
   {
    "id": 935,
@@ -11256,7 +11395,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/gorod-stolits",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Sezar Group"
   },
   {
    "id": 976,
@@ -11282,7 +11424,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/gostinichno-delovoy-tsentr-pionerskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Flexity"
   },
   {
    "id": 656,
@@ -11698,7 +11841,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/daymond-holl",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Гранард"
   },
   {
    "id": 877,
@@ -11724,7 +11870,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/danilov-plaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 805,
@@ -11776,7 +11924,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/danilovskiy-fort",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "F2"
   },
   {
    "id": 884,
@@ -11932,7 +12083,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/dekart",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Группа \"Эталон\""
   },
   {
    "id": 443,
@@ -11958,7 +12112,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 673,
@@ -12062,7 +12218,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-dom",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 969,
@@ -12088,7 +12246,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-kvartal-skolkovo-park",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Millhouse"
   },
   {
    "id": 712,
@@ -12203,7 +12364,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-tsentr-severnyy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Основа"
   },
   {
    "id": 670,
@@ -12307,7 +12469,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-tsentr-lianozovo",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 736,
@@ -12437,7 +12601,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-tsentr-marina-roscha",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Донстрой"
   },
   {
    "id": 1398,
@@ -12489,7 +12656,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-tsentr-park-huamin",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Пионер"
   },
   {
    "id": 1222,
@@ -12541,7 +12711,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/delovoy-tsentr-serebryakova",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Родина"
   },
   {
    "id": 356,
@@ -12630,7 +12801,9 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/delta-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 883,
@@ -12656,7 +12829,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/demidov",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 725,
@@ -12864,7 +13039,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/dinastiya-plaza",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Sezar Group"
   },
   {
    "id": 1225,
@@ -12890,7 +13068,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/dinamo",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "SOK"
   },
   {
    "id": 752,
@@ -12916,7 +13097,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/dmitrovka",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Flexity"
   },
   {
    "id": 600,
@@ -13176,7 +13358,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/domus",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "СИБУР"
   },
   {
    "id": 403,
@@ -13254,7 +13437,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/donskoy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 334,
@@ -13900,7 +14085,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/zenit-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "PARADE Development"
   },
   {
    "id": 136,
@@ -14212,7 +14400,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/ina",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 788,
@@ -14238,7 +14428,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/imperial-plaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 792,
@@ -14290,7 +14482,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/integral",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 308,
@@ -14550,7 +14744,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/iskra-park",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "WeWork"
   },
   {
    "id": 146,
@@ -15018,7 +15213,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kapitoliy",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Enka"
   },
   {
    "id": 302,
@@ -15148,7 +15346,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kvadrat",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 90,
@@ -15174,7 +15374,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kvartal-siti",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 29,
@@ -15278,7 +15480,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kievskaya-7",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Новая эра"
   },
   {
    "id": 994,
@@ -15304,7 +15507,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kleyn",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 297,
@@ -15694,7 +15899,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kontsern-start-tsbs",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1081,
@@ -15902,7 +16109,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/krasnaya-roza",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "developer": "KR Properties"
   },
   {
    "id": 399,
@@ -15980,7 +16188,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/krasnoselskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 831,
@@ -16240,7 +16450,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kuznetskiy-most-17",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1272,
@@ -16474,7 +16686,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/la-5",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 203,
@@ -16563,7 +16777,10 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/legenda-tsvetnogo",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Apollax Space"
   },
   {
    "id": 881,
@@ -16886,7 +17103,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/lobachevskiy",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Эталон"
   },
   {
    "id": 25,
@@ -17510,7 +17730,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/market",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Гранард"
   },
   {
    "id": 855,
@@ -17848,7 +18069,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/merkuriy-siti",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ООО \"Гранд-Сити\""
   },
   {
    "id": 98,
@@ -17874,7 +18098,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/metropolis",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Галс-Девелопмент"
   },
   {
    "id": 865,
@@ -17926,7 +18153,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/meha-na-tsvetnom",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 490,
@@ -18342,7 +18571,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/modul-v",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton"
   },
   {
    "id": 476,
@@ -18472,7 +18704,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/molodezhnyy-kuntsevo",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аквилон"
   },
   {
    "id": 942,
@@ -18628,7 +18863,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/morozov",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "developer": "WeWork"
   },
   {
    "id": 967,
@@ -18732,7 +18968,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/moskva",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Декмос"
   },
   {
    "id": 148,
@@ -19174,7 +19413,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/myasnitskaya-16",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1253,
@@ -19278,7 +19519,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/na-burdenko",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Регус"
   },
   {
    "id": 542,
@@ -19642,7 +19884,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/na-nizhney-krasnoselskoy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Coldy"
   },
   {
    "id": 1384,
@@ -19772,7 +20015,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/na-podsosenskom",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1021,
@@ -19876,7 +20121,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/na-stremyannom",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 544,
@@ -20136,7 +20383,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/nagatinskiy-nagatino-sadovniki",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 283,
@@ -20292,7 +20541,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/nemetskiy-tsentr-promyshlennosti-i-torgovli",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Эталон"
   },
   {
    "id": 1097,
@@ -20422,7 +20674,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/nikoloyamskaya-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 223,
@@ -20474,7 +20728,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/novatek",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Шервуд Премьер"
   },
   {
    "id": 442,
@@ -20526,7 +20783,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/novion",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1241,
@@ -20552,7 +20811,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/novo",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "id": 1026,
@@ -20812,7 +21074,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/novye-media",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 995,
@@ -21020,7 +21284,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/nyuton",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Apollax Space"
   },
   {
    "id": 578,
@@ -21046,7 +21311,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/oazis-zamoskvoreche",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Мезопроект"
   },
   {
    "id": 1349,
@@ -21228,7 +21496,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/ogorodnyy",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Upside Development"
   },
   {
    "id": 1250,
@@ -21254,7 +21525,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/oko-ii",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "id": 1067,
@@ -21280,7 +21554,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/oko",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "id": 987,
@@ -21551,7 +21828,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/olhovskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1099,
@@ -21577,7 +21856,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/omega-2-korpus-s",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1090,
@@ -21733,7 +22014,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/orbita-plaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1046,
@@ -21759,7 +22042,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/oruzheynyy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Flexity"
   },
   {
    "id": 1102,
@@ -23527,7 +23811,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/pangeya",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "БКЛ Недвижимость"
   },
   {
    "id": 273,
@@ -23590,7 +23877,9 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/panorama-tverskoy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1329,
@@ -23642,7 +23931,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/park-mira",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 344,
@@ -23746,7 +24037,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/paskal",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Apollax Space"
   },
   {
    "id": 412,
@@ -24032,7 +24324,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/platforma",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 572,
@@ -24318,7 +24612,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/pollars",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Пионер"
   },
   {
    "id": 1317,
@@ -24448,7 +24743,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/preo-8",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1122,
@@ -25228,7 +25525,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/raykin-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Tashir Development"
   },
   {
    "id": 1334,
@@ -25462,7 +25762,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/rinko-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1175,
@@ -25577,7 +25879,9 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/romanov-dvor",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1217,
@@ -25707,7 +26011,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/rochdeltsentr",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 928,
@@ -25837,7 +26143,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/rts-taganskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 860,
@@ -25915,7 +26223,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/rts-nagatino-sadovniki",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Мой Кабинет"
   },
   {
    "id": 1405,
@@ -26123,7 +26432,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/savelovskiy-siti",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "СODE"
   },
   {
    "id": 738,
@@ -26279,7 +26589,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/sady-etreta",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "West Wind Group"
   },
   {
    "id": 1016,
@@ -26331,7 +26644,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/sammit",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1068,
@@ -26513,7 +26828,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/svezhiy-veter",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Coldy"
   },
   {
    "id": 1276,
@@ -26539,7 +26857,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/sberbank-siti-bashnya-b",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "ООО «Гелион»"
   },
   {
    "id": 858,
@@ -26877,7 +27196,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/serebryanyy-fontan",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Эталон"
   },
   {
    "id": 1227,
@@ -27033,7 +27355,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/sibir",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 1084,
@@ -27200,7 +27525,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/sinitsa-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 675,
@@ -27356,7 +27683,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/sitidel",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1251,
@@ -27668,7 +27997,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/snezhnaya-26",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1252,
@@ -28121,7 +28452,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/spk-nsb",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1130,
@@ -28199,7 +28532,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stankolit",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 189,
@@ -28433,7 +28768,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stoleshnikov-plaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Signature (Регус)"
   },
   {
    "id": 824,
@@ -28459,7 +28795,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stratos",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1280,
@@ -28537,7 +28875,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stroitelnaya-kompaniya-moskovskiy-biznes-inkubator",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Эталон"
   },
   {
    "id": 1163,
@@ -28719,7 +29060,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/suharevskiy-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Максим Блажко (компания девелоперская не раскрыта)"
   },
   {
    "id": 1305,
@@ -29031,7 +29373,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/taurus",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Мезопроект"
   },
   {
    "id": 765,
@@ -29421,7 +29764,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tehnopark-mozhayskiy",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Пионер"
   },
   {
    "id": 588,
@@ -29473,7 +29819,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tehnopark-navigator",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Итэлма"
   },
   {
    "id": 1215,
@@ -29551,7 +29900,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tehnopolis-moskva",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "developer": "West Wind Group"
   },
   {
    "id": 610,
@@ -29915,7 +30265,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/torgovo-ofisnyy-tsentr",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1274,
@@ -30149,7 +30501,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tulskiy",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ООО ГОНЧАР"
   },
   {
    "id": 1053,
@@ -30331,7 +30686,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/ulanskiy",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1359,
@@ -30383,7 +30740,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/udaltsova-plaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Шервуд Премьер"
   },
   {
    "id": 661,
@@ -30773,7 +31133,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/fili-grad",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "MR Group"
   },
   {
    "id": 1374,
@@ -31397,7 +31760,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tsentr-mezhdunarodnoy-torgovli",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ПАО «Центр международной торговли»"
   },
   {
    "id": 1247,
@@ -31475,7 +31841,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tsentr-t",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Apollax Space"
   },
   {
    "id": 1369,
@@ -31527,7 +31896,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/tsentral-siti-tauer-ii",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ENKA"
   },
   {
    "id": 1131,
@@ -32021,7 +32393,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/shkola-zhurnalistov",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Flexity"
   },
   {
    "id": 888,
@@ -32229,7 +32602,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/ektos",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 759,
@@ -32619,7 +32994,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/yakor",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "West Pier"
   },
   {
    "id": 532,
@@ -32645,7 +33023,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/yamskoe-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "id": 38,
@@ -32879,7 +33260,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/aerodom-center",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 109,
@@ -32983,7 +33367,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/afi-square",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "AFI Development"
   },
   {
    "id": 1132,
@@ -33009,7 +33396,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/afi2b",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 27,
@@ -33061,7 +33450,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/arcus",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 1261,
@@ -33295,7 +33687,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/bankside",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1165,
@@ -33321,7 +33715,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/black-and-white",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 41,
@@ -33373,7 +33769,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/botanica",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ГК Пионер"
   },
   {
    "id": 905,
@@ -33399,7 +33798,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/business-center-riva-stroitsya",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Regions Development"
   },
   {
    "id": 226,
@@ -33451,7 +33853,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/business-club-obsidian",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 982,
@@ -33477,7 +33881,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/business-club",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Sezar Group"
   },
   {
    "id": 70,
@@ -33529,7 +33936,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/central-street",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 147,
@@ -33581,7 +33990,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/central-yard",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 320,
@@ -33659,7 +34070,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/crosswall",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 149,
@@ -33711,7 +34124,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/dominion-tower",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1231,
@@ -33737,7 +34152,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/dm-tower",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "id": 655,
@@ -33867,7 +34285,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/empire",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 154,
@@ -33945,7 +34365,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/fili-residence",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ООО СЗ ФИЛИ ГАРДЕН"
   },
   {
    "id": 157,
@@ -33997,7 +34420,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/frame",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Forma"
   },
   {
    "id": 82,
@@ -34190,7 +34616,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/geneva-house",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Signature (Регус)"
   },
   {
    "id": 193,
@@ -34346,7 +34773,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/helios-city",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 139,
@@ -34398,7 +34827,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/icity",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "MR Group"
   },
   {
    "id": 337,
@@ -34424,7 +34856,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/icube",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 212,
@@ -34513,7 +34947,8 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/iq-quarter",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Flexity"
   },
   {
    "id": 1259,
@@ -34617,7 +35052,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/jazz",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Sminex"
   },
   {
    "id": 332,
@@ -34643,7 +35081,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/kann-house",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 782,
@@ -34747,7 +35187,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/lakes",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Forma (ПИК)"
   },
   {
    "id": 745,
@@ -34825,7 +35268,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/loft-ville",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 690,
@@ -34955,7 +35400,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/lunar",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton Development"
   },
   {
    "id": 962,
@@ -34981,7 +35429,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/lucky",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Vesper"
   },
   {
    "id": 719,
@@ -35033,7 +35484,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/lotte-plaza",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Space 1"
   },
   {
    "id": 398,
@@ -35215,7 +35667,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/nagatino-i-land",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Apollax Space"
   },
   {
    "id": 627,
@@ -35345,7 +35798,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/neo-geo",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 817,
@@ -35371,7 +35826,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/neva-towers",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "id": 1214,
@@ -35397,7 +35855,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/nevsky-plaza-stroitsya",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Крост"
   },
   {
    "id": 1078,
@@ -35449,7 +35910,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/newton-plaza",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 1344,
@@ -35501,7 +35964,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/orbital",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Ultima Development"
   },
   {
    "id": 585,
@@ -35657,7 +36123,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/park-tower",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Capital Group"
   },
   {
    "id": 116,
@@ -35761,7 +36230,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/porta",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Forma"
   },
   {
    "id": 1229,
@@ -35787,7 +36259,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/poklonka-place",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Ташир"
   },
   {
    "id": 285,
@@ -35813,7 +36288,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/portplaza",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Эталон"
   },
   {
    "id": 618,
@@ -35917,7 +36395,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/red-tower",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 966,
@@ -36021,7 +36501,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/riverdale",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 366,
@@ -36151,7 +36633,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/rosso-riva",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 851,
@@ -36292,7 +36776,9 @@
    ],
    "source_url": "https://mosprimeoffice.ru/business-centers/shukhova-14",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 746,
@@ -36318,7 +36804,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/silver-city",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Karat Holding"
   },
   {
    "id": 1394,
@@ -36396,7 +36885,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/space-1",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 653,
@@ -36578,7 +37069,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stone-kurskaya-stroitsya",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "Prime",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "id": 1403,
@@ -36682,7 +37176,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stone-savelovskaya-stroitsya",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "id": 711,
@@ -36708,7 +37205,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/stone-towers",
    "matched_2gis": true,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Stone"
   },
   {
    "id": 310,
@@ -36838,7 +37338,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/taller",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 23,
@@ -36890,7 +37392,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/technopark-plaza",
    "matched_2gis": false,
-   "matched_classifier": true
+   "matched_classifier": true,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Пионер"
   },
   {
    "id": 169,
@@ -36916,7 +37421,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/the-yard",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "id": 990,
@@ -36942,7 +37449,8 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/the-book",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "developer": "Space 1"
   },
   {
    "id": 495,
@@ -37150,7 +37658,10 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/upside-kuntsevo",
    "matched_2gis": false,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Upside Development"
   },
   {
    "id": 620,
@@ -37384,7 +37895,9 @@
    "offers": [],
    "source_url": "https://mosprimeoffice.ru/business-centers/yes",
    "matched_2gis": true,
-   "matched_classifier": false
+   "matched_classifier": false,
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   }
  ]
 }

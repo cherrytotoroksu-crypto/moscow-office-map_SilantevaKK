@@ -56,6 +56,7 @@ DATA_ALLOW_PATTERNS = [
     # файл не копируется в _site/data/, и вкладка на проде грузится с 0 строк.
     re.compile(r"^bc_2gis.*\.json$"),
     re.compile(r"^mosprimeoffice_bc.*\.json$"),
+    re.compile(r"^bc_base_classes.*\.json$"),
 ]
 
 # Корневые файлы, которые тоже публикуются по прямой просьбе пользователя

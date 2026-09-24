@@ -73,7 +73,10 @@
    "lat": 55.790316,
    "lng": 37.585763,
    "url_2gis": "https://2gis.com/firm/70000001045836265",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Stone"
   },
   {
    "name": "Эир",
@@ -109,7 +112,10 @@
    "lat": 55.789307,
    "lng": 37.530675,
    "url_2gis": "https://2gis.com/firm/70000001094816634",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Tekta"
   },
   {
    "name": "Потапово",
@@ -181,7 +187,10 @@
    "lat": 55.587747,
    "lng": 37.433667,
    "url_2gis": "https://2gis.com/firm/70000001062127765",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "А101"
   },
   {
    "name": "Звенигородская",
@@ -649,7 +658,10 @@
    "lat": 55.768595,
    "lng": 37.624023,
    "url_2gis": "https://2gis.com/firm/4504127919050209",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Apollax Space"
   },
   {
    "name": "Millenium house",
@@ -793,7 +805,8 @@
    "lat": 55.763353,
    "lng": 37.615759,
    "url_2gis": "https://2gis.com/firm/70000001017990269",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Signature (Регус)"
   },
   {
    "name": "Инженер",
@@ -901,7 +914,8 @@
    "lat": 55.763197,
    "lng": 37.619258,
    "url_2gis": "https://2gis.com/firm/70000001114896251",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Ферн Девелопмент"
   },
   {
    "name": "Галерея Актёр",
@@ -1117,7 +1131,9 @@
    "lat": 55.767786,
    "lng": 37.600807,
    "url_2gis": "https://2gis.com/firm/4504127918699355",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Оружейный",
@@ -1153,7 +1169,8 @@
    "lat": 55.773884,
    "lng": 37.60469,
    "url_2gis": "https://2gis.com/firm/70000001025048985",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Flexity"
   },
   {
    "name": "Пушкинский дом",
@@ -1261,7 +1278,8 @@
    "lat": 55.771449,
    "lng": 37.605277,
    "url_2gis": "https://2gis.com/firm/4504128908688303",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Flexity"
   },
   {
    "name": "Контакт",
@@ -1369,7 +1387,8 @@
    "lat": 55.763981,
    "lng": 37.607754,
    "url_2gis": "https://2gis.com/firm/70000001052074436",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Основа"
   },
   {
    "name": "Никольская Плаза",
@@ -1837,7 +1856,8 @@
    "lat": 55.751431,
    "lng": 37.584966,
    "url_2gis": "https://2gis.com/firm/4504127914431994",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Space 1"
   },
   {
    "name": "Midland Plaza",
@@ -1909,7 +1929,9 @@
    "lat": 55.767851,
    "lng": 37.632126,
    "url_2gis": "https://2gis.com/firm/4504127912848363",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Цветной 30",
@@ -2341,7 +2363,8 @@
    "lat": 55.761781,
    "lng": 37.617571,
    "url_2gis": "https://2gis.com/firm/4504127908387669",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Signature (Регус)"
   },
   {
    "name": "Hermitage plaza",
@@ -2557,7 +2580,9 @@
    "lat": 55.746681,
    "lng": 37.536831,
    "url_2gis": "https://2gis.com/firm/4504128908814712",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Брестская 30",
@@ -2737,7 +2762,10 @@
    "lat": 55.751097,
    "lng": 37.53374,
    "url_2gis": "https://2gis.com/firm/70000001052289728",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Метрика"
   },
   {
    "name": "Олимпик Холл",
@@ -2809,7 +2837,10 @@
    "lat": 55.775407,
    "lng": 37.58183,
    "url_2gis": "https://2gis.com/firm/70000001098269991",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "AFI Development"
   },
   {
    "name": "Башня Федерация",
@@ -2845,7 +2876,10 @@
    "lat": 55.7499,
    "lng": 37.537718,
    "url_2gis": "https://2gis.com/firm/4504127912143320",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "name": "Ильинка",
@@ -3133,7 +3167,9 @@
    "lat": 55.76622,
    "lng": 37.581097,
    "url_2gis": "https://2gis.com/firm/70000001029549237",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Сибирь",
@@ -3169,7 +3205,10 @@
    "lat": 55.762438,
    "lng": 37.569925,
    "url_2gis": "https://2gis.com/firm/4504127918236942",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "name": "Калашный",
@@ -3385,7 +3424,8 @@
    "lat": 55.779048,
    "lng": 37.588736,
    "url_2gis": "https://2gis.com/firm/4504128908825778",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Регус"
   },
   {
    "name": "Чистые Пруды",
@@ -3637,7 +3677,10 @@
    "lat": 55.744612,
    "lng": 37.633541,
    "url_2gis": "https://2gis.com/firm/70000001067377851",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Энка"
   },
   {
    "name": "Ноев ковчег",
@@ -3709,7 +3752,9 @@
    "lat": 55.754439,
    "lng": 37.60952,
    "url_2gis": "https://2gis.com/firm/70000001096356241",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Delta plaza",
@@ -3745,7 +3790,9 @@
    "lat": 55.753893,
    "lng": 37.662139,
    "url_2gis": "https://2gis.com/firm/4504127918392738",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Центр международной торговли",
@@ -3781,7 +3828,10 @@
    "lat": 55.755053,
    "lng": 37.557191,
    "url_2gis": "https://2gis.com/firm/4504127908496856",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ПАО «Центр международной торговли»"
   },
   {
    "name": "Хлебозавод №9",
@@ -3853,7 +3903,9 @@
    "lat": 55.751924,
    "lng": 37.586733,
    "url_2gis": "https://2gis.com/firm/4504127918402899",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Park Tower",
@@ -3889,7 +3941,10 @@
    "lat": 55.752518,
    "lng": 37.548084,
    "url_2gis": "https://2gis.com/firm/70000001026539930",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Capital Group"
   },
   {
    "name": "Оазис",
@@ -3925,7 +3980,10 @@
    "lat": 55.728879,
    "lng": 37.620396,
    "url_2gis": "https://2gis.com/firm/70000001030349375",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Мезопроект"
   },
   {
    "name": "Чайка Плаза",
@@ -4033,7 +4091,9 @@
    "lat": 55.737844,
    "lng": 37.602069,
    "url_2gis": "https://2gis.com/firm/70000001023210131",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Сытинъ, бизнес-центр",
@@ -4645,7 +4705,9 @@
    "lat": 55.712599,
    "lng": 37.654337,
    "url_2gis": "https://2gis.com/firm/70000001019182943",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Павловский",
@@ -4825,7 +4887,9 @@
    "lat": 55.737524,
    "lng": 37.65557,
    "url_2gis": "https://2gis.com/firm/70000001077022059",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Монетный двор",
@@ -4969,7 +5033,10 @@
    "lat": 55.736449,
    "lng": 37.533708,
    "url_2gis": "https://2gis.com/firm/70030076176657404",
-   "entry_type": "adm_div"
+   "entry_type": "adm_div",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Ташир"
   },
   {
    "name": "Ринко Плаза",
@@ -5005,7 +5072,10 @@
    "lat": 55.735672,
    "lng": 37.587662,
    "url_2gis": "https://2gis.com/firm/4504127908604143",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "name": "Lighthouse",
@@ -5041,7 +5111,9 @@
    "lat": 55.730602,
    "lng": 37.628228,
    "url_2gis": "https://2gis.com/firm/4504127921628707",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Магистраль Плаза",
@@ -5113,7 +5185,9 @@
    "lat": 55.729337,
    "lng": 37.62614,
    "url_2gis": "https://2gis.com/firm/70000001007373794",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Частная практика",
@@ -5257,7 +5331,9 @@
    "lat": 55.739853,
    "lng": 37.636912,
    "url_2gis": "https://2gis.com/firm/4504128908504294",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Парус",
@@ -5329,7 +5405,10 @@
    "lat": 55.754995,
    "lng": 37.509158,
    "url_2gis": "https://2gis.com/firm/70000001029883671",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "MR Group"
   },
   {
    "name": "Савинская 11",
@@ -5833,7 +5912,8 @@
    "lat": 55.751057,
    "lng": 37.592364,
    "url_2gis": "https://2gis.com/firm/70000001030720647",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Space 1"
   },
   {
    "name": "Ходынка",
@@ -6085,7 +6165,9 @@
    "lat": 55.772448,
    "lng": 37.631399,
    "url_2gis": "https://2gis.com/firm/4504127908410558",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "На Большой Дмитровке",
@@ -6157,7 +6239,10 @@
    "lat": 55.748644,
    "lng": 37.534646,
    "url_2gis": "https://2gis.com/firm/70000001018223474",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "name": "Красносельский",
@@ -6193,7 +6278,9 @@
    "lat": 55.785795,
    "lng": 37.660583,
    "url_2gis": "https://2gis.com/firm/70000001023356584",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Красносельский, бизнес-центр",
@@ -6337,7 +6424,10 @@
    "lat": 55.772582,
    "lng": 37.618431,
    "url_2gis": "https://2gis.com/firm/70000001062366985",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "West Wind Group"
   },
   {
    "name": "Монарх",
@@ -6445,7 +6535,10 @@
    "lat": 55.747545,
    "lng": 37.539339,
    "url_2gis": "https://2gis.com/firm/4504128908496033",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Sezar Group"
   },
   {
    "name": "На Харитоньевском, бизнес-центр",
@@ -6517,7 +6610,9 @@
    "lat": 55.800888,
    "lng": 37.594338,
    "url_2gis": "https://2gis.com/firm/4504127913007280",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Central Yard",
@@ -6553,7 +6648,9 @@
    "lat": 55.776983,
    "lng": 37.676452,
    "url_2gis": "https://2gis.com/firm/70000001007206794",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Легион",
@@ -6625,7 +6722,9 @@
    "lat": 55.771139,
    "lng": 37.590853,
    "url_2gis": "https://2gis.com/firm/4504127909050182",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Петровка 15/13",
@@ -6913,7 +7012,9 @@
    "lat": 55.80921,
    "lng": 37.612103,
    "url_2gis": "https://2gis.com/firm/4504127909008064",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Silver city",
@@ -6949,7 +7050,10 @@
    "lat": 55.750607,
    "lng": 37.653208,
    "url_2gis": "https://2gis.com/firm/4504127912024175",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Karat Holding"
   },
   {
    "name": "Инженер",
@@ -7165,7 +7269,10 @@
    "lat": 55.844822,
    "lng": 37.634597,
    "url_2gis": "https://2gis.com/firm/70000001044681254",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Пионер"
   },
   {
    "name": "Станция",
@@ -7489,7 +7596,9 @@
    "lat": 55.704005,
    "lng": 37.625889,
    "url_2gis": "https://2gis.com/firm/4504128908434339",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Арма",
@@ -7525,7 +7634,9 @@
    "lat": 55.758099,
    "lng": 37.664294,
    "url_2gis": "https://2gis.com/firm/4504127920504623",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Павелецкая Плаза, бизнес-центр",
@@ -7741,7 +7852,10 @@
    "lat": 55.774077,
    "lng": 37.576036,
    "url_2gis": "https://2gis.com/firm/70000001100729855",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "AFI Development"
   },
   {
    "name": "Дигалта",
@@ -7849,7 +7963,9 @@
    "lat": 55.738991,
    "lng": 37.410769,
    "url_2gis": "https://2gis.com/firm/70000001006714095",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Краснопресненский",
@@ -8101,7 +8217,9 @@
    "lat": 55.76687,
    "lng": 37.658096,
    "url_2gis": "https://2gis.com/firm/70000001029271076",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "На Нижней Красносельской",
@@ -8137,7 +8255,8 @@
    "lat": 55.774266,
    "lng": 37.674318,
    "url_2gis": "https://2gis.com/firm/4504128908417193",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Coldy"
   },
   {
    "name": "Красивый дом",
@@ -8461,7 +8580,9 @@
    "lat": 55.770895,
    "lng": 37.622955,
    "url_2gis": "https://2gis.com/firm/70000001033682645",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Авион",
@@ -8497,7 +8618,8 @@
    "lat": 55.79876,
    "lng": 37.5315,
    "url_2gis": "https://2gis.com/firm/70000001007323863",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Развитие активов"
   },
   {
    "name": "Астория Плаза",
@@ -8605,7 +8727,9 @@
    "lat": 55.73778,
    "lng": 37.50604,
    "url_2gis": "https://2gis.com/firm/70000001022251485",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Каланчёвский",
@@ -8749,7 +8873,10 @@
    "lat": 55.785236,
    "lng": 37.585087,
    "url_2gis": "https://2gis.com/firm/4504127918053267",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "name": "Мясницкая плаза",
@@ -8857,7 +8984,9 @@
    "lat": 55.746445,
    "lng": 37.682743,
    "url_2gis": "https://2gis.com/firm/4504128908928281",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Новион",
@@ -8893,7 +9022,9 @@
    "lat": 55.784831,
    "lng": 37.626722,
    "url_2gis": "https://2gis.com/firm/70000001038351365",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Банный 9",
@@ -8965,7 +9096,8 @@
    "lat": 55.740004,
    "lng": 37.612211,
    "url_2gis": "https://2gis.com/firm/70000001041244153",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "СИБУР"
   },
   {
    "name": "Шаболовка-31",
@@ -9001,7 +9133,9 @@
    "lat": 55.720668,
    "lng": 37.610352,
    "url_2gis": "https://2gis.com/firm/70000001023677717",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Георг плаза",
@@ -9073,7 +9207,10 @@
    "lat": 55.793668,
    "lng": 37.545057,
    "url_2gis": "https://2gis.com/firm/4504128908801471",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "СтройМир"
   },
   {
    "name": "Москва-Сокол",
@@ -9505,7 +9642,8 @@
    "lat": 55.767405,
    "lng": 37.628127,
    "url_2gis": "https://2gis.com/firm/70000001059208316",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "West Wind Group"
   },
   {
    "name": "Олимпик плаза 2",
@@ -9577,7 +9715,10 @@
    "lat": 55.761008,
    "lng": 37.519461,
    "url_2gis": "https://2gis.com/firm/70000001043412814",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "West Pier"
   },
   {
    "name": "Комис-Трэйд",
@@ -9649,7 +9790,10 @@
    "lat": 55.743789,
    "lng": 37.649418,
    "url_2gis": "https://2gis.com/firm/70000001017948030",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "НИИ Экран"
   },
   {
    "name": "Arcus 4",
@@ -9685,7 +9829,10 @@
    "lat": 55.791219,
    "lng": 37.541878,
    "url_2gis": "https://2gis.com/firm/70000001052646180",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "name": "Савеловский сити",
@@ -9721,7 +9868,8 @@
    "lat": 55.804954,
    "lng": 37.589991,
    "url_2gis": "https://2gis.com/firm/70000001032359344",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "СODE"
   },
   {
    "name": "Dominion Tower",
@@ -9757,7 +9905,9 @@
    "lat": 55.722554,
    "lng": 37.668328,
    "url_2gis": "https://2gis.com/firm/70000001020066443",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Москва",
@@ -9865,7 +10015,10 @@
    "lat": 55.792088,
    "lng": 37.540777,
    "url_2gis": "https://2gis.com/firm/70000001007427299",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "name": "Мичуринский 31",
@@ -10009,7 +10162,9 @@
    "lat": 55.739126,
    "lng": 37.510605,
    "url_2gis": "https://2gis.com/firm/70000001018479901",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Квартал Сити",
@@ -10369,7 +10524,9 @@
    "lat": 55.76628,
    "lng": 37.526823,
    "url_2gis": "https://2gis.com/firm/4504127916433771",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Бизнес-центр The Yard",
@@ -10441,7 +10598,10 @@
    "lat": 55.694478,
    "lng": 37.661978,
    "url_2gis": "https://2gis.com/firm/4504128908450699",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Эталон"
   },
   {
    "name": "Исаак Ньютон",
@@ -10477,7 +10637,8 @@
    "lat": 55.695031,
    "lng": 37.662787,
    "url_2gis": "https://2gis.com/firm/4504128908450696",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Apollax Space"
   },
   {
    "name": "Интеллект&энергия",
@@ -10657,7 +10818,10 @@
    "lat": 55.720915,
    "lng": 37.650686,
    "url_2gis": "https://2gis.com/firm/4504127908805491",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Пионер",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Спектр",
@@ -10765,7 +10929,9 @@
    "lat": 55.799039,
    "lng": 37.604805,
    "url_2gis": "https://2gis.com/firm/70000001027376092",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Крона",
@@ -11053,7 +11219,9 @@
    "lat": 55.751166,
    "lng": 37.655274,
    "url_2gis": "https://2gis.com/firm/70000001031822682",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Alcon 2",
@@ -11161,7 +11329,10 @@
    "lat": 55.750682,
    "lng": 37.540377,
    "url_2gis": "https://2gis.com/firm/70000001038345063",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ООО \"Гранд-Сити\""
   },
   {
    "name": "Башиловский двор",
@@ -11233,7 +11404,10 @@
    "lat": 55.815801,
    "lng": 37.619555,
    "url_2gis": "https://2gis.com/firm/70000001007184796",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "SVARGO group"
   },
   {
    "name": "Ольховский",
@@ -11305,7 +11479,10 @@
    "lat": 55.821314,
    "lng": 37.497674,
    "url_2gis": "https://2gis.com/firm/4504127920445210",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Галс-Девелопмент"
   },
   {
    "name": "Сатурн",
@@ -11521,7 +11698,9 @@
    "lat": 55.728084,
    "lng": 37.643231,
    "url_2gis": "https://2gis.com/firm/4504127920284968",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Кристалл Плаза",
@@ -11701,7 +11880,10 @@
    "lat": 55.788348,
    "lng": 37.56802,
    "url_2gis": "https://2gis.com/firm/70000001034008047",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "SOK"
   },
   {
    "name": "Дербеневская Plaza, бизнес-центр",
@@ -11917,7 +12099,9 @@
    "lat": 55.773194,
    "lng": 37.666102,
    "url_2gis": "https://2gis.com/firm/70000001020009891",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Яуза тауэр",
@@ -12097,7 +12281,9 @@
    "lat": 55.755005,
    "lng": 37.697517,
    "url_2gis": "https://2gis.com/firm/70000001030648854",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Форум II",
@@ -12169,7 +12355,9 @@
    "lat": 55.683738,
    "lng": 37.554129,
    "url_2gis": "https://2gis.com/firm/70000001018444423",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Технополис Москва",
@@ -12745,7 +12933,9 @@
    "lat": 55.722952,
    "lng": 37.665717,
    "url_2gis": "https://2gis.com/firm/4504128908690953",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Vaviloff Tower",
@@ -12817,7 +13007,10 @@
    "lat": 55.750573,
    "lng": 37.536804,
    "url_2gis": "https://2gis.com/firm/70000001041441579",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аеон Девелопмент"
   },
   {
    "name": "Union Center",
@@ -12853,7 +13046,9 @@
    "lat": 55.771657,
    "lng": 37.656625,
    "url_2gis": "https://2gis.com/firm/70000001042069754",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Нордстар Тауэр",
@@ -13573,7 +13768,9 @@
    "lat": 55.715583,
    "lng": 37.522756,
    "url_2gis": "https://2gis.com/firm/4504128908467303",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Покрышкина 7",
@@ -13717,7 +13914,9 @@
    "lat": 55.760845,
    "lng": 37.718461,
    "url_2gis": "https://2gis.com/firm/4504127917166493",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Триангл Хаус",
@@ -14185,7 +14384,9 @@
    "lat": 55.795024,
    "lng": 37.712745,
    "url_2gis": "https://2gis.com/firm/4504127911290953",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Baker Plaza",
@@ -14401,7 +14602,9 @@
    "lat": 55.798392,
    "lng": 37.580563,
    "url_2gis": "https://2gis.com/firm/4504127908982942",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Стрелецкая слобода",
@@ -14617,7 +14820,9 @@
    "lat": 55.800899,
    "lng": 37.55485,
    "url_2gis": "https://2gis.com/firm/70000001083440583",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Технополис Москва",
@@ -14797,7 +15002,10 @@
    "lat": 55.743448,
    "lng": 37.635529,
    "url_2gis": "https://2gis.com/firm/4504127920658860",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ENKA"
   },
   {
    "name": "Stone Ленинский",
@@ -14905,7 +15113,10 @@
    "lat": 55.679378,
    "lng": 37.630231,
    "url_2gis": "https://2gis.com/firm/70000001041254303",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Итэлма"
   },
   {
    "name": "Гипромез",
@@ -14977,7 +15188,9 @@
    "lat": 55.780949,
    "lng": 37.571237,
    "url_2gis": "https://2gis.com/firm/70000001033264844",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "На Зубовском",
@@ -15049,7 +15262,8 @@
    "lat": 55.729581,
    "lng": 37.635318,
    "url_2gis": "https://2gis.com/firm/70000001079578355",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Flexity"
   },
   {
    "name": "Дмитровка 23",
@@ -15193,7 +15407,10 @@
    "lat": 55.708439,
    "lng": 37.625551,
    "url_2gis": "https://2gis.com/firm/70000001060714504",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Apollax Space"
   },
   {
    "name": "Экран",
@@ -15805,7 +16022,9 @@
    "lat": 55.712786,
    "lng": 37.6446,
    "url_2gis": "https://2gis.com/firm/70000001023577787",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Бета Центр",
@@ -15877,7 +16096,8 @@
    "lat": 55.771055,
    "lng": 37.630124,
    "url_2gis": "https://2gis.com/firm/70000001078987662",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Максим Блажко (компания девелоперская не раскрыта)"
   },
   {
    "name": "Victory park plaza",
@@ -15985,7 +16205,9 @@
    "lat": 55.728891,
    "lng": 37.644973,
    "url_2gis": "https://2gis.com/firm/4504127920284965",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Дегунино",
@@ -16165,7 +16387,10 @@
    "lat": 55.790135,
    "lng": 37.38035,
    "url_2gis": "https://2gis.com/firm/4504127920738608",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "PARADE Development"
   },
   {
    "name": "Улей Плаза",
@@ -16345,7 +16570,10 @@
    "lat": 55.846144,
    "lng": 37.579624,
    "url_2gis": "https://2gis.com/firm/70000001077029767",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "KR Properties"
   },
   {
    "name": "Бином Сод",
@@ -16417,7 +16645,8 @@
    "lat": 55.74223,
    "lng": 37.560008,
    "url_2gis": "https://2gis.com/firm/70000001024909957",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Новая эра"
   },
   {
    "name": "Омега-2",
@@ -16993,7 +17222,10 @@
    "lat": 55.791944,
    "lng": 37.603295,
    "url_2gis": "https://2gis.com/firm/4504127916916663",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "name": "Capital tower",
@@ -17245,7 +17477,10 @@
    "lat": 55.657393,
    "lng": 37.53132,
    "url_2gis": "https://2gis.com/firm/70000001092090092",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton Development"
   },
   {
    "name": "Наметкина 10А",
@@ -17425,7 +17660,9 @@
    "lat": 55.706485,
    "lng": 37.596611,
    "url_2gis": "https://2gis.com/firm/70000001020848516",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Торгово-промышленная палата Российской федерации",
@@ -17497,7 +17734,9 @@
    "lat": 55.684562,
    "lng": 37.624159,
    "url_2gis": "https://2gis.com/firm/70000001028120889",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Lucky",
@@ -17533,7 +17772,10 @@
    "lat": 55.762323,
    "lng": 37.557713,
    "url_2gis": "https://2gis.com/firm/70000001112912344",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Vesper"
   },
   {
    "name": "Таурус",
@@ -17569,7 +17811,8 @@
    "lat": 55.728986,
    "lng": 37.619389,
    "url_2gis": "https://2gis.com/firm/70000001049635123",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Мезопроект"
   },
   {
    "name": "Ривер Плэйс",
@@ -17893,7 +18136,9 @@
    "lat": 55.715786,
    "lng": 37.646436,
    "url_2gis": "https://2gis.com/firm/4504127908495068",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Империал парк",
@@ -17929,7 +18174,9 @@
    "lat": 55.831204,
    "lng": 37.446032,
    "url_2gis": "https://2gis.com/firm/70000001025651318",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Разгуляй офис",
@@ -18325,7 +18572,10 @@
    "lat": 55.750558,
    "lng": 37.666668,
    "url_2gis": "https://2gis.com/firm/70000001069476263",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "Prime",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "STONE"
   },
   {
    "name": "Бригантина холл",
@@ -18577,7 +18827,10 @@
    "lat": 55.709521,
    "lng": 37.625166,
    "url_2gis": "https://2gis.com/firm/70000001113514190",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ООО ГОНЧАР"
   },
   {
    "name": "Гелиос Сити",
@@ -18613,7 +18866,9 @@
    "lat": 55.749944,
    "lng": 37.770608,
    "url_2gis": "https://2gis.com/firm/4504128908388839",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Гелиос Сити, деловой центр",
@@ -18973,7 +19228,10 @@
    "lat": 55.69535,
    "lng": 37.664875,
    "url_2gis": "https://2gis.com/firm/70000001055784588",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Пионер"
   },
   {
    "name": "Капитал, бизнес-центр",
@@ -19369,7 +19627,10 @@
    "lat": 55.787464,
    "lng": 37.542667,
    "url_2gis": "https://2gis.com/firm/70000001110683504",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "BusinessClub"
   },
   {
    "name": "Мясницкая 24",
@@ -19729,7 +19990,9 @@
    "lat": 55.726444,
    "lng": 37.757884,
    "url_2gis": "https://2gis.com/firm/4504128908508509",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Ostankino business park",
@@ -19801,7 +20064,9 @@
    "lat": 55.757201,
    "lng": 37.735596,
    "url_2gis": "https://2gis.com/firm/70000001037696101",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Ostankino business park, бизнес-центр",
@@ -19873,7 +20138,10 @@
    "lat": 55.692392,
    "lng": 37.528856,
    "url_2gis": "https://2gis.com/firm/4504128908407343",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Enka"
   },
   {
    "name": "AFI Park Воронцовский",
@@ -19981,7 +20249,10 @@
    "lat": 55.796288,
    "lng": 37.61736,
    "url_2gis": "https://2gis.com/firm/70000001029993897",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Tashir Development"
   },
   {
    "name": "Вега",
@@ -20593,7 +20864,10 @@
    "lat": 55.745328,
    "lng": 37.595597,
    "url_2gis": "https://2gis.com/firm/70000001115609252",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Flexity"
   },
   {
    "name": "Mosenka park towers",
@@ -20701,7 +20975,10 @@
    "lat": 55.777239,
    "lng": 37.58615,
    "url_2gis": "https://2gis.com/firm/70000001035862836",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "O1 Properties"
   },
   {
    "name": "Бизнес-Недвижимость",
@@ -20809,7 +21086,9 @@
    "lat": 55.678698,
    "lng": 37.512003,
    "url_2gis": "https://2gis.com/firm/70000001036811152",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Au-room",
@@ -21025,7 +21304,9 @@
    "lat": 55.766369,
    "lng": 37.650853,
    "url_2gis": "https://2gis.com/firm/4504128908693811",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Дело",
@@ -21925,7 +22206,9 @@
    "lat": 55.87114,
    "lng": 37.649821,
    "url_2gis": "https://2gis.com/firm/4504127920285063",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Причал",
@@ -22069,7 +22352,8 @@
    "lat": 55.701676,
    "lng": 37.422123,
    "url_2gis": "https://2gis.com/firm/4504127915498437",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Мой Кабинет"
   },
   {
    "name": "Варст",
@@ -22105,7 +22389,10 @@
    "lat": 55.793852,
    "lng": 37.61013,
    "url_2gis": "https://2gis.com/firm/70000001105807357",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Донстрой"
   },
   {
    "name": "Золотое кольцо",
@@ -23581,7 +23868,10 @@
    "lat": 55.795399,
    "lng": 37.771411,
    "url_2gis": "https://2gis.com/firm/70000001045112939",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "РТС"
   },
   {
    "name": "River plaza",
@@ -24589,7 +24879,9 @@
    "lat": 55.735553,
    "lng": 37.592885,
    "url_2gis": "https://2gis.com/firm/70000001041029382",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Санторини-сервис",
@@ -24697,7 +24989,10 @@
    "lat": 55.65777,
    "lng": 37.530544,
    "url_2gis": "https://2gis.com/firm/70000001077233002",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Hutton"
   },
   {
    "name": "Вэб Арена",
@@ -24913,7 +25208,9 @@
    "lat": 55.723923,
    "lng": 37.55754,
    "url_2gis": "https://2gis.com/firm/70000001102978043",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Чайка Плаза",
@@ -24949,7 +25246,9 @@
    "lat": 55.7679,
    "lng": 37.602208,
    "url_2gis": "https://2gis.com/firm/4504127908982248",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Строительный",
@@ -24985,7 +25284,10 @@
    "lat": 55.836464,
    "lng": 37.499369,
    "url_2gis": "https://2gis.com/firm/70000001039847829",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Крост"
   },
   {
    "name": "Волжский",
@@ -25309,7 +25611,10 @@
    "lat": 55.739533,
    "lng": 37.494271,
    "url_2gis": "https://2gis.com/firm/70000001083012200",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "ООО СЗ ФИЛИ ГАРДЕН"
   },
   {
    "name": "Сретенка 24",
@@ -25993,7 +26298,9 @@
    "lat": 55.84223,
    "lng": 37.372328,
    "url_2gis": "https://2gis.com/firm/70000001032421799",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Селигерская",
@@ -26209,7 +26516,9 @@
    "lat": 55.695696,
    "lng": 37.347129,
    "url_2gis": "https://2gis.com/firm/70000001035676104",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Skolkovo park",
@@ -26425,7 +26734,9 @@
    "lat": 55.69978,
    "lng": 37.344274,
    "url_2gis": "https://2gis.com/firm/70000001037237542",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "М-Стиль офис",
@@ -26677,7 +26988,9 @@
    "lat": 55.736562,
    "lng": 37.246547,
    "url_2gis": "https://2gis.com/firm/70000001087541448",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Rublevo Business Park",
@@ -26785,7 +27098,10 @@
    "lat": 55.784399,
    "lng": 37.673392,
    "url_2gis": "https://2gis.com/firm/70000001098279392",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Новая эра"
   },
   {
    "name": "Meeting point",
@@ -27469,7 +27785,10 @@
    "lat": 55.673587,
    "lng": 37.616371,
    "url_2gis": "https://2gis.com/firm/70000001114876056",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Tashir Development"
   },
   {
    "name": "ElasticSpace на Чистых Прудах",
@@ -27685,7 +28004,10 @@
    "lat": 55.818653,
    "lng": 37.595164,
    "url_2gis": "https://2gis.com/firm/4504127916972074",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Upside Development"
   },
   {
    "name": "Бизнес-центр Silver Stone",
@@ -28297,7 +28619,10 @@
    "lat": 55.697009,
    "lng": 37.622268,
    "url_2gis": "https://2gis.com/firm/70000001022737161",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "F2"
   },
   {
    "name": "Sorus Hall",
@@ -28369,7 +28694,9 @@
    "lat": 55.600862,
    "lng": 37.599054,
    "url_2gis": "https://2gis.com/firm/4504127916899411",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Bell",
@@ -29161,7 +29488,10 @@
    "lat": 55.669739,
    "lng": 37.443794,
    "url_2gis": "https://2gis.com/firm/70000001086583931",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Forma (ПИК)"
   },
   {
    "name": "Комфорт",
@@ -29557,7 +29887,8 @@
    "lat": 55.703255,
    "lng": 37.744625,
    "url_2gis": "https://2gis.com/firm/4504128908460571",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Aurix"
   },
   {
    "name": "Волна",
@@ -29665,7 +29996,10 @@
    "lat": 55.740584,
    "lng": 37.408364,
    "url_2gis": "https://2gis.com/firm/4504127919495789",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Аквилон"
   },
   {
    "name": "Космо Плаза",
@@ -29917,7 +30251,9 @@
    "lat": 55.6286,
    "lng": 37.41218,
    "url_2gis": "https://2gis.com/firm/70000001032371398",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Uffizi",
@@ -30061,7 +30397,9 @@
    "lat": 55.584824,
    "lng": 37.473897,
    "url_2gis": "https://2gis.com/firm/70000001027021338",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Генерал",
@@ -30565,7 +30903,9 @@
    "lat": 55.709778,
    "lng": 37.382301,
    "url_2gis": "https://2gis.com/firm/70000001006829142",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Волна",
@@ -30745,7 +31085,10 @@
    "lat": 55.776751,
    "lng": 37.621666,
    "url_2gis": "https://2gis.com/firm/70000001023338050",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Гранард"
   },
   {
    "name": "Куликовский",
@@ -31753,7 +32096,9 @@
    "lat": 55.867346,
    "lng": 37.456977,
    "url_2gis": "https://2gis.com/firm/4504128908440536",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Бизнес-парк River City",
@@ -32473,7 +32818,9 @@
    "lat": 55.883392,
    "lng": 37.434267,
    "url_2gis": "https://2gis.com/firm/70000001022052257",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Майский",
@@ -32797,7 +33144,9 @@
    "lat": 55.727646,
    "lng": 37.630504,
    "url_2gis": "https://2gis.com/firm/70000001031155908",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Орион",
@@ -33589,7 +33938,8 @@
    "lat": 55.772032,
    "lng": 37.604927,
    "url_2gis": "https://2gis.com/firm/4504127913813464",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "developer": "Flexity"
   },
   {
    "name": "Лира",
@@ -33877,7 +34227,10 @@
    "lat": 55.757391,
    "lng": 37.616733,
    "url_2gis": "https://2gis.com/firm/70000001029273996",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Декмос"
   },
   {
    "name": "Речники",
@@ -34417,7 +34770,9 @@
    "lat": 55.878903,
    "lng": 37.729688,
    "url_2gis": "https://2gis.com/firm/70000001020947919",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Skypoint, бизнес-парк",
@@ -34813,7 +35168,9 @@
    "lat": 55.673429,
    "lng": 37.631888,
    "url_2gis": "https://2gis.com/firm/70000001112628752",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Минто",
@@ -36793,7 +37150,9 @@
    "lat": 55.911512,
    "lng": 37.542567,
    "url_2gis": "https://2gis.com/firm/70000001022072567",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Зевс",
@@ -36937,7 +37296,9 @@
    "lat": 55.787782,
    "lng": 37.732808,
    "url_2gis": "https://2gis.com/firm/70000001091863356",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B-",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Бизнес-центр",
@@ -37369,7 +37730,9 @@
    "lat": 55.765628,
    "lng": 37.364082,
    "url_2gis": "https://2gis.com/firm/70000001021114812",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Бизнес-центр",
@@ -38233,7 +38596,10 @@
    "lat": 55.961269,
    "lng": 37.533487,
    "url_2gis": "https://2gis.com/firm/70000001024915352",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "A",
+   "mrf_class_source": "Общая база ввода (веб_классы)",
+   "developer": "Пионер"
   },
   {
    "name": "Салют",
@@ -38413,7 +38779,9 @@
    "lat": 55.67622,
    "lng": 37.566467,
    "url_2gis": "https://2gis.com/firm/70000001090290346",
-   "entry_type": "branch"
+   "entry_type": "branch",
+   "mrf_class": "B+",
+   "mrf_class_source": "Общая база ввода (веб_классы)"
   },
   {
    "name": "Альбион",

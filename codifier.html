@@ -159,6 +159,7 @@
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="flex">Гибкие офисы</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bc2gis">БЦ 2ГИС</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bcmosprime">БЦ MosPrimeOffice</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bcbase">БЦ база (классы)</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</button>
 </div>
 <div class="subtabs" id="viewTabs" role="tablist" aria-label="Вкладки раздела" style="display:none;"></div>
@@ -256,6 +257,7 @@ const SECTIONS = [
   {id:'flex',     label:'Гибкие офисы',      views:['flex_operators','flex_lots']},
   {id:'bc2gis',   label:'БЦ 2ГИС',           views:['bc2gis_list']},
   {id:'bcmosprime', label:'БЦ MosPrimeOffice', views:['bcmosprime_list']},
+  {id:'bcbase', label:'БЦ база (классы)', views:['bcbase_list']},
 ];
 const VIEWS = {
   codifier:        {section:'codifier', label:'Общий кодификатор'},
@@ -271,6 +273,7 @@ const VIEWS = {
   compare_segments:{section:'compare',  label:'Сравнение сегментов'},
   bc2gis_list:     {section:'bc2gis',   label:'Бизнес-центры (2ГИС)'},
   bcmosprime_list: {section:'bcmosprime', label:'Бизнес-центры (MosPrimeOffice)'},
+  bcbase_list: {section:'bcbase', label:'База БЦ 2006–2026 с классами'},
 };
 // Пользовательское название — "Сегмент рынка" (не "Канал", технический
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
@@ -651,6 +654,8 @@ const GOLDEN_REPORT_COLUMNS = [
 // работы/рейтинг) по кнопке "ℹ", как у остальных источников.
 const BC2GIS_COLUMNS = [
   {key:'name', label:'Название', type:'text', visible:true},
+  {key:'mrf_class', label:'Класс (MRF)', type:'text', visible:true},
+  {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'category', label:'Рубрики', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
   {key:'district', label:'Район', type:'text', visible:true},
@@ -678,6 +683,8 @@ const BC2GIS_COLUMNS = [
 // имеющимся объектом, а не подтверждает его.
 const BCMOSPRIME_COLUMNS = [
   {key:'name', label:'Название', type:'text', visible:true},
+  {key:'mrf_class', label:'Класс (MRF)', type:'text', visible:true},
+  {key:'developer', label:'Девелопер', type:'text', visible:true},
   {key:'address', label:'Адрес', type:'text', visible:true},
   {key:'district', label:'Район', type:'text', visible:true},
   {key:'okrug', label:'Округ', type:'text', visible:true},
@@ -696,6 +703,33 @@ const BCMOSPRIME_COLUMNS = [
   {key:'lat', label:'Широта', type:'number', visible:true},
   {key:'lng', label:'Долгота', type:'number', visible:true},
   {key:'source_url', label:'Ссылка на карточку', type:'text', visible:false},
+];
+
+// БЦ база (классы) — data/bc_base_classes_2026-09-24.json: «Общая база ввода
+// 2006-2026 (веб_классы, 2ГИС названия)» — 662 БЦ с классом MRF, девелопером,
+// площадями, годом/кварталом ввода и сверкой координат.
+const BCBASE_COLUMNS = [
+  {key:'no', label:'№', type:'number', visible:true},
+  {key:'name', label:'БЦ', type:'text', visible:true},
+  {key:'class', label:'Класс', type:'text', visible:true},
+  {key:'developer', label:'Девелопер', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'year', label:'Год ввода', type:'number', visible:true},
+  {key:'quarter', label:'Квартал', type:'text', visible:true},
+  {key:'total_area', label:'Общая площадь, кв.м', type:'number', visible:true},
+  {key:'lease_area', label:'Площадь аренды, кв.м', type:'number', visible:true},
+  {key:'deal_type', label:'Тип реализации', type:'text', visible:true},
+  {key:'record_status', label:'Статус записи', type:'text', visible:true},
+  {key:'class_mrf', label:'Класс MRF (исх.)', type:'text', visible:false},
+  {key:'class_source', label:'Источник класса', type:'text', visible:false},
+  {key:'name_src', label:'Исходное название', type:'text', visible:false},
+  {key:'name_2gis', label:'Название в 2ГИС', type:'text', visible:false},
+  {key:'developer_type', label:'Тип девелопера', type:'text', visible:false},
+  {key:'coords_check', label:'Проверка координат', type:'text', visible:false},
+  {key:'lat', label:'Широта', type:'number', visible:true},
+  {key:'lng', label:'Долгота', type:'number', visible:true},
+  {key:'url_mosprime', label:'MosPrimeOffice', type:'text', visible:false},
+  {key:'url_2gis', label:'2ГИС', type:'text', visible:false},
 ];
 
 // ============================================================
@@ -775,6 +809,7 @@ const state = {
   golden_report: makeTableState(GOLDEN_REPORT_COLUMNS),
   bc2gis_list: makeTableState(BC2GIS_COLUMNS),
   bcmosprime_list: makeTableState(BCMOSPRIME_COLUMNS),
+  bcbase_list: makeTableState(BCBASE_COLUMNS),
 };
 let allProjectsLayer = [];
 // canonical_project_id -> project_name, запечённый в кодификаторе
@@ -1546,6 +1581,20 @@ async function loadBc2gis() {
   render();
 }
 
+let bcbaseLoaded = false;
+async function loadBcBase() {
+  if (!bcbaseLoaded) {
+    let data;
+    try { data = await fetchJSON('data/bc_base_classes_2026-09-24.json'); }
+    catch (e) { data = {items: [], imported_at: null}; }
+    state.bcbase_list.rows = data.items;
+    dataMeta.bcbase_list = {updated: data.imported_at, count: data.items.length};
+    bcbaseLoaded = true;
+  }
+  if (!suppressURLSync) state.bcbase_list.page = 1;
+  render();
+}
+
 let bcmosprimeLoaded = false;
 async function loadBcMosprime() {
   if (!bcmosprimeLoaded) {
@@ -1877,6 +1926,7 @@ const VIEW_SOURCE_LABEL = {
   compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
   golden_report: () => 'data/qa/golden_report_full.json (лист "отчет деление А и прайм" из Golden File)',
   bc2gis_list: () => 'data/bc_2gis_2026-09-23.json (импорт бц_2гис.csv из 2ГИС, не сверено с реестром)',
+  bcbase_list: () => 'data/bc_base_classes_2026-09-24.json (Общая база ввода 2006–2026, веб_классы)',
   bcmosprime_list: () => 'data/mosprimeoffice_bc_2026-09-23.json (mosprimeoffice.ru/bc-map, не сверено с реестром)',
 };
 
@@ -2083,6 +2133,7 @@ function openBcMosprimeCard(row) {
   panel.setAttribute('role', 'dialog');
   panel.setAttribute('aria-label', 'Карточка объекта MosPrimeOffice');
   const fields = [
+    ['Класс (MRF)', row.mrf_class], ['Девелопер', row.developer],
     ['Адрес', row.address],
     ['Район', row.district], ['Округ', row.okrug], ['Индекс', row.postcode],
     ['Год постройки', row.year], ['Этажей', row.floors],
@@ -2776,6 +2827,7 @@ function loadCurrentView() {
     case 'golden_report': return loadGoldenReport();
     case 'bc2gis_list': return loadBc2gis();
     case 'bcmosprime_list': return loadBcMosprime();
+    case 'bcbase_list': return loadBcBase();
     default: render(); return Promise.resolve();
   }
 }

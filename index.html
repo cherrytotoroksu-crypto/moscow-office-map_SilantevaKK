@@ -4031,6 +4031,7 @@ async function renderBc() {
       shownGis++;
       const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#c026d3', weight: 1, fillColor: '#c026d3', fillOpacity: 0.6 });
       m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (2ГИС)', [
+        ['Класс (MRF)', it.mrf_class], ['Девелопер', it.developer],
         ['Рубрики', it.category], ['Адрес', it.address], ['Район', it.district],
         ['Рейтинг', it.rating != null ? `${it.rating} (${it.reviews_count ?? 0} отзывов)` : null],
         ['Телефон', it.phone1], ['Сайт', it.website1],
@@ -4047,6 +4048,7 @@ async function renderBc() {
       shownMp++;
       const m = L.circleMarker([it.lat, it.lng], { pane: 'externalBcPane', radius: 4, color: '#ea580c', weight: 1, fillColor: '#ea580c', fillOpacity: 0.6 });
       m.bindPopup(() => bcPopupHtml(it.name || 'БЦ (MosPrimeOffice)', [
+        ['Класс (MRF)', it.mrf_class], ['Девелопер', it.developer],
         ['Адрес', it.address], ['Район', it.district], ['Округ', it.okrug],
         ['Год постройки', it.year], ['Этажей', it.floors],
         ['Общая площадь', it.total_area_label], ['Тип здания', it.building_type],
