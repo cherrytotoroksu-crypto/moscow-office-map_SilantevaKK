@@ -131,16 +131,17 @@ class Classifier11RecordsReviewTests(unittest.TestCase):
         r = self.by_id["proj-227"]
         self.assertEqual(r["developer"], "Пожарная охрана")
 
-    def test_orbital_2_address_and_status_conflict_still_unresolved(self):
-        # 2026-08-19 (второй заход): проверены 3 кандидата по адресу/названию
-        # (Orbital вл.10 GBA~27к, вл.12-здание класса B GBA 17.9к, ФСК
-        # "Магистральная 12" на 5-й Магистральной GBA 18.7к) — ни один не
-        # совпал с нашими GBA 57967. Осознанно НЕ правил (нет подтверждения),
-        # Orbital и Orbital-2 не объединены. Пин на нынешнее состояние.
+    def test_orbital_2_exact_object_and_year_are_now_verified(self):
+        # 2026-09-25: NF Group подтверждает точный адрес и GBA 57 967;
+        # независимые отчёты IBC и CORE.XP согласны на плановом 2027 годе.
+        # Квартал не переносим: подтверждения такой точности нет.
         r = self.by_id["proj-168"]
         self.assertEqual(r["address"], "Москва, 3-я Магистральная ул., вл. 12")
         self.assertEqual(r["project_status"], "Строится")
         self.assertEqual(r["gba"], 57967)
+        self.assertEqual(r["input_year"], 2027)
+        self.assertIsNone(r["input_quarter"])
+        self.assertEqual(r["input_date_kind"], "planned")
 
     def test_orbital_and_orbital_2_stay_separate_projects(self):
         # 2026-08-22: явное требование заказчика — не объединять Orbital
