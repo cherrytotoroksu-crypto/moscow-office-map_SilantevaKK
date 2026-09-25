@@ -1,0 +1,792 @@
+{
+ "generated": "2026-09-26",
+ "note": "Веб-поиск застройщика/собственника для 57 зданий-хостов коворкингов. Внесены только high: Citydel — ЗАО «Тема», Фабрика Станиславского — Horus Capital (реконструкция). Остальное — кандидаты (medium/low) без внесения.",
+ "items": [
+  {
+   "ids": [
+    "UC-OBJ-ADD-263"
+   ],
+   "address": "Ветошный пер., 13",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/vetoshnyj-13-os9115",
+    "https://realty-guide.ru/offices/objects/e248c637-ce65-4e04-8b3b-92646a63646c/",
+    "https://cre.ru/news/96531"
+   ],
+   "note": "Здание-памятник (Верхние торговые ряды, реконструкция); оператор ASPACE, брокер NF Group - не девелопер. Застройщик и собственник в открытых страницах не указаны. Год 2006 в базе, realty-guide пишет 1917/реконструкция 2017 - расхождение."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-264"
+   ],
+   "address": "Цветной бул., 30с1",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/osobnyak/tsvetnoj-30-korpus-1-os36194",
+    "https://fortexgroup.ru/bc/tsvetnoy-30-s1/"
+   ],
+   "note": "Здание 1930 г. (конструктивизм, арх. Модоров и Лукин), до 2003 - Литературная газета; УК - ОРМ. Девелопер реконструкции и собственник не найдены. Cian заблокирован капчей."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-265"
+   ],
+   "address": "Новослободская ул., 16",
+   "developer": null,
+   "owner": "АО ОФАР (кандидат: прямая аренда от АО ОФАР)",
+   "confidence": "low",
+   "sources": [
+    "https://of.ru/bc/873",
+    "https://novoslobodskaya-16.pvt.ru/"
+   ],
+   "note": "Здание 2004 г., 12 784 кв. м. АО ОФАР упоминается как арендодатель по прямому договору - это не подтверждает собственность и тем более застройщика. Нужна проверка по ЕГРН/ЕГРЮЛ. В kf.expert есть отдельный лот ASPACE Новослободская (оператор, не девелопер)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-267"
+   ],
+   "address": "Новолесная ул., 2",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/49",
+    "https://fortexgroup.ru/bc/brigantina-holl/"
+   ],
+   "note": "Бригантина Холл, 2005 г., 12 913 кв. м. В сниппете поиска всплыло АО СТОУНХЕДЖ, но на прочитанных страницах (of.ru, fortex) не подтверждено - использовать нельзя без проверки."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-268"
+   ],
+   "address": "Кузнецкий Мост ул., 13",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/kuznetskiy-most-13-9-s1/"
+   ],
+   "note": "Кузнецкий Мост 13/9с1 в fortex - класс B, в базе - A: расхождение класса. Девелопер/собственник не найдены. Проверить, что это то же здание."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-269"
+   ],
+   "address": "Садовническая наб., 9",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/osobnyak/sadovnicheskaya-naberezhnaya-9-os4258",
+    "https://www.kommersant.ru/doc/8569272"
+   ],
+   "note": "Особняк класса B, 3 085 кв. м, Рабочая Станция (оператор). Cian: здание нач. XX в., реставрация 2015 (в базе год 2021 - расхождение). Балчуг Девелопмент (Садовническая 69) - соседний проект/участок, к этому зданию НЕ привязан. Застройщик/собственник не найдены."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-270"
+   ],
+   "address": "Ленинская Слобода ул., 26с5",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://cmpfm.ru/projects/delovoi-kvartal-simonovskii",
+    "https://simonovplaza.com/"
+   ],
+   "note": "Симонов Плаза, часть делового квартала Симоновский (11 га). City&Malls PFM - управляющая компания, не собственник. Девелопер квартала на прочитанных страницах не указан."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-273"
+   ],
+   "address": "Космодамианская наб., 52",
+   "developer": null,
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://bcriversidetowers.ru/about",
+    "https://kf.expert/office/business-center/riversajd-tauers-stroenie-1-os2286"
+   ],
+   "note": "Комплекс из 7 корпусов, 1999-2009, квартал Красные Холмы. Сниппет (страница не загрузилась, socket hang up) упоминает Enka и Московское объединение театральных архитекторов - проверить как кандидата в девелоперы, не подтверждено. Собственник не найден; CREBA - брокер. Единый адрес на разные корпуса (стр. 1-5, 11) - у корпусов могут быть разные собственники."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-274"
+   ],
+   "address": "Долгоруковская ул., 7",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/993",
+    "https://kf.expert/office/business-center/sadovaya-plaza-os1906",
+    "https://archi.ru/projects/russia/3350/bc-sadovaya-plaza"
+   ],
+   "note": "of.ru и kf.expert застройщика/собственника не называют (только год 2001-2002, УК без названия). Сниппет puteshestvyie.ru 'построил Павел Андреев' не подтверждён вторым источником, похоже на мусор. archi.ru открылась на другом объекте (Садовническая 7-9) - не использовать. Собственник значится на сайтах как 'от собственника' без названия."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-275",
+    "UC-OBJ-ADD-276"
+   ],
+   "address": "Павелецкая пл., 2с1 / 2",
+   "developer": "ENKA (Enka Insaat ve Sanayi A.S., Турция)",
+   "owner": null,
+   "confidence": "medium",
+   "sources": [
+    "https://companies.rbc.ru/trademark/1070977/paveletskaya-plaza-biznes-tsentr/",
+    "https://of.ru/bc/paveletckaya-plaza",
+    "https://kudago.com/msk/place/paveletskaya-plaza/"
+   ],
+   "note": "Несколько агрегаторов: проект бюро С. Ткаченко, возведён Enka в 3 этапа; товарный знак 'Павелецкая Плаза бизнес-центр' у ENKA (РБК Компании). Но enkatc.com среди своих активов БЦ не перечисляет (только Капитолий, Кунцево Плаза, Каширская Плаза), т.е. Enka может быть только генподрядчиком/исходным инвестором. Один сниппет приписывает застройщика 'ГК Основа' - вероятно ошибка агрегатора (тот же шаблон у Black&White). Текущий собственник не найден. Не путать с ТРЦ Павелецкая Плаза (собственник Mall Management Group/Гордеев) - это другой объект. Разбивка зданий А/В не подтверждена."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-277"
+   ],
+   "address": "Кожевническая ул., 14",
+   "developer": "ГК «Основа» (АО «ГК Основа») - по агрегаторам",
+   "owner": null,
+   "confidence": "medium",
+   "sources": [
+    "https://of.ru/bc/1419",
+    "https://fortexgroup.ru/bc/blek-end-vayt/",
+    "https://kf.expert/office/business-center/black-white-os2188"
+   ],
+   "note": "Поисковые сниппеты нескольких сайтов (ID тот же шаблон) называют девелопером АО ГК 'Основа', здание = 2-я очередь 'Кожевники Плаза'; при прямом чтении страниц of.ru, kf.expert, fortexgroup застройщик не указан - подтверждение только вторичное. Конфликт по году: 2006 (of.ru), 2012 (fortex), 2013 (kf.expert); по строению: ст.2 (of.ru) / ст.5 (kf.expert). Собственник не найден."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-278"
+   ],
+   "address": "Долгоруковская ул., 21с1",
+   "developer": null,
+   "owner": "АО «БЦ «На Долгоруковской» (ИНН 7707533616)",
+   "confidence": "low",
+   "sources": [
+    "https://www.rusprofile.ru/id/1086643",
+    "https://abn.agency/2026/09/15/fns-podala-zayavlenie-o-bankrotstve-ao-bcz-na-dolgorukovskoj/"
+   ],
+   "note": "Здание 1902 г. (историческое, 5 эт., ~3000 кв.м) - застройщик неприменим/неизвестен. АО 'БЦ На Долгоруковской' указано владельцем в агрегаторах (в выписке: деятельность с 2004 г., генеральный директор Майстренко), но отдельного подтверждения права собственности нет. Заголовок ABN от 2026-09-15: ФНС подала заявление о банкротстве этого АО - содержание статьи не читал (не удалось), возможна смена статуса собственника. Атрибуция владельца - средняя/низкая."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-280"
+   ],
+   "address": "Зубовский б-р, 17 стр.1",
+   "developer": "Издательство «Прогресс» (заказчик здания 1976-77, автор проекта Е. Н. Стамо) - советское здание, не девелопер в современном смысле",
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://ru.wikipedia.org/wiki/Зубовский_бульвар",
+    "https://www.cian.ru/torgovo-ofisnyy-kompleks-na-zubovskom-bulvare17s1-moskva-16609/"
+   ],
+   "note": "Википедия: здание издательства 'Прогресс', 1977, в 1997-2016 офис РЕН ТВ (снипет расходится: 1991-2016 / 1997-2016). Год постройки по ЦИАН 1978. Текущий собственник не найден (сделка после 2016 не подтверждена)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-281"
+   ],
+   "address": "Остоженка ул., 25",
+   "developer": "ST GROUP (по данным карточки ЖК Opera House; здание 2003, арх. М. Посохин)",
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://homehunter.ru/moscow/complex/opera-khaus-opera-house",
+    "https://kf.expert/gorod/zhilye-kompleksy/opera-khaus-id2062",
+    "https://fortexgroup.ru/bc/ostozhenka-25/"
+   ],
+   "note": "Адрес = жилой комплекс/апарт-дом Opera House (70 квартир, оперный центр Вишневской, 6 этажей); офисные площади в нём - нежилая часть, собственники помещений, единого собственника нет. Застройщик ST GROUP приведён в 3 агрегаторах жилых новостроек; первичный источник не открыт."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-282"
+   ],
+   "address": "Сретенский бул., 5",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/10742",
+    "https://ru.wikipedia.org/wiki/Сретенский_бульвар"
+   ],
+   "note": "Здание 1934-37 - жилой дом и общежитие Наркомата связи СССР, объект культурного наследия (заказчик - госструктура НКС, не девелопер). Современный собственник не найден. Класс B+, 4306 кв.м по of.ru."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-283"
+   ],
+   "address": "Кузнецкий Мост ул., 19с1",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://www.layton.ru/rent/kuznetskiy-most-19-2699/",
+    "https://um.mos.ru/houses/dokhodnyy_dom_s_magazinami_knyazya_a_g_gagarina/"
+   ],
+   "note": "Исторический доходный дом князя Гагарина (1886). Современного девелопера/собственника ни одна страница не называет (только брокеры Fortex/Layton/Morrow 'от собственника'). Один сниппет restate/ТЦ назвал 'ГК Гранель' застройщиком, но на самой странице этого нет — не подтверждено, не использовано."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-284"
+   ],
+   "address": "Ленинградский просп., 47 стр.2",
+   "developer": "Hours Capital (Сергей Гордеев)",
+   "owner": "Пётр Седунов (Apollax Group) с партнёрами; ранее Альфа-Банк / ФК Открытие (O1 Properties)",
+   "confidence": "medium",
+   "sources": [
+    "https://www.kommersant.ru/doc/7990290"
+   ],
+   "note": "Коммерсантъ: изначально проект Hours Capital, затем ФК Открытие (структура Б. Минца) -> Альфа-Банк -> Седунов/Apollax (сделка 2025-26). Земля ранее через ООО 'Дакада Рент' (Бобренёвы, Лейзерович). Один источник (Коммерсантъ), но авторитетный. Apollax тут покупатель-собственник, не оператор коворкинга (в задаче Apollax/ASPACE упомянут как оператор — возможна связь, проверить). Сниппет про 'АО СЗ Озерная' — артефакт страницы брокера, не принят."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-286"
+   ],
+   "address": "Композиторская ул., 17",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/kompozitorskaya-17/",
+    "https://m2data.net/ru/buildings/kompozitorskaya-17"
+   ],
+   "note": "Поля девелопер/собственник нигде не указаны (only брокерские страницы of.ru/fortex/m2data/realty-guide). Данные не найдены."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-288"
+   ],
+   "address": "ул. Земляной Вал, 9",
+   "developer": "ЗАО «Тема» (девелоперская компания Тема), 2007–2008; заказчик INEO; ген.подрядчик Bouygues Batiment International",
+   "owner": "ООО «Проминдустрия» (по Ведомостям, 2020); управляет Prime Property Management",
+   "confidence": "high",
+   "sources": [
+    "https://www.tsn-group.ru/delovoj-czentr-citydel",
+    "https://www.vedomosti.ru/realty/articles/2020/04/07/827422-rzhd-ofis",
+    "https://citydel.ru/"
+   ],
+   "note": "Застройщик подтверждён двумя источниками (ТСН-групп, Ведомости). Собственник — один источник 2020 г., актуальность на 2026 не проверена. На primepm.ru стоит 'Owner & Developer: Prime Property Management' — это управляющая, не застройщик. В 2ГИС числится инвесткомпания Синара — не проверено. Год: 2007/2008/2009 в разных источниках."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-289"
+   ],
+   "address": "Новорязанская ул., 8",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/novoryazanskaya-8",
+    "https://kf.expert/office/business-center/novoryazanskaya-ul-d-8-os42819"
+   ],
+   "note": "of.ru: адм. здание 1985 г., 4 эт.; девелопер/собственник не указаны. Workki — оператор. Также рядом Новорязанская 8А с1/с2 (Union Center) — другое строение, не смешивать."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-291"
+   ],
+   "address": "Б. Тульская ул., 19",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/10258",
+    "https://realty-guide.ru/offices/objects/44250801-faa8-4980-8556-8f8128e877d4/",
+    "https://www.cibrs.ru/biznes-centr/bolshaya-tulskaya-19/"
+   ],
+   "note": "Построен 2008, 7 эт., ~16 160 кв.м; ни одна из страниц не называет девелопера/собственника."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-292"
+   ],
+   "address": "Тверская ул., 16с1",
+   "developer": null,
+   "owner": "Государственный нефтяной фонд Азербайджана (SOFAZ), через ОАО «Тверская, 16»; куплен у ОАО «Столичная страховая группа» (ВТБ) в дек. 2012 за $133 млн",
+   "confidence": "medium",
+   "sources": [
+    "https://www.vedomosti.ru/realty/articles/2013/06/03/amerop_rasprodaet_aktivy",
+    "http://www.alrud.ru/press/news/908.htm"
+   ],
+   "note": "Ведомости и сниппет ALRUD подтверждают сделку 2012 (стр. alrud при прямой загрузке дала 404). Актуальность собственника на 2026 не проверена. Застройщик реконструкции 1996 г. не найден (Ведомости прямо: не указан); исторически дом Логуновых 1882, перестройка А.Е. Вебер/Щусев 1930-е. Управление: Bright Rich (брокер)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-293"
+   ],
+   "address": "Милютинский пер., 13с1",
+   "developer": "Alfa Konstrakt (подрядчик/девелопер реновации 2022) — только один источник",
+   "owner": "Officeless (вероятно; сеть использует 'собственные здания', но отдельного собственника не указано)",
+   "confidence": "low",
+   "sources": [
+    "https://www.arendator.ru/objects/51270-milyutinskij_pereulok_13s1/",
+    "https://office-news.ru/officeless-novosti-so-strojploshhadki-officeless-miljutinskij/proekt/"
+   ],
+   "note": "Историч. доходный дом (Шервуд). Officeless — оператор коворкинга; статус собственника не подтверждён юридически (нужна выписка ЕГРН). 'АО СЗ Озерная' в сниппете — артефакт, не принят."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-296"
+   ],
+   "address": "ул. Земляной Вал, 8",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/483",
+    "https://i.moscow/park/ae4c4fbf62b140899694a2b6bebd8b71",
+    "https://kf.expert/office/business-center/zemlyanoy-val-8-os8269"
+   ],
+   "note": "Ни of.ru, ни i.moscow, ни сайт SOK не называют застройщика/собственника; of.ru указывает лишь ООО Технологии Недвижимости (агент/УК листинга). Год: источники расходятся (2006/2008/2010), здание полностью реконструировано."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-298"
+   ],
+   "address": "Институтский пер., 2",
+   "developer": "Pitch Development (реконструкция здания исторического фонда, 2025-2026)",
+   "owner": "Refolio (сервисный оператор, запущен Pitch Development; заявлено 'объект в собственности Refolio')",
+   "confidence": "medium",
+   "sources": [
+    "https://dvizhenie.ru/media/7156/na-rynok-ofisnoj-nedvizhimosti-moskvy-vyshel-novyj-servisnyj-operator",
+    "https://business-magazine.online/fn_1943685.html"
+   ],
+   "note": "Refolio - бренд/оператор, принадлежащий Pitch Development, поэтому developer и owner фактически одна группа. Первоначальный строитель здания не найден. Подтверждено двумя источниками (Движение.ру, Федеральный бизнес журнал)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-299"
+   ],
+   "address": "Б. Саввинский пер., 8с1",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/savvinskij-b-pereulok-d-8-str-1-os1247"
+   ],
+   "note": "Страницы kf.expert, 2ГИС, of.ru владельца не называют (упоминается лишь брокер NF Group и оператор Deworkacy). Данных нет."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-301"
+   ],
+   "address": "Воронцовская ул., 49/28с1",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/841"
+   ],
+   "note": "Здание реконструировано в конце 2009 (5602 кв.м, 7 этажей); of.ru указывает только ООО Технологии Недвижимости. Оператор коворкинга - Практик (не девелопер). Не путать с Level Work Воронцовская (другой адрес, Level Group)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-302"
+   ],
+   "address": "Ленинский просп., 30А",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/leninskiy-30a/"
+   ],
+   "note": "Год 2004, 1 этаж, 600 кв.м по fortexgroup; ни застройщика, ни собственника не указано. Название 'Парк Горького' - вероятно маркетинговое."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-303"
+   ],
+   "address": "4-й Лесной пер., 4",
+   "developer": null,
+   "owner": "O1 Properties (Борис Минц) - купила в конце 2011 у ВТБ Капитал; переименовала из Лесной Плазы в White Stone (реконструкция 2014)",
+   "confidence": "medium",
+   "sources": [
+    "https://www.forbes.ru/news/78285-boris-mints-vykupil-biznes-tsentr-lesnaya-plaza-v-tsenter-moskvy-u-vtb-kapitala",
+    "https://of.ru/bc/white-stone"
+   ],
+   "note": "Изначальный застройщик Лесной Плазы (2005) не найден; ВТБ Капитал купил её в 2010 как соинвестор. Актуальность собственника на 2026 не проверена (Forbes 2011 + переименование). Год постройки 2005 подтверждается. Площадь по источникам 39.7-49.5 тыс. кв.м."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-304"
+   ],
+   "address": "просп. Мира, 40",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://gardenmir.com/about/",
+    "https://kf.expert/office/mnogofunkcionalnyy-kompleks/garden-mir-os34410"
+   ],
+   "note": "Здание 1938 г. (арх. И.Н. Соболев, для Наркомата совхозов); реставрация с 2013 по 2015 (интерьер LaGranja). Кто провёл реставрацию/владеет (Gardenmir) - не указано. Regus - оператор."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-305"
+   ],
+   "address": "Столешников пер., 11",
+   "developer": null,
+   "owner": "ООО «Столешники» (владелец здания, партнёр Regus/IWG по проекту Signature; соинвестор проекта)",
+   "confidence": "medium",
+   "sources": [
+    "https://www.cre.ru/news/81354",
+    "https://rb.ru/news/signature-moscow/"
+   ],
+   "note": "Владелец назван в CRE: 'компания владелец здания ООО Столешники'. Конечные бенефициары и девелопер реконструкции не найдены. Историческое здание: доходный дом Карзинкиных, 1883, арх. И.С. Богомолов (первоначальный застройщик - купец Карзинкин, только как историч. факт)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-306"
+   ],
+   "address": "Спартаковская пл., 16/15с6",
+   "developer": "АО СЗ «Озерная» (застройщик/редевелопер кластера «Басманный двор»; здание 2000 г. на территории бывшего автобусно-ремонтного завода)",
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001037923368",
+    "https://www.the-village.ru/city/news/351615-basmanny-court",
+    "https://of.ru/bc/271"
+   ],
+   "note": "Озерная названа застройщиком нового кластера в 2 сниппетах (страницы не читал полностью); первоначальный застройщик здания 2000 г. не найден. of.ru: сайт ведёт ООО «Технологии недвижимости» (управление/листинг, не собственник). Собственник не подтверждён."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-307"
+   ],
+   "address": "ул. Станиславского, 21с1",
+   "developer": "Horus Capital (2004 купила бывшую золотоканительную фабрику, реконструкция 2004-2007, архитектор John McAslan + Partners)",
+   "owner": "O1 Properties (купила в 2010)",
+   "confidence": "high",
+   "sources": [
+    "https://www.o1properties.ru/property/stanislavsky-factory/",
+    "http://www.stanislavskiy.o1properties.ru/stanislavskiy/project/history/",
+    "https://of.ru/bc/1711"
+   ],
+   "note": "Horus Capital - реконструктор/инициатор редевелопмента, не первоначальный строитель (фабрика XX в.). Класс в источниках B+/A."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-308"
+   ],
+   "address": "Б. Якиманка ул., 26",
+   "developer": null,
+   "owner": "Михаил (Олег в одном сниппете) Арустамов и Валентина Долженкова, по 50% через ООО «Якиманка, 26» (с дек. 2020); ранее А. Удодов",
+   "confidence": "low",
+   "sources": [
+    "https://www.vedomosti.ru/realty/articles/2021/02/23/858981-lyuksovih-kompleksov",
+    "https://www.rbc.ru/business/24/02/2021/60360e9c9a79470221be4925",
+    "https://of.ru/bc/4382"
+   ],
+   "note": "Ведомости: в 2003 объект приобрели структуры «Пересвет» и перестроили в торгово-офисный (ранее свадебный салон, «Детский мир» продал Удодову в 2014). Пересвет - реконструктор, не застройщик; ставлю developer=null. КОНФЛИКТ: of.ru даёт 1987 г., 35 277 кв.м (B+), Ведомости - галерея ~8 000 кв.м; возможно разные объекты/строения. Проверить соответствие адресу. Собственник данные на 2020-21."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-312"
+   ],
+   "address": "Новорязанская ул., 8Ас2",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/novoryazanskaya-ulitsa-8-str-2a-os34537",
+    "https://realty-guide.ru/offices/objects/ab512375-e337-4fa0-94fe-004c9e614452/"
+   ],
+   "note": "Здание 1939 г. (сталинский ампир, «Юнион-Центр»/Union Center), капремонт фасада 2017; площадь 13,7-16,1 тыс. кв.м (источники расходятся). Ни застройщик, ни собственник в источниках не названы."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-313"
+   ],
+   "address": "Ленинградский просп., 36с41",
+   "developer": "УК «Динамо» (застройщик комплекса ВТБ Арена Парк)",
+   "owner": null,
+   "confidence": "medium",
+   "sources": [
+    "https://homehunter.ru/moscow/complex/vtb-arena-park",
+    "https://zhk-vtb-arena-park-i.cian.ru/",
+    "https://of.ru/bc/3295"
+   ],
+   "note": "БЦ «Арена» кл. A, 2 корпуса 10 эт., ~16 000 кв.м, 2017, часть квартала ВТБ Арена Парк. Собственник отдельно не найден (вероятно структуры ВТБ/Динамо, не подтверждено). Не смешивать с оператором коворкинга."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-315"
+   ],
+   "address": "Ленинградский пр-т, вл. 36 стр. 10",
+   "developer": "УК «Динамо» (застройщик комплекса ВТБ Арена Парк)",
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://homehunter.ru/moscow/complex/vtb-arena-park",
+    "https://business.arena-park.ru/contacts/"
+   ],
+   "note": "Строение 10 в источниках отдельно не подтверждено; отнесено к тому же кварталу ВТБ Арена Парк (3 офисных здания). SOK - оператор коворкинга, не девелопер."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-316"
+   ],
+   "address": "Летниковская ул., 2 стр.1",
+   "developer": null,
+   "owner": "O1 Properties (управляет/сдаёт; в одном сниппете также Открытие Холдинг как совладелец)",
+   "confidence": "low",
+   "sources": [
+    "https://www.o1properties.ru/property/vivaldi-plaza/",
+    "https://of.ru/bc/1411"
+   ],
+   "note": "Вивальди Плаза, 4 офисных корпуса + отель Courtyard Marriott, 2011, 100 609 кв.м, BREEAM. Застройщик не найден (страницы o1properties не открылись: expired certificate). Доля Открытия не подтверждена."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-318"
+   ],
+   "address": "Газетный пер., 17",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/gazetnyy-per-17"
+   ],
+   "note": "Построен 1998 (архитекторы А. Воронцов, Ю. Григорьев, Н. Зигхофер), 2 здания 7 818 и 1 800 кв.м, кл. A. Девелопер/собственник в открытых источниках не указан."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-319"
+   ],
+   "address": "Кадашевская наб., 6",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/kadashevskaya-naberezhnaya-6-1-os2099"
+   ],
+   "note": "БЦ CODE Якиманка, здание 1967 г., 6 эт.; ни девелопер, ни собственник не раскрыты (брокеры пишут 'от собственника' без имени). Нужен ЕГРН."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-321"
+   ],
+   "address": "1-й Щипковский переулок, 5",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/1-y-schipkovskiy-5/",
+    "https://officenavigator.ru/biznes-tsentr/shchipkovskiy_1_y_per_5/"
+   ],
+   "note": "Здание 1987 г., реконструкция 2003, 5 эт., класс B/A (источники расходятся). Девелопер/собственник нигде не указан."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-322"
+   ],
+   "address": "ул. Дубининская, д.53, строение 5",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/kvartal-siti/",
+    "https://2gis.ru/moscow/firm/70000001043568888"
+   ],
+   "note": "GrowUp - оператор коворкинга в БЦ 'Квартал-Сити' (B+, 8 эт., ~22,5 тыс. кв. м, реконструкция 2005). Девелопер/собственник не найдены."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-326"
+   ],
+   "address": "ул. Авиаконструктора Микояна, д. 1",
+   "developer": "Business Club (Бизнес Клуб; девелопер, технический заказчик и генподрядчик; основатель Мурад Дамиров)",
+   "owner": "ЗПИФ 'Дом.РФ' (УК 'Дом.РФ Управление активами'), покупка зарегистрирована в Росреестре 04.05.2026",
+   "confidence": "medium",
+   "sources": [
+    "https://mperspektiva.ru/topics/dom-rf-priobrel-biznes-tsentr-obsidian-na-khodynskom-pole/",
+    "https://obsidian.moscow/",
+    "https://office-news.ru/biznes-centr-obsidian-poluchil-razreshenie-na-vvod-v-ekspluataciju/proekt/"
+   ],
+   "note": "БЦ 'Обсидиан' (Businessclub Khodynka). Продавец - Business Club; owner подтверждён прочитанной статьёй, роль девелопера - из сниппета поиска (страницу office-news/obsidian.moscow не открывал). Business Club одновременно и оператор коворкинга здания - не путать при использовании поля."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-327"
+   ],
+   "address": "Арбат ул., 10",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [],
+   "note": "Здание не идентифицировано: поиск дал только Арбат 1 (Сбербанк) и несвязанные компании; 2ГИС вернул 500. Требуется отдельная проверка."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-331"
+   ],
+   "address": "ул. Летниковская, д. 2, стр 1",
+   "developer": null,
+   "owner": "O1 Properties (управление - O1 Standard)",
+   "confidence": "low",
+   "sources": [
+    "https://standard.bz/en/assets/vivaldi-plaza/",
+    "https://www.o1properties.ru/property/vivaldi-plaza/"
+   ],
+   "note": "Страница O1 Standard называет O1 Properties 'Developer/Owner', но без деталей и года; первоначальный застройщик (2009-2011) не подтверждён вторым источником. Данные о площади расходятся (18 460/26 383/100 609 кв. м)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-332"
+   ],
+   "address": "Газетный 17",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/gazetnyy-per-17",
+    "https://kf.expert/office/business-center/gazetnyy-17-os46775"
+   ],
+   "note": "Год: of.ru 1998 (в исходнике 1993); площадь 7 327/7 818 кв. м. Ранее штаб Boeing (Moscow Design Center). Девелопер/собственник не раскрыты."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-338"
+   ],
+   "address": "Лкжнецкая набережная (опечатка: Лужнецкая)",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [],
+   "note": "Дом не указан, здание не идентифицировать. На набережной есть Luzhniki Collection (Абсолют Премиум), бизнес-парк 'Союз' (2/4), БЦ Лужнецкая 24 - привязка к записи неясна."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-339"
+   ],
+   "address": "Овчинниковская наб., 18",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/ovchinnikovskaya-naberezhnaya-d-18-1-os3545"
+   ],
+   "note": "Застройщик/собственник не указаны; редевелопмент 2022, 18/1 стр.2, ~23 000 кв.м. Поиск по редевелопменту упёрся в лимит запросов."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-340"
+   ],
+   "address": "Москва, улица Малая Полянка, 2",
+   "developer": "Балтийский Монолит",
+   "owner": null,
+   "confidence": "medium",
+   "sources": [
+    "https://zhk-onegin-i.cian.ru/",
+    "https://realty.yandex.ru/moskva_i_moskovskaya_oblast/kupit/novostrojka/onegin-192361/",
+    "https://realty-guide.ru/offices/objects/70860c46-1b3f-42dc-9fbd-d21b013571a0/"
+   ],
+   "note": "ЖК Онегин (2007) — Балтийский Монолит; БЦ = офисные особняки в составе комплекса (часть исторических зданий XIX в.), поэтому применимость к офисной части не подтверждена. Собственник не найден."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-342"
+   ],
+   "address": "Малая Полянка, 3",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/2816",
+    "https://ardera.ru/m-polyanka-3"
+   ],
+   "note": "Здание 1978 г., 6 этажей; арендатор МТС (не собственник). Застройщик/собственник не найдены."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-344"
+   ],
+   "address": "Пр. Мира (вероятно пр-т Мира, 40, Garden Mir)",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/mnogofunkcionalnyy-kompleks/garden-mir-os34410"
+   ],
+   "note": "Идентификация по адресу неточная (в исходнике только 'Пр. Мира', gba 8000 совпадает с Garden Mir, реконструкция 2013). Девелопер не указан; класс B (kf.expert) vs A (др.)."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-345"
+   ],
+   "address": "Волгоградский проспект, 32к31",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/rts-volgogradskiy",
+    "https://www.cian.ru/biznes-centr-rts-volgogradskiy-moskva-113065/"
+   ],
+   "note": "Год постройки 1958/1961 (источники расходятся), 16 000 кв.м, 4 этажа; бывший производственный корпус, застройщик/собственник не указаны."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-346"
+   ],
+   "address": "Каширское шоссе 3с1к2",
+   "developer": null,
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://sirius-park.com/",
+    "https://2gis.ru/moscow/firm/70000001031495766",
+    "https://kf.expert/office/business-park/sirius-park-os31011"
+   ],
+   "note": "КОНФЛИКТ: в поисковой выдаче упомянут 'ООО СЗ А101' как застройщик (не подтверждено на странице, сомнительно); официальный сайт называет ООО 'Сириус Евразия' (роль — девелопер/оператор/собственник — не раскрыта). Год 2014, 85-95 тыс. кв.м. Требует проверки по ЕГРЮЛ/прессе."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-347"
+   ],
+   "address": "Смоленская пл. 3",
+   "developer": null,
+   "owner": null,
+   "confidence": "low",
+   "sources": [
+    "https://www.arendator.ru/articles/63967-pro_smolenskij_passazh/",
+    "https://smolenskiy-passaj.ru/"
+   ],
+   "note": "Построен в 1998 (открыт 11.11.1998; арх. Р. Бофилл, инвестор — французские инвесторы, без названия), реконструкция/открытие в новом формате 2008-2009 (в исходнике year=2008). Юрлицо застройщика и собственник не названы."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-348"
+   ],
+   "address": "Сретенский б-р, 5",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/10742",
+    "https://kf.expert/office/business-center/klyuch-sretenskij-bulvar-os4551"
+   ],
+   "note": "БЦ 'Ключ', бывший дом Наркомсвязи 1934 г., объект культурного наследия, восстановлен; девелопер реставрации и собственник не указаны."
+  },
+  {
+   "ids": [
+    "UC-OBJ-ADD-350"
+   ],
+   "address": "Авиаконструктора Микояна",
+   "developer": null,
+   "owner": null,
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/businessclub-khodynka-os46747",
+    "https://bncb.ru/en/company/materials/business-center-obsidian",
+    "https://realty.rbc.ru/news/6706b1b59a7947ea823c5f3b"
+   ],
+   "note": "Адрес без номера дома, название 'Ходынка' неоднозначно. Кандидаты на Авиаконструктора Микояна: (а) БЦ Обсидиан / Businessclub Khodynka, д.1, 2025, класс A, ~9,8 тыс. кв. м — девелопер Business Club (bncb.ru, moscow-city.guide), собственник не найден; (б) БЦ Линкор, д.12 стр.1; (в) STONE Ходынка 1-3 (девелопер STONE, но они на Ходынском бульваре/Ходынской, не подтверждён адрес). Если объект = Обсидиан/Businessclub Khodynka, developer = Business Club (medium). Нужен номер дома для однозначного ответа."
+  }
+ ]
+}
