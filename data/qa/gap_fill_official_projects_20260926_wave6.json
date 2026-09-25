@@ -1,0 +1,115 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "sixth reviewed wave: current declarations, commissioning years, address and area corrections",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-250",
+      "canonical_name": "Эйлер",
+      "before": {"address": "Береговой проезд, 18", "gba": 18845, "gla": 7299, "input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"address": "Береговой проезд, 1В", "gba": 23545, "gla": null, "input_year": 2026, "input_quarter": 3, "input_date_kind": "planned"},
+      "building_date_key": "эйлер",
+      "commission_q": "202609",
+      "classifier_unified_id": "UC-OBJ-0064",
+      "classifier_before": {"address": "Береговой проезд, 18", "gba": 18845.0, "gla": 7299.0, "commission_year": 2026, "commission_quarter": 2},
+      "classifier_after": {"address": "Береговой проезд, 1В", "gba": 23545, "gla": null, "commission_year": 2026, "commission_quarter": 3},
+      "classifier_verification_status": "Проверено; расхождение GLA оставлено на проверке",
+      "classifier_needs_review": true,
+      "classifier_review_reason": "Текущие источники расходятся по GLA: 9 005 и 9 017 м²; старое значение 7 299 м² снято.",
+      "sources": [
+        "https://euler.moscow/",
+        "https://ibcrealestate.ru/catalog/T96_15661/",
+        "https://www.novostroy-m.ru/baza/mfk_gorod_moskva"
+      ],
+      "reliability": "high for address, GBA and planned Q3 2026; GLA deliberately cleared",
+      "decision": "The current official project page gives postal address Beregovoy proezd 1V and GBA 23,545 sqm. Current IBC and the project-declaration-backed Novostroy-M page independently give Q3 2026. The stale GLA 7,299 is cleared because current sources publish 9,005 and 9,017 sqm and the discrepancy is not resolved."
+    },
+    {
+      "canonical_project_id": "proj-add-krekshino-20260917",
+      "canonical_name": "МФК Крёкшино",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2026, "input_quarter": null, "input_date_kind": "planned"},
+      "building_date_key": "мфк крёкшино",
+      "commission_q": null,
+      "classifier_unified_id": "UC-OBJ-ADD-354",
+      "classifier_before": {"commission_year": null, "commission_quarter": null},
+      "classifier_after": {"commission_year": 2026, "commission_quarter": null},
+      "classifier_verification_status": "Проверен только год ввода; квартал не нормализован",
+      "classifier_needs_review": true,
+      "classifier_review_reason": "Сохраняются расхождения источников по классу и кварталу ввода (Q2/Q3 2026).",
+      "classifier_classification_note": "Официальный сайт проекта подтверждает продажи коммерческих помещений, проектную декларацию и ДДУ; Prime Life указывает класс A. Общая площадь 11 378 м² и продаваемая офисная площадь 8 564 м² подтверждены профильным каталогом. Координаты привязаны к адресу в районе платформы Санино и помечены как приблизительные. Независимые каталоги расходятся по классу здания, поэтому запись оставлена с needs_review. 2026-09-26: подтверждён только плановый год ввода 2026; Q2/Q3 не нормализованы.",
+      "sources": [
+        "https://xn----jtbjfbbwikdr3f.xn--p1ai/",
+        "https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/64168",
+        "https://www.apex-realty.ru/view.php?id=1049937"
+      ],
+      "reliability": "medium-high for planned year; quarter deliberately omitted",
+      "decision": "The official project site links declaration 77-003157, and the current declaration catalogue and broker page identify completion during 2026. Their Q2/Q3 precision differs, so only the planned year is copied."
+    },
+    {
+      "canonical_project_id": "proj-57",
+      "canonical_name": "На берзарина",
+      "before": {"address": "Берзарина ул., вл. 32", "gba": 12000.0, "input_year": null, "input_quarter": null, "input_date_kind": "confirmed"},
+      "after": {"address": "Берзарина ул., 32, стр. 4", "gba": 11894, "input_year": 2024, "input_quarter": null, "input_date_kind": "confirmed"},
+      "building_date_key": "на берзарина",
+      "commission_q": null,
+      "classifier_unified_id": "UC-OBJ-0315",
+      "classifier_before": {"commission_year": 2024, "commission_quarter": 4},
+      "classifier_after": {"commission_year": 2024, "commission_quarter": null},
+      "classifier_verification_status": "Проверено",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "classifier_classification_note": "2026-09-17: UC-OBJ-ADD-180 удалён как дубль этой записи (На берзарина / На Берзарина). 2026-09-17: UC-OBJ-ADD-235 удалён как дубль этой записи (Октябрьское поле (бывший ...) / На Берзарина — сама запись помечена как прежнее название этого же здания). 2026-09-21: запись «Октябрьское поле» (UC-OBJ-ADD-355) добавлена ошибочно как новая — это то же здание (БЦ «Технопарк Октябрьское поле», Берзарина ул., 32, стр. 4, РГ-Девелопмент, GBA 11 894); слита сюда, единый ID проекта 237. Координаты уточнены по адресу (Яндекс.Геокодер, уровень дома): прежняя точка стояла ~150 м юго-западнее здания.",
+      "sources": [
+        "https://berzarina32.ru/",
+        "https://kf.expert/office/business-center/oktyabrskoe-pole-os47929",
+        "https://www.cian.ru/sale/commercial/304490047/"
+      ],
+      "reliability": "high for exact GBA and confirmed year; quarter deliberately omitted",
+      "decision": "The project sales page and independent NF Group/CIAN cards agree that the completed class-A building has about 11,894 sqm and was built in 2024. The exact building address is normalized to Berzarina 32 building 4. The classifier's unsupported Q4 precision is removed."
+    },
+    {
+      "canonical_project_id": "proj-103",
+      "canonical_name": "Парк Легенд класс В+",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "confirmed"},
+      "after": {"input_year": 2024, "input_quarter": null, "input_date_kind": "confirmed"},
+      "building_date_key": "парк легенд класс в+",
+      "commission_q": null,
+      "classifier_unified_id": "UC-OBJ-ADD-194",
+      "classifier_before": {"commission_year": null, "commission_quarter": null},
+      "classifier_after": {"commission_year": 2024, "commission_quarter": null},
+      "classifier_verification_status": "Проверено",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "sources": [
+        "https://cre.ru/analytics/96072",
+        "https://rgud.ru/documents/Bortis_Аналитический_отчет_Рынок_коммерческой_недвижимости_2024-2030.pdf",
+        "https://kf.expert/office/business-center/park-legend-klass-v%2B-os37630/infrastructure"
+      ],
+      "reliability": "medium-high for confirmed year; quarter deliberately omitted",
+      "decision": "Two market reports list the B+ Park Legends office building among 2024 completions, while the current NF Group card independently confirms the B+ object and its 48,000 sqm grain. The separate class-A Park Legends commissioning in 2023 is not applied to this row."
+    }
+  ],
+  "rejected": [
+    {
+      "canonical_project_id": "proj-19",
+      "canonical_name": "Берников",
+      "reason": "Construction/reconstruction years remain inconsistent across exact-object sources; no primary permit or registry evidence resolves the lifecycle definition.",
+      "sources": ["existing QA note in data/all_projects_layer.json"]
+    },
+    {
+      "canonical_project_id": "proj-73",
+      "canonical_name": "БЦ Мещерский",
+      "reason": "IBC gives 2027 while the developer/construction source gives project realization in 2028; the conflict remains unresolved.",
+      "sources": [
+        "https://ibcrealestate.ru/upload/iblock/3b1/pgg4hx5vivjgv9cnr81fj0xwzskmu0h7/OFFICE-MARKET_Q1-2025.pdf",
+        "https://www.rusdevelopers.ru/sobytie_dnya/stroitelstvo-biznes-centr-mesherskii-klassa-b-solncevo"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-136",
+      "canonical_name": "K-city",
+      "reason": "The official page gives Q2 2028 while RBC gives Q4 2028; the conflict remains explicit and no value is selected.",
+      "sources": ["https://kobzon.city/", "https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716"]
+    }
+  ]
+}
