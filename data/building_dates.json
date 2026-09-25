@@ -470,11 +470,12 @@
   "эйлер": {
     "construction_start_q": null,
     "start_q": "202207",
-    "commission_q": null,
-    "source": "kommersant.ru, cre.ru — старт продаж Q3 2022; дата ввода только плановая (Q1 2024, затем Q2 2024), подтверждения фактического РНВ не нашла",
-    "last_checked": "2026-07-14",
+    "commission_q": "202609",
+    "source": "Verified sources: https://euler.moscow/, https://ibcrealestate.ru/catalog/T96_15661/, https://www.novostroy-m.ru/baza/mfk_gorod_moskva",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-250",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2026
   },
   "taller": {
     "construction_start_q": "202201",
@@ -959,6 +960,36 @@
     "source": "Verified sources: https://www.novostroy-m.ru/baza/biznestsentr_mojayskiy_val_vl, https://investprojects.info/project-groups/29914",
     "last_checked": "2026-09-25",
     "canonical_project_id": "proj-add-mozhayskiy-val-7-20260925",
+    "canonical_building_id": null
+  },
+  "на берзарина": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2024,
+    "source": "Verified sources: https://berzarina32.ru/, https://kf.expert/office/business-center/oktyabrskoe-pole-os47929, https://www.cian.ru/sale/commercial/304490047/",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-57",
+    "canonical_building_id": null
+  },
+  "парк легенд класс в+": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2024,
+    "source": "Verified sources: https://cre.ru/analytics/96072, https://rgud.ru/documents/Bortis_Аналитический_отчет_Рынок_коммерческой_недвижимости_2024-2030.pdf, https://kf.expert/office/business-center/park-legend-klass-v%2B-os37630/infrastructure",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-103",
+    "canonical_building_id": null
+  },
+  "мфк крёкшино": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2026,
+    "source": "Verified sources: https://xn----jtbjfbbwikdr3f.xn--p1ai/, https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/64168, https://www.apex-realty.ru/view.php?id=1049937",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-add-krekshino-20260917",
     "canonical_building_id": null
   }
 }
