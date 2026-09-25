@@ -1,0 +1,77 @@
+{
+  "checked_on": "2026-09-25",
+  "scope": "fifth reviewed wave: unresolved office-project dates and status corrections",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-168",
+      "canonical_name": "Orbital-2",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2027, "input_quarter": null, "input_date_kind": "planned"},
+      "building_date_key": "orbital-2",
+      "classifier_unified_id": "UC-OBJ-0104",
+      "classifier_before": {"commission_year": 2027, "commission_quarter": 4},
+      "classifier_after": {"commission_year": 2027, "commission_quarter": null},
+      "sources": [
+        "https://kf.expert/office/business-center/orbital-2-os48773",
+        "https://ibcrealestate.ru/upload/iblock/fd5/jgfju8ll3moqv18q0mdyd4z4ljoznsse/Bolshoy-Siti_YAnvar-2025_FINAL_2.pdf",
+        "https://core-xp.ru/upload/iblock/cc4/7ct3w8w6wlsjyz63gb5oj4rvar6to6pt.pdf"
+      ],
+      "reliability": "medium-high for year; quarter deliberately omitted",
+      "decision": "The current NF Group page confirms the exact Orbital 2 object at 3rd Magistralnaya 12 building 1 and GBA 57,967. Independent IBC and CORE.XP Big City reports both give planned readiness in 2027. The older classifier Q4 value has no supporting quarter-level evidence and is removed."
+    },
+    {
+      "canonical_project_id": "proj-add-mozhayskiy-val-7-20260925",
+      "canonical_name": "Можайский Вал, вл. 7",
+      "before": {"project_status": "Введён", "input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"project_status": "Строится", "input_year": 2027, "input_quarter": null, "input_date_kind": "planned"},
+      "building_date_key": "можайский вал, вл. 7",
+      "classifier_unified_id": "UC-OBJ-ADD-356",
+      "classifier_before": {"commission_year": null, "commission_quarter": null, "status": "Сданный", "layer_status": "Введён"},
+      "classifier_after": {"commission_year": 2027, "commission_quarter": null, "status": "Строящийся", "layer_status": "Строится"},
+      "sources": [
+        "https://www.novostroy-m.ru/baza/biznestsentr_mojayskiy_val_vl",
+        "https://investprojects.info/project-groups/29914"
+      ],
+      "reliability": "medium-high for construction status and year; quarter deliberately omitted",
+      "decision": "The current exact-address project page says the 18-storey building is under construction and gives handover in 2027. A separate current construction tracker also treats the object as an active construction project. The earlier 'commissioned' classification came from stale or generic pages and is reversed; the missing quarter is not inferred."
+    }
+  ],
+  "rejected": [
+    {
+      "canonical_project_id": "proj-14",
+      "canonical_name": "Lunar",
+      "reason": "GLA remains null because current broker cards disagree (9,719 versus 9,941 sqm).",
+      "sources": [
+        "https://ibcrealestate.ru/catalog/T96_15734/",
+        "https://brightrich.moscow/biznes-centry/lunar/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-95",
+      "canonical_name": "Алкон 3",
+      "reason": "GLA remains null because the available exact-object sources publish incompatible rentable-area figures and appear to use different phase or area definitions.",
+      "sources": [
+        "https://www.cian.ru/mnogofunkcionalnyy-kompleks-alkon-iii-moskva-140455/",
+        "https://core-xp.ru/research/rynok-ofisnoy-nedvizhimosti-moskvy-iii-kv-2023/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-96",
+      "canonical_name": "БЦ Рябовская Мануфактура",
+      "reason": "Input year remains null: current sources describing 'Ryabov' disagree on commissioning and do not safely resolve whether they refer to the same registry grain.",
+      "sources": [
+        "https://towers.city/catalog/bashnya-ryabov",
+        "https://morrowgroup.ru/biznescentr/bashnya-ryabov/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-279",
+      "canonical_name": "River Park Коломенское",
+      "reason": "GBA/GLA remain null because the available official figures refer to different phases or to the wider mixed-use development rather than this office-project row.",
+      "sources": [
+        "https://m.river-park.ru/info/news/27693/",
+        "https://m.river-park.ru/upload/iblock/803/igc3v2nv0vn25ngsdk7mo4zsp2gp1s75/River-Park-Kolomenskoe.-Prezentatsiya-o-proekte.pdf"
+      ]
+    }
+  ]
+}
