@@ -4167,6 +4167,56 @@ document.getElementById('exportGeo').addEventListener('click', function() {
 
 document.getElementById('exportXlsx').addEventListener('click', async function() {
   await ensureXLSX();
+  if (bcMode) {
+    // ── БЦ 2ГИС / MosPrimeOffice: полные карточки объектов внутри области ──
+    const layers = drawnItems.getLayers();
+    if (!layers.length) { alert('Сначала обведи область (режим рисования).'); return; }
+    const [gisItems, mpItems] = await Promise.all([ensureBc2gisData(), ensureBcMosprimeData()]);
+    const q = (document.getElementById('bcSearch').value || '').trim().toLowerCase();
+    const inArea = (it) => it.lat != null && it.lng != null && isFinite(it.lat) && isFinite(it.lng)
+      && layersContainPoint(layers, it.lat, it.lng) && bcMatchesSearch(it.name, it.address, q);
+    const gis = document.getElementById('bcSrc2gis').checked ? gisItems.filter(inArea) : [];
+    const mp = document.getElementById('bcSrcMosprime').checked ? mpItems.filter(inArea) : [];
+    if (!gis.length && !mp.length) { alert('Внутри области нет БЦ (с учётом включённых источников и поиска).'); return; }
+
+    const gisRows = gis.map(it => ({
+      'Название': it.name, 'Класс (MRF)': it.mrf_class, 'Девелопер': it.developer,
+      'Рубрики': it.category, 'Адрес': it.address, 'Район': it.district, 'Округ': it.okrug,
+      'Рейтинг': it.rating, 'Отзывов': it.reviews_count, 'Часы работы': it.hours,
+      'Телефон 1': it.phone1, 'Телефон 2': it.phone2, 'Телефон 3': it.phone3, 'E-mail': it.email,
+      'Сайт 1': it.website1, 'Сайт 2': it.website2, 'Сайт 3': it.website3,
+      'ВКонтакте': it.vk, 'Telegram': it.telegram1, 'Тип записи (2ГИС)': it.entry_type,
+      'Широта': it.lat, 'Долгота': it.lng, 'Ссылка 2ГИС': it.url_2gis,
+    }));
+    const mpRows = mp.map(it => ({
+      'Название': it.name, 'Класс (MRF)': it.mrf_class, 'Девелопер': it.developer,
+      'Адрес': it.address, 'Район': it.district, 'Округ': it.okrug,
+      'Год постройки': it.year, 'Год (веб-проверка)': it.year_web, 'Вид года': it.year_web_kind,
+      'Этажей': it.floors, 'Общая площадь, кв.м': it.total_area, 'Тип здания': it.building_type,
+      'Назначение': it.purpose, 'Рейтинг': it.rating, 'Свободных предложений': it.offers_available_count,
+      'Предложений всего': it.offers_count, 'Охват реестра': it.scope,
+      'Широта': it.lat, 'Долгота': it.lng, 'Ссылка на карточку': it.source_url,
+    }));
+    const offerRows = [];
+    mp.forEach(it => (it.offers || []).forEach(o => offerRows.push({
+      'БЦ': it.name, 'Адрес': it.address, 'Статус': o.availability_status === 'available' ? 'Свободно' : 'Сдано',
+      'Площадь, кв.м': o.area, 'Ставка, руб/кв.м/год': o.rate_per_sqm, 'Аренда, руб/мес': o.monthly_rent,
+    })));
+    const summary = [
+      ['Показатель', 'Значение'],
+      ['Источник', 'БЦ 2ГИС (выгрузка 23.09.2026) и MosPrimeOffice (23.09.2026); классы и годы — см. столбцы'],
+      ['БЦ 2ГИС в области, шт.', gis.length],
+      ['БЦ MosPrimeOffice в области, шт.', mp.length],
+      ['Офисных предложений MosPrimeOffice, шт.', offerRows.length],
+    ];
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Показатели');
+    if (gisRows.length) XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(gisRows), 'БЦ 2ГИС');
+    if (mpRows.length) XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(mpRows), 'БЦ MosPrimeOffice');
+    if (offerRows.length) XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(offerRows), 'Предложения MosPrimeOffice');
+    XLSX.writeFile(wb, `${drawnFileBase()}_bc.xlsx`);
+    return;
+  }
   if (projectsMode) {
     const layers = drawnItems.getLayers();
     if (!layers.length) { alert('Сначала обведи область (режим рисования).'); return; }
