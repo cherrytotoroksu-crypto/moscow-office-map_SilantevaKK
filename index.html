@@ -2409,6 +2409,7 @@ async function init() {
     if (rentMode) renderBuildingsLegend();
   }
   await renderOverlays();
+  if (window.__pendingBcMode) { window.__pendingBcMode = false; await setMode('bc'); }
   syncURL();
 }
 // вызов init() — в самом конце файла (после того как определены setMode/METRIC_OPTIONS_*/basemaps,
@@ -2421,7 +2422,7 @@ async function init() {
 // ============================================================
 function syncURL() {
   const p = new URLSearchParams();
-  p.set('mode', projectsMode ? 'projects' : (coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale')));
+  p.set('mode', bcMode ? 'bc' : (projectsMode ? 'projects' : (coworkingMode ? 'coworking' : (rentMode ? 'rent' : 'sale'))));
   if (!projectsMode) {
     p.set('q', currentQuarter.id);
     p.set('layer', activeLayerKey);
@@ -2457,7 +2458,10 @@ function applyStateFromURL() {
     document.getElementById('quarterSelect').value = q;
   }
   const mode = p.get('mode');
-  if (mode === 'projects') {
+  if (mode === 'bc') {
+    // вкладка «БЦ» включается после загрузки данных, в конце init()
+    window.__pendingBcMode = true;
+  } else if (mode === 'projects') {
     // режим-справочник: остальные панели скрываются, слой грузится в init()
     projectsMode = true;
     document.getElementById('modeSale').classList.remove('active');
