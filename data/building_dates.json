@@ -940,5 +940,25 @@
     "commission_year": 2026,
     "source": "Verified sources: https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/biznes-centr-2-y-horoshevskiy-proezd-vl-7, https://ibcrealestate.ru/upload/iblock/fd5/jgfju8ll3moqv18q0mdyd4z4ljoznsse/Bolshoy-Siti_YAnvar-2025_FINAL_2.pdf",
     "last_checked": "2026-09-25"
+  },
+  "orbital-2": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2027,
+    "source": "Verified sources: https://kf.expert/office/business-center/orbital-2-os48773, https://ibcrealestate.ru/upload/iblock/fd5/jgfju8ll3moqv18q0mdyd4z4ljoznsse/Bolshoy-Siti_YAnvar-2025_FINAL_2.pdf, https://core-xp.ru/upload/iblock/cc4/7ct3w8w6wlsjyz63gb5oj4rvar6to6pt.pdf",
+    "last_checked": "2026-09-25",
+    "canonical_project_id": "proj-168",
+    "canonical_building_id": null
+  },
+  "можайский вал, вл. 7": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2027,
+    "source": "Verified sources: https://www.novostroy-m.ru/baza/biznestsentr_mojayskiy_val_vl, https://investprojects.info/project-groups/29914",
+    "last_checked": "2026-09-25",
+    "canonical_project_id": "proj-add-mozhayskiy-val-7-20260925",
+    "canonical_building_id": null
   }
 }
