@@ -3421,10 +3421,13 @@ async function loadFutureProjects() {
     // чисто отображение в попапе, пересчитывается при каждой загрузке.
     let enriched = 0;
     try {
-      const latestQ = QUARTERS[QUARTERS.length - 1];
+      // QUARTERS отсортирован от нового к старому — актуальный квартал это [0]
+      // (раньше брался [length-1] = самый старый Q2 2021, у которого нет файла
+      // коворкингов → лишний запрос /undefined с 404).
+      const latestQ = QUARTERS[0];
       const [saleBuildings, coworkingList] = await Promise.all([
-        fetch(latestQ.file, { cache: 'no-cache' }).then(r => r.ok ? r.json() : []).catch(() => []),
-        fetch(latestQ.coworking, { cache: 'no-cache' }).then(r => r.ok ? r.json() : []).catch(() => []),
+        fetchJSON(latestQ.file, []),
+        fetchJSON(latestQ.coworking, []),
       ]);
       const liveSources = [
         ...saleBuildings.map(b => ({ ...b, _src: 'продажа' })),
