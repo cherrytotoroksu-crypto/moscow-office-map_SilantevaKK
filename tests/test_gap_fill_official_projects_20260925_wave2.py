@@ -42,7 +42,6 @@ class OfficialProjectsGapFillWave2Tests(unittest.TestCase):
             "proj-96",
             "proj-98",
             "proj-260",
-            "proj-add-krekshino-20260917",
         ):
             row = self.rows[project_id]
             self.assertIsNone(row["input_year"])

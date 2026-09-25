@@ -100,17 +100,16 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("https://mr-bc-link.ru/", row["qa_notes"])
         self.assertIn("https://fortexgroup.ru/bc/link/prodazha-ofisa/179-1320066/", row["qa_notes"])
 
-    def test_euler_date_conflict_is_visible_and_not_normalized(self):
+    def test_euler_current_declaration_resolves_the_stale_conflict(self):
         row = self.by_id["proj-250"]
-        self.assertIsNone(row["input_year"])
-        self.assertIsNone(row["input_quarter"])
+        self.assertEqual(row["input_year"], 2026)
+        self.assertEqual(row["input_quarter"], 3)
+        self.assertEqual(row["input_date_kind"], "planned")
         notes = row["qa_notes"]
-        for value in ("Q3 2026", "Q2 2026", "Q3 2025"):
-            self.assertIn(value, notes)
         for url in (
             "https://ibcrealestate.ru/catalog/T96_15661/",
-            "https://www.cian.ru/sale/commercial/328659891/",
-            "https://www.cian.ru/rent/commercial/328190998/",
+            "https://euler.moscow/",
+            "https://www.novostroy-m.ru/baza/mfk_gorod_moskva",
         ):
             self.assertIn(url, notes)
 
