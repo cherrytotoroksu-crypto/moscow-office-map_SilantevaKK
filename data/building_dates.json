@@ -507,10 +507,11 @@
     "construction_start_q": null,
     "start_q": null,
     "commission_q": null,
-    "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): застройщик ORTIGA Development, Переведеновский пер. — ortiga.ru, свежая новость от 19.06.2026 описывает АКТИВНУЮ стройку (фасадные работы этажи 14-19, монолит 25 этажа, кладка стен 21-24, окна 21-24/27-28, кровля, электрика 29 этажа) — здание явно далеко от готовности, продающий сайт rail-a.ru всё ещё рекламирует лапсированный план «ввод конец 2025» как маркетинг; commission_q не проставляю",
-    "last_checked": "2026-08-01",
+    "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): застройщик ORTIGA Development, Переведеновский пер. — ortiga.ru, свежая новость от 19.06.2026 описывает АКТИВНУЮ стройку (фасадные работы этажи 14-19, монолит 25 этажа, кладка стен 21-24, окна 21-24/27-28, кровля, электрика 29 этажа) — здание явно далеко от готовности, продающий сайт rail-a.ru всё ещё рекламирует лапсированный план «ввод конец 2025» как маркетинг; commission_q не проставляю | RECHECKED 2026-09-25: Verified sources: https://ortiga.ru/news/019c6afc-1a03-440e-bb0d-dc224053effa, https://ibcrealestate.ru/catalog/T96_16263/",
+    "last_checked": "2026-09-25",
     "canonical_project_id": "proj-173",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2026
   },
   "dream riva": {
     "construction_start_q": null,
@@ -928,6 +929,16 @@
     "commission_q": null,
     "commission_year": 2029,
     "source": "Verified sources: https://www.vedomosti.ru/press_releases/2026/06/25/soglasovano-stroitelstvo-ofisnogo-kompleksa-na-ulitse-seregina, https://mind.vsngroup.ru/",
+    "last_checked": "2026-09-25"
+  },
+  "мфк юг": {
+    "canonical_project_id": "proj-234",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2026,
+    "source": "Verified sources: https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/biznes-centr-2-y-horoshevskiy-proezd-vl-7, https://ibcrealestate.ru/upload/iblock/fd5/jgfju8ll3moqv18q0mdyd4z4ljoznsse/Bolshoy-Siti_YAnvar-2025_FINAL_2.pdf",
     "last_checked": "2026-09-25"
   }
 }
