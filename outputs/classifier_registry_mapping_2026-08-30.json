@@ -7904,5 +7904,35 @@
     "matched_project_id": null,
     "match_basis": "manual web verification (user-requested classifier addition, 2026-09-17)",
     "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-355",
+    "canonical_no": null,
+    "name": "GRANARD Олимпийский",
+    "address": "Олимпийский пр-т, 1",
+    "status": "new_record",
+    "matched_project_id": null,
+    "match_basis": "CRM export 2026-09-25 + web verification (user-requested addition)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-356",
+    "canonical_no": null,
+    "name": "Можайский Вал, вл. 7",
+    "address": "Можайский Вал ул., вл. 7",
+    "status": "new_record",
+    "matched_project_id": null,
+    "match_basis": "CRM export 2026-09-25 + web verification (user-requested addition)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-357",
+    "canonical_no": null,
+    "name": "Лужнецкая наб. (Sminex)",
+    "address": "Лужнецкая наб., вл. 10А",
+    "status": "new_record",
+    "matched_project_id": null,
+    "match_basis": "CRM export 2026-09-25 + web verification (user-requested addition)",
+    "coord_corroborated": false
   }
 ]
