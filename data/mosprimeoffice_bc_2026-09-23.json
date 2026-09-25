@@ -6199,7 +6199,8 @@
    "year_web_sources": [
     "https://icx.ru/bc/azovskaya-24k3/",
     "https://zoon.ru/msk/street/azovskaya_ulitsa/bld/24_k_3/"
-   ]
+   ],
+   "not_office_bc_note": "По адресу найден ТРЦ «Азовский» (кинотеатр), а не офисный БЦ."
   },
   {
    "id": 862,
@@ -6590,7 +6591,8 @@
    "matched_2gis": true,
    "matched_classifier": false,
    "scope": "нет года — проверить",
-   "year_web_note": "д. Кузнецово (Раменский р-н МО), Центральная ул., 1: по адресу в источниках найдено только Кузнецовское территориальное управление (zoon), БЦ не обнаружен. Возможно ошибочная привязка."
+   "year_web_note": "д. Кузнецово (Раменский р-н МО), Центральная ул., 1: по адресу в источниках найдено только Кузнецовское территориальное управление (zoon), БЦ не обнаружен. Возможно ошибочная привязка.",
+   "not_office_bc_note": "По адресу найдено территориальное управление, бизнес-центр не подтверждён."
   },
   {
    "id": 1105,
@@ -10080,7 +10082,8 @@
    "year_web_sources": [
     "https://2gis.ru/moscow/firm/4504127908375254"
    ],
-   "developer": "ГК Измайлово (гостиничный комплекс)"
+   "developer": "ГК Измайлово (гостиничный комплекс)",
+   "not_office_bc_note": "Отель и конгресс-центр ГК «Измайлово», не офисный БЦ."
   },
   {
    "id": 79,
@@ -35044,7 +35047,8 @@
    "year_web_sources": [
     "https://of.ru/bc/1518"
    ],
-   "web_class": "A"
+   "web_class": "A",
+   "not_office_bc_note": "Жилой комплекс с офисами, не классический БЦ."
   },
   {
    "id": 1256,
@@ -36053,7 +36057,8 @@
    "year_web_sources": [
     "https://etalongroup.ru/msk/news/galereya-artbox-etalon-novoe-art-prostranstvo-moskvy/"
    ],
-   "developer": "Эталон (Etalon Group)"
+   "developer": "Эталон (Etalon Group)",
+   "not_office_bc_note": "Арт-галерея около 161 кв. м, не БЦ."
   },
   {
    "id": 678,
