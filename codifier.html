@@ -160,6 +160,7 @@
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bc2gis">БЦ 2ГИС</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bcmosprime">БЦ MosPrimeOffice</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bcbase">БЦ база (классы)</button>
+  <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-section="bccrm">База БЦ (CRM)</button>
   <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" id="compareSegmentsTab" data-section="compare" data-view="compare_segments">⇄ Сравнить сегменты</button>
 </div>
 <div class="subtabs" id="viewTabs" role="tablist" aria-label="Вкладки раздела" style="display:none;"></div>
@@ -258,6 +259,7 @@ const SECTIONS = [
   {id:'bc2gis',   label:'БЦ 2ГИС',           views:['bc2gis_list']},
   {id:'bcmosprime', label:'БЦ MosPrimeOffice', views:['bcmosprime_list']},
   {id:'bcbase', label:'БЦ база (классы)', views:['bcbase_list']},
+  {id:'bccrm', label:'База БЦ (CRM)', views:['bccrm_list']},
 ];
 const VIEWS = {
   codifier:        {section:'codifier', label:'Общий кодификатор'},
@@ -274,6 +276,7 @@ const VIEWS = {
   bc2gis_list:     {section:'bc2gis',   label:'Бизнес-центры (2ГИС)'},
   bcmosprime_list: {section:'bcmosprime', label:'Бизнес-центры (MosPrimeOffice)'},
   bcbase_list: {section:'bcbase', label:'База БЦ 2006–2026 с классами'},
+  bccrm_list: {section:'bccrm', label:'База БЦ (CRM, расширенный поиск 25.09.2026)'},
 };
 // Пользовательское название — "Сегмент рынка" (не "Канал", технический
 // market_channel наружу не показываем). Показывается в шапке/итогах/экспорте
@@ -739,6 +742,26 @@ const BCBASE_COLUMNS = [
   {key:'url_2gis', label:'2ГИС', type:'text', visible:false},
 ];
 
+// База БЦ (CRM) — data/bc_crm_2026-09-25.json: выгрузка «Расширенный поиск
+// 25-09-2026» (6290 объектов Москвы: год постройки, класс, адрес). Площади блоков
+// на аренду/продажу — на дату выгрузки (динамика), не паспортные площади здания.
+// matched_unified_id — привязка к кодификатору по адресу (match_type=address)
+// либо по названию (match_type=name, менее надёжно).
+const BCCRM_COLUMNS = [
+  {key:'name', label:'Наименование', type:'text', visible:true},
+  {key:'address', label:'Адрес', type:'text', visible:true},
+  {key:'year', label:'Год постройки', type:'number', visible:true},
+  {key:'cls', label:'Класс', type:'text', visible:true},
+  {key:'matched_unified_id', label:'ID в кодификаторе', type:'text', visible:true},
+  {key:'matched_name', label:'Проект в кодификаторе', type:'text', visible:true},
+  {key:'match_type', label:'Тип привязки', type:'text', visible:true},
+  {key:'lease_blocks_area', label:'Блоки на аренду, кв.м (на дату выгрузки)', type:'number', visible:false},
+  {key:'sale_blocks_area', label:'Блоки на продажу, кв.м (на дату выгрузки)', type:'number', visible:false},
+  {key:'created', label:'Дата создания записи', type:'text', visible:false},
+  {key:'match_score', label:'Оценка привязки', type:'number', visible:false},
+  {key:'guid', label:'GUID объекта', type:'text', visible:false},
+];
+
 // ============================================================
 //  СОСТОЯНИЕ ТАБЛИЦЫ (общий движок для всех вкладок)
 // ============================================================
@@ -817,6 +840,7 @@ const state = {
   bc2gis_list: makeTableState(BC2GIS_COLUMNS),
   bcmosprime_list: makeTableState(BCMOSPRIME_COLUMNS),
   bcbase_list: makeTableState(BCBASE_COLUMNS),
+  bccrm_list: makeTableState(BCCRM_COLUMNS),
 };
 let allProjectsLayer = [];
 // canonical_project_id -> project_name, запечённый в кодификаторе
@@ -1588,6 +1612,20 @@ async function loadBc2gis() {
   render();
 }
 
+let bccrmLoaded = false;
+async function loadBcCrm() {
+  if (!bccrmLoaded) {
+    let data;
+    try { data = await fetchJSON('data/bc_crm_2026-09-25.json'); }
+    catch (e) { data = {items: [], imported_at: null}; }
+    state.bccrm_list.rows = data.items;
+    dataMeta.bccrm_list = {updated: data.imported_at, count: data.items.length};
+    bccrmLoaded = true;
+  }
+  if (!suppressURLSync) state.bccrm_list.page = 1;
+  render();
+}
+
 let bcbaseLoaded = false;
 async function loadBcBase() {
   if (!bcbaseLoaded) {
@@ -1933,6 +1971,7 @@ const VIEW_SOURCE_LABEL = {
   compare_segments: () => `data/lots_${currentQuarterId}.json + data/rent_lots_${currentQuarterId}.json + data/coworking_${currentQuarterId}.json (агрегаты KPI)`,
   golden_report: () => 'data/qa/golden_report_full.json (лист "отчет деление А и прайм" из Golden File)',
   bc2gis_list: () => 'data/bc_2gis_2026-09-23.json (импорт бц_2гис.csv из 2ГИС, не сверено с реестром)',
+  bccrm_list: () => 'data/bc_crm_2026-09-25.json (Расширенный поиск 25.09.2026; привязка к кодификатору по адресу/названию)',
   bcbase_list: () => 'data/bc_base_classes_2026-09-24.json (Общая база ввода 2006–2026, веб_классы)',
   bcmosprime_list: () => 'data/mosprimeoffice_bc_2026-09-23.json (mosprimeoffice.ru/bc-map, не сверено с реестром)',
 };
@@ -2836,6 +2875,7 @@ function loadCurrentView() {
     case 'bc2gis_list': return loadBc2gis();
     case 'bcmosprime_list': return loadBcMosprime();
     case 'bcbase_list': return loadBcBase();
+    case 'bccrm_list': return loadBcCrm();
     default: render(); return Promise.resolve();
   }
 }

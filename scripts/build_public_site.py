@@ -57,6 +57,7 @@ DATA_ALLOW_PATTERNS = [
     re.compile(r"^bc_2gis.*\.json$"),
     re.compile(r"^mosprimeoffice_bc.*\.json$"),
     re.compile(r"^bc_base_classes.*\.json$"),
+    re.compile(r"^bc_crm.*\.json$"),
 ]
 
 # Корневые файлы, которые тоже публикуются по прямой просьбе пользователя

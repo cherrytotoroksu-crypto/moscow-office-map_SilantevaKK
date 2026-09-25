@@ -1,0 +1,4194 @@
+[
+ {
+  "unified_id": "UC-OBJ-0060",
+  "name": "Stone Курская",
+  "address": "Костомаровский пер, д. 11, стр. 1",
+  "crm_name": "STONE Курская",
+  "crm_address": "г. Москва, Таганский р-н, Костомаровский пер, д. 5",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0046",
+  "name": "Taller",
+  "address": "Жуков проезд, 8",
+  "crm_name": "TALLER (Восточный корпус)",
+  "crm_address": "г. Москва, Жуков проезд, д. 8, стр. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2026,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0683",
+  "name": "STONE Дмитровская",
+  "address": "Дмитровский пр-д, вл. 1Г",
+  "crm_name": "Stone Дмитровская",
+  "crm_address": "г. Москва, Тимирязевский р-н, Дмитровский проезд, д. 1Г",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2026
+ },
+ {
+  "unified_id": "UC-OBJ-0622",
+  "name": "Stone Пресня",
+  "address": "Ходынская ул., вл. 2, стр. 9",
+  "crm_name": "Stone Пресня",
+  "crm_address": "г. Москва, Ходынская ул., д. 2, стр. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2025,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0075",
+  "name": "Берников",
+  "address": "Николоямская ул., 12 стр. 2",
+  "crm_name": "Николоямская улица,12",
+  "crm_address": "Москва,Николоямская улица,12",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "C"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0064",
+  "name": "Эйлер",
+  "address": "Береговой проезд, 18",
+  "crm_name": "Эйлер",
+  "crm_address": "г. Москва, Филевский парк р-н, пр-д Береговой, д. 1В",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2026,
+   2025
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0719",
+  "name": "GEOLOG 2",
+  "address": "ул. Обручева, вл. 23",
+  "crm_name": "ГазФилд",
+  "crm_address": "Москва,Обручева улица,23,корп. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2006
+ },
+ {
+  "unified_id": "UC-OBJ-0054",
+  "name": "Lakes",
+  "address": "ул. Озёрная вл.42",
+  "crm_name": "Озерная улица, д. 42",
+  "crm_address": "г. Москва, Озёрная ул., д. 42",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0083",
+  "name": "Level Воронцовская",
+  "address": "Академика Семенихина ул., 2",
+  "crm_name": "Level Work",
+  "crm_address": "г. Москва, Академика Семенихина ул., вл. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2026,
+   2025
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0126",
+  "name": "Stone Ходынка 3",
+  "address": "Москва, Ходынский бульвар, 20а/1",
+  "crm_name": "Stone Ходынка",
+  "crm_address": "г. Москва, Ходынский б-р, д. 6, стр. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2029,
+   2027
+  ],
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0050",
+  "name": "Upside Кунцево",
+  "address": "Молдавская ул., 1",
+  "crm_name": "Upside Кунцево",
+  "crm_address": "г. Москва, Рублёвское шоссе, д. 21",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2025,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0090",
+  "name": "БЦ Рябовская Мануфактура",
+  "address": "Холодильный пер.,д.3",
+  "crm_name": "Башня Власов",
+  "crm_address": "г. Москва, Холодильный пер, д. 3, стр. 7",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2029,
+   2026
+  ],
+  "cls": [
+   "A",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0053",
+  "name": "Деловой Дуэт",
+  "address": "Шумкина ул., 14с13",
+  "crm_name": "Деловой Дуэт",
+  "crm_address": "г. Москва, Шумкина ул., д. 14, стр. 13",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2025,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0601",
+  "name": "Фили Центр",
+  "address": "Москва, Промышленный проезд, вл. 5",
+  "crm_name": "Фили Центр",
+  "crm_address": "г. Москва, пр-д Промышленный, д. 5",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2024,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0066",
+  "name": "БЦ Сколковский",
+  "address": "Большой бульвар, 40, Инновационный центр Сколково",
+  "crm_name": "Сколковский",
+  "crm_address": "г. Москва, инновационного центра Сколково тер, Кулибина ул., д. 8, стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0099",
+  "name": "Light City",
+  "address": "2-я Магистральная ул., д. 3, стр. 1",
+  "crm_name": "LIGHT CITY",
+  "crm_address": "г. Москва, 2-я Магистральная ул., д. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2028
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0122",
+  "name": "Родина Парк",
+  "address": "г. Москва, ул. Верейская, вл. 12",
+  "crm_name": "Верейская улица,12",
+  "crm_address": "Москва,Верейская улица,12",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2028,
+   1946
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0149",
+  "name": "Bell",
+  "address": "1-я ул. Ямского поля, вл. 12",
+  "crm_name": "Ямского Поля 1-я улица,12",
+  "crm_address": "Москва,Ямского Поля 1-я улица,12",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0104",
+  "name": "Orbital-2",
+  "address": "Москва, 3-я Магистральная ул., вл. 12",
+  "crm_name": "NORD.AG",
+  "crm_address": "г. Москва, 3-я Магистральная ул., д. 12, стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0202",
+  "name": "Lakes 2",
+  "address": "ул. Озёрная",
+  "crm_name": "Lakes 2",
+  "crm_address": "г. Москва, Озёрная ул., влд 44б",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0127",
+  "name": "One Tower",
+  "address": "1-й Красногвардейский проезд, 13",
+  "crm_name": "Stone towers",
+  "crm_address": "г. Москва, проезд Бумажный, д. 19",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2030,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0698",
+  "name": "STONE Towers (Tower D)",
+  "address": "Бумажный пр-д, вл. 19, стр. 4,5",
+  "crm_name": "Stone towers",
+  "crm_address": "г. Москва, проезд Бумажный, д. 19",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2026,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0709",
+  "name": "МФК Юг",
+  "address": "Москва, 2-й Хорошевский проезд, 7",
+  "crm_name": "Business Centre on Begovaya",
+  "crm_address": "Москва,Хорошевский 2-й проезд,7,корп. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "C"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0370",
+  "name": "Upside Ямская",
+  "address": "2-я Ямская ул., вл. 9",
+  "crm_name": "Upside Ямская",
+  "crm_address": "г. Москва, 2-я Ямская ул., д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2028
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0287",
+  "name": "Дом Правды",
+  "address": "ул. Правды, 24, стр. 2, Москва",
+  "crm_name": "Правда",
+  "crm_address": "Москва,Правды улица,24",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "C"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0360",
+  "name": "Цетлин",
+  "address": "г. Москва, улица Неверовского, 10с3",
+  "crm_name": "Цетлин",
+  "crm_address": "г. Москва, Неверовского ул., д. 9",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2027,
+   2028
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0369",
+  "name": "Upside Tech Сколково (фаза Альфа)",
+  "address": "г. Москва, Нобеля ул.",
+  "crm_name": "Upside Tech Сколково",
+  "crm_address": "г. Москва, инновационного центра Сколково тер, Большой б-р, д. 62",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0455",
+  "name": "Upside Tech Сколково (фаза Бета)",
+  "address": "г. Москва, Нобеля ул.",
+  "crm_name": "Upside Tech Сколково",
+  "crm_address": "г. Москва, инновационного центра Сколково тер, Большой б-р, д. 62",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0229",
+  "name": "Upside Останкино",
+  "address": "проезд Огородный, 20А/2",
+  "crm_name": "Upside Останкино",
+  "crm_address": "г. Москва, Огородный проезд, д. 20",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2029
+ },
+ {
+  "unified_id": "UC-OBJ-0145",
+  "name": "Сколково Технопарк от Upside Development",
+  "address": "г. Москва, Нобеля ул.",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2027,
+   2010
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0389",
+  "name": "Энтузиаст",
+  "address": "Москва, шоссе Энтузиастов, 12",
+  "crm_name": "Энтузиаст",
+  "crm_address": "г. Москва, Энтузиастов ш., д. 12",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2028,
+   2027
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0413",
+  "name": "Cityzen",
+  "address": "Вишневая, 7",
+  "crm_name": "CITYZEN",
+  "crm_address": "г. Москва, Покровское-Стрешнево р-н, Вишнёвая ул., д. 7, стр. 128",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2029
+ },
+ {
+  "unified_id": "UC-OBJ-0192",
+  "name": "Dius",
+  "address": "ул. Академика Ильюшина, вл. 21, Москва",
+  "crm_name": "Диус",
+  "crm_address": "Москва,Академика Ильюшина улица,21",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0486",
+  "name": "1-й Магистральный проезд, 12",
+  "address": "1-й Магистральный проезд, 12",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0605",
+  "name": "1-я Магистральная, вл. 29",
+  "address": "1-я Магистральная, вл. 29",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2000
+ },
+ {
+  "unified_id": "UC-OBJ-0599",
+  "name": "2-ая Магистральная, вл. 3, 16",
+  "address": "2-ая Магистральная, вл. 3, 16",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0489",
+  "name": "2-й Силикатный пр-д, вл.13",
+  "address": "2-й Силикатный пр-д, вл.13",
+  "crm_name": "SEZAR",
+  "crm_address": "г. Москва, Хорошево-Мневники р-н, пр-д 2-й Силикатный, д. 13",
+  "score": 0.6,
+  "match_type": "address",
+  "year_filled_by_crm": 2027,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0429",
+  "name": "2-я Магистральная, 18",
+  "address": "2-я Магистральная, 18",
+  "crm_name": "2-я Магистральная улица, 18",
+  "crm_address": "Москва,Магистральная 2-я улица,18",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0492",
+  "name": "2-я Магистральная, 7А",
+  "address": "2-я Магистральная, 7А",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0496",
+  "name": "3-й Добрынинский пер., земельный участок 4/2,",
+  "address": "3-й Добрынинский пер., земельный участок 4/2,",
+  "crm_name": "Добрынинский",
+  "crm_address": "Москва,Добрынинский 4-й переулок,8",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2008,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0598",
+  "name": "4-ая Магистральная, вл. 7",
+  "address": "4-ая Магистральная, вл. 7",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0442",
+  "name": "4-я Магистральная, 4 стр. 11",
+  "address": "4-я Магистральная ул., 4 стр. 11",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0408",
+  "name": "5-й Донской, 21Б",
+  "address": "5-й Донской, 21Б",
+  "crm_name": "Андреевский",
+  "crm_address": "Москва,Донской 5-й проезд,21Б",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1994,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0188",
+  "name": "ASPACE Кузнецкий мост",
+  "address": "г. Москва, Кузнецкий мост 13/9с1",
+  "crm_name": "ASPACE Кузнецкий мост",
+  "crm_address": "г. Москва, Кузнецкий Мост ул., д. 13/9, стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1892
+ },
+ {
+  "unified_id": "UC-OBJ-0014",
+  "name": "Capital Towers",
+  "address": "Краснопресненская наб., 14, стр., 1",
+  "crm_name": "Парк Тауэр",
+  "crm_address": "Москва,Краснопресненская набережная,14,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2023,
+   2013
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0581",
+  "name": "Comcity Bravo",
+  "address": "Киевское ш, 22-й км, 6A",
+  "crm_name": "Comcity",
+  "crm_address": "г. Москва, округ Новомосковский, км Киевское шоссе 22-й (п Московский), д. 6, стр 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2022,
+   2014
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0545",
+  "name": "Crosswall Park Pobedy",
+  "address": "улица Неверовского, 10с3",
+  "crm_name": "CROSSWALL",
+  "crm_address": "г. Москва, Неверовского ул., д. 10, стр. 3а",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2014,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0003",
+  "name": "DM Tower",
+  "address": "Новоданиловская наб., 12",
+  "crm_name": "DM Tower*",
+  "crm_address": "г. Москва, Донской р-н, Новоданиловская наб, д. 10А",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2023,
+   2021
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0747",
+  "name": "Gate 1",
+  "address": "пр-кт 60-летия Октября, 5А",
+  "crm_name": "Принципал Плаза",
+  "crm_address": "г. Москва, 60-летия Октября пр-кт, д. 10А",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009
+ },
+ {
+  "unified_id": "UC-OBJ-0706",
+  "name": "GRANARD Белорусская",
+  "address": "1-я ул. Ямского Поля, вл. 30",
+  "crm_name": "GRANARD Белорусская",
+  "crm_address": "Москва,Ямского Поля 1-я улица,30",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2027
+ },
+ {
+  "unified_id": "UC-OBJ-0199",
+  "name": "Insolver на Проспекте 60-летия Октября",
+  "address": "проспект 60-летия Октября, 5А, Москва",
+  "crm_name": "60-летия Октября проспект,10,корп. 1",
+  "crm_address": "Москва,60-летия Октября проспект,10,корп. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0745",
+  "name": "LUNAR (Module B)",
+  "address": "Ленинский пр-кт, 38",
+  "crm_name": "LUNAR",
+  "crm_address": "г. Москва, Гагаринский р-н, Ленинский пр-кт, д. 38",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2023
+ },
+ {
+  "unified_id": "UC-OBJ-0398",
+  "name": "MR Марьина Роща",
+  "address": "в районе улиц Складочная и Анненская",
+  "crm_name": "Марьина Роща",
+  "crm_address": "Москва,Марьиной Рощи 12-й проезд,9А",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0154",
+  "name": "MYPRIORITY Дубровка",
+  "address": "г. Москва, Шарикоподшипниковская ул., вл. 11",
+  "crm_name": "Дубровка",
+  "crm_address": "г. Москва, Шарикоподшипниковская ул., д. 13, стр. 5",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0153",
+  "name": "MYPRIORITY Мневники",
+  "address": "г. Москва, ул. Народного Ополчения, 34",
+  "crm_name": "ИТКОЛ-Октябрьское Поле",
+  "crm_address": "Москва,Народного Ополчения улица,34,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2028,
+   1972
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0081",
+  "name": "Солид (бывший Nice Tower)",
+  "address": "Скотопрогонная ул. 31Ас1",
+  "crm_name": "NICE TOWER",
+  "crm_address": "г. Москва, Скотопрогонная ул., д. 31А, стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2027,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0752",
+  "name": "QOOB (Корпус B)",
+  "address": "ул. Алексея Свиридова, вл. 17",
+  "crm_name": "QOOB",
+  "crm_address": "г. Москва, Алексея Свиридова ул., д. 17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2025
+ },
+ {
+  "unified_id": "UC-OBJ-0607",
+  "name": "Red Town",
+  "address": "ул. 2-я Звенигородская, д. 13",
+  "crm_name": "2-ая Звенигородская, д. 13",
+  "crm_address": "Москва,Звенигородская 2-я улица,13",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2025,
+   2002
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0210",
+  "name": "Regions development на ул. Краснобогатырская",
+  "address": "ул. Краснобогатырская",
+  "crm_name": "краснобогатырская",
+  "crm_address": "Москва,Волконский 1-й переулок,14",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0079",
+  "name": "Stone Towers D",
+  "address": "проезд Бумажный, д. 19",
+  "crm_name": "Stone towers",
+  "crm_address": "г. Москва, проезд Бумажный, д. 19",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2026,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0381",
+  "name": "STONE Towers E",
+  "address": "г. Москва,ул. Нижняя Масловка, 3",
+  "crm_name": "Stone towers",
+  "crm_address": "г. Москва, проезд Бумажный, д. 19",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2029,
+   2024
+  ],
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0669",
+  "name": "STONE Ленинский (Башня L и Башня S)",
+  "address": "ул. Вавилова, вл. 11",
+  "crm_name": "Stone Ленинский",
+  "crm_address": "г. Москва, Вавилова ул., д. 11",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2026
+ },
+ {
+  "unified_id": "UC-OBJ-0223",
+  "name": "STONE Сущевский Вал",
+  "address": "ул. Сущевский Вал, 31",
+  "crm_name": "Строение 1",
+  "crm_address": "Москва,Сущевский Вал улица,31,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B-"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0225",
+  "name": "Stories на Мосфильмовской",
+  "address": "Мосфильмовская ул., 100, Москва",
+  "crm_name": "На Мосфильмовской",
+  "crm_address": "Москва,Мосфильмовская улица,38А",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2026,
+   2011
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0002",
+  "name": "TESLA (Нагатино i-Land)",
+  "address": "Андропова пр-т, 18к9, стр.2",
+  "crm_name": "Нагатино i-Land",
+  "crm_address": "г. Москва, Андропова пр-кт, д. 18",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0586",
+  "name": "Trend Line",
+  "address": "Нахимовский пр-кт, 51",
+  "crm_name": "Trend Linе",
+  "crm_address": "г. Москва, Нагорный р-н, Нахимовский пр-кт, д. 51",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2022,
+   2021
+  ],
+  "cls": [
+   "B+",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0613",
+  "name": "Абсолют Союз",
+  "address": "Лужнецкая наб, д. 2/4, стр. 1",
+  "crm_name": "На Лужнецкой набережной",
+  "crm_address": "г. Москва, Лужнецкая наб, д. 2/4, стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0645",
+  "name": "Авиапарк Офисы",
+  "address": "Ходынский б-р, 4",
+  "crm_name": "ТЦ Авиапарк",
+  "crm_address": "г. Москва, Ходынский б-р, д. 4",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2014,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0436",
+  "name": "Академика Комарова, 1Д",
+  "address": "Академика Комарова, 1Д",
+  "crm_name": "Академик",
+  "crm_address": "Москва, проспект Вернадского, вл41",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2019,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0232",
+  "name": "Академика Опарина, 2",
+  "address": "ул. Академика Опарина, 2",
+  "crm_name": "Академик",
+  "crm_address": "Москва, проспект Вернадского, вл41",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2019,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0234",
+  "name": "Академика Янгеля, 12",
+  "address": "Академика Янгеля, 12",
+  "crm_name": "Академик",
+  "crm_address": "Москва, проспект Вернадского, вл41",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2019,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0731",
+  "name": "Башня Рябов (Рябовская Мануфактура, уточнить корпус)",
+  "address": "Холодильный пер., 3с1",
+  "crm_name": "Башня Рябов",
+  "crm_address": "г. Москва, Холодильный пер, д. 3, к. 1, стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2029
+ },
+ {
+  "unified_id": "UC-OBJ-0131",
+  "name": "Бережковская",
+  "address": "Бережковская набережная",
+  "crm_name": "Бережковская Promenade, 38",
+  "crm_address": "Москва,Бережковская набережная,38,стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2009
+ },
+ {
+  "unified_id": "UC-OBJ-0769",
+  "name": "Большевик 2",
+  "address": "Ленинградский пр-кт, 15с21",
+  "crm_name": "Большевик",
+  "crm_address": "Москва,Ленинградский проспект,15",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2015
+ },
+ {
+  "unified_id": "UC-OBJ-0025",
+  "name": "Ботаника",
+  "address": "ул. Леонова 1-я, д. 1",
+  "crm_name": "Ботаника",
+  "crm_address": "г. Москва, Вильгельма Пика ул., д. 11",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2024,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0047",
+  "name": "БП Переделкино",
+  "address": "Боровское шоссе, 29 км",
+  "crm_name": "БП Переделкино",
+  "crm_address": "г. Москва, Боровское шоссе 29-й (п Внуковское) км, двлд 4, стр. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2025,
+   2026
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0241",
+  "name": "Берёзка 10",
+  "address": "Берёзовая аллея, 5а, стр. 6",
+  "crm_name": "Березовая аллея",
+  "crm_address": "Москва,Березовая аллея,5А",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2008,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0759",
+  "name": "БЦ «Обсидиан»",
+  "address": "Москва, Хорошёвское шоссе, вл. 38А / ул. Авиаконструктора Микояна, 1",
+  "crm_name": "Обсидиан",
+  "crm_address": "г. Москва, Авиаконструктора Микояна ул., д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2026,
+   2025
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0252",
+  "name": "БЦ в Филях",
+  "address": "Береговой проезд, 4",
+  "crm_name": "Береговой проезд,4,корп. 3",
+  "crm_address": "Москва,Береговой проезд,4,корп. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0254",
+  "name": "БЦ Жуков проезд, 19",
+  "address": "Жуков проезд, 19",
+  "crm_name": "Жуков про",
+  "crm_address": "г. Москва, Жуков проезд, д. 19, стр. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2029,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0137",
+  "name": "БЦ Капитолий",
+  "address": "Москва, Вернадского пр-т, 6",
+  "crm_name": "Капитолий Вернадского",
+  "crm_address": "Москва,Вернадского проспект,6",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2006
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0718",
+  "name": "БЦ на 2-ой Магистральной, 7А",
+  "address": "2-я Магистральная ул., 7А",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0637",
+  "name": "БЦ на Войковской",
+  "address": "Старопетровский пр-д, 7А",
+  "crm_name": "Строение 25",
+  "crm_address": "Москва,Старопетровский проезд,7А,стр. 25",
+  "score": 0.5,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0768",
+  "name": "БЦ на Ленинградском пр-кте, 37А",
+  "address": "Ленинградский пр-кт, 37А",
+  "crm_name": "Аркус I",
+  "crm_address": "Москва,Ленинградский проспект,37А,стр. 1,корп. 14",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 1995
+ },
+ {
+  "unified_id": "UC-OBJ-0661",
+  "name": "БЦ Смольный (II очередь)",
+  "address": "Смольная ул., 14с2",
+  "crm_name": "Смольный",
+  "crm_address": "Москва,Смольная улица,14",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B"
+  ],
+  "year_filled_by_crm": 2008
+ },
+ {
+  "unified_id": "UC-OBJ-0432",
+  "name": "БЦ у авиапарка",
+  "address": "парковка у ТЦ Авиапарк",
+  "crm_name": "Авиапарк",
+  "crm_address": "г. Москва, Хорошевский р-н, Ходынский б-р, д. 4",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0375",
+  "name": "Вернадский",
+  "address": "Москва, проспект Вернадского, вл. 6В",
+  "crm_name": "Капитолий Вернадского II",
+  "crm_address": "г. Москва, Вернадского пр-кт, д. 6В",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2027,
+   2023
+  ],
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0134",
+  "name": "Вернадского 39",
+  "address": "Вернадского пр-кт, д. 39",
+  "crm_name": "Вернадский",
+  "crm_address": "г. Москва, Проспект Вернадского р-н, Вернадского пр-кт, д. 39",
+  "score": 0.67,
+  "match_type": "address",
+  "year": [
+   2027,
+   2025
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0278",
+  "name": "Вперед",
+  "address": "1-я ул. Ямского поля, вл. 17",
+  "crm_name": "1-я Ямского Поля, д. 17, корп. 1",
+  "crm_address": "г. Москва, ул. Ямского Поля 1-я, д. 17, стр 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0097",
+  "name": "Гагаринский",
+  "address": "Орджоникидзе ул., д. 11",
+  "crm_name": "Донской",
+  "crm_address": "Москва,Орджоникидзе улица,11,стр. 10",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2026,
+   2011
+  ],
+  "cls": [
+   "B+",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0646",
+  "name": "Деловой Квартал Light City",
+  "address": "2-я Магистральная ул., 3",
+  "crm_name": "LIGHT CITY",
+  "crm_address": "г. Москва, 2-я Магистральная ул., д. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2028
+ },
+ {
+  "unified_id": "UC-OBJ-0741",
+  "name": "Деловой Квартал Сколково Парк 1",
+  "address": "Сколковское ш., вл. 43",
+  "crm_name": "Сколково Парк, Здание 1",
+  "crm_address": "г. Москва, Сколковское ш., д. 43",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-0743",
+  "name": "Деловой Квартал Сколково Парк 2",
+  "address": "Сколковское ш., вл. 43",
+  "crm_name": "Сколково Парк, Здание 1",
+  "crm_address": "г. Москва, Сколковское ш., д. 43",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-0742",
+  "name": "Деловой Квартал Сколково Парк 3",
+  "address": "Сколковское ш., вл. 43",
+  "crm_name": "Сколково Парк, Здание 1",
+  "crm_address": "г. Москва, Сколковское ш., д. 43",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-0744",
+  "name": "Деловой Квартал Сколково Парк 4",
+  "address": "Сколковское ш., вл. 43",
+  "crm_name": "Сколково Парк, Здание 1",
+  "crm_address": "г. Москва, Сколковское ш., д. 43",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-0740",
+  "name": "Деловой Квартал Сколково Парк 5",
+  "address": "Сколковское ш., вл. 43",
+  "crm_name": "Сколково Парк, Здание 1",
+  "crm_address": "г. Москва, Сколковское ш., д. 43",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-0746",
+  "name": "Деловой Квартал Сколково Парк 6",
+  "address": "Сколковское ш., вл. 43",
+  "crm_name": "Сколково Парк, Здание 1",
+  "crm_address": "г. Москва, Сколковское ш., д. 43",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-0775",
+  "name": "Деловой квартал ЮПорт (корпус 2)",
+  "address": "пр-кт Андропова, 11к2",
+  "crm_name": "Корпус 2",
+  "crm_address": "Москва,Ленинградский проспект,8,корп. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "B+",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0460",
+  "name": "Дениса Давыдова ул., вл. 4",
+  "address": "Дениса Давыдова ул., вл. 4",
+  "crm_name": "Дениса Давыдова улица, д. 4",
+  "crm_address": "Москва,Дениса Давыдова улица,4",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1959,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0415",
+  "name": "Диапазон",
+  "address": "1-й Волоколамский проезд, 10с1",
+  "crm_name": "Диапазон",
+  "crm_address": "г. Москва, Щукино р-н, проезд 1-й Волоколамский, д. 10",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0556",
+  "name": "з/у Энтузиастов, 12",
+  "address": "ш. Энтузиастов,д. 12",
+  "crm_name": "Энтузиаст",
+  "crm_address": "г. Москва, Энтузиастов ш., д. 12",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2027,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0575",
+  "name": "ЗИЛ В",
+  "address": "Автозаводская улица,23,стр. 24",
+  "crm_name": "ЗИЛ Технопарк",
+  "crm_address": "г. Москва, ул. Автозаводская, д. 23, к. 15",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2023,
+   2024
+  ],
+  "cls": [
+   "B",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0084",
+  "name": "Инград Лужники",
+  "address": "Лужнецкий проезд",
+  "crm_name": "Лужники",
+  "crm_address": "Москва,Лужники улица,24,стр. 9",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0422",
+  "name": "Каминский",
+  "address": "Большой Кисельный переулок, 5с1",
+  "crm_name": "Каминский",
+  "crm_address": "г. Москва, пер Большой Кисельный, д. 17, стр 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2027,
+   1914
+  ],
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0728",
+  "name": "Капитолий (фаза II)",
+  "address": "пр-кт Вернадского, 6В",
+  "crm_name": "Капитолий Вернадского II",
+  "crm_address": "г. Москва, Вернадского пр-кт, д. 6В",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2023
+ },
+ {
+  "unified_id": "UC-OBJ-0443",
+  "name": "Кинотеатр \"Октябрь\"",
+  "address": "Новый Арбат, 24",
+  "crm_name": "ул, Арбат, д. 24",
+  "crm_address": "Москва,Арбат улица,24",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2014,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0006",
+  "name": "Кластер \"Ломоносов\"",
+  "address": "Вернадского пр-т., 8",
+  "crm_name": "Вернадского проспект,8",
+  "crm_address": "Москва,Вернадского проспект,8",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0295",
+  "name": "Красносельский жилой и деловой квартал",
+  "address": "грузовой двор «Москва-товарная-Рязанская»",
+  "crm_name": "Красносельский",
+  "crm_address": "г. Москва, ул. Верхняя Красносельская, д. 3",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0399",
+  "name": "Кристалл",
+  "address": "Самокатная, 4",
+  "crm_name": "Завод Кристалл",
+  "crm_address": "г. Москва, Самокатная ул., д. 4",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0560",
+  "name": "КРТ на магистральных улицах",
+  "address": "Хорошёвское шоссе, 39Бс1",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0297",
+  "name": "КРТ Теплый стан",
+  "address": null,
+  "crm_name": "Теплый стан",
+  "crm_address": "г. Москва, Генерала Тюленева ул., д. 4А, стр. 3",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2009,
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-0510",
+  "name": "Круглый БЦ на Павелецкой",
+  "address": "Жуков проезд, 19",
+  "crm_name": "Жуков про",
+  "crm_address": "г. Москва, Жуков проезд, д. 19, стр. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2029,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0303",
+  "name": "Ломоносов-2",
+  "address": "Раменский бульвар, 1с1, Москва",
+  "crm_name": "Ломоносов",
+  "crm_address": "г. Москва, Андропова пр-кт, д. 18, стр. 7",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2011,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0755",
+  "name": "Лофт Квартал Сколково (корпус 1)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0767",
+  "name": "Лофт Квартал Сколково (корпус 10)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0760",
+  "name": "Лофт Квартал Сколково (корпус 3)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Корпус 3",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 3",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0765",
+  "name": "Лофт Квартал Сколково (корпус 4)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2010
+ },
+ {
+  "unified_id": "UC-OBJ-0761",
+  "name": "Лофт Квартал Сколково (корпус 6)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2010
+ },
+ {
+  "unified_id": "UC-OBJ-0779",
+  "name": "Лофт Квартал Сколково (корпус 7)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2010
+ },
+ {
+  "unified_id": "UC-OBJ-0764",
+  "name": "Лофт Квартал Сколково (корпус 8)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Корпус 8",
+  "crm_address": "Москва,Ленинградский проспект,8",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2014
+ },
+ {
+  "unified_id": "UC-OBJ-0751",
+  "name": "Лофт Квартал Сколково (корпус 9)",
+  "address": "ИЦ Сколково, ул. Зворыкина, 1",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2010
+ },
+ {
+  "unified_id": "UC-OBJ-0567",
+  "name": "Лофт-квартал в Сколково",
+  "address": "ул. Зворыкина, д. 1",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2023,
+   2010
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0519",
+  "name": "Лужнецкая наб., вл. 6, стр. 1",
+  "address": "Лужнецкая наб., вл. 6, стр. 1",
+  "crm_name": "Лужнецкая набережная, д. 6 стр. 1",
+  "crm_address": "Москва,Лужнецкая набережная,6,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0164",
+  "name": "Лужники Collection",
+  "address": "г. Москва, Лужнецкая наб., вл. 2/4",
+  "crm_name": "На Лужнецкой набережной",
+  "crm_address": "г. Москва, Лужнецкая наб, д. 2/4, стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0660",
+  "name": "Медиацентр НТВ",
+  "address": "Новомосковская ул., вл. 18-22",
+  "crm_name": "Медиа Центр",
+  "crm_address": "Москва,Шоссейная улица,4Г",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2012
+ },
+ {
+  "unified_id": "UC-OBJ-0403",
+  "name": "Мичуринский проспект, вл. 45",
+  "address": "Мичуринский проспект, вл. 45",
+  "crm_name": "Мичуринский 45",
+  "crm_address": "г. Москва, Мичуринский пр-кт, д. 45",
+  "score": 0.5,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0688",
+  "name": "Многофункциональный офисный комплекс",
+  "address": "ш. Энтузиастов. вл. 12",
+  "crm_name": "Энтузиаст",
+  "crm_address": "г. Москва, Энтузиастов ш., д. 12",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2027
+ },
+ {
+  "unified_id": "UC-OBJ-0102",
+  "name": "МФК Сатирикон",
+  "address": "Шереметьевская ул., д. 8а",
+  "crm_name": "Сатирикон Плаза",
+  "crm_address": "Москва,Шереметьевская улица,8А",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2028
+ },
+ {
+  "unified_id": "UC-OBJ-0725",
+  "name": "МФК Электролитный",
+  "address": "Электролитный пр-д, вл. 3",
+  "crm_name": "Фаворит",
+  "crm_address": "Москва,Электролитный проезд,3",
+  "score": 0.5,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "B-"
+  ],
+  "year_filled_by_crm": 1984
+ },
+ {
+  "unified_id": "UC-OBJ-0112",
+  "name": "МФК Ямского Поля",
+  "address": "ул. 1-я ул. Ямского Поля, вл.12",
+  "crm_name": "Ямского Поля 1-я улица,12",
+  "crm_address": "Москва,Ямского Поля 1-я улица,12",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0063",
+  "name": "На Полесском",
+  "address": "проезд Полесский, д. 16, стр 2",
+  "crm_name": "На Полесском",
+  "crm_address": "г. Москва, проезд Полесский, д. 16, стр 2",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0456",
+  "name": "Нагатинская ул., вл. 34 стр. 2",
+  "address": "Нагатинская ул., вл. 34 стр. 2",
+  "crm_name": "Нагатинская улица,34",
+  "crm_address": "Москва,Нагатинская улица,34",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0178",
+  "name": "Неверовского, вл. 10",
+  "address": "г. Москва, ул. Неверовского, вл. 10",
+  "crm_name": "CROSSWALL",
+  "crm_address": "г. Москва, Неверовского ул., д. 10, стр. 3а",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ],
+  "year_filled_by_crm": 2014
+ },
+ {
+  "unified_id": "UC-OBJ-0317",
+  "name": "Неверовского, вл. 9",
+  "address": "Неверовского, вл. 9",
+  "crm_name": "Цетлин",
+  "crm_address": "г. Москва, Неверовского ул., д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2028,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0319",
+  "name": "Новослободская, 55, стр. 1",
+  "address": "Новослободская, 55 стр. 1",
+  "crm_name": "Новослободская улица,55",
+  "crm_address": "Москва,Новослободская улица,55",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006,
+  "cls_filled_by_crm": "C"
+ },
+ {
+  "unified_id": "UC-OBJ-0030",
+  "name": "Ньютон Плаза 2",
+  "address": "Нагатинский 1-й проезд, д. 10, стр. 2",
+  "crm_name": "Ньютон Плаза II",
+  "crm_address": "г. Москва, Нагатинский 1-й проезд, д. 10, стр. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2024,
+   2023
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0600",
+  "name": "Орбитал",
+  "address": "3-я Магистральная ул., 10",
+  "crm_name": "Orbital",
+  "crm_address": "г. Москва, ул. 3-я Магистральная, влд 10",
+  "score": 0.67,
+  "match_type": "address",
+  "year_filled_by_crm": 2023,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0146",
+  "name": "Офисно-складской комплекс на 60-летия Октября",
+  "address": "г. Москва, проспект 60-летия Октября, 11Ас5",
+  "crm_name": "60-летия Октября проспект,10,корп. 1",
+  "crm_address": "Москва,60-летия Октября проспект,10,корп. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0156",
+  "name": "Офисный комплекс в Мневниковской пойме",
+  "address": "Москва, ул. Нижние Мнёвники, 70, район Хорошёво-Мнёвники (Мнёвниковская пойма)",
+  "crm_name": "Офисный комплекс",
+  "crm_address": "Москва,Почтовая Б. улица,18",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-0673",
+  "name": "Офисный комплекс Кожуховский",
+  "address": "2-й Кожуховский пр-д, д.29, к2с16",
+  "crm_name": "Кожуховский",
+  "crm_address": "Москва,Лухмановская улица,24а",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0700",
+  "name": "Офисный комплекс на Зацепа 21",
+  "address": "ул. Зацепа, 21",
+  "crm_name": "Офисный комплекс",
+  "crm_address": "Москва,Почтовая Б. улица,18",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-0448",
+  "name": "офисный центр в Мневниковской пойме",
+  "address": "Мневниковская пойма",
+  "crm_name": "Офисный центр",
+  "crm_address": "г. Москва, ул. Садовая-Черногрязская, д. 8, стр 6",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2012,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0630",
+  "name": "Офисный центр Новая Ипатовка",
+  "address": "ул. Новая Ипатовка, вл. 23А",
+  "crm_name": "Офисный центр",
+  "crm_address": "г. Москва, ул. Садовая-Черногрязская, д. 8, стр 6",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2012
+ },
+ {
+  "unified_id": "UC-OBJ-0326",
+  "name": "Павелецкий грузовой двор",
+  "address": "Грузовой двор Москва-Товарная-Павелецкая",
+  "crm_name": "Павелецкий",
+  "crm_address": "Москва,Кожевнический 1-й переулок,10,стр. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0748",
+  "name": "Парк Легенд (корпус 2)",
+  "address": "Автозаводская ул., 23Ак2",
+  "crm_name": "Корпус 2",
+  "crm_address": "Москва,Ленинградский проспект,8,корп. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "B+",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0778",
+  "name": "Парк Легенд (корпус 4)",
+  "address": "Автозаводская ул., 23Ак2",
+  "crm_name": "Парк Легенд",
+  "crm_address": "Москва,Автозаводская улица,23,корп. 120",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-0001",
+  "name": "Парк Легенд, А",
+  "address": "Лихачева пр-т., 15",
+  "crm_name": "Легенда",
+  "crm_address": "Москва,Цветной бульвар,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2023,
+   2010
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0125",
+  "name": "Парк Победы",
+  "address": "г. Москва, улица Барклая, вл. 1",
+  "crm_name": "Stone Парк Победы",
+  "crm_address": "г. Москва, Дорогомилово р-н, Неверовского ул., влд 8",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2030,
+   2031
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0327",
+  "name": "пер. Вознесенский,6/3",
+  "address": "пер. Вознесенский,6/3",
+  "crm_name": "Вознесенский",
+  "crm_address": "Москва,Гнездниковский Б. переулок,1,стр. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1997,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0525",
+  "name": "Переведеновский переулок, 13, строения 11, 12",
+  "address": "Переведеновский переулок, 13, строения 11, 12",
+  "crm_name": "Бизнес парк \"Бауманский\"",
+  "crm_address": "Москва,Переведеновский переулок,13",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2008
+ },
+ {
+  "unified_id": "UC-OBJ-0440",
+  "name": "пр-кт Ленинградский, 47",
+  "address": "пр-кт Ленинградский, 47",
+  "crm_name": "Авион стр. 3",
+  "crm_address": "г. Москва, Ленинградский пр-кт, д. 47, стр 3",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0400",
+  "name": "пр-т Волгоградский, 32",
+  "address": "пр-т Волгоградский, 32",
+  "crm_name": "РТС Волгоградский",
+  "crm_address": "г. Москва, Волгоградский пр-кт, д. 32, к. 31",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2019,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0528",
+  "name": "Прокшино",
+  "address": "поселении Сосенское",
+  "crm_name": "Прокшино, 1 очередь",
+  "crm_address": "г. Москва, Коммунарка р-н, 35 кв-л, Коммунарка р-н, д. 10",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2024,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0466",
+  "name": "Расцветай Магистральная 9ас4",
+  "address": "ул. Магистральная 9Ас4",
+  "crm_name": "Магистраль",
+  "crm_address": "Москва,Магистральная 4-я улица,11",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2000,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0753",
+  "name": "Ривер Парк Коломенское (корпус 12, секции 1, 2)",
+  "address": "ул. Речников, зу 7/3",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0713",
+  "name": "Ривер Парк Коломенское (корпус 14, секция 1)",
+  "address": "ул. Речников, зу 7/7",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0714",
+  "name": "Ривер Парк Коломенское (корпус 14, секция 2)",
+  "address": "ул. Речников, зу 7/7",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0632",
+  "name": "Ростех-Сити (2-я оч.)",
+  "address": "ул. Летная, 95Б",
+  "crm_name": "Ростех-Сити",
+  "crm_address": "Москва,Волоколамское шоссе,75А",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2021
+ },
+ {
+  "unified_id": "UC-OBJ-0110",
+  "name": "РостехСити2",
+  "address": "Волоколамское шоссе, 75",
+  "crm_name": "Ростех-Сити",
+  "crm_address": "Москва,Волоколамское шоссе,75А",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2028,
+   2021
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0068",
+  "name": "Рябушинский",
+  "address": "ул. Тимура Фрунзе, д. 11, стр. 44",
+  "crm_name": "Space 1 JET Тимура Фрунзе",
+  "crm_address": "г. Москва, ул. Тимура Фрунзе, д. 11, стр 13",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0335",
+  "name": "Сакко и Ванцетти",
+  "address": "Кутузовский проспект, вл. 12, 14а",
+  "crm_name": "Кутузовский проспект,12,стр. 1",
+  "crm_address": "Москва,Кутузовский проспект,12,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-0048",
+  "name": "Север",
+  "address": "Ленинградский проспект, д . 36, к. 13",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2018
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0430",
+  "name": "Симоновский",
+  "address": "улица Ленинская Слобода, 26с35",
+  "crm_name": "Деловой квартал \"Симоновский\"",
+  "crm_address": "г. Москва, ул. Ленинская Слобода, д. 26, стр 5",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0564",
+  "name": "сколково",
+  "address": null,
+  "crm_name": "Upside Tech Сколково",
+  "crm_address": "г. Москва, инновационного центра Сколково тер, Большой б-р, д. 62",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2027,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0026",
+  "name": "Сколково парк (фаза 1), 1 и 2 корпус",
+  "address": "Поселок Заречье, ул. Весенняя, 2",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2024,
+   2010
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0446",
+  "name": "Солнце",
+  "address": "Старопетровский проезд, 7А",
+  "crm_name": "Строение 25",
+  "crm_address": "Москва,Старопетровский проезд,7А,стр. 25",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0385",
+  "name": "Сумма элементов Академика Пилюгина, д. 24",
+  "address": "улица Академика Пилюгина, д. 24",
+  "crm_name": "Академик",
+  "crm_address": "Москва, проспект Вернадского, вл41",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2019,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0412",
+  "name": "Сущевский Вал, 31",
+  "address": "Сущевский Вал, 31",
+  "crm_name": "Строение 1",
+  "crm_address": "Москва,Сущевский Вал улица,31,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-0407",
+  "name": "Талалихина, 41",
+  "address": "Талалихина, 41",
+  "crm_name": "Калитники",
+  "crm_address": "Москва,Талалихина улица,41",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2007,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0477",
+  "name": "Тверская, 24",
+  "address": "Тверская, 24",
+  "crm_name": "на Тверской",
+  "crm_address": "Москва,Тверская улица,24,стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2026,
+   1996
+  ],
+  "cls": [
+   "A",
+   "B-"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0459",
+  "name": "Текстильщиков 8-я ул., вл. 8",
+  "address": "Текстильщиков 8-я ул., вл. 8",
+  "crm_name": "Текстильщиков 8-я улица, д. 8",
+  "crm_address": "Москва,Текстильщиков 8-я улица,8",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "C"
+ },
+ {
+  "unified_id": "UC-OBJ-0537",
+  "name": "Территория спортивного комплекса \"Лужники\"",
+  "address": "Территория спортивного комплекса \"Лужники\"",
+  "crm_name": "Лужники",
+  "crm_address": "Москва,Лужники улица,24,стр. 9",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0376",
+  "name": "Техногород (оставшиеся корпуса)",
+  "address": "Москва, Волгоградский проспект, 42к8",
+  "crm_name": "Корпус А",
+  "crm_address": "Москва,Тверской бульвар,13,стр. 1,корп. А",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2027,
+   1994
+  ],
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-0657",
+  "name": "Технопарк ЗИЛ А",
+  "address": "Автозаводская ул., 23с85",
+  "crm_name": "Технопарк ЗИЛ (А2)",
+  "crm_address": "г. Москва, Автозаводская ул., д. 23, стр. 84",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2025
+ },
+ {
+  "unified_id": "UC-OBJ-0354",
+  "name": "Технополис Москва (корп. 13)",
+  "address": "пр-кт Волгоградский, 42к13",
+  "crm_name": "Технополис Москва",
+  "crm_address": "Москва,Волгоградский проспект,42",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2025,
+   2008
+  ],
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-0355",
+  "name": "Технополис Москва (штаб-квартира Трансмашхолдинг)",
+  "address": "г. Москва, Волгоградский проспект, 42, корп. 8",
+  "crm_name": "Волгоградский проспект,42,корп. 42а",
+  "crm_address": "Москва,Волгоградский проспект,42,корп. 42а",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2025,
+   2013
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0439",
+  "name": "улица Кульнева, 6",
+  "address": "улица Кульнева, 6",
+  "crm_name": "Кульнева улица,6",
+  "crm_address": "Москва,Кульнева улица,6",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005
+ },
+ {
+  "unified_id": "UC-OBJ-0551",
+  "name": "улица Серёгина, 5",
+  "address": "улица Серёгина, 5",
+  "crm_name": "Петровский Дом",
+  "crm_address": "Москва,Серегина улица,5",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1908,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0359",
+  "name": "Фабрика Станиславского Space 1",
+  "address": "улица Станиславского, 21с3",
+  "crm_name": "Фабрика Станиславского",
+  "crm_address": "Москва,Станиславского улица,21",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2026,
+   2007
+  ],
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0647",
+  "name": "Фили",
+  "address": "Промышленный пр-д, 5",
+  "crm_name": "Фили Центр",
+  "crm_address": "г. Москва, пр-д Промышленный, д. 5",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2026
+ },
+ {
+  "unified_id": "UC-OBJ-0554",
+  "name": "Ходынская улица, вл. 2, стр. 9",
+  "address": "Ходынская улица, вл. 2, стр. 9",
+  "crm_name": "Stone Пресня",
+  "crm_address": "г. Москва, Ходынская ул., д. 2, стр. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2024,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-0557",
+  "name": "шоссе Энтузиастов, вл. 12",
+  "address": "шоссе Энтузиастов, вл. 12",
+  "crm_name": "Энтузиаст",
+  "crm_address": "г. Москва, Энтузиастов ш., д. 12",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2027,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-0569",
+  "name": "Эталон/Андропова (Нагатино i-Land)",
+  "address": "Андропова проспект,182",
+  "crm_name": "Андропова проспект,182",
+  "crm_address": "г. Москва, Андропова пр-кт, д. 182",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2023,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-0625",
+  "name": "Южный Речной Порт",
+  "address": "Проспект Андропова,д.11 корп. 4,5,6,7",
+  "crm_name": "Riva",
+  "crm_address": "г. Москва, Андропова пр-кт, д. 11, к. 2",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2023,
+   2026
+  ],
+  "cls": [
+   "B",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-002",
+  "name": "Прайм Тайм",
+  "address": "Викторенко ул., д. 11",
+  "crm_name": "Прайм Тайм",
+  "crm_address": "г. Москва, Викторенко ул., д. 9, стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "B+",
+   "A"
+  ],
+  "year_filled_by_crm": 2022
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-003",
+  "name": "Королёв (Рассвет)",
+  "address": "Столярный пер., 3 корп. 1",
+  "crm_name": "KRooms Рассвет",
+  "crm_address": "Москва,Столярный переулок,3,корп. 5",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-004",
+  "name": "Top Tower",
+  "address": "Москва, Шепелихинский тупик, 17/1",
+  "crm_name": "Top Tower",
+  "crm_address": "г. Москва, Шелепихинский туп, д. 17",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-005",
+  "name": "Плэйн (бывший — Workplace Авиационная)",
+  "address": "Москва, ул. Авиационная, 22",
+  "crm_name": "ПЛЕЙН WORKPLACE",
+  "crm_address": "г. Москва, Авиационная ул., д. 22, стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2028
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-006",
+  "name": "Plaza Technopark",
+  "address": "г. Москва, Даниловский р-н, Андропова пр-кт, влд 10",
+  "crm_name": "Технопарк YES",
+  "crm_address": "г. Москва, Андропова пр-кт, влд 10",
+  "score": 0.6,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-008",
+  "name": "STONE Towers, Tower A",
+  "address": "г. Москва, Бумажный проезд, 19с1",
+  "crm_name": "Stone towers",
+  "crm_address": "г. Москва, проезд Бумажный, д. 19",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2022,
+   2024
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-009",
+  "name": "Минто (бывший — Workplace Волоколамское)",
+  "address": "Москва, Волоколамское шоссе, 32",
+  "crm_name": "МИНТО WORKPLACE",
+  "crm_address": "г. Москва, Волоколамское ш., влд 32",
+  "score": 0.5,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-012",
+  "name": "ул. Наметкина, 10А",
+  "address": "ул. Наметкина, 10А",
+  "crm_name": "Наметкина улица, д. 10А",
+  "crm_address": "Москва,Наметкина улица,10А",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-014",
+  "name": "Авиамоторная улица, 24",
+  "address": "Авиамоторная улица, 24",
+  "crm_name": "Авиамоторная улица,2",
+  "crm_address": "Москва,Авиамоторная улица,2",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "C"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-020",
+  "name": "Империя",
+  "address": "Пресненская наб., 6с2 (Москва-Сити)",
+  "crm_name": "Башня Империя II",
+  "crm_address": "г. Москва, Пресненский р-н, Пресненская наб, д. 6, стр. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year": [
+   2011,
+   2019
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-022",
+  "name": "Балчуг (Рабочая Станция)",
+  "address": "Садовническая наб., 9",
+  "crm_name": "Space 1 Балчуг",
+  "crm_address": "г. Москва, ул. Садовническая, д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   1994,
+   2021
+  ],
+  "cls": [
+   "B",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-026",
+  "name": "БЦ «Север»",
+  "address": "Москва, Ленинградский просп., д. 36, к. 13",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2027,
+   2018
+  ],
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-030",
+  "name": "WeWork Белая площадь (Белая Площадь)",
+  "address": "Лесная улица,5,стр. а-в",
+  "crm_name": "Белая площадь (White Square)",
+  "crm_address": "Москва,Лесная улица,5,стр. а-в",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-032",
+  "name": "WeWork Якиманка (Большая Якиманка 26)",
+  "address": "Большая Якиманка 26",
+  "crm_name": "Якиманка",
+  "crm_address": "г. Москва, Большая Якиманка ул., д. 18",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1997,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-033",
+  "name": "Регус (Смоленский Пассаж) (Смоленский Пассаж 1)",
+  "address": "Смоленская пл. 3",
+  "crm_name": "Смоленский Пассаж",
+  "crm_address": "Москва,Смоленская площадь,3",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2008,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-034",
+  "name": "Мой Кабинет (Сириус Парк)",
+  "address": "Каширское шоссе 3с1к2",
+  "crm_name": "Сириус Парк",
+  "crm_address": "Москва,Каширское шоссе,3,корп. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2014,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-037",
+  "name": "BusinessClub (Газетный)",
+  "address": "Газетный 17",
+  "crm_name": "Bussinesclub Газетный",
+  "crm_address": "Москва,Газетный переулок,17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1993,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-039",
+  "name": "BusinessClub (Ходынка)",
+  "address": "Авиаконструктора Микояна",
+  "crm_name": "Ходынка",
+  "crm_address": "Москва,Ходынская улица,2",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-040",
+  "name": "Рабочая Станция (Black&White) - KW (Black&White)",
+  "address": "Кожевническая ул. 14",
+  "crm_name": "Black&White (KW Black - Павелецкая)",
+  "crm_address": "г. Москва, ул. Кожевническая, д. 14, стр 5",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-041",
+  "name": "Балчуг Плаза - KW (Балчуг)",
+  "address": "Садовническая наб., 9",
+  "crm_name": "Space 1 Балчуг",
+  "crm_address": "г. Москва, ул. Садовническая, д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2021,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-044",
+  "name": "Ключ Сретенка (Сретенский б-р, 5)",
+  "address": "Сретенский б-р, 5",
+  "crm_name": "Ключ Сретенка",
+  "crm_address": "Москва,Сретенский бульвар,5",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-046",
+  "name": "BusinessClub Газетный (Газетный)",
+  "address": "Газетный 17",
+  "crm_name": "Bussinesclub Газетный",
+  "crm_address": "Москва,Газетный переулок,17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1993,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-048",
+  "name": "BusinessClub Ходынка (Ходынка)",
+  "address": "Авиаконструктора Микояна",
+  "crm_name": "Ходынка",
+  "crm_address": "Москва,Ходынская улица,2",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-050",
+  "name": "Speace Jet Белая площадь (Белая Площадь)",
+  "address": "Лесная улица,5,стр. а-в",
+  "crm_name": "Белая площадь (White Square)",
+  "crm_address": "Москва,Лесная улица,5,стр. а-в",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-052",
+  "name": "Speace Jet Якиманка (Большая Якиманка 26)",
+  "address": "Большая Якиманка 26",
+  "crm_name": "Якиманка",
+  "crm_address": "г. Москва, Большая Якиманка ул., д. 18",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1997,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-055",
+  "name": "Smart Yard (на Волгоградском) (РТС Волгоградский)",
+  "address": "Москва, Волгоградский проспект, дом 32, корпус 31",
+  "crm_name": "РТС Волгоградский",
+  "crm_address": "г. Москва, Волгоградский пр-кт, д. 32, к. 31",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2019,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-059",
+  "name": "Multispace Галерея Актер",
+  "address": "Тверская ул., 16, стр. 1",
+  "crm_name": "Тверской",
+  "crm_address": "Москва,Тверская улица,16,стр. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-060",
+  "name": "Атмосфера (Известия) (БЦ Известия)",
+  "address": "Тверская ул., 18",
+  "crm_name": "ИЗВЕСТИЯ",
+  "crm_address": "г. Москва, Тверская ул., д. 18, к. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2011,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-061",
+  "name": "Атмосфера (РИО на Ленинском) (ТЦ РИО на Ленинском)",
+  "address": "Ленинский пр-т 109",
+  "crm_name": "РИО на Ленинском",
+  "crm_address": "г. Москва, Ленинский пр-кт, д. 109",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-062",
+  "name": "Атмосфера (Квартал Вэст) (Квартал Вэст)",
+  "address": "Аминьевское шоссе, 6",
+  "crm_name": "Квартал WEST",
+  "crm_address": "г. Москва, Аминьевское ш., д. 6",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2020,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-066",
+  "name": "Flexity (Павелецкая Плаза (А))",
+  "address": "Павелецкая площадь, 2с1",
+  "crm_name": "Павелецкая Плаза",
+  "crm_address": "Москва,Павелецкая площадь,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2003,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-067",
+  "name": "Flexity Solo (Павелецкая Плаза (А))",
+  "address": "Павелецкая площадь, 2с1",
+  "crm_name": "Павелецкая Плаза",
+  "crm_address": "Москва,Павелецкая площадь,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2003,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-069",
+  "name": "SOK (SOK Сити (3 и 4 этаж))",
+  "address": "Пресненская наб., 12",
+  "crm_name": "Федерация",
+  "crm_address": "Пресненская наб., 12, Москва",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-070",
+  "name": "SOK (SOK Арена Парк (Рыбаков Тауэр))",
+  "address": "Ленинградский пр-т, вл. 36 стр. 11",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-071",
+  "name": "SOK (SOK Арена Парк 2)",
+  "address": "Ленинградский пр-т, вл. 36",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-072",
+  "name": "SOK (SOK Сады Пекина)",
+  "address": "Садовая Большая ул., 5 корп. 1-2",
+  "crm_name": "SOK Сады Пекина",
+  "crm_address": "г. Москва, ул. Большая Садовая, д. 5, к. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2016,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-073",
+  "name": "SOK (SOK Земляной Вал)",
+  "address": "Земляной Вал ул., 8",
+  "crm_name": "SOK Земляной Вал",
+  "crm_address": "Москва,Земляной Вал улица,8",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-074",
+  "name": "Space 1 (Лужники)",
+  "address": "Лкжнецкая набережная",
+  "crm_name": "Лужники",
+  "crm_address": "Москва,Лужники улица,24,стр. 9",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-076",
+  "name": "Apollax Space (Останкино)",
+  "address": "Огородный пр., 16/1с2",
+  "crm_name": "Останкино",
+  "crm_address": "г. Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2025,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-077",
+  "name": "Apollax Space (Новосущевский)",
+  "address": "ул. Сущёвский Вал, 18",
+  "crm_name": "NOVO",
+  "crm_address": "Москва,Сущевский Вал улица,18",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-078",
+  "name": "Apollax Space (Новослободская)",
+  "address": "Новослободская ул., 16",
+  "crm_name": "Meyerhold III",
+  "crm_address": "Москва,Новослободская улица,16",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2004,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-079",
+  "name": "Grow up (GrowUp на Павелецкой)",
+  "address": "ул. Дубининская, д.53, строение 5",
+  "crm_name": "Квартал-Сити (Grow up)",
+  "crm_address": "Москва, Дубининская улица,53 стр. 5",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2007,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-080",
+  "name": "Газетный (Газетный 17)",
+  "address": "Газетный пер., 17",
+  "crm_name": "Bussinesclub Газетный",
+  "crm_address": "Москва,Газетный переулок,17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1993,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-083",
+  "name": "Ходынка (Авиаконструктора Микояна)",
+  "address": "Москва, улица Авиаконструктора Микояна, дом 1",
+  "crm_name": "Обсидиан",
+  "crm_address": "г. Москва, Авиаконструктора Микояна ул., д. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2025,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-085",
+  "name": "Apollax Space (Кузнецкий Мост)",
+  "address": "Москва, Кузнецкий Мост, дом 13/9, строение 1",
+  "crm_name": "ASPACE Кузнецкий мост",
+  "crm_address": "г. Москва, Кузнецкий Мост ул., д. 13/9, стр. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1892,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-089",
+  "name": "Space 1 (Балчуг)",
+  "address": "Садовническая, 9",
+  "crm_name": "Space 1 Балчуг",
+  "crm_address": "г. Москва, ул. Садовническая, д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2021,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-094",
+  "name": "SOK Арена Парк 2 (SOK Арена Парк 2)",
+  "address": "Ленинградский пр-т, вл. 36",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-095",
+  "name": "SOK Арена Парк (Рыбаков Тауэр) (SOK Арена Парк (Рыбаков Тауэр))",
+  "address": "Ленинградский пр-т, вл. 36 стр. 11",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-097",
+  "name": "Manufaqtury Поклонка (Poklonka Place)",
+  "address": "Москва, Поклонная улица, дом 3",
+  "crm_name": "Poklonka Place",
+  "crm_address": "г. Москва, ул. Поклонная, д. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-098",
+  "name": "Онегин PMG (Онегин)",
+  "address": "Москва, улица Малая Полянка, 2",
+  "crm_name": "Онегин PMG (гибкий офис)",
+  "crm_address": "г. Москва, Малая Полянка ул., д. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2007,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-099",
+  "name": "Регус (Домников) (Домников)",
+  "address": "Маши Порываевой ул., д. 34",
+  "crm_name": "Домников",
+  "crm_address": "г. Москва, Маши Порываевой ул., д. 34",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2010,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-101",
+  "name": "Ключ Остоженка (Остоженка)",
+  "address": "Остоженка, д. 25, стр. 1",
+  "crm_name": "Ключ Остоженка",
+  "crm_address": "г. Москва, ул. Остоженка, д. 25, стр 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-103",
+  "name": "Ключ Сретенка (Сретенка)",
+  "address": "Сретенский бульвар, 5",
+  "crm_name": "Ключ Сретенка",
+  "crm_address": "Москва,Сретенский бульвар,5",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-104",
+  "name": "Практик на Пролетарской (ул. Воронцовская, д. 49/28)",
+  "address": "ул. Воронцовская, д. 49/28",
+  "crm_name": "Практик Пролетарская",
+  "crm_address": "г. Москва, ул. Воронцовская, д. 49/28, стр 1",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-107",
+  "name": "Meeting point (Даниловская Мануфактура)",
+  "address": "Варшавское шоссе, 9",
+  "crm_name": "Варшавское шоссе,9",
+  "crm_address": "Москва,Варшавское шоссе,9",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-108",
+  "name": "Meeting point (Гостиница Москва)",
+  "address": "Ул. Охотный ряд, д.2",
+  "crm_name": "Москва Meeting Point",
+  "crm_address": "г. Москва, Охотный Ряд ул., д. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2011,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-110",
+  "name": "Officeless (Полянка)",
+  "address": "Малая Полянка, 3",
+  "crm_name": "Officeless Полянка",
+  "crm_address": "г. Москва, Якиманка р-н, Малая Полянка ул., д. 3",
+  "score": 0.5,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-112",
+  "name": "Space 1 (Фабрика Станиславского)",
+  "address": "Станиславского 21",
+  "crm_name": "Фабрика Станиславского",
+  "crm_address": "Москва,Станиславского улица,21",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2007,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-113",
+  "name": "Space 1 (Арбат)",
+  "address": "Арбат ул., 10",
+  "crm_name": "Мидланд Плаза",
+  "crm_address": "Москва,Арбат улица,10",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2003,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-116",
+  "name": "Speace  Jet Белая площадь (Белая Площадь площадка закрыта)",
+  "address": "Лесная улица,5,стр. а-в",
+  "crm_name": "Белая площадь (White Square)",
+  "crm_address": "Москва,Лесная улица,5,стр. а-в",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-120",
+  "name": "Refolio Достоевский (Refolio Достоевский)",
+  "address": "Институтский пер., 2",
+  "crm_name": "ДОСТОЕВСКИЙ",
+  "crm_address": "г. Москва, Институтский пер, д. 2/1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1917,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-121",
+  "name": "СODE Якиманка (Кадашевская наб., 6)",
+  "address": "Кадашевская наб 8",
+  "crm_name": "Кадашевский 3-й переулок, д. 8",
+  "crm_address": "г. Москва,  пер Кадашевский 3-й, д. 8",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2002,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-125",
+  "name": "Multispace Динамо (ВТБ Арена стр 8)",
+  "address": "Ленинградский проспект,36,корп. 8",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-126",
+  "name": "Multispace Павелецкая (1 шипковский пер. 5)",
+  "address": "Ленинградский проспект,36,корп. 8",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-128",
+  "name": "Multispace Актер (Галерея Актер)",
+  "address": "Тверская ул., 16, стр. 1",
+  "crm_name": "Тверской",
+  "crm_address": "Москва,Тверская улица,16,стр. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-130",
+  "name": "SOK Арена Парк 2 (SOK Арена Парк)",
+  "address": "Ленинградский пр-т, вл. 36 ср.10",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 0.5,
+  "match_type": "address",
+  "year_filled_by_crm": 2018,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-131",
+  "name": "SOK Арена Парк (Рыбаков Тауэр) (SOK Рыбаков Тауэр)",
+  "address": "Ленинградский пр-т, вл. 36 стр. 11",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-132",
+  "name": "SOK Земляной Вал (SOK Земляной Вал)",
+  "address": "Земляной Вал ул., 8",
+  "crm_name": "SOK Земляной Вал",
+  "crm_address": "Москва,Земляной Вал улица,8",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-133",
+  "name": "SOK Сады Пекина (SOK Сады Пекина)",
+  "address": "Садовая Большая ул., 5 корп. 1-2",
+  "crm_name": "SOK Сады Пекина",
+  "crm_address": "г. Москва, ул. Большая Садовая, д. 5, к. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2016,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-134",
+  "name": "SOK Сити (3 и 4 этаж) (SOK Сити (3 и 4 этаж))",
+  "address": "Пресненская наб., 12",
+  "crm_name": "Федерация",
+  "crm_address": "Пресненская наб., 12, Москва",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-139",
+  "name": "Apollax Space (Никольская)",
+  "address": "Ветошный пер. 13",
+  "crm_name": "ASPACE Никольская",
+  "crm_address": "г. Москва, Ветошный пер, д. 13",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-140",
+  "name": "Apollax Space (Федерация (Сити))",
+  "address": "Пресненская наб. 12, башня Федерация, 18 этаж",
+  "crm_name": "Федерация",
+  "crm_address": "Пресненская наб., 12, Москва",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-144",
+  "name": "Apollax Space (Бригантина)",
+  "address": "Новолесная, 2",
+  "crm_name": "Бригантина Холл",
+  "crm_address": "Москва,Новолесная улица,2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-148",
+  "name": "Workki Зубовский (Зубовский 17)",
+  "address": "Зубовский б-р 17 стр.1",
+  "crm_name": "Progress Building",
+  "crm_address": "Москва,Зубовский бульвар,17",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "C"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-149",
+  "name": "Workki Сити (Федерация (Сити))",
+  "address": "Пресненская наб. 12, башня Федерация, 18 этаж",
+  "crm_name": "Федерация",
+  "crm_address": "Пресненская наб., 12, Москва",
+  "score": 0.9,
+  "match_type": "name",
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-150",
+  "name": "Workki Нео Гео (Нео Гео)",
+  "address": "ул. Бутлерова 17",
+  "crm_name": "NEO GEO",
+  "crm_address": "Москва, ул. Бутлерова, 17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-152",
+  "name": "Workki Комсомольская (Workki Комсомольская)",
+  "address": "Новорязанская, д.8",
+  "crm_name": "Workki Комсомольская",
+  "crm_address": "г. Москва, Красносельский р-н, Новорязанская ул., д. 8",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1985,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-153",
+  "name": "Workki Тульский (На Тульской)",
+  "address": "Б. Тульская стр.19",
+  "crm_name": "Большая Тульская улица, 19",
+  "crm_address": "Москва,Тульская Б. улица,19",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-154",
+  "name": "F2 (DM Tower)",
+  "address": "Новоданиловская наб. 10",
+  "crm_name": "Даниловский Форт (Корпус 1-2)",
+  "crm_address": "Москва,Новоданиловская набережная,10",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2008,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-155",
+  "name": "Рабочая Станция (Парк Горького) (Парк Горького)",
+  "address": "Ленинский пр-т 30А",
+  "crm_name": "Станция",
+  "crm_address": "г. Москва, Переведеновский пер, д. 13, стр. 16",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2008,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-158",
+  "name": "Регус (Пр. Мира, 40) (Проспект Мира, 40)",
+  "address": "Москва, проспект Мира, дом 40",
+  "crm_name": "Проспект Мира, 40",
+  "crm_address": "Москва,Проспект мира улица,40",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-159",
+  "name": "Регус (Капитолий) (Капитолий Вернадского)",
+  "address": "Вернадского проспект,6",
+  "crm_name": "Капитолий Вернадского",
+  "crm_address": "Москва,Вернадского проспект,6",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-161",
+  "name": "Регус (Авион) (Авион)",
+  "address": "Ленинградский проспект,47",
+  "crm_name": "Авион",
+  "crm_address": "Москва,Ленинградский проспект,47",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-162",
+  "name": "F2 - Федерация (Федерация (Сити))",
+  "address": "Пресненская набережная, 12",
+  "crm_name": "Федерация",
+  "crm_address": "Пресненская наб., 12, Москва",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-163",
+  "name": "Регус (Лесная Плаза) (White Stone)",
+  "address": "4-й Лесной пер., 4",
+  "crm_name": "White Stone",
+  "crm_address": "Москва,Лесной 4-й переулок,4",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-164",
+  "name": "Коворкинг СОЛЬ (Ролл Холл)",
+  "address": "Холодильный пер. 3",
+  "crm_name": "Башня Власов",
+  "crm_address": "г. Москва, Холодильный пер, д. 3, стр. 7",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2026,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-165",
+  "name": "KW Балчуг (Балчуг)",
+  "address": "Садовническая наб., 9",
+  "crm_name": "Space 1 Балчуг",
+  "crm_address": "г. Москва, ул. Садовническая, д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2021,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-166",
+  "name": "KW Павелецкая (Black&White)",
+  "address": "Кожевническая ул. 14",
+  "crm_name": "Black&White (KW Black - Павелецкая)",
+  "crm_address": "г. Москва, ул. Кожевническая, д. 14, стр 5",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-170",
+  "name": "Flexity (Риверсайд Тауэрс)",
+  "address": "Космадамианская наб., 52",
+  "crm_name": "Ривер Сайд",
+  "crm_address": "Москва,Павелецкая набережная,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2013,
+  "cls_filled_by_crm": "B-"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-171",
+  "name": "Flexity (Садовая Плаза)",
+  "address": "Долгоруковская ул. 7",
+  "crm_name": "Садовая Плаза",
+  "crm_address": "Москва,Долгоруковская улица,7",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2001,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-173",
+  "name": "Flexity SOLO/Flexity (Павелецкая Плаза (В))",
+  "address": "Павелецкая площадь, 2с1",
+  "crm_name": "Павелецкая Плаза",
+  "crm_address": "Москва,Павелецкая площадь,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2003,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-174",
+  "name": "Flexity SOLO/Flexity (Павелецкая Плаза (А))",
+  "address": "Павелецкая площадь, 2с1",
+  "crm_name": "Павелецкая Плаза",
+  "crm_address": "Москва,Павелецкая площадь,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2003,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-178",
+  "name": "БЦ Сколково",
+  "address": "Большой бульвар, 40, Инновационный центр Сколково",
+  "crm_name": "Сколково",
+  "crm_address": "г. Москва, Можайский р-н, ш Сколковское, д. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2010
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-179",
+  "name": "STONE Towers",
+  "address": "г. Москва, Беговой р-н, проезд Бумажный, д. 19",
+  "crm_name": "Stone towers",
+  "crm_address": "г. Москва, проезд Бумажный, д. 19",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-184",
+  "name": "Slava",
+  "address": "1-я ул. Ямского Поля, 8, стр. 1",
+  "crm_name": "СЛАВА | SLAVA",
+  "crm_address": "Москва г., 1-я Ямского Поля ул., вл. 8,10",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2025
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-191",
+  "name": "Магистральная 12 (бывший — Магистральная ул., 12)",
+  "address": "Москва, ул. Магистральная, 12",
+  "crm_name": "NORD.AG",
+  "crm_address": "г. Москва, 3-я Магистральная ул., д. 12, стр. 1",
+  "score": 0.5,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "A"
+  ],
+  "year_filled_by_crm": 2026
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-193",
+  "name": "Парк Легенд класс А",
+  "address": "г. Москва, Даниловский р-н, ул. Автозаводская, д. 23А",
+  "crm_name": "Парк Легенд",
+  "crm_address": "Москва,Автозаводская улица,23,корп. 120",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-194",
+  "name": "Парк Легенд класс В+",
+  "address": "г. Москва, Даниловский р-н, Автозаводская ул., д. 23, стр. 120",
+  "crm_name": "Башня 1 Парк Легенд класс В+",
+  "crm_address": "г. Москва, ул. Автозаводская, д. 130, к. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2023
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-197",
+  "name": "Air (корпус 1 (20 эт.))",
+  "address": "Москва, ул. Ходынский бульвар, вл. 4/1",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-214",
+  "name": "Plaza Botanica",
+  "address": "г. Москва, Ростокино р-н, ул. Вильгельма Пика, д. 11",
+  "crm_name": "Ботаника",
+  "crm_address": "г. Москва, Вильгельма Пика ул., д. 11",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2025,
+   2026
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-223",
+  "name": "STONE Савеловская (Башня 1)",
+  "address": "Москва, ул. Двинцев, вл. 3",
+  "crm_name": "Stone Cавеловская",
+  "crm_address": "г. Москва, ул. Двинцев, влд 3",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2026,
+   2025
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-224",
+  "name": "STONE Савеловская (Башня 2)",
+  "address": "Москва, ул. Двинцев, вл. 3",
+  "crm_name": "Stone Cавеловская",
+  "crm_address": "г. Москва, ул. Двинцев, влд 3",
+  "score": 0.5,
+  "match_type": "address",
+  "year": [
+   2026,
+   2025
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-236",
+  "name": "Рублево Бизнес-Парк (Корпус 1)",
+  "address": "Улица Липовой Рощи, 1к4",
+  "crm_name": "Корпус 1",
+  "crm_address": "Москва,Рябиновая улица,26,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-242",
+  "name": "STONE SKY Ходынка (F1)",
+  "address": "Москва, Ходынский бульвар",
+  "crm_name": "Stone Sky Ходынка",
+  "crm_address": "г. Москва, Хорошевский р-н, Ходынский б-р, д. 4а",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-243",
+  "name": "STONE SKY Ходынка (F2)",
+  "address": "Москва, Ходынский бульвар",
+  "crm_name": "Stone Sky Ходынка",
+  "crm_address": "г. Москва, Хорошевский р-н, Ходынский б-р, д. 4а",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "Prime",
+   "A"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-250",
+  "name": "CHALET Пятницкая 40",
+  "address": "ул. Пятницкая, д. 40",
+  "crm_name": "Пятницкая улица,40",
+  "crm_address": "Москва,Пятницкая улица,40",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "C"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-251",
+  "name": "Останкино (К1)",
+  "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "crm_name": "Останкино",
+  "crm_address": "г. Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-252",
+  "name": "Останкино (К2+К3)",
+  "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "crm_name": "Останкино",
+  "crm_address": "г. Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2022,
+   2025
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-253",
+  "name": "Останкино (К4)",
+  "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "crm_name": "Останкино",
+  "crm_address": "г. Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2023,
+   2025
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-254",
+  "name": "Останкино (К5)",
+  "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "crm_name": "Останкино",
+  "crm_address": "г. Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2023,
+   2025
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-255",
+  "name": "Останкино (К6)",
+  "address": "г, Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "crm_name": "Останкино",
+  "crm_address": "г. Москва, Бутырский р-н, проезд Огородный, влд 16",
+  "score": 1.0,
+  "match_type": "address",
+  "year": [
+   2024,
+   2025
+  ],
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-263",
+  "name": "Никольская",
+  "address": "Ветошный пер., 13",
+  "crm_name": "ASPACE Никольская",
+  "crm_address": "г. Москва, Ветошный пер, д. 13",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2006
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-264",
+  "name": "Цветной бульвар",
+  "address": "Цветной бул., 30с1",
+  "crm_name": "ASPACE Цветной Бульвар",
+  "crm_address": "Москва,Цветной бульвар,30,корп. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "B",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-265",
+  "name": "Новослободская",
+  "address": "Новослободская ул., 16",
+  "crm_name": "Meyerhold III",
+  "crm_address": "Москва,Новослободская улица,16",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2004
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-266",
+  "name": "Технопарк",
+  "address": "просп. Андропова, 10",
+  "crm_name": "ЗИЛ Технопарк",
+  "crm_address": "г. Москва, ул. Автозаводская, д. 23, к. 15",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2024
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-267",
+  "name": "Бригантина",
+  "address": "Новолесная ул., 2",
+  "crm_name": "Бригантина Холл",
+  "crm_address": "Москва,Новолесная улица,2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-268",
+  "name": "Кузнецкий Мост",
+  "address": "Кузнецкий Мост ул., 13",
+  "crm_name": "ASPACE Кузнецкий мост",
+  "crm_address": "г. Москва, Кузнецкий Мост ул., д. 13/9, стр. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1892
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-269",
+  "name": "Балчуг",
+  "address": "Садовническая наб., 9",
+  "crm_name": "Space 1 Балчуг",
+  "crm_address": "г. Москва, ул. Садовническая, д. 9",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B",
+   "A"
+  ],
+  "year_filled_by_crm": 2021
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-270",
+  "name": "Симонов",
+  "address": "Ленинская Слобода ул., 26с5",
+  "crm_name": "Деловой квартал \"Симоновский\"",
+  "crm_address": "г. Москва, ул. Ленинская Слобода, д. 26, стр 5",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "B+",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-272",
+  "name": "Новосущевский",
+  "address": "Сущевский вал ул., 18",
+  "crm_name": "NOVO",
+  "crm_address": "Москва,Сущевский Вал улица,18",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "A"
+  ],
+  "year_filled_by_crm": 2006
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-273",
+  "name": "Риверсайд Тауэрс",
+  "address": "Космодамианская наб., 52",
+  "crm_name": "Риверсайд Тауэрс",
+  "crm_address": "Москва,Космодамианская набережная,52",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-274",
+  "name": "Садовая Плаза",
+  "address": "Долгоруковская ул., 7",
+  "crm_name": "Садовая Плаза",
+  "crm_address": "Москва,Долгоруковская улица,7",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2001
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-275",
+  "name": "Павелецкая Плаза (А)",
+  "address": "Павелецкая пл., 2с1",
+  "crm_name": "Павелецкая Плаза",
+  "crm_address": "Москва,Павелецкая площадь,2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2003
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-276",
+  "name": "Павелецкая Плаза (В)",
+  "address": "Павелецкая пл., 2",
+  "crm_name": "Павелецкая Башня (В)",
+  "crm_address": "г. Москва, Павелецкая пл, д. 2, стр. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1997
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-277",
+  "name": "Black&White",
+  "address": "Кожевническая ул., 14",
+  "crm_name": "Black&White (KW Black - Павелецкая)",
+  "crm_address": "г. Москва, ул. Кожевническая, д. 14, стр 5",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ],
+  "year_filled_by_crm": 2013
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-280",
+  "name": "Зубовский 17",
+  "address": "Зубовский б-р, 17 стр.1",
+  "crm_name": "Progress Building",
+  "crm_address": "Москва,Зубовский бульвар,17",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B",
+   "C"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-284",
+  "name": "Авион",
+  "address": "Ленинградский просп., 47 стр.2",
+  "crm_name": "Авион",
+  "crm_address": "Москва,Ленинградский проспект,47",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B",
+   "B+"
+  ],
+  "year_filled_by_crm": 2005
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-285",
+  "name": "Капитолий Вернадского",
+  "address": "просп. Вернадского, 6",
+  "crm_name": "Капитолий Вернадского",
+  "crm_address": "Москва,Вернадского проспект,6",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 2006
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-289",
+  "name": "Workki Комсомольская",
+  "address": "Новорязанская ул., 8",
+  "crm_name": "Workki Комсомольская",
+  "crm_address": "г. Москва, Красносельский р-н, Новорязанская ул., д. 8",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1985
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-290",
+  "name": "Нео Гео",
+  "address": "ул. Бутлерова, 17",
+  "crm_name": "NEO GEO",
+  "crm_address": "Москва, ул. Бутлерова, 17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2013
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-291",
+  "name": "На Тульской",
+  "address": "Б. Тульская ул., 19",
+  "crm_name": "Большая Тульская улица, 19",
+  "crm_address": "Москва,Тульская Б. улица,19",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-292",
+  "name": "Галерея Актер",
+  "address": "Тверская ул., 16с1",
+  "crm_name": "Галерея Актер",
+  "crm_address": "Москва, Тверская ул., 16С1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1996
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-294",
+  "name": "Даниловская Мануфактура",
+  "address": "Варшавское ш., 9",
+  "crm_name": "Варшавское шоссе,9",
+  "crm_address": "Москва,Варшавское шоссе,9",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "B"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-295",
+  "name": "Гостиница Москва",
+  "address": "ул. Охотный Ряд, 2",
+  "crm_name": "Москва Meeting Point",
+  "crm_address": "г. Москва, Охотный Ряд ул., д. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2011
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-296",
+  "name": "SOK Земляной Вал",
+  "address": "ул. Земляной Вал, 8",
+  "crm_name": "SOK Земляной Вал",
+  "crm_address": "Москва,Земляной Вал улица,8",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "B+",
+   "B"
+  ],
+  "year_filled_by_crm": 2006
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-297",
+  "name": "SOK Сады Пекина",
+  "address": "Большая Садовая ул., 5к1",
+  "crm_name": "SOK Сады Пекина",
+  "crm_address": "г. Москва, ул. Большая Садовая, д. 5, к. 1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2016
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-298",
+  "name": "Refolio Достоевский",
+  "address": "Институтский пер., 2",
+  "crm_name": "ДОСТОЕВСКИЙ",
+  "crm_address": "г. Москва, Институтский пер, д. 2/1",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 1917
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-300",
+  "name": "Фили Град",
+  "address": "Береговой пр-д, 5Ак1",
+  "crm_name": "Фили Град (F2.Fili)",
+  "crm_address": "Москва, Береговой пр., 5",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2017
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-302",
+  "name": "Парк Горького",
+  "address": "Ленинский просп., 30А",
+  "crm_name": "РС Парк Горького",
+  "crm_address": "г. Москва, Донской р-н, Ленинский пр-кт, д. 30А",
+  "score": 0.9,
+  "match_type": "name",
+  "cls": [
+   "B",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-303",
+  "name": "White Stone",
+  "address": "4-й Лесной пер., 4",
+  "crm_name": "White Stone",
+  "crm_address": "Москва,Лесной 4-й переулок,4",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2005
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-304",
+  "name": "Проспект Мира, 40",
+  "address": "просп. Мира, 40",
+  "crm_name": "Проспект Мира, 40",
+  "crm_address": "Москва,Проспект мира улица,40",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ],
+  "year_filled_by_crm": 2013
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-307",
+  "name": "Фабрика Станиславского",
+  "address": "ул. Станиславского, 21с1",
+  "crm_name": "Фабрика Станиславского",
+  "crm_address": "Москва,Станиславского улица,21",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2007
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-308",
+  "name": "Большая Якиманка 26",
+  "address": "Б. Якиманка ул., 26",
+  "crm_name": "Space 1 JET Большая Якиманка",
+  "crm_address": "Москва,Якиманка Б. улица,26",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 1996
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-309",
+  "name": "Poklonka Place",
+  "address": "Поклонная ул., 3",
+  "crm_name": "Poklonka Place",
+  "crm_address": "г. Москва, ул. Поклонная, д. 3",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-310",
+  "name": "Ролл Холл",
+  "address": "Холодильный пер., 3",
+  "crm_name": "Башня Власов",
+  "crm_address": "г. Москва, Холодильный пер, д. 3, стр. 7",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2026
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-311",
+  "name": "Аркус 3",
+  "address": "Ленинградский просп., 37А стр.4",
+  "crm_name": "Аркус I",
+  "crm_address": "Москва,Ленинградский проспект,37А,стр. 1,корп. 14",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B+"
+  ],
+  "year_filled_by_crm": 1995
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-314",
+  "name": "SOK Рыбаков Тауэр",
+  "address": "Ленинградский пр-т, вл. 36 стр. 11",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-315",
+  "name": "SOK Арена Парк",
+  "address": "Ленинградский пр-т, вл. 36 стр. 10",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-318",
+  "name": "Газетный 17",
+  "address": "Газетный пер., 17",
+  "crm_name": "Bussinesclub Газетный",
+  "crm_address": "Москва,Газетный переулок,17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1993
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-319",
+  "name": "Кадашевская наб., 6",
+  "address": "Кадашевская наб., 6",
+  "crm_name": "CODE Якиманка",
+  "crm_address": "Москва,Кадашевская набережная,6",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1967
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-321",
+  "name": "1 шипковский пер. 5",
+  "address": "1-й Щипковский переулок, 5",
+  "crm_name": "Multispace Павелецкая",
+  "crm_address": "г. Москва, 1-й Щипковский пер, д. 5",
+  "score": 1.0,
+  "match_type": "address",
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-322",
+  "name": "GrowUp на Павелецкой",
+  "address": "ул. Дубининская, д.53, строение 5",
+  "crm_name": "Квартал-Сити (Grow up)",
+  "crm_address": "Москва, Дубининская улица,53 стр. 5",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2007,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-323",
+  "name": "SOK Арена Парк 2",
+  "address": "Ленинградский пр-т, вл. 36",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-324",
+  "name": "SOK Арена Парк (Рыбаков Тауэр)",
+  "address": "Ленинградский пр-т, вл. 36 стр. 11",
+  "crm_name": "ВТБ Арена Парк",
+  "crm_address": "Москва,Ленинградский проспект,36",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2018
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-327",
+  "name": "Арбат",
+  "address": "Арбат ул., 10",
+  "crm_name": "Мидланд Плаза",
+  "crm_address": "Москва,Арбат улица,10",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2003
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-328",
+  "name": "Белая Площадь",
+  "address": "Лесная улица,5,стр. а-в",
+  "crm_name": "Белая площадь (White Square)",
+  "crm_address": "Москва,Лесная улица,5,стр. а-в",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-329",
+  "name": "Белая Площадь площадка закрыта",
+  "address": "Лесная улица,5,стр. а-в",
+  "crm_name": "Белая площадь (White Square)",
+  "crm_address": "Москва,Лесная улица,5,стр. а-в",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2009
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-330",
+  "name": "БЦ Известия",
+  "address": "Тверская ул., 18",
+  "crm_name": "ИЗВЕСТИЯ",
+  "crm_address": "г. Москва, Тверская ул., д. 18, к. 1",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2011
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-332",
+  "name": "Газетный",
+  "address": "Газетный 17",
+  "crm_name": "Bussinesclub Газетный",
+  "crm_address": "Москва,Газетный переулок,17",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 1993
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-333",
+  "name": "Гринвуд",
+  "address": "72 км МКАД, п/о Путилково, строение 19",
+  "crm_name": "Гринвуд (Стр. 19)",
+  "crm_address": "Москва, МКАД, 69-й километр, внешняя сторона, к19",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2009
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-334",
+  "name": "Домников",
+  "address": "Маши Порываевой ул., д. 34",
+  "crm_name": "Домников",
+  "crm_address": "г. Москва, Маши Порываевой ул., д. 34",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2010
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-336",
+  "name": "Квартал Вэст",
+  "address": "Аминьевское шоссе, 6",
+  "crm_name": "Квартал WEST",
+  "crm_address": "г. Москва, Аминьевское ш., д. 6",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2020
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-338",
+  "name": "Лужники",
+  "address": "Лкжнецкая набережная",
+  "crm_name": "Sminex Лужники (ex. InGrad)",
+  "crm_address": "г. Москва, Лужнецкая наб, д. 10А",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2026,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-340",
+  "name": "Онегин",
+  "address": "Москва, улица Малая Полянка, 2",
+  "crm_name": "Онегин PMG (гибкий офис)",
+  "crm_address": "г. Москва, Малая Полянка ул., д. 2",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2007
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-342",
+  "name": "Полянка",
+  "address": "Малая Полянка, 3",
+  "crm_name": "Officeless Полянка",
+  "crm_address": "г. Москва, Якиманка р-н, Малая Полянка ул., д. 3",
+  "score": 0.5,
+  "match_type": "address",
+  "cls": [
+   "C",
+   "B+"
+  ]
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-345",
+  "name": "РТС Волгоградский",
+  "address": "Волгоградский проспект, 32к31",
+  "crm_name": "РТС Волгоградский",
+  "crm_address": "г. Москва, Волгоградский пр-кт, д. 32, к. 31",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2019
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-346",
+  "name": "Сириус Парк",
+  "address": "Каширское шоссе 3с1к2",
+  "crm_name": "Сириус Парк",
+  "crm_address": "Москва,Каширское шоссе,3,корп. 2",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2014
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-347",
+  "name": "Смоленский Пассаж 1",
+  "address": "Смоленская пл. 3",
+  "crm_name": "Смоленский Пассаж",
+  "crm_address": "Москва,Смоленская площадь,3",
+  "score": 1.0,
+  "match_type": "address",
+  "year_filled_by_crm": 2008,
+  "cls_filled_by_crm": "B+"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-349",
+  "name": "ТЦ РИО на Ленинском",
+  "address": "Ленинский пр-т 109",
+  "crm_name": "РИО на Ленинском",
+  "crm_address": "г. Москва, Ленинский пр-кт, д. 109",
+  "score": 0.5,
+  "match_type": "address",
+  "cls": [
+   "B",
+   "B+"
+  ],
+  "year_filled_by_crm": 2013
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-350",
+  "name": "Ходынка",
+  "address": "Авиаконструктора Микояна",
+  "crm_name": "Stone Sky Ходынка",
+  "crm_address": "г. Москва, Хорошевский р-н, Ходынский б-р, д. 4а",
+  "score": 0.9,
+  "match_type": "name",
+  "year_filled_by_crm": 2032,
+  "cls_filled_by_crm": "A"
+ },
+ {
+  "unified_id": "UC-OBJ-ADD-353",
+  "name": "Прайм Лайф Варшавская",
+  "address": "г. Москва, Варшавское шоссе, 36",
+  "crm_name": "Варшавское шоссе,36",
+  "crm_address": "Москва,Варшавское шоссе,36",
+  "score": 1.0,
+  "match_type": "address",
+  "cls": [
+   "A",
+   "B"
+  ]
+ }
+]
