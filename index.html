@@ -2306,6 +2306,7 @@ function renderBuildingsLegend() {
 // Полигоны границ (fetchGeoJSON) в это не заворачиваем — они почти
 // неизменны, агрессивное кэширование там ускоряет переключение кварталов.
 function fetchJSON(url, fallback) {
+  if (!url) return Promise.resolve(fallback);
   return fetch(url, { cache: 'no-cache' }).then(r => r.json()).catch(() => fallback);
 }
 function fetchJSONRequired(url) {
