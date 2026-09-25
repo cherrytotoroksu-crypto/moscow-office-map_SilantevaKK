@@ -1,0 +1,87 @@
+{
+  "checked_on": "2026-09-25",
+  "scope": "fourth reviewed wave: commissioning years and office-project areas",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-173",
+      "canonical_name": "Rail.A",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2026, "input_quarter": null, "input_date_kind": "planned"},
+      "building_date_key": "rail.a",
+      "building_date_source_before": "ПЕРЕПРОВЕРЕНО (2026-08-01): застройщик ORTIGA Development, Переведеновский пер. — ortiga.ru, свежая новость от 19.06.2026 описывает АКТИВНУЮ стройку (фасадные работы этажи 14-19, монолит 25 этажа, кладка стен 21-24, окна 21-24/27-28, кровля, электрика 29 этажа) — здание явно далеко от готовности, продающий сайт rail-a.ru всё ещё рекламирует лапсированный план «ввод конец 2025» как маркетинг; commission_q не проставляю",
+      "sources": [
+        "https://ortiga.ru/news/019c6afc-1a03-440e-bb0d-dc224053effa",
+        "https://ibcrealestate.ru/catalog/T96_16263/"
+      ],
+      "reliability": "high for year; quarter deliberately omitted",
+      "decision": "The developer states that Rail.A will open in 2026, and the current IBC listing independently gives 2026. IBC's Q3 is not copied because construction updates and older plans do not support quarter-level precision."
+    },
+    {
+      "canonical_project_id": "proj-234",
+      "canonical_name": "МФК Юг",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2026, "input_quarter": null, "input_date_kind": "planned"},
+      "building_date_key": "мфк юг",
+      "sources": [
+        "https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/biznes-centr-2-y-horoshevskiy-proezd-vl-7",
+        "https://ibcrealestate.ru/upload/iblock/fd5/jgfju8ll3moqv18q0mdyd4z4ljoznsse/Bolshoy-Siti_YAnvar-2025_FINAL_2.pdf"
+      ],
+      "reliability": "high for year; quarter deliberately omitted",
+      "decision": "The current IPG page matches the exact address, GBA 30,430 and GLA 24,300 and gives 2026. IBC's Big City report independently matches the project, developer and office area and also gives 2026. Conflicting listing quarters are not copied."
+    },
+    {
+      "canonical_project_id": "proj-281",
+      "canonical_name": "Мираполис",
+      "before": {"gla": null},
+      "after": {"gla": 7300},
+      "sources": [
+        "https://cre.ru/news/97480",
+        "https://rrg.ru/predlozheniya/prodazha-ofisov?Project_page=2"
+      ],
+      "reliability": "medium-high",
+      "decision": "Two independent commercial-real-estate sources identify a 7,300 sqm office block in Mirapolis. The 193,155 sqm figure refers to the entire mixed-use complex and is not copied into office-project GBA."
+    },
+    {
+      "canonical_project_id": "proj-282",
+      "canonical_name": "БЦ «Север»",
+      "before": {"gba": null, "gla": 56000},
+      "after": {"gba": 77315, "gla": 57924},
+      "sources": [
+        "https://hals-development.ru/realty/object/sever"
+      ],
+      "reliability": "high (official developer)",
+      "decision": "The current official developer page explicitly publishes GBA/GLA 77,315/57,924 sqm for the same Prime-class office building at Leningradsky Prospekt 36 building 13. The earlier rounded GLA 56,000 is replaced by the official exact value."
+    },
+    {
+      "canonical_project_id": "proj-283",
+      "canonical_name": "БЦ «Северный Порт»",
+      "before": {"gba": null},
+      "after": {"gba": 23870.84},
+      "sources": [
+        "https://www.novostroy-m.ru/baza/biznestsentr_na_leningradskom_shosse"
+      ],
+      "reliability": "high for GBA (current page links the 2026 project declaration)",
+      "decision": "The current project page identifies the separate 16-storey office tower, links the September 2026 project declaration, and states exact total area 23,870.84 sqm. GLA is left null because market sources disagree. The existing Q4 2026 plan is retained without inventing a more precise or later date."
+    }
+  ],
+  "rejected": [
+    {
+      "canonical_project_id": "proj-171",
+      "canonical_name": "QOOB",
+      "reason": "The current 2026 sources describe QOOB building B (about 10.8 thousand sqm), while this registry row is an aggregate of about 21.5 thousand sqm. The previous 2025/2026 phase conflict therefore remains unresolved at registry grain.",
+      "sources": [
+        "https://ibcrealestate.ru/catalog/T96_15929/",
+        "https://d-a.ru/projects/offices/qoob/news/biznes-tsentr-kub-poluchil-zaklyuchenie-o-sootvetstvii-/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-283",
+      "canonical_name": "БЦ «Северный Порт»",
+      "reason": "GLA remains null: IBC and CORE publish different rentable/office-area figures, so only the project-declaration-backed GBA is accepted.",
+      "sources": [
+        "https://www.core-market.ru/estate/office/severnyy_port_legenda",
+        "https://ibcrealestate.ru/upload/iblock/b93/5qya3eoro806s2h81ink3o2rht0ax8m3/IBC_Real_Estate_MPT-i-ofisnaya-nedvizhimost.pdf"
+      ]
+    }
+  ]
+}
