@@ -1,0 +1,98 @@
+{
+  "checked_on": "2026-09-25",
+  "scope": "third wave of commissioning-date verification for unresolved office projects",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-102",
+      "canonical_name": "Парк Легенд класс А",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "confirmed"},
+      "after": {"input_year": 2023, "input_quarter": 2, "input_date_kind": "confirmed"},
+      "sources": [
+        "https://ibcrealestate.ru/upload/iblock/028/j1dq65fbpoj38nxbex4kg8xr0zdazqfe/IBC_OFFICE-MARKET-Q2-2023.pdf",
+        "https://core-xp.ru/news/analitiki-corexp-podveli-rezultaty-polugodiya-na-ofisnom-rynke-moskvy/"
+      ],
+      "reliability": "high",
+      "decision": "IBC Real Estate reports the class A Park Legends office component (42 thousand sqm, matching this row's scale) among projects commissioned in Q2 2023. CORE.XP independently lists Park Legends Tower A, class A, among offices commissioned in Q2 2023."
+    },
+    {
+      "canonical_project_id": "proj-152",
+      "canonical_name": "Mind",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2029, "input_quarter": null, "input_date_kind": "planned"},
+      "sources": [
+        "https://www.vedomosti.ru/press_releases/2026/06/25/soglasovano-stroitelstvo-ofisnogo-kompleksa-na-ulitse-seregina",
+        "https://mind.vsngroup.ru/"
+      ],
+      "reliability": "high for year; quarter deliberately omitted",
+      "decision": "The MR Group company release identifies the 33 thousand sqm MIND office complex on Seregina Street and plans commissioning in 2029. The current project sales page independently matches the address and area and specifies Q2 2029. Only the officially stated year is accepted; the quarter remains null. The older 2030 reference concerns the wider mixed-use development, not the office building."
+    },
+    {
+      "canonical_project_id": "proj-252",
+      "canonical_name": "Бизнес-парк Раменки (бывший — Огни)",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2027, "input_quarter": 4, "input_date_kind": "planned"},
+      "sources": [
+        "https://www.novostroy-m.ru/baza/mfk_v_ramenkah",
+        "https://realtypulse.ru/objects/donstroy-ramenki",
+        "https://gabs-moscow.ru/offers/ramenki/84547/"
+      ],
+      "reliability": "medium-high",
+      "decision": "Three independent market pages identify the same office building by the exact Lobachevskogo 114B address and approximately 22,874.7 sqm area and consistently state Q4 2027. This is not the separate 81.8 thousand sqm Business Park Ramenki announced by Donstroy in September 2026; the canonical name remains flagged for later identity cleanup."
+    }
+  ],
+  "rejected": [
+    {
+      "canonical_project_id": "proj-87",
+      "canonical_name": "Slava",
+      "reason": "The available commissioning notice concerns the residential/apartment first phase. No current source was found that confirms commissioning of the office building at 1st Yamskogo Polya Street, 8 building 1.",
+      "sources": [
+        "https://slava-office.ru/",
+        "https://slava-moscow.com/news/pervaya-ochered-premialnogo-kompleksa-slava-poluchila-razreshenie-na-vvod-v-ekspluatatsiyu"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-103",
+      "canonical_name": "Парк Легенд класс В+",
+      "reason": "Current pages describing a 2017 class B+ building point to 23A building 2 and about 36 thousand sqm, while this record is 23 building 120 and 48 thousand sqm. The date is not transferred across that entity/grain mismatch.",
+      "sources": [
+        "https://park-legend.ru/",
+        "https://parklegend-bc.ru/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-106",
+      "canonical_name": "AFI Парк Воронцовский",
+      "reason": "The official office-project page still describes Q4 2025 as a plan, and a September 2025 update still reported interior works. No office-building permission to commission was found; the residential permission is not reused.",
+      "sources": [
+        "https://afi-v-park.ru/news/zaversheny-krovelnye-raboty-biznes-tsentra-afi-park-vorontsovskiy",
+        "https://afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-171",
+      "canonical_name": "QOOB",
+      "reason": "Dominanta reported a certificate of conformity on 25 February 2026 and explicitly called it the final stage before permission to commission. The older Q4 2025 plan therefore cannot be treated as an actual commissioning date.",
+      "sources": [
+        "https://d-a.ru/projects/offices/qoob/news/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-250",
+      "canonical_name": "Эйлер",
+      "reason": "Published dates remain inconsistent (Q3 2026, Q2 2026, and Q3 2025) and no current official page resolving the phase/grain conflict was found.",
+      "sources": [
+        "https://ibcrealestate.ru/catalog/T96_15661/",
+        "https://www.cian.ru/sale/commercial/328659891/",
+        "https://www.cian.ru/rent/commercial/328190998/"
+      ]
+    },
+    {
+      "canonical_project_id": "proj-259",
+      "canonical_name": "Aurus",
+      "reason": "The record at Antonova-Ovseenko 13-15 appears to mix an office-market row with the separate AURUS Residences project. Residential completion dates are not transferred until the office entity and development grain are resolved.",
+      "sources": [
+        "data/building_dates.json key=aurus"
+      ]
+    }
+  ]
+}

@@ -734,11 +734,12 @@
   "бизнес-парк раменки (бывший — огни)": {
     "construction_start_q": "201806",
     "start_q": "201903",
-    "commission_q": null,
-    "source": "novostroycity.ru, domkad.ru — разрешение на строительство и старт продаж 2018-2019; сроки сдачи по комплексу расходятся сильно (Q1 2025 - Q4 2029, часть корпусов комплекса уже сдана, но неясно, относится ли это к отслеживаемой у нас части) — не проставляю commission_q из-за низкой уверенности",
-    "last_checked": "2026-07-14",
+    "commission_q": "202710",
+    "source": "Verified sources: https://www.novostroy-m.ru/baza/mfk_v_ramenkah, https://realtypulse.ru/objects/donstroy-ramenki, https://gabs-moscow.ru/offers/ramenki/84547/",
+    "last_checked": "2026-09-25",
     "canonical_project_id": "proj-252",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2027
   },
   "сити-4": {
     "construction_start_q": "202502",
@@ -907,6 +908,26 @@
     "commission_q": "202809",
     "commission_year": 2028,
     "source": "Verified sources: https://business.level.ru/projects/work-nizhegorodskaya/, https://work-nizhegorodskaya.level.ru/",
+    "last_checked": "2026-09-25"
+  },
+  "парк легенд класс а": {
+    "canonical_project_id": "proj-102",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202304",
+    "commission_year": 2023,
+    "source": "Verified sources: https://ibcrealestate.ru/upload/iblock/028/j1dq65fbpoj38nxbex4kg8xr0zdazqfe/IBC_OFFICE-MARKET-Q2-2023.pdf, https://core-xp.ru/news/analitiki-corexp-podveli-rezultaty-polugodiya-na-ofisnom-rynke-moskvy/",
+    "last_checked": "2026-09-25"
+  },
+  "mind": {
+    "canonical_project_id": "proj-152",
+    "canonical_building_id": null,
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2029,
+    "source": "Verified sources: https://www.vedomosti.ru/press_releases/2026/06/25/soglasovano-stroitelstvo-ofisnogo-kompleksa-na-ulitse-seregina, https://mind.vsngroup.ru/",
     "last_checked": "2026-09-25"
   }
 }

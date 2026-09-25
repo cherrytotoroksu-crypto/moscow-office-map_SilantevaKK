@@ -35,13 +35,16 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("https://kobzon.city/team", row["qa_notes"])
         self.assertIn("https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716", row["qa_notes"])
 
-    def test_mind_date_conflict_is_visible_and_not_normalized(self):
+    def test_mind_office_date_is_resolved_without_reusing_mixed_use_date(self):
         row = self.by_id["proj-152"]
-        self.assertIsNone(row["input_year"])
+        self.assertEqual(row["input_year"], 2029)
+        self.assertIsNone(row["input_quarter"])
+        self.assertEqual(row["input_date_kind"], "planned")
         self.assertIn("2029", row["qa_notes"])
         self.assertIn("2030", row["qa_notes"])
         self.assertIn("https://fortexgroup.ru/sPDF/bc/16380/", row["qa_notes"])
         self.assertIn("https://seregina-5.ru/", row["qa_notes"])
+        self.assertIn("MR Group", row["qa_notes"])
 
     def test_qoob_phase_date_conflict_is_visible_and_not_normalized(self):
         row = self.by_id["proj-171"]
