@@ -1,0 +1,654 @@
+{
+ "generated": "2026-09-25",
+ "note": "Веб-поиск застройщиков для 66 офисных проектов без девелопера. Внесены только high/medium: см. коммит. Остальное — кандидаты/не найдено.",
+ "items": [
+  {
+   "unified_id": "UC-OBJ-0066",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/amalteya-innovatsionnyj-tsentr-skolkovo-os35502"
+   ],
+   "note": "Объект 'БЦ Сколковский' (8,5 тыс. кв. м) в источниках не найден. По адресу Большой бульвар, 40 листинги дают Амальтея и Стратос (иные объекты 78-82 тыс. кв. м), застройщик не назван."
+  },
+  {
+   "unified_id": "UC-OBJ-0605",
+   "developer": null,
+   "role_note": "AI Studio - только архитектор",
+   "confidence": "none",
+   "sources": [
+    "https://archi.ru/projects/russia/18355/ofisno-delovoi-centr-na--i-magistralnoi"
+   ],
+   "note": "Офисно-деловой центр 19 эт., ок. 48 тыс. кв. м (наша gba 38,9 тыс. - расхождение). Заказчик не указан на archi.ru; ЕИСЖС/пресс-релизы не найдены."
+  },
+  {
+   "unified_id": "UC-OBJ-0496",
+   "developer": "Газпромбанк (АО)",
+   "role_note": "Строит здание для себя; отдельная структура-застройщик/собственник не названа. Мезонпроект - архитектор",
+   "confidence": "medium",
+   "sources": [
+    "https://realty.ria.ru/20240220/biznes-tsentr-1928394869.html",
+    "https://adm.cre.ru/news/93776"
+   ],
+   "note": "Оба источника ссылаются на сообщение Москомархитектуры (не независимы). Формулировка 'Газпромбанк построит' - юрлицо-застройщик (СЗ/дочка) не уточнено. ~14 тыс. кв. м, совпадает с нашей gba."
+  },
+  {
+   "unified_id": "UC-OBJ-0019",
+   "developer": null,
+   "role_note": "RBTT: archi.ru называет заказчиком/девелопером, но в другой выдаче с теми же авторами - инженеры проекта. Prime Property Management - управление; T+T Architects - архитектор; NF Group - брокер",
+   "confidence": "low",
+   "sources": [
+    "https://archi.ru/projects/russia/14799/dstanciya",
+    "https://primepm.ru/projects/biznes-centr_d_stanciya/",
+    "https://d-stancia.ru/"
+   ],
+   "note": "Роль RBTT противоречива, независимого подтверждения нет - в developer не вписан. Кандидат для ручной проверки: RBTT."
+  },
+  {
+   "unified_id": "UC-OBJ-0195",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://nikoliers.ru/media/news/obem-vvoda-ofisov-klassa-b-v-moskve-uvelichitsya-v-4-5-raza-do-100-tys-kv-m-k-koncu-2026-goda/"
+   ],
+   "note": "Ferrum (Шарикоподшипниковская, 11с8): Nikoliers - БЦ B+ 9,4 тыс. кв. м, ввод 1П 2025, девелопер не назван. Одноимённые Ferrum (СПб, Теорема) и ГК Феррум (Новосибирск) - другие объекты/компании, не использовать."
+  },
+  {
+   "unified_id": "UC-OBJ-0607",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://cre.ru/news/84686",
+    "https://www.novostroy-m.ru/baza/biznestsentr_na_presnenskoy_naberejnoy"
+   ],
+   "note": "Связь Red Town с Sezar Group НЕ подтверждена: Sezar купил овощебазу 'Красная Пресня' (2-й Хорошевский пр.), его БЦ 'СИТИ-4' - Пресненская наб. 6А, 85 тыс. кв. м. Адрес 2-я Звенигородская, 13 - иной участок (бизнес-парк с множеством строений). Название 'Red Town' и застройщика подтвердить не удалось (сайт проекта недоступен)."
+  },
+  {
+   "unified_id": "UC-OBJ-0232",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://mperspektiva.ru/topics/novyy-biznes-tsentr-planiruetsya-postroit-v-obruchevskom-rayone/"
+   ],
+   "note": "По адресу ул. Академика Опарина, 2 данных нет. Level Group (Level Work Воронцовская) - ул. Академика Семихатова/Семенихина, з/у 2, 45,7 тыс. кв. м - другой адрес, не сопоставлять без проверки. На stroi.mos.ru есть 'ТПУ Улица Академика Опарина-2' - возможно связь, не проверено."
+  },
+  {
+   "unified_id": "UC-OBJ-0017",
+   "developer": "ООО «Астория»",
+   "role_note": "Собственник и девелопер Технопарка Astoriya и БЦ Astoriya II; NF Group - только брокер/лизинг",
+   "confidence": "high",
+   "sources": [
+    "https://tp-astoriya.ru/contacts/",
+    "http://tp-astoriya.ru/",
+    "https://of.ru/bc/astoriia-2/kontakty"
+   ],
+   "note": "Официальный сайт: ООО «Астория» (создано 2005) - собственник комплекса и строящегося БЦ Astoriya II. Химки, Транспортный пр-д, 19."
+  },
+  {
+   "unified_id": "UC-OBJ-0011",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/10258",
+    "https://realty-guide.ru/offices/objects/44250801-faa8-4980-8556-8f8128e877d4/"
+   ],
+   "note": "Листинги (of.ru, realty-guide) не называют ни девелопера, ни собственника. Здание 2008 г. постройки, реконструкция/открытие 1.07.2022 - оригинальный застройщик не установлен."
+  },
+  {
+   "unified_id": "UC-OBJ-0499",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Данных по проекту 125 тыс. кв. м на Беломорской, 40 не найдено. Текущая застройка - здание 1970 г. 3,5 тыс. кв. м. Отдельный Ведомости-материал (2026-08-12) про 1-ю ул. Ямского Поля - другой адрес."
+  },
+  {
+   "unified_id": "UC-OBJ-0418",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Данных по Большая Садовая, 3с10 (47 тыс. кв. м) не найдено; по адресу лишь галерея (zoon)."
+  },
+  {
+   "unified_id": "UC-OBJ-0239",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "По адресу ул. Маршала Тухачевского 22-44 / бул. Генерала Карбышева проект и застройщик не найдены. Union Park (Крост) из выдачи относится к другому адресу, не привязывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0241",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://m.biz-cen.ru/msk/berezovaya_alleya/amp/"
+   ],
+   "note": "Берёзка 10 - существующий БЦ (ввод 2005, общая ~20 тыс. кв. м, аренда ~17 тыс.); в нашей записи gba 41 000 и статус 'Не определён' - расхождение (возможно, несколько строений/реконструкция). Застройщик и собственник в источниках не указаны."
+  },
+  {
+   "unified_id": "UC-OBJ-0252",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Береговой пр., 4: проект 129 тыс. кв. м не найден. Рядом Фили Град (Береговой пр., 5, MR Group) - другой адрес, привязку по соседству не делать."
+  },
+  {
+   "unified_id": "UC-OBJ-0253",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mos.ru/news/item/122630073/"
+   ],
+   "note": "Южнопортовый пр., вл. 12В: конкретный проект не найден. КРТ Москвы в Южном порту касается вл. 3-15 Южнопортовой ул. (328,5 тыс. кв. м нежилых) - другой участок, 12В не подтверждён. 2-й Южнопортовый 12А - существующий ОСК."
+  },
+  {
+   "unified_id": "UC-OBJ-0132",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/4186"
+   ],
+   "note": "Ул. Ермакова Роща, 7: найден только существующий ОСК Ермакова Роща 7А (кл. B, 1962, 28 тыс. кв. м), владелец не указан. Проект кл. A на 150 тыс. кв. м не подтверждён. iCity (MR Group, Ермакова Роща 1) - другой адрес, не привязывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0562",
+   "developer": null,
+   "role_note": "Решение города по КРТ; частный инвестор в источнике не назван",
+   "confidence": "none",
+   "sources": [
+    "https://typical-moscow.ru/sovremennoe-delovoe-prostranstvo-poyavitsya-v-vojkovskom-rajone-po-programme-krt/"
+   ],
+   "note": "Проект подтверждён: КРТ, Космонавта Волкова 2-4, ~1,5 га, БЦ 68 тыс. кв. м на месте гаражей, инвестиции 13,27 млрд руб. Объявляли Ефимов и Департамент городского имущества, инвестор/застройщик не раскрыт. Поиск про покупку участка ПИК (cud.news) относится к другому адресу, не подтверждён."
+  },
+  {
+   "unified_id": "UC-OBJ-0766",
+   "developer": null,
+   "role_note": "Управляет/сдаёт Fortex.Group (брокер/УК), не застройщик",
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/krzhizhanovskogo-13-k3/",
+    "https://kf.expert/office/business-center/krzhizhanovskogo-ulitsa-d-13-k-3-os37314"
+   ],
+   "note": "Здание построено/сдаётся (Fortex: приёмка II кв. 2021, кл. A, 6 590 кв. м, 8 эт.; KF Expert: 2025, B+, 6 700 кв. м, 6 эт.) - конфликт по году/классу/этажности и со статусом 'Замороженный' в нашей записи. Застройщик и собственник нигде не указаны."
+  },
+  {
+   "unified_id": "UC-OBJ-0263",
+   "developer": null,
+   "role_note": "Решение города по КРТ; частный инвестор не назван",
+   "confidence": "none",
+   "sources": [
+    "https://typical-moscow.ru/odobren-proekt-kompleksnogo-razvitiya-dvuh-uchastkov-v-basmannom-rajone-stoliczy/"
+   ],
+   "note": "Ул. Верхняя Сыромятническая, 7: одобрен проект КРТ (2 участка 1,35 га, общественно-деловой комплекс 90 280 кв. м, дата 04.09.2026). Наши 81 000 кв. м отличаются от 90 280 - вероятно другая редакция параметров. Исполнитель не назван."
+  },
+  {
+   "unified_id": "UC-OBJ-0267",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Малахитовая ул., 20 (8,5 тыс. кв. м): проект не найден. Не путать с Малахитовая 7/27Б и Малахит (Огородный пр.)."
+  },
+  {
+   "unified_id": "UC-OBJ-0268",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Нижегородская ул., 94 к4: в открытых источниках только адресные справочники, проект не найден. Не путать с БЦ Нижегородский (29-33) и Нижегородская 32."
+  },
+  {
+   "unified_id": "UC-OBJ-0432",
+   "developer": "СЗ Авиапарк Запад / СЗ Авиапарк Восток (специализированные застройщики владельцев ТРЦ Авиапарк)",
+   "role_note": "Собственники ТРЦ и акционеры СЗ: Игорь Ротенберг, Михаил Зайцев (Amma Development) по CRE; Леонид Казинец (Barkly) получил по 27% в обоих СЗ 01.10 (Движение.ру); ранее Nova (Tekta Group) купила 90% застройщика (дек. 2023) - конфликт/неполнота по структуре владения",
+   "confidence": "low",
+   "sources": [
+    "https://cre.ru/news/85062",
+    "https://dvizhenie.ru/media/1592/vladelec-korporacii-barkli-poluchil-doli-v-aviapark-zapad-i-aviapark-vostok",
+    "https://www.restate.ru/material/dva-novyh-ofisnyh-giganta-poyavyatsya-ryadom-s-tc-aviapark-na-hodynke-186589.html"
+   ],
+   "note": "Два офисных здания (Запад и Восток) у ТРЦ Авиапарк на месте паркингов. Площади расходятся: CRE ~150 тыс. кв. м, Движение.ру 130 тыс. на 1,69 га, Restate заголовок 250 тыс. (наши 250 000). Прямого подтверждения, что именно эти СЗ - застройщик, в официальной декларации не видел; confidence low. STONE Ходынка - соседний проект, не путать."
+  },
+  {
+   "unified_id": "UC-OBJ-0280",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Адрес неоднозначен. Георгиевский пер., 3/3 - Новый Манеж; рядом ENGEO Development (ЖК Камергер, Георгиевский пер., 1; поиск также выдал офисный комплекс ENGEO в Георгиевском пер. по archi.ru), но привязка именно к 3/2 не подтверждена. Не выбирать."
+  },
+  {
+   "unified_id": "UC-OBJ-0670",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://moscow-city.guide/news/stone-vozvedet-200-000-m-ofisov-v-bolshom-siti-na-shmitovskom-proezde/"
+   ],
+   "note": "Шмитовский пр-д, вл.34 - исторически площадка ОАО ГТК ТВ Столица (постановления 2005/2008, СК Русский монолит как исполнитель). iCity (MR Group) это вл.37, STONE/КС-Про - вл.32/32А; для вл.34 современный девелопер не найден. Соседние проекты не смешивать."
+  },
+  {
+   "unified_id": "UC-OBJ-0015",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://gladston.ru/42647/"
+   ],
+   "note": "Объявления (Gladston, ЦИАН/AFY) не называют застройщика/собственника; здание 6300 кв.м, 6 эт., паркинг 36 мест, аренда напрямую от собственника без указания имени."
+  },
+  {
+   "unified_id": "UC-OBJ-0292",
+   "developer": "Foresight",
+   "role_note": "Девелопер; Сбербанк-Инвестиции - соинвестор при контрольной доле Foresight; структура Foresight (Supernova) контролирует Берег Строй (67%), готовившую КРТ бывшей ГСК Полет",
+   "confidence": "medium",
+   "sources": [
+    "https://mperspektiva.ru/topics/u-stantsii-mtsk-zorge-poyavitsya-ofisnyy-kompleks/"
+   ],
+   "note": "Прямо прочитана 1 статья (Московская перспектива, >83 тыс. кв.м); данные про Supernova/Берег Строй/портфель Foresight - из сводки поиска, страницу не читал. Участок Зорге, 3 (бывшая АТС, Актион, 22 тыс.) - другой объект."
+  },
+  {
+   "unified_id": "UC-OBJ-0512",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "ЗУ Лобачевского 110 к1 (49,59 тыс. кв.м) не найден. Рядом: офисный центр Раменки на Лобачевского 114Б (Донстрой, судя по mosdom.su), Град Девелопмент - жилая башня; связь с 110 к1 не доказана."
+  },
+  {
+   "unified_id": "UC-OBJ-0563",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Запись без номера дома, только улица Кржижановского (Академический). Там много БЦ и ЖК (Главстрой - Новые Академики, к31) - идентифицировать объект нельзя."
+  },
+  {
+   "unified_id": "UC-OBJ-0699",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mos.ru/mka/documents/dokumenty-moskomarkhitektury/view/311046220/"
+   ],
+   "note": "Москомархитектура согласовала КРТ Дубининская, влд.71 (ок. 39 тыс. кв.м ОДО, 2,4 га); страница mos.ru не отдала содержимое, инвестор не найден. Dubinin'Sky (HALS) - другой участок."
+  },
+  {
+   "unified_id": "UC-OBJ-0469",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Кунцево, 59 км МКАД, 35 тыс. кв.м: подтверждающих источников нет. Кунцево Плаза (Ярцевская, 19) - другой объект. stroi.mos.ru про офисный центр в Кунцево не удалось прочитать (таймаут)."
+  },
+  {
+   "unified_id": "UC-OBJ-0305",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/10601"
+   ],
+   "note": "На Международной, 11 существует старое 4-этажное здание 1936 г., 3766 кв.м (площадь Ильича), собственник не назван. Соответствие проекту (Проектный) не доказано."
+  },
+  {
+   "unified_id": "UC-OBJ-0308",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mk.ru/social/2025/12/19/efimov-soobshhil-o-starte-aukciona-na-krt-promzony-lyublino.html"
+   ],
+   "note": "Участки Егорьевский пр-д вл.2-7 и Люблинская вл.82 - КРТ бывшей промзоны Люблино (28,37 га, 372 тыс. кв.м), аукцион на 10.02.2026; победитель в найденных источниках не указан, привязка 172 тыс. МФК не подтверждена."
+  },
+  {
+   "unified_id": "UC-OBJ-0310",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://krt.mos.ru/projects/49-altufevskoe-shosse/"
+   ],
+   "note": "КРТ Алтуфьевское шоссе (Отрадное): победитель прежних торгов 2021 - АО СЗ Московский ткацко-отделочный комбинат (структура AFI Development), но это другой лот (29 га); привязка МФК 150 тыс. на ул. Декабристов к нему или к новому лоту (14,34 га, 258 млн) не подтверждена. Не приписывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0641",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/gostinichnyy-kompleks-berlin"
+   ],
+   "note": "Застройщик/инвестор проекта МФК 185 тыс. кв. м на Малой Юшуньской, 1к2 не найден. Рядом существует БЦ/гостиница Берлин (1к1, 1к2, бывший Интурист) - это действующие здания, связь с проектом не подтверждена."
+  },
+  {
+   "unified_id": "UC-OBJ-0313",
+   "developer": null,
+   "role_note": "Город (stroi.mos.ru, АСН-инфо) пишет только 'инвестор планирует завершить в 2027', название не раскрыто",
+   "confidence": "none",
+   "sources": [
+    "https://asninfo.ru/news/118720-mfk-s-ofisami-i-dvukhurovnevym-parkingom-vozvedut-v-rayone-prospekt-vernadskogo",
+    "https://stroi.mos.ru/news/mfk-s-ofisami-i-fitnies-tsientrom-vozviedut-v-raionie-prospiekt-viernadskogho"
+   ],
+   "note": "Проект 14,5 тыс. кв. м, 9 этажей, офисы+фитнес/СПА+паркинг, срок 2027. Компания не названа ни в одном найденном источнике (архитектор не выяснен: archi.ru по ссылке оказался другим объектом - Пушкинская 75б)."
+  },
+  {
+   "unified_id": "UC-OBJ-0428",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://moskvichmag.ru/gorod/vozle-metro-universitet-postroyat-torgovo-ofisnyj-tsentr-s-vmyatinoj-na-fasade/"
+   ],
+   "note": "Ломоносовский пр-т, 23а: в 2000-х торгцентр предлагал Ташир (не прошёл, аренда расторгнута 2015). Текущий застройщик рендеров не назван. По данным поиска, в конце 2025 территорию включили в КРТ в формате благоустройства без нового строительства - проект может быть неактуален."
+  },
+  {
+   "unified_id": "UC-OBJ-0319",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.moscowmap.ru/streets/novoslobodskaya-ulitsa/dom-55-str-1.html"
+   ],
+   "note": "Новослободская, 55с1: девелопер не найден. На адресе есть действующий БЦ (офис 702 кв. м по rentnow), связь с проектным статусом не подтверждена."
+  },
+  {
+   "unified_id": "UC-OBJ-0448",
+   "developer": "STONE",
+   "role_note": "Девелопер и, по РБК, единственный собственник/продавец; отдельной структуры-собственника не названо. Архитектор Kleinewelt Architekten.",
+   "confidence": "high",
+   "sources": [
+    "https://realty.rbc.ru/news/672336679a7947f82fb2ddab",
+    "https://www.forbes.ru/spetsproekt/524392-ofisy-na-ostrove-novyj-proekt-ot-stone-v-mnevnikovskoj-pojme",
+    "https://asninfo.ru/news/119836-biznes-tsentr-s-vyrazitelnymi-arkami-poyavitsya-v-mnevnikovskoy-poyme"
+   ],
+   "note": "STONE Мневники: БЦ класса А, 2 башни, 33,5 тыс. кв. м (совпадает с GBA 33000), старт 2025, завершение 2028. Читал только РБК; Forbes и АСН-инфо - по заголовкам поиска."
+  },
+  {
+   "unified_id": "UC-OBJ-0325",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.restate.ru/office/ochakovskoe-shosse-40-1909.html",
+    "https://realty-guide.ru/offices/objects/885f17eb-f77c-4363-903b-d0a50cabc997/"
+   ],
+   "note": "Очаковское ш., 40: существует построенный БЦ (2-3 эт., класс B/C, 10 тыс. кв. м по restate), УК неизвестна, собственник не указан. Проект 19,9 тыс. кв. м (вероятно реконструкция/новое строительство) не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0524",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/pavlovskaya-18-s2/",
+    "https://www.cian.ru/otdelno-stoyashcee-zdanie-na-ulpavlovskaya18s2-moskva-22385/"
+   ],
+   "note": "Павловская, 18с2: действующее офисное здание класса B, 1975 г., 4250 м2 (cian/rentnow) или 4456 (fortex); девелопер и собственник не названы. Статус 'Анонсированный' в нашей базе может относиться к продаже/реконструкции."
+  },
+  {
+   "unified_id": "UC-OBJ-0382",
+   "developer": null,
+   "role_note": "Гипотеза, не подтверждена: на Духовском пер., 17 работает RED Development (ЖК LOFT17), но строение 17/4 в источниках не привязано ни к нему, ни к другому лицу",
+   "confidence": "none",
+   "sources": [
+    "https://www.cian.ru/zhiloy-kompleks-loft17-moskva-6297/"
+   ],
+   "note": "Адрес в базе 'пр-д Духовской' vs реально Духовской переулок; проверить адрес. Без подтверждения developer не заполнен."
+  },
+  {
+   "unified_id": "UC-OBJ-0409",
+   "developer": null,
+   "role_note": "Территория 3,27 га - КРТ по ПП Москвы №9-ПП от 14.01.2025 (пр-т Мира, вл. 82-92, нежилая застройка); ООО-правообладатель в тексте не назван",
+   "confidence": "none",
+   "sources": [
+    "https://base.garant.ru/411323243/"
+   ],
+   "note": "ГК Основа (Мираполис) - другой адрес (Мира 222/2), не связан. Скуратов 'офисно-гостиничный комплекс' - пр-т Мира 56, тоже другой объект. Правообладателя КРТ нужно смотреть в приложении к постановлению/на stroi.mos.ru."
+  },
+  {
+   "unified_id": "UC-OBJ-0400",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.restate.ru/material/v-moskve-obsuzhdayut-zastroyku-na-volgogradskom-63-tys-kv-m-zhilya-i-144-tys-kv-m-ofisov-184656.html",
+    "https://rnrf.ru/news/10939-plany-krt-volgogradskiy-32-s-zhiloy-i-ofisnoy-zastroykoy/"
+   ],
+   "note": "КРТ 'Волгоградский, 32': 63 тыс. кв. м жилья + 144 тыс. кв. м офисов; аукцион отменён, в 2025 КРТ отменено, обсуждается ~175 тыс. кв. м. Компании не названы ни в одном из двух прочитанных источников - девелопера как такового пока нет."
+  },
+  {
+   "unified_id": "UC-OBJ-0329",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://m2data.net/ru/buildings/proletarskiy-prospekt-20k1"
+   ],
+   "note": "Пролетарский пр-т, вл. 20: застройщик не найден; страница m2data не дала данных. На участке есть здания 20к1, 20к2 (админ., банк) - связь с проектом 22,88 тыс. кв. м не подтверждена."
+  },
+  {
+   "unified_id": "UC-OBJ-0330",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Поиск по адресу Промышленный проезд, вл. 7 вернул только справочники (2ГИС, Яндекс, fortexgroup: БЦ класса B, 1000 кв. м, вероятно другой объект - строение 4). Застройщик проекта на 28 045 кв. м не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0331",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "По адресу Раздельная, 10с1 ничего релевантного не найдено (только общие выдачи по девелоперам)."
+  },
+  {
+   "unified_id": "UC-OBJ-0435",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "По адресу Сельскохозяйственная, 30/1 БЦ и девелопер не найдены; выдача содержала только соседние дома (38к1, 6, жилые ЖК Родина/Столица ЦПН, не привязаны к 30/1)."
+  },
+  {
+   "unified_id": "UC-OBJ-0430",
+   "developer": null,
+   "role_note": "Деловой квартал Симоновский (Ленинская Слобода, 26): управляющая/реализующая компания City&Malls PFM (ген. директор Алексей Емельянов); товарный знак 'Симоновский деловой квартал' принадлежит ООО 'СитиЭндМолз' (РБК Компании).",
+   "confidence": "low",
+   "sources": [
+    "https://www.restate.ru/office/simonovskiy-1296.html",
+    "https://realty.rbc.ru/news/577d12759a7947e548ea488c",
+    "https://companies.rbc.ru/trademark/598763/simonovskij-simonovskij-delovoj-kvartal/",
+    "https://cre.ru/news/37436"
+   ],
+   "note": "Ресейт пишет, что City&Malls PFM 'развивает' квартал, РБК и др. - что это управляющая компания. Первоначальный собственник/застройщик не назван ни в одном источнике. Строение 26с35 в источниках не упоминается (есть с5, с7, с28), в developer не вношу, чтобы не путать роли. Кандидат - City&Malls PFM (роль управляющего/оператора квартала), требует подтверждения."
+  },
+  {
+   "unified_id": "UC-OBJ-0531",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Проект на Синельниковской ул. не идентифицирован в открытых источниках по 2 запросам."
+  },
+  {
+   "unified_id": "UC-OBJ-0564",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Нет адреса и названия здания; 'сколково' - слишком общий запрос (Технопарк Сколково, Сколково Парк, Стратос и др. - разные девелоперы). Требуется уточнить конкретный объект."
+  },
+  {
+   "unified_id": "UC-OBJ-0479",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "По адресу 1-я Рыбинская, вл. 1а найдены только соседние БЦ (Меркурий 3с1, 1-я Рыбинская 1 на rentavik). Застройщик не найден; возможная связь с БЦ '1-я Рыбинская, 1' не проверена."
+  },
+  {
+   "unified_id": "UC-OBJ-0343",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Проект 'Старые Сосёнки, квартал 30' не найден, релевантных источников нет."
+  },
+  {
+   "unified_id": "UC-OBJ-0477",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/tverskaya-24-s2/"
+   ],
+   "note": "Найден только БЦ Тверская 24 с2 (класс B, до 900 кв. м, 4 этажа) - скорее всего не тот объект (наш: класс A, 11 137 кв. м, проект 2026). Девелопер не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0354",
+   "developer": "АО «ОЭЗ «Технополис Москва»",
+   "role_note": "Оператор ОЭЗ и владелец территории; курирует Департамент инвестиционной и промышленной политики Москвы (Правительство Москвы).",
+   "confidence": "low",
+   "sources": [
+    "https://indparks.ru/organization/ao-tekhnopolis-moskva/",
+    "https://www.cian.ru/biznes-centr-42k13-moskva-130836/",
+    "https://stroi.mos.ru/construction/2211"
+   ],
+   "note": "Корпус 13 - реконструкция старого здания 1972 г. на бывшей площадке 'Москвич'. ЦИАН (по сниппету поиска, страница не открылась - капча) называет собственниками 'Стройэкспром' и Правительство Москвы; сайт indparks - оператора АО ОЭЗ (сайт stroyexprom.ru). Роли смешаны, конфликт/неясность: оператор ОЭЗ vs Стройэкспром. Не подтверждено проектной декларацией."
+  },
+  {
+   "unified_id": "UC-OBJ-0355",
+   "developer": null,
+   "role_note": "Проект реализуется по инициативе Правительства Москвы, курирует Департамент инвестиционной и промышленной политики (А. Гарбузов), на территории ОЭЗ 'Технополис Москва' (площадка Печатники, ул. Коломникова); Трансмашхолдинг - арендатор/якорный пользователь этажей 5-23.",
+   "confidence": "low",
+   "sources": [
+    "https://technomoscow.ru/press-tsentr/novosti/pervyy-korpus-novogo-delovogo-tsentra-oez-moskvy-na-kolomnikova-gotov-na-85-protsentov/",
+    "https://www.mskagency.ru/materials/3474777"
+   ],
+   "note": "Ни в одном источнике не назван конкретный застройщик/подрядчик. Адрес в нашей базе (Волгоградский пр., 42к8) может не совпадать с ул. Коломникова - проверить. Трансмашхолдинг - арендатор, не девелопер. Заказчик де-факто город/ОЭЗ; для developer не хватает прямого подтверждения."
+  },
+  {
+   "unified_id": "UC-OBJ-0642",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/4186"
+   ],
+   "note": "Поиск дал только существующий ОСК Ермакова Роща 7А (кл. C/B), к проекту 180 тыс. кв. м отношения не подтверждено. Застройщик не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0401",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/1497"
+   ],
+   "note": "Найден лишь существующий ОСК Складочная 5с3; проектному объекту 35,1 тыс. кв. м не сопоставлен. Застройщик не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0552",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Улофа Пальме вл. 5: данных о девелопере офисного проекта не найдено (в адресе фигурируют ДК/фитнес, не проект)."
+  },
+  {
+   "unified_id": "UC-OBJ-0410",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Фабрициуса 19А: релевантных источников нет (выдача по Минску/Сочи)."
+  },
+  {
+   "unified_id": "UC-OBJ-0734",
+   "developer": null,
+   "role_note": "Управляющая компания парка: Zeppelin PM (не девелопер).",
+   "confidence": "none",
+   "sources": [
+    "https://redeveloper.ru/redeveloperskie-proekty/realise/biznes-park-faktoriya-moskva-rossiya/",
+    "http://factoria-bp.ru/about/history/",
+    "https://www.zeppelinpm.ru/objects/32/"
+   ],
+   "note": "Бизнес-парк Фактория (бывшая шёлкопрядильная фабрика, реконструкция 2018 'новой командой'); ни страницы истории, ни redeveloper.ru не называют девелопера/собственника. Гипотеза Ингеоком не подтверждена."
+  },
+  {
+   "unified_id": "UC-OBJ-0444",
+   "developer": null,
+   "role_note": "Участок выставлен на торги КРТ (аукцион 27.01.2026), инвестор в источнике не определён.",
+   "confidence": "none",
+   "sources": [
+    "https://www.mskagency.ru/materials/3526556"
+   ],
+   "note": "Проект спорт-оздоровительного комплекса ~55,8 тыс. кв. м, не офисный; итог аукциона не найден. Возможно, тип объекта в базе неверный."
+  },
+  {
+   "unified_id": "UC-OBJ-0557",
+   "developer": "ООО СЗ «ОБЪЕКТ ГАРАНТ»",
+   "role_note": "Застройщик по данным поиска (ЕИСЖС/наш.дом.рф упомянут в выдаче); Группа ТЭН названа как исполнитель строительства (moskvichmag).",
+   "confidence": "medium",
+   "sources": [
+    "https://moskvichmag.ru/gorod/na-shosse-entuziastov-postroyat-delovoj-tsentr-iz-zolotyh-yashhikov/",
+    "https://www.rusdevelopers.ru/lenta_novostej/stroitelstvo-biznes-centra-moskva-shosse-entuziastov-vladenie-12",
+    "https://www.mskagency.ru/materials/3527830"
+   ],
+   "note": "Название СЗ взято из сводки поиска, страницу ЕИСЖС напрямую не открывал. Роль ТЭН (застройщик vs подрядчик) неоднозначна: Мосгорсводки называют 'инвестор' без имени. Проект: две башни 17/18 эт., 43,8 тыс. кв. м, завершение конец 2028."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-011",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "1-й Южнопортовый пр-д: выдача только по жилым проектам (Южный порт - Аеон/Ферро-Строй, Level Южнопортовая), связь с офисным объектом 53,4 тыс. кв. м не установлена."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-020",
+   "developer": "Мос Сити Групп (ЗАО, Павел Фукс)",
+   "role_note": "Девелоперы по Википедии: Mos City Group (Фукс) и GDO City Properties (Гранкин); заказчик ЗАО «Аква Сити Палас»; ген. подрядчик Enka; управление с 2012 - Solvers Estate (не девелопер).",
+   "confidence": "high",
+   "sources": [
+    "https://realty.rbc.ru/news/577d2fc89a7947a78ce96d73",
+    "https://ru.wikipedia.org/wiki/Империя_(небоскрёб)",
+    "https://www.enka.com/ru/portfolio-item/moscow-city-plot-4-imperia-tower/"
+   ],
+   "note": "РБК называет девелопером Мос Сити Групп; Википедия добавляет соинвестора/девелопера GDO City Properties (Гранкин). Текущий собственник помещений раздроблен, не определён."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-022",
+   "developer": null,
+   "role_note": "Рабочая Станция - коворкинг-оператор.",
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/osobnyak/sadovnicheskaya-naberezhnaya-9-os4258"
+   ],
+   "note": "Здание Садовническая наб., 9 (особняк 3086 кв. м, 1994): девелопер/собственник не указан. Сделка Коммерсанта (Балчуг Эстейт, 2026) касается другого здания (421 кв. м) - не использовать."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-178",
+   "developer": null,
+   "role_note": "Территория инновационного центра Сколково; вероятный заказчик/собственник среды - Фонд Сколково, но не подтверждено для этого БЦ.",
+   "confidence": "none",
+   "sources": [
+    "https://amalteyabc.ru/"
+   ],
+   "note": "По адресу Большой бульвар 40 выдача - Амальтея (74,3 тыс. кв. м) и Стратос, не 8500 кв. м. Объект в базе не идентифицирован (нужно уточнить корпус)."
+  }
+ ]
+}
