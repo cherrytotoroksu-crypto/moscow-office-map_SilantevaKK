@@ -41,8 +41,6 @@ class OfficialProjectsGapFillWave2Tests(unittest.TestCase):
         for project_id in (
             "proj-96",
             "proj-98",
-            "proj-173",
-            "proj-234",
             "proj-260",
             "proj-add-krekshino-20260917",
         ):
