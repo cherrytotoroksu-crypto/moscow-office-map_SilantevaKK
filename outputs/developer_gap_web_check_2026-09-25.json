@@ -1,6 +1,6 @@
 {
  "generated": "2026-09-25",
- "note": "Веб-поиск застройщиков для 66 офисных проектов без девелопера. Внесены только high/medium: см. коммит. Остальное — кандидаты/не найдено.",
+ "note": "Веб-поиск застройщиков для 66 офисных проектов без девелопера. Внесены только high/medium: см. коммит. Остальное — кандидаты/не найдено. Второй проход (другие источники): внесён только D-Stantion (ООО «Кванта Эстейт», high). Red Town — Ultima Development (medium, привязка по адресу, сайт проекта не открылся) и остальные кандидаты в базу не внесены.",
  "items": [
   {
    "unified_id": "UC-OBJ-0066",
@@ -649,6 +649,594 @@
     "https://amalteyabc.ru/"
    ],
    "note": "По адресу Большой бульвар 40 выдача - Амальтея (74,3 тыс. кв. м) и Стратос, не 8500 кв. м. Объект в базе не идентифицирован (нужно уточнить корпус)."
+  }
+ ],
+ "second_pass": [
+  {
+   "unified_id": "UC-OBJ-0066",
+   "developer": "",
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/business-center/amalteya-innovatsionnyj-tsentr-skolkovo-os35502",
+    "https://t.me/s/stroi_news?q=%D0%A1%D0%BA%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE"
+   ],
+   "note": "Объект \"БЦ Сколковский\" 8,5 тыс. кв. м не найден ни в листингах, ни в Telegram (stroi_news, officesmokingroom). На территории Сколково найдены только другие проекты: Скайбург (Avalon, 72,7 тыс.), НИОКР-центр Фонда Сколково 14,1 тыс. - не сопоставлять."
+  },
+  {
+   "unified_id": "UC-OBJ-0605",
+   "developer": "",
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://archi.ru/projects/russia/18355/ofisno-delovoi-centr-na--i-magistralnoi",
+    "https://rcmm.ru/novosti/73730-soglasovan-proekt-ofisnogo-zdanija-v-horoshevskom-rajone.html"
+   ],
+   "note": "Заказчик не назван: archi.ru (пресс-релиз Москомархитектуры 17.04.2023, архитектор AI Studio) и Telegram stroi_news не называют. Внимание: один из поисковых сниппетов приписывал проект Sezar Group - при проверке это относится к другому объекту (2-й Хорошевский пр., вл. 7), связь Sezar с 1-й Магистральной, 29 НЕ подтверждена, не использовать."
+  },
+  {
+   "unified_id": "UC-OBJ-0019",
+   "developer": "ООО «Кванта Эстейт» (Kvanta Estate, ИНН 7705810462)",
+   "role_note": "заказчик редевелопмента депо (владелец проекта); RBTT в обоих источниках указан как \"Инженеры\", не девелопер; УК - Prime Property Management; архитектор T+T Architects",
+   "confidence": "high",
+   "sources": [
+    "https://archi.ru/projects/russia/14799/dstanciya",
+    "https://primepm.ru/eng/news/v_moskve_zavershilsya_redevelopment_istoricheskogo_depo_kurskogo_vokzala_obshhej_ploshhad_yu_3_875_k/"
+   ],
+   "note": "Адрес Земляной Вал, 9А, 3 875 кв. м, депо 1906 г., завершение 2024 - совпадает. Оба источника (проверены по сырому HTML) дают \"Заказчик: Кванта Эстейт\". Прежний кандидат RBTT в developer не вписывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0195",
+   "developer": "",
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://tpicompany.ru/blog/constructionofnewofficesinmoscow"
+   ],
+   "note": "Подтверждено только, что БЦ Ferrum (Шарикоподшипниковская, 11) введён во 2 кв. 2025 (CORE.XP через TPI Company), девелопер не назван. Поиск в stroi_news, officesmokingroom, биз-центр порталах - пусто. Одноимённый Ferrum СПб (Теорема) - другой объект."
+  },
+  {
+   "unified_id": "UC-OBJ-0607",
+   "developer": "Ultima Development (Константин Устюгов, Алексей Ржевцев; бывшие топ-менеджеры Insigma)",
+   "role_note": "инициатор/девелопер офисного проекта на территории Пресненского машиностроительного завода; владелец завода (АО ПМЗ) - другая сторона, с ней конфликт",
+   "confidence": "medium",
+   "sources": [
+    "https://t.me/stroi_news/3389",
+    "https://t.me/stroi_news/1585",
+    "https://overclockers.ru/blog/GOTREK/show/173187/V-Moskve-na-meste-Presnenskogo-mashinostroitel-nogo-zavoda-postroyat-tri-150-metrovye-bashni",
+    "https://moskvichmag.ru/gorod/na-meste-presnenskogo-mashinozavoda-vmesto-ofisov-postroyat-tri-vysotki-s-koronami"
+   ],
+   "note": "Проект: 2 офисных здания по 16 эт., ~80 тыс. кв. м (наша gba 96,9 - расхождение), архитектор Цимайло Ляшенко и партнёры; получены разрешения, стройка не начата из-за разногласий с владельцами завода; в июле-авг. 2024 ГПЗУ аннулирован, участок включён в КРТ, планируется жильё 91,2 тыс. Название \"Red Town\" в этих источниках прямо не упомянуто (сниппет сайта Red Town: 2 корпуса 79 924,8 кв. м, 2-я Звенигородская, 13 - совпадает по параметрам, но сам сайт не удалось открыть). Sezar Group к объекту не относится. Упоминание Мангазеи (МД Перспектива, покупка 97,4% ПМЗ) - только из сниппета, не проверено."
+  },
+  {
+   "unified_id": "UC-OBJ-0232",
+   "developer": "",
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://stroi.mos.ru/construction/2160"
+   ],
+   "note": "Связь объекта с ТПУ \"Улица Академика Опарина-2\" не доказана (stroi.mos.ru не открылся). По сниппетам: ООО \"ТПУ \"Улица Академика Опарина 2\"\" (ИНН 9710080818), управляющая организация АО \"СЗ \"УЭЗМ\" (ИНН 7704676937), ранее ООО \"Мосинжинвест\" - rusprofile отдал 403, страницу не читал. Кандидат для ручной проверки, в developer не вписывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0011",
+   "developer": "Workki (сеть коворкингов)",
+   "role_note": "заказчик реконструкции здания (оператор/арендатор); собственник здания не установлен, возможно не совпадает с заказчиком",
+   "confidence": "low",
+   "sources": [
+    "https://www.p-3.su/novosti/12-novosti/231-rekonstruktsiya-na-bolshoj-tulskoj-v-moskve",
+    "https://www.p-3.su/biznes-tsentr-workki"
+   ],
+   "note": "Оба URL - страницы одного подрядчика (Петропрофиль Плюс, фасады): \"Заказчик - сеть коворкингов Workki\", проектировщик SPEECH. Адрес Б. Тульская, 19 совпадает, 7 эт., 16 тыс. кв. м. Независимого подтверждения нет; Workki - оператор, в developer только как заказчик реконструкции."
+  },
+  {
+   "unified_id": "UC-OBJ-0499",
+   "developer": "ГК «МонАрх» (концерн Сергея Амбарцумяна)",
+   "role_note": "заявлен как застройщик; права на участки бывшего 15-го таксомоторного парка у компаний Тиграна Цатуряна (топ-менеджер МонАрх)",
+   "confidence": "low",
+   "sources": [
+    "https://t.me/stroi_news/3376",
+    "https://severstolici.ru/territoriya-byvshego-taksoparka-na-ulitse-lavochkina-budet-zastroena/"
+   ],
+   "note": "Беломорская, вл. 40 + Лавочкина, вл. 23, 5 га; идёт согласование параметров и исключение из КРТ (июль 2024). Второй источник - пересказ того же Telegram-поста без названия компании. Параметры 125 тыс. кв. м и офисное назначение нигде не подтверждены."
+  },
+  {
+   "unified_id": "UC-OBJ-0418",
+   "developer": "АО «Политехстрой-Сварго» (владелец участка НИОПИК с 12.2023; с 2025 право перешло банку ДОМ.РФ)",
+   "role_note": "собственник участка/инициатор проекта; ДОМ.РФ - нынешний собственник, может передать fee-девелоперу",
+   "confidence": "low",
+   "sources": [
+    "https://t.me/stroi_news/10036",
+    "https://ru.wikipedia.org/wiki/%D0%9D%D0%98%D0%9E%D0%9F%D0%98%D0%9A"
+   ],
+   "note": "ОСТОРОЖНО: совпадает площадь офисов 47 000 кв. м (общий комплекс 64 тыс., жильё 10,9 тыс.) и локация у Маяковской, но адрес НИОПИК - Б. Садовая, 1 к.4, а не 3с10; совпадение участка не доказано. Отдельный проект Ultima Development на Б. Садовой (бывший Минмонтажспецстрой, 13,7 тыс. кв. м, клуб B2) - другой объект."
+  },
+  {
+   "unified_id": "UC-OBJ-0239",
+   "developer": "",
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://t.me/stroi_news/8826",
+    "https://msk1.ru/text/realty/2025/12/02/76136600/"
+   ],
+   "note": "Объект - два общественно-деловых центра общей площадью 9 126 кв. м в проекте планировки ТПУ \"Бульвар Генерала Карбышева\" (22,2 га, реновация, жильё 170,5 тыс.); совпадение по площади точное. Застройщик/инвестор в ППТ не назван (проект на этапе планировки, оператор реновации не определён)."
+  },
+  {
+   "unified_id": "UC-OBJ-0241",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Берёзка 10: застройщик/собственник в открытых источниках (biz-cen, zoon, officenavigator, fortex) не указан."
+  },
+  {
+   "unified_id": "UC-OBJ-0252",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://2gis.ru/moscow/firm/70000001040554583"
+   ],
+   "note": "Береговой пр., 4: проект 129 тыс. кв. м не найден. Соседний Фили Град (Береговой, 5, MR Group) - другой адрес, не привязывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0253",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Южнопортовый пр., вл. 12В: проект не найден; в выдаче только Level Южнопортовая (Level Group, ул. Южнопортовая 28А) - другой участок."
+  },
+  {
+   "unified_id": "UC-OBJ-0132",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Ермакова Роща, 7: только существующие ОСК 7А; проект кл. A 150 тыс. кв. м не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0562",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "КРТ Космонавта Волкова 2-4: инвестор не раскрыт. ПИК купил 'Модерн' с участком по адресу Космонавта Волкова 31 (cud.news) - другой участок, не привязывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0766",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://fortexgroup.ru/bc/krzhizhanovskogo-13-k3/"
+   ],
+   "note": "Fortex: ввод 2021, кл. A, 8 эт.; застройщик/собственник на страницах (Fortex, KF Expert, brightrich) не указан. Конфликт по году/классу сохраняется."
+  },
+  {
+   "unified_id": "UC-OBJ-0263",
+   "developer": "ПИК (ПИК-Инвестпроект, СП с городской компанией КРТ: СЗ «КРТ Курская»)",
+   "role_note": "инвестор КРТ (предположительно)",
+   "confidence": "low",
+   "sources": [
+    "https://news.rambler.ua/realty/56895147-pik-postroit-ofisnyy-kompleks-u-kurskogo-vokzala-v-moskve/",
+    "https://msk1.ru/text/realty/2026/08/12/76585127/",
+    "https://msknovosti.ru/news/realty/obschestvenno-delovoe-prostranstvo-poyavitsya-vozle-kurskogo-vokzala-po-proektu-krt/"
+   ],
+   "note": "Заголовок Rambler и выдача поиска: в августе 2026 ПИК-Инвестпроект и КРТ создали СЗ «КРТ Курская» для проекта у Курского вокзала на Верхней Сыромятнической. Но заголовок/текст Rambler мне полностью прочитать не удалось (таймаут), а в самих официальных материалах (mskagency, msknovosti, msk1) инвестор не назван, и параметры расходятся: 1,35 га/90 280 кв. м/28,27 млрд (КРТ 2024/2026), 0,93 га/15,3 млрд (более ранняя редакция), 51 040 кв. м (msk1), 17 500 кв. м (moskvichmag). Совпадение участка с 0,93 га или 1,35 га не подтверждено. msk1: проект сменил владельца. Требует ручной проверки перед внесением."
+  },
+  {
+   "unified_id": "UC-OBJ-0267",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Малахитовая, 20: проект не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0268",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://icx.ru/bc/nizhegorodskaya-94k4/"
+   ],
+   "note": "Нижегородская 94к4: существует как БЦ кл. B (аренда 124-5500 кв. м), владелец не указан; проект 28 600 не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0432",
+   "developer": "СЗ «Авиапарк Запад» и СЗ «Авиапарк Восток» (владельцы ТРЦ Авиапарк)",
+   "role_note": "специализированные застройщики владельцев ТРЦ; юрлица зарегистрированы под проект",
+   "confidence": "medium",
+   "sources": [
+    "https://moskvichmag.ru/gorod/vozle-aviaparka-postroyat-dva-biznes-tsentra-zapad-i-vostok/",
+    "https://www.restate.ru/material/dva-novyh-ofisnyh-giganta-poyavyatsya-ryadom-s-tc-aviapark-na-hodynke-186589.html"
+   ],
+   "note": "Moskvich Mag (10.09.2024): владельцы Авиапарка зарегистрировали СЗ Авиапарк Запад и Восток под два БЦ с запада/востока ТЦ, площади не названы. Restate: за проектом стоят Л. Казинец (Баркли) и команда Авиапарка, будут ли строить сами - неясно. Ведомости 2023: СЗ «М-девелопмент» (участок 1,69 га у Авиапарка) - 90% Tekta Group (через Nova), 10% Казинец; это, вероятно, отдельный участок (БЦ AIR) - связь с Запад/Восток не доказана, не смешивать. Площади (250/150/130 тыс.) расходятся."
+  },
+  {
+   "unified_id": "UC-OBJ-0280",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://archi.ru/projects/russia/20411/zhk-kamerger"
+   ],
+   "note": "ENGEO Development - застройщик комплекса на Георгиевском пер. 1 / Камергерском 4 (archi.ru), но участок 3/2 не подтвержден; на 3/3 - Новый Манеж (2GIS). Не приписано."
+  },
+  {
+   "unified_id": "UC-OBJ-0670",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://moscow-city.guide/news/stone-vozvedet-200-000-m-ofisov-v-bolshom-siti-na-shmitovskom-proezde/"
+   ],
+   "note": "Вл.34 в источниках не упомянут (STONE/КС-Про - вл.32/32А; iCity/MR Group - вл.37). Телеграм-поиск веб-версии не отдает посты. Современный девелопер не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0015",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/osobnyak/zemledelcheskij-20a-os47141"
+   ],
+   "note": "kf.expert: 6300 кв.м, 6 эт., класс A, указан год 2016 (в базе 2023 - расхождение); собственник/девелопер нигде не назван."
+  },
+  {
+   "unified_id": "UC-OBJ-0512",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mskagency.ru/materials/3525367"
+   ],
+   "note": "Участок 110 к1 не найден. Найдено только соседнее: БЦ Раменки, Лобачевского уч. 114Б (~23 тыс. кв.м), другой объект; ЖК Среда на Лобачевского - другой адрес."
+  },
+  {
+   "unified_id": "UC-OBJ-0563",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Нет номера дома, на улице множество БЦ (22 тыс. кв.м БЦ 1988/2012 и др.); идентифицировать нельзя."
+  },
+  {
+   "unified_id": "UC-OBJ-0699",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mos.ru/mka/documents/dokumenty-moskomarkhitektury/view/311046220/"
+   ],
+   "note": "Страница mos.ru (документ Москомархитектуры по КРТ Дубининская влд.71) не отдает текст; поиск по stroi.mos.ru/RBC инвестора не дал. Существующее здание на Дубининской 71 - БЦ класса B 4 210 кв.м. Dubinin'Sky (HALS) - другой участок."
+  },
+  {
+   "unified_id": "UC-OBJ-0469",
+   "developer": "СЗ Спектрум-Холдинг",
+   "role_note": "Возможный застройщик БЦ в квартале 120 Кунцево (уч. 92/2, рядом СберСити), но идентичность объекта не доказана",
+   "confidence": "low",
+   "sources": [
+    "https://aif.ru/realty/ovchinskiy-v-stolichnom-kunceve-vozvedut-biznes-centr-iz-dvuh-korpusov",
+    "https://mperspektiva.ru/topics/v-kuntsevo-postroyat-biznes-tsentr-iz-dvukh-steklyannykh-korpusov/"
+   ],
+   "note": "Пресса (АиФ, Моск. перспектива, август 2026): архитектурная концепция БЦ разработана 'СЗ Спектрум-Холдинг' (в формулировках столичного стройкомплекса это обычно застройщик, но прямо не сказано). Объект: 0,92 га, 71 тыс. кв.м надземной, офисы 52 тыс. - не совпадает с 35 тыс. в базе; связь с МКАД 59 км не подтверждена (в источнике, по данным поиска, МКАД 59 км фигурирует в локации у одного агрегатора). Использовать с осторожностью."
+  },
+  {
+   "unified_id": "UC-OBJ-0305",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://of.ru/bc/10601"
+   ],
+   "note": "Существующее БЦ класса B 4 эт. ~3800 кв.м у м. Площадь Ильича; собственник не назван, проект реконструкции/нового строительства не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0308",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mskagency.ru/materials/3528708",
+    "https://mperspektiva.ru/topics/promzony-kaloshino-i-lyublino-stanovyatsya-novymi-tsentrami-razvitiya-goroda/"
+   ],
+   "note": "КРТ Люблино (28,37 га, 372 тыс. кв.м, торги 10.02.2026, в программе МФ деловой-торговый центр): итоги/победитель в найденных источниках не опубликованы."
+  },
+  {
+   "unified_id": "UC-OBJ-0310",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://cre.ru/news/100702",
+    "https://allestate.pro/news/17.12.2025/moskva-ischet-investora-na-proekt-krt-na-altufevskom-shosse"
+   ],
+   "note": "Новый лот КРТ Алтуфьевское шоссе (14,34 га, 7 участков, ~111 тыс. общ.-делов., торги 3.02.2026): победитель не найден; ул. Декабристов в параметрах не подтверждена (cre.ru называет Алтуфьевское шоссе, Римского-Корсакова, Высоковольтный пр.). Старый лот 2021 - AFI, не приписывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0641",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://ardexpert.ru/project/3273"
+   ],
+   "note": "Проект МФК 185 тыс. кв. м на Малой Юшуньской, 1к2 не найден ни в новостях, ни в каналах; найденное (Малая Юшуньская, 3 - жилой комплекс Моспроект-4; 1к1/1к2 - действующая гостиница/БЦ Берлин) к проекту не относится. Telegram-поиск ?q= в веб-версии не выдаёт постов."
+  },
+  {
+   "unified_id": "UC-OBJ-0313",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.mos.ru/news/item/83980073/"
+   ],
+   "note": "mos.ru (дек. 2020): офисный комплекс-треугольник ~15,5 тыс. кв. м на Удальцова, 75А, оценивает главархитектор Кузнецов, застройщик/заказчик в тексте не назван. Соседний БЦ Удальцова Плаза (Удальцова, 1А, 2009) - другой объект. stroi.mos.ru/news (здание-утюг у Проспекта Вернадского) - таймаут при чтении."
+  },
+  {
+   "unified_id": "UC-OBJ-0428",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://moskvichmag.ru/gorod/vozle-metro-universitet-postroyat-torgovo-ofisnyj-tsentr-s-vmyatinoj-na-fasade/"
+   ],
+   "note": "Москвич Mag прочитан: 84 тыс. кв. м, офис 12 эт. + ТЦ 4 эт., рендеры из канала 'Стройки - и точка'; заказчик прямо назван неизвестным. В конце 2025 участок включён в КРТ в формате 'нулевого проекта' (благоустройство) - проект может быть неактуален."
+  },
+  {
+   "unified_id": "UC-OBJ-0319",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "По адресу Новослободская, 55с1 ничего специфичного не найдено (выдача про другие дома улицы)."
+  },
+  {
+   "unified_id": "UC-OBJ-0325",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.restate.ru/office/ochakovskoe-shosse-40-1909.html"
+   ],
+   "note": "Очаковское ш., 40: существует построенный БЦ кл. C, ~10 тыс. кв. м, 3 эт.; УК/собственник не указаны. Проект 19,9 тыс. кв. м нигде не найден."
+  },
+  {
+   "unified_id": "UC-OBJ-0524",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://rentnow.ru/estate/office/pavlovskaya_ul_18_str_2"
+   ],
+   "note": "Павловская, 18с2: действующий 5-этажный БЦ кл. B (~4250 кв. м); собственник/девелопер на страницах не назван, о реконструкции сведений нет."
+  },
+  {
+   "unified_id": "UC-OBJ-0382",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://mospenthouse.ru/complexes/zhk-the-loft-club-duhovskoy-pereulok-17/",
+    "https://2gis.ru/moscow/geo/4504235282583277"
+   ],
+   "note": "Духовской пер., 17: комплекс LOFT17/The Loft club (в выдаче cian/mskguru - RED Development), но стр. 4 в нём не значится (по 2ГИС там 3-этажное здание, автосалон). Принадлежность стр. 4 к проекту RED не подтверждена, developer не заполняю. Адрес в базе исправить на 'Духовской переулок'."
+  },
+  {
+   "unified_id": "UC-OBJ-0409",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://realty.rbc.ru/news/64462ade9a7947c2dfce3146"
+   ],
+   "note": "РБК: КРТ на пр-те Мира/Бажова/Будайский пр-д (Останкино/Ростокино, ~190 тыс. кв. м, отель 72 тыс. + офис 75 тыс.) - компания не названа, номера домов 82-92 не подтверждены, тот же ли это объект - неясно. Правообладателя нужно смотреть в постановлении КРТ."
+  },
+  {
+   "unified_id": "UC-OBJ-0400",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://www.rgud.ru/investment-projects/auktsion-na-pravo-redevelopmenta-po-krt-moskva-volgogradskiy-prospekt-vl-32/",
+    "https://www.restate.ru/material/v-moskve-obsuzhdayut-zastroyku-na-volgogradskom-63-tys-kv-m-zhilya-i-144-tys-kv-m-ofisov-184656.html"
+   ],
+   "note": "Аукцион 2023 (15,91 га, до 265,1 тыс. кв. м нежилого) - победитель не найден, аукцион отменён; в 2025 КРТ отменено. Restate компаний не называет. Инвестора нет."
+  },
+  {
+   "unified_id": "UC-OBJ-0329",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://zoon.ru/msk/street/proletarskij_prospekt/bld/20/"
+   ],
+   "note": "Пролетарский пр., вл. 20: в поиске только действующие магазины/почта; сведений о проекте 22,9 тыс. кв. м и его девелопере нет."
+  },
+  {
+   "unified_id": "UC-OBJ-0330",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Поиск по адресу (2ГИС, Яндекс, fortexgroup, stroi.mos.ru, m2data) даёт только существующий БЦ Промышленный 7с4 (~1000 кв. м). Проект на 28 045 кв. м не идентифицирован."
+  },
+  {
+   "unified_id": "UC-OBJ-0331",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Раздельная 10с1: разрешения/новости mos.ru не найдены (найденное разрешение mos.ru/news/item/167646073 - Холодильный пер. 3к1, Товарищество Рябовской мануфактуры, другой объект - не привязывать)."
+  },
+  {
+   "unified_id": "UC-OBJ-0435",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Сельскохозяйственная 30/1: в выдаче только соседние адреса (26 - ЖК Союз, ГК Родина; 35; 38к1). Связь 30/1 с Родиной не подтверждена - не приписывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0430",
+   "developer": null,
+   "role_note": "City&Malls PFM - управляющая компания квартала (реновация), не застройщик",
+   "confidence": "none",
+   "sources": [
+    "https://leninskaya-sloboda-ul-26-str-35-55.amo.ru/",
+    "https://sm2.ai/buildings/simonovsky-business-quarter"
+   ],
+   "note": "26с35 - существующее кирпичное здание 1925 г., ~3143 кв. м (административно-складской комплекс, LOFT HALL) внутри Симоновского квартала; проект 28 000 кв. м - вероятно реновация квартала. Собственник/девелопер не назван; praedium.ru (сайт квартала) не открылся (просрочен сертификат). Telegram officesmokingroom ?q= вернул 'No posts found' через веб-версию."
+  },
+  {
+   "unified_id": "UC-OBJ-0531",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Синельниковская ул.: проект не найден (fortexgroup/biz-cen/РБК/Коммерсант обзоры не содержат)."
+  },
+  {
+   "unified_id": "UC-OBJ-0564",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Нет адреса и названия здания, запрос 'сколково' неоднозначен (Сколково Парк, Технопарк и др.). Нужна привязка к конкретному объекту."
+  },
+  {
+   "unified_id": "UC-OBJ-0479",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "1-я Рыбинская, вл. 1а: найдены только соседний БЦ Меркурий (3с1) и 1-я Рыбинская 1; связи не подтверждены. Telegram-поиск пуст."
+  },
+  {
+   "unified_id": "UC-OBJ-0343",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "'Старые Сосёнки, квартал 30' не найден ни в СМИ, ни в Telegram (No posts found)."
+  },
+  {
+   "unified_id": "UC-OBJ-0477",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://bc-tverskaya24.ru/"
+   ],
+   "note": "Сайт bc-tverskaya24.ru: БЦ класс B+, 7 этажей, 2026, 7 800 кв. м аренды, собственник не указан; параметры не совпадают с нашими (A, 11 137 кв. м) - тот же ли объект, не установлено. Sminex в выдаче - лишь общий шум, не привязывать."
+  },
+  {
+   "unified_id": "UC-OBJ-0354",
+   "developer": "АО «ОЭЗ «Технополис Москва» (бывш. ГУП «Стройэкспром»); собственник площадки/активов - Правительство Москвы",
+   "role_note": "Собственник и оператор ОЭЗ (город Москва), не частный девелопер",
+   "confidence": "medium",
+   "sources": [
+    "https://indparks.ru/organization/ao-tekhnopolis-moskva/",
+    "https://www.mos.ru/mayor/themes/8794050/",
+    "https://www.list-org.com/company/11629557"
+   ],
+   "note": "Адрес регистрации АО: Волгоградский пр-т 42 к.13. Стройэкспром преобразован в АО 'Технополис Москва' с 1.12.2017 (по выдаче поиска). Правительство Москвы - один из трёх собственников бывшей площадки АЗЛК, выкупило корпуса у владельцев Renault (2022; статья mos.ru про корп. 11, не 13). ЦИАН (капча) не открыт. Прямого документа именно про корп. 13 не найдено - поэтому medium."
+  },
+  {
+   "unified_id": "UC-OBJ-0355",
+   "developer": "АО «ОЭЗ «Технополис Москва» (заказчик/собственник комплекса на площадке Печатники)",
+   "role_note": "Официальный сайт ОЭЗ называет комплекс «новый деловой центр ОЭЗ Москвы на Коломникова»; ТМХ - якорный арендатор (этажи 5-23), не девелопер. Единственный акционер АО - город Москва.",
+   "confidence": "medium",
+   "sources": [
+    "https://technomoscow.ru/press-tsentr/novosti/pervyy-korpus-novogo-delovogo-tsentra-oez-moskvy-na-kolomnikova-gotov-na-85-protsentov/",
+    "https://www.mskagency.ru/materials/3474777"
+   ],
+   "note": "Генподрядчик не найден. Адрес в базе (Волгоградский пр., 42к8) vs ул. Коломникова (площадка Печатники, у Волгоградского пр.) - тождество не подтверждено напрямую; корпус 1 = 54,7 тыс. кв. м близко к GBA 53,7 тыс. Роль: заказчик/владелец земли и объекта, не подтверждено, что именно он - застройщик по РНС."
+  },
+  {
+   "unified_id": "UC-OBJ-0642",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Найден только ОСК Ермакова Роща 7А (склады/офисы, кл. C/B). Проект 180 тыс. кв. м не подтверждён ни одним источником; iCity (MR Group) - другой адрес (Ермакова Роща 1с1), не использовать."
+  },
+  {
+   "unified_id": "UC-OBJ-0401",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "По Складочной 5 проектной информации нет. Рядом упомянут технопарк «Густав» (Москомархитектура, 56 тыс. кв. м, Складочная) - адрес/идентичность не проверены, не приписываю."
+  },
+  {
+   "unified_id": "UC-OBJ-0552",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Улофа Пальме, 5 - карточки М2 Data/Яндекс есть (административное здание), сведений о девелопере и проекте 50 тыс. кв. м нет; страницы не раскрыли владельца. Telegram officesmokingroom - постов нет."
+  },
+  {
+   "unified_id": "UC-OBJ-0410",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Фабрициуса 19А: релевантных источников нет (выдача - жилые ЖК на Фабрициуса)."
+  },
+  {
+   "unified_id": "UC-OBJ-0734",
+   "developer": null,
+   "role_note": "УК - Zeppelin PM (не девелопер)",
+   "confidence": "none",
+   "sources": [
+    "https://factoria-bc.ru/",
+    "https://www.zeppelinpm.ru/objects/32/"
+   ],
+   "note": "Комплекс из 17 зданий, бывшая шёлкопрядильная фабрика 1899 (арх. Шуцман), реновация завершена в 1999 по данным поиска (расхождение с 'реконструкцией 2018'). Собственник/девелопер на официальном сайте не указан. Не подтверждено."
+  },
+  {
+   "unified_id": "UC-OBJ-0444",
+   "developer": null,
+   "role_note": "Участок КРТ Шипиловский пр-д, вл. 55, 6,61 га - физкультурно-оздоровительный центр, каток, фитнес (~56 тыс. кв. м), не офис.",
+   "confidence": "none",
+   "sources": [
+    "https://www.mos.ru/news/item/160444073/",
+    "https://www.mskagency.ru/materials/3513097"
+   ],
+   "note": "По официальным источникам инвестор определяется торгами. В одном ответе поиска мелькнуло «ООО СЗ «Инвестор» - победитель», но страницы это не подтверждают (похоже на артефакт), не использую. Итог торгов на investmoscow.ru (tender/20136328) открыть не удалось (таймаут). Тип объекта в базе, вероятно, неверен."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-011",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://t.me/s/officesmokingroom?q=Южнопортовый"
+   ],
+   "note": "Офисный объект 53,4 тыс. кв. м не сопоставлен. В Telegram - только лот ~2,3 тыс. кв. м Level Work Южнопортовая (Level Group), другой масштаб. Южный порт (Аеон) - жилой мегапроект с 350-м офисной башней, связь не установлена."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-022",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [
+    "https://kf.expert/office/osobnyak/sadovnicheskaya-naberezhnaya-9-os4258"
+   ],
+   "note": "Особняк 3085 кв. м, кл. B. Собственник нигде не назван. Связь с «Балчуг Девелопмент» - только фрагмент поисковой выдачи, страницей не подтверждена; Коммерсантъ (8569272) описывает другое здание 421 кв. м."
+  },
+  {
+   "unified_id": "UC-OBJ-ADD-178",
+   "developer": null,
+   "role_note": "",
+   "confidence": "none",
+   "sources": [],
+   "note": "Здание 8500 кв. м на Большом бульваре, 40 не идентифицировано; 8500 кв. м встречено лишь как коммерческая зона делового квартала «Сколково Парк» (другой адрес, Сколковское ш., 43). Амальтея (Большой бульвар, 40) - 78 тыс. кв. м, не тот объект."
   }
  ]
 }
