@@ -1,0 +1,65 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "Public office_project rows with missing input_year after wave 9",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-136",
+      "canonical_name": "K-city",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2028, "input_quarter": 2, "input_date_kind": "planned"},
+      "building_date_key": "k-city",
+      "commission_q": "202806",
+      "classifier_unified_id": "UC-OBJ-0123",
+      "classifier_before": {"commission_year": 2028, "commission_quarter": 4},
+      "classifier_after": {"commission_year": 2028, "commission_quarter": 2},
+      "classifier_verification_status": "Проверено по ЕИСЖС и сайту проекта",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "classifier_classification_note": "2026-09-18: слито с UC-OBJ-ADD-207 (K-city) — дубль по имени/координатам, создан повторным бэкфиллом из реестра. Данные объединены, вторая запись удалена. 2026-09-26: актуальная карточка ЕИСЖС объекта 67696 и официальный сайт KOBZON CITY согласуются по плановому вводу во II квартале 2028 года. Публикация РБК с IV кварталом 2028 года сохранена в QA как прежнее расхождение, но больше не используется вместо актуального официального реестра.",
+      "building_source_history": "Earlier check: official https://kobzon.city/ said Q2 2028 while https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716 said Q4 2028.",
+      "classifier_layer_history": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='k-city'; underlying source and its check date remain in that record (2026-07-16). Date audit 2026-08-23: official K-City page (https://kobzon.city/team) states completion Q2 2028; independent RBC report (https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716) states Q4 2028. Conflict retained; input year/quarter not changed pending primary resolution.",
+      "sources": [
+        "https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/67696",
+        "https://xn--80az8a.xn--d1aqf.xn--p1ai/проверка-новостроек/жк-кобзон-сити-67696/",
+        "https://kobzon.city/"
+      ],
+      "reliability": "official_government_registry_plus_developer_site",
+      "confidence": "high",
+      "decision": "The current EISZhS object card for project declaration 77-003243 identifies KOBZON CITY at the matching address and gives planned commissioning in Q2 2028. The current official project site gives the same quarter. This resolves the older Q2/Q4 conflict in favour of the current statutory project record; the date remains planned, not confirmed."
+    },
+    {
+      "canonical_project_id": "proj-171",
+      "canonical_name": "QOOB",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2026, "input_quarter": 3, "input_date_kind": "planned"},
+      "building_date_key": "qoob",
+      "commission_q": "202609",
+      "classifier_unified_id": "UC-OBJ-0056",
+      "classifier_before": {"commission_year": 2026, "commission_quarter": 4},
+      "classifier_after": {"commission_year": 2026, "commission_quarter": 3},
+      "classifier_verification_status": "Проверено по ЕИСЖС и сайту проекта",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "classifier_classification_note": "2026-09-26: актуальная карточка ЕИСЖС объекта 54664 для БЦ «КУБ» (QOOB) указывает плановый ввод в III квартале 2026 года и статус «Строится». Новость Dominanta от 25.02.2026 подтверждает только получение ЗОС, поэтому дата не повышена до подтверждённого ввода.",
+      "building_source_history": "cre.ru/news/93883, alldoma.ru, companies.rbc.ru — первый бетон 21.02.2024, старт продаж октябрь 2023; по состоянию на февр. 2026 получено только ЗОС (заключение о соответствии) — предпоследний шаг перед РНВ, сам ввод в эксплуатацию ещё не подтверждён.",
+      "classifier_layer_history": "offer_status и geometry_quality — производные значения (эвристика конвертации), не подтверждены отдельно; см. scripts/build_all_projects_layer.py. entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities; rule: scripts/all_projects_entity_roles.py. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='qoob'; underlying source and its check date remain in that record (2026-07-14). Date audit 2026-08-23: IBC Real Estate (https://ibcrealestate.ru/catalog/T96_15935/) states commissioning in 2026; IPG.Estate (https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/biznes-centr-qoob-korpus-b-9380) states 2025 for QOOB B. Conflict may reflect different QOOB buildings/phases; input year/quarter not changed.",
+      "sources": [
+        "https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/54664?id=54664&objectIds=55682%2C55617%2C56126",
+        "https://xn--80az8a.xn--d1aqf.xn--p1ai/проверка-новостроек/жк-куб-54664/",
+        "https://d-a.ru/projects/offices/qoob/news/"
+      ],
+      "reliability": "official_government_registry_plus_developer_site",
+      "confidence": "high",
+      "decision": "The current EISZhS object card for non-residential object 54664 identifies the exact QOOB/KUB project and gives planned commissioning in Q3 2026 with status under construction. The developer reports ZOS rather than a permit to use, so the registry quarter is recorded as planned and the row is not marked commissioned."
+    }
+  ],
+  "unresolved": [
+    {"canonical_project_id": "proj-19", "reason": "2007/2021 construction and 2023 reconstruction dates remain inconsistent."},
+    {"canonical_project_id": "proj-22", "reason": "The 8,500 sqm sale-project grain is not resolved against the 78,000 sqm Amaltea complex."},
+    {"canonical_project_id": "proj-33", "reason": "The aggregate row overlaps separately dated STONE Towers phases and cannot receive one phase date safely."},
+    {"canonical_project_id": "proj-96", "reason": "Likely duplicate of public proj-220 (Башня Рябов); identity must be resolved before another supply row is dated."},
+    {"canonical_project_id": "proj-98", "reason": "A brokerage reports reconstruction in 2025, but no primary commissioning evidence was found for the historic building."},
+    {"canonical_project_id": "proj-260", "reason": "Current sources conflict between Q4 2029 sale material and Q1 2034 full-project completion; phase grain is unresolved."},
+    {"canonical_project_id": "proj-add-luzhnetskaya-sminex-20260925", "reason": "The official Sminex page confirms the project but publishes no commissioning date; CRM 2031 remains unconfirmed."}
+  ]
+}
