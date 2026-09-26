@@ -318,11 +318,12 @@
   "afi парк воронцовский": {
     "construction_start_q": "202101",
     "start_q": null,
-    "commission_q": null,
-    "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu подтверждает РНВ только на 4 ЖИЛЫХ корпуса (83,5 тыс. м², 826 квартир) и прямо называет 21-этажный офисный корпус будущим/более поздним этапом реализации, всё ещё строящимся — офисная часть по-прежнему без подтверждённого РНВ, ошибка смешения жилого/офисного не повторена",
-    "last_checked": "2026-08-01",
+    "commission_q": "202603",
+    "source": "ПЕРЕПРОВЕРЕНО (2026-08-01): afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu подтверждает РНВ только на 4 ЖИЛЫХ корпуса (83,5 тыс. м², 826 квартир) и прямо называет 21-этажный офисный корпус будущим/более поздним этапом реализации, всё ещё строящимся — офисная часть по-прежнему без подтверждённого РНВ, ошибка смешения жилого/офисного не повторена Verified sources: https://bc.afi-v-park.ru/, https://core-xp.ru/upload/iblock/e4e/qcgw8g4d6f7foqxfrcvifiqmfvds6lk3.pdf",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-106",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2026
   },
   "октябрьское поле (бывший — общественно-деловой центр \"октябрьское поле\")": {
     "construction_start_q": null,
@@ -1001,6 +1002,16 @@
     "source": "Verified official sources: https://slava-moscow.com/about",
     "last_checked": "2026-09-26",
     "canonical_project_id": "proj-87",
+    "canonical_building_id": null
+  },
+  "mount (маунт)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202803",
+    "commission_year": 2028,
+    "source": "Verified sources: https://workplace.forma.ru/projects/mount",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-73",
     "canonical_building_id": null
   }
 }
