@@ -26,13 +26,13 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
             self.assertIn("Input year rechecked 2026-08-23", notes)
             self.assertIn("http", notes)
 
-    def test_k_city_date_conflict_is_visible_and_not_normalized(self):
+    def test_k_city_current_registry_resolves_old_quarter_conflict(self):
         row = self.by_id["proj-136"]
-        self.assertIsNone(row["input_year"])
-        self.assertIsNone(row["input_quarter"])
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2028, 2))
+        self.assertEqual(row["input_date_kind"], "planned")
         self.assertIn("Q2 2028", row["qa_notes"])
         self.assertIn("Q4 2028", row["qa_notes"])
-        self.assertIn("https://kobzon.city/team", row["qa_notes"])
+        self.assertIn("/объект/67696", row["qa_notes"])
         self.assertIn("https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716", row["qa_notes"])
 
     def test_mind_office_date_is_resolved_without_reusing_mixed_use_date(self):
@@ -46,13 +46,14 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("https://seregina-5.ru/", row["qa_notes"])
         self.assertIn("MR Group", row["qa_notes"])
 
-    def test_qoob_phase_date_conflict_is_visible_and_not_normalized(self):
+    def test_qoob_current_registry_resolves_old_phase_date_conflict(self):
         row = self.by_id["proj-171"]
-        self.assertIsNone(row["input_year"])
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2026, 3))
+        self.assertEqual(row["input_date_kind"], "planned")
         self.assertIn("2026", row["qa_notes"])
         self.assertIn("2025", row["qa_notes"])
-        self.assertIn("https://ibcrealestate.ru/catalog/T96_15935/", row["qa_notes"])
-        self.assertIn("https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/biznes-centr-qoob-korpus-b-9380", row["qa_notes"])
+        self.assertIn("/объект/54664", row["qa_notes"])
+        self.assertIn("https://d-a.ru/projects/offices/qoob/news/", row["qa_notes"])
 
     def test_slava_office_phase_is_confirmed_by_current_official_page(self):
         row = self.by_id["proj-87"]

@@ -47,11 +47,10 @@ class OfficialProjectsGapFillWave3Tests(unittest.TestCase):
                 values,
             )
 
-    def test_rejected_candidates_remain_unfilled(self):
-        for project_id in ("proj-171",):
-            row = self.rows[project_id]
-            self.assertIsNone(row["input_year"])
-            self.assertIsNone(row["input_quarter"])
+    def test_qoob_later_official_registry_review_supersedes_rejected_candidate(self):
+        row = self.rows["proj-171"]
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2026, 3))
+        self.assertEqual(row["input_date_kind"], "planned")
 
 
 if __name__ == "__main__":

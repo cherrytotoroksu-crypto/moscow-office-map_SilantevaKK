@@ -75,7 +75,7 @@ class OfficialProjectsGapFillWave6Tests(unittest.TestCase):
         self.assertIn("UC-OBJ-ADD-355", note)
 
     def test_known_conflicts_remain_unfilled(self):
-        for project_id in ("proj-19", "proj-136"):
+        for project_id in ("proj-19",):
             self.assertIsNone(self.rows[project_id]["input_year"])
             self.assertIsNone(self.rows[project_id]["input_quarter"])
 

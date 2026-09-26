@@ -42,7 +42,7 @@ class OfficialProjectsGapFillWave9Tests(unittest.TestCase):
         self.assertFalse(row["needs_review"])
 
     def test_remaining_phase_conflicts_stay_unfilled(self):
-        for project_id in ("proj-33", "proj-98", "proj-136", "proj-260"):
+        for project_id in ("proj-33", "proj-98", "proj-260"):
             self.assertIsNone(self.rows[project_id]["input_year"])
 
 

@@ -41,10 +41,10 @@ class OfficialProjectsGapFillWave4Tests(unittest.TestCase):
         self.assertEqual(self.rows["proj-283"]["gba"], 23870.84)
         self.assertIsNone(self.rows["proj-283"]["gla"])
 
-    def test_unresolved_qoob_aggregate_date_remains_null(self):
+    def test_qoob_later_registry_review_uses_exact_object_date(self):
         row = self.rows["proj-171"]
-        self.assertIsNone(row["input_year"])
-        self.assertIsNone(row["input_quarter"])
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2026, 3))
+        self.assertEqual(row["input_date_kind"], "planned")
 
 
 if __name__ == "__main__":

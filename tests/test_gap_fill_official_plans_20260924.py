@@ -22,10 +22,10 @@ class OfficialPlansGapFillTests(unittest.TestCase):
             self.assertEqual((row["input_year"], row["input_quarter"]), date)
             self.assertEqual(row["input_date_kind"], "planned")
 
-    def test_k_city_conflict_remains_unfilled(self):
+    def test_k_city_later_registry_review_resolves_conflict(self):
         row = self.rows[("proj-136", "K-city")]
-        self.assertIsNone(row["input_year"])
-        self.assertIsNone(row["input_quarter"])
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2028, 2))
+        self.assertEqual(row["input_date_kind"], "planned")
         self.assertIn("Q2 2028", row["qa_notes"])
         self.assertIn("Q4 2028", row["qa_notes"])
 
