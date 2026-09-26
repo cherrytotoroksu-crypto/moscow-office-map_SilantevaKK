@@ -1026,5 +1026,15 @@
     "last_checked": "2026-09-26",
     "canonical_project_id": "proj-264",
     "canonical_building_id": null
+  },
+  "river park коломенское": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202604",
+    "commission_year": 2026,
+    "source": "Official sources: https://m.river-park.ru/info/news/27693/, https://river-park.ru/upload/iblock/5a4/qo4ccwhrnltet52onyl4pabjqwfgbnp5/RV-7_3-_77_05_013108_2026.pdf",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-279",
+    "canonical_building_id": null
   }
 }
