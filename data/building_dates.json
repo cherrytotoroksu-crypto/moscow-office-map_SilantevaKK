@@ -68,10 +68,11 @@
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202307",
-    "source": "stroi.mos.ru («Алкон» сдан в эксплуатацию), arendator.ru — разрешение на ввод от 14.07.2023; ОДИН источник (novostroy) расходится, называя просто «2022 год» без даты — доверяю датированному разрешению",
-    "last_checked": "2026-07-16",
+    "source": "stroi.mos.ru («Алкон» сдан в эксплуатацию), arendator.ru — разрешение на ввод от 14.07.2023; ОДИН источник (novostroy) расходится, называя просто «2022 год» без даты — доверяю датированному разрешению; current official project page states Q2 2023: https://alcongroup.ru/projects/alcon-3; quarter conflict intentionally retained",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-95",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2023
   },
   "stone towers. tower a": {
     "construction_start_q": null,
