@@ -1,0 +1,26 @@
+{
+  "checked_on": "2026-09-26",
+  "canonical_project_id": "proj-95",
+  "canonical_name": "Алкон 3",
+  "before": {"gba": 53104.0, "gla": null, "input_year": 2023, "input_quarter": null},
+  "after": {"gba": 35865.0, "gla": null, "input_year": 2023, "input_quarter": null},
+  "reliability": "high",
+  "decision": "Replace the obsolete mixed-use concept area with the current developer's completed ALCON III building area. Keep GLA empty because published office-area values belong to earlier configurations and conflict. Keep the registry quarter empty because the developer's Q2 handover conflicts with the retained July commissioning-permit evidence.",
+  "sources": [
+    {
+      "url": "https://alcongroup.ru/projects/alcon-3",
+      "type": "current official developer project page",
+      "evidence": "ALCON III at Leningradsky Prospekt 34; one eight-storey class-A building; total area 35,865 sqm; stated handover Q2 2023."
+    },
+    {
+      "url": "https://ibcrealestate.ru/upload/iblock/fc8/c9eme0zr7jjxjph6p0jgetfzu0algq09/North-West-corridor.pdf",
+      "type": "market report documenting the earlier phase configuration",
+      "evidence": "Older ALCON phase III configuration lists 24,321 sqm total and 10,155 sqm office area; it is not applied to the current completed project."
+    }
+  ],
+  "rejected_values": [
+    "53,104 sqm: obsolete mixed-use concept area retained from an older design source.",
+    "10,500 / 10,155 sqm GLA: conflicting legacy classifier and earlier phase-report values, not confirmed by the current developer page."
+  ],
+  "open_issue": "The current developer page says Q2 2023, while the retained commissioning-permit record is dated 2023-07-14 (Q3); input_quarter remains null."
+}
