@@ -254,12 +254,12 @@
   "lunar": {
     "construction_start_q": null,
     "start_q": "202103",
-    "commission_q": null,
-    "source": "lunar-center.ru reports the Lunar office building commissioned in 2023; MosPrimeOffice corroborates identity/address.",
-    "last_checked": "2026-09-24",
-    "canonical_project_id": "proj-14",
+    "commission_q": "202409",
+    "source": "Official HUTTON evidence: https://hutton.ru/offices/lunar, https://hutton.ru/storage/app/offices/ZaPQcCSB9MmcVwe7X0LNBSlWtesHV9V0SuOX2542.pdf, https://hutton.ru/mobile/news/hutton-polnostyu-realizoval-biznes-centr-v-sostave-proekta-lunar, https://hutton.ru/mobile/news/v-zhilom-i-delovom-kvartale-lunar-ot-hutton-otkrilsya-barbershop-chop-chop",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-80",
     "canonical_building_id": null,
-    "commission_year": 2023
+    "commission_year": 2024
   },
   "porta forma": {
     "construction_start_q": "202301",
@@ -284,10 +284,11 @@
     "construction_start_q": null,
     "start_q": null,
     "commission_q": "202409",
-    "source": "forbes.ru — разрешение на ввод в эксплуатацию выдано Мосгосстройнадзором в сентябре 2024, все офисы модуля В реализованы (cre.ru)",
-    "last_checked": "2026-07-16",
+    "source": "Official HUTTON evidence: https://hutton.ru/offices/lunar, https://hutton.ru/storage/app/offices/ZaPQcCSB9MmcVwe7X0LNBSlWtesHV9V0SuOX2542.pdf, https://hutton.ru/mobile/news/hutton-polnostyu-realizoval-biznes-centr-v-sostave-proekta-lunar, https://hutton.ru/mobile/news/v-zhilom-i-delovom-kvartale-lunar-ot-hutton-otkrilsya-barbershop-chop-chop",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-80",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2024
   },
   "orbital": {
     "construction_start_q": null,
