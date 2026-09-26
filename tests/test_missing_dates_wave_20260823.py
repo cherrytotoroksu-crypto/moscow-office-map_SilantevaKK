@@ -54,12 +54,13 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("https://ibcrealestate.ru/catalog/T96_15935/", row["qa_notes"])
         self.assertIn("https://ipg-estate.ru/msk/ofisnaia-nedvizhimost/biznes-centr-qoob-korpus-b-9380", row["qa_notes"])
 
-    def test_slava_office_date_uncertainty_is_visible(self):
+    def test_slava_office_phase_is_confirmed_by_current_official_page(self):
         row = self.by_id["proj-87"]
-        self.assertIsNone(row["input_year"])
-        self.assertIn("2024", row["qa_notes"])
-        self.assertIn("https://slava-office.ru/", row["qa_notes"])
-        self.assertIn("https://slava-moscow.com/news/pervaya-ochered-premialnogo-kompleksa-slava-poluchila-razreshenie-na-vvod-v-ekspluatatsiyu", row["qa_notes"])
+        self.assertEqual(row["input_year"], 2025)
+        self.assertIsNone(row["input_quarter"])
+        self.assertEqual(row["input_date_kind"], "confirmed")
+        self.assertEqual(row["project_status"], "Введён")
+        self.assertIn("https://slava-moscow.com/about", row["qa_notes"])
 
     def test_afi_residential_date_is_not_transferred_to_office(self):
         row = self.by_id["proj-106"]

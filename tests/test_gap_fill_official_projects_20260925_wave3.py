@@ -49,10 +49,8 @@ class OfficialProjectsGapFillWave3Tests(unittest.TestCase):
 
     def test_rejected_candidates_remain_unfilled(self):
         for project_id in (
-            "proj-87",
             "proj-106",
             "proj-171",
-            "proj-259",
         ):
             row = self.rows[project_id]
             self.assertIsNone(row["input_year"])
