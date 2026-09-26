@@ -1013,5 +1013,15 @@
     "last_checked": "2026-09-26",
     "canonical_project_id": "proj-73",
     "canonical_building_id": null
+  },
+  "энтузиаст": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202806",
+    "commission_year": 2028,
+    "source": "Verified sources: https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/68926, https://www.bc-enthusiast.ru/",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-264",
+    "canonical_building_id": null
   }
 }
