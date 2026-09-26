@@ -1,0 +1,90 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "LUNAR Module B duplicate resolution and official area/date verification",
+  "decision": {
+    "canonical_project_id": "proj-80",
+    "duplicate_project_id": "proj-14",
+    "identity_evidence": {
+      "project_no": "594",
+      "subid": "01",
+      "address": "Ленинский пр-кт, 38",
+      "coordinates": [
+        55.704423,
+        37.572207
+      ]
+    },
+    "before": {
+      "proj-14": {
+        "input_year": 2023,
+        "input_quarter": null,
+        "gba": 9948.0,
+        "gla": null,
+        "duplicate_of": null
+      },
+      "proj-80": {
+        "input_year": 2024,
+        "input_quarter": 3,
+        "gba": 13431.0,
+        "gla": 10874.0,
+        "duplicate_of": null,
+        "legacy_ids": []
+      }
+    },
+    "after": {
+      "proj-14": {
+        "input_year": 2024,
+        "input_quarter": 3,
+        "gba": 13431.0,
+        "gla": 9941.78,
+        "duplicate_of": "proj-80"
+      },
+      "proj-80": {
+        "input_year": 2024,
+        "input_quarter": 3,
+        "gba": 13431.0,
+        "gla": 9941.78,
+        "duplicate_of": null,
+        "legacy_ids": [
+          "proj-14"
+        ]
+      }
+    },
+    "reliability": "high",
+    "reason": "The two registry rows have the same project_no/subid, address and coordinates. The developer identifies LUNAR Module B as the office building, reports a September 2024 commissioning permit and publishes the authoritative area schedule. The older 2023 secondary-source date and both conflicting area values are superseded.",
+    "sources": [
+      {
+        "url": "https://hutton.ru/offices/lunar",
+        "publisher": "HUTTON",
+        "type": "official project page",
+        "evidence": "Module B is the office building; total above-ground area is 13,431 sqm; building is commissioned."
+      },
+      {
+        "url": "https://hutton.ru/storage/app/offices/ZaPQcCSB9MmcVwe7X0LNBSlWtesHV9V0SuOX2542.pdf",
+        "publisher": "HUTTON",
+        "type": "official project brochure",
+        "evidence": "Office floor areas 2,111.86 + 2,313.84 + 2,091.72 + 2,091.72 + 1,332.64 = 9,941.78 sqm; above-ground area is 13,431 sqm."
+      },
+      {
+        "url": "https://hutton.ru/mobile/news/hutton-polnostyu-realizoval-biznes-centr-v-sostave-proekta-lunar",
+        "publisher": "HUTTON",
+        "type": "official developer news",
+        "evidence": "The commissioning permit was issued in September 2024 after the final inspection."
+      },
+      {
+        "url": "https://hutton.ru/mobile/news/v-zhilom-i-delovom-kvartale-lunar-ot-hutton-otkrilsya-barbershop-chop-chop",
+        "publisher": "HUTTON",
+        "type": "official developer news",
+        "evidence": "The complex was commissioned in September 2024 and Module B is the office building."
+      }
+    ]
+  },
+  "unresolved_missing_years": [
+    "proj-19",
+    "proj-22",
+    "proj-33",
+    "proj-96",
+    "proj-98",
+    "proj-260",
+    "proj-add-luzhnetskaya-sminex-20260925"
+  ]
+}
