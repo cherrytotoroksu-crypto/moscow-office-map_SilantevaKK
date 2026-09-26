@@ -62,12 +62,13 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertEqual(row["project_status"], "Введён")
         self.assertIn("https://slava-moscow.com/about", row["qa_notes"])
 
-    def test_afi_residential_date_is_not_transferred_to_office(self):
+    def test_afi_office_commissioning_is_confirmed_separately(self):
         row = self.by_id["proj-106"]
-        self.assertIsNone(row["input_year"])
-        self.assertIn("residential buildings", row["qa_notes"])
-        self.assertIn("https://afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu", row["qa_notes"])
-        self.assertIn("https://afi-v-park.ru/news/zaversheny-krovelnye-raboty-biznes-tsentra-vorontsovskiy", row["qa_notes"])
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2026, 1))
+        self.assertEqual(row["input_date_kind"], "confirmed")
+        self.assertEqual(row["project_status"], "Введён")
+        self.assertIn("https://bc.afi-v-park.ru/", row["qa_notes"])
+        self.assertIn("https://core-xp.ru/upload/iblock/e4e/qcgw8g4d6f7foqxfrcvifiqmfvds6lk3.pdf", row["qa_notes"])
 
     def test_lunar_commissioning_year_is_confirmed_by_two_sources(self):
         row = self.by_id["proj-14"]
@@ -86,12 +87,13 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("2021", row["qa_notes"])
         self.assertIn("Conflict retained", row["qa_notes"])
 
-    def test_meshchersky_date_conflict_is_visible_and_not_normalized(self):
+    def test_mount_current_official_identity_and_date_are_used(self):
         row = self.by_id["proj-73"]
-        self.assertIsNone(row["input_year"])
-        self.assertIn("2027", row["qa_notes"])
-        self.assertIn("2028", row["qa_notes"])
-        self.assertIn("Conflict retained", row["qa_notes"])
+        self.assertEqual(row["canonical_name"], "MOUNT (Маунт)")
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2028, 1))
+        self.assertEqual(row["input_date_kind"], "planned")
+        self.assertIn("БЦ Мещерский", row["aliases"])
+        self.assertIn("https://workplace.forma.ru/projects/mount", row["qa_notes"])
 
     def test_link_completion_year_and_quarter_are_confirmed(self):
         row = self.by_id["proj-150"]
