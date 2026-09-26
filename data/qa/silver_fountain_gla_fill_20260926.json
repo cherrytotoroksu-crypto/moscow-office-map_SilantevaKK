@@ -1,0 +1,26 @@
+{
+  "checked_on": "2026-09-26",
+  "canonical_project_id": "proj-20",
+  "canonical_name": "БЦ Серебряный Фонтан",
+  "before": {"gla": null},
+  "after": {"gla": 18717.0},
+  "reliability": "high",
+  "decision": "Use the current office rentable area published by the asset manager as of 2026-04-30. Preserve the precise registry GBA and do not normalize the unresolved корпус 1 / корпус 5 address representation.",
+  "sources": [
+    {
+      "url": "https://www.wimsavings.ru/actives/delovoy-kvartal-serebryanyy-fontan/",
+      "type": "current official asset-manager page",
+      "evidence": "States 18,717 sqm rentable office area, 100% leased, valuation area as of 2026-04-30."
+    },
+    {
+      "url": "https://etalongroup.ru/msk/news/gruppa-etalon-otkryvaet-novyy-biznes-tsentr-klassa-a-v-moskve/",
+      "type": "official developer news",
+      "evidence": "Confirms the completed 11-storey class-A office building in the Silver Fountain business quarter and a rounded building area of 21,700 sqm."
+    }
+  ],
+  "superseded_value": "Classifier GLA 13,804 sqm had no retained source and is superseded by the current asset-manager disclosure.",
+  "open_issues": [
+    "The current asset page renders корпус 1 while the registry and prior fund materials identify корпус 5; address and coordinates are unchanged.",
+    "The developer's rounded 21,700 sqm building area does not replace the more precise registry GBA 21,403 sqm."
+  ]
+}
