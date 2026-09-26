@@ -71,15 +71,13 @@ class MissingDatesWave20260823Tests(unittest.TestCase):
         self.assertIn("https://bc.afi-v-park.ru/", row["qa_notes"])
         self.assertIn("https://core-xp.ru/upload/iblock/e4e/qcgw8g4d6f7foqxfrcvifiqmfvds6lk3.pdf", row["qa_notes"])
 
-    def test_lunar_commissioning_year_is_confirmed_by_two_sources(self):
+    def test_lunar_old_row_is_linked_to_officially_verified_module_b(self):
         row = self.by_id["proj-14"]
-        self.assertEqual(row["input_year"], 2023)
-        self.assertIsNone(row["input_quarter"])
+        self.assertEqual((row["input_year"], row["input_quarter"]), (2024, 3))
         self.assertEqual(row["input_date_kind"], "confirmed")
+        self.assertEqual(row["duplicate_of"], "proj-80")
         self.assertIn("https://hutton.ru/offices/lunar", row["qa_notes"])
-        self.assertIn("no commissioning date", row["qa_notes"])
-        self.assertIn("https://www.lunar-center.ru/", row["qa_notes"])
-        self.assertIn("https://mosprimeoffice.ru/business-centers/lunar", row["qa_notes"])
+        self.assertIn("September 2024", row["qa_notes"])
 
     def test_bernikov_date_conflict_is_visible_and_not_normalized(self):
         row = self.by_id["proj-19"]

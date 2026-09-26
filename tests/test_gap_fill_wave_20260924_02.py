@@ -14,7 +14,7 @@ class GapFillWaveTwoTests(unittest.TestCase):
 
     def test_confirmed_commissioning_years_are_applied(self):
         expected = {
-            "proj-14": (2023, None),
+            "proj-14": (2024, 3),
             "proj-77": (2026, 1),
             "cwhost-0013": (2006, None),
             "cwhost-0025": (1964, None),
