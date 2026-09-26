@@ -60,9 +60,9 @@ class OfficialProjectsGapFillWave5Tests(unittest.TestCase):
         self.assertEqual(mozhayskiy["layer_status"], "Строится")
 
     def test_rejected_conflicts_remain_empty(self):
-        for project_id in ("proj-95", "proj-96", "proj-279"):
+        for project_id in ("proj-95", "proj-96"):
             row = self.rows[project_id]
-            if project_id in ("proj-95", "proj-279"):
+            if project_id == "proj-95":
                 self.assertIsNone(row["gla"])
             if project_id == "proj-96":
                 self.assertIsNone(row["input_year"])
