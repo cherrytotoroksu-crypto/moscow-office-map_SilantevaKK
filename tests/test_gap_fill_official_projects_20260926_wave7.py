@@ -44,7 +44,7 @@ class OfficialProjectsGapFillWave7Tests(unittest.TestCase):
     def test_unresolved_rows_remain_unfilled(self):
         unresolved = {
             "proj-19", "proj-22", "proj-33", "proj-96", "proj-98",
-            "proj-136", "proj-171", "proj-260", "proj-264",
+            "proj-136", "proj-171", "proj-260",
             "proj-add-luzhnetskaya-sminex-20260925",
         }
         for project_id in unresolved:
