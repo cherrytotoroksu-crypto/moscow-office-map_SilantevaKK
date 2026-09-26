@@ -235,11 +235,12 @@
   "k-city": {
     "construction_start_q": "202504",
     "start_q": "202501",
-    "commission_q": null,
-    "source": "Unresolved commissioning conflict: official https://kobzon.city/ says Q2 2028; https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716 says Q4 2028.",
-    "last_checked": "2026-09-24",
+    "commission_q": "202806",
+    "source": "Earlier check: official https://kobzon.city/ said Q2 2028 while https://realty.rbc.ru/amp/news/68871e7b9a7947fdd81a8716 said Q4 2028. Current commissioning sources: https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/67696, https://xn--80az8a.xn--d1aqf.xn--p1ai/проверка-новостроек/жк-кобзон-сити-67696/, https://kobzon.city/",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-136",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2028
   },
   "jois": {
     "construction_start_q": null,
@@ -373,11 +374,12 @@
   "qoob": {
     "construction_start_q": "202402",
     "start_q": "202310",
-    "commission_q": null,
-    "source": "cre.ru/news/93883, alldoma.ru, companies.rbc.ru — первый бетон 21.02.2024, старт продаж октябрь 2023; по состоянию на февр. 2026 получено только ЗОС (заключение о соответствии) — предпоследний шаг перед РНВ, сам ввод в эксплуатацию ещё не подтверждён",
-    "last_checked": "2026-07-14",
+    "commission_q": "202609",
+    "source": "cre.ru/news/93883, alldoma.ru, companies.rbc.ru — первый бетон 21.02.2024, старт продаж октябрь 2023; по состоянию на февр. 2026 получено только ЗОС (заключение о соответствии) — предпоследний шаг перед РНВ, сам ввод в эксплуатацию ещё не подтверждён. Current commissioning sources: https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/54664?id=54664&objectIds=55682%2C55617%2C56126, https://xn--80az8a.xn--d1aqf.xn--p1ai/проверка-новостроек/жк-куб-54664/, https://d-a.ru/projects/offices/qoob/news/",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-171",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2026
   },
   "технопарк густав": {
     "construction_start_q": "202406",
