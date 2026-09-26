@@ -1,0 +1,39 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "Public office_project rows with missing input_year after wave 8",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-264",
+      "canonical_name": "Энтузиаст",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2028, "input_quarter": 2, "input_date_kind": "planned"},
+      "building_date_key": "энтузиаст",
+      "commission_q": "202806",
+      "classifier_unified_id": "UC-OBJ-0389",
+      "classifier_before": {"developer": "ТЭН", "commission_year": 2028, "commission_quarter": 3},
+      "classifier_after": {"developer": "Объект Гарант", "commission_year": 2028, "commission_quarter": 2},
+      "classifier_verification_status": "Проверено по ЕИСЖС и сайту проекта",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "classifier_classification_note": "2026-09-26: ЕИСЖС подтверждает СЗ «Объект Гарант» как застройщика и II квартал 2028 года как плановый срок ввода. ТЭН указан в ЕИСЖС как генеральный подрядчик, поэтому поле developer исправлено без изменения сведений о генподрядчике в QA.",
+      "sources": [
+        "https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/68926",
+        "https://www.bc-enthusiast.ru/"
+      ],
+      "reliability": "official_registry_plus_developer_site",
+      "confidence": "medium",
+      "decision": "The official EISZhS record for project declaration 77-003266 identifies the exact Enthusiast business center, developer Object Garant, and planned commissioning in Q2 2028. The project website independently links its statutory disclosure to EISZhS and identifies the same developer and location."
+    }
+  ],
+  "unresolved": [
+    {"canonical_project_id": "proj-19", "reason": "2007/2021 construction and 2023 reconstruction dates remain inconsistent."},
+    {"canonical_project_id": "proj-22", "reason": "The 8,500 sqm sale-project grain is not resolved against the 78,000 sqm Amaltea complex."},
+    {"canonical_project_id": "proj-33", "reason": "The aggregate row overlaps separately dated STONE Towers phases and cannot receive one phase date safely."},
+    {"canonical_project_id": "proj-96", "reason": "Likely duplicate of public proj-220 (Башня Рябов); identity must be resolved before another supply row is dated."},
+    {"canonical_project_id": "proj-98", "reason": "A brokerage reports reconstruction in 2025, but no primary commissioning evidence was found for the historic building."},
+    {"canonical_project_id": "proj-136", "reason": "Official Q2 2028 and RBC Q4 2028 conflict."},
+    {"canonical_project_id": "proj-171", "reason": "ZOS/progress is visible, but no read permit-to-use date; older 2025/2026 phase conflict remains."},
+    {"canonical_project_id": "proj-260", "reason": "Current sources conflict between Q4 2029 sale material and Q1 2034 full-project completion; phase grain is unresolved."},
+    {"canonical_project_id": "proj-add-luzhnetskaya-sminex-20260925", "reason": "The official Sminex page confirms the project but publishes no commissioning date; CRM 2031 remains unconfirmed."}
+  ]
+}
