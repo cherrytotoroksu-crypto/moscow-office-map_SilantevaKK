@@ -151,11 +151,12 @@
   "aurus": {
     "construction_start_q": null,
     "start_q": "202603",
-    "commission_q": null,
-    "source": "ИТОГ (2026-07-28): старое значение 202511 было про предварительную бронь квартир жилого компонента «Страна.Сити»/Aurus Residences, не про офис. Пользователь подтвердил: для учёта «старт продаж» считается офисная часть — у неё реальные выставленные лоты в базе (13 лотов, 13398 м², цена 1 054 859) с firstQ=202603, это подтверждённый старт офисных продаж Q1 2026, старая жилая дата к нему не относится.",
-    "last_checked": "2026-07-28",
+    "commission_q": "203112",
+    "source": "ИТОГ (2026-07-28): старое значение 202511 было про предварительную бронь квартир жилого компонента «Страна.Сити»/Aurus Residences, не про офис. Пользователь подтвердил: для учёта «старт продаж» считается офисная часть — у неё реальные выставленные лоты в базе (13 лотов, 13398 м², цена 1 054 859) с firstQ=202603, это подтверждённый старт офисных продаж Q1 2026, старая жилая дата к нему не относится. Verified official sources: https://strana.com/msk/commercial/strana/, https://strana.com/msk/projects/premium/aurus/",
+    "last_checked": "2026-09-26",
     "canonical_project_id": "proj-259",
-    "canonical_building_id": null
+    "canonical_building_id": null,
+    "commission_year": 2031
   },
   "звенигородская от гранель": {
     "construction_start_q": null,
@@ -990,6 +991,16 @@
     "source": "Verified sources: https://xn----jtbjfbbwikdr3f.xn--p1ai/, https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/64168, https://www.apex-realty.ru/view.php?id=1049937",
     "last_checked": "2026-09-26",
     "canonical_project_id": "proj-add-krekshino-20260917",
+    "canonical_building_id": null
+  },
+  "slava": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": null,
+    "commission_year": 2025,
+    "source": "Verified official sources: https://slava-moscow.com/about",
+    "last_checked": "2026-09-26",
+    "canonical_project_id": "proj-87",
     "canonical_building_id": null
   }
 }
