@@ -1,0 +1,22 @@
+{
+  "checked_on": "2026-09-26",
+  "canonical_project_id": "proj-279",
+  "canonical_name": "River Park Коломенское",
+  "decision": "Fill official building and office-block areas for office building 12; keep the registry address unchanged until the stale 3A versus commissioned building 2 address is separately reconciled.",
+  "before": {"gba": null, "gla": null},
+  "after": {"gba": 10800.0, "gla": 8243.8},
+  "reliability": "high",
+  "sources": [
+    {
+      "url": "https://m.river-park.ru/info/news/27693/",
+      "type": "official project news",
+      "evidence": "Identifies building 12 as the commissioned office-business center of River Park Kolomenskoye."
+    },
+    {
+      "url": "https://river-park.ru/upload/iblock/5a4/qo4ccwhrnltet52onyl4pabjqwfgbnp5/RV-7_3-_77_05_013108_2026.pdf",
+      "type": "official Moscow commissioning permit published by the developer",
+      "evidence": "Permit 77-05-013108-2026 dated 2026-04-03 states total building area 10,800.0 sqm and office-block area 8,243.8 sqm."
+    }
+  ],
+  "open_issue": "The registry and 2026-06 offer snapshot use ул. Корабельная, 3А; the commissioning permit assigns ул. Корабельная, д. 2. Address and coordinates are not changed in this wave."
+}
