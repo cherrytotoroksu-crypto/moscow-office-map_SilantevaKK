@@ -1,0 +1,98 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "Public office_project rows with missing input_year after wave 7",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-73",
+      "canonical_name_before": "БЦ Мещерский",
+      "canonical_name_after": "MOUNT (Маунт)",
+      "before": {
+        "canonical_name": "БЦ Мещерский",
+        "aliases": [],
+        "developer": "ПИК",
+        "address": "г. Москва, Боровское шоссе, вл.2",
+        "gba": 38000.0,
+        "gla": 26687.0,
+        "input_year": null,
+        "input_quarter": null,
+        "input_date_kind": "unknown"
+      },
+      "after": {
+        "canonical_name": "MOUNT (Маунт)",
+        "aliases": ["БЦ Мещерский", "Мещерский Лес"],
+        "developer": "FORMA",
+        "address": "Боровское шоссе, 2а",
+        "gba": 39161,
+        "gla": 26050,
+        "input_year": 2028,
+        "input_quarter": 1,
+        "input_date_kind": "planned"
+      },
+      "building_date_key": "mount (маунт)",
+      "commission_q": "202803",
+      "classifier_unified_id": "UC-OBJ-0124",
+      "classifier_before": {
+        "name": "Мещерский Лес",
+        "developer": "ПИК",
+        "address": "г. Москва, Боровское шоссе, вл.2",
+        "gba": 31870.0,
+        "gla": 25310.0,
+        "commission_year": 2028,
+        "commission_quarter": null
+      },
+      "classifier_after": {
+        "name": "MOUNT (Маунт)",
+        "developer": "FORMA",
+        "address": "Боровское шоссе, 2а",
+        "gba": 39161,
+        "gla": 26050,
+        "commission_year": 2028,
+        "commission_quarter": 1
+      },
+      "classifier_verification_status": "Проверено по официальному сайту FORMA",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "classifier_classification_note": "2026-09-17: UC-OBJ-ADD-182 удалён как дубль этой записи (БЦ Мещерский / Мещерский Лес). 2026-09-26: актуальный официальный бренд проекта — MOUNT (Маунт), девелопер FORMA; прежние названия сохранены как aliases.",
+      "sources": ["https://workplace.forma.ru/projects/mount"],
+      "reliability": "official",
+      "confidence": "high",
+      "decision": "The current official FORMA page resolves the former Meshchersky row as the MOUNT workplace at Borovskoye Shosse 2a. It gives GBA 39,161 sqm, office area 26,050 sqm, and planned commissioning in Q1 2028. The old names are retained as aliases."
+    },
+    {
+      "canonical_project_id": "proj-106",
+      "canonical_name_before": "AFI Парк Воронцовский",
+      "canonical_name_after": "AFI Парк Воронцовский",
+      "before": {"project_status": "Строится", "input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"project_status": "Введён", "input_year": 2026, "input_quarter": 1, "input_date_kind": "confirmed"},
+      "building_date_key": "afi парк воронцовский",
+      "commission_q": "202603",
+      "existing_date_source": "ПЕРЕПРОВЕРЕНО (2026-08-01): afi-development.com/news/zhk-afi-park-vorontsovskiy-vveden-v-ekspluatatsiyu подтверждает РНВ только на 4 ЖИЛЫХ корпуса (83,5 тыс. м², 826 квартир) и прямо называет 21-этажный офисный корпус будущим/более поздним этапом реализации, всё ещё строящимся — офисная часть по-прежнему без подтверждённого РНВ, ошибка смешения жилого/офисного не повторена",
+      "classifier_unified_id": "UC-OBJ-0185",
+      "classifier_before": {"status": "Проектный", "commission_year": 2026, "commission_quarter": 1},
+      "classifier_after": {"status": "Сданный", "commission_year": 2026, "commission_quarter": 1},
+      "classifier_verification_status": "Проверено по офисной странице AFI и отчёту CORE.XP",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "classifier_classification_note": "2026-09-17: UC-OBJ-ADD-195 определён как дубль этой записи (тот же адрес/координаты/qa_notes, другое написание «AFI Парк Воронцовский»). 2026-09-26: офисный корпус отдельно подтверждён как введённый в I квартале 2026 года.",
+      "sources": [
+        "https://bc.afi-v-park.ru/",
+        "https://core-xp.ru/upload/iblock/e4e/qcgw8g4d6f7foqxfrcvifiqmfvds6lk3.pdf"
+      ],
+      "reliability": "official_plus_independent_market_report",
+      "confidence": "medium",
+      "decision": "The current official office page reports completed construction, ZOS, and ready offices, while the current independent CORE.XP report explicitly lists AFI Park Vorontsovsky as commissioned in Q1 2026. The old 2024 residential permit is not reused."
+    }
+  ],
+  "unresolved": [
+    {"canonical_project_id": "proj-19", "reason": "2007/2021 construction and 2023 reconstruction dates remain inconsistent."},
+    {"canonical_project_id": "proj-22", "reason": "The 8,500 sqm sale-project grain is not resolved against the 78,000 sqm Amaltea complex."},
+    {"canonical_project_id": "proj-33", "reason": "The aggregate row does not map cleanly to separately commissioned STONE Towers phases."},
+    {"canonical_project_id": "proj-96", "reason": "Likely duplicate of public proj-220 (Башня Рябов); identity must be resolved before another supply row is dated."},
+    {"canonical_project_id": "proj-98", "reason": "The historic-building reconstruction date remains unconfirmed."},
+    {"canonical_project_id": "proj-136", "reason": "Official Q2 2028 and RBC Q4 2028 conflict."},
+    {"canonical_project_id": "proj-171", "reason": "ZOS/progress is visible, but no read permit-to-use date; older 2025/2026 phase conflict remains."},
+    {"canonical_project_id": "proj-260", "reason": "The old Sever.City office grain is not safely resolved against the current Ridge mixed-use project."},
+    {"canonical_project_id": "proj-264", "reason": "No primary commissioning date found for the exact building."},
+    {"canonical_project_id": "proj-add-luzhnetskaya-sminex-20260925", "reason": "CRM 2031 remains unconfirmed and construction is only planned from 2027."}
+  ]
+}
