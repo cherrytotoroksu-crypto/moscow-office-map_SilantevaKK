@@ -1,0 +1,58 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "Public office_project rows with missing input_year after wave 6",
+  "accepted": [
+    {
+      "canonical_project_id": "proj-87",
+      "canonical_name": "Slava",
+      "before": {"project_status": "Строится", "input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"project_status": "Введён", "input_year": 2025, "input_quarter": null, "input_date_kind": "confirmed"},
+      "building_date_key": "slava",
+      "commission_q": null,
+      "classifier_unified_id": "UC-OBJ-ADD-184",
+      "classifier_before": {"status": "Строится", "commission_year": 2025, "commission_quarter": null},
+      "classifier_after": {"status": "Сданный", "commission_year": 2025, "commission_quarter": null},
+      "classifier_verification_status": "Проверено по официальной странице проекта",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "sources": ["https://slava-moscow.com/about"],
+      "reliability": "official",
+      "decision": "The current official project page identifies the class-A office center as commissioned in 2025. It distinguishes this office phase from the residential/apartment phase commissioned in 2023 and the later mixed-use phase planned for 2030. No quarter is claimed."
+    },
+    {
+      "canonical_project_id": "proj-259",
+      "canonical_name": "Aurus",
+      "before": {"input_year": null, "input_quarter": null, "input_date_kind": "unknown"},
+      "after": {"input_year": 2031, "input_quarter": 4, "input_date_kind": "planned"},
+      "building_date_key": "aurus",
+      "commission_q": "203112",
+      "classifier_unified_id": "UC-OBJ-0374",
+      "classifier_before": {"commission_year": 2031, "commission_quarter": null},
+      "classifier_after": {"commission_year": 2031, "commission_quarter": 4},
+      "classifier_verification_status": "Проверено по официальному сайту девелопера",
+      "classifier_needs_review": false,
+      "classifier_review_reason": null,
+      "existing_date_source": "ИТОГ (2026-07-28): старое значение 202511 было про предварительную бронь квартир жилого компонента «Страна.Сити»/Aurus Residences, не про офис. Пользователь подтвердил: для учёта «старт продаж» считается офисная часть — у неё реальные выставленные лоты в базе (13 лотов, 13398 м², цена 1 054 859) с firstQ=202603, это подтверждённый старт офисных продаж Q1 2026, старая жилая дата к нему не относится.",
+      "sources": [
+        "https://strana.com/msk/commercial/strana/",
+        "https://strana.com/msk/projects/premium/aurus/"
+      ],
+      "reliability": "official",
+      "decision": "The developer's current commercial-property page explicitly lists offices in AURUS Residences, and the official project page gives planned completion in Q4 2031. The date is therefore applied as planned, not confirmed."
+    }
+  ],
+  "unresolved": [
+    {"canonical_project_id": "proj-19", "reason": "2007/2021 construction and 2023 reconstruction dates remain inconsistent."},
+    {"canonical_project_id": "proj-22", "reason": "The 8,500 sqm sale-project grain is not resolved against the 78,000 sqm Amaltea complex."},
+    {"canonical_project_id": "proj-33", "reason": "The aggregate row does not map cleanly to separately commissioned STONE Towers phases."},
+    {"canonical_project_id": "proj-73", "reason": "Sources still conflict between 2027 and 2028."},
+    {"canonical_project_id": "proj-96", "reason": "No current primary commissioning date found for the exact tower grain."},
+    {"canonical_project_id": "proj-98", "reason": "The historic-building reconstruction date remains unconfirmed."},
+    {"canonical_project_id": "proj-106", "reason": "The office building has ZOS, but no read official permit-to-use date; the 2024 residential date is inapplicable."},
+    {"canonical_project_id": "proj-136", "reason": "Official Q2 2028 and RBC Q4 2028 conflict."},
+    {"canonical_project_id": "proj-171", "reason": "Official progress reaches 2026, but no read permit-to-use date; older 2025/2026 phase conflict remains."},
+    {"canonical_project_id": "proj-260", "reason": "The old Sever.City office grain is not safely resolved against the current Ridge mixed-use project."},
+    {"canonical_project_id": "proj-264", "reason": "No primary commissioning date found for the exact building."},
+    {"canonical_project_id": "proj-add-luzhnetskaya-sminex-20260925", "reason": "CRM 2031 remains unconfirmed and construction is only planned from 2027."}
+  ]
+}
