@@ -17,7 +17,8 @@ class StoneGapFillTests(unittest.TestCase):
             ("proj-188", "STONE Мневники II"): 2029,
             ("proj-189", "STONE Мневники III (M3.1)"): 2030,
             ("proj-189", "STONE Мневники III (M3.2)"): 2030,
-            ("proj-192", "STONE Римская"): 2028,
+            ("proj-192", "STONE Римская (R1)"): 2028,
+            ("proj-192", "STONE Римская (R2)"): 2028,
         }
         indexed = {(row.get("canonical_project_id"), row.get("canonical_name")): row for row in self.rows}
         for key, year in expected.items():

@@ -1196,7 +1196,10 @@ async function fetchBuildingsWithJoin(quarterId) {
   const dates = await loadBuildingDates();
   for (const row of rows) {
     joinRegistryFields(row, byName, 'name', 'name_orig');
-    const bd = dates[String(row.name || '').toLowerCase()] || dates[String(row.name_orig || '').toLowerCase()];
+    // У башен/корпусов имя вида "STONE Ходынка I (H1)" — в building_dates.json даты хранятся
+    // по имени проекта без скобок; если по имени башни записи нет — берём проектную.
+    const parentName = String(row.name || '').replace(/\s*\(.*$/, '').toLowerCase();
+    const bd = dates[String(row.name || '').toLowerCase()] || dates[String(row.name_orig || '').toLowerCase()] || (row.subid ? dates[parentName] : undefined);
     const cs = parseQuarterId(bd?.construction_start_q);
     const ss = parseQuarterId(bd?.start_q);
     row.construction_start_year = cs.year;
@@ -1220,7 +1223,9 @@ async function buildingInfoByName(quarterId) {
   const map = new Map();
   for (const r of rows) {
     if (r.name) map.set(r.name, r);
-    if (r.name_orig) map.set(r.name_orig, r);
+    // У башни 01 name_orig = имя проекта (для привязки аренды в analytics.html) — не используем
+    // этот алиас здесь, иначе лоты всего проекта получили бы подпись корпуса только первой башни.
+    if (r.name_orig && (!r.tower_label || r.name_orig === r.name)) map.set(r.name_orig, r);
   }
   buildingInfoByNameCache.set(quarterId, map);
   return map;
