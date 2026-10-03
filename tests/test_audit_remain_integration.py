@@ -66,13 +66,19 @@ class RemainConflictResolutionTests(unittest.TestCase):
         self.assertIn("remain_conflict_resolved", r["qa_notes"])
 
     def test_prokshino_gba_gla_untouched_by_scope_conflict(self):
-        r = self.by_id["proj-216"]
-        # единственный корпус из 5 в квартале — площадь всего комплекса (Remain
-        # сумма 113029 / офиц. >177 тыс. кв.м) НЕ подставляется вместо площади
-        # одного здания без разбивки по building.
-        self.assertEqual(r["gba"], 42000)
-        self.assertEqual(r["gla"], 22700)
-        self.assertIn("resolved_scope_difference", r["qa_notes"])
+        # 2026-10-03: разбивка по зданиям, которой ждала прежняя пометка
+        # resolved_scope_difference, сделана по очередям А101 (1-я очередь —
+        # 44600/22700, введена 4 кв. 2023; 2-я — 42300). Площадь всего квартала
+        # (Remain сумма 113029 / >177 тыс. кв.м) по-прежнему НЕ подставляется
+        # в строки отдельных очередей.
+        rows = [x for x in self.layer if x["canonical_project_id"] == "proj-216"]
+        self.assertEqual(len(rows), 2)
+        by_gba = {x["gba"]: x for x in rows}
+        self.assertEqual(sorted(by_gba), [42300, 44600])
+        self.assertEqual(by_gba[44600]["gla"], 22700)
+        self.assertIsNone(by_gba[42300]["gla"])
+        for x in rows:
+            self.assertIn("resolved_scope_difference", x["qa_notes"])
 
     def test_layer_still_passes_validator_after_conflict_fixes(self):
         self.assertEqual(validate_layer(self.layer), [])

@@ -94,9 +94,9 @@ class ProjectsModeLegacyMergeTest(unittest.TestCase):
         """A101 Prokshino appears in the live registry (proj-216, generic point) —
         legacy rows sharing that coordinate must not double up as new pins."""
         registry_a101 = next(
-            (r for r in self.live if r.get("canonical_name") == "А101 Прокшино"), None
+            (r for r in self.live if r.get("canonical_project_id") == "proj-216"), None
         )
-        self.assertIsNotNone(registry_a101, "expected proj-216 'А101 Прокшино' in the live registry")
+        self.assertIsNotNone(registry_a101, "expected proj-216 А101 Прокшино (по очередям) in the live registry")
         unmatched = self._unmatched_legacy()
         for p in unmatched:
             if p.get("lat") is None or p.get("lng") is None:
