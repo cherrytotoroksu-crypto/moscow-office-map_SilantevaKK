@@ -3753,7 +3753,7 @@
     "name_orig": "БЦ «ПОРТА» (PORTA)",
     "volume": 0,
     "price": 0,
-    "status": "Строится",
+    "status": "Построен",
     "on_sale": "да",
     "lots": 0,
     "zone": null,
@@ -3771,7 +3771,7 @@
     "gla": 27127,
     "developer": "Forma",
     "address": "Москва, Заречная ул., вл. 2/1",
-    "year": "",
+    "year": "2025",
     "id": 285,
     "unified_id": "UC-OBJ-ADD-007",
     "canonical_project_id": "285"
