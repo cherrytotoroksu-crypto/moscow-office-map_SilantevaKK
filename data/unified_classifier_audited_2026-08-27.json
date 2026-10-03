@@ -27737,7 +27737,7 @@
     },
     {
       "coordinates_status": "geocoded_approx",
-      "commission_quarter": 1,
+      "commission_quarter": 2,
       "quarter_offer_refs": [],
       "layer_status": null,
       "layer_offer_status": null,
@@ -27758,8 +27758,8 @@
       "name": "БЦ «Север»",
       "address": "Москва, Ленинградский просп., д. 36, к. 13",
       "developer": "Галс-Девелопмент",
-      "gba": null,
-      "gla": 56000.0,
+      "gba": 77315.0,
+      "gla": 57924.0,
       "cls": "Prime",
       "commission_year": 2027,
       "latitude": 55.789,
@@ -27769,9 +27769,10 @@
       ],
       "source_links": [
         "https://hals-development.ru/realty/object/sever",
-        "https://bc-sever.ru/"
+        "https://bc-sever.ru/",
+        "https://hals-development.ru/upload/pres/sever.pdf"
       ],
-      "verification_status": "Проверено 2026-09-11 (сайт застройщика hals-development.ru). Ввод Q1 2027 подтверждён. Координаты приблизительные (geocoded_approx), у метро Динамо.",
+      "verification_status": "Проверено 2026-09-11 (сайт застройщика hals-development.ru). Ввод Q1 2027 подтверждён. Координаты приблизительные (geocoded_approx), у метро Динамо. | 2026-10-03: по презентации застройщика Галс-Девелопмент (hals-development.ru/upload/pres/sever.pdf, ход строительства август 2026): GBA 77 315, GLA 57 924 (офисы 55 264, ритейл 2 671), 33 эт., ввод 2 кв. 2027, Prime. Прежнее: GLA 56 000. ВНИМАНИЕ: презентация оформлена как «АРЕНДА» - продажа лотов не подтверждена.",
       "canonical_project_id": "286",
       "geo_ao": "Северный",
       "geo_raion": "Беговой",
