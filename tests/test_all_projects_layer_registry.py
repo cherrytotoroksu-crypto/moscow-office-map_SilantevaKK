@@ -64,12 +64,12 @@ class AllProjectsLayerRegistryTests(unittest.TestCase):
         # объединены — в классификаторе есть только их суммарная площадь) = 280.
         # Затем +1 — iCITY разбит на 2 башни (Time/Space, proj-129) = 281.
         # Затем +2 — Air разбит на 3 башни (proj-112) = 283 (2026-09-15:
-        # пересмотрено на 2 корпуса по факту продаж застройщика, +1 = 292; 2026-10-02: +7 после разбивки Ходынка I/II, Римская, Ленинский, Деловой дуэт на корпуса = 299).
+        # пересмотрено на 2 корпуса по факту продаж застройщика, +1 = 292; 2026-10-02: +7 после разбивки Ходынка I/II, Римская, Ленинский, Деловой дуэт на корпуса = 299; 2026-10-03: +3 Light City = 302).
         # Считаем только classifier-производные записи: внешние источники
         # (remain_datalens и т.п.) добавляются ПОВЕРХ, а не через
         # build_all_projects_layer.py, и не должны сдвигать этот счётчик.
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 299)
+        self.assertEqual(len(classifier_records), 302)
 
     def test_external_only_records_are_additive_not_mixed_into_classifier_base(self):
         external_records = [r for r in self.records if r.get("external_only")]
@@ -241,7 +241,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         test_record_count_matches_active_raw_data про +4 от разбивки
         «Останкино» на 5 corpus-строк и +1 от iCITY на 2 башни, 2026-09-14)."""
         classifier_records = [r for r in self.records if r["source"] == "classifier.html"]
-        self.assertEqual(len(classifier_records), 299)
+        self.assertEqual(len(classifier_records), 302)
 
     def test_canonical_project_ids_are_globally_unique(self):
         """canonical_project_id не должен повторяться — кроме badaevsky,
@@ -249,7 +249,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         отдельное правило: многокорпусные проекты держат общий
         canonical_project_id и разный canonical_building_id."""
         ids = [r["canonical_project_id"] for r in self.records]
-        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261", "proj-134", "proj-244", "proj-180", "proj-194", "proj-245", "proj-150", "proj-258", "proj-189", "proj-196", "proj-192", "proj-277", "proj-184", "proj-197"}
+        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261", "proj-134", "proj-244", "proj-180", "proj-194", "proj-245", "proj-150", "proj-258", "proj-189", "proj-196", "proj-192", "proj-277", "proj-184", "proj-197", "proj-147"}
         self.assertEqual(dupes, set(), f"canonical_project_id повторяется: {sorted(dupes)}")
 
     def test_each_group_canonical_has_duplicate_of_none_and_legacy_ids(self):
