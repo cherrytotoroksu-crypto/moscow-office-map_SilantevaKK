@@ -39610,7 +39610,8 @@
       "geo_bizFormed": null,
       "geo_bizForming": null,
       "project_name": "Проспект Мира, 40",
-      "registry_project_id": "cwhost-0046"
+      "registry_project_id": "cwhost-0046",
+      "duplicate_of": "UC-OBJ-ADD-344"
     },
     {
       "unified_id": "UC-OBJ-ADD-305",
@@ -40166,7 +40167,8 @@
       "geo_bizFormed": "Павелецкий",
       "geo_bizForming": null,
       "project_name": "Вивальди",
-      "registry_project_id": "cwhost-0058"
+      "registry_project_id": "cwhost-0058",
+      "duplicate_of": "UC-OBJ-ADD-331"
     },
     {
       "unified_id": "UC-OBJ-ADD-317",
@@ -40260,7 +40262,8 @@
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
       "project_name": "Газетный 17",
-      "registry_project_id": "cwhost-0060"
+      "registry_project_id": "cwhost-0060",
+      "duplicate_of": "UC-OBJ-ADD-332"
     },
     {
       "unified_id": "UC-OBJ-ADD-319",
@@ -40584,7 +40587,8 @@
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
       "project_name": "SOK Сити",
-      "registry_project_id": "cwhost-hist-f0518c325b"
+      "registry_project_id": "cwhost-hist-f0518c325b",
+      "duplicate_of": "UC-OBJ-ADD-261"
     },
     {
       "unified_id": "UC-OBJ-ADD-326",
@@ -41055,7 +41059,8 @@
       "geo_bizFormed": "Москва-Сити",
       "geo_bizForming": "Москва-Сити",
       "project_name": "Заречная 2/1",
-      "registry_project_id": "cwhost-hist-2e3715b7ba"
+      "registry_project_id": "cwhost-hist-2e3715b7ba",
+      "duplicate_of": "UC-OBJ-ADD-343"
     },
     {
       "unified_id": "UC-OBJ-ADD-336",
@@ -41659,7 +41664,8 @@
       "geo_bizFormed": "ЦДР",
       "geo_bizForming": null,
       "project_name": "Сретенский б-р, 5",
-      "registry_project_id": "cwhost-hist-f256e86d8c"
+      "registry_project_id": "cwhost-hist-f256e86d8c",
+      "duplicate_of": "UC-OBJ-ADD-282"
     },
     {
       "unified_id": "UC-OBJ-ADD-349",
