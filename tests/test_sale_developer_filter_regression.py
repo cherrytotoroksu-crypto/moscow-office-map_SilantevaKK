@@ -16,7 +16,7 @@ class SaleDeveloperFilterRegressionTests(unittest.TestCase):
         cls.html = CODIFIER.read_text(encoding="utf-8")
         cls.buildings = json.loads(Q2_BUILDINGS.read_text(encoding="utf-8-sig"))
 
-    def test_q2_under_construction_baseline_is_108_buildings_and_48_developers(self):
+    def test_q2_under_construction_baseline_is_109_buildings_and_48_developers(self):
         # 2026-09-14: было 83/47 — выросло на 8 зданий из-за коммитов b948753/
         # a5d1fb5/e111839 (Поле x2 башни, Мираполис, БЦ Север, БЦ Северный
         # Порт, БЦ РЕ:ПОРТ, STONE Tower E, БЦ «ПОРТА»), все получили записи
@@ -32,7 +32,7 @@ class SaleDeveloperFilterRegressionTests(unittest.TestCase):
         # 2026-09-26: 101 -> 100 after the official commissioning permit
         # confirmed that River Park building 12 had been commissioned in Q2;
         # its developer leaves this under-construction aggregation with it.
-        self.assertEqual(len(rows), 108)  # 2026-10-02: +5 строк «Строится» после разбивки Ходынка I/II и Римской на корпуса
+        self.assertEqual(len(rows), 109)  # 2026-10-02: +5 строк «Строится» после разбивки Ходынка I/II и Римской на корпуса
         # 2026-09-19: 53 -> 49 — слиты разные написания одного девелопера
         # (Forma/FORMA, Гранель/ГК Гранель, Основа/ГК Основа).
         self.assertEqual(len(developers), 48)
