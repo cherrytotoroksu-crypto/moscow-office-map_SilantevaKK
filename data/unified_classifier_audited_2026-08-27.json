@@ -22894,7 +22894,9 @@
       "latitude": 55.792933,
       "longitude": 37.628253,
       "coordinates_status": "verified",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-260"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": null,
@@ -27706,7 +27708,9 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-281"
+      ],
       "unified_id": "UC-OBJ-ADD-025",
       "source_id": "buildings202606-284",
       "name": "Мираполис",
@@ -27752,7 +27756,9 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-282"
+      ],
       "unified_id": "UC-OBJ-ADD-026",
       "source_id": "buildings202606-286",
       "name": "БЦ «Север»",
@@ -27799,7 +27805,9 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-283"
+      ],
       "unified_id": "UC-OBJ-ADD-027",
       "source_id": "buildings202606-287",
       "name": "БЦ «Северный Порт»",
@@ -27844,7 +27852,9 @@
       "subid": "01",
       "tower_label": "",
       "confidence": "Высокий",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-284"
+      ],
       "unified_id": "UC-OBJ-ADD-028",
       "source_id": "buildings202606-288",
       "name": "БЦ «РЕ:ПОРТ»",
@@ -41809,7 +41819,8 @@
       "longitude": 37.624004,
       "coordinates_status": "geocoded_approx",
       "legacy_ids": [
-        "OBJ-0147"
+        "OBJ-0147",
+        "proj-add-prime-life-varshavskaya-20260917"
       ],
       "quarter_offer_refs": [],
       "market_channel": [
@@ -41861,7 +41872,9 @@
       "latitude": 55.5848,
       "longitude": 37.141,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-add-krekshino-20260917"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [
         "sale"
@@ -41910,7 +41923,9 @@
       "latitude": 55.784395,
       "longitude": 37.622244,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-add-granard-olimpiyskiy-20260925"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": "Строится",
@@ -41954,7 +41969,9 @@
       "latitude": 55.743765,
       "longitude": 37.557295,
       "coordinates_status": "geocoded_approx",
-      "legacy_ids": [],
+      "legacy_ids": [
+        "proj-add-mozhayskiy-val-7-20260925"
+      ],
       "quarter_offer_refs": [],
       "market_channel": [],
       "layer_status": "Строится",
