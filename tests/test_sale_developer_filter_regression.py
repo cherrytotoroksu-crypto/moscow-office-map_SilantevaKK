@@ -32,10 +32,10 @@ class SaleDeveloperFilterRegressionTests(unittest.TestCase):
         # 2026-09-26: 101 -> 100 after the official commissioning permit
         # confirmed that River Park building 12 had been commissioned in Q2;
         # its developer leaves this under-construction aggregation with it.
-        self.assertEqual(len(rows), 112)  # 2026-10-03: -1 БЦ «ПОРТА» введён в 2025, больше не "Строится"  # 2026-10-02: +5 строк «Строится» после разбивки Ходынка I/II и Римской на корпуса
+        self.assertEqual(len(rows), 111)  # 2026-10-04: -1 Geolog 2 введён (РНВ 16.06.2026)  # 2026-10-03: -1 БЦ «ПОРТА» введён в 2025, больше не "Строится"  # 2026-10-02: +5 строк «Строится» после разбивки Ходынка I/II и Римской на корпуса
         # 2026-09-19: 53 -> 49 — слиты разные написания одного девелопера
         # (Forma/FORMA, Гранель/ГК Гранель, Основа/ГК Основа).
-        self.assertEqual(len(developers), 48)
+        self.assertEqual(len(developers), 47)  # 2026-10-04: Hutton Development выходит вместе с Geolog 2
 
     def test_developer_loader_filters_source_buildings_before_grouping(self):
         match = re.search(
