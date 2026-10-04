@@ -714,10 +714,10 @@
   },
   "мануфактура xix": {
     "construction_start_q": null,
-    "start_q": null,
+    "start_q": "202604",
     "commission_q": "202712",
-    "source": "cre.ru/news/101207, realty.ru — продажи открыты, только плановая дата ввода (Q4 2027), подтверждения РНВ не нашла",
-    "last_checked": "2026-07-14",
+    "source": "cre.ru/news/101207, realty.ru — продажи открыты, только плановая дата ввода (Q4 2027), подтверждения РНВ не нашла || 2026-10-05: старт продаж 02.04.2026 — sminex.com/manufaktura/office/novosti (официальная новостная лента Sminex).",
+    "last_checked": "2026-10-05",
     "canonical_project_id": "proj-270",
     "canonical_building_id": null
   },
