@@ -141,10 +141,10 @@
   },
   "top tower": {
     "construction_start_q": "202512",
-    "start_q": null,
+    "start_q": "202510",
     "commission_q": null,
-    "source": "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti",
-    "last_checked": "2026-09-24",
+    "source": "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti || 2026-10-05: старт продаж — moscow-city.guide, 23.10.2025 (MR Group вывела офисы в продажу, бронирование 1%, ДКП с 01.12.2025).",
+    "last_checked": "2026-10-05",
     "canonical_project_id": "proj-204",
     "canonical_building_id": null,
     "commission_year": 2029
