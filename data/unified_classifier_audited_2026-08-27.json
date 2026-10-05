@@ -146,9 +146,9 @@
       "commission_year": 2026,
       "commission_quarter": 1,
       "status": "Строящийся",
-      "latitude": 55.722005,
-      "longitude": 37.646247,
-      "coordinates_status": "unverified",
+      "latitude": 55.721899,
+      "longitude": 37.644441,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-201"
       ],
@@ -523,9 +523,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.808399,
-      "longitude": 37.575947,
-      "coordinates_status": "unverified",
+      "latitude": 55.808417,
+      "longitude": 37.57607,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-177"
       ],
@@ -754,9 +754,9 @@
       "commission_year": 2026,
       "commission_quarter": 2,
       "status": "Строящийся",
-      "latitude": 55.727541,
-      "longitude": 37.653505,
-      "coordinates_status": "unverified",
+      "latitude": 55.726426,
+      "longitude": 37.652023,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-165"
       ],
@@ -995,9 +995,9 @@
       "commission_year": 2026,
       "commission_quarter": 2,
       "status": "Введён",
-      "latitude": 55.657377,
-      "longitude": 37.530139,
-      "coordinates_status": "exact",
+      "latitude": 55.657433,
+      "longitude": 37.530157,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-128"
       ],
@@ -1111,9 +1111,9 @@
       "commission_year": 2026,
       "commission_quarter": 4,
       "status": "Проектный",
-      "latitude": 55.660186,
-      "longitude": 37.534873,
-      "coordinates_status": "unverified",
+      "latitude": 55.660435,
+      "longitude": 37.535628,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-144"
       ],
@@ -1170,9 +1170,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.8359015,
-      "longitude": 37.5007141,
-      "coordinates_status": "unverified",
+      "latitude": 55.834623,
+      "longitude": 37.496614,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-155"
       ],
@@ -1231,9 +1231,9 @@
       "commission_year": 2026,
       "commission_quarter": 3,
       "status": "Проектный",
-      "latitude": 55.72671,
-      "longitude": 37.453783,
-      "coordinates_status": "unverified",
+      "latitude": 55.72638,
+      "longitude": 37.451564,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-171"
       ],
@@ -1294,9 +1294,9 @@
       "commission_year": 2029,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.789361,
-      "longitude": 37.5236,
-      "coordinates_status": "verified",
+      "latitude": 55.789375,
+      "longitude": 37.523636,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-197",
         "proj-200"
@@ -1357,9 +1357,9 @@
       "commission_year": 2026,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.792812,
-      "longitude": 37.584146,
-      "coordinates_status": "unverified",
+      "latitude": 55.793278,
+      "longitude": 37.585458,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-205"
       ],
@@ -1419,9 +1419,9 @@
       "commission_year": 2025,
       "commission_quarter": 4,
       "status": "Сданный",
-      "latitude": 55.7297807888879,
-      "longitude": 37.4422839019043,
-      "coordinates_status": "unverified",
+      "latitude": 55.729777,
+      "longitude": 37.442446,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-138"
       ],
@@ -1657,9 +1657,9 @@
       "commission_year": 2024,
       "commission_quarter": null,
       "status": "Сданный",
-      "latitude": 55.741059,
-      "longitude": 37.509505,
-      "coordinates_status": "unverified",
+      "latitude": 55.741399,
+      "longitude": 37.510224,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-122"
       ],
@@ -1832,9 +1832,9 @@
       "commission_year": 2026,
       "commission_quarter": 1,
       "status": "Сданный",
-      "latitude": 55.662496,
-      "longitude": 37.536814,
-      "coordinates_status": "unverified",
+      "latitude": 55.663172,
+      "longitude": 37.537631,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-106"
       ],
@@ -1889,9 +1889,9 @@
       "commission_year": 2025,
       "commission_quarter": 4,
       "status": "Сданный",
-      "latitude": 55.739569,
-      "longitude": 37.494252,
-      "coordinates_status": "geocoded_approx",
+      "latitude": 55.739346,
+      "longitude": 37.492913,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-124"
       ],
@@ -2002,9 +2002,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.762586,
-      "longitude": 37.531092,
-      "coordinates_status": "unverified",
+      "latitude": 55.762378,
+      "longitude": 37.530957,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-147"
       ],
@@ -2059,9 +2059,9 @@
       "commission_year": 2026,
       "commission_quarter": 4,
       "status": "Строящийся",
-      "latitude": 55.717639,
-      "longitude": 37.775002,
-      "coordinates_status": "unverified",
+      "latitude": 55.717579,
+      "longitude": 37.774688,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-159"
       ],
@@ -2174,9 +2174,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.788834,
-      "longitude": 37.381783,
-      "coordinates_status": "unverified",
+      "latitude": 55.788889,
+      "longitude": 37.382106,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-236"
       ],
@@ -2233,9 +2233,9 @@
       "commission_year": 2027,
       "commission_quarter": 3,
       "status": "Проектный",
-      "latitude": 55.773439,
-      "longitude": 37.576591,
-      "coordinates_status": "unverified",
+      "latitude": 55.773484,
+      "longitude": 37.576295,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-209"
       ],
@@ -2339,9 +2339,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.787862,
-      "longitude": 37.502938,
-      "coordinates_status": "geocoded_approx",
+      "latitude": 55.787908,
+      "longitude": 37.503352,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-115"
       ],
@@ -2446,9 +2446,9 @@
       "commission_year": 2026,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.693003,
-      "longitude": 37.682185,
-      "coordinates_status": "unverified",
+      "latitude": 55.691136,
+      "longitude": 37.679951,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-276"
       ],
@@ -2610,9 +2610,9 @@
       "commission_year": 2026,
       "commission_quarter": 3,
       "status": "Строящийся",
-      "latitude": 55.781595,
-      "longitude": 37.688629,
-      "coordinates_status": "unverified",
+      "latitude": 55.779408,
+      "longitude": 37.687883,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-173"
       ],
@@ -2769,9 +2769,9 @@
       "commission_year": 2026,
       "commission_quarter": 3,
       "status": "Строящийся",
-      "latitude": 55.799871,
-      "longitude": 37.597603,
-      "coordinates_status": "unverified",
+      "latitude": 55.799881,
+      "longitude": 37.598995,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-247"
       ],
@@ -2821,9 +2821,9 @@
       "commission_year": 2028,
       "commission_quarter": 2,
       "status": "Проектный",
-      "latitude": 55.811626,
-      "longitude": 37.458322,
-      "coordinates_status": "unverified",
+      "latitude": 55.812393,
+      "longitude": 37.45964,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-132"
       ],
@@ -2874,9 +2874,9 @@
       "commission_year": 2028,
       "commission_quarter": 3,
       "status": "Проектный",
-      "latitude": 55.6701676955508,
-      "longitude": 37.4430189326496,
-      "coordinates_status": "unverified",
+      "latitude": 55.668996,
+      "longitude": 37.44179,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-139"
       ],
@@ -2927,9 +2927,9 @@
       "commission_year": 2028,
       "commission_quarter": 3,
       "status": "Строится",
-      "latitude": 55.857529,
-      "longitude": 37.543285,
-      "coordinates_status": "unverified",
+      "latitude": 55.857705,
+      "longitude": 37.542707,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-141"
       ],
@@ -2980,9 +2980,9 @@
       "commission_year": 2028,
       "commission_quarter": 2,
       "status": "Проектный",
-      "latitude": 55.66014,
-      "longitude": 37.407555,
-      "coordinates_status": "geocoded_approx",
+      "latitude": 55.660231,
+      "longitude": 37.407573,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-153"
       ],
@@ -3033,9 +3033,9 @@
       "commission_year": 2030,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.751553,
-      "longitude": 37.539949,
-      "coordinates_status": "unverified",
+      "latitude": 55.751467,
+      "longitude": 37.53967,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-164"
       ],
@@ -3145,9 +3145,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Строящийся",
-      "latitude": 55.753594,
-      "longitude": 37.455796,
-      "coordinates_status": "unverified",
+      "latitude": 55.754142,
+      "longitude": 37.457124,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-185"
       ],
@@ -3360,9 +3360,9 @@
       "commission_year": 2027,
       "commission_quarter": 4,
       "status": "Проектный",
-      "latitude": 55.777069,
-      "longitude": 37.514383,
-      "coordinates_status": "unverified",
+      "latitude": 55.776624,
+      "longitude": 37.513565,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-113"
       ],
@@ -3626,9 +3626,9 @@
       "commission_year": 2027,
       "commission_quarter": 4,
       "status": "Проектный",
-      "latitude": 55.79431,
-      "longitude": 37.607224,
-      "coordinates_status": "unverified",
+      "latitude": 55.79514,
+      "longitude": 37.606999,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-208"
       ],
@@ -3785,9 +3785,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.787295,
-      "longitude": 37.583176,
-      "coordinates_status": "unverified",
+      "latitude": 55.787791,
+      "longitude": 37.581891,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-231"
       ],
@@ -3943,9 +3943,9 @@
       "commission_year": 2027,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.768947,
-      "longitude": 37.508652,
-      "coordinates_status": "unverified",
+      "latitude": 55.768942,
+      "longitude": 37.508571,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-262"
       ],
@@ -3997,9 +3997,9 @@
       "commission_year": 2029,
       "commission_quarter": 3,
       "status": "Проектный",
-      "latitude": 55.739478,
-      "longitude": 37.412226,
-      "coordinates_status": "unverified",
+      "latitude": 55.739671,
+      "longitude": 37.41317,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-251"
       ],
@@ -4149,9 +4149,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.818786,
-      "longitude": 37.595546,
-      "coordinates_status": "unverified",
+      "latitude": 55.818751,
+      "longitude": 37.596121,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-253"
       ],
@@ -4570,9 +4570,9 @@
       "commission_year": 2027,
       "commission_quarter": 2,
       "status": "Проектный",
-      "latitude": 55.808014,
-      "longitude": 37.546997,
-      "coordinates_status": "unverified",
+      "latitude": 55.807951,
+      "longitude": 37.546983,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-269"
       ],
@@ -4718,9 +4718,9 @@
       "commission_year": 2027,
       "commission_quarter": 4,
       "status": "Проектный",
-      "latitude": 55.717066,
-      "longitude": 37.428755,
-      "coordinates_status": "unverified",
+      "latitude": 55.717082,
+      "longitude": 37.428711,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-270"
       ],
@@ -10257,9 +10257,9 @@
       "commission_year": 2027,
       "commission_quarter": 2,
       "status": "Проектный",
-      "latitude": 55.761284,
-      "longitude": 37.518892,
-      "coordinates_status": "unverified",
+      "latitude": 55.761279,
+      "longitude": 37.51891,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-212"
       ],
@@ -21029,9 +21029,9 @@
       "commission_year": 2030,
       "commission_quarter": 4,
       "status": "Проектный",
-      "latitude": 55.790365,
-      "longitude": 37.544367,
-      "coordinates_status": "unverified",
+      "latitude": 55.790256,
+      "longitude": 37.544467,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "pole-tower-a"
       ],
@@ -21808,9 +21808,9 @@
       "commission_year": 2026,
       "commission_quarter": 2,
       "status": "Сданный",
-      "latitude": 55.681712,
-      "longitude": 37.693848,
-      "coordinates_status": "centroid",
+      "latitude": 55.686558,
+      "longitude": 37.700056,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [],
       "quarter_offer_refs": [],
       "market_channel": [],
@@ -26797,9 +26797,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.753024,
-      "longitude": 37.529984,
-      "coordinates_status": "unverified",
+      "latitude": 55.753357,
+      "longitude": 37.529564,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-204"
       ],
@@ -27415,9 +27415,9 @@
       "commission_year": 2030,
       "commission_quarter": 4,
       "status": "Проектный",
-      "latitude": 55.790365,
-      "longitude": 37.544367,
-      "coordinates_status": "unverified",
+      "latitude": 55.790256,
+      "longitude": 37.544467,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "pole-tower-b"
       ],
@@ -27697,7 +27697,7 @@
       "project_name": "Меркурий Сити Тауэр"
     },
     {
-      "coordinates_status": "geocoded_approx",
+      "coordinates_status": "geocoded_exact",
       "commission_quarter": null,
       "quarter_offer_refs": [],
       "layer_status": null,
@@ -27725,8 +27725,8 @@
       "gla": null,
       "cls": "B+",
       "commission_year": 2027,
-      "latitude": 55.837,
-      "longitude": 37.64,
+      "latitude": 55.841857,
+      "longitude": 37.666989,
       "market_channel": [
         "sale"
       ],
@@ -35054,9 +35054,9 @@
       "commission_year": 2026,
       "commission_quarter": 4,
       "status": "Строится",
-      "latitude": 55.818103,
-      "longitude": 37.752868,
-      "coordinates_status": "unverified",
+      "latitude": 55.818012,
+      "longitude": 37.751646,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-108",
         "OBJ-0475"
@@ -35110,9 +35110,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.789103,
-      "longitude": 37.530992,
-      "coordinates_status": "unverified",
+      "latitude": 55.789284,
+      "longitude": 37.530364,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-112",
         "air-k1",
@@ -35166,9 +35166,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.789103,
-      "longitude": 37.530992,
-      "coordinates_status": "unverified",
+      "latitude": 55.789284,
+      "longitude": 37.530364,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-112",
         "air-k2"
@@ -35221,9 +35221,9 @@
       "commission_year": 2028,
       "commission_quarter": 4,
       "status": "Строится",
-      "latitude": 55.774281,
-      "longitude": 37.575982,
-      "coordinates_status": "unverified",
+      "latitude": 55.774041,
+      "longitude": 37.574732,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-126"
       ],
@@ -35276,9 +35276,9 @@
       "commission_year": 2024,
       "commission_quarter": 4,
       "status": "Введён",
-      "latitude": 55.754704,
-      "longitude": 37.530139,
-      "coordinates_status": "unverified",
+      "latitude": 55.754578,
+      "longitude": 37.53058,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-129",
         "icity-time",
@@ -35344,9 +35344,9 @@
       "commission_year": 2025,
       "commission_quarter": 3,
       "status": "Строится",
-      "latitude": 55.754704,
-      "longitude": 37.530139,
-      "coordinates_status": "unverified",
+      "latitude": 55.754578,
+      "longitude": 37.53058,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-129",
         "icity-space"
@@ -35519,9 +35519,9 @@
       "commission_year": 2028,
       "commission_quarter": 4,
       "status": "Строится",
-      "latitude": 55.674545,
-      "longitude": 37.435127,
-      "coordinates_status": "unverified",
+      "latitude": 55.675128,
+      "longitude": 37.434999,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-150",
         "link-rune"
@@ -35573,9 +35573,9 @@
       "commission_year": 2028,
       "commission_quarter": 4,
       "status": "Строится",
-      "latitude": 55.674545,
-      "longitude": 37.435127,
-      "coordinates_status": "unverified",
+      "latitude": 55.675128,
+      "longitude": 37.434999,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-150",
         "link-neo"
@@ -36226,9 +36226,9 @@
       "commission_year": 2028,
       "commission_quarter": 3,
       "status": "Строится",
-      "latitude": 55.789203,
-      "longitude": 37.525082,
-      "coordinates_status": "unverified",
+      "latitude": 55.789213,
+      "longitude": 37.524696,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-197",
         "OBJ-0115"
@@ -36411,9 +36411,9 @@
       "commission_year": 2029,
       "commission_quarter": 1,
       "status": "Строится",
-      "latitude": 55.708945,
-      "longitude": 37.626809,
-      "coordinates_status": "unverified",
+      "latitude": 55.709591,
+      "longitude": 37.624867,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-220",
         "OBJ-0727"
@@ -36710,9 +36710,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.690909,
-      "longitude": 37.47818,
-      "coordinates_status": "unverified",
+      "latitude": 55.691318,
+      "longitude": 37.476519,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-252"
       ],
@@ -42220,9 +42220,9 @@
       "commission_year": 2025,
       "commission_quarter": 4,
       "status": "Введён",
-      "latitude": 55.7297807888879,
-      "longitude": 37.4422839019043,
-      "coordinates_status": "centroid",
+      "latitude": 55.729777,
+      "longitude": 37.442446,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-138",
         "proj-138-02"
@@ -42269,9 +42269,9 @@
       "commission_year": null,
       "commission_quarter": null,
       "status": "Проектный",
-      "latitude": 55.818786,
-      "longitude": 37.595546,
-      "coordinates_status": "centroid",
+      "latitude": 55.818751,
+      "longitude": 37.596121,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-253",
         "proj-253-02"
@@ -42365,9 +42365,9 @@
       "commission_year": 2026,
       "commission_quarter": 1,
       "status": "Строящийся",
-      "latitude": 55.722005,
-      "longitude": 37.646247,
-      "coordinates_status": "centroid",
+      "latitude": 55.721899,
+      "longitude": 37.644441,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-201",
         "taller-west"
@@ -42414,9 +42414,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.787862,
-      "longitude": 37.502938,
-      "coordinates_status": "centroid",
+      "latitude": 55.787908,
+      "longitude": 37.503352,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-115",
         "tower-115-02"
@@ -42460,9 +42460,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.762586,
-      "longitude": 37.531092,
-      "coordinates_status": "centroid",
+      "latitude": 55.762378,
+      "longitude": 37.530957,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-147",
         "tower-147-02"
@@ -42506,9 +42506,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.762586,
-      "longitude": 37.531092,
-      "coordinates_status": "centroid",
+      "latitude": 55.762378,
+      "longitude": 37.530957,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-147",
         "tower-147-03"
@@ -42552,9 +42552,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.762586,
-      "longitude": 37.531092,
-      "coordinates_status": "centroid",
+      "latitude": 55.762378,
+      "longitude": 37.530957,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-147",
         "tower-147-04"
@@ -42598,9 +42598,9 @@
       "commission_year": 2026,
       "commission_quarter": null,
       "status": "Введён",
-      "latitude": 55.704072,
-      "longitude": 37.584135,
-      "coordinates_status": "centroid",
+      "latitude": 55.703494,
+      "longitude": 37.583329,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-184",
         "tower-184-02"
@@ -42786,9 +42786,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.789203,
-      "longitude": 37.525082,
-      "coordinates_status": "centroid",
+      "latitude": 55.789213,
+      "longitude": 37.524696,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-197",
         "tower-197-02"
@@ -42832,9 +42832,9 @@
       "commission_year": 2028,
       "commission_quarter": null,
       "status": "Строится",
-      "latitude": 55.789203,
-      "longitude": 37.525082,
-      "coordinates_status": "centroid",
+      "latitude": 55.789213,
+      "longitude": 37.524696,
+      "coordinates_status": "geocoded_exact",
       "legacy_ids": [
         "proj-197",
         "tower-197-03"
