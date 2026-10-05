@@ -47,7 +47,7 @@ class CodifierGapWave02DatesTests(unittest.TestCase):
 
     def test_porta_forma_commission_q_applied_with_low_confidence_and_conflict_note(self):
         row = self.dates["porta forma"]
-        self.assertEqual(row["commission_q"], "202509")
+        self.assertEqual(row["commission_q"], "202606")  # 2026-10-05: база ввода пользователя снимает конфликт 202509
         self.assertIn("КОНФЛИКТ", row["source"])
         self.assertIn("2ГИС", row["source"])
 
@@ -58,8 +58,8 @@ class CodifierGapWave02DatesTests(unittest.TestCase):
 
     def test_layer_input_year_quarter_synced_for_porta(self):
         r = self.by_id["proj-86"]
-        self.assertEqual(r["input_year"], 2025)
-        self.assertEqual(r["input_quarter"], 3)
+        self.assertEqual(r["input_year"], 2026)  # 2026-10-05: по базе ввода пользователя
+        self.assertEqual(r["input_quarter"], 2)
 
     def test_only_three_records_touched_by_this_wave(self):
         touched = [
