@@ -7942,7 +7942,7 @@
     "address": "пос. Внуковское, кв-л 9, з/у 1",
     "status": "exact_match",
     "matched_project_id": "proj-221",
-    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 02; официальный каталог peredelkino-park.ru 2026-10-05",
+    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 01; официальный каталог peredelkino-park.ru 2026-10-05",
     "coord_corroborated": false
   },
   {
@@ -7952,7 +7952,7 @@
     "address": "пос. Внуковское, кв-л 9, з/у 1",
     "status": "exact_match",
     "matched_project_id": "proj-221",
-    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 03; официальный каталог peredelkino-park.ru 2026-10-05",
+    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 02; официальный каталог peredelkino-park.ru 2026-10-05",
     "coord_corroborated": false
   },
   {
@@ -7962,7 +7962,7 @@
     "address": "пос. Внуковское, кв-л 9, з/у 1",
     "status": "exact_match",
     "matched_project_id": "proj-221",
-    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 04; официальный каталог peredelkino-park.ru 2026-10-05",
+    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 03; официальный каталог peredelkino-park.ru 2026-10-05",
     "coord_corroborated": false
   },
   {
@@ -7993,6 +7993,16 @@
     "status": "exact_match",
     "matched_project_id": "proj-279",
     "match_basis": "корпус 4 проекта 279, SubID 01; решение пользователя 2026-10-05 (SubID по возрастанию номера корпуса)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-364",
+    "canonical_no": null,
+    "name": "Taller (Корпус Запад)",
+    "address": "",
+    "status": "exact_match",
+    "matched_project_id": "proj-201",
+    "match_basis": "корпус проекта 201, SubID 02; решение пользователя 2026-10-05 («эксель исправь все», SubID по возрастанию номера корпуса)",
     "coord_corroborated": false
   }
 ]

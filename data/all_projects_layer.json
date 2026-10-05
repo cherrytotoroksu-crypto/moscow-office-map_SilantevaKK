@@ -16336,7 +16336,7 @@
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='бизнес-парк переделкино'; underlying source and its check date remain in that record (2026-08-01). | 2026-10-05: GBA 43200→43246 по официальной новости о РНВ от 09.12.2025 (peredelkino-park.ru); GLA 26617 официально не подтверждена, не менялась (в unified_classifier 26717 — расхождение не снято); корпуса 1–3 заведены в кодификаторе как UC-OBJ-ADD-358..360 (SubID 02–04), запись проекта 01 сохранена.",
+    "qa_notes": "entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='бизнес-парк переделкино'; underlying source and its check date remain in that record (2026-08-01). | 2026-10-05: GBA 43200→43246 по официальной новости о РНВ от 09.12.2025 (peredelkino-park.ru); GLA 26617 официально не подтверждена, не менялась (в unified_classifier 26717 — расхождение не снято); корпуса 1–3 заведены в кодификаторе как UC-OBJ-ADD-358..360 (SubID 01–03 по номеру корпуса), запись проекта 01 сохранена.",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-10-05",
