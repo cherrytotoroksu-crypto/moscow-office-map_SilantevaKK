@@ -449,9 +449,9 @@
   "деловой дуэт": {
     "construction_start_q": null,
     "start_q": null,
-    "commission_q": "202412",
-    "source": "ПОДТВЕРЖДЕНО (2026-08-01): morrowgroup.ru, kf.expert, ibcrealestate.ru, officenavigator.ru — здание введено в эксплуатацию, 2024 год, множество реальных активных лотов аренды/продажи по конкретным этажам и помещениям на рынке (функциональное подтверждение эксплуатации по CRITICAL RULE), точный квартал не уточнён нигде — оставлен Q4 как консервативная оценка",
-    "last_checked": "2026-08-01",
+    "commission_q": "202603",
+    "source": "ПОДТВЕРЖДЕНО (2026-08-01): morrowgroup.ru, kf.expert, ibcrealestate.ru, officenavigator.ru — здание введено в эксплуатацию, 2024 год, множество реальных активных лотов аренды/продажи по конкретным этажам и помещениям на рынке (функциональное подтверждение эксплуатации по CRITICAL RULE), точный квартал не уточнён нигде — оставлен Q4 как консервативная оценка || 2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202603).",
+    "last_checked": "2026-10-05",
     "canonical_project_id": "proj-277",
     "canonical_building_id": null
   },
@@ -1046,5 +1046,68 @@
     "last_checked": "2026-10-04",
     "canonical_project_id": "proj-216",
     "canonical_building_id": "a101-prokshino-ph1"
+  },
+  "icity (time)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202412",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202412).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-129",
+    "canonical_building_id": "icity-time"
+  },
+  "бц сколковский": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202606",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202606).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-227",
+    "canonical_building_id": null
+  },
+  "останкино (к1)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202509",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202509).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-274",
+    "canonical_building_id": "ostankino-k1"
+  },
+  "останкино (к2+к3)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202212",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202212).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-274",
+    "canonical_building_id": "ostankino-k23"
+  },
+  "останкино (к4)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202309",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202309).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-274",
+    "canonical_building_id": "ostankino-k4"
+  },
+  "останкино (к5)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202309",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202309).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-274",
+    "canonical_building_id": "ostankino-k5"
+  },
+  "останкино (к6)": {
+    "construction_start_q": null,
+    "start_q": null,
+    "commission_q": "202406",
+    "source": "2026-10-05: по «Общая база ввода_1 (2).xlsx» (база ввода пользователя; «база точнее», решение пользователя) (ввод 202406).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-274",
+    "canonical_building_id": "ostankino-k6"
   }
 }
