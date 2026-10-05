@@ -7984,5 +7984,15 @@
     "matched_project_id": "proj-253",
     "match_basis": "корпус проекта 253 (UC-OBJ-0229), SubID 02; Upside_ID_правка_классификатора_05.10.2026.json (пользователь явно разрешил присвоение ID для правки классификатора)",
     "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-363",
+    "canonical_no": null,
+    "name": "River Park Коломенское (Корпус 4)",
+    "address": "ул. Корабельная, 3А",
+    "status": "exact_match",
+    "matched_project_id": "proj-279",
+    "match_basis": "корпус 4 проекта 279, SubID 02; решение пользователя 2026-10-05 («назначь сам»)",
+    "coord_corroborated": false
   }
 ]
