@@ -8004,5 +8004,145 @@
     "matched_project_id": "proj-201",
     "match_basis": "корпус проекта 201, SubID 02; решение пользователя 2026-10-05 («эксель исправь все», SubID по возрастанию номера корпуса)",
     "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-365",
+    "canonical_no": null,
+    "name": "Avium (Башня B)",
+    "address": "3-я Хорошёвская улица, ЗУ 18/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-115",
+    "match_basis": "башня/корпус проекта 115, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-366",
+    "canonical_no": null,
+    "name": "Light City (Корпус 2)",
+    "address": "2-я Магистральная ул., д. 3, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-147",
+    "match_basis": "башня/корпус проекта 147, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-367",
+    "canonical_no": null,
+    "name": "Light City (Корпус 3)",
+    "address": "2-я Магистральная ул., д. 3, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-147",
+    "match_basis": "башня/корпус проекта 147, SubID 03; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-368",
+    "canonical_no": null,
+    "name": "Light City (Корпус 4 (37 эт.))",
+    "address": "2-я Магистральная ул., д. 3, стр. 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-147",
+    "match_basis": "башня/корпус проекта 147, SubID 04; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-369",
+    "canonical_no": null,
+    "name": "STONE Ленинский (S)",
+    "address": "Москва, ул. Вавилова, 11",
+    "status": "exact_match",
+    "matched_project_id": "proj-184",
+    "match_basis": "башня/корпус проекта 184, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-370",
+    "canonical_no": null,
+    "name": "STONE Римская (R2)",
+    "address": "Москва, ул. Золоторожский Вал, 11А/1",
+    "status": "exact_match",
+    "matched_project_id": "proj-192",
+    "match_basis": "башня/корпус проекта 192, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-371",
+    "canonical_no": null,
+    "name": "STONE Ходынка I (H2)",
+    "address": "Москва, Ходынский бульвар, вл. 6/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-196",
+    "match_basis": "башня/корпус проекта 196, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-372",
+    "canonical_no": null,
+    "name": "STONE Ходынка I (H3)",
+    "address": "Москва, Ходынский бульвар, вл. 6/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-196",
+    "match_basis": "башня/корпус проекта 196, SubID 03; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-373",
+    "canonical_no": null,
+    "name": "STONE Ходынка II (G2)",
+    "address": "Москва, Ходынский бульвар, 20А/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-197",
+    "match_basis": "башня/корпус проекта 197, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-374",
+    "canonical_no": null,
+    "name": "STONE Ходынка II (G3)",
+    "address": "Москва, Ходынский бульвар, 20А/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-197",
+    "match_basis": "башня/корпус проекта 197, SubID 03; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-375",
+    "canonical_no": null,
+    "name": "Cityzen (Башня Б)",
+    "address": "Вишневая, 7",
+    "status": "exact_match",
+    "matched_project_id": "proj-263",
+    "match_basis": "башня/корпус проекта 263, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-376",
+    "canonical_no": null,
+    "name": "Деловой дуэт (Здание 2)",
+    "address": "Шумкина ул., 14с5, с13",
+    "status": "exact_match",
+    "matched_project_id": "proj-277",
+    "match_basis": "башня/корпус проекта 277, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-377",
+    "canonical_no": null,
+    "name": "Бизнес-хаб Потапово (Корпус 2)",
+    "address": "проспект Куприна, 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-278",
+    "match_basis": "башня/корпус проекта 278, SubID 02; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-378",
+    "canonical_no": null,
+    "name": "Бизнес-хаб Потапово (Корпус 3)",
+    "address": "проспект Куприна, 2",
+    "status": "exact_match",
+    "matched_project_id": "proj-278",
+    "match_basis": "башня/корпус проекта 278, SubID 03; решение пользователя 2026-10-05 («унифицируй»)",
+    "coord_corroborated": false
   }
 ]
