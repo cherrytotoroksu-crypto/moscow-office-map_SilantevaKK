@@ -1109,5 +1109,32 @@
     "last_checked": "2026-10-05",
     "canonical_project_id": "proj-274",
     "canonical_building_id": "ostankino-k6"
+  },
+  "dius": {
+    "construction_start_q": null,
+    "start_q": "202603",
+    "commission_q": "202712",
+    "source": "2026-10-05: старт продаж — 72.ru 26.03.2026 («продажи офисов открыты», застройщик Север; точная дата в тексте не указана, квартал по дате публикации); плановый ввод Q4 2027 — та же публикация (плановая дата, РНВ нет).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-269",
+    "canonical_building_id": null
+  },
+  "родина парк": {
+    "construction_start_q": null,
+    "start_q": "202502",
+    "commission_q": null,
+    "source": "2026-10-05: старт продаж 06.02.2025 — mperspektiva.ru и erzrf.ru (Группа Родина, открыты продажи офисов). Срок ввода не заполнен: источники расходятся (июнь 2027 и Q1 2028).",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-241",
+    "canonical_building_id": null
+  },
+  "solo": {
+    "construction_start_q": null,
+    "start_q": "202511",
+    "commission_q": null,
+    "source": "2026-10-05: старт продаж — cre.ru/news/100496 от 11.11.2025 (Glincom объявила старт продаж); срок ввода не заполнен: Q3 2028 только по одному источнику.",
+    "last_checked": "2026-10-05",
+    "canonical_project_id": "proj-175",
+    "canonical_building_id": null
   }
 }
