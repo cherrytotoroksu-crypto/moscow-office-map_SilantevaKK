@@ -142,8 +142,8 @@
   "top tower": {
     "construction_start_q": "202512",
     "start_q": "202510",
-    "commission_q": null,
-    "source": "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti || 2026-10-05: старт продаж — moscow-city.guide, 23.10.2025 (MR Group вывела офисы в продажу, бронирование 1%, ДКП с 01.12.2025).",
+    "commission_q": "202912",
+    "source": "Current project/developer source: https://www.vedomosti.ru/press_releases/2026/07/23/vibran-generalnii-podryadchik-stroitelstva-novogo-300-metrovogo-delovogo-neboskreba-v-moskve-siti || 2026-10-05: старт продаж — moscow-city.guide, 23.10.2025 (MR Group вывела офисы в продажу, бронирование 1%, ДКП с 01.12.2025). || 2026-10-05: плановый ввод Q4 2029 — moscow-city.guide, 23.10.2025 (MR Group). Плановая дата, РНВ нет.",
     "last_checked": "2026-10-05",
     "canonical_project_id": "proj-204",
     "canonical_building_id": null,
@@ -208,9 +208,9 @@
   "минто (бывший — workplace волоколамское)": {
     "construction_start_q": null,
     "start_q": "202602",
-    "commission_q": null,
-    "source": "realty.rbc.ru/mperspektiva.ru — старт продаж февраль 2026 (объявлено вместе с «Плэйн» как две новые площадки FORMA workplace на Волоколамском шоссе); план сдачи конец 2028. GBA источник даёт 62208 (у нас 56702, ~9.7% расхождение — не правила, единственный источник)",
-    "last_checked": "2026-07-16",
+    "commission_q": "202812",
+    "source": "realty.rbc.ru/mperspektiva.ru — старт продаж февраль 2026 (объявлено вместе с «Плэйн» как две новые площадки FORMA workplace на Волоколамском шоссе); план сдачи конец 2028. GBA источник даёт 62208 (у нас 56702, ~9.7% расхождение — не правила, единственный источник) || 2026-10-05: плановый ввод Q4 2028 — kommersant.ru/doc/8441562 (FORMA workplace, 18.02.2026). Плановая дата, РНВ нет.",
+    "last_checked": "2026-10-05",
     "canonical_project_id": "proj-214",
     "canonical_building_id": null
   },
