@@ -7964,5 +7964,25 @@
     "matched_project_id": "proj-221",
     "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 04; официальный каталог peredelkino-park.ru 2026-10-05",
     "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-361",
+    "canonical_no": null,
+    "name": "Upside Кунцево (Корпус 2)",
+    "address": "Молдавская ул., 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-138",
+    "match_basis": "корпус проекта 138 (UC-OBJ-0050), SubID 02; Upside_ID_правка_классификатора_05.10.2026.json (пользователь явно разрешил присвоение ID для правки классификатора)",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-362",
+    "canonical_no": null,
+    "name": "Upside Останкино (Корпус 2)",
+    "address": "проезд Огородный, 20А/2",
+    "status": "exact_match",
+    "matched_project_id": "proj-253",
+    "match_basis": "корпус проекта 253 (UC-OBJ-0229), SubID 02; Upside_ID_правка_классификатора_05.10.2026.json (пользователь явно разрешил присвоение ID для правки классификатора)",
+    "coord_corroborated": false
   }
 ]
