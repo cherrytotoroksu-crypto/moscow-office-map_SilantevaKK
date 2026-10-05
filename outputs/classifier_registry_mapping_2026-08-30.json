@@ -7934,5 +7934,35 @@
     "matched_project_id": null,
     "match_basis": "CRM export 2026-09-25 + web verification (user-requested addition)",
     "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-358",
+    "canonical_no": null,
+    "name": "Бизнес-парк Переделкино (Корпус 1)",
+    "address": "пос. Внуковское, кв-л 9, з/у 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-221",
+    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 02; официальный каталог peredelkino-park.ru 2026-10-05",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-359",
+    "canonical_no": null,
+    "name": "Бизнес-парк Переделкино (Корпус 2)",
+    "address": "пос. Внуковское, кв-л 9, з/у 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-221",
+    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 03; официальный каталог peredelkino-park.ru 2026-10-05",
+    "coord_corroborated": false
+  },
+  {
+    "unified_id": "UC-OBJ-ADD-360",
+    "canonical_no": null,
+    "name": "Бизнес-парк Переделкино (Корпус 3)",
+    "address": "пос. Внуковское, кв-л 9, з/у 1",
+    "status": "exact_match",
+    "matched_project_id": "proj-221",
+    "match_basis": "корпус проекта 221 (UC-OBJ-0690), SubID 04; официальный каталог peredelkino-park.ru 2026-10-05",
+    "coord_corroborated": false
   }
 ]
