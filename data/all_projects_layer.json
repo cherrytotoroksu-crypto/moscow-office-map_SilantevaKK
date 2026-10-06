@@ -6338,7 +6338,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -6984,7 +6985,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7126,7 +7128,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7201,7 +7204,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7411,7 +7415,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7479,7 +7484,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7680,7 +7686,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7747,7 +7754,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -7884,7 +7892,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -8091,7 +8100,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -8653,7 +8663,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -8816,7 +8827,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9020,7 +9032,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9222,7 +9235,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9355,7 +9369,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9492,7 +9507,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9557,7 +9573,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9686,7 +9703,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -9881,7 +9899,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10016,7 +10035,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10085,7 +10105,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10155,7 +10176,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10225,7 +10247,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10295,7 +10318,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10482,7 +10506,7 @@
     "longitude": 37.435127,
     "geometry_quality": "geocoded_approx",
     "project_status": "Строится",
-    "offer_status": "В продаже",
+    "offer_status": "Продано / снято",
     "offer_not_started_reason": null,
     "input_year": 2028,
     "input_quarter": 4,
@@ -10511,9 +10535,9 @@
       "202603",
       "202606"
     ],
-    "quarter_offer_exists": true,
+    "quarter_offer_exists": false,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities. Input year rechecked 2026-08-23: MR Group project page (https://mr-bc-link.ru/) states commissioning Q4 2028; Fortex listing (https://fortexgroup.ru/bc/link/prodazha-ofisa/179-1320066/) independently states commissioning in 2028. Quarter is explicitly confirmed by the developer page. 2026-09-14: разбит на 2 записи по башням RUNE (120м)/NEO (53м), MR Group, класс Б+ — link-bc.ru, link-offices.com, archi.ru/projects/russia/21167 (зафиксировано в раннем аудите больших проектов). Этажность по башням не указана в источниках, только высота — разделяю GBA/GLA ПРОПОРЦИОНАЛЬНО высоте (120:53) как наилучшую доступную прокси. ВНИМАНИЕ: открытые источники указывают общую офисную площадь комплекса 48800 кв.м, что заметно меньше GBA=74679 — вероятно в GBA учтены складские/иные непрофильные площади комплекса ('объединяет офисы и складские помещения'); это расхождение исходных данных, не моя ошибка, не пересчитываю. confidence=low на обеих записях. 2026-09-14 ОБНОВЛЕНО по прямому запросу пользователя (не делить пропорционально по этажам/высоте, искать реальные цифры): найдена РЕАЛЬНАЯ офисная площадь по каждой башне отдельно — link-offices.com, voshod.estate, towers.city независимо согласуются: RUNE GLA=36600 (29 эт., 120м), NEO GLA=12200 (11 эт., 53м); сумма 48800 ТОЧНО совпадает с прежней проектной GLA — подтверждает, что это не оценка, а реальный официальный источник. Этажность уточнена: RUNE 29 (не 30), NEO 11 (не 13, как было в первой версии по высоте). GBA по отдельным башням нигде не публикуется — разделена по РЕАЛЬНОЙ пропорции GLA (36600:12200, не по высоте) как более надёжная прокси, раз сама GLA подтверждена: RUNE=56009, NEO=18670.",
+    "qa_notes": "entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities. Input year rechecked 2026-08-23: MR Group project page (https://mr-bc-link.ru/) states commissioning Q4 2028; Fortex listing (https://fortexgroup.ru/bc/link/prodazha-ofisa/179-1320066/) independently states commissioning in 2028. Quarter is explicitly confirmed by the developer page. 2026-09-14: разбит на 2 записи по башням RUNE (120м)/NEO (53м), MR Group, класс Б+ — link-bc.ru, link-offices.com, archi.ru/projects/russia/21167 (зафиксировано в раннем аудите больших проектов). Этажность по башням не указана в источниках, только высота — разделяю GBA/GLA ПРОПОРЦИОНАЛЬНО высоте (120:53) как наилучшую доступную прокси. ВНИМАНИЕ: открытые источники указывают общую офисную площадь комплекса 48800 кв.м, что заметно меньше GBA=74679 — вероятно в GBA учтены складские/иные непрофильные площади комплекса ('объединяет офисы и складские помещения'); это расхождение исходных данных, не моя ошибка, не пересчитываю. confidence=low на обеих записях. 2026-09-14 ОБНОВЛЕНО по прямому запросу пользователя (не делить пропорционально по этажам/высоте, искать реальные цифры): найдена РЕАЛЬНАЯ офисная площадь по каждой башне отдельно — link-offices.com, voshod.estate, towers.city независимо согласуются: RUNE GLA=36600 (29 эт., 120м), NEO GLA=12200 (11 эт., 53м); сумма 48800 ТОЧНО совпадает с прежней проектной GLA — подтверждает, что это не оценка, а реальный официальный источник. Этажность уточнена: RUNE 29 (не 30), NEO 11 (не 13, как было в первой версии по высоте). GBA по отдельным башням нигде не публикуется — разделена по РЕАЛЬНОЙ пропорции GLA (36600:12200, не по высоте) как более надёжная прокси, раз сама GLA подтверждена: RUNE=56009, NEO=18670.; offer_status/quarter_offer_exists обновлены по Q3 2026 (202609) 2026-10-06 точечным скриптом, не пересчётом реестра",
     "public_visibility": "public",
     "first_seen_at": "202506",
     "last_verified_at": "2026-07-31",
@@ -10708,7 +10732,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10772,7 +10797,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -10913,7 +10939,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11117,7 +11144,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11183,7 +11211,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11312,7 +11341,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11511,7 +11541,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11586,7 +11617,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11927,7 +11959,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11996,7 +12029,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12127,7 +12161,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12262,7 +12297,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12400,7 +12436,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12616,7 +12653,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12689,7 +12727,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12762,7 +12801,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -12841,7 +12881,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -13210,7 +13251,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -13420,7 +13462,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -13485,7 +13528,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -13550,7 +13594,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -13763,7 +13808,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -13833,7 +13879,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14067,7 +14114,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14215,7 +14263,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14291,7 +14340,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14367,7 +14417,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14439,7 +14490,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14510,7 +14562,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14581,7 +14634,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -14869,7 +14923,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15077,7 +15132,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15148,7 +15204,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15355,7 +15412,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15421,7 +15479,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15766,7 +15825,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15917,7 +15977,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15996,7 +16057,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -16066,7 +16128,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -16275,7 +16338,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -16343,7 +16407,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -16686,7 +16751,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -17697,7 +17763,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -17921,7 +17988,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18002,7 +18070,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18270,7 +18339,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18405,7 +18475,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18479,7 +18550,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18542,7 +18614,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18605,7 +18678,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18669,7 +18743,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18733,7 +18808,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18797,7 +18873,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19060,7 +19137,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19125,7 +19203,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19315,7 +19394,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19379,7 +19459,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19441,7 +19522,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19504,7 +19586,8 @@
     "confidence": "low",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19567,7 +19650,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19691,7 +19775,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19753,7 +19838,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19814,7 +19900,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19936,7 +20023,8 @@
     "confidence": "low",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19997,7 +20085,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -20130,7 +20219,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -20193,7 +20283,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -21155,7 +21246,8 @@
     "confidence": "high",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -26784,7 +26876,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -26845,7 +26938,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -26906,7 +27000,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -27089,7 +27184,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -27150,7 +27246,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -27273,10 +27370,12 @@
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; На официальной странице Prime Life проект расположен по адресу Варшавское шоссе, 36 и описан как ЭОН: класс A, 121 000 м², 65 000 м² офисных площадей, ввод 2029. В классификаторе сохранено пользовательское имя «Прайм Лайф Варшавская»; «ЭОН» добавлен как официальный alias. | 2026-10-06: запись разбита по корпусам (ЭОН: корпус 1 — 21 эт., корпус 2 — 8 эт., по презентации); площади по корпусам не опубликованы, общие GBA 121 000 / GLA 65 000 м² — на уровне проекта. В своде Q3 74 лота из прайса: корп. 1 — этажи 4, 9, 14; корп. 2 — этажи 3, 6.",
+    "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; На официальной странице Prime Life проект расположен по адресу Варшавское шоссе, 36 и описан как ЭОН: класс A, 121 000 м², 65 000 м² офисных площадей, ввод 2029. В классификаторе сохранено пользовательское имя «Прайм Лайф Варшавская»; «ЭОН» добавлен как официальный alias. | 2026-10-06: запись разбита по корпусам (ЭОН: корпус 1 — 21 эт., корпус 2 — 8 эт., по презентации); площади по корпусам не опубликованы, общие GBA 121 000 / GLA 65 000 м² — на уровне проекта. В своде Q3 74 лота из прайса: корп. 1 — этажи 4, 9, 14; корп. 2 — этажи 3, 6.; offer_status/quarter_offer_exists обновлены по Q3 2026 (202609) 2026-10-06 точечным скриптом, не пересчётом реестра",
     "public_visibility": "public",
     "first_seen_at": "202609",
     "last_verified_at": "2026-10-06",
@@ -27336,10 +27435,12 @@
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; На официальной странице Prime Life проект расположен по адресу Варшавское шоссе, 36 и описан как ЭОН: класс A, 121 000 м², 65 000 м² офисных площадей, ввод 2029. В классификаторе сохранено пользовательское имя «Прайм Лайф Варшавская»; «ЭОН» добавлен как официальный alias. | 2026-10-06: запись разбита по корпусам (ЭОН: корпус 1 — 21 эт., корпус 2 — 8 эт., по презентации); площади по корпусам не опубликованы, общие GBA 121 000 / GLA 65 000 м² — на уровне проекта. В своде Q3 74 лота из прайса: корп. 1 — этажи 4, 9, 14; корп. 2 — этажи 3, 6.",
+    "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; На официальной странице Prime Life проект расположен по адресу Варшавское шоссе, 36 и описан как ЭОН: класс A, 121 000 м², 65 000 м² офисных площадей, ввод 2029. В классификаторе сохранено пользовательское имя «Прайм Лайф Варшавская»; «ЭОН» добавлен как официальный alias. | 2026-10-06: запись разбита по корпусам (ЭОН: корпус 1 — 21 эт., корпус 2 — 8 эт., по презентации); площади по корпусам не опубликованы, общие GBA 121 000 / GLA 65 000 м² — на уровне проекта. В своде Q3 74 лота из прайса: корп. 1 — этажи 4, 9, 14; корп. 2 — этажи 3, 6.; offer_status/quarter_offer_exists обновлены по Q3 2026 (202609) 2026-10-06 точечным скриптом, не пересчётом реестра",
     "public_visibility": "public",
     "first_seen_at": "202609",
     "last_verified_at": "2026-10-06",
@@ -27397,10 +27498,12 @@
     "verification_status": "accepted",
     "confidence": "medium",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; Официальный сайт проекта подтверждает продажи коммерческих помещений, проектную декларацию и ДДУ; Prime Life указывает класс A. Общая площадь 11 378 м² и продаваемая офисная площадь 8 564 м² подтверждены профильным каталогом. Координаты привязаны к адресу в районе платформы Санино и помечены как приблизительные. Независимые каталоги расходятся по классу здания, поэтому запись оставлена с needs_review. Gap fill verified 2026-09-26: The official project site links declaration 77-003157, and the current declaration catalogue and broker page identify completion during 2026. Their Q2/Q3 precision differs, so only the planned year is copied. Sources: https://xn----jtbjfbbwikdr3f.xn--p1ai/, https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/64168, https://www.apex-realty.ru/view.php?id=1049937.",
+    "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; Официальный сайт проекта подтверждает продажи коммерческих помещений, проектную декларацию и ДДУ; Prime Life указывает класс A. Общая площадь 11 378 м² и продаваемая офисная площадь 8 564 м² подтверждены профильным каталогом. Координаты привязаны к адресу в районе платформы Санино и помечены как приблизительные. Независимые каталоги расходятся по классу здания, поэтому запись оставлена с needs_review. Gap fill verified 2026-09-26: The official project site links declaration 77-003157, and the current declaration catalogue and broker page identify completion during 2026. Their Q2/Q3 precision differs, so only the planned year is copied. Sources: https://xn----jtbjfbbwikdr3f.xn--p1ai/, https://xn--80az8a.xn--d1aqf.xn--p1ai/сервисы/каталог-новостроек/объект/64168, https://www.apex-realty.ru/view.php?id=1049937.; offer_status/quarter_offer_exists обновлены по Q3 2026 (202609) 2026-10-06 точечным скриптом, не пересчётом реестра",
     "public_visibility": "public",
     "first_seen_at": "202609",
     "last_verified_at": "2026-09-26",
@@ -27618,10 +27721,12 @@
     "verification_status": "under_review",
     "confidence": "low",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-10-06; entity-role contract introduced 2026-08-22; ID присвоен 06.10.2026 при сведении Q3 2026 (лист «ЗДАНИЯ Q3»); данные не проверены. Новый проект, не смешивать с STONE Савеловская (ID 194); башни C1 (SubID 01) и C2 (SubID 02). Адрес и координаты взяты по ID 194 (тот же участок), площади из файла выгрузки",
+    "qa_notes": "entity_role=office_project assigned 2026-10-06; entity-role contract introduced 2026-08-22; ID присвоен 06.10.2026 при сведении Q3 2026 (лист «ЗДАНИЯ Q3»); данные не проверены. Новый проект, не смешивать с STONE Савеловская (ID 194); башни C1 (SubID 01) и C2 (SubID 02). Адрес и координаты взяты по ID 194 (тот же участок), площади из файла выгрузки; offer_status/quarter_offer_exists обновлены по Q3 2026 (202609) 2026-10-06 точечным скриптом, не пересчётом реестра",
     "public_visibility": "internal_only",
     "first_seen_at": "202610",
     "last_verified_at": "2026-10-06",
@@ -27844,10 +27949,12 @@
     "verification_status": "under_review",
     "confidence": "low",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
-    "qa_notes": "entity_role=office_project assigned 2026-10-06; entity-role contract introduced 2026-08-22; ID присвоен 06.10.2026 при сведении Q3 2026 (лист «ЗДАНИЯ Q3»); данные не проверены. Одно предложение — здание целиком 6418,1 м², на сайте granelle.ru забронировано. Данные из unified UC-OBJ-0153 «MYPRIORITY Мневники» (GBA 6420), не проверены",
+    "qa_notes": "entity_role=office_project assigned 2026-10-06; entity-role contract introduced 2026-08-22; ID присвоен 06.10.2026 при сведении Q3 2026 (лист «ЗДАНИЯ Q3»); данные не проверены. Одно предложение — здание целиком 6418,1 м², на сайте granelle.ru забронировано. Данные из unified UC-OBJ-0153 «MYPRIORITY Мневники» (GBA 6420), не проверены; offer_status/quarter_offer_exists обновлены по Q3 2026 (202609) 2026-10-06 точечным скриптом, не пересчётом реестра",
     "public_visibility": "internal_only",
     "first_seen_at": "202610",
     "last_verified_at": "2026-10-06",
