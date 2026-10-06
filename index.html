@@ -921,6 +921,7 @@ function ensureDraw() {
 //  и допиши строку в начало этого списка (новые сверху).
 // ============================================================
 const QUARTERS = [
+  { id: '202609', label: 'Q3 2026', file: 'data/buildings_202609.json', lots: 'data/lots_202609.json' },
   { id: '202606', label: 'Q2 2026', file: 'data/buildings_202606.json', lots: 'data/lots_202606.json', rent: 'data/rent_lots_202606.json', coworking: 'data/coworking_202606.json' },
   { id: '202603', label: 'Q1 2026', file: 'data/buildings_202603.json', lots: 'data/lots_202603.json', rent: 'data/rent_lots_202603.json', coworking: 'data/coworking_202603.json' },
   { id: '202512', label: 'Q4 2025', file: 'data/buildings_202512.json', lots: 'data/lots_202512.json', rent: 'data/rent_lots_202512.json', coworking: 'data/coworking_202512.json' },
@@ -3431,7 +3432,7 @@ async function loadFutureProjects() {
       const latestQ = QUARTERS[0];
       const [saleBuildings, coworkingList] = await Promise.all([
         fetchJSON(latestQ.file, []),
-        fetchJSON(latestQ.coworking, []),
+        latestQ.coworking ? fetchJSON(latestQ.coworking, []) : Promise.resolve([]),
       ]);
       const liveSources = [
         ...saleBuildings.map(b => ({ ...b, _src: 'продажа' })),

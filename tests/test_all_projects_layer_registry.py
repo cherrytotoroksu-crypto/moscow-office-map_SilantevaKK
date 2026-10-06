@@ -249,7 +249,7 @@ class TechnicalDuplicateMergeTest(unittest.TestCase):
         отдельное правило: многокорпусные проекты держат общий
         canonical_project_id и разный canonical_building_id."""
         ids = [r["canonical_project_id"] for r in self.records]
-        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261", "proj-134", "proj-244", "proj-180", "proj-194", "proj-245", "proj-150", "proj-258", "proj-189", "proj-196", "proj-192", "proj-277", "proj-184", "proj-197", "proj-147", "proj-115", "proj-216", "proj-263", "proj-278", "proj-254"}
+        dupes = {i for i in ids if ids.count(i) > 1} - {"badaevsky", "pole", "proj-274", "proj-129", "proj-112", "proj-261", "proj-134", "proj-244", "proj-180", "proj-194", "proj-245", "proj-150", "proj-258", "proj-189", "proj-196", "proj-192", "proj-277", "proj-184", "proj-197", "proj-147", "proj-115", "proj-216", "proj-263", "proj-278", "proj-254", "proj-add-prime-life-varshavskaya-20260917"}
         self.assertEqual(dupes, set(), f"canonical_project_id повторяется: {sorted(dupes)}")
 
     def test_each_group_canonical_has_duplicate_of_none_and_legacy_ids(self):
