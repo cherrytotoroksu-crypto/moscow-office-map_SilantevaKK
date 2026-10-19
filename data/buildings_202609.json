@@ -632,8 +632,8 @@
     "name_orig": "LIKOVA",
     "lat": 55.621468,
     "lng": 37.267601,
-    "volume": 53293.0,
-    "price": 96128,
+    "volume": 32138.0,
+    "price": 0,
     "cls": "A",
     "status": "Строится",
     "on_sale": "да",
@@ -652,7 +652,8 @@
     "unified_id": null,
     "canonical_project_id": "266",
     "subid": "01",
-    "tower_label": ""
+    "tower_label": "",
+    "volume_note": "продаётся зданием целиком, цена не подтверждена (в файле Q3 5,12 млрд — из расчётов убрана 20.10.2026); объём = GLA"
   },
   {
     "name": "Lakes 2",
