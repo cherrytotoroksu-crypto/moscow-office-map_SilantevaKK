@@ -4375,5 +4375,32 @@
     "unified_id": "UC-OBJ-ADD-026",
     "canonical_project_id": "286",
     "volume_note": "не вошёл в свод Q3 2026 (лоты не выгружены)"
+  },
+  {
+    "name": "Родина Переделкино",
+    "name_orig": "Родина Переделкино",
+    "lat": 55.637124,
+    "lng": 37.352792,
+    "volume": 3015.1,
+    "price": 265218,
+    "cls": "A",
+    "status": "Строится",
+    "on_sale": "да",
+    "lots": 11,
+    "gba": null,
+    "gla": null,
+    "zone": "За МКАД",
+    "submarket": "За МКАД",
+    "biz": null,
+    "developer": "Родина",
+    "address": "Москва, Боровское шоссе, вл. 51",
+    "year": "2029",
+    "start": "",
+    "weight": 0,
+    "id": 297,
+    "unified_id": null,
+    "canonical_project_id": "297",
+    "subid": "01",
+    "tower_label": "Корпус 6 (офисы)"
   }
 ]

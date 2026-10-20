@@ -27992,5 +27992,68 @@
     "project_name": "Мнёвники от Гранель",
     "subid": "01",
     "tower_label": null
+  },
+  {
+    "canonical_project_id": "proj-297",
+    "canonical_building_id": null,
+    "entity_grain": "project",
+    "raw_name": "Родина Переделкино",
+    "canonical_name": "Родина Переделкино",
+    "flex_site_label": null,
+    "aliases": [
+      "Родина Переделкино (Корпус 6 (офисы))"
+    ],
+    "developer": "Родина",
+    "address": "Москва, Боровское шоссе, вл. 51",
+    "latitude": 55.637124,
+    "longitude": 37.352792,
+    "geometry_quality": "geocoded_approx",
+    "project_status": "Строится",
+    "offer_status": "В продаже",
+    "offer_not_started_reason": null,
+    "input_year": 2029,
+    "input_quarter": 1,
+    "input_date_kind": "planned",
+    "cls": "A",
+    "gba": null,
+    "gla": null,
+    "office_area": null,
+    "area_scope": "project",
+    "zone": "За МКАД",
+    "submarket": "За МКАД",
+    "bizFormed": null,
+    "bizForming": null,
+    "market_channel": [
+      "sale"
+    ],
+    "source": "manual_web_verification",
+    "source_date": "2026-10-20",
+    "verification_status": "under_review",
+    "confidence": "low",
+    "external_only": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
+    "qa_status": "ok",
+    "qa_notes": "entity_role=office_project assigned 2026-10-20; entity-role contract introduced 2026-08-22; ID 297 присвоен 20.10.2026 при сведении Q3 2026; лоты peredelkino-offices.ru, координаты из ДДУ-выгрузки; GBA/GLA не найдены",
+    "public_visibility": "internal_only",
+    "first_seen_at": "202609",
+    "last_verified_at": "2026-10-20",
+    "source_count": 1,
+    "duplicate_of": null,
+    "legacy_ids": [],
+    "entity_role": "office_project",
+    "observed_market_channels": [
+      "sale"
+    ],
+    "construction_start_year": null,
+    "construction_start_quarter": null,
+    "sales_start_year": null,
+    "sales_start_quarter": null,
+    "project_no": "297",
+    "project_name": "Родина Переделкино",
+    "subid": "01",
+    "tower_label": null
   }
 ]
