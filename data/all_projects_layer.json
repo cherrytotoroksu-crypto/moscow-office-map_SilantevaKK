@@ -21070,7 +21070,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -21134,7 +21135,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -21198,7 +21200,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
