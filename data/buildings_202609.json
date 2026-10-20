@@ -2860,12 +2860,12 @@
     "name_orig": "МФК Строгино",
     "lat": 55.788889,
     "lng": 37.382106,
-    "volume": 13390.0,
-    "price": 0,
+    "volume": 3251.0,
+    "price": 428490,
     "cls": "A",
     "status": "Строится",
     "on_sale": "да",
-    "lots": 1,
+    "lots": 12,
     "gba": 28390,
     "gla": 13390,
     "zone": "ТТК-МКАД",
@@ -2880,8 +2880,7 @@
     "unified_id": null,
     "canonical_project_id": "236",
     "subid": "01",
-    "tower_label": "",
-    "volume_note": "в продаже, цена не опубликована; площадь = GLA здания (оценка)"
+    "tower_label": ""
   },
   {
     "name": "МФК Юг",
