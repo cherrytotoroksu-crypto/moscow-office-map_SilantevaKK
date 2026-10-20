@@ -5772,7 +5772,7 @@
     "longitude": 37.585665,
     "geometry_quality": "geocoded_approx",
     "project_status": "Введён",
-    "offer_status": "Продано / снято",
+    "offer_status": "В продаже",
     "offer_not_started_reason": null,
     "input_year": 2026,
     "input_quarter": 2,
@@ -5797,9 +5797,10 @@
     "quarter_offer_refs": [
       "202509",
       "202512",
-      "202603"
+      "202603",
+      "202609"
     ],
-    "quarter_offer_exists": false,
+    "quarter_offer_exists": true,
     "qa_status": "ok",
     "qa_notes": "entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities. Lifecycle dates synchronized 2026-08-22 from data/building_dates.json key='stone towers. tower d'; underlying source and its check date remain in that record (2026-08-01).",
     "public_visibility": "public",

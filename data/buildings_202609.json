@@ -3669,11 +3669,10 @@
     "zone": "СК-ТТК",
     "submarket": "ТТК Север",
     "biz": null,
-    "on_sale": "нет",
-    "lots": 0,
-    "volume": 0,
-    "price": 0,
-    "volume_note": "Q3 2026: лотов в продаже нет (проверено)"
+    "on_sale": "да",
+    "lots": 1,
+    "volume": 69.7,
+    "price": 650000
   },
   {
     "name": "Avium (Башня A)",
