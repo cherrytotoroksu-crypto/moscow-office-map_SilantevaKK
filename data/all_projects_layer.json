@@ -3555,7 +3555,7 @@
     "longitude": 37.472216,
     "geometry_quality": "geocoded_approx",
     "project_status": "Введён",
-    "offer_status": "Продано / снято",
+    "offer_status": "В продаже",
     "offer_not_started_reason": null,
     "input_year": 2024,
     "input_quarter": null,
@@ -3582,9 +3582,10 @@
       "202410",
       "202412",
       "202503",
-      "202506"
+      "202506",
+      "202609"
     ],
-    "quarter_offer_exists": false,
+    "quarter_offer_exists": true,
     "qa_status": "ok",
     "qa_notes": "entity_role=office_project assigned 2026-08-22; source: user decision to keep coworking_site and host_building as distinct public entities. Gap fill verified 2026-09-26: The project sales page and independent NF Group/CIAN cards agree that the completed class-A building has about 11,894 sqm and was built in 2024. The exact building address is normalized to Berzarina 32 building 4. The classifier's unsupported Q4 precision is removed. Sources: https://berzarina32.ru/, https://kf.expert/office/business-center/oktyabrskoe-pole-os47929, https://www.cian.ru/sale/commercial/304490047/.",
     "public_visibility": "public",
@@ -7548,7 +7549,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -8243,7 +8245,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -11816,7 +11819,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -15690,7 +15694,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -16995,7 +17000,9 @@
     "raw_name": "ВАРСТ",
     "canonical_name": "ВАРСТ",
     "flex_site_label": null,
-    "aliases": [],
+    "aliases": [
+      "ВАРСТ (корпус 02)"
+    ],
     "developer": "West Wind Group",
     "address": "Москва, Сущёвский вал, 43, с 2",
     "latitude": 55.793337,
@@ -17027,7 +17034,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -17091,7 +17099,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -17430,7 +17439,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -17496,7 +17506,8 @@
       "202509",
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -18137,7 +18148,8 @@
     "quarter_offer_refs": [
       "202512",
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19329,7 +19341,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19713,7 +19726,8 @@
     "external_only": false,
     "quarter_offer_refs": [
       "202603",
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -19962,7 +19976,8 @@
     "confidence": "medium",
     "external_only": false,
     "quarter_offer_refs": [
-      "202606"
+      "202606",
+      "202609"
     ],
     "quarter_offer_exists": true,
     "qa_status": "ok",
@@ -27307,8 +27322,10 @@
     "verification_status": "accepted",
     "confidence": "high",
     "external_only": false,
-    "quarter_offer_refs": [],
-    "quarter_offer_exists": false,
+    "quarter_offer_refs": [
+      "202609"
+    ],
+    "quarter_offer_exists": true,
     "qa_status": "ok",
     "qa_notes": "entity_role=office_project assigned 2026-09-17; entity-role contract introduced 2026-08-22; Официальная карточка указывает: воркплейс класса A, общая площадь 49 181 м², офисная площадь 25 495 м², адрес 1-й Варшавский проезд, вл. 1а, ввод III квартал 2029.",
     "public_visibility": "public",
