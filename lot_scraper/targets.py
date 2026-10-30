@@ -39,3 +39,24 @@ add('a101', 278, '03', 'Бизнес-хаб Потапово', 'Корпус Д 
 add('tsetlin', 249, '01', 'Цетлин', 'Цетлин', 'https://tsetlin.moscow/')
 
 add('granelle', 97, '01', 'Звенигородская от Гранель', 'БЦ «Звенигородская от Гранель»', 'https://granelle.ru/offices/?project=zvenigorodskaya', granelle_name='Звенигородская от Гранель')
+
+# --- STONE: JSON-API stone.ru/api/lots; корпус = поле housing (адреса страниц взяты из реестра Q3)
+def _stone(pid, sub, project, corpus, page, projects, housing, **kw):
+    add('stone', pid, sub, project, corpus, 'https://stone.ru/' + page, stone_projects=projects, stone_housing=housing, **kw)
+
+
+_stone(177, '01', 'STONE Дмитровская', 'Офисная башня', 'catalog/offices/dmitrovskaya', '4', 'Офисная башня')
+_stone(180, '01', 'STONE Калужская', 'Башня К1', 'catalog/offices/kaluzhskaya', '9,581', 'Башня К1')
+_stone(180, '02', 'STONE Калужская', 'Башня К2', 'catalog/offices/kaluzhskaya', '9,581', 'Башня К2')
+_stone(185, '01', 'STONE Мневники I', 'Башня M1', 'catalog/offices/mnyovniki-1-2', '617', 'Башня M1')
+_stone(188, '01', 'STONE Мневники II', 'Башня M2.1', 'catalog/offices/mnyovniki-1-2', '617', 'Башня M2.1')
+_stone(189, '01', 'STONE Мневники III', 'Башня M3.1', 'catalog/offices/mnyovniki-3', '616', 'Башня M3.1')
+_stone(189, '02', 'STONE Мневники III', 'Башня M3.2', 'catalog/offices/mnyovniki-3', '616', 'Башня M3.2')
+_stone(192, '01', 'STONE Римская', 'Башня R1', 'catalog/offices/rimskaya', '13', 'Башня R1')
+_stone(192, '02', 'STONE Римская', 'Башня R2', 'catalog/offices/rimskaya', '13', 'Башня R2')
+_stone(197, '01', 'STONE Ходынка II', 'Башня G1', 'catalog/offices/khodyinka-2', '7,583', 'Башня G1')
+_stone(197, '03', 'STONE Ходынка II', 'Башня G3', 'catalog/offices/khodyinka-2', '7,583', 'Башня G3')
+_stone(258, '01', 'STONE SKY Ходынка IV', 'Небоскреб F1', 'catalog/offices/sky-khodyinka', '7210', 'Небоскреб F1')
+_stone(258, '02', 'STONE SKY Ходынка IV', 'Камерная башня F2', 'catalog/offices/sky-khodyinka', '7210', 'Камерная башня F2')
+_stone(283, '01', 'STONE Tower E', 'Tower E', 'commercial/tower-e', '7139', 'Tower E', stone_direction='1,4,3')
+_stone(289, '01', 'STONE Савеловская 2', 'Башня C1', 'catalog/offices/savelovskaya2', '7177,7216', 'Башня C1')

@@ -88,9 +88,17 @@ def main():
         import engine
         seen, urls = set(), []
         for r in engine.catalog():
-            if not r['has_parser'] and r['url'] and r['url'] not in seen:
-                seen.add(r['url'])
-                urls.append(r['url'])
+            m = re.match(r'https?://\S+', (r['url'] or '').strip())      # в колонке бывают примечания: берём только ссылку
+            if not r['has_parser'] and m and m.group(0) not in seen:
+                seen.add(m.group(0))
+                urls.append(m.group(0))
+    try:
+        with sync_playwright() as pw:
+            pw.chromium.launch().close()
+    except Exception as e:                               # noqa: BLE001
+        if "Executable doesn't exist" in str(e):
+            sys.exit('Не установлен браузер для Playwright. Выполни один раз:  python -m playwright install chromium')
+        raise
     out_root = HERE / 'recon' / datetime.date.today().strftime('%Y-%m-%d')
     out_root.mkdir(parents=True, exist_ok=True)
     print(f'Страниц: {len(urls)}. Папка: {out_root}')
