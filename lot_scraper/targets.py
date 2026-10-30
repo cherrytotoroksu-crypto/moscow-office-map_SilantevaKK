@@ -60,3 +60,14 @@ _stone(258, '01', 'STONE SKY Ходынка IV', 'Небоскреб F1', 'catal
 _stone(258, '02', 'STONE SKY Ходынка IV', 'Камерная башня F2', 'catalog/offices/sky-khodyinka', '7210', 'Камерная башня F2')
 _stone(283, '01', 'STONE Tower E', 'Tower E', 'commercial/tower-e', '7139', 'Tower E', stone_direction='1,4,3')
 _stone(289, '01', 'STONE Савеловская 2', 'Башня C1', 'catalog/offices/savelovskaya2', '7177,7216', 'Башня C1')
+
+# --- Upside Останкино: Hydra commerce
+_UO = 'https://upside-ostankino.ru'
+add('hydra_commerce', 253, '02', 'Upside Останкино', 'Корпус 2', _UO + '/api/hydra/data/commerce', page=_UO + '/plans', hc_building=2)
+add('hydra_commerce', 253, '01', 'Upside Останкино', 'Корпус 1', _UO + '/plans', page=_UO + '/plans', hc_whole='1')
+
+# --- Level (business.level.ru), Мираполис (API gk-osnova), Twist
+add('level', 144, '01', 'Level Воронцовская', 'Корпус 1', 'https://business.level.ru/filter/?project=wv', level_project='wv')
+add('level', 267, '01', 'Level Нижегородская', 'Корпус 1', 'https://business.level.ru/filter/?project=wn&category=office', level_project='wn')
+add('mirapolis', 284, '01', 'Мираполис', 'Мираполис', 'https://mirapolis.city/offices', mir_project=12)
+add('twist', 205, '01', 'Twist', 'Корпус 1', 'https://twist-office.ru/vybor-pomeshcheniya/')
