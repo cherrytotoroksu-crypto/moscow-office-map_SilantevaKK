@@ -61,6 +61,15 @@ class EngineSafetyTests(unittest.TestCase):
         engine.check_anomalies(r, None)
         self.assertIn('0 лотов', r.notes[0])
 
+    def test_compare_with_previous_run(self):
+        old = make([(50, 15_000_000), (60, 18_000_000), (70, 21_000_000)])
+        new = make([(50, 15_000_000), (60, 19_000_000), (80, 24_000_000)])
+        new.prev = {'date': '2026-10-01', 'lots': old.lots}
+        rows, d = engine.compare_runs([new])
+        kinds = sorted(r[0] for r in rows)
+        self.assertEqual(kinds, ['новый', 'ушёл из продажи', 'цена изменилась'])
+        self.assertEqual(d, '2026-10-01')
+
 
 if __name__ == '__main__':
     unittest.main()

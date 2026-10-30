@@ -250,6 +250,7 @@
     if (sm.no_price || sm.no_area) h += ' <span style="color:var(--red-ink)"><b>Без цены: ' + (sm.no_price || 0) + ', без площади: ' + (sm.no_area || 0) + '</b> — в расчёты такие строки брать нельзя (подсвечены в таблице).</span>';
     h += '<div class="sub" style="margin:6px 0">Сверка с Q3 по лотам: без изменений ' + (c['сопоставлен'] || 0) + ', цена изменилась ' + (c['цена изменилась'] || 0) +
       ', новых ' + (c['новый'] || 0) + ', ушло из продажи ' + (c['ушёл из продажи'] || 0) + '. Подробности — на листах «Отчёт по корпусам» и «Пометки по лотам».</div>';
+    if (sm.prev_run) h += '<div class="sub" style="margin:6px 0">Сверка с прошлым запуском от ' + esc(sm.prev_run.date) + ': новых ' + sm.prev_run['новый'] + ', цена изменилась ' + sm.prev_run['цена изменилась'] + ', ушло ' + sm.prev_run['ушёл из продажи'] + '. Лист «Сравнение с …».</div>';
     h += '<a class="dl" href="/api/file?name=' + encodeURIComponent(s.files.table) + '">Таблица 39 колонок (xlsx)</a>' +
          '<a class="dl sec" href="/api/file?name=' + encodeURIComponent(s.files.raw) + '">Сырые данные (xlsx)</a>';
     $('results').innerHTML = h; $('results').style.display = '';

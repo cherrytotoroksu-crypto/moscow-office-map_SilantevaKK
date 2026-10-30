@@ -3,7 +3,7 @@
     python engine.py --all            выгрузить всё, что есть парсер
     python engine.py 216|04 279|02    только перечисленные корпуса (project_id|sub_id)
 """
-import sys, csv, json, time, socket, statistics, datetime, importlib, threading, concurrent.futures as cf
+import sys, csv, json, collections, time, socket, statistics, datetime, importlib, threading, concurrent.futures as cf
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -166,6 +166,7 @@ def run_targets(targets, on_update=None):
     prevs = {key_of(t['project_id'], t['sub_id']): load_last(t) for t in targets}
 
     def finish(k, r):
+        r.prev = prevs[k]
         results[k] = r
         if r.error:
             r = stale_fallback(r)
@@ -201,6 +202,51 @@ def run_targets(targets, on_update=None):
                     results[k] = r2
             finish(k, results[k])
     return [results[key_of(t['project_id'], t['sub_id'])] for t in targets]
+
+
+def _lot_key(lot):
+    if lot.get('lot_id'):
+        return ('id', str(lot['lot_id']))
+    return ('fa', lot.get('floor'), round(lot['area'], 1) if lot.get('area') else None)
+
+
+def compare_runs(results):
+    """Сравнение каждого корпуса с его прошлой удачной выгрузкой (r.prev, своя дата у каждого корпуса)."""
+    rows, dates = [], []
+    for r in results:
+        if r.error or r.stale or not r.prev or not r.prev.get('lots'):
+            continue
+        dates.append(r.prev['date'])
+        old = {_lot_key(l): l for l in r.prev['lots']}
+        new = {_lot_key(l): l for l in r.lots}
+        t = r.t
+        head = [t['project_id'], t['sub_id'], t['project'], t['corpus']]
+        for lk, lot in new.items():
+            o = old.get(lk)
+            if not o:
+                rows.append(['новый'] + head + [lot['lot_id'], lot['area'], lot['floor'], None, lot['price_total'], None])
+            elif o.get('price_total') and lot.get('price_total') and abs(o['price_total'] - lot['price_total']) / o['price_total'] > 0.005:
+                rows.append(['цена изменилась'] + head + [lot['lot_id'], lot['area'], lot['floor'], o['price_total'], lot['price_total'],
+                                                          round((lot['price_total'] - o['price_total']) / o['price_total'] * 100, 1)])
+        for lk, o in old.items():
+            if lk not in new:
+                rows.append(['ушёл из продажи'] + head + [o['lot_id'], o['area'], o['floor'], o['price_total'], None, None])
+    return rows, (min(dates) if dates else None)
+
+
+def add_compare_sheet(table_path, rows, prev_date):
+    """Лист со сравнением: у каждого корпуса своя прошлая дата, в названии самая ранняя."""
+    import openpyxl
+    from openpyxl.styles import Font
+    wb = openpyxl.load_workbook(table_path)
+    ws = wb.create_sheet(f'Сравнение с {_fmt_date(prev_date)}'[:31])
+    ws.append(['Что', 'ID проекта', 'SubID', 'Проект', 'Корпус', 'ID лота', 'Площадь', 'Этаж', 'Цена раньше', 'Цена сейчас', 'Изменение, %'])
+    for c in ws[1]:
+        c.font = Font(bold=True)
+    for r in sorted(rows, key=lambda x: (x[1], x[2], x[0])):
+        ws.append(r)
+    ws.freeze_panes = 'A2'
+    wb.save(table_path)
 
 
 def write_raw(results, path):
@@ -251,6 +297,11 @@ def export(results, label=''):
     raw = OUT / f'lots_raw_{stamp}{label}.xlsx'
     write_raw(results, raw)
     table, st = build_39.build(str(raw), OUT / f'Лоты_39_колонок_{stamp}{label}.xlsx')
+    rows, pdate = compare_runs(results)
+    if pdate:
+        add_compare_sheet(table, rows, pdate)
+        c = collections.Counter(r[0] for r in rows)
+        st['prev_run'] = {'date': _fmt_date(pdate), 'новый': c['новый'], 'цена изменилась': c['цена изменилась'], 'ушёл из продажи': c['ушёл из продажи']}
     return raw.name, Path(table).name, st
 
 
