@@ -4,6 +4,7 @@
 Запуск (с включённым VPN, если сайт открывается только через него):
     python lot_scraper/recon_dump.py                 все корпуса без парсера, у которых есть ссылка
     python lot_scraper/recon_dump.py URL [URL ...]   только указанные страницы
+    ... --click "селектор"   после прокрутки нажать элемент (например кнопку «2» пагинации), чтобы записать его запросы
 Прокси: переменная HTTPS_PROXY (если VPN работает через прокси). Результат: lot_scraper/recon/ (в git не попадает).
 """
 import sys, os, re, json, hashlib, datetime
@@ -27,7 +28,7 @@ def slug(url):
     return f'{s}_{hashlib.md5(url.encode()).hexdigest()[:6]}'
 
 
-def dump(pw, url, out_root):
+def dump(pw, url, out_root, clicks=()):
     d = out_root / slug(url)
     d.mkdir(parents=True, exist_ok=True)
     proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
@@ -65,6 +66,12 @@ def dump(pw, url, out_root):
         for _ in range(8):                               # дозагрузка прокруткой
             pg.mouse.wheel(0, 4000)
             pg.wait_for_timeout(1200)
+        for sel in clicks:                               # клики для подгрузки страниц списка / вкладок
+            try:
+                pg.locator(sel).first.click(timeout=8000)
+                pg.wait_for_timeout(3500)
+            except Exception as e:                       # noqa: BLE001
+                print(f'  клик «{sel}» не сработал: {str(e)[:80]}')
         (d / 'page_rendered.html').write_text(pg.content(), encoding='utf-8')
         try:
             pg.screenshot(path=str(d / 'page.png'), full_page=False)
@@ -81,7 +88,11 @@ def dump(pw, url, out_root):
 
 def main():
     from playwright.sync_api import sync_playwright
-    args = sys.argv[1:]
+    args, clicks = sys.argv[1:], []
+    while '--click' in args:
+        i = args.index('--click')
+        clicks.append(args[i + 1])
+        del args[i:i + 2]
     if args:
         urls = args
     else:
@@ -105,7 +116,7 @@ def main():
     index = []
     with sync_playwright() as pw:
         for i, u in enumerate(urls, 1):
-            name, err, n = dump(pw, u, out_root)
+            name, err, n = dump(pw, u, out_root, clicks)
             print(f'[{i}/{len(urls)}] {"ОШИБКА " + err if err else "ok, запросов " + str(n)}  {u}')
             index.append({'url': u, 'folder': name, 'error': err, 'requests': n})
             (out_root / 'index.json').write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding='utf-8')
