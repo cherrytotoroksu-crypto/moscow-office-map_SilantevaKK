@@ -71,3 +71,15 @@ add('level', 144, '01', 'Level Воронцовская', 'Корпус 1', 'htt
 add('level', 267, '01', 'Level Нижегородская', 'Корпус 1', 'https://business.level.ru/filter/?project=wn&category=office', level_project='wn')
 add('mirapolis', 284, '01', 'Мираполис', 'Мираполис', 'https://mirapolis.city/offices', mir_project=12)
 add('twist', 205, '01', 'Twist', 'Корпус 1', 'https://twist-office.ru/vybor-pomeshcheniya/')
+
+# --- Forma (workplace.forma.ru): Next.js, лоты в __NEXT_DATA__
+_FM = 'https://workplace.forma.ru/list?projects='
+add('forma', 132, '01', 'Jenga', 'Jenga', _FM + '2194', forma_project=2194)
+add('forma', 139, '01', 'Lakes 2', 'Корпус 1', _FM + '2227', forma_project=2227)
+add('forma', 141, '01', 'Lavin', 'Корпус 1', _FM + '2125', forma_project=2125)
+add('forma', 153, '01', 'Mount', 'Маунт', _FM + '2178', forma_project=2178)
+add('forma', 214, '01', 'Минто (бывший — Workplace Волоколамское)', 'Корпус 1', _FM + '2079', forma_project=2079)
+add('forma', 247, '01', 'Технопарк Густав', 'Корпус 1', _FM + '2120', forma_project=2120)
+
+# --- Krost (krost.ru)
+add('krost', 155, '01', 'Nevsky Plaza', 'Башня Север', 'https://krost.ru/commercial/objects/988', krost_building=52)
