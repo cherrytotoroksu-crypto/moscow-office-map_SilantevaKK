@@ -5,3 +5,5 @@ __pycache__/
 *.xlsx
 cookies.json
 registry_q3.csv
+recon/
+history/

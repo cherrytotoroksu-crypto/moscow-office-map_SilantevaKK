@@ -42,6 +42,7 @@ class Result:
         self.lots = []
         self.notes = []
         self.error = None
+        self.stale = None
 
     def add(self, **kw):
         row = {k: None for k in FIELDS}

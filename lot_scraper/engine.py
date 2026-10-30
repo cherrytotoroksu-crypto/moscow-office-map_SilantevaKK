@@ -3,11 +3,13 @@
     python engine.py --all            выгрузить всё, что есть парсер
     python engine.py 216|04 279|02    только перечисленные корпуса (project_id|sub_id)
 """
-import sys, csv, time, datetime, importlib, threading, concurrent.futures as cf
+import sys, csv, json, time, socket, statistics, datetime, importlib, threading, concurrent.futures as cf
 from pathlib import Path
+from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'out'
+HISTORY = HERE / 'history'      # последний удачный результат по каждому корпусу (в git не попадает)
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / 'sites'))
 
@@ -54,9 +56,92 @@ def catalog():
     return rows
 
 
-def _run_one(t):
+def _hist_path(t):
+    return HISTORY / (key_of(t['project_id'], t['sub_id']).replace('|', '_') + '.json')
+
+
+def load_last(t):
+    try:
+        return json.loads(_hist_path(t).read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return None
+
+
+def save_last(r):
+    if r.error or not r.lots:
+        return
+    HISTORY.mkdir(exist_ok=True)
+    _hist_path(r.t).write_text(json.dumps({'date': datetime.date.today().isoformat(), 'lots': r.lots},
+                                          ensure_ascii=False), encoding='utf-8')
+
+
+def _fmt_date(iso):
+    y, m, d = iso.split('-')
+    return f'{d}.{m}.{y}'
+
+
+def preflight(targets, timeout=6):
+    """Какие домены отвечают (TCP :443). {домен: True/False}. Не обходит ничего, просто проверка связи."""
+    hosts = sorted({urlparse(t['url']).hostname for t in targets if t.get('url')})
+
+    def ping(h):
+        try:
+            socket.create_connection((h, 443), timeout=timeout).close()
+            return h, True
+        except OSError:
+            return h, False
+    with cf.ThreadPoolExecutor(16) as ex:
+        return dict(ex.map(ping, hosts))
+
+
+def stale_fallback(r):
+    """Сайт не ответил: берём последний удачный результат с пометкой, чтобы корпус не пропал из таблицы."""
+    last = load_last(r.t)
+    if not last or not last.get('lots'):
+        return r
+    r.lots = last['lots']
+    for lot in r.lots:
+        lot['flags'] = ((lot.get('flags') or '') + '; ' if lot.get('flags') else '') + f'УСТАРЕВШИЕ ДАННЫЕ от {_fmt_date(last["date"])}'
+    r.notes.append(f'УСТАРЕЛО: сайт не ответил ({r.error}); показаны данные последней удачной выгрузки от {_fmt_date(last["date"])}')
+    r.stale = last['date']
+    r.error = None
+    return r
+
+
+M2_MIN, M2_MAX = 40_000, 2_500_000      # коридор ₽/м² для офисов; вне него — подозрение на ошибку разбора
+
+
+def check_anomalies(r, prev=None):
+    """Пометки о подозрительных данных. prev — прошлая удачная выгрузка (до этого запуска)."""
+    if r.error or getattr(r, 'stale', None):
+        return
+    n = len(r.lots)
+    if n == 0:
+        r.notes.append('0 лотов: вёрстка могла измениться или лотов нет, проверить вручную')
+        return
+    bad = 0
+    for lot in r.lots:
+        m2 = lot.get('price_m2')
+        if m2 and not (M2_MIN <= m2 <= M2_MAX):
+            lot['flags'] = ((lot['flags'] + '; ') if lot['flags'] else '') + f'₽/м² вне коридора {M2_MIN:,}–{M2_MAX:,}'.replace(',', ' ')
+            bad += 1
+    if bad:
+        r.notes.append(f'{bad} лотов с ₽/м² вне разумного коридора: проверить разбор цены/площади')
+    if prev and prev.get('lots'):
+        pn = len(prev['lots'])
+        if pn and abs(n - pn) / pn > 0.3:
+            r.notes.append(f'число лотов изменилось сильно относительно прошлой выгрузки от {_fmt_date(prev["date"])}: {pn} -> {n}')
+        a = [l['price_m2'] for l in prev['lots'] if l.get('price_m2')]
+        b = [l['price_m2'] for l in r.lots if l.get('price_m2')]
+        if len(a) >= 3 and len(b) >= 3:
+            ma, mb = statistics.median(a), statistics.median(b)
+            if abs(mb - ma) / ma > 0.25:
+                r.notes.append(f'медианный ₽/м² изменился на {round((mb - ma) / ma * 100)}% с прошлой выгрузки ({round(ma):,} -> {round(mb):,})'.replace(',', ' '))
+
+
+def _run_one(t, dead=False):
     # сети нестабильны: при ошибке повторяем парсер до 3 раз
-    for attempt in range(3):
+    for attempt in range(1 if dead else 3):
         try:
             r = importlib.import_module(t['site']).run(t)
         except Exception as e:                      # noqa: BLE001 - парсер не должен ронять весь запуск
@@ -65,35 +150,56 @@ def _run_one(t):
         if not r.error:
             break
         time.sleep(4 * (attempt + 1))
+    if r.error and dead:
+        r.error = 'домен не отвечает (проверка связи)'
     return r
 
 
 def run_targets(targets, on_update=None):
-    """Запустить парсеры для targets (элементы targets.T). on_update(key, state, result|None) для прогресса."""
+    """Запустить парсеры для targets (элементы targets.T). on_update(key, state, result|None) для прогресса.
+    Перед запуском проверяется связь с доменами (мёртвые не мучаем повторами), после — контроль аномалий;
+    если сайт не ответил, берётся последняя удачная выгрузка с пометкой «устарело»."""
     emit = on_update or (lambda *a: None)
+    alive = preflight(targets)
+    dead = lambda t: not alive.get(urlparse(t['url']).hostname, True)     # noqa: E731
     results = {}
+    prevs = {key_of(t['project_id'], t['sub_id']): load_last(t) for t in targets}
+
+    def finish(k, r):
+        results[k] = r
+        if r.error:
+            r = stale_fallback(r)
+            results[k] = r
+        else:
+            check_anomalies(r, prevs[k])
+            save_last(r)
+        emit(k, 'stale' if getattr(r, 'stale', None) else 'error' if r.error else 'done', r)
 
     def work(t):
         k = key_of(t['project_id'], t['sub_id'])
         emit(k, 'running', None)
-        r = _run_one(t)
+        r = _run_one(t, dead(t))
         results[k] = r
-        emit(k, 'error' if r.error else 'done', r)
+        if r.error:
+            emit(k, 'error', r)               # промежуточно: покажем ошибку, второй проход ещё впереди
+        else:
+            finish(k, r)
         return k
 
     with cf.ThreadPoolExecutor(WORKERS) as ex:
         list(ex.map(work, targets))
-    # второй проход: упавшие корпуса по одному, когда нагрузка спала
+    # второй проход: упавшие корпуса по одному, когда нагрузка спала (мёртвые домены пропускаем)
     for t in targets:
         k = key_of(t['project_id'], t['sub_id'])
         if results[k].error:
-            emit(k, 'retry', None)
-            time.sleep(8)
-            r2 = _run_one(t)
-            if not r2.error:
-                r2.notes.append('получено со второго прохода')
-            results[k] = r2
-            emit(k, 'error' if r2.error else 'done', r2)
+            if not dead(t):
+                emit(k, 'retry', None)
+                time.sleep(8)
+                r2 = _run_one(t)
+                if not r2.error:
+                    r2.notes.append('получено со второго прохода')
+                    results[k] = r2
+            finish(k, results[k])
     return [results[key_of(t['project_id'], t['sub_id'])] for t in targets]
 
 
@@ -150,7 +256,7 @@ def export(results, label=''):
 
 def summary(results):
     return {'buildings': len(results), 'ok': sum(1 for r in results if not r.error),
-            'errors': sum(1 for r in results if r.error), 'lots': sum(len(r.lots) for r in results),
+            'errors': sum(1 for r in results if r.error), 'stale': sum(1 for r in results if r.stale), 'lots': sum(len(r.lots) for r in results),
             'no_price': sum(1 for r in results for lot in r.lots if not lot['price_total']),
             'no_area': sum(1 for r in results for lot in r.lots if not lot['area'])}
 

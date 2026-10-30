@@ -171,7 +171,7 @@
     if (!st) return '';
     var m = {pending: ['grey', 'в очереди'], running: ['amber', 'идёт…'], retry: ['amber', 'повтор…'],
              done: ['green', 'готово: ' + (st.lots || 0) + ' лотов' + (st.no_price ? ', без цены ' + st.no_price : '')],
-             error: ['red', 'ошибка']};
+             error: ['red', 'ошибка'], stale: ['amber', 'устарело: данные прошлой выгрузки (' + (st.lots || 0) + ' лотов)']};
     var c = m[st.state] || ['grey', st.state];
     var tip = st.error || (st.notes && st.notes.join('; ')) || '';
     return '<span class="chip ' + c[0] + '" title="' + esc(tip) + '">' + esc(c[1]) + '</span>' +
@@ -231,7 +231,7 @@
     clearTimeout(timer);
     fetch('/api/status').then(function (r) { return r.json(); }).then(function (s) {
       status = s;
-      var items = Object.keys(s.items || {}), done = items.filter(function (k) { var st = s.items[k].state; return st === 'done' || st === 'error'; }).length;
+      var items = Object.keys(s.items || {}), done = items.filter(function (k) { var st = s.items[k].state; return st === 'done' || st === 'error' || st === 'stale'; }).length;
       var busy = s.state === 'running' || s.state === 'exporting';
       $('pbar').style.width = (items.length ? Math.round(done / items.length * 100) : 0) + '%';
       $('pText').textContent = s.state === 'idle' ? '' : (busy ? (s.state === 'exporting' ? 'собираю xlsx…' : 'готово ' + done + ' из ' + items.length) : '');
@@ -243,8 +243,9 @@
   }
 
   function showResults(s) {
-    var sm = s.summary || {}, c = (sm.compare || {}), bad = sm.errors || 0;
+    var sm = s.summary || {}, c = (sm.compare || {}), bad = sm.errors || 0, old = sm.stale || 0;
     var h = '<b>Готово.</b> Корпусов: ' + sm.buildings + ', успешно ' + sm.ok + (bad ? ', <span style="color:var(--red-ink)">с ошибкой ' + bad + '</span>' : '') +
+      (old ? ', <span style="color:var(--amber-ink)"><b>устаревшие данные ' + old + '</b> (сайт не ответил, взято из прошлой выгрузки, помечено в таблице)</span>' : '') +
       '. Лотов: ' + fmt(sm.lots) + '.';
     if (sm.no_price || sm.no_area) h += ' <span style="color:var(--red-ink)"><b>Без цены: ' + (sm.no_price || 0) + ', без площади: ' + (sm.no_area || 0) + '</b> — в расчёты такие строки брать нельзя (подсвечены в таблице).</span>';
     h += '<div class="sub" style="margin:6px 0">Сверка с Q3 по лотам: без изменений ' + (c['сопоставлен'] || 0) + ', цена изменилась ' + (c['цена изменилась'] || 0) +
@@ -254,7 +255,16 @@
     $('results').innerHTML = h; $('results').style.display = '';
   }
 
+  function checkNet() {
+    fetch('/api/preflight').then(function (r) { return r.json(); }).then(function (p) {
+      var bad = Object.keys(p).filter(function (h) { return !p[h]; });
+      if (bad.length) banner('', 'Сейчас не отвечают сайты (' + bad.length + ' из ' + Object.keys(p).length + '): ' + esc(bad.join(', ')) +
+        '. Их корпуса не будут ждать повторов; если есть прошлая выгрузка, она подставится с пометкой «устарело».');
+    }).catch(function () {});
+  }
+
   load();
+  checkNet();
 })();
 </script>
 </body>

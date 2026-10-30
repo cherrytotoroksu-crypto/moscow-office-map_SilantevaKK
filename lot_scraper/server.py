@@ -32,6 +32,7 @@ def _on_update(key, state, result):
             it['no_area'] = sum(1 for lot in result.lots if not lot['area'])
             it['error'] = result.error
             it['notes'] = result.notes[:3]
+            it['stale'] = result.stale
 
 
 def _job(targets, label):
@@ -77,6 +78,9 @@ class Handler(SimpleHTTPRequestHandler):
         u = urlparse(self.path)
         if u.path == '/api/catalog':
             return self._json({'port': PORT, 'items': engine.catalog()})
+        if u.path == '/api/preflight':
+            ts = list(engine.T)
+            return self._json(engine.preflight(ts))
         if u.path == '/api/status':
             with JOB_LOCK:
                 return self._json(JOB)
