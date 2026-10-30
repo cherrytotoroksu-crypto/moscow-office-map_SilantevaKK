@@ -158,8 +158,13 @@
   <div class="toolbar">
     <input type="text" id="filterText" placeholder="Поиск по названию / адресу / девелоперу…">
     <button class="btn" id="clearAllFilters" type="button" style="padding:6px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);font-size:12px;cursor:pointer;">Сбросить фильтры колонок</button>
+    <a id="scraperLink" href="scraper.html" style="display:none;padding:6px 12px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:#fff;font-size:12px;text-decoration:none;font-weight:700;">Выгрузка лотов с сайтов</a>
     <span id="rowcount" class="stat" role="status" aria-live="polite">—</span>
   </div>
+  <script>
+    /* ссылка только в локальном запуске (python lot_scraper/server.py); на публичном сайте не показывается */
+    (function () { var h = location.hostname; if (h === 'localhost' || h === '127.0.0.1') document.getElementById('scraperLink').style.display = ''; })();
+  </script>
   <div class="sub" style="margin-top:6px;">Фильтры по колонкам — значок воронки в шапке таблицы (как автофильтр в Excel).</div>
   <div class="legend">
     Надёжность ячейки:

@@ -4,8 +4,23 @@
     {
       "name": "moscow-map",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-p", "3456", "."],
+      "runtimeArgs": [
+        "serve",
+        "-p",
+        "3456",
+        "."
+      ],
       "port": 3456
+    },
+    {
+      "name": "lot-scraper",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "lot_scraper/server.py",
+        "3457",
+        "--no-browser"
+      ],
+      "port": 3457
     }
   ]
 }
