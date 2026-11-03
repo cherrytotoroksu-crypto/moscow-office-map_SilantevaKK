@@ -26,6 +26,8 @@ def _num(v):
             return float(t) if t not in ('', '.', '-') else None
         except ValueError:
             return None
+    if isinstance(v, list):                                   # этаж ["2"] / [2, 3]: берём первый
+        return _num(v[0]) if v and not isinstance(v[0], (list, dict)) else None
     if isinstance(v, dict):                                   # {"value": 12.3} / {"area": 12.3}
         for k in ('value', 'val', 'amount', 'total', 'area'):
             if k in v:
@@ -154,3 +156,53 @@ def to_lots(arr, sch):
                          price_m2=_num(f.get(sch['price_m2'])) if sch['price_m2'] else None,
                          _status=f.get(sch['status']) if sch['status'] else None))
     return lots
+
+
+GROUP = re.compile(r'(house_?name|building|bulk|korp|corpus|tower|section_?name|bld)', re.I)
+KIND = re.compile(r'^(type|type_?name|purpose|appointment|category|profile|kind)$', re.I)
+OFFICE = re.compile(r'(office|офис)', re.I)
+
+
+def _norm(v):
+    t = re.sub(r'(корпус|башня|здание|секция|tower|building|bld|№)', ' ', str(v).lower())
+    return re.sub(r'\s+', ' ', t).strip()
+
+
+def filter_rows(arr, corpus, project=''):
+    """Если на странице несколько корпусов или кроме офисов есть розница — оставить строки нужного корпуса и только офисы.
+    Возвращает (строки, замечания). Поле корпуса ищется по названию; если на странице другой корпус — строк нет (с пояснением)."""
+    notes, rows = [], list(arr)
+    flat = [_flat(x) if isinstance(x, dict) else {} for x in rows]
+    want = _norm(corpus)
+    tok = want.split()[-1] if want else ''
+    best, other = None, None
+    kind = lambda v: next((w for w in ('башня', 'корпус', 'секция', 'здание') if w in str(v).lower()), None)      # noqa: E731
+    for k in sorted({k for f in flat for k in f if GROUP.search(k) and not SKIP_KEYS.search(k)}):
+        vals = [str(f.get(k)) if f.get(k) is not None else None for f in flat]
+        distinct = {v for v in vals if v and len(v) < 40}
+        if not distinct or len(distinct) > 15:
+            continue
+        idx = [i for i, v in enumerate(vals) if v and (_norm(v) == want or (tok and _norm(v).split()[-1:] == [tok]))]
+        if idx and len(idx) < len(rows):                          # поле реально выбирает корпус; берём самое селективное
+            if not best or len(idx) < len(best[1]):
+                best = (k, idx)
+        elif not idx and want:
+            ours = kind(corpus)
+            if len(distinct) >= 2 or (ours and all(kind(v) == ours for v in distinct)):
+                other = (k, sorted(distinct))
+    if best:
+        rows = [rows[i] for i in best[1]]
+        flat = [flat[i] for i in best[1]]
+        notes.append(f'оставлен корпус «{corpus}» по полю {best[0]} ({len(rows)} строк)')
+    elif other and len(other[1]) <= 3:
+        notes.append(f'на странице другие корпуса ({", ".join(other[1])}), «{corpus}» не найден')
+        return [], notes
+    for k in {k for f in flat for k in f if KIND.match(k)}:
+        vals = [f.get(k) for f in flat]
+        if all(isinstance(v, str) for v in vals if v is not None):
+            off = [bool(OFFICE.search(v or '')) for v in vals]
+            if any(off) and not all(off) and len({v for v in vals}) <= 8:
+                rows = [r for r, o in zip(rows, off) if o]
+                notes.append(f'оставлены только офисы по полю {k} ({len(rows)} из {len(off)})')
+                break
+    return rows, notes

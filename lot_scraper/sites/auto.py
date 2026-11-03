@@ -108,7 +108,7 @@ def run(t):
         for obj in A.json_blobs(h):
             cands += [(s['score'], t['url'], 'HTML', p, arr, s) for p, arr, s in A.find_lot_arrays(obj)[:2]]
     if not cands:
-        r.error = 'автоопределение: на странице не найдено данных, похожих на лоты (нужен отдельный парсер)'
+        r.error = 'автоопределение: данных, похожих на лоты, нет (сайт мог отдать пустой список или данные не в JSON; нужен отдельный парсер или проверка вручную)'
         return r
     cands.sort(key=lambda x: -x[0])
     _sc, url, method, path, arr, sch = cands[0]
@@ -117,6 +117,8 @@ def run(t):
         rows += _more_pages(url, arr, path)
     r.notes.append(f'автоопределение: {len(rows)} строк из {urlparse(url).path[:60]} {path}; поля: площадь={sch["area"]}, '
                    f'цена={sch["price"] or sch["price_m2"]}, этаж={sch["floor"]}, номер={sch["id"]}')
+    rows, fnotes = A.filter_rows(rows, t['corpus'], t['project'])
+    r.notes += fnotes
     for lot in A.to_lots(rows, sch):
         st = str(lot.pop('_status') or '').lower()
         if re.search(r'sold|продан|booked|reserv|брон|unavailable', st):
