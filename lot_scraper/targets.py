@@ -99,3 +99,7 @@ _stone(196, '01', 'STONE Ходынка I', 'Башня H1', 'catalog/offices/kh
 _stone(196, '02', 'STONE Ходынка I', 'Башня H2', 'catalog/offices/khodyinka-1', '7172,1171', 'Башня H2')
 _stone(196, '03', 'STONE Ходынка I', 'Башня H3', 'catalog/offices/khodyinka-1', '7172,1171', 'Башня H3')
 _stone(194, '02', 'STONE Савеловская', 'Башня 2', 'catalog/offices/savelovskaya', '1,7065', 'Башня 2')
+
+# --- Upside Ямская
+add('upside_yamskaya', 208, '01', 'Upside Ямская', 'Корпус 1', 'https://upside-yamskaya.ru/vizualnyj-vybor',
+    ay_complex='3c8fc3b8-ea20-4162-913f-9a704692f66f', ay_building=1)
