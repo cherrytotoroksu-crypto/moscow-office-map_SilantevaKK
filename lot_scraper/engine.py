@@ -3,7 +3,7 @@
     python engine.py --all            выгрузить всё, что есть парсер
     python engine.py 216|04 279|02    только перечисленные корпуса (project_id|sub_id)
 """
-import sys, csv, json, collections, time, socket, statistics, datetime, importlib, threading, concurrent.futures as cf
+import re, sys, csv, json, collections, time, socket, statistics, datetime, importlib, threading, concurrent.futures as cf
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -44,7 +44,7 @@ def catalog():
             k = key_of(r['project_id'], r['sub_id'])
             t = parsers.get(k)
             if t:
-                note = ''
+                note = 'универсальный сборщик (автоопределение), результат проверять' if t.get('auto') else ''
             elif r['domain']:
                 note = 'парсера пока нет (сайт ' + r['domain'] + ')'
             else:
@@ -310,6 +310,26 @@ def summary(results):
             'errors': sum(1 for r in results if r.error), 'stale': sum(1 for r in results if r.stale), 'lots': sum(len(r.lots) for r in results),
             'no_price': sum(1 for r in results for lot in r.lots if not lot['price_total']),
             'no_area': sum(1 for r in results for lot in r.lots if not lot['area'])}
+
+
+# Корпуса без своего парсера, но со ссылкой на сайт застройщика — универсальный сборщик (sites/auto.py).
+# Сайты с защитой от ботов (403) не трогаем: обход запрещён правилами проекта.
+AUTO_SKIP = ('mr-group.ru', 'cian.ru')
+
+
+def add_auto_targets():
+    ensure_registry()
+    have = {key_of(t['project_id'], t['sub_id']) for t in T}
+    with open(HERE / 'registry_q3.csv', encoding='utf-8-sig') as f:
+        for r in csv.DictReader(f, delimiter=';'):
+            m = re.match(r'https?://\S+', (r['url'] or '').strip())
+            if not m or not r['domain'] or any(d in r['domain'] for d in AUTO_SKIP) or key_of(r['project_id'], r['sub_id']) in have:
+                continue
+            T.append(dict(site='auto', auto=True, project_id=int(r['project_id']), sub_id=r['sub_id'], project=r['project'],
+                          corpus=r['corpus'], url=m.group(0)))
+
+
+add_auto_targets()
 
 
 if __name__ == '__main__':
