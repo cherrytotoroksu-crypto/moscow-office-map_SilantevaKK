@@ -1,37 +1,50 @@
-"""workplace.forma.ru/list?projects=<id>[&page=N]: Next.js, лоты в __NEXT_DATA__ (initialState.catalog.flats), 21 на странице.
+"""workplace.forma.ru: каталог грузится POST-ом на manager.forma.ru/api/v2/marketplace (JSON, без куки), 21 лот на странице, page=1..countPage.
+Страница списка с &page=N на сервере всегда отдаёт первые 21 лот, поэтому читаем API напрямую. Фильтр этажа не ставим (в интерфейсе по умолчанию floor.min=2).
 price — цена, которую показывает сайт; «Выгодная цена N%» (benefits.cash) — акция при полной оплате, идёт в пометки.
-Забронированные (status=reserve) берём, но помечаем. Номер страницы — параметр page (проверяется по currentPage в ответе)."""
-import re, json
-from core import get, num, Result
+Забронированные (status=reserve) берём, но помечаем."""
+import time, requests
+from core import HEAD, num, Result
 
 _cache = {}
 MAX_PAGES = 40
-ND = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
+API = 'https://manager.forma.ru/api/v2/marketplace'
+LIMIT = 21
 
 
-def _page(project, n):
-    url = f'https://workplace.forma.ru/list?projects={project}' + (f'&page={n}' if n > 1 else '')
-    m = ND.search(get(url, timeout=40).text)
-    if not m:
-        raise RuntimeError('нет __NEXT_DATA__ на странице ' + url)
-    return json.loads(m.group(1))['props']['pageProps']['initialState']['catalog']
+def _post(project, page):
+    body = {'projects': [int(project)], 'price': {}, 'area': {}, 'floor': {}, 'attributes': [], 'page': page, 'limit': LIMIT,
+            'order': {'key': 'area', 'type': 'asc'}, 'type': 4, 'objectType': 'commercial', 'ceilingHeight': {},
+            'sanpinPeopleCount': {}}
+    hdr = {**HEAD, 'Accept': 'application/json', 'Origin': 'https://workplace.forma.ru',
+           'Referer': f'https://workplace.forma.ru/list?projects={project}'}
+    last = None
+    for i in range(3):
+        try:
+            r = requests.post(API, json=body, headers=hdr, timeout=40)
+            if r.status_code in (200, 201):
+                return r.json()
+            last = f'HTTP {r.status_code}'
+        except Exception as e:                       # noqa: BLE001
+            last = type(e).__name__
+        time.sleep(1.5 * (i + 1))
+    raise RuntimeError(f'{API} (projects={project}, page={page}): {last}')
 
 
 def _load(project):
     if project in _cache:
         return _cache[project]
-    flats, seen, notes = [], set(), []
-    first = _page(project, 1)
-    total = first.get('total') or 0
-    pages = (first.get('pagination') or {}).get('countPage') or 1
-    for n in range(1, min(pages, MAX_PAGES) + 1):
-        c = first if n == 1 else _page(project, n)
-        new = [x for x in c.get('flats', []) if x['id'] not in seen]
-        if n > 1 and ((c.get('pagination') or {}).get('currentPage') != n or not new):
-            notes.append(f'страница {n} не открылась отдельно (сайт отдал currentPage={(c.get("pagination") or {}).get("currentPage")})')
+    flats, seen, notes, total = [], set(), [], 0
+    page, pages = 1, 1
+    while page <= min(pages, MAX_PAGES):
+        d = _post(project, page)
+        total, pages = d.get('total') or total, d.get('countPage') or 1
+        new = [x for x in d.get('flats', []) if x['id'] not in seen]
+        if not new:
+            notes.append(f'страница {page} пустая или повторяет предыдущие')
             break
         seen.update(x['id'] for x in new)
         flats += new
+        page += 1
     _cache[project] = (flats, total, notes)
     return _cache[project]
 
@@ -63,5 +76,5 @@ def run(t):
     if total and total != len(flats):
         r.notes.append(f'сайт заявил {total}, получено {len(flats)}')
         if notes:                                    # частичная выгрузка хуже честной ошибки: не подсовываем 21 лот вместо 75
-            r.error = f'получена только первая страница из {total} лотов: параметр page не сработал'
+            r.error = f'получено {len(flats)} из {total} лотов: {notes[0]}'
     return r
