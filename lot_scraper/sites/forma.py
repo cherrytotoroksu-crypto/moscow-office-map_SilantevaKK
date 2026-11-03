@@ -1,5 +1,5 @@
 """workplace.forma.ru: каталог грузится POST-ом на manager.forma.ru/api/v2/marketplace (JSON, без куки), 21 лот на странице, page=1..countPage.
-Страница списка с &page=N на сервере всегда отдаёт первые 21 лот, поэтому читаем API напрямую. Фильтр этажа не ставим (в интерфейсе по умолчанию floor.min=2).
+Страница списка с &page=N на сервере всегда отдаёт первые 21 лот, поэтому читаем API напрямую. Фильтр floor.min=2 — как у сайта по умолчанию: первый этаж там розница, в Q3 офисов на 1 этаже нет (кроме 1 лота Lakes 2).
 price — цена, которую показывает сайт; «Выгодная цена N%» (benefits.cash) — акция при полной оплате, идёт в пометки.
 Забронированные (status=reserve) берём, но помечаем."""
 import time, requests
@@ -12,7 +12,7 @@ LIMIT = 21
 
 
 def _post(project, page):
-    body = {'projects': [int(project)], 'price': {}, 'area': {}, 'floor': {}, 'attributes': [], 'page': page, 'limit': LIMIT,
+    body = {'projects': [int(project)], 'price': {}, 'area': {}, 'floor': {'min': 2}, 'attributes': [], 'page': page, 'limit': LIMIT,
             'order': {'key': 'area', 'type': 'asc'}, 'type': 4, 'objectType': 'commercial', 'ceilingHeight': {},
             'sanpinPeopleCount': {}}
     hdr = {**HEAD, 'Accept': 'application/json', 'Origin': 'https://workplace.forma.ru',
