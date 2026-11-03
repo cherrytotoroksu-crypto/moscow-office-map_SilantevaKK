@@ -93,3 +93,9 @@ add('profitbase', 862, '01', 'Каминский', 'Каминский', 'https:
 # --- Upside Кунцево (Bitrix API)
 add('upside_business', 138, '01', 'Upside Кунцево', 'Корпус 1', 'https://www.upside-business.ru/list/', ub_building='korpus-1')
 add('upside_business', 138, '02', 'Upside Кунцево', 'Корпус 2', 'https://www.upside-business.ru/list/', ub_building='korpus-2')
+
+# --- STONE: корпуса, по которым в снимке не было вызова /api/lots (ID проектов из /api/projects; названия корпусов сверить по первому запуску)
+_stone(196, '01', 'STONE Ходынка I', 'Башня H1', 'catalog/offices/khodyinka-1', '7172,1171', 'Башня H1')
+_stone(196, '02', 'STONE Ходынка I', 'Башня H2', 'catalog/offices/khodyinka-1', '7172,1171', 'Башня H2')
+_stone(196, '03', 'STONE Ходынка I', 'Башня H3', 'catalog/offices/khodyinka-1', '7172,1171', 'Башня H3')
+_stone(194, '02', 'STONE Савеловская', 'Башня 2', 'catalog/offices/savelovskaya', '1,7065', 'Башня 2')
