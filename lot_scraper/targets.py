@@ -83,3 +83,9 @@ add('forma', 247, '01', 'Технопарк Густав', 'Корпус 1', _FM
 
 # --- Krost (krost.ru)
 add('krost', 155, '01', 'Nevsky Plaza', 'Башня Север', 'https://krost.ru/commercial/objects/988', krost_building=52)
+
+# --- Profitbase-виджеты: Рублёво Бизнес-Парк (pb1988), WW Group (pb15020)
+add('profitbase', 244, '01', 'Рублево Бизнес-Парк', 'Башня А', 'https://rb-park.ru/', pb_domain='pb1988.profitbase.ru', pb_referer='https://rb-park.ru', pb_house=105658)
+add('profitbase', 244, '02', 'Рублево Бизнес-Парк', 'Башня B', 'https://rb-park.ru/', pb_domain='pb1988.profitbase.ru', pb_referer='https://rb-park.ru', pb_house=133690)
+add('profitbase', 230, '01', 'ВАРСТ', 'ВАРСТ', 'https://wwgroup.ru/varst', pb_domain='pb15020.profitbase.ru', pb_referer='https://wwgroup.ru', pb_house=145922)
+add('profitbase', 862, '01', 'Каминский', 'Каминский', 'https://wwgroup.ru/kaminskiy', pb_domain='pb15020.profitbase.ru', pb_referer='https://wwgroup.ru', pb_house=156593)
