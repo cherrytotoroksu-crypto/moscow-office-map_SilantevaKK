@@ -89,3 +89,7 @@ add('profitbase', 244, '01', 'Рублево Бизнес-Парк', 'Башня
 add('profitbase', 244, '02', 'Рублево Бизнес-Парк', 'Башня B', 'https://rb-park.ru/', pb_domain='pb1988.profitbase.ru', pb_referer='https://rb-park.ru', pb_house=133690)
 add('profitbase', 230, '01', 'ВАРСТ', 'ВАРСТ', 'https://wwgroup.ru/varst', pb_domain='pb15020.profitbase.ru', pb_referer='https://wwgroup.ru', pb_house=145922)
 add('profitbase', 862, '01', 'Каминский', 'Каминский', 'https://wwgroup.ru/kaminskiy', pb_domain='pb15020.profitbase.ru', pb_referer='https://wwgroup.ru', pb_house=156593)
+
+# --- Upside Кунцево (Bitrix API)
+add('upside_business', 138, '01', 'Upside Кунцево', 'Корпус 1', 'https://www.upside-business.ru/list/', ub_building='korpus-1')
+add('upside_business', 138, '02', 'Upside Кунцево', 'Корпус 2', 'https://www.upside-business.ru/list/', ub_building='korpus-2')
