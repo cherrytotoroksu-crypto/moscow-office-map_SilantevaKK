@@ -14,7 +14,8 @@ def _data(t):
 
 
 def _whole_building(t, r):
-    html = get(t['page']).text
+    import browser                                   # блок «Корпус 1» рисует JS: в исходном HTML его нет
+    html = browser.render(t['page'], '.PlansBuilding__card-title', scroll=False)
     text = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', re.sub(r'<script.*?</script>|<style.*?</style>', '', html, flags=re.S)))
     m = re.search(r'КОРПУС\s*%s\s+Стоимость за м²\s*([\d\s]+)₽\s*Общая площадь\s*([\d\s]+)м²' % t['hc_whole'], text, re.I)
     if not m:

@@ -4,7 +4,7 @@ from core import get, num, Result
 from targets import T
 
 _cache = {}
-PAGE = 100
+PAGE = 12                      # сайт сам ходит по 12; per_page=100 даёт HTTP 422
 
 
 def _load(projects, direction):
@@ -13,7 +13,7 @@ def _load(projects, direction):
         lots, offset = [], 0
         while True:
             url = (f'https://stone.ru/api/lots?filter[direction]={direction}&filter[status]=1&sort=lots.selling_price'
-                   f'&filter[projects]={projects}&from={offset}&per_page={PAGE}')
+                   f'&filter[projects]={projects}' + (f'&from={offset}' if offset else '') + f'&per_page={PAGE}')
             d = get(url, timeout=40, headers={'Accept': 'application/json', 'Referer': 'https://stone.ru/'}).json()
             lots += d.get('data', [])
             total = (d.get('meta') or {}).get('total', len(lots))
